@@ -34,21 +34,21 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
 twitter: anantharajuc
+github: AnanthaRajuC
+stackoverflow: 3711562/anantha-raju-c
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: AnanthaRajuC
-# stackoverflow: 3711562/anantha-raju-c
 # quora: userquora
 # reddit: username
-medium: medium
+#medium: medium
 # vimeo: myvimeo
-email: myemail@gmail.com
+#email: myemail@gmail.com
+#facebook: myfacebook
 
 authors:
     johndoe:
