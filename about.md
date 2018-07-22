@@ -21,26 +21,24 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>NodeJS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>Java</li>
+	<li>Object Oriented Programming</li>
+	<li>Spring Boot</li>
+	<li>Amazon Web Services (AWS)</li>
+	<li>Google Cloud Platform (GCP)</li>
+	<li>git</li>
+	<li>GitHub</li>
+	<li>RESTfl Web Services</li>
+	<li>Agile Software Development Life Cycle Model</li>
+	<li>IBM Watson Campaign Automation</li>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>MySQL</li>
+	<li>Android</li>
 </ul>
 
-<h2>Projects</h2>
+<h2>Academic Publications</h2>
 
 <ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
+	<li><a href="https://ijcsmc.com/docs/papers/December2015/V4I12201568.pdf">Resource Management by Virtual Machine Migration in Cloud Computing</a></li>
 </ul>
