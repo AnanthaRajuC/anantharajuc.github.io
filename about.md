@@ -28,7 +28,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<li>Google Cloud Platform (GCP)</li>
 	<li>git</li>
 	<li>GitHub</li>
-	<li>RESTfl Web Services</li>
+	<li>RESTful Web Services</li>
 	<li>Agile Software Development Life Cycle Model</li>
 	<li>IBM Watson Campaign Automation</li>
 	<li>HTML</li>

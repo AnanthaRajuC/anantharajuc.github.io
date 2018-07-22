@@ -16,9 +16,8 @@ resume: true
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-# url: https://koppl.in/indigo
-url: https://anantharajuc.github.io
 # your url: http://USERNAME.github.io
+url: https://anantharajuc.github.io
 
 permalink: /:title/
 
@@ -40,17 +39,17 @@ github: AnanthaRajuC
 stackoverflow: 3711562/anantha-raju-c
 linkedin: anantharajuc
 reddit: anantharajuc
+quora: Anantha-Raju-C
+
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
 # youtube: myyoutube
 # spotify: myspotify
-# quora: userquora
-
-#medium: medium
+# medium: medium
 # vimeo: myvimeo
-#email: myemail@gmail.com
-#facebook: myfacebook
+# email: myemail@gmail.com
+# facebook: myfacebook
 
 authors:
     johndoe:
