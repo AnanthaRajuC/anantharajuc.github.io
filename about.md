@@ -42,3 +42,9 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <ul>
 	<li><a href="https://ijcsmc.com/docs/papers/December2015/V4I12201568.pdf">Resource Management by Virtual Machine Migration in Cloud Computing</a></li>
 </ul>
+
+<h2>Certifications</h2>
+
+<ul>
+	<li><a href="https://www.youracclaim.com/users/anantha-raju-c">IBM Marketing Cloud  A.K.A Watson Campaign Atomation</a></li>
+</ul>
