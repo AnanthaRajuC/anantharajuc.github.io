@@ -5,8 +5,7 @@ date: 2017-03-08 17:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
-- markdown
-- elements
+- list
 star: true
 category: blog
 author: Anantha Raju C
