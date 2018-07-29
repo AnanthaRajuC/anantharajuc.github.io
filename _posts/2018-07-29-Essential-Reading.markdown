@@ -1,7 +1,7 @@
 ---
 title: "Essential Reading - Software Engineering"
 layout: post
-date: 2017-03-08 17:00
+date: 2018-07-29 17:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
@@ -16,7 +16,7 @@ description: Select compilation of articles and books on Software Development
 
 ## Summary:
 
-Select compilation of articles and books on Software Development
+Select compilation of articles and books on Software Development and its related aspects.
 
 ### Classification
 - [Articles](#articles)
@@ -27,6 +27,8 @@ Select compilation of articles and books on Software Development
 ## Articles
 
 <a href="https://medium.freecodecamp.org/how-to-write-a-good-software-design-document-66fcf019569c" target="_blank" >How to write a good software design doc</a> - This article is an attempt at describing what makes a design document great.
+
+<a href="https://github.com/webflow/leadership/blob/master/tech_lead.md" target="_blank" >The Webflow Tech Lead Guide</a> - A guide to understand the various aspects of being a Tech Lead
 
 <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a> - a popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen</a>
 
