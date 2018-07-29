@@ -28,9 +28,13 @@ Select compilation of articles and books on Software Development and its related
 
 <a href="https://medium.freecodecamp.org/how-to-write-a-good-software-design-document-66fcf019569c" target="_blank" >How to write a good software design doc</a> - This article is an attempt at describing what makes a design document great.
 
-<a href="https://github.com/webflow/leadership/blob/master/tech_lead.md" target="_blank" >The Webflow Tech Lead Guide</a> - A guide to understand the various aspects of being a Tech Lead
+<a href="https://github.com/webflow/leadership/blob/master/tech_lead.md" target="_blank" >The Webflow Tech Lead Guide</a> - A guide to understand the various aspects of being a Tech Lead.
 
-<a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a> - a popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen</a>
+<a href="https://www.contributor-covenant.org/" target="_blank" >Contributor Covenant</a> - A Code of Conduct for Open Source Projects.
+
+<a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2" target="_blank" >README</a> and <a href="https://gist.github.com/PurpleBooth/b24679402957c63ec426" target="_blank" >CONTRIBUTING</a> template for projects (GitHub) by <a href="https://github.com/PurpleBooth" target="_blank" >Billie Thompson</a>
+
+<a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a> - a popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen.</a>
 
 ## Books
 
