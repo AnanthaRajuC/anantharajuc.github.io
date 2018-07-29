@@ -4,9 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Paragraph 1</p>
-
-<p>Paragraph 2</p>
+<p>Software Engineer</p>
 
 <h2>Skills</h2>
 
