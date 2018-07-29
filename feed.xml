@@ -26,7 +26,7 @@ layout: none
 					<description>{{ post.description | xml_escape }}</description>
 				{% endif %}
 				{% if post.tag %}
-					<description>{{ post.tag | xml_escape }}</description>
+					<tags>{{ post.tag | xml_escape }}</tags>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
