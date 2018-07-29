@@ -4,24 +4,15 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Paragraph 1</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Paragraph 2</p>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
 	<li>Java</li>
+	<li>Data Structures</li>
 	<li>Object Oriented Programming</li>
 	<li>Spring Boot</li>
 	<li>Amazon Web Services (AWS)</li>
@@ -34,7 +25,12 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<li>HTML</li>
 	<li>CSS</li>
 	<li>MySQL</li>
+	<li>Oracle</li>
+	<li>MongoDB</li>
 	<li>Android</li>
+	<li>Google Cloud Messaging</li>
+	<li>Google Ananlytics</li>
+	<li>Spring Tool Suite, Eclipse, IntelliJ IDEA, Android Studio</li>
 </ul>
 
 <h2>Academic Publications</h2>
