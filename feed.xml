@@ -19,11 +19,11 @@ layout: none
 		{% for post in site.posts limit:feed_items %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
-				{% if post.author.name %}
-					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
+				{% if post.author %}
+					<dc:creator>{{ post.author | xml_escape }}</dc:creator>
 				{% endif %}
-				{% if post.excerpt %}
-					<description>{{ post.excerpt | xml_escape }}</description>
+				{% if post.description %}
+					<description>{{ post.description | xml_escape }}</description>
 				{% else %}
 					<description>{{ post.content | xml_escape }}</description>
 				{% endif %}
