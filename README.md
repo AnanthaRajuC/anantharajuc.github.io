@@ -1,1 +1,1 @@
-## Source code to anantharajuc.github.io based on Indigo Minimalist Jekyll Template
+## Source code to <a href="https://anantharajuc.github.io/" target="_blank" >https://anantharajuc.github.io</a> based on <a href="https://github.com/sergiokopplin/indigo" target="_blank" >Indigo</a> Minimalist Jekyll Template by <a href="https://koppl.in/" target="_blank" >Sérgio A. Kopplin</a>
