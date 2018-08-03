@@ -41,7 +41,7 @@ Select compilation of articles and books on Software Development and its related
 
 <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a> - a popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen.</a>
 
-## Articles_Technical
+## Articles Technical
 
 <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a> - a popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen.</a>
 
