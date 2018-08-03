@@ -20,7 +20,7 @@ Select compilation of articles and books on Software Development and its related
 
 ### Classification
 - [Articles](#articles)
-- [Articles_Technical](#articles_technical)
+- [Articles Technical](#articles_technical)
 - [Books](#books)
 
 ---
