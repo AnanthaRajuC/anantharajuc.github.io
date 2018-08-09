@@ -15,10 +15,12 @@ description: A starter Spring Boot Starter Template to Rapidly develop Web Appli
 
 ## Summary:
 
-A starter Spring Boot Starter Template to Rapidly develop Web Applications. Features include Logger (Console, File, Mail), RESTful Web Service (CRUD), Web - HTML, CSS (Bootstrap), JavaScript (jQuery), Actuator, ostman collection (Online & Offline) and so on 
+A starter Spring Boot Starter Template to Rapidly develop Web Applications. Features include Logger (Console, File, Mail), RESTful Web Service (CRUD), Web - HTML, CSS (Bootstrap), JavaScript (jQuery), Actuator, ostman collection (Online & Offline) and so on.
+
+### This is still a work in Progress.
 
 ### Classification
-- [Components](#organizations)
+- [Components](#components)
 
 ---
 
@@ -32,3 +34,4 @@ This Project was built with the following components
 * [MySQL](https://www.mysql.com/) - Open-Source Relational Database Management System
 * [git](https://git-scm.com/) - Free and Open-Source distributed version control system 
 * [Postman](https://www.getpostman.com/) - API Development Environment (Testing Docmentation)
+
