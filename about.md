@@ -12,16 +12,20 @@ layout: page
 table{
     border-collapse: collapse;
     border-spacing: 0;
-    border:2px solid #ff0000;
+    border:2px solid #000000;
 }
 
 th{
     border:2px solid #000000;
+	
 }
 
 td{
     border:1px solid #000000;
+	padding: 25px;
+    text-align: left;
 }
+tr:hover {background-color:#DCDCDC;}
 </style>
 
 <table border="1"> 
