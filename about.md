@@ -8,7 +8,7 @@ layout: page
 
 <h2>Skills</h2>
 
-<table> 
+<table border="1"> 
 	<tr> 
 		<th>Technology</th> 
 		<th>Tools</th> 

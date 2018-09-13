@@ -32,13 +32,13 @@ A command-line interface or command language interpreter (CLI), also known as co
 - Pre-requisites
     - [Java SDK ](https://www.java.com/en/) v1.8 or higher
 
-- Download Link
- https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation
+- Spring Boot CLI [Download Link](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation)
+ 
  
 - Installation Steps
 
     - set `SPRING_HOME` to point to the Spring CLI folder
     - add `SPRING_HOME/bin` to your `PATH` environment variable
-    - To test if you have successfully installed the CLI you can run the following command: `spring --version`
+    - to test if you have successfully installed the CLI you can run the following command: `spring --version`
 
- ##### * No specific environment variables are required to run the CLI
+* No specific environment variables are required to run the CLI
