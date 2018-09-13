@@ -4,34 +4,52 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Paragraph 1</p>
-
-<p>Paragraph 2</p>
+<p>Software Engineer</p>
 
 <h2>Skills</h2>
 
-<ul class="skill-list">
-	<li>Java</li>
-	<li>Data Structures</li>
-	<li>Object Oriented Programming</li>
-	<li>Spring Boot</li>
-	<li>Amazon Web Services (AWS)</li>
-	<li>Google Cloud Platform (GCP)</li>
-	<li>git</li>
-	<li>GitHub</li>
-	<li>RESTful Web Services</li>
-	<li>Agile Software Development Life Cycle Model</li>
-	<li>IBM Watson Campaign Automation</li>
-	<li>HTML</li>
-	<li>CSS</li>
-	<li>MySQL</li>
-	<li>Oracle</li>
-	<li>MongoDB</li>
-	<li>Android</li>
-	<li>Google Cloud Messaging</li>
-	<li>Google Ananlytics</li>
-	<li>Spring Tool Suite, Eclipse, IntelliJ IDEA, Android Studio</li>
-</ul>
+<table> 
+	<tr> 
+		<th>Technology</th> 
+		<th>Tools</th> 
+	</tr> 
+	<tr> 
+		<td>Programming</td> 
+		<td>Java, Spring Boot, Data Structures, Object Oriented Programming, RESTful Web Services</td> 
+	</tr> 
+	<tr> 
+		<td>Web</td> 
+		<td>HTML, CSS, JavaScript</td> 
+	</tr> 
+	<tr> 
+		<td>Mobile Development</td> 
+		<td>Android, Google Clod Messaging (GCM)</td> 
+	</tr> 
+	<tr> 
+		<td>Relational Database Management Systems</td> 
+		<td>MySQL, Oracle</td> 
+	</tr> 
+	<tr> 
+		<td>Non-Relational Database Management Systems</td> 
+		<td>MongoDB</td> 
+	</tr> 
+	<tr> 
+		<td>Sorce Control Management</td> 
+		<td>git, GitHub</td> 
+	</tr> 
+	<tr> 
+		<td>IDE's</td> 
+		<td>Spring Tool Suite, Eclipse, IntelliJ IDEA, Android Studio</td> 
+	</tr> 
+	<tr> 
+		<td>IaaS</td> 
+		<td>Amazon Web Services (AWS), Google Cloud Platform (GCP)</td> 
+	</tr> 
+	<tr> 
+		<td>Digital Marketing</td> 
+		<td>IBM Watson Campaign Automation, Google Ananlytics</td> 
+	</tr> 
+</table>
 
 <h2>Academic Publications</h2>
 
@@ -42,5 +60,5 @@ layout: page
 <h2>Certifications</h2>
 
 <ul>
-	<li><a href="https://www.youracclaim.com/users/anantha-raju-c">IBM Marketing Cloud  A.K.A Watson Campaign Atomation</a></li>
+	<li><a href="https://www.youracclaim.com/users/anantha-raju-c">IBM, VMware, Lightbend</a></li>
 </ul>
