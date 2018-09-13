@@ -8,6 +8,22 @@ layout: page
 
 <h2>Skills</h2>
 
+<style>
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #ff0000;
+}
+
+th{
+    border:2px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
+</style>
+
 <table border="1"> 
 	<tr> 
 		<th>Technology</th> 
