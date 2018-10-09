@@ -29,3 +29,6 @@ cURL stands for **Client URL**. It is a command-line tool for getting or sending
 - Correct configuration of the tool will return the following response `{"args":{"test":"123"},"headers":{"host":"postman-echo.com","accept":"*/*","user-agent":"curl/7.55.1","x-forwarded-port":"443","x-forwarded-proto":"https"},"url":"https://postman-echo.com/get?test=123"}`
 
 ## Resources
+
+- <a href="https://curl.haxx.se/book.html" target="_blank" >Everything curl</a> - eBook - Web Version, PDF, Mobi, ePub.
+- Source <a href="https://github.com/curl/curl" target="_blank" >code</a> on GitHub.
