@@ -3,7 +3,7 @@ title: "Service Registry and Discovery in a Microservices Architecture via Netfl
 layout: post
 date: 2019-01-03 07:33
 image: /assets/images/markdown.jpg
-headerImage: true
+headerImage: false
 tag:
 - Microservices
 - Netflix Eureka

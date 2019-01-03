@@ -2,8 +2,8 @@
 title: "cURL for Windows"
 layout: post
 date: 2018-10-09 17:40
-image: /assets/images/markdown.jpg
-headerImage: false
+image: /assets/images/curl-logo.svg
+headerImage: true
 tag:
 - curl
 - Windows
