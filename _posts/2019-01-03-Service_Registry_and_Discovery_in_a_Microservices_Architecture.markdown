@@ -21,6 +21,12 @@ description: Service Registry and Discovery in a Microservices Architecture via 
 
 Service Registry and Discovery in a Microservices Architecture via Netflix Eureka and Zuul
 
+Other service registries
+
+- Apache Zookeeper
+- Consul
+- Etcd
+
 ### Classification
 - [Netflix Eureka] (#netflix eureka)
 - [Netflix Zuul] (#netflix zuul)
