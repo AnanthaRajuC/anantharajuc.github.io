@@ -2,8 +2,8 @@
 title: "Essential Reading - Software Engineering"
 layout: post
 date: 2018-07-29 17:00
-image: /assets/images/markdown.jpg
-headerImage: false
+image: /assets/images/reading.jpg
+headerImage: true
 tag:
 - books
 - articles
