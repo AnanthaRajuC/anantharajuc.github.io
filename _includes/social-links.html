@@ -94,4 +94,10 @@
             <svg class="icon icon-goodreads"><use xlink:href="#icon-goodreads"></use></svg>
         </a>
     {% endif %}
+    
+    {% if site.soundcloud %}
+        <a class="link" data-title="{{ site.soundcloud }}" href="https://soundcloud.com/{{ site.soundcloud }}" target="_blank">
+            <svg class="icon icon-soundcloud"><use xlink:href="#icon-soundcloud"></use></svg>
+        </a>
+    {% endif %}
 </div>
