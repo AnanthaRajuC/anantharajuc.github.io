@@ -27,6 +27,7 @@ cURL stands for **Client URL**. It is a command-line tool for getting or sending
 - Extract the zip file and navigate to the `bin` folder and add this folder location to `Path` system variable
 - To test if the tool is configured correctly, open the command prompt and execute the command `curl https://postman-echo.com/get?test=123`
 - Correct configuration of the tool will return the following response 
+image: /assets/images/curl-example.PNG
 ```
 {
   "args": {
