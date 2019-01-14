@@ -28,8 +28,7 @@ cURL stands for **Client URL**. It is a command-line tool for getting or sending
 - To test if the tool is configured correctly, open the command prompt and execute the command `curl https://postman-echo.com/get?test=123`
 - Correct configuration of the tool will return the following response 
 
-![Markdowm Image](/assets/images/curl-example.PNG)
-<figcaption class="caption">Photo by John Doe</figcaption>
+<img src="/assets/images/curl-example.PNG" width="1500" Height="175">
 
 ```
 {
