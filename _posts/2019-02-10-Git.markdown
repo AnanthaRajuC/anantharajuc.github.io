@@ -1,1 +1,17 @@
-# Git
+---
+title: "Git"
+layout: post
+date: 2019-02-10 07:30
+image: /assets/images/markdown.jpg
+headerImage: false
+tag:
+- Git
+star: true
+category: blog
+author: Anantha Raju C
+description: Git
+---
+
+## Summary:
+
+Git is a distributed version-control system for tracking changes in source code during software development.
