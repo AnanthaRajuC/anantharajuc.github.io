@@ -20,7 +20,7 @@ Git is a distributed version-control system for tracking changes in source code 
 
 ### Initialiaztion
 
-- `git init` creates a new git repository
+- **`git init`** creates a new git repository
 - `git clone /path/to/repository` create a working copy of a local repository
 - `git clone username@host:/path/to/repository` when using a remote server
 
