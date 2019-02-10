@@ -20,4 +20,6 @@ Git is a distributed version-control system for tracking changes in source code 
 
 If you set this to the path of a file on your system, Git will use that file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.
 
+<script src="https://gist.github.com/benbalter/5555251.js?file=gist.md"></script>
+
 { % gist 7c064859b3ef1c046c3070801e512001 % }
