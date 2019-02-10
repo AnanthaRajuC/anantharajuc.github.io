@@ -32,9 +32,7 @@ A sample command to set a commit.template is as follows:
 
 It is a development model introduced by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen</a> which helps form an elegant mental model that is easy to comprehend and allows team members to develop a shared understanding of the branching strategy and releasing management processes.
 
-![image][/assets/images/podcasts.png]
-
-/assets/images/git-model@2x.png
+![image](/assets/images/git-model@2x.png)
 
 Read more about the model here, https://nvie.com/posts/a-successful-git-branching-model/ 
 
