@@ -22,4 +22,4 @@ If you set this to the path of a file on your system, Git will use that file as 
 
 <script src="https://gist.github.com/benbalter/5555251.js?file=gist.md"></script>
 
-<script src="https://gist.github.com/AnanthaRajuC/7c064859b3ef1c046c3070801e512001?file=git-commit-template.txt"></script>
+<script src="https://gist.github.com/AnanthaRajuC/7c064859b3ef1c046c3070801e512001.js?file=git-commit-template.txt"></script>
