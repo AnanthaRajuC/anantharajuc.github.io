@@ -28,6 +28,14 @@ A sample command to set a commit.template is as follows:
 
 `git config --global commit.template C:\CC_Applications/git-commit-template.txt` 
 
+## A successful Git branching model
+
+It is a development model introduced by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen</a> which helps form an elegant mental model that is easy to comprehend and allows team members to develop a shared understanding of the branching strategy and releasing management processes.
+
+
+
+Read more about the model here, https://nvie.com/posts/a-successful-git-branching-model/ 
+
 ## Resources
 
 - <a href="https://github.com/k88hudson/git-flight-rules" target="_blank" >Flight rules for Git </a>- a guide for programmers using Git about what to do when things go wrong
