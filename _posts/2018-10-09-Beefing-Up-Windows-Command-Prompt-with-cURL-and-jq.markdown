@@ -1,27 +1,31 @@
 ---
-title: "cURL for Windows"
+title: "Beefing-Up Windows Command Prompt with cURL and JQ"
 layout: post
 date: 2018-10-09 17:40
 image: /assets/images/curl-logo.svg
 headerImage: true
 tag:
 - curl
-- Windows
+- JQ
+- cmd
+- Windows 
 star: true
 category: blog
 author: Anantha Raju C
-description: using cURL on windows Computer
+description: Beefing-Up Windows Command Prompt with cURL and jq
 ---
 
 ## Summary:
 
 cURL stands for **Client URL**. It is a command-line tool for getting or sending files using URL syntax. cURL uses libcurl and supports a range of common Internet protocols, currently including HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP, DICT, TELNET, FILE, IMAP, POP3, SMTP and RTSP
 
+jq is a lightweight and flexible command-line JSON processor. It can be used to slice and filter and map and transform structured data. 
+
 ### Classification
 - [Installation](#installation)
 - [Resources](#resources)
 
-## Installation
+## cURL Installation
 
 - In the *Source Archives* section of the **<a href="https://curl.haxx.se/download.html" target="_blank" >Download</a>** page on the **<a href="https://curl.haxx.se/" target="_blank" >curl://</a>** website, click on the zip file to download the most recent version of the curl release.
 - Extract the zip file and navigate to the `bin` folder and add this folder location to `Path` system variable
@@ -55,4 +59,5 @@ cURL stands for **Client URL**. It is a command-line tool for getting or sending
 ## Resources
 
 - <a href="https://curl.haxx.se/book.html" target="_blank" >Everything curl</a> - eBook - Web Version, PDF, Mobi, ePub.
-- Source <a href="https://github.com/curl/curl" target="_blank" >code</a> on GitHub.
+- cURL source <a href="https://github.com/curl/curl" target="_blank" >code</a> on GitHub.
+- A <a href="https://jqplay.org/" target="_blank" >playground</a> for jq, written in Go .
