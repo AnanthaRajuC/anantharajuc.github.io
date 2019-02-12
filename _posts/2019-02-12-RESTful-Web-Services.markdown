@@ -37,14 +37,15 @@ RESTful Web Services Concepts.
 
 ## HTTP Methods
 
-- GET
-- HEAD
-- POST
-- PUT
-- DELETE
-- CONNECT
-- OPTIONS
-- TRACE
+- **GET** - (CRUD - Read)
+- **PUT** - (CRUD - Update/Replace)
+- **POST** - (CRUD - Create)
+- **DELETE** - (CRUD - Delete)
+- **PATCH** - (CRUD - Partial Update/Modify)
+- **HEAD**
+- **CONNECT**
+- **OPTIONS**
+- **TRACE**
 
 ## HTTP Status Codes
 
