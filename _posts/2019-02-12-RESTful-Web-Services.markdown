@@ -17,7 +17,7 @@ description: RESTful Web Services
 
 RESTful Web Services Concepts.
 
-Roy Fielding's <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
+<a href="https://en.wikipedia.org/wiki/Roy_Fielding" target="_blank" >Roy Fielding</a>'s <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
 
 ### Classification
 - [HTTP Status Codes](#http-status-codes)
