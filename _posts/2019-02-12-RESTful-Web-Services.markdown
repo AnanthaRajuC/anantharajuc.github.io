@@ -77,4 +77,5 @@ Relevant Resources
 ## Resources
 
 - <a href="https://www.restapitutorial.com/" target="_blank" >REST API Tutorial</a>
+- <a href="https://www.w3.org/TR/ws-gloss/" target="_blank" >Web Services Glossary</a> - This document is a glossary of Web services terms defined and used in the Web Services Architecture
 - <a href="https://tools.ietf.org/html/rfc7231" target="_blank" >Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</a>
