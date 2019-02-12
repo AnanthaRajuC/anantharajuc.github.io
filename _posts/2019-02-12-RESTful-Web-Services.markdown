@@ -1,5 +1,5 @@
 ---
-title: "RESTful Web Services"
+title: "RESTful Web Services architecture style"
 layout: post
 date: 2019-02-12 12:30
 image: /assets/images/reading.jpg
@@ -17,7 +17,7 @@ description: RESTful Web Services
 
 RESTful Web Services Concepts.
 
-<a href="https://en.wikipedia.org/wiki/Roy_Fielding" target="_blank" >Roy Fielding</a>'s <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
+<a href="https://en.wikipedia.org/wiki/Roy_Fielding" target="_blank" >Roy Fielding</a>'s doctoral <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
 
 ### Classification
 - [HTTP Status Codes](#http-status-codes)
@@ -53,3 +53,4 @@ Relevant Resources
 ## Resources
 
 - <a href="https://www.restapitutorial.com/" target="_blank" >REST API Tutorial</a>
+- <a href="https://tools.ietf.org/html/rfc7231" target="_blank" >Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</a>
