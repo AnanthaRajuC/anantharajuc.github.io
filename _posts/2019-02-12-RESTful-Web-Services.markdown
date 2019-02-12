@@ -15,7 +15,9 @@ description: RESTful Web Services
 
 ## Summary:
 
-RESTful Web Services Concepts.
+Web Service API classification - SOAP, XML-RPC, JSON-RPC, REST
+
+REST is a type of Web API. Web API's are also known as Web Services and it provides interfaces for (web) applications to that need to connect to each other via the Internet to communicate. 
 
 <a href="https://en.wikipedia.org/wiki/Roy_Fielding" target="_blank" >Roy Fielding</a>'s doctoral <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
 
