@@ -46,7 +46,9 @@ The following are the top 10 common HTTP status codes and their meaning
 - 409 Conflict - Whenever a resource conflict would be caused by fulfilling the request. Duplicate entries and deleting root objects when cascade-delete is not supported are a couple of examples.
 - 500 Internal Server Error - The general catch-all error when the server-side throws an exception.
 
+Relevant Resources 
 - <https://www.restapitutorial.com/httpstatuscodes.html>
+- IETF <a href="https://www.ietf.org/assignments/http-status-codes/http-status-codes.xml" target="_blank">Hypertext Transfer Protocol (HTTP) Status Code Registry</a>
 
 ## Resources
 
