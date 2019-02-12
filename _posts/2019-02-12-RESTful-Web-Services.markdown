@@ -22,6 +22,7 @@ RESTful Web Services Concepts.
 ### Classification
 
 - [REST Architectural Constraints](#rest-architectural-constraints)
+- [HTTP Methods](http-methods)
 - [HTTP Status Codes](#http-status-codes)
 - [Resources](#resources)
 
@@ -33,6 +34,17 @@ RESTful Web Services Concepts.
 - Uniform interface
 - Layered system
 - Code on demand (optional)
+
+## HTTP Methods
+
+- GET
+- HEAD
+- POST
+- PUT
+- DELETE
+- CONNECT
+- OPTIONS
+- TRACE
 
 ## HTTP Status Codes
 
