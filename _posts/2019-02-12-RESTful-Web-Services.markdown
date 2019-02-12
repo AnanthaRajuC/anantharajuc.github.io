@@ -33,6 +33,21 @@ The following are the top 10 common HTTP status codes and their meaning
 - **4xx: Client Error**	 : This category of error status codes points the finger at clients.
 - **5xx: Server Error**	 : The server takes responsibility for these error status codes.
 
+---
+
+- 200 OK - General status code. Most common code used to indicate success.
+- 201 Created - Successful creation occurred (via either POST or PUT). Set the Location header to contain a link to the newly-created resource (on POST). Response body content may or may not be present.
+- 204 No Content - Status when wrapped responses (e.g. JSEND) are not used and nothing is in the body (e.g. DELETE).
+- 304 Not Modified - Used for conditional GET calls to reduce band-width usage. If used, must set the Date, Content-Location, ETag headers to what they would have been on a regular GET call. There must be no body on the response.
+- 400 Bad Request - General error when fulfilling the request would cause an invalid state. Domain validation errors, missing data, etc. are some examples.
+- 401 Unauthorized - Error code response for missing or invalid authentication token.
+- 403 Forbidden - Error code for user not authorized to perform the operation or the resource is unavailable for some reason (e.g. time constraints, etc.)
+- 404 Not Found - Used when the requested resource is not found, whether it doesn't exist or if there was a 401 or 403 that, for security reasons, the service wants to mask.
+- 409 Conflict - Whenever a resource conflict would be caused by fulfilling the request. Duplicate entries and deleting root objects when cascade-delete is not supported are a couple of examples.
+- 500 Internal Server Error - The general catch-all error when the server-side throws an exception.
+
+- <https://www.restapitutorial.com/httpstatuscodes.html>
+
 ## Resources
 
 - <a href="https://www.restapitutorial.com/" target="_blank" >REST API Tutorial</a>
