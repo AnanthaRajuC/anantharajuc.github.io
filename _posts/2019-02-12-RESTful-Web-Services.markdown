@@ -20,8 +20,19 @@ RESTful Web Services Concepts.
 <a href="https://en.wikipedia.org/wiki/Roy_Fielding" target="_blank" >Roy Fielding</a>'s doctoral <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
 
 ### Classification
+
+- [REST Architectural Constraints](#rest-architectural-constraints)
 - [HTTP Status Codes](#http-status-codes)
 - [Resources](#resources)
+
+## REST Architectural Constraints/Guiding Principles
+
+- Client–server
+- Stateless
+- Cacheable
+- Uniform interface
+- Layered system
+- Code on demand (optional)
 
 ## HTTP Status Codes
 
