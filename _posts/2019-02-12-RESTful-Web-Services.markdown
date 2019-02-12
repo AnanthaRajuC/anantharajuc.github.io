@@ -15,9 +15,9 @@ description: RESTful Web Services
 
 ## Summary:
 
-Web Service API classification - SOAP, XML-RPC, JSON-RPC, REST
+Web Service API classification - Simple Object Access Protocol (SOAP), XML-RPC , JSON-RPC, Representational State Transfer (REST)
 
-REST is a type of Web API. Web API's are also known as Web Services and it provides interfaces for (web) applications to that need to connect to each other via the Internet to communicate. 
+REST is a type of Web API. Web API's are commonly referred to as Web Services and it provides interfaces for (web) applications to that need to connect to each other via the Internet to communicate. 
 
 <a href="https://en.wikipedia.org/wiki/Roy_Fielding" target="_blank" >Roy Fielding</a>'s doctoral <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" target="_blank" >disseration</a> on Representational State Transfer (REST).
 
@@ -30,11 +30,11 @@ REST is a type of Web API. Web API's are also known as Web Services and it provi
 
 ## REST Architectural Constraints/Guiding Principles
 
-- Client–server
-- Stateless
-- Cacheable
-- Uniform interface
-- Layered system
+- Client–server : The client-server constraint operates on the concept that the client and the server should be separate from each other and allowed to evolve individually
+- Stateless : calls can be made independently of one another, and each call contains all of the data necessary to complete itself successfully.
+- Cacheable : Because a stateless API can increase request overhead by handling large loads of incoming and outbound calls, a REST API should be designed to encourage the storage of cacheable data.
+- Uniform interface : It lets the client talk to the server in a single language, independent of the architectural backend of either.
+- Layered system : The system comprises of multiple layers, with each layer having a specific functionality and responsibility.
 - Code on demand (optional)
 
 ## HTTP Methods
