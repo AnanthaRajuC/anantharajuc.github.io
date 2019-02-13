@@ -2,7 +2,7 @@
 title: "Object Oriented Programming (Java)"
 layout: post
 date: 2019-02-13 16:00
-image: /assets/images/reading.jpg
+image: /assets/images/java.jpg
 headerImage: true
 tag:
 - Object Oriented Programming
