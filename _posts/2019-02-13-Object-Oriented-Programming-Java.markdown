@@ -20,11 +20,13 @@ description: Object Oriented Programming in Java
 - Inheritance
 - Polymorphism
 - Abstraction
-- [Encapsulation] (#encapsulation)
+- [Encapsulation](#encapsulation)
 - Association
 - Aggregation
 - Composition
 
 ## Encapsulation
+
+It is a technique of wrapping the data and code.
 
 <script src="https://gist.github.com/AnanthaRajuC/8ad78824899f8f5c019a0881945c3fbe.js?file=Book.java"></script>
