@@ -2,8 +2,8 @@
 title: "Spring Boot Application Monitoring via Secured Actuator Endpoints"
 layout: post
 date: 2019-02-20 07:15
-image: /assets/images/Git.png
-headerImage: false
+image: /assets/images/spring-boot-logo.jpg
+headerImage: true
 tag:
 - Spring Boot
 - Actuator
