@@ -70,6 +70,12 @@ Git is a distributed version-control system for tracking changes in source code 
 
 - `git tag 1.0.0 1b2e1d63ff` create a new tag named <a href="https://semver.org/" target="_blank" >1.0.0</a> where 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag
 
+- `git tag -a 'Version_1_0' -m 'Simple UI' HEAD` - Create Tag - Tag operation allows giving meaningful names to a specific version in the repository.
+
+- `git push origin tag Version_1_0` - push the tag into the remote repository
+
+- `git tag -l` - view all the available tags
+
 ---
 
 ### Log
