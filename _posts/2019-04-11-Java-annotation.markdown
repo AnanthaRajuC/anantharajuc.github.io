@@ -17,54 +17,121 @@ description: Annotations are a form of syntactic metadata that can be added to J
 
 When Java source code is compiled, annotations can be processed by compiler plug-ins called annotation processors. Processors can produce informational messages or create additional Java source files or resources, which in turn may be compiled and processed.
 
-#### `@Autowired`
-- 
-
+- Built-in annotations
+- Custom annotations
 ---
 
-#### `@EnableCaching`
+#### @EnableCaching
 - Enables Spring Caching functionality
 
-#### `@CacheConfig(cacheNames={"users"})`
+#### @CacheConfig(cacheNames={"users"})
 - Tells Spring where to store cache for this class
 
-#### `@Cacheable`
+#### @Cacheable
 - Caches the result of the method
 
-#### `@CachePut`
+#### @CachePut
 - Always lets the method execute. It is used to update the cache with the result of the method execution.
 
-#### `@CacheEvict`
+#### @CacheEvict
 - Removes data from from the cache.
 
-#### `@CacheEvict(allEntries = true)`
+#### @CacheEvict(allEntries = true)
 - Flush all the cache
 
-#### `@CacheEvict(key = "#user.username")`
+#### @CacheEvict(key = "#user.username")
 - Remove item by key
 
 ---
 
-#### `@Table`
+#### @Table
 - Maps the bean to SQL table.
 
-#### `@Column(length = 32)`
+#### @Column(length = 32)
 - Truncate column values to 32 characters.
 
-#### `@Entity`
+#### @Entity
 - Declares this an entity bean
 
-#### `@GeneratedValue`
+#### @GeneratedValue
 - Database will generate new primary keys, not us.
 
-#### `@Id`
+#### @Id
 - Map this to the primary key column.
 
-#### `@NotEmpty(message = "first name must not be empty")'
+#### @NotEmpty(message = "first name must not be empty")
 -
 
-#### `@Email'
+#### @Email
 - 
 
 ---
 
+#### Project Lombok
+
+#### @Data
+-
+
+#### @AllArgsConstructor
+-
+
+#### @NoArgsConstructor
+- 
+
+#### @Builder
+- 
+
+---
+
+#### @RestController
+- 
+
+#### @RequestMapping(value = "/users")
+- 
+
+#### @GetMapping(value = "/all")
+- 
+
+#### @PostMapping(value = "/employees")
+- 
+
+---
+
+#### @Override							
+- Informs the compiler that the element is meant to override an element declared in a superclass.
+
+#### @PathVariable
+- 
+
+#### @Deprecated
+- 
+
+#### @PostConstruct
+- 
+
+---
+
+@Autowired
+
+#### @Service
+-
+
+#### @SpringBootApplication
+- 
+
+#### @Configuration
+-
+
+#### @Component
+-
+
+#### @SuppressWarnings("deprecation")
+- Tells the compiler to suppress specific warnings that it would otherwise generate.
+
+#### @Bean
+- 
+
+---
+
+#### @Test
+- 
