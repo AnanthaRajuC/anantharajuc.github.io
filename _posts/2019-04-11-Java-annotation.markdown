@@ -62,6 +62,19 @@ When Java source code is compiled, annotations can be processed by compiler plug
 #### @NotEmpty(message = "first name must not be empty")
 -
 
+#### @Size(min=2, max=30)
+- will between 2 and 30 characters long.
+
+#### @NotNull
+- won’t allow a null value.
+
+#### @NotNull
+- won’t allow a null value.
+
+#### @Min(18)
+- private Integer age;
+- won’t allow if the age is less than 18
+
 #### @Email
 - 
 
