@@ -61,8 +61,15 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 - `git checkout -b feature_x` create a new branch named **feature_x** and switch to it using
 - `git checkout master` switch back to master branch
-- `git branch -d feature_x` delete the **feature_x** branch
 - `git push origin <branch>` push from local to remote **branch**
+
+---
+
+### Deleting a branch
+
+- `git push -d origin <branch name>`
+
+- `git branch -d <branch name>`
 
 ---
 
