@@ -22,22 +22,37 @@ description: Beefing-Up Windows Command Prompt with cURL and jq
 <a href="https://stedolan.github.io/jq/" target="_blank" >jq</a> is a lightweight and flexible command-line JSON processor. It can be used to slice and filter and map and transform structured data. it is available for use on Linux, OS X, FreeBSD, Solaris and Windows OS platforms.
 
 ### Classification
-- [Installation](#installation)
-- [Resources](#resources)
+- [cURL Installation](#curl-installation)
+- [cURL Commands](#curl-commands)
 - [jq Installation](#jq-installation)
+- [jq Commands](#jq-commands)
+- [Resources](#resources)
 
 ## cURL Installation
 
 - In the *Source Archives* section of the **<a href="https://curl.haxx.se/download.html" target="_blank" >Download</a>** page on the **<a href="https://curl.haxx.se/" target="_blank" >curl://</a>** website, click on the zip file to download the most recent version of the curl release.
 - Extract the zip file and navigate to the **`bin`** folder and add this folder location to **`Path`** system variable
+
+### cURL Commands
+
 - To test if the tool is configured correctly, open the command prompt and execute the command **`curl https://postman-echo.com/get?test=123`**
 - Correct configuration of the tool will return the following response 
 
 <img src="/assets/images/curl-example.PNG" width="1500" Height="175">
 
+- cURL can also be used with a web URL, **`curl www.example.com`**
+
+- **`-o`** flag can be used to store the output in a file **`curl -o example.html www.example.com`**
+
+## jq Installation
+
+- jq can be installed on the Windows operating system platforma via <a href="https://chocolatey.org/" target="_blank" >Choclatey</a> package manager for Windows or by downloading the <a href="https://stedolan.github.io/jq/download/" target="_blank" >executables</a>.
+
+### jq Commands
+
 - To pretty print the JSON response append **` | jq`** to the command. Example **`curl https://postman-echo.com/get?test=123 | jq`**
 
-<img src="/assets/images/curl-example-pretty-print.PNG" width="1500" Height="175">
+<img src="/assets/images/curl-example-pretty-print.PNG" width="649" Height="386">
 
 ```
 {
@@ -60,10 +75,6 @@ description: Beefing-Up Windows Command Prompt with cURL and jq
   "url": "https://postman-echo.com/get?test=123"
 }
 ```
-
-## jq Installation
-
-- jq can be installed on the Windows operating system platforma via <a href="https://chocolatey.org/" target="_blank" >Choclatey</a> package manager for Windows or by downloading the <a href="https://stedolan.github.io/jq/download/" target="_blank" >executables</a>.
 
 ## Resources
 
