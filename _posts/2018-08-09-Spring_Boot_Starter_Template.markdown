@@ -110,9 +110,9 @@ This repository contains a recipe/scaffolding for bootstrapping a Web Applicatio
 
 ## Application screenshots
 
-<img src="images\home.PNG"/>
-<img src="images\login.PNG"/>
-<img src="images\about.PNG"/>
+<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/home.PNG"/>
+<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/login.PNG"/>
+<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/about.PNG"/>
 
 ## Internationalization (i18n)
 
@@ -165,23 +165,23 @@ Refer `io.github.anantharajuc.sbtest.util.config.I18Nconfiguration`. The text el
 
 ## To-Do
 
-* 	[x] Logger (Console, File)
-* 	[x] [Content Negotiation](https://spring.io/blog/2013/05/11/content-negotiation-using-spring-mvc)
-* 	[x] [Dark Mode](https://en.wikipedia.org/wiki/Light-on-dark_color_scheme)
-* 	[x] [Spring Security](https://spring.io/projects/spring-security) RBAC, Session Timeout
-* 	[x] API [Rate Limiting](https://en.wikipedia.org/wiki/Rate_limiting)
-* 	[x] [JPA Auditing via AuditorAware Interface](https://docs.spring.io/spring-data/jpa/docs/1.7.0.DATAJPA-580-SNAPSHOT/reference/html/auditing.html)
-* 	[x] [Spring Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-profiles)
-* 	[x] [Docker](https://www.docker.com/)
-* 	[x] [Caching](https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/boot-features-caching.html)
-*   [ ] Unit Tests, Integration Tests
-* 	[ ] Shut down app on button click via actuator url 
-* 	[ ] HATEOS - RESTful Web Service 
-* 	[ ] Spring Boot Admin
-* 	[ ] NoSQL (MongoDB)
-* 	[ ] Multitenancy
-* 	[ ] Micrometer
-* 	[ ] Grafna
+[x] Logger (Console, File)
+[x] [Content Negotiation](https://spring.io/blog/2013/05/11/content-negotiation-using-spring-mvc)
+[x] [Dark Mode](https://en.wikipedia.org/wiki/Light-on-dark_color_scheme)
+[x] [Spring Security](https://spring.io/projects/spring-security) RBAC, Session Timeout
+[x] API [Rate Limiting](https://en.wikipedia.org/wiki/Rate_limiting)
+[x] [JPA Auditing via AuditorAware Interface](https://docs.spring.io/spring-data/jpa/docs/1.7.0.DATAJPA-580-SNAPSHOT/reference/html/auditing.html)
+[x] [Spring Profiles](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-profiles)
+[x] [Docker](https://www.docker.com/)
+[x] [Caching](https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/boot-features-caching.html)
+[ ] Unit Tests, Integration Tests
+[ ] Shut down app on button click via actuator url 
+[ ] HATEOS - RESTful Web Service 
+[ ] Spring Boot Admin
+[ ] NoSQL (MongoDB)
+[ ] Multitenancy
+[ ] Micrometer
+[ ] Grafna
 
 ## Running the application locally
 
@@ -396,7 +396,7 @@ To monitor and manage your application
 
 ## EER Diagram
 
-<img src="images\SBAT-EER-Diagram.png"/>
+<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/SBAT-EER-Diagram.png"/>
 
 ## Files and Directories Structure
 
