@@ -110,9 +110,9 @@ This repository contains a recipe/scaffolding for bootstrapping a Web Applicatio
 
 ## Application screenshots
 
-<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/home.PNG"/>
-<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/login.PNG"/>
-<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/about.PNG"/>
+<img src="https://raw.githubusercontent.com/Spring-Boot-Framework/Spring-Boot-Application-Template/master/images/home.PNG"/>
+<img src="https://raw.githubusercontent.com/Spring-Boot-Framework/Spring-Boot-Application-Template/master/images/login.PNG"/>
+<img src="https://raw.githubusercontent.com/Spring-Boot-Framework/Spring-Boot-Application-Template/master/images/about.PNG"/>
 
 ## Internationalization (i18n)
 
@@ -396,7 +396,7 @@ To monitor and manage your application
 
 ## EER Diagram
 
-<img src="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/blob/master/images/SBAT-EER-Diagram.png"/>
+<img src="https://raw.githubusercontent.com/Spring-Boot-Framework/Spring-Boot-Application-Template/master/images/SBAT-EER-Diagram.png"/>
 
 ## Files and Directories Structure
 
