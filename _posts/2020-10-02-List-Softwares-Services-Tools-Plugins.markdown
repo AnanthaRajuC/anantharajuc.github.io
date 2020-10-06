@@ -1,7 +1,7 @@
 ---
 title: "Useful Softwares, Services, Tools, Plugins list"
 layout: post
-date: 2019-04-11 08:30
+date: 2020-10-02 17:20
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
