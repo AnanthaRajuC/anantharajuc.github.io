@@ -89,6 +89,22 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 ---
 
+### Undo all working dir changes including new files
+
+Delete all changes from working directory including new untracked files.
+
+`git reset --hard` Removes staged and working directory changes
+
+`git clean -nfd` To see what will be deleted before-hand, without actually deleting it, use the -n flag (this is basically a test-run). When you are ready to actually delete, then remove the -n flag
+
+`git clean -f -d` Remove untracked
+
+`git clean -f -x -d` CAUTION: as above but removes ignored files like config.
+
+`git clean -fxd :/` CAUTION: as above, but cleans untracked and ignored files through the entire repo (without :/, the operation affects only the current directory)
+
+Reference: https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files
+
 ### Log
 
 - `git log` displays repository commit history

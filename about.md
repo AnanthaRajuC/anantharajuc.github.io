@@ -24,7 +24,7 @@ layout: page
 <p><strong>Certifications</strong></p>
 <ul>
    <li><a href="https://google.qwiklabs.com/public_profiles/f39c6d6d-a4e3-4160-abe4-a625b1be976f">Google Cloud Platform and Amazon Web Services (Qwiklabs)</a></li>
-   <li><a href="https://www.youracclaim.com/badges/142c45b1-ab3b-42a3-b13d-05c37c44b9a1g">Principles of Reactive Architecture (Lightbend)</a></li>
+   <li><a href="https://www.youracclaim.com/badges/142c45b1-ab3b-42a3-b13d-05c37c44b9a1">Principles of Reactive Architecture (Lightbend)</a></li>
    <li><a href="https://www.youracclaim.com/users/anantha-raju-c/badges">IBM Marketing Cloud (IBM)</a></li>
    <li><a href="https://www.youracclaim.com/badges/576ecfb6-3061-43d0-b56a-eae866413aac">Adobe Professional – Adobe Experience Manager Sites Business Practitioner (Adobe)</a></li>
 </ul>
