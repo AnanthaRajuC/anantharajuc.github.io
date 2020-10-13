@@ -20,6 +20,7 @@ Using the Spring Boot CLI to Generate Spring Boot Skeleton Project
 ### Classification
 - [CLI](#cli)
 - [Installation](#installation)
+- [Using the CLI](#using-the-cli)
 
 ---
 
@@ -29,16 +30,36 @@ A command-line interface or command language interpreter (CLI), also known as co
 
 ## Installation 
 
-- Pre-requisites
+* 	Pre-requisites
     - [Java SDK ](https://www.java.com/en/) v1.8 or higher
 
-- Spring Boot CLI [Download Link](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation)
+* 	Spring Boot CLI [Download Link](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation)
  
- 
-- Installation Steps
+* 	Installation Steps
 
-    - set `SPRING_HOME` to point to the Spring CLI folder
-    - add `SPRING_HOME/bin` to your `PATH` environment variable
-    - to test if you have successfully installed the CLI you can run the following command: `spring --version`
+    - Set **`SPRING_HOME`** to point to the Spring CLI folder
+    - Add **`SPRING_HOME/bin`** to your **`PATH`** environment variable
+    - To test if you have successfully installed the CLI you can run either of the following commands: 
+		-	**`spring --version`** or **`spring version`**
 
-* No specific environment variables are required to run the CLI
+* 	No specific environment variables are required to run the CLI
+
+## Using the CLI
+
+*	**`spring`**  
+A help screen is displayed.
+
+*	**`spring help`**  
+Get more details about any of the supported commands.
+
+*	**`spring init --dependencies=web,data-jpa my-example-project`**  
+Create a new maven based spring boot project, **my-example-project** with **spring-boot-starter-web** and **spring-boot-starter-data-jpa** dependencies.
+
+*	**`spring init --list`**  
+List all the capabilities of Spring Starter.
+
+*	**`spring init --build=maven --java-version=1.8 --dependencies=web,data-jpa --packaging=jar my-example-project.zip`**  
+Create a maven project that uses Java 8 and jar packaging.
+
+*	**`spring shell`** 
+Command to launch an integrated shell on a Windows machine. From inside the embedded shell, you can run other commands directly. **`$ version`**

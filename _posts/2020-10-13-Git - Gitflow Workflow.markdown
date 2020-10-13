@@ -1,5 +1,5 @@
 ---
-title: "Gitflow Workflow"
+title: "Git - Gitflow Workflow"
 layout: post
 date: 2020-10-13 13:30
 image: /assets/images/Git.png
@@ -9,12 +9,12 @@ tag:
 star: true
 category: blog
 author: Anantha Raju C
-description: GitflowWorkflow
+description: Git - Gitflow Workflow
 ---
 
 ## Summary:
 
-Gitflow Workflow
+Git - Gitflow Workflow
 
 ---
 

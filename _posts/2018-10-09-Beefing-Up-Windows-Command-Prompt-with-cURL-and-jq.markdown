@@ -1,5 +1,5 @@
 ---
-title: "Beefing-Up Windows Command Prompt with cURL and JQ"
+title: "Amping-Up Windows Command Prompt with cURL and JQ"
 layout: post
 date: 2018-10-09 17:40
 image: /assets/images/curl-logo.svg
@@ -12,7 +12,7 @@ tag:
 star: true
 category: blog
 author: Anantha Raju C
-description: Beefing-Up Windows Command Prompt with cURL and jq
+description: Amping-Up Windows Command Prompt with cURL and jq
 ---
 
 ## Summary:
