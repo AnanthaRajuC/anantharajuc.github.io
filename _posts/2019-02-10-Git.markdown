@@ -22,7 +22,7 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 ---
 
-### Initialiaztion
+### Initialization
 
 - **`git init`** creates a new git repository
 - `git clone /path/to/repository` create a working copy of a local repository
