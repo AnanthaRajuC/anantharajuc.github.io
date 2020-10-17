@@ -5,9 +5,9 @@ date: 2018-07-29 17:00
 image: /assets/images/reading.jpg
 headerImage: true
 tag:
-- books
-- articles
-- list
+- Book
+- Article
+- List
 star: true
 category: blog
 author: Anantha Raju C

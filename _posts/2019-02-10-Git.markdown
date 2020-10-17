@@ -24,32 +24,43 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 ### Initialization
 
-- **`git init`** creates a new git repository
-- `git clone /path/to/repository` create a working copy of a local repository
-- `git clone username@host:/path/to/repository` when using a remote server
+|----------	|------	|
+|`git init`|creates a new git repository|
+|||
+|`git clone /path/to/repository`|create a working copy of a local repository|
+|||
+|`git clone username@host:/path/to/repository`|when using a remote server|
 
 ---
 
 ### Local repository consists of three **trees** maintained by git
 
-- **Working Directory** which holds the actual files
-- **Index** is the staging area
-- **HEAD** points to the last commit 
+|----------	|------	|
+|**Working Directory**|holds the actual files|
+|||
+|**Index**|staging area|
+|||
+|**HEAD**|points to the last commit|
 
 ---
 
 ### Local workflow
 
-- `git add <filename>` add a single changed file to staging area (**Index**)
-- `git add *` add all changed files to staging area (**Index**)
-- `git commit -m "Commit message"` commit the changed files to **HEAD**
+|----------	|------	|
+|`git add <filename>`|add a single changed file to staging area (**Index**)|
+|||
+|`git add *`|add all changed files to staging area (**Index**)|
+|||
+|`git commit -m "Commit message"`|commit the changed files to **HEAD**|
 
 ---
 
 ### Pushing changes
 
-- `git push origin master`send the changes to your remote repository (Change **master** to whatever **branch** you want to push your changes to)
-- `git remote add origin <server>` If you have not cloned an existing repository and want to connect your repository to a remote server
+|----------	|------	|
+|`git push origin master`|send the changes to your remote repository (Change **master** to whatever **branch** you want to push your changes to)|
+|||
+|`git remote add origin <server>`|If you have not cloned an existing repository and want to connect your repository to a remote server|
 
 ---
 
@@ -59,9 +70,12 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 - **master** branch is the **default** branch in a repository.
 - other branches are used for development and merged back to the master branch upon completion.
 
-- `git checkout -b feature_x` create a new branch named **feature_x** and switch to it using
-- `git checkout master` switch back to master branch
-- `git push origin <branch>` push from local to remote **branch**
+|----------	|------	|
+|`git checkout -b feature_x`|create a new branch named **feature_x** and switch to it using|
+|||
+|`git checkout master`|switch back to master branch|
+|||
+|`git push origin <branch>`|push from local to remote **branch**|
 
 ---
 
@@ -79,13 +93,14 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 ### Tagging
 
-- `git tag 1.0.0 1b2e1d63ff` create a new tag named <a href="https://semver.org/" target="_blank" >1.0.0</a> where 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag
-
-- `git tag -a 'Version_1_0' -m 'Simple UI' HEAD` - Create Tag - Tag operation allows giving meaningful names to a specific version in the repository.
-
-- `git push origin tag Version_1_0` - push the tag into the remote repository
-
-- `git tag -l` - view all the available tags
+|----------	|------	|
+|`git tag 1.0.0 1b2e1d63ff`|create a new tag named <a href="https://semver.org/" target="_blank" >1.0.0</a> where 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag|
+|||
+|`git tag -a 'Version_1_0' -m 'Simple UI' HEAD`|Create Tag - Tag operation allows giving meaningful names to a specific version in the repository.|
+|||
+|`git push origin tag Version_1_0`|push the tag into the remote repository|
+|||
+|`git tag -l`|view all the available tags|
 
 ---
 
@@ -93,36 +108,48 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 Delete all changes from working directory including new untracked files.
 
-`git reset --hard` Removes staged and working directory changes
-
-`git clean -nfd` To see what will be deleted before-hand, without actually deleting it, use the -n flag (this is basically a test-run). When you are ready to actually delete, then remove the -n flag
-
-`git clean -f -d` Remove untracked
-
-`git clean -f -x -d` CAUTION: as above but removes ignored files like config.
-
-`git clean -fxd :/` CAUTION: as above, but cleans untracked and ignored files through the entire repo (without :/, the operation affects only the current directory)
-
-Reference: https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files
+|----------	|------	|
+|`git reset --hard`|Removes staged and working directory changes|
+|||
+|`git clean -nfd`|To see what will be deleted before-hand, without actually deleting it, use the **-n** flag (this is basically a test-run). When you are ready to actually delete, then remove the **-n** flag|
+|||
+|`git clean -f -d`|Remove untracked|
+|||
+|`git clean -f -x -d`|**CAUTION:** as above but removes ignored files like config.|
+|||
+|`git clean -fxd :/`|**CAUTION:** as above, but cleans untracked and ignored files through the entire repo (without :/, the operation affects only the current directory)|
+ 
+**Reference:** https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files
 
 ### Log
 
-- `git log` displays repository commit history
-- `git log --author=bob` displays only the commits of a certain author
-- `git log --pretty=oneline` displays a very compressed log where each commit is one line
-- `git log --graph --oneline --decorate --all` displays an ASCII art tree of all the **branches**, decorated with the names of **tags** and **branches**
-- `git log --name-status` displays only which files have changed
-- `git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"`
-- `git log --all --decorate --oneline --graph`
+|----------	|------	|
+|`git log`|displays repository commit history|
+|||
+|`git log --author=bob`|displays only the commits of a certain author|
+|||
+|`git log --pretty=oneline`|displays a very compressed log where each commit is one line|
+|||
+|`git log --graph --oneline --decorate --all`|displays an ASCII art tree of all the **branches**, decorated with the names of **tags** and **branches**|
+|||
+|`git log --name-status`|displays only which files have changed|
+|||
+|`git log --pretty="%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s"`||
+|||
+|`git log --all --decorate --oneline --graph`||
 
 ---
 
 ### Others
 
-- `git log --help` opens a local git-log manual (html) page
-- `gitk` opens a built-in git GUI desktop application
-- `git config --global commit.template ~/.gitmessage.txt` tell git to use `gitmessage.txt` as the default message that appears in your editor when you run git commit
-- `git remote show origin` find the URL of the remote repository
+|----------	|------	|
+|`git log --help`|opens a local git-log manual (html) page|
+|||
+|`gitk`|opens a built-in git GUI desktop application|
+|||
+|`git config --global commit.template ~/.gitmessage.txt`|tell git to use **gitmessage.txt** as the default message that appears in your editor when you run **git commit** command|
+|||
+|`git remote show origin`|find the URL of the remote repository|
 
 ---
 

@@ -5,9 +5,10 @@ date: 2018-10-09 17:40
 image: /assets/images/curl-logo.svg
 headerImage: true
 tag:
-- curl
+- cURL
 - JQ
-- cmd
+- CMD
+- CLI
 - Windows 
 star: true
 category: blog
