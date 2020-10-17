@@ -18,9 +18,12 @@ description: Spring Boot CLI (Command Line Interface) usage
 Using the Spring Boot CLI to Generate Spring Boot Skeleton Project
 
 ### Classification
+
 - [CLI](#cli)
 - [Installation](#installation)
 - [Using the CLI](#using-the-cli)
+- [Running the Jar](#running-the-jar)
+- [Other Commands](#other-commands)
 
 ---
 
@@ -63,3 +66,21 @@ Create a maven project that uses Java 8 and jar packaging.
 
 *	**`spring shell`** 
 Command to launch an integrated shell on a Windows machine. From inside the embedded shell, you can run other commands directly. **`$ version`**
+
+## Running the Jar
+
+|----------|---------|
+|`Java -jar Application-Jar-Name.Jar`|Running the Spring Boot Application Jar|
+|||
+|`Java -jar -Dserver.port=9090 Application-Jar-Name.Jar`|Running Multiple Instances of Spring Boot Project on Different Ports|
+
+## Other Commands
+
+|----------|---------|
+|**jcmd**|lists all running Java processes|
+|||
+|**Taskkill /PID PROCESS_ID_OF_RUNNING_APP /F**|replace the **PROCESS_ID_OF_RUNNING_APP** with the actual process id of the running jar found out from executing the previous command to shutdown the running jar.|
+|||
+|**jps -lv**|displays information about running java processes|
+|||
+|**echo %JAVA_HOME%**|prints environment variable **JAVA_HOME**|
