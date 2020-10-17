@@ -1,0 +1,90 @@
+---
+title: "MySQL Commands"
+layout: post
+date: 2020-10-17 12:00
+image: 
+headerImage: false
+tag:
+- MySQL
+- Database
+- CLI
+star: true
+category: blog
+author: Anantha Raju C
+description: MySQL Commands
+---
+
+## Summary:
+
+MySQL Commands
+
+### Content
+
+- [Description](#description)
+- [Meta](#Meta)
+- [Time](#Time)
+- [Create Schema and User with Permissions](#create-schema-and-user-with-permissions)
+
+---
+
+#### Description
+
+|------------|----------------------------------------------------------------------------| 
+|**DQL**     | Data Query Language - SELECT                                               |
+|||
+|**DDL**     | Data Definition Language - CREATE, ALTER, DROP, TRUNCATE, RENAME           |
+|||
+|**DML**     | Data Manipulation Language - INSERT, UPDATE, DELETE                        |
+|||
+|**DTL/TCL** | Data Transition/Transition Control Language - COMMIT, ROLLBACK, SAVE POINT |
+|||
+|**DCL**     | Data Control Language - GRANT, REVOKE                                      |
+
+#### Meta
+
+|------------------------------------------------------------------|--------------------------------------------------------------------| 
+|**SELECT user,authentication_string,plugin,host FROM mysql.user;**|                                                                    |
+|||
+|SELECT * FROM mysql.user;                                         | List all users                                                     |
+|||
+|**SHOW TABLES;**                                                  | Show tables in a schema                                            |
+|||
+|**DESCRIBE [table_name];**                                        | Displays names of the columns in your table or what types they have|
+|||
+|**SELECT VERSION();**                                             | Retrieve MySQL Version                                             |
+|||
+|**SHOW VARIABLES LIKE "%version%";**                              | Retrieve MySQL Version & other details                             |
+
+#### Time
+
+|-----------------------------------------|---------------------| 
+|**SELECT NOW() FROM DUAL;**              | 2006-07-01 10:02:41 |
+|||
+|**SELECT SYSDATE() FROM DUAL;**          | 2006-07-01 10:03:21 |
+|||
+|**SELECT CURRENT_TIMESTAMP() FROM DUAL;**| 2006-07-01 10:04:03 |
+|||
+|**SELECT LOCALTIME() FROM DUAL;**        | 2006-07-01 10:07:37 |
+|||
+|**SELECT LOCALTIMESTAMP() FROM DUAL;**   | 2006-07-01 10:08:08 |
+|||
+|**SELECT UTC_TIMESTAMP() FROM DUAL;**    | 2006-07-01 14:09:49 |
+|||
+|**SELECT UTC_TIME() FROM DUAL;**         | 14:09:22            |
+|||
+|**SELECT CURRENT_TIME() FROM DUAL;**     | 10:02:58            |
+
+#### Create Schema and User with Permissions
+
+|-----------------------------------------------------------------------------|--------------------------| 
+|**DROP SCHEMA IF EXISTS [schema_name];**                                     | Drop schema              |
+|||
+|**CREATE SCHEMA [schema_name];**                                             | Create schema            |
+|||
+|**USE [schema_name];**                                                       | Use schema               |
+|||
+|**Create user 'USERNAME'@'IPADDRESS' identified by 'PASSWORD';**             | Create user              |
+|||
+|**Grant all privileges on *.* to 'USERNAME'@'IPADDRESS' with grant option;** | Grant privileges to user |
+
+
