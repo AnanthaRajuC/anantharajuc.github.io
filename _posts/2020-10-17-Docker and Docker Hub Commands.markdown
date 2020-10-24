@@ -30,6 +30,18 @@ Docker and Docker Hub Commands
 |											 |															 |
 |`docker version`                            | Displays the docker version information                   |
 
+## Docker Volumes
+
+|        Command                             |                        Description                        |
+|--------------------------------------------|-----------------------------------------------------------| 
+|`docker volume ls`				             | list volumes                                          	 |
+|											 |															 |
+|`docker volume ls -f dangling=true`		 | list dangling volumes                                     |
+|											 |															 |
+|`docker volume rm [volume_name]`			 | remove volume                                        	 |
+|											 |															 |
+|`docker volume prune`	            		 | remove all dangling volumes                               |
+
 #### Docker Logging
 
 |---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -62,43 +74,53 @@ Docker and Docker Hub Commands
 
 #### Docker Basic Queries
 
-|-------------------------------|--------------------------------------------------------------------------|
-|`docker images`                | Take a look at the container images.                                     |
-|								|															               |
-|`docker image ls`              | Take a look at the container images.                                     |
-|								|															               |
-|`docker ps`                    | List all the running containers.                                         |
-|								|															               |
-|`docker ps -a`                 | List all the containers, including the ones that have finished executing.|
+|--------------------------------|--------------------------------------------------------------------------|
+|`docker images`                 | Take a look at the container images.                                     |
+|								 |															                |
+|`docker images -a`              | shows  every image, including intermediate image layers.                 |
+|								 |															                |
+|`docker images -f dangling=true`| list dangling images													    |
+|								 |															                |
+|`docker image ls`               | Take a look at the container images.                                     |
+|								 |															                |
+|`docker ps`                     | List all the running containers.                                         |
+|								 |															                |
+|`docker ps -a`                  | List all the containers, including the ones that have finished executing.|
 
 #### Docker  Container State Change 
 
-|-----------------------------------|---------------------------------|
-|`docker run [container_name]`      | Run a container.                |
-|								    |								  |
-|`docker stop [container_id]`   	| Stop a container                |
-|								    |								  |
-|`docker restart [container_name]`  | Restart a container.            |
-
-#### Docker Management
-
 |------------------------------------------|-------------------------------------------------------------------|
-|`docker build -t [project name] .`        | Build a Docker Image                                              |
+|`docker run [container_name]`             | Run a container.                                                  |
 |								           |								                                   |
 |`docker run -p 8080:8080 [container_name]`| Run a container by mapping a port on docker to a port on localhost|
 |								           |								                                   |
-|`docker rm [container_name]`              | Remove a container with a particular container name               |
+|`docker stop [container_id]`   	       | Stop a container                                                  |
 |								           |								                                   |
-|`docker rm $(docker ps -aq)`              | Stop and remove all containers                                    |
+|`docker restart [container_name]`         | Restart a container.                                              |
+
+#### Docker Management
+
+|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+|`docker build -t [project name] .`        | Build a Docker Image                                             														 |
+|								           |								                                 													     |
+|`docker system prune`					   | Clean up any resources — images, containers, volumes, and networks — that are dangling (not associated with a container)|
+|								           |								                                 													     |
+|`docker system prune -a`                  | Remove any stopped containers and all unused images (not just dangling images)                                          |
+|								           |								                                 													     |
+|`docker rm [container_id-or-name]`        | Remove a container with a particular container name                                                                     |
+|								           |								                                                                                         |
+|`docker rm $(docker ps -a -q)`            | Stop and remove all containers                                                                                          |
+|								           |								                                                                                         |
+|`docker rm -v container_name`             | Remove a container and its volume                                                                                       |
 
 #### MySQL Docker Container - Connecting to the MySQL docker image via CLI  
 
 |------------------------------------------------------------------------|------------------------------------------------| 
 |`docker exec mysql-docker mysql -usbat -psbat -e 'show databases;'`	 | Connect to MySQL image without interactive CLI.|	
-|								                                         |								                  |											|
+|								                                         |								                  |											
 |`docker exec -it mysql-docker mysql -usbat -psbat -e 'show databases;'` | Connect to MySQL image without interactive CLI.|
-|								                                         |								                  |														|
-|`docker exec -it mysql-docker mysql -usbat -psbat`						 | Connect to MySQL image via interactive CLI.	  |													|
+|								                                         |								                  |														
+|`docker exec -it mysql-docker mysql -usbat -psbat`						 | Connect to MySQL image via interactive CLI.	  |													
 
 #### Docker Hub
 

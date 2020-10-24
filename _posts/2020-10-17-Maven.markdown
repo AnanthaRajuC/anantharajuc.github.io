@@ -47,3 +47,8 @@ Maven Commands
 |||
 |`mvn -Dtest=TestApp1#testHello*+testMagic* test`| Run all test methods match pattern 'testHello*' and 'testMagic*' from a test class.|
 
+#### Others
+
+|                    Command                     |                              Description                                           |
+|------------------------------------------------|------------------------------------------------------------------------------------|
+|`mvn cobertura:cobertura`                       | Generates Cobertura code coverage reports.                                         |
