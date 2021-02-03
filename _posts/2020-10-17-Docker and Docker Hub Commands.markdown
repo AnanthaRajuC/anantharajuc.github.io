@@ -30,9 +30,8 @@ Docker and Docker Hub Commands
 |											 |															 |
 |`docker version`                            | Displays the docker version information                   |
 
-## Docker Volumes
+#### Docker Volumes
 
-|        Command                             |                        Description                        |
 |--------------------------------------------|-----------------------------------------------------------| 
 |`docker volume ls`				             | list volumes                                          	 |
 |											 |															 |
