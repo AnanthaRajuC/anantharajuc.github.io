@@ -181,6 +181,10 @@ It is a development model introduced by <a href="https://nvie.com/about/" target
 
 Read more about the model here, <https://nvie.com/posts/a-successful-git-branching-model/> 
 
+## Additional Reading
+
+<a href="https://guides.github.com/introduction/flow/" target="_blank" >Understanding the GitHub flow</a>
+
 ## Resources
 
 - <a href="https://github.com/k88hudson/git-flight-rules" target="_blank" >Flight rules for Git </a>- a guide for programmers using Git about what to do when things go wrong
