@@ -47,6 +47,11 @@ A selective list of both technical and non-technical books i've read over the la
 6. The Da Vinci Code (Robert Langdon #2) by Dan Brown 
 7. The Lost Symbol (Robert Langdon #3) by Dan Brown
 8. Digital Fortress by Dan Brown 
+9. The Monk Who Sold His Ferrari by Robin S. Sharma
+
+#### Non-Fiction
+
+1. Stay Hungry Stay Foolish by Rashmi Bansal
 
 #### Poetry
 
