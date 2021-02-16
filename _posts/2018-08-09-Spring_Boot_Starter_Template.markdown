@@ -4,12 +4,15 @@ layout: post
 date: 2018-08-09 07:30
 image: /assets/images/markdown.jpg
 headerImage: false
+projects: true
+hidden: true # don't count this post in blog pagination
 tag:
 - Spring Boot
 - Web Application
 star: true
-category: blog
+category: project
 author: Anantha Raju C
+externalLink: false
 description: A starter Spring Boot Starter Template to Rapidly develop Web Applications
 ---
 
