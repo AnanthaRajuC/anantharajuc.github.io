@@ -59,3 +59,8 @@ A selective list of both technical and non-technical books i've read over the la
 2. Milk and Honey by Rupi Kaur 
 
 ** Top books that elicited strong emotions. 
+
+#### Resources
+
+1. <a href="https://bookauthority.org/">Book Authority</a> - Book recommendations by thought leaders.
+2. <a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations. 
