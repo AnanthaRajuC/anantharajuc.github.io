@@ -28,3 +28,4 @@ layout: page
    <li><a href="https://www.youracclaim.com/badges/576ecfb6-3061-43d0-b56a-eae866413aac">Adobe Professional – Adobe Experience Manager Sites Business Practitioner (Adobe)</a></li>
 </ul>
 <p><img src="https://github-readme-stats.vercel.app/api?username=anantharajuc&amp;theme=vue&amp;show_icons=true&amp;include_all_commits=true&amp;count_private=true" alt="Anantha Raju C&#39;s github stats"></p>
+

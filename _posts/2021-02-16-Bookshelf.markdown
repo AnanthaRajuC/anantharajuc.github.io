@@ -5,7 +5,8 @@ date: 2021-02-16 07:35
 image: 
 headerImage: false
 tag:
-- Books
+- List
+- Personal
 star: true
 category: blog
 author: Anantha Raju C
@@ -39,15 +40,26 @@ A selective list of both technical and non-technical books i've read over the la
 
 #### Fiction
 
-1. Only Time Will Tell (The Clifton Chronicles #1) by Jeffrey Archer
-2. Not a Penny More, Not a Penny Less by Jeffrey Archer
-3. The Winner Stands Alone by Paulo Coelho
-4. The Alchemist by Paulo Coelho
-5. The Chamber by John Grisham
-6. The Da Vinci Code (Robert Langdon #2) by Dan Brown 
-7. The Lost Symbol (Robert Langdon #3) by Dan Brown
-8. Digital Fortress by Dan Brown 
-9. The Monk Who Sold His Ferrari by Robin S. Sharma
+- Dan Brown 
+
+	1. The Da Vinci Code (Robert Langdon #2) 
+	2. The Lost Symbol (Robert Langdon #3) 
+	3. Digital Fortress
+
+- Paulo Coelho
+
+	1. The Winner Stands Alone
+	2. The Alchemist
+	
+- Jeffrey Archer
+
+	1. Only Time Will Tell (The Clifton Chronicles #1) 
+	2. Not a Penny More, Not a Penny Less
+
+- Others
+
+	1. The Chamber by John Grisham
+	2. The Monk Who Sold His Ferrari by Robin S. Sharma
 
 #### Non-Fiction
 
@@ -55,8 +67,10 @@ A selective list of both technical and non-technical books i've read over the la
 
 #### Poetry
 
-1. The Sun and Her Flowers by Rupi Kaur
-2. Milk and Honey by Rupi Kaur 
+- Rupi Kaur
+
+	1. The Sun and Her Flowers
+	2. Milk and Honey
 
 ** Top books that elicited strong emotions. 
 
