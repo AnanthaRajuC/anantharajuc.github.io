@@ -65,6 +65,10 @@ A selective list of both technical and non-technical books i've read over the la
 
 1. Stay Hungry Stay Foolish by Rashmi Bansal
 
+#### Philosophy
+
+1. The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson
+
 #### Poetry
 
 - Rupi Kaur
