@@ -60,6 +60,10 @@ A selective list of both technical and non-technical books i've read over the la
 
 	1. The Chamber by John Grisham
 	2. The Monk Who Sold His Ferrari by Robin S. Sharma
+	
+#### Science
+
+1. The Angel and the Assassin: The Tiny Brain Cell That Changed the Course of Medicine by Donna Jackson Nakazawa	
 
 #### Non-Fiction
 
@@ -67,7 +71,7 @@ A selective list of both technical and non-technical books i've read over the la
 
 #### Philosophy
 
-1. The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson
+1. The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson **  
 
 #### Poetry
 
