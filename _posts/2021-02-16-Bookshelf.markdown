@@ -69,7 +69,7 @@ A selective list of both technical and non-technical books i've read over the la
 
 1. Stay Hungry Stay Foolish by Rashmi Bansal
 
-#### Philosophy
+#### Modern Philosophy (Work/Life/Business)
 
 1. The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson **  
 
@@ -86,3 +86,4 @@ A selective list of both technical and non-technical books i've read over the la
 
 1. <a href="https://bookauthority.org/">Book Authority</a> - Book recommendations by thought leaders.
 2. <a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations. 
+2. <a href="https://calibre-ebook.com/">Calibre</a> - E-book management. 
