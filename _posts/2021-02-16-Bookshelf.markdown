@@ -19,7 +19,7 @@ A selective list of both technical and non-technical books i've read over the la
 
 ---
 
-### Presntly Reading
+### Presently Reading
 
 1. Principles: Life and Work by Ray Dalio 
 2. Inspired: How to Create Tech Products Customers Love by Marty Cagan
