@@ -22,14 +22,18 @@ A selective list of both technical and non-technical books i've read over the la
 ### Presently Reading
 
 1. Principles: Life and Work by Ray Dalio 
-2. Inspired: How to Create Tech Products Customers Love by Marty Cagan
-3. Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software by Sankaran Prithviraj
+2. Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software by Sankaran Prithviraj
 
 #### Technical
 
 1. UNIX: A History and a Memoir by Brian W. Kernighan
 2. The Systems Bible: The Beginner's Guide to Systems Large and Small: Being the Third Edition of Systemantics by John Gall **  
 3. Competing in the Age of AI: Strategy and Leadership When Algorithms and Networks Run the World by Marco Iansiti, Karim R. Lakhani
+4. Software Engineering at Google: Lessons Learned from Programming Over Time by Titus Winters
+
+#### Product Building
+
+1. Inspired: How to Create Tech Products Customers Love by Marty Cagan
 
 #### Biography/Autobiography
 
