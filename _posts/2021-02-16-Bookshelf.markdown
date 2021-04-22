@@ -82,6 +82,7 @@ A selective list of both technical and non-technical books i've read over the la
 #### Modern Philosophy (Work/Life/Business)
 
 1. The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson **  
+2. Be a Work in Progress: And Other Things I'd Like to Tell My Younger Self by John Cena, Valeria Petrone (Illustrations)
 
 #### Poetry
 
