@@ -4,7 +4,7 @@ title: "MySQL Commands"
 author: anantharajuc
 categories: [ MySQL, Database, CLI ]
 date: 2020-10-17 12:00
-image: assets/images/MySQL.PNG
+image: assets/images/MySQL.png
 ---
 
 MySQL is an open-source relational database management system (RDBMS). 

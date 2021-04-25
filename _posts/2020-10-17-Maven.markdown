@@ -4,7 +4,7 @@ author: anantharajuc
 categories: [ Maven, Java, CLI ]
 layout: post
 date: 2020-10-17 12:00
-image: /assets/images/Apache-Maven.PNG
+image: /assets/images/Apache-Maven.png
 ---
 
 Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.

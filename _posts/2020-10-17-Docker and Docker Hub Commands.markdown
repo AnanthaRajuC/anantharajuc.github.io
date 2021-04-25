@@ -4,7 +4,7 @@ title: "Docker and Docker Hub Commands"
 author: anantharajuc
 categories: [ Docker, Docker Hub, Containers, CLI ]
 date: 2020-10-17 09:40
-image: assets/images/docker.PNG
+image: assets/images/docker.png
 tags: [featured]
 ---
 

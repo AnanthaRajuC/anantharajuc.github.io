@@ -4,7 +4,7 @@ author: anantharajuc
 categories: [ Web Services, REST ]
 layout: post
 date: 2019-02-12 12:30
-image: /assets/images/rest.PNG
+image: /assets/images/rest.png
 ---
 
 Web Service API classification - Simple Object Access Protocol (SOAP), XML-RPC , JSON-RPC, Representational State Transfer (REST)
