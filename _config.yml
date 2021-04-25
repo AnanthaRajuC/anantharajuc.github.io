@@ -1,0 +1,65 @@
+# Site
+name: 'Anantha Raju C'
+description: 'Personal Blog'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: '/mundana-theme-jekyll'
+disqus: 'demowebsite'
+email: 'wowthemesnet@gmail.com'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+
+include: ["_pages"]
+permalink: /:title/
+
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  
+authors:
+    anantharajuc:
+      name:           Anantha Raju C
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/anantha.jpg
+      bio:            "Hi there, i'm Anantha! 👋 I hold a Masters Degree in Computer Science Engineering. I primarily work with Java, Spring Boot based Web Applications."
+      email:          anantharajuc@gmail.com
+      twitter:        https://twitter.com/anantharajuc
+      instagram:      https://instagram.com/anantharajuc
+      github:         https://github.com/AnanthaRajuC
+      linkedin:       https://www.linkedin.com/in/anantharajuc
+      spotify:        https://open.spotify.com/user/yoi18x6bxdgi7fkirte7lhrvq
+      stackoverflow:  https://stackoverflow.com/users/3711562/anantha-raju-c
+      goodreads:      https://www.goodreads.com/user/show/49589939-anantha-raju
+      soundcloud:     https://soundcloud.com/user-400352466
+      quora:          https://www.quora.com/profile/Anantha-Raju-C
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: anantha
+      avatar: /assets/images/anantha.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Paginate
+paginate: 25
+
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]

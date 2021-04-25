@@ -1,0 +1,229 @@
+---
+layout: post
+title: "MySQL Commands"
+author: anantharajuc
+categories: [ MySQL, Database, CLI ]
+date: 2020-10-17 12:00
+image: assets/images/MySQL.PNG
+---
+
+MySQL is an open-source relational database management system (RDBMS). 
+
+The following is a non-exhaustive list of commonly used MySQL Commands for quick reference.
+
+
+Quick Links :
+
+- [Description](#description)
+- [Meta](#meta)
+- [Time](#time)
+- [Create Schema and User with Permissions](#create-schema-and-user-with-permissions)
+
+---
+
+#### Description
+
+*	**DQL** - Data Query Language  
+**`SELECT`** 
+
+*	**DDL** - Data Definition Language  
+**`CREATE`**, **`ALTER`**, **`DROP`**, **`TRUNCATE`**, **`RENAME`**    
+
+*	**DML** - Data Manipulation Language  
+**`INSERT`**, **`UPDATE`**, **`DELETE`**      
+
+*	**DTL/TCL** - Data Transition/Transition Control Language  
+**`COMMIT`**, **`ROLLBACK`**, **`SAVE POINT`** 
+
+*	**DCL** - Data Control Language  
+**`GRANT`**, **`REVOKE`**              
+
+---
+
+#### Meta
+
+*	**`SELECT user,authentication_string,plugin,host FROM mysql.user;`**  
+
+*	**`SELECT * FROM mysql.user;`**  
+List all users                                                  
+
+*	**`SHOW TABLES;`**  
+Show tables in a schema                                        
+
+*	**`DESCRIBE [table_name];`**  
+Displays names of the columns in your table or what types they have
+
+*	**`SELECT VERSION();`**  
+Retrieve MySQL Version                                          
+
+*	**`SHOW VARIABLES LIKE "%version%";`**  
+Retrieve MySQL Version & other details                           
+
+*	**`SHOW STATUS WHERE `variable_name`='Threads_connected';`**  
+Display number of active connections                             
+
+*	**`SHOW GLOBAL STATUS;`**  
+Aggregate values over all connections                            
+
+*	**`SHOW SESSION STATUS;`**  
+Aggregate values for the current connection  
+
+*	**`SHOW PROCESSLIST;`**  
+Show processlist                                                
+
+Server Status Variables -- https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html
+
+---
+
+#### Time
+
+*	**`SELECT NOW() FROM DUAL;`**  
+2006-07-01 10:02:41
+
+*	**`SELECT SYSDATE() FROM DUAL;`**  
+2006-07-01 10:03:21
+
+*	**`SELECT CURRENT_TIMESTAMP() FROM DUAL;`**  
+2006-07-01 10:04:03
+
+*	**`SELECT LOCALTIME() FROM DUAL;`**  
+2006-07-01 10:07:37 
+
+*	**`SELECT LOCALTIMESTAMP() FROM DUAL;`**  
+2006-07-01 10:08:08
+
+*	**`SELECT UTC_TIMESTAMP() FROM DUAL;`**  
+2006-07-01 14:09:49
+
+*	**`SELECT UTC_TIME() FROM DUAL;`**  
+14:09:22        
+
+*	**`SELECT CURRENT_TIME() FROM DUAL;`**  
+10:02:58          
+
+---
+
+#### Create Schema and User with Permissions
+
+*	**`DROP SCHEMA IF EXISTS [schema_name];`**  
+Drop schema
+
+*	**`CREATE SCHEMA [schema_name];`**  
+Create schema
+
+*	**`USE [schema_name];`**  
+Use schema
+
+*	**`Create user 'USERNAME'@'IPADDRESS' identified by 'PASSWORD';`**  
+Create user 
+
+*	**`Grant all privileges on *.* to 'USERNAME'@'IPADDRESS' with grant option;`**  
+Grant privileges to user
+
+---
+
+#### DQL - Column Operations
+
+*	**`SELECT MAX(column_name) FROM [schema.table_name];`**  
+select largest value of a column
+
+*	**`SELECT MIN(column_name) FROM [schema.table_name];`**  
+select smallest value of a column
+
+*	**`SELECT AVG(column_name) FROM [schema.table_name];`**  
+Find the average value of a column
+
+*	**`SELECT DISTINCT [column_name] FROM [schema.table_name];`**  
+Select distinct values of a column from a table
+
+*	**`SELECT COUNT(DISTINCT [column_name]) FROM [schema.table_name];`**  
+Get count of distinct values of a column from a table
+
+---
+
+#### DQL - Table Operations
+
+*	**`SELECT [column_name] FROM [schema.table_name] WHERE [column_name] IS NULL;`**  
+select records from table where columns contain null
+
+*	**`SELECT [column_name] FROM [schema.table_name] WHERE [column_name] IS NOT NULL;`**  
+select records from table where columns does not contain null
+
+---
+
+#### DQL - Search
+
+*	**`SELECT [column_name] FROM [schema.table_name] WHERE [column_name] NOT LIKE "%substring%";`**  
+search for rows not containing a sub-string
+
+*	**`SELECT * FROM [schema.table_name] WHERE [column_name] LIKE "%substring%";`**  
+search for rows containing a sub-string
+
+*	**`WHERE [column_name] LIKE 'a%'`**  
+Finds any values that starts with "a"
+
+*	**`WHERE [column_name] LIKE '%a'`**  
+Finds any values that ends with "a"
+
+*	**`WHERE [column_name] LIKE '%or%'`**  
+Finds any values that have "or" in any position
+
+*	**`WHERE [column_name] LIKE '_r%'`**  
+Finds any values that have "r" in the second position
+
+*	**`WHERE [column_name] LIKE 'a_%_%'`**  
+Finds any values that starts with "a" and are at least 3 characters in length
+
+*	**`WHERE [column_name] LIKE 'a%o'`**  
+Finds any values that starts with "a" and ends with "o"
+
+---
+
+#### DDL - Create
+
+*	**`CREATE TABLE [new_table_new] AS SELECT * FROM [existing_table_name];`**  
+copy/clone just an entire table structure and data 
+
+*	**`CREATE TABLE [new_table_new] AS SELECT [column_one, column_two] FROM [existing_table_name];`**  
+copy/clone select columns of a table structure and data
+
+*	**`CREATE TABLE [new_table_new] LIKE [schema.table_name];`**  
+copy/clone table without data
+
+---
+
+#### DDL - ALTER and Drop
+
+*	**`ALTER TABLE [schema.table_name] RENAME COLUMN [column_name] TO [column_name];`**  
+Rename a column
+
+*	**`ALTER TABLE [schema.table_name] DROP (column_name);`**  
+Delete a column
+
+*	**`ALTER TABLE [schema.table_name] DROP (column1,column2,.....,columnN);`**  
+Delete multiple columns
+
+*	**`DROP TABLE [schema.table_name];`**  
+Delete an existing table in a database
+
+*	**`DROP DATABASE [database_name];`**  
+Delete an existing SQL database
+
+---
+
+#### DML - Insert
+
+*	**`INSERT INTO [existing_table] SELECT * FROM [schema.table_name];`**  
+copy all data from one table to another
+
+---
+
+#### DML - Update
+
+*	**`UPDATE [schema.table_name] SET [column_one] = 'value_one', [column_two] = 'value_two' WHERE [condition];`**  
+Update records
+
+*	**`UPDATE [schema.table_name] SET [column_name] = REPLACE(column_name, 'original_text_part', 'new_text_part');`**  
+Update a column value, replacing part of a string
+
+---
