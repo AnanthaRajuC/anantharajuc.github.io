@@ -121,26 +121,45 @@ Podcasts featuring Organization specific topics (products), hosted by respective
 
 Podcasts by O'Reilly Media covering Software Engineering, Bots, Security, Data Science, Emerging Technologies and UI/UX among others.
 
-****  
-**Host(s):** 
-**Topic:** 
-**Description:** 
+**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-programming-podcast" target="_blank" >O'Reilly Programming Podcast</a>**  
+**Host(s):** -   
+**Topic:** Open Source, Programming  
+**Description:** Features conversations that give developers, engineers, and architects tips on getting projects done better and faster.  
 
 ---
 
-| Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
-|----------	|:------	|:------	|:------	|
-|<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-programming-podcast" target="_blank" >O'Reilly Programming Podcast</a>| |Open Source, Programming|Features conversations that give developers, engineers, and architects tips on getting projects done better and faster.|
-|||||
-|<a href="https://soundcloud.com/oreilly-radar/sets/the-oreilly-data-show-podcast" target="_blank" >The O'Reilly Data Show Podcast</a>| |Data Science, AI|Explores the opportunities and techniques driving big data and data science.|
-|||||
-|<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-bots-podcast" target="_blank" >O'Reilly Bots Podcast</a>| |Bots|Bots.|
-|||||
-|<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-security-podcast" target="_blank" >O'Reilly Security Podcast</a>| |Security|Examines the challenges and opportunities for security practitioners, with a focus on the people on the frontlines of security, working to build better defenses.|
-|||||
-|<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-design-podcast" target="_blank" >O'Reilly Design Podcast</a>| |Design, UI, UX|Explores how experience design -- and experience designers -- are shaping business, the Internet of Things, and other domains.|
-|||||
-|<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-media-podcast" target="_blank" >O'Reilly Media Podcast</a>| |<a href="https://en.wikipedia.org/wiki/Emerging_technologies" target="_blank" >Emerging Technologies</a>, Innovation|Features interviews with the people working on the forefront of technology.|
+**<a href="https://soundcloud.com/oreilly-radar/sets/the-oreilly-data-show-podcast" target="_blank" >The O'Reilly Data Show Podcast</a>**  
+**Host(s):** -  
+**Topic:** Data Science, AI  
+**Description:** Explores the opportunities and techniques driving big data and data science.  
+
+---
+
+**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-bots-podcast" target="_blank" >O'Reilly Bots Podcast**   
+**Host(s):** -  
+**Topic:** Bots  
+**Description:**Bots.  
+
+---
+
+**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-security-podcast" target="_blank" >O'Reilly Security Podcast</a>**  
+**Host(s):** -  
+**Topic:** -   
+**Description:** Security|Examines the challenges and opportunities for security practitioners, with a focus on the people on the frontlines of security, working to build better defenses.  
+
+---
+
+**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-design-podcast" target="_blank" >O'Reilly Design Podcast</a>**  
+**Host(s):** -  
+**Topic:** Design, UI, UX  
+**Description:** Explores how experience design -- and experience designers -- are shaping business, the Internet of Things, and other domains.  
+
+---
+
+**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-media-podcast" target="_blank" >O'Reilly Media Podcast</a>**  
+**Host(s):** -  
+**Topic:** <a href="https://en.wikipedia.org/wiki/Emerging_technologies" target="_blank" >Emerging Technologies</a>, Innovation  
+**Description:** Features interviews with the people working on the forefront of technology.  
 
 ---
 
@@ -148,13 +167,24 @@ Podcasts by O'Reilly Media covering Software Engineering, Bots, Security, Data S
 
 Podcasts featuring Blockchain and Crypto related topics and news.
 
-| Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
-|----------	|:------	|:------	|:------	|
-|<a href="http://unchainedpodcast.co/" target="_blank" >Unchained</a>|<a href="https://twitter.com/laurashin?lang=en" target="_blank" >Laura Shin</a>|Blockchain & Cryptocurrency|In this podcast, host Laura Shin talks with industry pioneers across tech, financial services, health care, government and other sectors about how the blockchain and cryptocurrency will open up new opportunities for incumbents, startups and everyday people to interact more efficiently, directly and globally.|
-|||||
-|<a href="http://unconfirmed.libsyn.com/" target="_blank" >Unconfirmed</a>|<a href="https://twitter.com/laurashin?lang=en" target="_blank" >Laura Shin</a>|Blockchain & Cryptocurrency|Insights and Analysis From the Top Minds in Crypto.|
-|||||
-|<a href="https://soundcloud.com/what-bitcoin-did" target="_blank" >What Bitcoin Did</a>|<a href="https://twitter.com/whatbitcoindid" target="_blank" >Peter McCormack</a>|Blockchain & Cryptocurrency|Crypto Interviews|
+**<a href="http://unchainedpodcast.co/" target="_blank" >Unchained</a>**  
+**Host(s):** <a href="https://twitter.com/laurashin?lang=en" target="_blank" >Laura Shin</a>  
+**Topic:** Blockchain & Cryptocurrency  
+**Description:** In this podcast, host Laura Shin talks with industry pioneers across tech, financial services, health care, government and other sectors about how the blockchain and cryptocurrency will open up new opportunities for incumbents, startups and everyday people to interact more efficiently, directly and globally.  
+
+---
+
+**<a href="http://unconfirmed.libsyn.com/" target="_blank" >Unconfirmed</a>**  
+**Host(s):** <a href="https://twitter.com/laurashin?lang=en" target="_blank" >Laura Shin</a>  
+**Topic:** Blockchain & Cryptocurrency  
+**Description:** Insights and Analysis From the Top Minds in Crypto.  
+
+---
+
+**<a href="https://soundcloud.com/what-bitcoin-did" target="_blank" >What Bitcoin Did</a>**  
+**Host(s):** <a href="https://twitter.com/whatbitcoindid" target="_blank" >Peter McCormack</a> 
+**Topic:** Blockchain & Cryptocurrency  
+**Description:** Crypto Interviews  
 
 ---
 
@@ -162,19 +192,48 @@ Podcasts featuring Blockchain and Crypto related topics and news.
 
 Podcasts featuring startup and business stories.
 
-| Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
-|----------	|:------	|:------	|:------	|
-|<a href="https://mastersofscale.com/" target="_blank" >Masters of Scale</a>|<a href="https://twitter.com/reidhoffman" target="_blank" >Reid Hoffman</a>|Startup Leadership|An original podcast hosted by LinkedIn Co-Founder and Greylock Partner Reid Hoffman showing how companies grow from zero to a gazillion. The series unfolds like a music-infused detective story as Hoffman tests his theories with famous founders. Masters of Scale is the first American media program to commit to a 50-50 gender balance for guests.|
-|||||
-|<a href="https://www.npr.org/podcasts/510313/how-i-built-this" target="_blank" >How I Built This with Guy Raz</a>|<a href="https://twitter.com/guyraz" target="_blank" >Guy Raz</a>|Business|a podcast about innovators, entrepreneurs, idealists, and the stories behind the movements they built.|
-|||||
-|<a href="http://www.internethistorypodcast.com/" target="_blank" >Internet History Podcast</a>|<a href="https://twitter.com/brianmcc" target="_blank" >Brian McCullough</a>|Internet History, Business Stories/Lessons|An interactive history project, producing a book on the history of the internet era by crowdsourcing facts and first person accounts from listeners. Each podcast represents a new chapter focusing on some section of internet history.|
+**<a href="https://mastersofscale.com/" target="_blank" >Masters of Scale</a>**  
+**Host(s):** <a href="https://twitter.com/reidhoffman" target="_blank" >Reid Hoffman</a>  
+**Topic:** Startup Leadership  
+**Description:** An original podcast hosted by LinkedIn Co-Founder and Greylock Partner Reid Hoffman showing how companies grow from zero to a gazillion. The series unfolds like a music-infused detective story as Hoffman tests his theories with famous founders. Masters of Scale is the first American media program to commit to a 50-50 gender balance for guests.  
+
+---
+
+**<a href="https://www.npr.org/podcasts/510313/how-i-built-this" target="_blank" >How I Built This with Guy Raz</a>**  
+**Host(s):** <a href="https://twitter.com/guyraz" target="_blank" >Guy Raz</a>  
+**Topic:** Business  
+**Description:** a podcast about innovators, entrepreneurs, idealists, and the stories behind the movements they built.  
+
+---
+
+**<a href="http://www.internethistorypodcast.com/" target="_blank" >Internet History Podcast</a>**  
+**Host(s):** <a href="https://twitter.com/brianmcc" target="_blank" >Brian McCullough</a>  
+**Topic:** Internet History, Business Stories/Lessons  
+**Description:** An interactive history project, producing a book on the history of the internet era by crowdsourcing facts and first person accounts from listeners. Each podcast represents a new chapter focusing on some section of internet history.  
+
+---
+
+##### Business
+
+Podcasts featuring various Business/Entrepreneurship related topics.
+
+**<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbGxpbmNoYW1hdGhqYXNvbi5saWJzeW4uY29tL3Jzcw" target="_blank" >All-In with Chamath, Jason, Sacks & Friedberg</a>**  
+**Host(s):** <a href="https://twitter.com/chamath?lang=en" target="_blank">Chamath Palihapitiya</a>, <a href="https://twitter.com/DavidSacks?lang=en" target="_blank">David Sacks</a>, <a href="https://twitter.com/friedberg?lang=en" target="_blank">David Friedberg</a>  
+**Topic:** economics, technology, politics, social, poker  
+**Description:** Industry veterans, degenerate gamblers & besties Chamath Palihapitiya, Jason Calacanis, David Sacks & David Friedberg cover all things economic, tech, political, social & poker.  
 
 ---
 
 ##### Various
 
 Podcasts featuring various Engineering and Technology related topics.
+
+****  
+**Host(s):** 
+**Topic:** 
+**Description:** 
+
+---
 
 | Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
 |----------	|:------	|:------	|:------	|
@@ -207,15 +266,5 @@ Podcasts featuring various Engineering and Technology related topics.
 |<a href="https://codingsans.com/engineering-management-podcast" target="_blank" >Level-up Engineering</a>|<a href="https://twitter.com/codingsans" target="_blank" >CodingSans</a>|Technology|Reveals actionable management secrets from some of the most successful tech leaders.|
 |||||
 |<a href="https://givefirst.techstars.com/episodes" target="_blank" >The Give First Podcast</a>|David Cohen, Brad Feld|entrepreneurship|Atalk with mentors and founders about what giving first looks like in action, and how it makes great entrepreneurship possible|
-
----
-
-##### Business
-
-Podcasts featuring various Business/Entrepreneurship related topics.
-
-| Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
-|----------	|:------	|:------	|:------	|
-|<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbGxpbmNoYW1hdGhqYXNvbi5saWJzeW4uY29tL3Jzcw" target="_blank" >All-In with Chamath, Jason, Sacks & Friedberg</a>|<a href="https://twitter.com/chamath?lang=en" target="_blank">Chamath Palihapitiya</a>, <a href="https://twitter.com/DavidSacks?lang=en" target="_blank">David Sacks</a>, <a href="https://twitter.com/friedberg?lang=en" target="_blank">David Friedberg</a>|economics, technology, politics, social, poker|Industry veterans, degenerate gamblers & besties Chamath Palihapitiya, Jason Calacanis, David Sacks & David Friedberg cover all things economic, tech, political, social & poker.|
 
 ---
