@@ -15,6 +15,11 @@ Select compilation of Engineering and few Business Podcasts
 
 Podcast's featuring CTO's or directly aimed towards an audience of CTO's.
 
+*	**`<a href="https://www.thectoadvisor.com/podcast/" target="_blank" >The CTO Advisor</a>`**  
+**Host(s):** <a href="https://twitter.com/@CTOAdvisor" target="_blank" >Keith Townsend</a>  
+**Topic:** Infrastructure, Future Technologies  
+**Description: ** A conversation geared toward the CTO or Infrastructure Architect. Shows topics focus on future technologies and keeping today's infrastructure in-line with business requirements.
+
 | Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
 |----------	|:------	|:------	|:------	|
 |<a href="https://www.thectoadvisor.com/podcast/" target="_blank" >The CTO Advisor</a>|<a href="https://twitter.com/@CTOAdvisor" target="_blank" >Keith Townsend</a>|Infrastructure, Future Technologies|A conversation geared toward the CTO or Infrastructure Architect. Shows topics focus on future technologies and keeping today's infrastructure in-line with business requirements.|
