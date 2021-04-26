@@ -22,10 +22,31 @@ Podcast's featuring CTO's or directly aimed towards an audience of CTO's.
 
 ---
 
-**<a href="https://startupcto.io/" target="_blank" >StartupCTO.io</a>
-**Host(s):** <a href="https://twitter.com/owocki" target="_blank" >Owocki</a> and <a href="https://twitter.com/miles_matthias" target="_blank" >Miles Matthias</a>
-**Topic:** Startup Engineering, Leadership
-**Description:** Startup engineering leadership podcast; because your CS degree didn't teach you to lead.
+**<a href="https://startupcto.io/" target="_blank" >StartupCTO.io</a>  
+**Host(s):** <a href="https://twitter.com/owocki" target="_blank" >Owocki</a> and <a href="https://twitter.com/miles_matthias" target="_blank" >Miles Matthias</a>  
+**Topic:** Startup Engineering, Leadership  
+**Description:** Startup engineering leadership podcast; because your CS degree didn't teach you to lead.  
+
+---
+
+**<a href="https://moderncto.io/podcast/" target="_blank" >Modern CTO</a>  
+**Host(s):** <a href="https://twitter.com/moderncto_io" target="_blank" >Joel Beasley</a>  
+**Topic:** Technology  
+**Description:** ModernCTO is the place where CTO’s hang out. Listen in on our weekly podcast while we hang out with interesting Fortune 500 CTO’s in Aerospace, Artificial Intelligence, Robotics + Many more industries.  
+
+---
+
+**<a href="http://www.ctosatwork.com/" target="_blank" >CTO's at Work</a>  
+**Host(s):** -  
+**Topic:** Technology  
+**Description:** A podcast series with Chief Technology Officers (CTOs) talk how they build great products.  
+
+---
+
+**<a href="https://podcasts.apple.com/us/podcast/behind-the-tech-with-kevin-scott/id1381008946" target="_blank" >Behind The Tech with Kevin Scott</a>  
+**Host(s):** <a href="https://twitter.com/kevin_scott" target="_blank" >Kevin Scott</a>  
+**Topic:** Technology  
+**Description:** Behind the Tech invites listeners to geek out with an amazing line-up of tech heroes who have made our modern world possible.
 
 ---
 
@@ -33,19 +54,6 @@ Podcast's featuring CTO's or directly aimed towards an audience of CTO's.
 **Host(s):** 
 **Topic:** 
 **Description:** 
-
----
-| Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
-|----------	|:------	|:------	|:------	|
-|<a href="https://www.thectoadvisor.com/podcast/" target="_blank" >The CTO Advisor</a>|<a href="https://twitter.com/@CTOAdvisor" target="_blank" >Keith Townsend</a>|Infrastructure, Future Technologies|A conversation geared toward the CTO or Infrastructure Architect. Shows topics focus on future technologies and keeping today's infrastructure in-line with business requirements.|
-|||||
-|<a href="https://startupcto.io/" target="_blank" >StartupCTO.io</a>|<a href="https://twitter.com/owocki" target="_blank" >Owocki</a> and <a href="https://twitter.com/miles_matthias" target="_blank" >Miles Matthias</a>|Startup Engineering, Leadership|Startup engineering leadership podcast; because your CS degree didn't teach you to lead.|
-|||||
-|<a href="https://moderncto.io/podcast/" target="_blank" >Modern CTO</a>|<a href="https://twitter.com/moderncto_io" target="_blank" >Joel Beasley</a>|Technology|ModernCTO is the place where CTO’s hang out. Listen in on our weekly podcast while we hang out with interesting Fortune 500 CTO’s in Aerospace, Artificial Intelligence, Robotics + Many more industries.|
-|||||
-|<a href="http://www.ctosatwork.com/" target="_blank" >CTO's at Work</a>|-|Technology|A podcast series with Chief Technology Officers (CTOs) talk how they build great products.|
-|||||
-|<a href="https://podcasts.apple.com/us/podcast/behind-the-tech-with-kevin-scott/id1381008946" target="_blank" >Behind The Tech with Kevin Scott</a>|<a href="https://twitter.com/kevin_scott" target="_blank" >Kevin Scott</a>|Technology|Behind the Tech invites listeners to geek out with an amazing line-up of tech heroes who have made our modern world possible.|
 
 ---
 
