@@ -135,7 +135,7 @@ Podcasts by O'Reilly Media covering Software Engineering, Bots, Security, Data S
 
 ---
 
-**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-bots-podcast" target="_blank" >O'Reilly Bots Podcast**   
+**<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-bots-podcast" target="_blank" >O'Reilly Bots Podcast</a>**   
 **Host(s):** -  
 **Topic:** Bots  
 **Description:**Bots.  
@@ -144,8 +144,8 @@ Podcasts by O'Reilly Media covering Software Engineering, Bots, Security, Data S
 
 **<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-security-podcast" target="_blank" >O'Reilly Security Podcast</a>**  
 **Host(s):** -  
-**Topic:** -   
-**Description:** Security|Examines the challenges and opportunities for security practitioners, with a focus on the people on the frontlines of security, working to build better defenses.  
+**Topic:** - Security  
+**Description:** Examines the challenges and opportunities for security practitioners, with a focus on the people on the frontlines of security, working to build better defenses.  
 
 ---
 
@@ -158,7 +158,7 @@ Podcasts by O'Reilly Media covering Software Engineering, Bots, Security, Data S
 
 **<a href="https://soundcloud.com/oreilly-radar/sets/oreilly-media-podcast" target="_blank" >O'Reilly Media Podcast</a>**  
 **Host(s):** -  
-**Topic:** <a href="https://en.wikipedia.org/wiki/Emerging_technologies" target="_blank" >Emerging Technologies</a>, Innovation  
+**Topic:** Emerging Technologies, Innovation  
 **Description:** Features interviews with the people working on the forefront of technology.  
 
 ---
@@ -182,7 +182,7 @@ Podcasts featuring Blockchain and Crypto related topics and news.
 ---
 
 **<a href="https://soundcloud.com/what-bitcoin-did" target="_blank" >What Bitcoin Did</a>**  
-**Host(s):** <a href="https://twitter.com/whatbitcoindid" target="_blank" >Peter McCormack</a> 
+**Host(s):** <a href="https://twitter.com/whatbitcoindid" target="_blank" >Peter McCormack</a>  
 **Topic:** Blockchain & Cryptocurrency  
 **Description:** Crypto Interviews  
 
@@ -228,43 +228,107 @@ Podcasts featuring various Business/Entrepreneurship related topics.
 
 Podcasts featuring various Engineering and Technology related topics.
 
-****  
-**Host(s):** 
-**Topic:** 
-**Description:** 
+**<a href="https://softwareengineeringdaily.com/" target="_blank" >Software Engineering Daily</a>**  
+**Host(s):** <a href="https://twitter.com/the_prion?lang=en" target="_blank" >Jeff Meyerson</a>  
+**Topic:** Software Engineering  
+**Description:** Features daily interviews about technical software topics.  
 
 ---
 
-| Podcast  	|      Host     	|      Genre/Topic     	|      Description     	|
-|----------	|:------	|:------	|:------	|
-|<a href="https://softwareengineeringdaily.com/" target="_blank" >Software Engineering Daily</a>|<a href="https://twitter.com/the_prion?lang=en" target="_blank" >Jeff Meyerson</a>|Software Engineering|Features daily interviews about technical software topics.|
-|||||
-|<a href="http://developeronfire.com/" target="_blank" >Developer on Fire</a>|<a href="https://twitter.com/raelyard" target="_blank" >Dave Rael</a>|Developer Bio's|Inspiring software developers tell their stories. The podcast that shares the humanity of developers and tells stories of some of the amazing people in software.|
-|||||
-|<a href="https://www.codenewbie.org/podcast" target="_blank" >CodeNewbie</a>|<a href="https://twitter.com/saronyitbarek" target="_blank" >Saron</a>|Tech News|Stories from people on their coding journey.|
-|||||
-|<a href="https://egghead.simplecast.fm/" target="_blank" >egghead.io developer chats</a>|<a href="https://twitter.com/johnlindquist" target="_blank" >John Lindquist</a> and <a href="https://twitter.com/jhooks" target="_blank" >Joel Hooks</a>|Web Development|egghead.io instructors talk about the latest and greatest in web development. These conversations will take you deeper into the human side of coding web applications and deliver insight that you might not expect.|
-|||||
-|<a href="https://soundcloud.com/stack-stories" target="_blank" >Stack Stories</a>|-|Tech News|Tech stack confessions from the world's best software engineering teams.|
-|||||
-|<a href="https://soundcloud.com/programmableweb" target="_blank" >ProgrammableWeb's Developers Rock Podcast</a>|-|API Economy|ProgrammableWeb.com's editor-in-chief discuss current events regarding Web and Mobile Application Development and the API economy. |
-|||||
-|<a href="https://twimlai.com/" target="_blank" >This Week in Machine Learning & AI</a>|<a href="https://twitter.com/samcharrington" target="_blank" >Sam Charrington</a>|AI & ML|TWiML & AI caters to a highly-targeted audience of machine learning & AI enthusiasts. They are data scientists, developers, founders, CTOs, engineers, architects, IT & product leaders, as well as tech-savvy business leaders. |
-|||||
-|<a href="https://www.dataengineeringpodcast.com/" target="_blank" >Data Engineering Podcast</a>|<a href="https://twitter.com/dataengpodcast" target="_blank" >Tobias Macey</a>|Data Engineering|A podcast about data engineering and modern data infrastructure. |
-|||||
-|<a href="http://www.dataskeptic.com/podcast" target="_blank" >Data Skeptic</a>|<a href="https://twitter.com/dataskeptic" target="_blank" >Data Skeptic</a>|Data Engineering|Weekly podcast featuring short mini-episodes explaining high level concepts in data science, and longer interview segments with researchers and practitioners.|
-|||||
-|<a href="https://soundcloud.com/user-426834320" target="_blank" >API Academy</a>|-|API's|APIs, the web and network based software.|
-|||||
-|<a href="https://www.mappingthejourney.com/" target="_blank" >Mapping The Journey</a>|<a href="https://twitter.com/MappingJourney" target="_blank" >Mapping The Journey</a>|Engineers|A podcast with people who are making tremendous strides in tech yet whose stories are seldom heard. |
-|||||
-|<a href="https://overcast.fm/itunes1099711235/unsupervised-learning-with-daniel-miessler" target="_blank" >Unsupervised Learning with Daniel Miessler</a>|<a href="https://twitter.com/danielmiessler" target="_blank" >Daniel Miessler</a>|Security, Technology and Humans|Security, Technology and Humans|
-|||||
-|<a href="https://podcasts.apple.com/us/podcast/a-bootiful-podcast/id1438691771" target="_blank" >A Bootiful Podcast</a>|<a href="https://twitter.com/starbuxman" target="_blank" >Josh Long</a>|Technology Ecosystem|A Podcast, a celebration of the real heroes that drive ecosystems.|
-|||||
-|<a href="https://codingsans.com/engineering-management-podcast" target="_blank" >Level-up Engineering</a>|<a href="https://twitter.com/codingsans" target="_blank" >CodingSans</a>|Technology|Reveals actionable management secrets from some of the most successful tech leaders.|
-|||||
-|<a href="https://givefirst.techstars.com/episodes" target="_blank" >The Give First Podcast</a>|David Cohen, Brad Feld|entrepreneurship|Atalk with mentors and founders about what giving first looks like in action, and how it makes great entrepreneurship possible|
+**<a href="http://developeronfire.com/" target="_blank" >Developer on Fire</a>**  
+**Host(s):** <a href="https://twitter.com/raelyard" target="_blank" >Dave Rael</a>  
+**Topic:** Developer Bio's  
+**Description:** Inspiring software developers tell their stories. The podcast that shares the humanity of developers and tells stories of some of the amazing people in software.  
+
+---
+
+**<a href="https://www.codenewbie.org/podcast" target="_blank" >CodeNewbie</a>**  
+**Host(s):** <a href="https://twitter.com/saronyitbarek" target="_blank" >Saron</a>  
+**Topic:** Tech News  
+**Description:** Stories from people on their coding journey.  
+
+---
+
+**<a href="https://egghead.simplecast.fm/" target="_blank" >egghead.io developer chats</a>**  
+**Host(s):** <a href="https://twitter.com/johnlindquist" target="_blank" >John Lindquist</a> and <a href="https://twitter.com/jhooks" target="_blank" >Joel Hooks</a>  
+**Topic:** Web Development  
+**Description:** egghead.io instructors talk about the latest and greatest in web development. These conversations will take you deeper into the human side of coding web applications and deliver insight that you might not expect.  
+
+---
+
+**<a href="https://soundcloud.com/stack-stories" target="_blank" >Stack Stories</a>**  
+**Host(s):** -  
+**Topic:** Tech News
+**Description:** Tech stack confessions from the world's best software engineering teams.  
+
+---
+
+**<a href="https://soundcloud.com/programmableweb" target="_blank" >ProgrammableWeb's Developers Rock Podcast</a>**  
+**Host(s):** -  
+**Topic:** API Economy  
+**Description:** ProgrammableWeb.com's editor-in-chief discuss current events regarding Web and Mobile Application Development and the API economy.  
+
+---
+
+**<a href="https://twimlai.com/" target="_blank" >This Week in Machine Learning & AI</a>**  
+**Host(s):** <a href="https://twitter.com/samcharrington" target="_blank" >Sam Charrington</a>  
+**Topic:** AI & ML  
+**Description:** TWiML & AI caters to a highly-targeted audience of machine learning & AI enthusiasts. They are data scientists, developers, founders, CTOs, engineers, architects, IT & product leaders, as well as tech-savvy business leaders.  
+
+---
+
+**<a href="https://www.dataengineeringpodcast.com/" target="_blank" >Data Engineering Podcast</a>**  
+**Host(s):** <a href="https://twitter.com/dataengpodcast" target="_blank" >Tobias Macey</a>  
+**Topic:** Data Engineering  
+**Description:** A podcast about data engineering and modern data infrastructure.  
+
+---
+
+**<a href="http://www.dataskeptic.com/podcast" target="_blank" >Data Skeptic</a>**  
+**Host(s):** <a href="https://twitter.com/dataskeptic" target="_blank" >Data Skeptic</a>  
+**Topic:** Data Engineering  
+**Description:** Weekly podcast featuring short mini-episodes explaining high level concepts in data science, and longer interview segments with researchers and practitioners.  
+
+---
+
+**<a href="https://soundcloud.com/user-426834320" target="_blank" >API Academy</a>**  
+**Host(s):** -  
+**Topic:** API's  
+**Description:** APIs, the web and network based software.  
+
+---
+
+**<a href="https://www.mappingthejourney.com/" target="_blank" >Mapping The Journey</a>**  
+**Host(s):** <a href="https://twitter.com/MappingJourney" target="_blank" >Mapping The Journey</a>  
+**Topic:** Engineers  
+**Description:** A podcast with people who are making tremendous strides in tech yet whose stories are seldom heard.  
+
+---
+
+**<a href="https://overcast.fm/itunes1099711235/unsupervised-learning-with-daniel-miessler" target="_blank" >Unsupervised Learning with Daniel Miessler</a>**    
+**Host(s):** <a href="https://twitter.com/danielmiessler" target="_blank" >Daniel Miessler</a>  
+**Topic:** Security, Technology and Humans  
+**Description:** Security, Technology and Humans  
+
+---
+
+**<a href="https://podcasts.apple.com/us/podcast/a-bootiful-podcast/id1438691771" target="_blank" >A Bootiful Podcast</a>**  
+**Host(s):** <a href="https://twitter.com/starbuxman" target="_blank" >Josh Long</a>  
+**Topic:** Technology Ecosystem  
+**Description:** A Podcast, a celebration of the real heroes that drive ecosystems.  
+
+---
+
+**<a href="https://codingsans.com/engineering-management-podcast" target="_blank" >Level-up Engineering</a>**  
+**Host(s):** <a href="https://twitter.com/codingsans" target="_blank" >CodingSans</a>  
+**Topic:** Technology  
+**Description:** Reveals actionable management secrets from some of the most successful tech leaders.  
+
+---
+
+**<a href="https://givefirst.techstars.com/episodes" target="_blank" >The Give First Podcast</a>**  
+**Host(s):** David Cohen, Brad Feld  
+**Topic:** entrepreneurship  
+**Description:** Atalk with mentors and founders about what giving first looks like in action, and how it makes great entrepreneurship possible  
 
 ---
