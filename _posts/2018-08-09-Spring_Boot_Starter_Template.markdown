@@ -14,8 +14,6 @@ The only thing better than a Maven archetype is a repo you can fork with everyth
 
 ## Badges
 
-Badge service provider - <a href="https://shields.io/" target="_blank" >Shields.io</a>
-
 ##### GitHub Badges USER/PROJECT
 
 *	**Issues** - **`https://img.shields.io/github/issues/USER/REPO`**  
@@ -46,7 +44,7 @@ Tools and services available for free or offers a free tier for open source proj
 5. **<a href="https://about.codecov.io/" target="_blank" >Codecov</a>** - A hosted tool that is used to measure the test coverage of your codebase.  
 6. **<a href="https://hub.docker.com/" target="_blank" >Docker Hub</a>** - Library and community for container images.  
 7. **<a href="https://sonarcloud.io/" target="_blank" >GitHub</a>** - Build, ship, and maintain software.
-
+8. **<a href="https://shields.io/" target="_blank" >Shields.io</a>** - Badge provider.  
 ---
 
 ##### Bots
@@ -60,10 +58,18 @@ These bot's provide pull requests to perform various operations.
 
 ---
 
+## Non-Code related resources
 
+1. **<a href="https://www.contributor-covenant.org/" target="_blank" >Contributor Covenant</a>** - A Code of Conduct for Open Source Communities.  
 
+##### License
 
+1. **<a href="https://choosealicense.com/" target="_blank" >Choose A License</a>** - Choose an open source license.  
+2. **<a href="https://chooser-beta.creativecommons.org/" target="_blank" >Chooser</a>** - Follow the steps to select the appropriate license for your work.  
 
+## Other Resources
+
+1. **<a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" >Conventional Commits</a>** - A specification for adding human and machine readable meaning to commit messages.  
 
 
 
