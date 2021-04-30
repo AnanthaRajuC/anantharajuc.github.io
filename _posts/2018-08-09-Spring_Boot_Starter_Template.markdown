@@ -23,6 +23,16 @@ The only thing better than a Maven archetype is a repo you can fork with everyth
 
 ---
 
+## Technology Stack
+
+##### Database
+
+1. **<a href="https://flywaydb.org/" target="_blank" >Flyway</a>** - Version control for database.  
+2. **<a href="https://www.mysql.com/" target="_blank" >MySQL</a>** - Open-Source Relational Database Management System. 
+3. **<a href="https://www.h2database.com/html/main.html" target="_blank" >H2 Database Engine</a>** - Java SQL database. Embedded and server modes; in-memory databases.  
+
+---
+
 ## Tools, Bots and Services
 
 Tools and services available for free or offers a free tier for open source projects.
@@ -80,9 +90,4 @@ These bot's provide pull requests to perform various operations.
 
 1. **<a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" >Conventional Commits</a>** - A specification for adding human and machine readable meaning to commit messages.  
 2. **<a href="https://semver.org/" target="_blank" >Semantic Versioning 2.0.0</a>** - A simple set of rules and requirements that dictate how version numbers are assigned and incremented.  
-
-
-
-
-
-
+3. **<a href="https://keepachangelog.com/en/1.0.0/" target="_blank" >keep a changelog</a>** - Format to document changes to the project.  
