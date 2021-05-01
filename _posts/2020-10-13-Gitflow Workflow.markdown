@@ -7,7 +7,7 @@ date: 2020-10-13 13:30
 image: /assets/images/Git.png
 ---
 
-Gitflow Workflow is a Git workflow that helps with continuous software development and implementing DevOps practices. It was first published and made popular by Vincent Driessen at nvie. The Gitflow Workflow defines a strict branching model designed around the project release. This provides a robust framework for managing larger projects.  
+Gitflow Workflow is a Git strategy that helps with continuous software development and implementing DevOps practices. It was first published and made popular by Vincent Driessen at nvie. The Gitflow Workflow defines a strict branching model designed around the project release. This provides a robust framework for managing larger projects.  
 
 ##### STEP 1/6: clone a remote git repository
 				

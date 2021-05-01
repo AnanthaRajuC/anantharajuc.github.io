@@ -7,14 +7,19 @@ date: 2021-05-01 16:00
 image: /assets/images/Git.png
 ---
 
-## Initialize
+A juxtoposition of commands used in the Gitflow strategy using a plugin vs plain vanilla git commands.
 
-gitflow | git
---------|-----
-`git flow init` | `git init`
-&nbsp; | `git commit --allow-empty -m "Initial commit"`
-&nbsp; | `git checkout -b develop master`
+## 1. Initialize
 
+	#### gitflow
+
+	*	**`git flow init`**  
+
+	#### git
+
+	*	**`git init`**  
+	*	**`git commit --allow-empty -m "Initial commit"`**  
+	*	**`git checkout -b develop master`**  
 
 ## Connect to the remote repository
 
