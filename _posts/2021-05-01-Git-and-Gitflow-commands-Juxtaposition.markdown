@@ -23,10 +23,13 @@ A juxtoposition of commands used in the Gitflow strategy using a plugin vs plain
 
 ## 2. Connect to the remote repository
 
-gitflow | git
---------|-----
-_N/A_ | `git remote add origin git@github.com:MYACCOUNT/MYREPO`
+##### gitflow
 
+*	_N/A_  
+
+##### git
+
+*	**`git remote add origin git@github.com:MYACCOUNT/MYREPO`**  
 
 ## 3. Features
 
