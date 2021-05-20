@@ -1,7 +1,7 @@
 ---
 title: "Git Feature Branch Workflow"
 author: anantharajuc
-categories: [ Git ]
+categories: [ Git, CLI ]
 layout: post
 date: 2020-10-13 13:30
 image: /assets/images/Git.png

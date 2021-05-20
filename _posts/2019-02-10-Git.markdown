@@ -1,7 +1,7 @@
 ---
 title: "Git"
 author: anantharajuc
-categories: [ Git ]
+categories: [ Git, CLI ]
 layout: post
 date: 2019-02-10 07:30
 image: /assets/images/Git.png
