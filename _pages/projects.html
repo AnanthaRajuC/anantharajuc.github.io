@@ -5,12 +5,16 @@ permalink: "/projects.html"
 ---
 
 <div class="container">
+<p>Here's a selection of projects that I've worked on and maintained over the last few years in my spare time.</p>
+</br>
+</div>
+
+<div class="container">
 
 <!-- Project - add project tag to the post you want to highlight here - tags: [project] -->
 {% for post in site.posts %} 
 {% if post.tags contains "project" %}
-<p>Here's a selection of projects that I've worked on and maintained over the last few years in my spare time.</p>
-</br>
+
 <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
     <div class="pl-4 pr-0 h-100 tofront">
         <div class="row justify-content-between">
