@@ -1,0 +1,59 @@
+---
+title: "Tools"
+author: anantharajuc
+categories: [ Personal, List ]
+layout: post
+date: 2021-05-21 08:50
+image: /assets/images/tools.jpg
+---
+
+A compilation of my commonly used tools to create software. 
+
+---
+
+## Desktop IDE's
+
+<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>  
+<a href="https://www.jetbrains.com/idea/" target="_blank" >IntelliJ IDEA</a>  
+
+---
+
+## Command Line Tools
+
+<a href="https://curl.haxx.se/" target="_blank" >Curl</a> - Command line tool and library for transferring data with URLs.  
+<a href="https://stedolan.github.io/jq/" target="_blank" >jq</a> - Lightweight and flexible command-line JSON processor.  
+<a href="http://cmder.net/" target="_blank" >cmder</a> - Portable console emulator for Windows.  
+
+---
+
+## Others
+
+<a href="https://ngrok.com/" target="_blank" >ngrok</a> - Secure introspectable tunnels to localhost.  
+<a href="https://www.postman.com/" target="_blank" >Postman</a> - Collaboration Platform for API Development.  
+<a href="https://git-scm.com/" target="_blank" >Git</a> - Free and open source distributed version control system.  
+<a href="https://github.com/" target="_blank" >GitHub</a> - Code hosting platform for version control and collaboration.  
+
+---
+
+## Virtualization
+
+<a href="https://www.virtualbox.org/" target="_blank" >VirtualBox</a> - VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use.  
+
+---
+
+## Editor
+
+<a href="https://notepad-plus-plus.org/" target="_blank" >Notepad++</a> - Free source code editor which supports several programming languages running under the MS Windows environment.  
+
+---
+
+## Chrome Web Browser Extension's
+
+<a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh" target="_blank" >JSON Viewer</a> - Chrome extension for printing JSON and JSONP. Customizable JSON/JSONP highlighter.  
+<a href="https://wappalyzer.com/download" target="_blank" >WAPPALYZER</a> - It uncovers the technologies used on websites.  
+<a href="https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn" target="_blank" >BuiltWith Technology Profiler</a> - Find out what the website you are visiting is built with using this extension.  
+<a href="https://chrome.google.com/webstore/detail/get-cookiestxt/bgaddhkoddajcdgocldbbfleckgcbcid" target="_blank" >Get cookies.txt</a> - Exports your cookies to the Netscape cookie file format a.k.a. cookies.txt.  
+
+---
+
+
