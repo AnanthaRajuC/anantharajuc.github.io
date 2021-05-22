@@ -7,7 +7,7 @@ date: 2021-05-21 08:50
 image: /assets/images/tools.jpg
 ---
 
-A compilation of my commonly used tools to create software. 
+A compilation of tools and services i most commonly use to create software. 
 
 ---
 
@@ -15,6 +15,18 @@ A compilation of my commonly used tools to create software.
 
 <a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>  
 <a href="https://www.jetbrains.com/idea/" target="_blank" >IntelliJ IDEA</a>  
+
+---
+
+## Services
+
+<a href="https://fossa.io/" target="_blank" >FOSSA</a> - Dependency tracking, license compliance and attribution notices on autopilot.
+<a href="https://github.com/mnapoli/IsItMaintained" target="_blank" >IsItMaintained</a> - Monitor open source projects activity.  
+<a href="https://dependabot.com/" target="_blank" >Dependabot</a> - Automated dependency updates.  
+<a href="https://www.gitignore.io/" target="_blank" >git ignore</a> - Create useful .gitignore files for your project based on OS's, IDE's or Programming Languages.  
+<a href="http://htmlpreview.github.io/" target="_blank" >GitHub and BitBucket HTML Preview</a> - GitHub and BitBucket HTML Files' Preview.    
+<a href="https://badgen.net/" target="_blank" >Badgen</a> - Badge generating service.  
+
 
 ---
 
