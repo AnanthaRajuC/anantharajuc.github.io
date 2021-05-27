@@ -89,58 +89,84 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-### Platform as a Service (PaaS)
-###### Free Tier
+###### Platform as a Service (PaaS - Free Tier)
 
-|----------	|:------	|
-|<a href="https://www.heroku.com/" target="_blank" >Heroku</a>|Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps — we're the fastest way to go from idea to URL, bypassing all those infrastructure headaches.|
-|||
-|<a href="https://aws.amazon.com/" target="_blank" >Amazon Web Services</a>|Amazon Web Services (AWS) is a secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow.|
-|||
-|<a href="https://mlab.com/" target="_blank" >mLab</a>|mLab is a Database-as-a-Service for MongoDB|
-|||
-|<a href="https://www.netlify.com/" target="_blank" >Netlify</a>|Build, deploy, and manage modern web projects.|
+**<a href="https://www.heroku.com/" target="_blank" >Heroku</a>** : *Cloud platform that lets you build, deliver, monitor and scale apps.* 
 
-### Markdown
+---
 
-|----------	|:------	|
-|<a href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf" target="_blank" >Markdown PDF</a>|This Visual Studio Code extension convert Markdown file to pdf, html, png or jpeg file.|
-|||
-|<a href="https://github.com/DavidAnson/markdownlint" target="_blank" >markdownlint</a>|markdown lint.|
-|||
-|<a href="https://ecotrust-canada.github.io/markdown-toc/" target="_blank" >markdown-toc</a>|Markdown Table of Contents generator|
-|||
-|<a href="https://markdowntohtml.com/" target="_blank" >Markdown to HTML Converter</a>|Markdown to HTML Converter.|
+**<a href="https://aws.amazon.com/" target="_blank" >Amazon Web Services</a>** : *AWS is a secure cloud services platform, offering compute power, database storage, content delivery and other functionalities.* 
 
-### Version control
+---
 
-|----------	|:------	|
-|<a href="https://www.sourcetreeapp.com/" target="_blank" >Sourcetree</a>|A free Git GUI client for Windows and Mac.|
-|||
-|<a href="https://github-profile-summary.com/search" target="_blank" >Github Profile Summary</a>|Tool for visualizing GitHub profiles.|
+**<a href="https://mlab.com/" target="_blank" >mLab</a>** : *mLab is a Database-as-a-Service for MongoDB* 
 
-### Data
+---
 
-|----------	|:------	|
-| <a href="https://www.kaggle.com/datasets" target="_blank" >Kaggle Datasets</a> 	| The best place to discover and seamlessly analyze publicly-available data. 	|
-|||
-|<a href="http://academictorrents.com/" target="_blank" >Academic Torrents</a>|A distributed system for sharing enormous datasets for researchers, by researchers.|
-|||
-|<a href="https://www.mockaroo.com/" target="_blank" >Mockaroo</a>|Mockaroo lets you generate realistic test data in CSV, JSON, SQL, and Excel formats.|
-|||
-|<a href="https://dbeaver.jkiss.org/" target="_blank" >DBeaver</a>|Free multi-platform database tool for developers, SQL programmers, database administrators and analysts. Supports all popular databases: MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Derby, etc.|
-|||
-|<a href="http://myjson.com/" target="_blank" >myjson</a>|A simple json storage and hosting service.|
-|||
-|<a href="https://github.com/kapilratnani/JSON-Viewer" target="_blank" >JSON viewer</a>|A JSON viewer plugin for notepad++. Displays the selected JSON string in a tree view.|
-|||
-|<a href="http://konklone.io/json/" target="_blank" >JSON to CSV Converter</a>|A free, in-browser JSON to CSV converter.|
-|||
-|<a href="http://json2table.com/" target="_blank" >JSON2table</a>|Tool to view JSON content in table and treeview format. The tool visually converts JSON to table and tree for easy navigation, analyze and validate JSON.|
-|||
-|<a href="http://www.useragentstring.com/" target="_blank" >User Agent String</a>|Analyze User Agent of you browser or any other user agent string.|
-|||
-|<a href="https://dev.mysql.com/downloads/windows/notifier/" target="_blank" >MySQL Notifier</a>|A small utility that can keep watch over your Windows and MySQL services, notifying you of changes in their operation.|
+**<a href="https://www.netlify.com/" target="_blank" >Netlify</a>** : *Build, deploy, and manage modern web projects.* 
+
+---
+
+###### Markdown
+
+**<a href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf" target="_blank" >Markdown PDF</a>** : *This Visual Studio Code extension convert Markdown file to pdf, html, png or jpeg file.* 
+
+---
+
+**<a href="https://github.com/DavidAnson/markdownlint" target="_blank" >markdownlint</a>** : *markdown lint.* 
+
+---
+
+**<a href="https://ecotrust-canada.github.io/markdown-toc/" target="_blank" >markdown-toc</a>** : *Markdown Table of Contents generator.* 
+
+---
+
+**<a href="https://markdowntohtml.com/" target="_blank" >Markdown to HTML Converter</a>** : *Markdown to HTML Converter.* 
+
+---
+
+###### Version control
+
+**<a href="https://www.sourcetreeapp.com/" target="_blank" >Sourcetree</a>** : *A free Git GUI client for Windows and Mac.* 
+
+###### Data
+
+
+**<a href="https://www.kaggle.com/datasets" target="_blank" >Kaggle Datasets</a>** : *The best place to discover and seamlessly analyze publicly-available data.* 
+
+---
+
+**<a href="http://academictorrents.com/" target="_blank" >Academic Torrents</a>** : *A distributed system for sharing enormous datasets for researchers, by researchers.* 
+
+---
+
+**<a href="https://www.mockaroo.com/" target="_blank" >Mockaroo</a>** : *Mockaroo lets you generate realistic test data in CSV, JSON, SQL, and Excel formats.* 
+
+---
+
+**<a href="https://dbeaver.jkiss.org/" target="_blank" >DBeaver</a>** : *Free multi-platform database tool for developers, SQL programmers, database administrators and analysts. Supports all popular databases: MySQL, PostgreSQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird, Derby, etc.* 
+
+---
+
+**<a href="https://github.com/kapilratnani/JSON-Viewer" target="_blank" >JSON viewer</a>** : *A JSON viewer plugin for notepad++. Displays the selected JSON string in a tree view.* 
+
+---
+
+**<a href="http://konklone.io/json/" target="_blank" >JSON to CSV Converter</a>** : *A free, in-browser JSON to CSV converter.* 
+
+---
+
+**<a href="http://json2table.com/" target="_blank" >JSON2table</a>** : *Tool to view JSON content in table and treeview format. The tool visually converts JSON to table and tree for easy navigation, analyze and validate JSON.* 
+
+---
+
+**<a href="http://www.useragentstring.com/" target="_blank" >User Agent String</a>** : *Analyze User Agent of you browser or any other user agent string.* 
+
+---
+
+**<a href="https://dev.mysql.com/downloads/windows/notifier/" target="_blank" >MySQL Notifier</a>** : *A small utility that can keep watch over your Windows and MySQL services, notifying you of changes in their operation.* 
+
+---
 
 ### API's and Web Services
 
