@@ -1,5 +1,5 @@
 ---
-title: "Tools"
+title: "Developer Tools"
 author: anantharajuc
 categories: [ Personal, List ]
 layout: post
@@ -13,28 +13,31 @@ A compilation of tools and services i most commonly use to create software.
 
 ###### Desktop IDE's
 
-**<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>**  
+**<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>** : *Java Integrated Development Environment (IDE)* 
 
 ---
 
-**<a href="https://www.jetbrains.com/idea/" target="_blank" >IntelliJ IDEA</a>**  
+**<a href="https://www.jetbrains.com/idea/" target="_blank" >IntelliJ IDEA</a>** : *Java Integrated Development Environment (IDE)* 
 
 ---
 
 ###### Services
 
-**<a href="https://fossa.io/" target="_blank" >FOSSA</a>** * : Dependency tracking, license compliance and attribution notices on autopilot.*  
+**<a href="https://fossa.io/" target="_blank" >FOSSA</a>** : *Dependency tracking, license compliance and attribution notices on autopilot.*  
 
 ---
 
-**<a href="https://github.com/mnapoli/IsItMaintained" target="_blank" >IsItMaintained</a>** * : Monitor open source projects activity.*  
+**<a href="https://github.com/mnapoli/IsItMaintained" target="_blank" >IsItMaintained</a>** : *Monitor open source projects activity.*  
 
 ---
 
-**<a href="https://dependabot.com/" target="_blank" >Dependabot</a>**  * : Automated dependency updates.*    
+**<a href="https://dependabot.com/" target="_blank" >Dependabot</a>** : *Automated dependency updates.*    
 
 ---
 
+**<a href="https://github.com/marketplace/imgbot" target="_blank" >Imgbot</a>** : *Bot that optimizes your images.*    
+
+---
 **<a href="https://www.gitignore.io/" target="_blank" >git ignore</a>** : *Create useful .gitignore files for your project based on OS's, IDE's or Programming Languages.*  
 
 ---
@@ -109,4 +112,6 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
+**<a href="https://developers.google.com/web/tools/lighthouse/" target="_blank" >Lighthouse</a>** : *Lighthouse is an open-source, automated tool for improving the quality of web pages.* 
 
+---

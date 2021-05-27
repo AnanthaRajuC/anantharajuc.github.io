@@ -11,48 +11,83 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-|----------	|:------	|
-|<a href="http://stackshare.io/" target="_blank" >stackshare</a>|Discover and discuss the best software tools and services.|
-|||
-|<a href="http://apns-gcm.bryantan.info/" target="_blank" >APNS/GCM Online Tester</a>|Online tool to test Apple Push Notification service (APNS) and Google Cloud Messaging (GCM).|
-|||
-|<a href="http://codebeautify.org/" target="_blank" >CodeBeautify</a>|Online Tools like Beautifiers, Editors, Viewers, Minifier, Validators, Converters for Developers: XML, JSON, CSS, JavaScript, Java, C#, MXML, SQL, CSV, Excel.|
-|||
-|<a href="https://www.freeformatter.com/" target="_blank" >Free Formatter</a>|Tools include several formatters, validators, code minifiers, string escapers, encoders and decoders, message digesters, web resources and more.|
-|||
-|<a href="http://jsbin.com/" target="_blank" >JS Bin</a>|Open source collaborative web development debugging tool.|
-|||
-|<a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>|Discover Great Typography - Hundreds of free, open-source fonts optimized for the web.|
-|||
-|<a href="https://winscp.net/eng/index.php" target="_blank" >WinSCP</a>|an open source free SFTP client and FTP client for Windows. Its main function is the secure file transfer between local and remote computer.|
-|||
-|<a href="https://readthedocs.org/" target="_blank" >Read the Docs</a>|Read the Docs hosts documentation, making it fully searchable and easy to find. You can import your docs using any major version control system.|
-|||
-|<a href="https://docusaurus.io/" target="_blank" >Docusaurus</a>|Easy to Maintain Open Source Documentation Websites.|
-|||
-|<a href="https://asciinema.org/" target="_blank" >asciinema</a>|Free and open source solution for recording terminal sessions and sharing them on the web.|
-|||
-|<a href="https://coggle.it/" target="_blank" >Coggle</a>|A collaborative mind-mapping tool that helps you make sense of complex things.|
-|||
-|<a href="https://loader.io/" target="_blank" >Loader</a>|Free load testing service that allows you to stress test your web-apps & apis with thousands of concurrent connections.|
-|||
-|<a href="https://bestpractices.coreinfrastructure.org/" target="_blank" >CII Best Practices Badge Program</a>|The Linux Foundation (LF) Core Infrastructure Initiative (CII) Best Practices badge is a way for Free/Libre and Open Source Software (FLOSS) projects to show that they follow best practices.|
-|||
-|<a href="https://developers.google.com/web/tools/lighthouse/" target="_blank" >Lighthouse</a>|Lighthouse is an open-source, automated tool for improving the quality of web pages.|
-|||
-|<a href="http://patorjk.com/software/taag/" target="_blank" >TAAG</a>|Text to ASCII art generator.|
-|||
-|<a href="https://fossa.io/" target="_blank" >FOSSA</a>|Dependency tracking, license compliance and attribution notices on autopilot|
-|||
-|<a href="https://semver.org/" target="_blank" >Semantic Versioning 2.0.0</a>|Versioning Guidelines.|
-|||
-|<a href="https://www.openproject.org/" target="_blank" >OpenProject</a>|Open source project management software.|
-|||
-|<a href="https://www.putty.org/" target="_blank" >PuTTY</a>|PuTTY is an SSH and telnet client, developed originally by Simon Tatham for the Windows platform.|
-|||
-|<a href="https://www.freepik.com/" target="_blank" >freepik</a>|Graphic resources for everyone. Find Free Vectors, Stock Photos, PSD and Icons.|
-|||
-|<a href="http://keystore-explorer.org/index.html" target="_blank" >KeyStore Explorer</a>|Open source GUI replacement for the Java command-line utilities keytool and jarsigner.|
+###### Various
+
+**<a href="http://stackshare.io/" target="_blank" >stackshare</a>** : *Discover and discuss the best software tools and services.* 
+
+---
+
+**<a href="http://apns-gcm.bryantan.info/" target="_blank" >APNS/GCM Online Tester</a>** : *Online tool to test Apple Push Notification service (APNS) and Google Cloud Messaging (GCM).* 
+
+---
+
+**<a href="http://codebeautify.org/" target="_blank" >CodeBeautify</a>** : *Online Tools like Beautifiers, Editors, Viewers, Minifier, Validators, Converters for Developers: XML, JSON, CSS, JavaScript, Java, C#, MXML, SQL, CSV, Excel.* 
+
+---
+
+**<a href="https://www.freeformatter.com/" target="_blank" >Free Formatter</a>** : *Tools include several formatters, validators, code minifiers, string escapers, encoders and decoders, message digesters, web resources and more.* 
+
+---
+
+**<a href="http://jsbin.com/" target="_blank" >JS Bin</a>** : *Open source collaborative web development debugging tool.* 
+
+---
+
+**<a href="https://fonts.google.com/" target="_blank" >Google Fonts</a>** : *Discover Great Typography - Hundreds of free, open-source fonts optimized for the web.* 
+
+---
+
+**<a href="https://winscp.net/eng/index.php" target="_blank" >WinSCP</a>** : *an open source free SFTP client and FTP client for Windows. Its main function is the secure file transfer between local and remote computer.* 
+
+---
+
+**<a href="https://readthedocs.org/" target="_blank" >Read the Docs</a>** : *Read the Docs hosts documentation, making it fully searchable and easy to find. You can import your docs using any major version control system.* 
+
+---
+
+**<a href="https://docusaurus.io/" target="_blank" >Docusaurus</a>** : *Easy to Maintain Open Source Documentation Websites.* 
+
+---
+
+**<a href="https://asciinema.org/" target="_blank" >asciinema</a>** : *Free and open source solution for recording terminal sessions and sharing them on the web.* 
+
+---
+
+**<a href="https://coggle.it/" target="_blank" >Coggle</a>** : *A collaborative mind-mapping tool that helps you make sense of complex things.* 
+
+---
+
+**<a href="https://loader.io/" target="_blank" >Loader</a>** : *Free load testing service that allows you to stress test your web-apps & apis with thousands of concurrent connections.* 
+
+---
+
+**<a href="https://bestpractices.coreinfrastructure.org/" target="_blank" >CII Best Practices Badge Program</a>** : *The Linux Foundation (LF) Core Infrastructure Initiative (CII) Best Practices badge is a way for Free/Libre and Open Source Software (FLOSS) projects to show that they follow best practices.* 
+
+---
+
+**<a href="http://patorjk.com/software/taag/" target="_blank" >TAAG</a>** : *Text to ASCII art generator.* 
+
+---
+
+**<a href="https://semver.org/" target="_blank" >Semantic Versioning 2.0.0</a>** : *Versioning Guidelines.* 
+
+---
+
+**<a href="https://www.openproject.org/" target="_blank" >OpenProject</a>** : *Open source project management software.* 
+
+---
+
+**<a href="https://www.putty.org/" target="_blank" >PuTTY</a>** : *PuTTY is an SSH and telnet client, developed originally by Simon Tatham for the Windows platform.* 
+
+---
+
+**<a href="https://www.freepik.com/" target="_blank" >freepik</a>** : *Graphic resources for everyone. Find Free Vectors, Stock Photos, PSD and Icons.* 
+
+---
+
+**<a href="http://keystore-explorer.org/index.html" target="_blank" >KeyStore Explorer</a>** : *Open source GUI replacement for the Java command-line utilities keytool and jarsigner.* 
+
+---
 
 ### Platform as a Service (PaaS)
 ###### Free Tier
@@ -77,27 +112,12 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |||
 |<a href="https://markdowntohtml.com/" target="_blank" >Markdown to HTML Converter</a>|Markdown to HTML Converter.|
 
-### Command Line Tools
-
-|----------	|:------	|
-|<a href="https://curl.haxx.se/" target="_blank" >Curl</a>|command line tool and library for transferring data with URLs.|
-|||
-|<a href="https://stedolan.github.io/jq/" target="_blank" >jq</a>|Lightweight and flexible command-line JSON processor.|
-|||
-|<a href="http://cmder.net/" target="_blank" >cmder</a>|Portable console emulator for Windows.|
-
 ### Version control
 
 |----------	|:------	|
 |<a href="https://www.sourcetreeapp.com/" target="_blank" >Sourcetree</a>|A free Git GUI client for Windows and Mac.|
 |||
-|<a href="https://dependabot.com/" target="_blank" >Dependabot</a>|Automated dependency updates.|
-|||
 |<a href="https://github-profile-summary.com/search" target="_blank" >Github Profile Summary</a>|Tool for visualizing GitHub profiles.|
-|||
-|<a href="http://htmlpreview.github.io/" target="_blank" >GitHub & BitBucket HTML Preview</a> ||
-|||
-|<a href="https://www.gitignore.io/" target="_blank" >git ignore</a> |Create useful .gitignore files for your project based on OS's, IDE's or Programming Languages|
 
 ### Data
 
@@ -281,8 +301,6 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 ### Editor
 
 |----------	|:------	|
-|<a href="https://notepad-plus-plus.org/" target="_blank" >Notepad++</a>|a free source code editor which supports several programming languages running under the MS Windows environment.|
-|||
 |<a href="https://www.gitbook.com/editor" target="_blank" >GitBook Editor</a>|Expressive Markup (Markdown/Asciidoc), Advanced proofreading, Version Control|
 |||
 |<a href="https://laverna.cc/index.html" target="_blank" >Laverna</a>|Markdown note taking app focused on privacy. Consider it like open source alternative to Evernote.|
@@ -350,8 +368,3 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |<a href="https://www.epochconverter.com/" target="_blank" >Epoch Converter</a>|Epoch & Unix Timestamp Conversion Tools|
 |||
 |<a href="https://github.com/quicktype/quicktype" target="_blank" >quicktype</a>|Generate types and converters from JSON, Schema, and GraphQL|
-
-### Crypto Currency
-
-|----------	|:------	|
-|<a href="https://github.com/AnanthaRajuC/Cryptocurrency-List/blob/master/Cryptocurrency%20Tools.md" target="_blank" >Crypto Currency</a>|List of Cyptocurrency related tools.|
