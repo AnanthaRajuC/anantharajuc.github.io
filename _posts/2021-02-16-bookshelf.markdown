@@ -7,9 +7,7 @@ image: assets/images/bookshelf.jpg
 tags: [sticky]
 ---
 
-A selective list of both technical and non-technical books i've read over the last couple of years.
-
-Quick Links :
+A selective list of books (Technical, Non-Technical, Others) i've read over the last couple of years.
 
 - [Presently Reading](#presently-reading)
 - [Technical](#technical)
@@ -23,7 +21,7 @@ Quick Links :
 - [Modern Philosophy - Work - Life - Business](#modern-philosophy---work---life---business)
 - [Poetry](#poetry)
 
-**`++`** *Top books that elicited strong emotions.* 
+**`++`** *Top books with high reread value that elicited strong emotions.* 
 
 ##### **`Presently Reading`**
 
@@ -110,7 +108,7 @@ Quick Links :
 ##### **`Business`**
 
 1. *Memos from the Chairman* by **Alan C. Greenberg**
-2. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* by **Brad Stone**  
+2. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* by **Brad Stone** **`++`**  
 
 ---
 
