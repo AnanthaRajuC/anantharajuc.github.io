@@ -129,6 +129,8 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 **<a href="https://www.sourcetreeapp.com/" target="_blank" >Sourcetree</a>** : *A free Git GUI client for Windows and Mac.* 
 
+---
+
 ###### Data
 
 
@@ -160,87 +162,88 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-**<a href="http://www.useragentstring.com/" target="_blank" >User Agent String</a>** : *Analyze User Agent of you browser or any other user agent string.* 
-
----
-
 **<a href="https://dev.mysql.com/downloads/windows/notifier/" target="_blank" >MySQL Notifier</a>** : *A small utility that can keep watch over your Windows and MySQL services, notifying you of changes in their operation.* 
 
 ---
 
-### API's and Web Services
+###### API's and Web Services
 
-|----------	|:------	|
-|<a href="http://requestbin.com/" target="_blank" >RequestBin</a>|gives you a URL that will collect requests made to it and let you inspect them in a human-friendly way. Use RequestBin to see what your HTTP client is sending or to inspect and debug webhook requests.|
-|||
-|<a href="http://httpbin.org/" target="_blank" >httpbin</a>|HTTP Request & Response Service (Client Testing).|
-|||
-|<a href="https://reqres.in/" target="_blank" >REQ RES</a>|A hosted REST-API ready to respond to your AJAX requests.|
-|||
-|<a href="https://postb.in/" target="_blank" >PostBin</a>|Programatically Test your API Clients or Webhooks|
-|||
-|<a href="https://httpstatuses.com/" target="_blank" >HTTP Status Codes</a>|an easy to reference database of HTTP Status Codes with their definitions and helpful code references all in one place.|
-|||
-|<a href="https://apigee.com/providers" target="_blank" >Apigee API Console</a>|Discover, Learn, Test, and Debug any API with interactive developer tools and documentation.|
-|||
-|<a href="http://www.programmableweb.com/" target="_blank" >ProgrammableWeb</a>|The leading source of news & information about APIs, chronicling the evolution of the global API economy & providing the web's most relied-on API Directory.|
-|||
-|<a href="http://www.downforeveryoneorjustme.com/" target="_blank" >down for everyone or just me</a>|Check if a website id down just for you or everyone.|
-|||
-|<a href="http://mockbin.com/" target="_blank" >Mockbin</a>|Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.|
-|||
-|<a href="https://apiembed.com/" target="_blank" >APIembed</a>|Embeddable API Code snippets - Auto-generated code snippets in many programming languages for your website, blog or API documentation.|
-|||
-|<a href="https://www.statuspage.io/" target="_blank" >Statuspage</a>|Status and incident communication tool.|
-|||
-|<a href="https://uptime.is/" target="_blank" >Uptime</a>|SLA & Uptime Calculator|
-|||
-|<a href="https://rapidapi.com/" target="_blank" >Rapid API</a>|RapidAPI is the world’s largest API marketplace.|
 
-### Design
+**<a href="http://www.downforeveryoneorjustme.com/" target="_blank" >down for everyone or just me</a>** : *Check if a website id down just for you or everyone.* 
 
-|----------	|:-------------	|
-|<a href="http://codepen.io/" target="_blank" >CODEPEN</a>|playground for the front end web.|
-|||
-|<a href="https://www.behance.net/" target="_blank" >Behance</a>|Showcase and discover the latest work from top online portfolios by creative professionals across industries.| 
-|||
-|<a href="https://dribbble.com/" target="_blank" >Dribbble</a>|a place to show and tell, promote, discover, and explore design.| 
-|||
-|<a href="http://www.uplabs.com/" target="_blank" >UpLabs</a>|UpLabs curates the best of design & development inspiration, resources and freebies. | 
-|||
-|<a href="http://www.materialup.com/" target="_blank" >MaterialUp</a>|MaterialUp curates the best of Material Design| 
-|||
-|<a href="http://www.ios.uplabs.com/" target="_blank" >iOSUp</a>|iOSUp curates the best of iOS & OS X|
-|||
-|<a href="http://www.site.uplabs.com/" target="_blank" >SiteUp</a>|SiteUp curates the best of Web Design|
+---
+
+
+**<a href="http://www.programmableweb.com/" target="_blank" >ProgrammableWeb</a>** : *The leading source of news & information about APIs, chronicling the evolution of the global API economy & providing the web's most relied-on API Directory.* 
+
+---
+
+**<a href="https://apigee.com/providers" target="_blank" >Apigee API Console</a>** : *Discover, Learn, Test, and Debug any API with interactive developer tools and documentation.* 
+
+---
+
+**<a href="https://postb.in/" target="_blank" >PostBin</a>** : *Programatically Test your API Clients or Webhooks.* 
+
+---
+
+**<a href="http://httpbin.org/" target="_blank" >httpbin</a>** : *HTTP Request & Response Service (Client Testing).* 
+
+---
+
+**<a href="http://requestbin.com/" target="_blank" >RequestBin</a>** : *gives you a URL that will collect requests made to it and let you inspect them in a human-friendly way. Use RequestBin to see what your HTTP client is sending or to inspect and debug webhook requests.* 
+
+---
+
+**<a href="http://mockbin.com/" target="_blank" >Mockbin</a>** : *Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.* 
+
+---
+
+**<a href="https://www.statuspage.io/" target="_blank" >Statuspage</a>** : *Status and incident communication tool.* 
+
+---
+
+**<a href="https://rapidapi.com/" target="_blank" >Rapid API</a>** : *RapidAPI is the world’s largest API marketplace.* 
+
+---
+
+###### Design
+
+**<a href="https://www.behance.net/" target="_blank" >Behance</a>** : *Showcase and discover the latest work from top online portfolios by creative professionals across industries.* 
+
+---
+
+**<a href="https://dribbble.com/" target="_blank" >Dribbble</a>** : *Place to show and tell, promote, discover, and explore design.* 
+
+---
+
+**<a href="http://www.uplabs.com/" target="_blank" >UpLabs</a>** : *UpLabs curates the best of design & development inspiration, resources and freebies.* 
+
+---
+
+**<a href="http://www.materialup.com/" target="_blank" >MaterialUp</a>** : *MaterialUp curates the best of Material Design.* 
+
+---
+
+**<a href="http://www.ios.uplabs.com/" target="_blank" >iOSUp</a>** : *iOSUp curates the best of iOS & OS X.* 
+
+---
+
+**<a href="http://www.site.uplabs.com/" target="_blank" >SiteUp</a>** : *SiteUp curates the best of Web Design.* 
+
+---
 
 ### IDE's (Online/Offline) and Plugins
 
 |----------	|:-------------	|
-|<a href="https://ideone.com/" target="_blank" >Ideone</a>|an online compiler and debugging tool which allows you to compile source code and execute it online in more than 60 programming languages.|
-|||
-|<a href="https://wakatime.com/" target="_blank" >WakaTime</a>|Quantify your coding. Metrics, insights, and time tracking automatically generated from your programming activity.|
-|||
 |<a href="https://codenvy.io" target="_blank" >Codenvy</a>|Self-service Eclipse Che workspaces.|
-|||
-|<a href="https://tio.run/#" target="_blank" >Try It Online</a>|Online compiler for several practical and recreational programming languages.|
 |||
 |<a href="http://www.tutorialspoint.com/codingground.htm" target="_blank" >Coding Ground - TutorialsPoint</a>|Code in almost all popular languages using Coding Ground. Edit, compile, execute and share your projects, 100% cloud.|
 |||
-|<a href="https://marketplace.eclipse.org/content/ansi-escape-console" target="_blank" >ANSI Escape in Console</a>|This Eclipse plugin interprets the ANSI escape sequences to color the console output.|
-|||
-|<a href="https://marketplace.eclipse.org/content/sonarlint" target="_blank" >SonarLint</a>|Provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript, Python and PHP code.|
-|||
-|<a href="https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite" target="_blank" >Spring Tools (aka Spring IDE and Spring Tool Suite)</a>|Eclipse-powered development environment for building Spring-powered enterprise applications.|
-|||
 |<a href="https://devops.datenkollektiv.de/banner.txt/index.html" target="_blank" >Online Spring Boot Banner Generator</a>|Online Spring Boot Banner Generator.|
-|||
-|<a href="https://www.gitpod.io/" target="_blank" >Gitpod</a>|One-Click Online IDE for GitHub|
 
 ### Virtualization
 
 |----------	|:------------	|
-|<a href="https://www.virtualbox.org/" target="_blank" >VirtualBox </a>|VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use.|
 |<a href="http://www.vmware.com/in/products/player" target="_blank" >VMware Workstation</a>|A streamlined desktop virtualization application that runs one or more operating systems on the same computer without rebooting.|
 
 ### Web Browsers
@@ -265,15 +268,9 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |||
 |<a href="https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl?hl=en" target="_blank" >Hover Zoom</a>|Browse images galleries with ease: move the mouse cursor over thumbnails to view images in their full size without loading a new page.|
 |||
-|<a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh" target="_blank" >JSON Viewer</a>|Chrome extension for printing JSON and JSONP. Customizable JSON/JSONP highlighter.|
-|||
-|<a href="https://wappalyzer.com/download" target="_blank" >WAPPALYZER</a>|It uncovers the technologies used on websites.|
-|||
 |<a href="https://chrome.google.com/webstore/detail/floating-for-youtube/jjphmlaoffndcnecccgemfdaaoighkel" target="_blank" >Floating for YouTube™</a>|Always on top Floating Mini Player for YouTube™.|
 |||
 |<a href="https://chrome.google.com/webstore/detail/floating-for-youtube-exte/egncdnniomonjgpjbapalkckojhkfddk" target="_blank" >Floating for YouTube™ Extension</a>|Open YouTube video in Floating Mini Player for YouTube™.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/builtwith-technology-prof/dapjbgnjinbpoindlpdmhochffioedbn" target="_blank" >BuiltWith Technology Profiler</a>|Find out what the website you are visiting is built with using this extension.|
 |||
 |<a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm" target="_blank" >WhatFont</a>|The easiest way to identify fonts on web pages.|
 |||
@@ -288,12 +285,6 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |<a href="https://github.com/harshjv/github-repo-size" target="_blank" >GitHub Repository Size</a>|Automatically adds repository size to GitHub's repository summary|
 |||
 |<a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en" target="_blank" >LiveReload</a>|LiveReload monitors changes in the file system. As soon as you save a file, it is preprocessed as needed, and the browser is refreshed|
-|||
-|<a href="https://chrome.google.com/webstore/detail/devdocs/mnfehgbmkapmjnhcnbodoamcioleeooe?hl=en" target="_blank" >DevDocs</a>|All-in-one, offline API documentation browser with a fast, organized, and searchable interface.|
-|||
-|<a href="https://about.sourcegraph.com/" target="_blank" >sourcegraph</a>|Code navigation engine.|
-|||
-|<a href="https://www.octotree.io/" target="_blank" >Octotree</a>|Navigate code on GitHub with ease.|
 
 ### Fiddles
 
@@ -319,11 +310,6 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |||
 |<a href="https://www.hipchat.com/" target="_blank" >HipChat</a>|HipChat is hosted group chat and video chat built for teams. Supercharge real-time collaboration with persistent chat rooms, file sharing, and screen sharing.|
 
-### Utilities
-
-|----------	|:------	|
-|<a href="https://technet.microsoft.com/en-gb/sysinternals/bb897437" target="_blank" >TCPView</a>|TCPView is a Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections.|
-
 ### Editor
 
 |----------	|:------	|
@@ -331,7 +317,6 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |||
 |<a href="https://laverna.cc/index.html" target="_blank" >Laverna</a>|Markdown note taking app focused on privacy. Consider it like open source alternative to Evernote.|
 |||
-|<a href="https://code.visualstudio.com/" target="_blank" >Visual Studio Code</a>|Open Source code editor by Microsoft.|
 
 ### Presentation
 
@@ -373,17 +358,11 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 |||
 |<a href="https://dzone.com/" target="_blank" >DZone</a>|Community and publisher of technical content for software professionals.|
 |||
-|<a href="https://www.gitbook.com/" target="_blank" >GitBook</a>|GitBook helps your team write, collaborate and publish content online.|
-|||
 |<a href="https://www.codeproject.com/" target="_blank" >CodeProject</a>|Free source code and tutorials for Windows developers. Programming help for Visual Basic.Net and other .Net family languages.|
-|||
-|<a href="https://choosealicense.com/" target="_blank" >choosealicense</a>|A site to provide non-judgmental guidance on choosing a license for your open source project.|
 |||
 |<a href="http://www.devopsbookmarks.com/" target="_blank" >DevOps Bookmarks</a>|Discover tools and frameworks in the DevOps landscape.|
 |||
 |<a href="http://www.algomation.com/" target="_blank" >Algomation</a>|a platform for viewing, creating and sharing any type of algorithm.|
-|||
-|<a href="https://anvaka.github.io/common-words/#?lang=js" target="_blank" >Common Words</a>|visualization of common words in different programming languages.|
 |||
 |<a href="https://github.com/kovidgoyal/calibre" target="_blank" >Calibre</a>|ebook manager.|
 |||

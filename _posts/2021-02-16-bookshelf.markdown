@@ -29,7 +29,6 @@ Quick Links :
 
 1. *Principles: Life and Work* by **Ray Dalio**
 2. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**
-3. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* by **Brad Stone**
 
 ---
 
@@ -111,6 +110,7 @@ Quick Links :
 ##### **`Business`**
 
 1. *Memos from the Chairman* by **Alan C. Greenberg**
+2. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* by **Brad Stone**  
 
 ---
 
