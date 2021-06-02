@@ -32,6 +32,8 @@ Select compilation of articles and books on Software Development and its related
 
 <a href="https://www.contributor-covenant.org/" target="_blank" >Contributor Covenant</a> - A Code of Conduct for Open Source Projects.
 
+<a href="https://agilemanifesto.org/principles.html" target="_blank" >Principles behind the Agile Manifesto</a> - Manifesto for Agile Software Development.
+
 <a href="https://github.com/github/choosealicense.com" target="_blank" >Choose A License</a> - A site to provide non-judgmental guidance on choosing a license for your open source project
 
 ## Books

@@ -25,8 +25,7 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 ##### **`Presently Reading`**
 
-1. *Principles: Life and Work* by **Ray Dalio**
-2. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**
+1. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**
 
 ---
 
@@ -115,6 +114,7 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 ##### **`Modern Philosophy - Work - Life - Business`**
 
 1. *The Almanack of Naval Ravikant: A Guide to Wealth and Happiness* by **Eric Jorgenson** **`++`**
+2. *Principles: Life and Work* by **Ray Dalio** **`++`**  
 
 ---
 
