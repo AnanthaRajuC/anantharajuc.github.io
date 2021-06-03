@@ -26,6 +26,7 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 ##### **`Presently Reading`**
 
 1. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**
+2. *The Everything Store: Jeff Bezos and the Age of Amazon* by **Brad Stone**
 
 ---
 
