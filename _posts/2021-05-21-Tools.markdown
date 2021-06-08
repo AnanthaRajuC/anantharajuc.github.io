@@ -154,10 +154,6 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-**<a href="https://github.com/mnapoli/IsItMaintained" target="_blank" >IsItMaintained</a>** : *Monitor open source projects activity.*  
-
----
-
 **<a href="https://www.gitignore.io/" target="_blank" >git ignore</a>** : *Create useful .gitignore files for your project based on OS's, IDE's or Programming Languages.*  
 
 ---
