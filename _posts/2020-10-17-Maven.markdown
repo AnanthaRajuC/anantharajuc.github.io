@@ -1,5 +1,5 @@
 ---
-title: "Maven Commands"
+title: "Apache Maven Commands"
 author: anantharajuc
 categories: [ Maven, Java, CLI ]
 layout: post
@@ -7,7 +7,53 @@ date: 2020-10-17 12:00
 image: /assets/images/Apache-Maven.png
 ---
 
-Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information. Maven can also be used to build and manage projects written in C, C#, Ruby, Scala, etc.,
+
+### Maven Lifecycle
+
+It has 3 built-in lifecycle's. Each lifecycle has a sequence of phases which are executed in a specific order. A maven phase represents a stage in the maven build lifecycle. Each phase is responsible for a specific task.
+
+#### Default
+
+- It is the main build lifecycle. 
+- It has 23 phases.
+- The following is a list of some important phases in the Default build lifecycle.
+
+	1. **`validate`** - Checks if all the information necessary for the build are available.
+	2. **`compile`** - Compiles the source code of the project. **`test-compile`** compiles the test source code.
+	3. **`test`** - Runs the unit tests of the application.
+	4. **`package`** - Packages the compiled source code into a distributable format (WAR/JAR). 
+	5. **`install`** - Install the package to a local repository. 
+	5. **`deploy`** - The last phase in the default build lifecycle copies the package to a remote repository. 
+
+#### Clean
+
+- It cleans the project and removes the files from the previous build.
+
+- It has 3 phases
+
+	1. **`pre-clean`**  
+	2. **`clean`**  
+	3. **`post-clean`**   
+
+#### Site
+
+- Creates project's site documentation.
+
+- It has 4 phases
+
+	1. **`pre-site`**  
+	2. **`site`**  
+	3. **`post-site`**   
+	4. **`site-deploy`**   
+	
+### Maven Goals
+
+Each maven phase is a sequence of goals. Each goal is responsible for a specific task. When a phase is run, all goals bound to this phase is executed in order.
+
+### Maven Plugin
+
+A maven plugin is a group of goals. All execution in maven is done by plugins. A plugin is mapped to a goal and executed as apart of it. Phase is mapped to multiple goals. These goals are executed by a plugin. A plugin configuration can be modified using the plugin declaration.
 
 The following is a non-exhaustive list of commonly used Maven Commands for quick reference.
 
