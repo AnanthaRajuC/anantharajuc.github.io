@@ -74,6 +74,9 @@ switch back to master branch
 *	**`git push origin <branch>`**  
 push from local to remote **branch**
 
+*	**`git push --all origin`**  
+Push all branches to your remote repository
+
 ---
 
 #### Deleting a branch
@@ -170,6 +173,9 @@ tell git to use **gitmessage.txt** as the default message that appears in your e
 
 *	**`git remote show origin`**   
 find the URL of the remote repository
+
+*	**`git remote -v`**   
+List all currently configured remote repositories
 
 ---
 

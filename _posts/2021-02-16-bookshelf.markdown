@@ -26,8 +26,7 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 ##### **`Presently Reading`**
 
 1. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**
-2. *The Everything Store: Jeff Bezos and the Age of Amazon* by **Brad Stone**
-
+2. *Invent and Wander: The Collected Writings of Jeff Bezos* by **Jeff Bezos**
 ---
 
 ##### **`Technical`**
@@ -108,7 +107,11 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 ##### **`Business`**
 
 1. *Memos from the Chairman* by **Alan C. Greenberg**
-2. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* by **Brad Stone** **`++`**  
+
+- **Brad Stone***
+
+	1. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* **`++`**  
+	2. *The Everything Store: Jeff Bezos and the Age of Amazon* **`++`**  
 
 ---
 
@@ -124,7 +127,7 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 - **Rupi Kaur**
 
 	1. *The Sun and Her Flowers*
-	2. *Milk and Honey*
+	2. *Milk and Honey* **`++`**
 
 ---
 
