@@ -4,8 +4,8 @@ description: 'Personal Blog'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 baseurl: 'https://anantharajuc.github.io'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
+disqus: 'anantharajuc'
+email: 'arcswdev@gmail.com'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 include: ["_pages"]
@@ -21,7 +21,7 @@ plugins:
 authors:
     anantharajuc:
       name:           Anantha Raju C
-      site:           https://www.wowthemes.net
+      site:           https://anantharajuc.github.io
       avatar:         /assets/images/anantha.jpg
       bio:            "Hi there, i'm Anantha! 👋 I hold a Masters Degree in Computer Science Engineering. Currently i work as a Backend Software Engineer where i primarily work with Java, Spring Boot based Web Applications for products in Customer Engagement domain (Mar-Tech/Ad-Tech). This website began as a pet project and first went online in 2015 and has since undergone a couple of iterations. All the posts here use a minimalist tutorial-style format with images wherever necessary to document a concept/process for myself and acts as a source of quick reference."
       email:          anantharajuc@gmail.com
