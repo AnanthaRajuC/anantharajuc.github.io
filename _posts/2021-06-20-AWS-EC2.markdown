@@ -1,0 +1,28 @@
+---
+title: "Amazon Web Services : Elastic Compute Cloud"
+author: anantharajuc
+categories: [ Cloud, AWS ]
+layout: post
+date: 2021-06-20 08:30
+image: /assets/images/amazon-ec2.png
+---
+
+A compilation of tools and services i most commonly use to create software. 
+
+---
+
+#### EC2 Instance Types
+
+*	**`Dimensions`** : Virtual CPUs, Memory, Storage, Network Performance
+
+*	**`Criteria`** : Enhanced Networking, Local SSDs for higher IOPS requirements, Database workloads, Hadoop and bigdata hosting etc.,
+
+*	**`Instance Families (Broad Categories)`** : General Purpose (T, M), Compute Optimized (C), Memory Optimized (X, R), Storage Optimized (I, D), Accelerated Computing (P, G, F)
+
+
+
+
+
+
+
+
