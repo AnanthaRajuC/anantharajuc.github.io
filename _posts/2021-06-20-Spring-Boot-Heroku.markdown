@@ -36,7 +36,7 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - In this step we assume that the project repository (source code files) is tracked through git, the code is committed and is ready for deployment.
 
-- Login to the Heroku web portal, create a new web app. Name the web app and choose a region (United States/Europe).
+- Login to the [Heroku Web Portal](https://id.heroku.com/login), create a new web app. Name the web app and choose a region (United States/Europe).
 
 - In your local machine, from the command line tool, navigate to the project directory.
 
@@ -50,7 +50,11 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 	- In case of the above mentioned project, the command to do so is `heroku git:remote -a spring-boot-minimal-web-app`
 	
+	![Add Remote Repository]({{ site.baseurl }}/assets/images/spring-boot-heroku/add-remote-repository.PNG)
+	
 	- `git remote -v` command can be used to see the remote URL added to the project.
+	
+	![List Remote URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/list-remote-url.PNG)
 
 - Finally, push the project to Heroku's remote repository added in the previous step. `git push heroku main`
 
