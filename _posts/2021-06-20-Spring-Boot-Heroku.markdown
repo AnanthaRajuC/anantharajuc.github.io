@@ -16,9 +16,21 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 - [Git](https://git-scm.com/downloads)
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
-#### Project Setup
+#### Sample Project
 
 - [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the Heroku platform.
+
+##### URLs
+
+|                      URL          | Method |                      Remarks                     |
+|-----------------------------------|--------|--------------------------------------------------|
+|`http://localhost:8080/`           | GET    | Simple Web Controller, returns a `json` response.|
+|`http://localhost:8080/`           | PUT    | Simple Web Controller, returns a `json` response.|
+|`http://localhost:8080/`           | POST   | Simple Web Controller, returns a `json` response.|
+|`http://localhost:8080/`           | DELETE | Simple Web Controller, returns a `json` response.|
+|`http://localhost:8080/index.html` | GET    | Returns `index.html` page                        |
+
+**`curl http://localhost:8080/`** produces a sample response like **`HTTP GET Handled - 2021-05-25T15:02:16.928`**
 
 #### Heroku Deployment steps
 
@@ -44,5 +56,5 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - Access the deployed web application from the URL **[APP_NAME].herokuapp.com**. In case of the above mentioned project the URL will be **spring-boot-minimal-web-app.herokuapp.com**
 
-
+![App URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/app-url.PNG)
 
