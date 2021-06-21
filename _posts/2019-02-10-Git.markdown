@@ -26,13 +26,13 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 #### Initialization
 
 *	**`git init`**  
-creates a new git repository
+Initializes a new git repository
 
 *	**`git clone /path/to/repository`**  
-create a working copy of a local repository
+creates a working copy of a local repository
 
 *	**`git clone username@host:/path/to/repository`**  
-when using a remote server
+creates a working copy of a remote repository
 
 ---
 
@@ -45,17 +45,17 @@ add a single changed file to staging area (**Index**)
 add all changed files to staging area (**Index**)
 
 *	**`git commit -m "Commit message"`**  
-commit the changed files to **HEAD**
+commits the changed files in staging area to **HEAD**
 
 ---
 
 #### Pushing changes
 
 *	**`git push origin master`**  
-send the changes to your remote repository (Change **master** to whatever **branch** you want to push your changes to)|
+push the changes to your remote repository (Change **master** to whatever **branch** you want to push your changes to)
 
 *	**`git remote add origin <server>`**  
-If you have not cloned an existing repository and want to connect your repository to a remote server|
+If you have not cloned an existing repository and want to connect your repository to a remote server
 
 ---
 
