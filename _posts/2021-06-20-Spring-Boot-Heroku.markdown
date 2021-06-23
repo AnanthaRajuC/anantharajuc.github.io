@@ -20,13 +20,13 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the Heroku platform.
 
-|       URL                         | Method     |
-|-----------------------------------|------------|
-|`http://localhost:8080/index.html` | **GET**    |
-|`http://localhost:8080/`           | **GET**    |
-|`http://localhost:8080/`           | **PUT**    |
-|`http://localhost:8080/`           | **POST**   |
-|`http://localhost:8080/`           | **DELETE** |
+| Method     |       URL                         |
+|------------|-----------------------------------|
+| **GET**    |`http://localhost:8080/index.html` |
+| **GET**    |`http://localhost:8080/`           |
+| **PUT**    |`http://localhost:8080/`           | 
+| **POST**   |`http://localhost:8080/`           | 
+| **DELETE** |`http://localhost:8080/`           |
 
 #### Heroku Deployment steps
 
@@ -40,27 +40,27 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - Login to the Heroku platform via command line. This can be done in two ways.
 
-	- Method 1 : **`heroku login`** You’ll be prompted to enter any key to go to your web browser to complete login. The CLI will then log you in automatically.
+	- *Method 1* : **`heroku login`** You’ll be prompted to enter any key to go to your web browser to complete login. The CLI will then log you in automatically.
 	
-	- Method 2 : **`heroku login -i`** In this method, you will complete the login by entering your credentials from the command line itself.  
+	- *Method 2* : **`heroku login -i`** In this method, you will complete the login by entering your credentials from the command line itself.  
 	
 	![Heroku Login]({{ site.baseurl }}/assets/images/spring-boot-heroku/heroku-login.PNG)  
 	
 - Add Heroku's remote repository to the project. The command to do so has the following structure. **`heroku git:remote -a [APP_NAME]`**
 
-	- In case of the above mentioned project, the command to do so is **`heroku git:remote -a spring-boot-minimal-web-app`**
+	- In case of the above mentioned project, the command to do so is **`heroku git:remote -a spring-boot-minimal-web-app`**  
 	
 	![Add Remote Repository]({{ site.baseurl }}/assets/images/spring-boot-heroku/add-remote-repository.PNG)  
 	
-	- **`git remote -v`** command can be used to see the remote URL added to the project.
+	- **`git remote -v`** command can be used to see the remote URL added to the project.  
 	
 	![List Remote URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/list-remote-url.PNG)  
 
 - Finally, push the project to Heroku's remote repository added in the previous step. **`git push heroku main`**
 
-	![Build Log - Beginning]({{ site.baseurl }}/assets/images/spring-boot-heroku/git-push-heroku-main-start.PNG)  
+	![Build Log - Beginning]({{ site.baseurl }}/assets/images/spring-boot-heroku/git-push-heroku-main-start.PNG)    
 
-	![Build Log - End]({{ site.baseurl }}/assets/images/spring-boot-heroku/git-push-heroku-main-end.PNG)  
+	![Build Log - End]({{ site.baseurl }}/assets/images/spring-boot-heroku/git-push-heroku-main-end.PNG)   
 
 	- The Build log can also be viewed in the Heroku console under the project's **Activity** tab.
 
@@ -68,8 +68,8 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - Access the deployed web application from the URL **[APP_NAME].herokuapp.com**. In case of the above mentioned project the URL will be **spring-boot-minimal-web-app.herokuapp.com**
 
-![App URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/app-url.PNG)
+![App URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/app-url.PNG)  
 
 - In order to delete the project, navigate to the bottom of the **Settings** tab and click on the **Delete** button.
 
-![Delete Project]({{ site.baseurl }}/assets/images/spring-boot-heroku/.PNG)
+![Delete Project]({{ site.baseurl }}/assets/images/spring-boot-heroku/delete-project.PNG)  
