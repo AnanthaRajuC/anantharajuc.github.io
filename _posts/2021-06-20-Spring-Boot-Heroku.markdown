@@ -20,13 +20,13 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the Heroku platform.
 
-|       URL                         | Method |
-|-----------------------------------|--------|
-|`http://localhost:8080/index.html` | GET    |
-|`http://localhost:8080/`           | GET    |
-|`http://localhost:8080/`           | PUT    |
-|`http://localhost:8080/`           | POST   |
-|`http://localhost:8080/`           | DELETE |
+|       URL                         | Method     |
+|-----------------------------------|------------|
+|`http://localhost:8080/index.html` | **GET**    |
+|`http://localhost:8080/`           | **GET**    |
+|`http://localhost:8080/`           | **PUT**    |
+|`http://localhost:8080/`           | **POST**   |
+|`http://localhost:8080/`           | **DELETE** |
 
 #### Heroku Deployment steps
 
@@ -56,9 +56,20 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 	
 	![List Remote URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/list-remote-url.PNG)  
 
-- Finally, push the project to Heroku's remote repository added in the previous step. `git push heroku main`
+- Finally, push the project to Heroku's remote repository added in the previous step. **`git push heroku main`**
+
+	![Build Log - Beginning]({{ site.baseurl }}/assets/images/spring-boot-heroku/git-push-heroku-main-start.PNG)  
+
+	![Build Log - End]({{ site.baseurl }}/assets/images/spring-boot-heroku/git-push-heroku-main-end.PNG)  
+
+	- The Build log can also be viewed in the Heroku console under the project's **Activity** tab.
+
+	![Build Log - Heroku]({{ site.baseurl }}/assets/images/spring-boot-heroku/build-log-heroku.PNG)  
 
 - Access the deployed web application from the URL **[APP_NAME].herokuapp.com**. In case of the above mentioned project the URL will be **spring-boot-minimal-web-app.herokuapp.com**
 
 ![App URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/app-url.PNG)
 
+- In order to delete the project, navigate to the bottom of the **Settings** tab and click on the **Delete** button.
+
+![Delete Project]({{ site.baseurl }}/assets/images/spring-boot-heroku/.PNG)
