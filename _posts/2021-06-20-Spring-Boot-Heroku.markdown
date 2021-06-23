@@ -40,19 +40,19 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 - Login to the Heroku platform via command line. This can be done in two ways.
 
-	- Method 1 : `heroku login` You’ll be prompted to enter any key to go to your web browser to complete login. The CLI will then log you in automatically.
+	- Method 1 : **`heroku login`** You’ll be prompted to enter any key to go to your web browser to complete login. The CLI will then log you in automatically.
 	
-	- Method 2 : `heroku login -i` In this method, you will complete the login by entering your credentials from the command line itself.  
+	- Method 2 : **`heroku login -i`** In this method, you will complete the login by entering your credentials from the command line itself.  
 	
 	![Heroku Login]({{ site.baseurl }}/assets/images/spring-boot-heroku/heroku-login.PNG)  
 	
-- Add Heroku's remote repository to the project. The command to do so has the following structure. `heroku git:remote -a [APP_NAME]`
+- Add Heroku's remote repository to the project. The command to do so has the following structure. **`heroku git:remote -a [APP_NAME]`**
 
-	- In case of the above mentioned project, the command to do so is `heroku git:remote -a spring-boot-minimal-web-app`
+	- In case of the above mentioned project, the command to do so is **`heroku git:remote -a spring-boot-minimal-web-app`**
 	
 	![Add Remote Repository]({{ site.baseurl }}/assets/images/spring-boot-heroku/add-remote-repository.PNG)  
 	
-	- `git remote -v` command can be used to see the remote URL added to the project.
+	- **`git remote -v`** command can be used to see the remote URL added to the project.
 	
 	![List Remote URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/list-remote-url.PNG)  
 
