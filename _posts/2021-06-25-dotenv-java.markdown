@@ -15,10 +15,10 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
 ---
 
-#### Software Requirements
+#### Minimum Software Requirements
 
-- [dotenv-java](https://github.com/cdimascio/dotenv-java#install) library (Maven/Gradle)
 - **Java 8** or higher
+- [dotenv-java](https://github.com/cdimascio/dotenv-java#install) library (Maven/Gradle)
 
 #### Sample Project
 
@@ -32,11 +32,14 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 | **POST**   |    | **`http://localhost:8080/`**           | 
 | **DELETE** |    | **`http://localhost:8080/`**           |
 
-#### Basic Usage
+#### Dependencies
 
-- Add the dependecy to the project.
+- Add the following dependency to the project.
+
+##### dotenv-java
 
 ~~~xml
+<!-- https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java -->
 <dependency>
     <groupId>io.github.cdimascio</groupId>
     <artifactId>dotenv-java</artifactId>
@@ -47,8 +50,11 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 or
 
 ~~~txt
-compile 'io.github.cdimascio:dotenv-java:2.2.0'
+// https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java
+implementation group: 'io.github.cdimascio', name: 'dotenv-java', version: '2.2.0'
 ~~~
+
+#### Basic Usage
 
 - Create a **`.env`** file in the root of your project with the following structure.
 
@@ -65,10 +71,6 @@ Dotenv dotenv = Dotenv.load();
 dotenv.get("MY_ENV_VAR1")
 ~~~
 
-#### Useful Resources
-
-Queries regarding *best practices*, *multi-line values*, *multiple .env files*, *usage in PRODUCTION environment* and other frequently asked questions have been addressed by the authors of the project [here](https://github.com/cdimascio/dotenv-java#faq).
-
 #### Notes
 
 To edit the **`.env`** file you could simply navigate to project's directory and open the file by a text editor. 
@@ -78,3 +80,7 @@ Eclipse IDE by default doesn't show dot files in the **Project Explorer** tab. T
 **`Project Explorer -> View Menu -> Filters -> uncheck .* resources`**
 
 ![Eclipse IDE .*resources]({{ site.baseurl }}/assets/images/eclipse-ide-dot-resources.png)  
+
+#### Links
+
+Queries regarding *best practices*, *multi-line values*, *multiple .env files*, *usage in PRODUCTION environment* and other frequently asked questions have been addressed by the authors of the project [here](https://github.com/cdimascio/dotenv-java#faq).

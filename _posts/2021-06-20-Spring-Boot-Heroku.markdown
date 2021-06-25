@@ -18,15 +18,15 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 #### Sample Project
 
-- [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the Heroku platform.
+[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the Heroku platform.
 
-	| *Method*   :  *URL*                             |
-	|-------------------------------------------------|
-	| **GET**    : `http://localhost:8080/index.html` |
-	| **GET**    : `http://localhost:8080/`           |
-	| **PUT**    : `http://localhost:8080/`           | 
-	| **POST**   : `http://localhost:8080/`           | 
-	| **DELETE** : `http://localhost:8080/`           |
+| *Method*   |    |  *URL*                                 |
+|------------|----|----------------------------------------|
+| **GET**    |    | **`http://localhost:8080/index.html`** |
+| **GET**    |    | **`http://localhost:8080/`**           |
+| **PUT**    |    | **`http://localhost:8080/`**           | 
+| **POST**   |    | **`http://localhost:8080/`**           | 
+| **DELETE** |    | **`http://localhost:8080/`**           |
 
 #### Heroku Deployment steps
 
