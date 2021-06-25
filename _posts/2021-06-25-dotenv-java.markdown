@@ -22,17 +22,33 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
 #### Sample Project
 
-- [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of the aforementioned tool.
+[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of the aforementioned tool.
 
-| *Method*   |:|  *URL*                             |
-|------------|-|------------------------------------|
-| **GET**    |:| `http://localhost:8080/index.html` |
-| **GET**    |:| `http://localhost:8080/`           |
-| **PUT**    |:| `http://localhost:8080/`           | 
-| **POST**   |:| `http://localhost:8080/`           | 
-| **DELETE** |:| `http://localhost:8080/`           |
+| *Method*   |    |  *URL*                                 |
+|------------|----|----------------------------------------|
+| **GET**    |    | **`http://localhost:8080/index.html`** |
+| **GET**    |    | **`http://localhost:8080/`**           |
+| **PUT**    |    | **`http://localhost:8080/`**           | 
+| **POST**   |    | **`http://localhost:8080/`**           | 
+| **DELETE** |    | **`http://localhost:8080/`**           |
 
 #### Basic Usage
+
+- Add the dependecy to the project.
+
+~~~xml
+<dependency>
+    <groupId>io.github.cdimascio</groupId>
+    <artifactId>dotenv-java</artifactId>
+    <version>2.2.0</version>
+</dependency>
+~~~
+
+or
+
+~~~txt
+compile 'io.github.cdimascio:dotenv-java:2.2.0'
+~~~
 
 - Create a **`.env`** file in the root of your project with the following structure.
 
@@ -55,10 +71,10 @@ Queries regarding *best practices*, *multi-line values*, *multiple .env files*, 
 
 #### Notes
 
+To edit the **`.env`** file you could simply navigate to project's directory and open the file by a text editor. 
+
 Eclipse IDE by default doesn't show dot files in the **Project Explorer** tab. To enable this functionality follow the below mentioned steps.
 
 **`Project Explorer -> View Menu -> Filters -> uncheck .* resources`**
 
 ![Eclipse IDE .*resources]({{ site.baseurl }}/assets/images/eclipse-ide-dot-resources.png)  
-
-or simply navigate to project's directory and open the **`.env`** file by a text editor.
