@@ -17,7 +17,7 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
 #### Minimum Software Requirements
 
-- **Java 8** or higher
+- Java 8 or higher
 - [dotenv-java](https://github.com/cdimascio/dotenv-java#install) library (Maven/Gradle)
 
 #### Sample Project
@@ -33,8 +33,6 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 | **DELETE** |    | **`http://localhost:8080/`**           |
 
 #### Dependencies
-
-- Add the following dependency to the project.
 
 ##### dotenv-java
 
@@ -56,7 +54,7 @@ implementation group: 'io.github.cdimascio', name: 'dotenv-java', version: '2.2.
 
 #### Basic Usage
 
-- Create a **`.env`** file in the root of your project with the following structure.
+Create a **`.env`** file in the root of your project with the following structure.
 
 ~~~txt
 # formatted as key=value
@@ -64,7 +62,7 @@ MY_ENV_VAR1=some_value
 MY_ENV_VAR2=some_value
 ~~~
 
-- Initialize the library and get the environment variables as per the need.
+Initialize the library and get the environment variables as per the need.
 
 ~~~java
 Dotenv dotenv = Dotenv.load();
@@ -83,4 +81,4 @@ Eclipse IDE by default doesn't show dot files in the **Project Explorer** tab. T
 
 #### Links
 
-Queries regarding *best practices*, *multi-line values*, *multiple .env files*, *usage in PRODUCTION environment* and other frequently asked questions have been addressed by the authors of the project [here](https://github.com/cdimascio/dotenv-java#faq).
+- Queries regarding *best practices*, *multi-line values*, *multiple .env files*, *usage in PRODUCTION environment* and other frequently asked questions have been addressed by the authors of the project [here](https://github.com/cdimascio/dotenv-java#faq).
