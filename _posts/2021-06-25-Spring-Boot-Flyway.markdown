@@ -7,7 +7,7 @@ date: 2021-06-25 10:40
 image: /assets/images/spring-boot-flyway.jpg
 ---
 
-This post briefly documents the usage of **Flyway** for Relational Database version control. Flyway supports some of the most popular DBs available today, the list of the same can found [here])(https://flywaydb.org/documentation/database/aurora-mysql).
+This post briefly documents the usage of **Flyway** for Relational Database version control. Flyway supports some of the most popular DBs available today, the list of the same can found [here](https://flywaydb.org/documentation/database/aurora-mysql).
 
 ---
 
@@ -81,7 +81,7 @@ In this project there are two files, **`V0_0_1__SBMWA_structure.sql`** (First fi
 	- *V0_0_1__SBMWA_structure.sql* describes the structure of the tables and is the first file to be executed since the file name contains the number **`1`**.  
 	- *V0_0_2__SBMWA_data.sql* has the insert statements of the data that is to be loaded during initialization and is the second file to be executed since the file name contains the number **`2`**.  
 
-In the application.properties file add the following properties. 
+In the **`application.properties`** file add the following properties. 
 
 *Data Migration Properties*
 
