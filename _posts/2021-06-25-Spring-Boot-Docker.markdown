@@ -100,49 +100,49 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 **`docker build -t spring-boot-minimal-web-app .`** : Builds the docker image of the project as per the specifications mentioned in the **Dockerfile** file.
 
-![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/1-docker-build.png)  
+![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/1-docker-build.PNG)  
 
 **`docker images`** : Check the docker image is generated from running the previous command.
 
-![List Docker Images]({{ site.baseurl }}/assets/images/spring-boot-docker/2-docker-image-list.png)  
+![List Docker Images]({{ site.baseurl }}/assets/images/spring-boot-docker/2-docker-image-list.PNG)  
 
 ###### Run, Stop and Restart
 
 **`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`** : Run the newly created docker image.
 
-![Docker Run]({{ site.baseurl }}/assets/images/spring-boot-docker/3-docker-run.png)  
+![Docker Run]({{ site.baseurl }}/assets/images/spring-boot-docker/3-docker-run.PNG)  
 
 **`docker stop spring-boot-minimal-web-app`** : Stop the container of the image.
 
-![Stop Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/6-stop-running-docker-container.png)  
+![Stop Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/6-stop-running-docker-container.PNG)  
 
 **`docker restart spring-boot-minimal-web-app`** : Restart the stopped container of the image.
 
-![Restart Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/9-docker-container-restart.png)  
+![Restart Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/9-docker-container-restart.PNG)  
 
 ###### Logs
 
 **`docker logs spring-boot-minimal-web-app`** : Lists container logs.
 
-![Docker Logs]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs.png)  
+![Docker Logs]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs.PNG)  
 
 **`docker logs spring-boot-minimal-web-app --tail N`** : Lists container logs. **--tail** flag will show the last **N** lines of logs.
 
-![Docker Logs with tail]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-tail.png)  
+![Docker Logs with tail]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-tail.PNG)  
 
 **`docker logs spring-boot-minimal-web-app --since YYYY-MM-DD`** : List container logs since a particular date.
 
-![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-date.png) 
+![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-date.PNG) 
 
 ###### Clean-up
 
 **`docker rm spring-boot-minimal-web-app`** : Remove the docker container.
 
-![Remove Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/4-remove-docker-container.png)  
+![Remove Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/4-remove-docker-container.PNG)  
 
 **`docker image rm spring-boot-minimal-web-app`** : Remove the docker image.
 
-![Remove Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/3-remove-docker-image.png)  
+![Remove Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/3-remove-docker-image.PNG)  
 
 
 
