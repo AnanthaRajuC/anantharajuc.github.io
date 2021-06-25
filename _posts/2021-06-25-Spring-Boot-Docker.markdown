@@ -14,9 +14,9 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 #### Minimum Software Requirements
 
 - Java
+- [Maven](https://maven.apache.org/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Oracle VM VirtualBox](https://www.virtualbox.org/) or any other [hypervisor](https://en.wikipedia.org/wiki/Hypervisor)
-- [Maven](https://maven.apache.org/)
 
 #### Sample Project
 
@@ -34,7 +34,7 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 
 A java project does not necessarily have any library dependency in order to create a docker image of that project.
 
-However, in the plugins section of the **`pom.xml`** dependency management file there must be a plugin to package the project as an executable jar/war file.
+However, in the plugins section of the **`pom.xml`** dependency management file there must be a plugin to package the project as an executable **jar**/**war** file.
 
 ~~~xml
 <!-- Package as an executable jar/war. -->
@@ -44,17 +44,16 @@ However, in the plugins section of the **`pom.xml`** dependency management file 
 </plugin>
 ~~~
 
-In the same **`pom.xml`** file, add the following details.
+In the same **`pom.xml`** file, add the following details as well.
 
 ~~~xml
-<!-- Package as an executable jar/war. -->
 <version>latest</version>
 <packaging>jar</packaging>
 ~~~
 
 #### Basic Usage
 
-Create a file name **`Dockerfile`** in the root of your project with the following details.
+Create a file named **`Dockerfile`** in the root of your project with the following details.
 
 ~~~txt
 # Start with a base image containing Java runtime
@@ -81,41 +80,69 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 
 ##### Maven
 
-From the command line, navigate to project directory where the pom.xml file is present.
+From the command line, navigate to project directory where the **pom.xml** file is present.
 
-**`mvn clean`** - Clean the project and remove the files from the previous build. 
+**`mvn clean`** : Clean the project and remove the files from the previous build. 
 
-**`mvn validate`** - Check if all the information necessary for the build (**.jar**) are available.
+**`mvn validate`** : Check if all the information necessary for the build (**.jar**) are available.
 
-**`mvn package`** - Runs all the tests and packages/builds the project to a **.jar** file. To skip the tests and package/build the project, use **`mvn package -Dmaven.test.skip=true`** command.
+**`mvn package`** : Runs all the tests and packages/builds the project to a **.jar** file. 
 
-The above mentioned **.jar** file is present inside the **target** directory.
+**`mvn package -Dmaven.test.skip=true`** : To skip the tests and package/build the project directly.
+
+The above mentioned **.jar** file is present inside the **/target** directory.
 
 ##### Docker
 
 ###### Build 
 
-**`docker images`** - Lists the already present container images.
+**`docker images`** : Lists the already present container images.
 
-**`docker build -t spring-boot-minimal-web-app .`** - Builds the docker image of the project as per the specifications mentioned in the **Dockerfile** file.
+**`docker build -t spring-boot-minimal-web-app .`** : Builds the docker image of the project as per the specifications mentioned in the **Dockerfile** file.
 
-**`docker images`** - Check the docker image is generated from running the previous command.
+![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/1-docker-build.png)  
+
+**`docker images`** : Check the docker image is generated from running the previous command.
+
+![List Docker Images]({{ site.baseurl }}/assets/images/spring-boot-docker/2-docker-image-list.png)  
 
 ###### Run, Stop and Restart
 
-**`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`** - Run the newly created docker image.
+**`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`** : Run the newly created docker image.
 
-**`docker stop spring-boot-minimal-web-app`** - Stop the container of the image.
+![Docker Run]({{ site.baseurl }}/assets/images/spring-boot-docker/3-docker-run.png)  
 
-**`docker restart spring-boot-minimal-web-app`** - Restart the stopped container of the image.
+**`docker stop spring-boot-minimal-web-app`** : Stop the container of the image.
+
+![Stop Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/6-stop-running-docker-container.png)  
+
+**`docker restart spring-boot-minimal-web-app`** : Restart the stopped container of the image.
+
+![Restart Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/9-docker-container-restart.png)  
+
+###### Logs
+
+**`docker logs spring-boot-minimal-web-app`** : Lists container logs.
+
+![Docker Logs]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs.png)  
+
+**`docker logs spring-boot-minimal-web-app --tail N`** : Lists container logs. **--tail** flag will show the last **N** lines of logs.
+
+![Docker Logs with tail]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-tail.png)  
+
+**`docker logs spring-boot-minimal-web-app --since YYYY-MM-DD`** : List container logs since a particular date.
+
+![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-date.png) 
 
 ###### Clean-up
 
-**`docker rm spring-boot-minimal-web-app`** - Remove the docker container.
+**`docker rm spring-boot-minimal-web-app`** : Remove the docker container.
 
-**`docker image rm spring-boot-minimal-web-app`** - Remove the docker image.
+![Remove Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/4-remove-docker-container.png)  
 
+**`docker image rm spring-boot-minimal-web-app`** : Remove the docker image.
 
+![Remove Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/3-remove-docker-image.png)  
 
 
 
