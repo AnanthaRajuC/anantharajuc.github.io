@@ -9,7 +9,7 @@ image: /assets/images/dotenv-java.png
 
 This post documents the usage of **dotenv-java** library which aids in loading **Environment Variables** which are often using to store confidential configuration values such as *API keys*, *Database passwords* etc., instead of directly adding these values in the codebase. 
 
-This library is available in both Java and Kotlin flavours and also supports usage in Android. A Kotlin version of this library is avaiable [here](https://github.com/cdimascio/dotenv-kotlin).
+This library is available in both Java and [Kotlin](https://github.com/cdimascio/dotenv-kotlin) flavours and also supports usage in Android. 
 
 We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
@@ -24,13 +24,13 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
 - [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of the aforementioned tool.
 
-| *Method*   :  *URL*                             |
-|-------------------------------------------------|
-| **GET**    : `http://localhost:8080/index.html` |
-| **GET**    : `http://localhost:8080/`           |
-| **PUT**    : `http://localhost:8080/`           | 
-| **POST**   : `http://localhost:8080/`           | 
-| **DELETE** : `http://localhost:8080/`           |
+| *Method*   |:|  *URL*                             |
+|------------|-|------------------------------------|
+| **GET**    |:| `http://localhost:8080/index.html` |
+| **GET**    |:| `http://localhost:8080/`           |
+| **PUT**    |:| `http://localhost:8080/`           | 
+| **POST**   |:| `http://localhost:8080/`           | 
+| **DELETE** |:| `http://localhost:8080/`           |
 
 #### Basic Usage
 
