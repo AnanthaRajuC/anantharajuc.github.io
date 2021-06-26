@@ -21,18 +21,17 @@ This post briefly documents the usage of **MongoDB**, a general purpose, documen
 
 [Spring Boot MongoDB](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB) is the sample Spring Boot app i've used to illustrate the usage of MongoDB.
 
-| *Method*   |    |  *URL*                                                |    | Sample Valid Request Body |
-|------------|----|-------------------------------------------------------|----|---------------------------|
-| **GET**    |    | **`http://localhost:8080/api/v1/student`**            |    |                           |
-| **GET**    |    | **`http://localhost:8080/api/v1/student/{id}`**       |    |                           |
-| **PUT**    |    | **`http://localhost:8080/api/v1/student/{id}`**       |    | [JSON](#json)             |
-| **POST**   |    | **`http://localhost:8080/api/v1/student`**            |    | [JSON](#json)             |
-| **POST**   |    | **`http://localhost:8080/api/v1/student/name/{name}`**|    |                           |
-| **DELETE** |    | **`http://localhost:8080/api/v1/student/{id}`**       |    |                           |
+| *Method*   |    |  *URL*                                                |
+|------------|----|-------------------------------------------------------|
+| **GET**    |    | **`http://localhost:8080/api/v1/student`**            |
+| **GET**    |    | **`http://localhost:8080/api/v1/student/{id}`**       |
+| **PUT**    |    | **`http://localhost:8080/api/v1/student/{id}`**       |
+| **POST**   |    | **`http://localhost:8080/api/v1/student`**            |
+| **POST**   |    | **`http://localhost:8080/api/v1/student/name/{name}`**|
+| **DELETE** |    | **`http://localhost:8080/api/v1/student/{id}`**       |
 
-##### Sample Valid JSON Request Bodys
+##### Sample Valid JSON Request Body for PUT and POST requests.
 
-##### <a id="json">json</a>
 ```json
 {
     "name": "John Doe",
@@ -104,6 +103,6 @@ On Windows platform, create a folder titled **data** inside another folder named
 
 For other platforms, check the installation guide by **MongoDB**.
 
-Start the **mongod** server from the **`/bin`** folder of the MongoDB installation location (*`C:\Program Files\MongoDB\Server\4.0\bin`*). 
+Start the **mongod** server from the **`\bin`** folder of the MongoDB installation location (*`C:\Program Files\MongoDB\Server\4.0\bin`*). 
 
 ![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot-mongodb/start-mongod-server.PNG)  
