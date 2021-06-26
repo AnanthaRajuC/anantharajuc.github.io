@@ -17,6 +17,7 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 - [Maven](https://maven.apache.org/)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Oracle VM VirtualBox](https://www.virtualbox.org/) or any other [hypervisor](https://en.wikipedia.org/wiki/Hypervisor)
+- [Postman](https://www.postman.com/downloads/)
 
 #### Sample Project
 
