@@ -38,6 +38,8 @@ Code for this project is available here, [https://github.com/AnanthaRajuC/Spring
 
 ![Application Screenshot]({{ site.baseurl }}/assets/images/sbat-home.png) 
 
+**More [Screenshots](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/SCREENSHOTS.md)**
+
 #### Details  
 
 - [Technology stack & other Open-source libraries](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/TECHNOLOGY_STACK.MD)  
