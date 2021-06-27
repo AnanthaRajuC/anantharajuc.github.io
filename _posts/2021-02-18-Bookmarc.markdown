@@ -22,8 +22,6 @@ Bookmarc is a portable web Browsers' bookmark's manager. The idea behind this pr
 
 Code for this project is available here, [https://github.com/AnanthaRajuC/Bookmarc](https://github.com/AnanthaRajuC/Bookmarc).
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/AnanthaRajuC/Bookmarc">Bookmarc</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/AnanthaRajuC">Anantha Raju C</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International
-
 #### Application Screenshot  
 
 ![Application Screenshot]({{ site.baseurl }}/assets/images/bookmarc-home.png)  
