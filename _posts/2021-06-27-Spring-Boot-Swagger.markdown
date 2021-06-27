@@ -31,9 +31,9 @@ This post briefly documents the usage of **Swagger UI**, a visual documentation 
 
 #### Dependencies
 
-##### SwaggerDoc Open API UI
-
 This implementation has two dependencies, **springdoc-openapi-ui** and **swagger-annotations**. The **maven**/**gradle** dependencies of the same are mentioned below.
+
+##### SwaggerDoc Open API UI
 
 ~~~xml
 <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
