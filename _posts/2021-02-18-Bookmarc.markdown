@@ -24,18 +24,24 @@ Code for this project is available here, [https://github.com/AnanthaRajuC/Bookma
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/AnanthaRajuC/Bookmarc">Bookmarc</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/AnanthaRajuC">Anantha Raju C</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International
 
-#### Application Screenshot
+#### Application Screenshot  
 
 ![Application Screenshot]({{ site.baseurl }}/assets/images/bookmarc-home.png)  
 
 #### Details
 
-- [Technology stack & other Open-source libraries](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/TECHNOLOGY_STACK.MD)  
-- [Technical Functionalities and To-Do](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/TECHNICAL_FUNCTIONALITIES.md)  
-- [Installation](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/INSTALLATION.MD)  
-- [Changelog](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/CHANGELOG.md) 
+- [Technology stack & other Open-source libraries](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/TECHNOLOGY_STACK.MD) 
+   
+- [Technical Functionalities and To-Do](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/TECHNICAL_FUNCTIONALITIES.md)    
+
+- [Installation](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/INSTALLATION.MD)    
+
+- [Changelog](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/CHANGELOG.md)   
+
 - [Internationalization (i18n)](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/INTERNATIONALIZATION.MD) 
+
 - [Documentation](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/DOCUMENTATION.MD) 
+
 - [Docker](https://github.com/AnanthaRajuC/Bookmarc/blob/main/documents/DOCKER.md)   
 
 
