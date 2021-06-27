@@ -8,86 +8,59 @@ image: /assets/images/spring-boot-logo.jpg
 tags: [project]
 ---
 
-The only thing better than a Maven archetype is a repo you can fork with everything already setup, just fork-and-code.
+The only thing better than a Maven archetype is a repo you can fork with everything already setup to speed up the creation of new Spring Boot based Web applications, just fork-and-code.
+
+This repository contains a **recipe/scaffolding** for bootstrapping a **Monolithic Web Application** with the features & Technology stack listed below. Delete the sample code (or keep it.) and add your own, you’re good to go.
+
+Essentially it's a simple on-demand application backend for rapd-prototyping.
+
+Features include but not limited to:
+
+- [Authentication](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/AUTHENTICATION.MD)  
+- [User Profiles](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/USER_PROFILES.MD)   
+- [User Roles](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/USER_ROLES.MD)   
+- [API](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/API.md)  
+- [Internationalization (i18n)](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/INTERNATIONALIZATION.MD) 
+
+<p align="center">
+	<a href="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/issues">Report Bug</a>
+	·
+	<a href="https://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template/issues">Request Feature</a>
+</p>
 
 ---
 
-## Badges
+#### Source Code
 
-##### GitHub Badges USER/PROJECT
+Code for this project is available here, [https://github.com/AnanthaRajuC/Spring-Boot-Application-Template](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template).
 
-*	**Issues** - **`https://img.shields.io/github/issues/USER/REPO`**  
-*	**Forks** - **`https://img.shields.io/github/forks/USER/REPO`**  
-*	**Stars** - **`https://img.shields.io/github/stars/USER/REPO`**  
-*	**License** - **`https://img.shields.io/github/license/USER/REPO`**  
+#### Application Screenshot  
 
----
+![Application Screenshot]({{ site.baseurl }}/assets/images/sbat-home.png) 
 
-## Technology Stack
+#### Details  
 
-##### Database
+- [Technology stack & other Open-source libraries](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/TECHNOLOGY_STACK.MD)  
+- [Technical Functionalities and To-Do](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/TECHNICAL_FUNCTIONALITIES.MDD)  
+- [Getting Started](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/GETTING_STARTED.MD)  
+- [Architecture](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/ARCHITECTURE.md) 
+- [Installation](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/INSTALLATION.MD)  
+- [Deployment](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/DEPLOYMENT.md)  
+- [Security](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/API.md)  
+- [Testing API](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/TESTING.MD)  
+- [Changelog](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/CHANGELOG.md) 
+- [Code Coverage](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/CODE_COVERAGE.MD) 
+- [Documentation](https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/DOCUMENTATION.MD) 
 
-1. **<a href="https://flywaydb.org/" target="_blank" >Flyway</a>** - Version control for database.  
-2. **<a href="https://www.mysql.com/" target="_blank" >MySQL</a>** - Open-Source Relational Database Management System. 
-3. **<a href="https://www.h2database.com/html/main.html" target="_blank" >H2 Database Engine</a>** - Java SQL database. Embedded and server modes; in-memory databases.  
 
----
 
-## Tools, Bots and Services
 
-Tools and services available for free or offers a free tier for open source projects.
 
-##### Tools
 
-1. **<a href="https://www.postman.com/" target="_blank" >Postman</a>** - API Development Environment.  
-2. **<a href="https://git-scm.com/" target="_blank" >Git</a>** - Distributed version control system.  
-3. **<a href="https://www.docker.com/" target="_blank" >Docker</a>** - A set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.  
 
----
 
-##### Services
 
-1. **<a href="https://www.toptal.com/developers/gitignore/api/maven,java,eclipse,intellij,netbeans,visualstudiocode" target="_blank" >gitignore.io</a>** - Create useful .gitignore files for your project.  
-2. **<a href="https://sonarcloud.io/" target="_blank" >sonarcloud</a>** - Continuous Code Quality & Code Security.  
-3. **<a href="https://fossa.com/product/open-source-license-compliance" target="_blank" >FOSSA</a>** - Continuous compliance with code SCA featuring audit-grade reporting and comprehensive dependency inventory.  
-4. **<a href="https://travis-ci.org/" target="_blank" >Travis CI</a>** - A hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket.  
-5. **<a href="https://about.codecov.io/" target="_blank" >Codecov</a>** - A hosted tool that is used to measure the test coverage of your codebase.  
-6. **<a href="https://hub.docker.com/" target="_blank" >Docker Hub</a>** - Library and community for container images.  
-7. **<a href="https://sonarcloud.io/" target="_blank" >GitHub</a>** - Build, ship, and maintain software.  
-8. **<a href="https://shields.io/" target="_blank" >Shields.io</a>** - Badge provider.  
 
----
 
-##### Bots
 
-These bot's provide pull requests to perform various operations.
 
-1. **<a href="https://github.com/apps/dependabot-preview" target="_blank" >Dependabot Preview</a>** - Keep the dependencies secure and up to date.  
-2. **<a href="https://fossa.com/product/open-source-license-compliance" target="_blank" >FOSSA</a>** - Open Source License Compliance Management.  
-3. **<a href="https://imgbot.net/" target="_blank" >Imgbot</a>** - Optimizes images.  
-4. **<a href="https://github.com/snyk-bot" target="_blank" >Snyk bot</a>** - Opens pull requests to fix known vulnerabilities in your dependencies. 
-
----
-
-## GitHub Templates
-
-1. Issue Template
-2. Feature Request Template
-
----
-
-## Non-Code related resources
-
-1. **<a href="https://www.contributor-covenant.org/" target="_blank" >Contributor Covenant</a>** - A Code of Conduct for Open Source Communities.  
-2. **<a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/" target="_blank" >Contributor Covenant Code of Conduct</a>** - Contributor Covenant Code of Conduct.  
-
-##### License
-
-1. **<a href="https://choosealicense.com/" target="_blank" >Choose A License</a>** - Choose an open source license.  
-2. **<a href="https://chooser-beta.creativecommons.org/" target="_blank" >Chooser</a>** - Follow the steps to select the appropriate license for your work.  
-
-## Other Resources
-
-1. **<a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" >Conventional Commits</a>** - A specification for adding human and machine readable meaning to commit messages.  
-2. **<a href="https://semver.org/" target="_blank" >Semantic Versioning 2.0.0</a>** - A simple set of rules and requirements that dictate how version numbers are assigned and incremented.  
-3. **<a href="https://keepachangelog.com/en/1.0.0/" target="_blank" >keep a changelog</a>** - Format to document changes to the project.  
