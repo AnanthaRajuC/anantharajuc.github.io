@@ -33,6 +33,8 @@ This post briefly documents the usage of **Swagger UI**, a visual documentation 
 
 ##### SwaggerDoc Open API UI
 
+This implementation has two dependencies, **springdoc-openapi-ui** and **swagger-annotations**. The **maven**/**gradle** dependencies of the same are mentioned below.
+
 ~~~xml
 <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui -->
 <dependency>
@@ -73,17 +75,17 @@ Swagger provides with annotations specific to class types (**Controller**, **Mod
 
 ##### Model Class Annotations
 
-`@ApiModel(description="Simple JavaBean domain object representing RESTcontrollerResponse")`
+**`@ApiModel(description="Simple JavaBean domain object representing RESTcontrollerResponse")`**
 
 This annotation essentially describes what exactly a model is.
 
-`@Schema(description="RESTcontrollerResponse content", example="HTTP Method Handled.", required=true)`
+**`@Schema(description="RESTcontrollerResponse content", example="HTTP Method Handled.", required=true)`**
 
 Each attribute of the model captures a specific feature. We can describe, provide and examplr and indicate if the attribute is mandatory when initializing the object.
 
 ##### Controller Class Annotations
 
-`@Operation(summary="HTTP GET Operation")`
+**`@Operation(summary="HTTP GET Operation")`**
 
 This annotation describes the particular functionality a REST endpoint offers.
 
@@ -91,9 +93,9 @@ This annotation describes the particular functionality a REST endpoint offers.
 
 - *Visual Documentation* : [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-![Swagger UI]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-ui.PNG)  
+![Swagger UI]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-ui.png)  
 
 - *OpenAPI description in json format* : [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
 
-![OpenAPI Description]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-api.PNG)  
+![OpenAPI Description]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-api.png)  
 
