@@ -32,6 +32,8 @@ This post briefly documents the usage of **Flyway** for Relational Database vers
 
 #### Dependencies
 
+This implementation has two dependencies, **flyway-core** and **h2**. The **maven**/**gradle** dependencies of the same are mentioned below.
+
 ##### Flyway
 
 ~~~xml
@@ -70,16 +72,7 @@ testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
 
 #### Basic Usage
 
-In the resources folder of the project create additional folders with the following hierarchy **`data\h2db\migrations`**. 
-
-Inside the **`migration`** folder for **`h2db`**, create multiple **`.sql`** files describing the table structure and the data to be populated in those tables. 
-
-*Note*: The names of these **`.sql`** files should be prefixed with **`V0_0_i__`** where **`i`** represents numbers, the order in which the files are to be executed. 
-
-In this project there are two files, **`V0_0_1__SBMWA_structure.sql`** (First file to be executed) and **`V0_0_2__SBMWA_data.sql`** (Second file to be executed). 
-
-	- *V0_0_1__SBMWA_structure.sql* describes the structure of the tables and is the first file to be executed since the file name contains the number **`1`**.  
-	- *V0_0_2__SBMWA_data.sql* has the insert statements of the data that is to be loaded during initialization and is the second file to be executed since the file name contains the number **`2`**.  
+##### Application Configuration
 
 In the **`application.properties`** file add the following properties. 
 
@@ -127,6 +120,20 @@ spring.h2.console.settings.trace=false
 spring.h2.console.settings.web-allow-others=false
 ~~~
 
+In the resources folder of the project create additional folders with the following hierarchy **`data\h2db\migrations`**. 
+
+Inside the **`migration`** folder for **`h2db`**, create multiple **`.sql`** files describing the table structure and the data to be populated in those tables. 
+
+*Note*: The names of these **`.sql`** files should be prefixed with **`V0_0_i__`** where **`i`** represents numbers, the order in which the files are to be executed. 
+
+In this project there are two files, **`V0_0_1__SBMWA_structure.sql`** (First file to be executed) and **`V0_0_2__SBMWA_data.sql`** (Second file to be executed). 
+
+	- **V0_0_1__SBMWA_structure.sql** describes the structure of the tables and is the first file to be executed since the file name contains the number **`1`**.  
+	
+	- **V0_0_2__SBMWA_data.sql** has the insert statements of the data that is to be loaded during initialization and is the second file to be executed since the file name contains the number **`2`**.  
+
+##### Application Execution
+
 H2DB can be accessed via a web console at **`http://localhost:8080/h2-console`**
 
 ![H2DB Console]({{ site.baseurl }}/assets/images/spring-boot-flyway/sbmwa-h2-console.PNG)  
@@ -139,6 +146,4 @@ The actual tables and the necessary data to be populated into those tables as de
 
 ![Tables and Data]({{ site.baseurl }}/assets/images/spring-boot-flyway/sbmwa-h2-tabel-data.PNG)  
 
-#### Links
-
-- [Flyway](https://flywaydb.org/)
+---

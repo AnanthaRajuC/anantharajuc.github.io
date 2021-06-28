@@ -1,5 +1,5 @@
 ---
-title: "Swagger UI and Spring Boot"
+title: "Swagger UI and Spring Boot quick start"
 author: anantharajuc
 categories: [ Spring Boot, Swagger UI ]
 layout: post
@@ -99,3 +99,4 @@ This annotation describes the particular functionality a REST endpoint offers.
 
 ![OpenAPI Description]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-api.png)  
 
+---

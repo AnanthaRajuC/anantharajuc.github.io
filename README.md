@@ -9,3 +9,6 @@
 - [AddThis](https://www.addthis.com/)
 - [DISQUS](https://disqus.com/)
 - [Mailchimp](https://mailchimp.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
+

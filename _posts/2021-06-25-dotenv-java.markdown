@@ -34,6 +34,8 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
 #### Dependencies
 
+This implementation has one dependency, **dotenv-java**. The **maven**/**gradle** dependencies of the same is mentioned below.
+
 ##### dotenv-java
 
 ~~~xml
