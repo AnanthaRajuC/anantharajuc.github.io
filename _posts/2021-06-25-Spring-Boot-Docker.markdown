@@ -159,7 +159,21 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-date.PNG) 
 
+###### DockerHub
+
+**`docker login --username=YOUR_DOCKERHUB_USERNAME`** : Login to Docker Hub from your machine.
+
+**`docker tag spring-boot-minimal-web-app anantha/spring-boot-minimal-web-app:latest`** : Re-tagging an existing local image to push to dockerhub.
+
+![Docker re-tag Existing Image]({{ site.baseurl }}/assets/images/spring-boot-docker/image-tagging.PNG)  
+
+**`docker push anantha/spring-boot-minimal-web-app:latest`** : Push this repository to the registry designated by its name or tag
+
+![Docker Push Image]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-hub-push.PNG)  
+
 ###### Clean-up
+
+After cleaning up your machine of the said container and the image. To start over repeat the steps mentioned from the build section.
 
 **`docker rm spring-boot-minimal-web-app`** : Remove the docker container.
 
@@ -169,6 +183,6 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Remove Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/3-remove-docker-image.PNG)  
 
-
+---
 
 
