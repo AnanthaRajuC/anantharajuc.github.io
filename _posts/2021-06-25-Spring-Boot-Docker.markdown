@@ -83,7 +83,8 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 
 From the command line, navigate to project directory where the **pom.xml** file is present.
 
-**`mvn clean`** : Clean the project and remove the files from the previous build. 
+**`mvn clean`**  
+*Clean the project and remove the files from the previous build.*
 
 ![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/mvn/1-clean.PNG)  
 
