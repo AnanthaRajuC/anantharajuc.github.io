@@ -88,15 +88,15 @@ From the command line, navigate to project directory where the **pom.xml** file 
 
 ![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/mvn/1-clean.PNG)  
 
-**`mvn validate`**
+**`mvn validate`**  
 *Check if all the information necessary for the build (**.jar**) are available.*
 
 ![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/mvn/2-validate.PNG)  
 
-**`mvn package`**
+**`mvn package`**  
 *Runs all the tests and packages/builds the project to a **.jar** file.*
 
-**`mvn package -Dmaven.test.skip=true`**
+**`mvn package -Dmaven.test.skip=true`**  
 *To skip the tests and package/build the project directly.*
 
 The above mentioned **.jar** file is present inside the **/target** directory.
@@ -105,89 +105,89 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ###### Build 
 
-**`docker images`**
+**`docker images`**  
 *Lists the already present container images.*
 
-**`docker build -t spring-boot-minimal-web-app .`**
+**`docker build -t spring-boot-minimal-web-app .`**  
 *Builds the docker image of the project as per the specifications mentioned in the **Dockerfile** file.*
 
 ![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/1-docker-build.PNG)  
 
-**`docker images`**
+**`docker images`**  
 *Check the docker image is generated from running the previous command.*
 
 ![List Docker Images]({{ site.baseurl }}/assets/images/spring-boot-docker/2-docker-image-list.PNG)  
 
-**`docker inspect spring-boot-minimal-web-app`**
+**`docker inspect spring-boot-minimal-web-app`**  
 *Inspect an image.*
 
 ![Inspect Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/inspect.PNG)  
 
 ###### Run, Stop and Restart
 
-**`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`** 
+**`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`**  
 *Run the newly created docker image.*
 
 ![Docker Run]({{ site.baseurl }}/assets/images/spring-boot-docker/3-docker-run.PNG)  
 
-**`docker ps`**
+**`docker ps`**  
 *List all the running containers.*
 
 ![List Running Containers]({{ site.baseurl }}/assets/images/spring-boot-docker/list-running-containers.PNG)  
 
-**`docker top spring-boot-minimal-web-app`**
+**`docker top spring-boot-minimal-web-app`**  
 *Show running processes in a container.*
 
 ![Docker Top]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-top.PNG) 
 
-**`docker stats spring-boot-minimal-web-app`**
+**`docker stats spring-boot-minimal-web-app`**  
 *Show CPU and memory usage of the running container.*
 
 ![Docker Stats]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-stats.PNG) 
 
-**`docker stop spring-boot-minimal-web-app`**
+**`docker stop spring-boot-minimal-web-app`**  
 *Stop the container of the image.*
 
 ![Stop Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/6-stop-running-docker-container.PNG)  
 
-**`docker ps -a`**
+**`docker ps -a`**  
 *List all the containers, including the ones that have finished executing.*
 
 ![List running and stopped containers]({{ site.baseurl }}/assets/images/spring-boot-docker/list-stopped-containers.PNG)  
 
-**`docker restart spring-boot-minimal-web-app`**
+**`docker restart spring-boot-minimal-web-app`**  
 *Restart the stopped container of the image.*
 
 ![Restart Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/9-docker-container-restart.PNG)  
 
 ###### Logs
 
-**`docker logs spring-boot-minimal-web-app`**
+**`docker logs spring-boot-minimal-web-app`**  
 *Lists container logs.*
 
 ![Docker Logs]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs.PNG)  
 
-**`docker logs spring-boot-minimal-web-app --tail N`**
+**`docker logs spring-boot-minimal-web-app --tail N`**  
 *Lists container logs. **--tail** flag will show the last **N** lines of logs.*
 
 ![Docker Logs with tail]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-tail.PNG)  
 
-**`docker logs spring-boot-minimal-web-app --since YYYY-MM-DD`**
+**`docker logs spring-boot-minimal-web-app --since YYYY-MM-DD`**  
 *List container logs since a particular date.*
 
 ![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-date.PNG) 
 
 ###### DockerHub
 
-**`docker login --username=YOUR_DOCKERHUB_USERNAME`**
+**`docker login --username=YOUR_DOCKERHUB_USERNAME`**  
 *Login to Docker Hub from your machine.*
 
-**`docker tag spring-boot-minimal-web-app anantha/spring-boot-minimal-web-app:latest`**
+**`docker tag spring-boot-minimal-web-app anantha/spring-boot-minimal-web-app:latest`**  
 *Re-tagging an existing local image to push to dockerhub.*
 
 ![Docker re-tag Existing Image]({{ site.baseurl }}/assets/images/spring-boot-docker/image-tagging.PNG)  
 
-**`docker push anantha/spring-boot-minimal-web-app:latest`**
+**`docker push anantha/spring-boot-minimal-web-app:latest`**  
 *Push this repository to the registry designated by its name or tag.*
 
 ![Docker Push Image]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-hub-push.PNG)  
@@ -196,12 +196,12 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 After cleaning up your machine of the said container and the image. To start over repeat the steps mentioned from the build section.
 
-**`docker rm spring-boot-minimal-web-app`**
+**`docker rm spring-boot-minimal-web-app`**  
 *Remove the docker container.*
 
 ![Remove Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/4-remove-docker-container.PNG)  
 
-**`docker image rm spring-boot-minimal-web-app`**
+**`docker image rm spring-boot-minimal-web-app`**  
 *Remove the docker image.*
 
 ![Remove Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/3-remove-docker-image.PNG)  
