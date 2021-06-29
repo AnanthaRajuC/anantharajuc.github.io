@@ -1,5 +1,5 @@
 ---
-title: "Swagger UI and Spring Boot quick start"
+title: "Swagger UI and Spring Boot"
 author: anantharajuc
 categories: [ Spring Boot, Swagger UI ]
 layout: post

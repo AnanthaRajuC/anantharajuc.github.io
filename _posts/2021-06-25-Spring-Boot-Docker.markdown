@@ -85,7 +85,11 @@ From the command line, navigate to project directory where the **pom.xml** file 
 
 **`mvn clean`** : Clean the project and remove the files from the previous build. 
 
+![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/mvn/1-clean.PNG)  
+
 **`mvn validate`** : Check if all the information necessary for the build (**.jar**) are available.
+
+![Docker Build Image]({{ site.baseurl }}/assets/images/spring-boot-docker/mvn/2-validate.PNG)  
 
 **`mvn package`** : Runs all the tests and packages/builds the project to a **.jar** file. 
 
@@ -107,15 +111,35 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![List Docker Images]({{ site.baseurl }}/assets/images/spring-boot-docker/2-docker-image-list.PNG)  
 
+**`docker inspect spring-boot-minimal-web-app`** : Inspect an image.
+
+![Inspect Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/inspect.PNG)  
+
 ###### Run, Stop and Restart
 
 **`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`** : Run the newly created docker image.
 
 ![Docker Run]({{ site.baseurl }}/assets/images/spring-boot-docker/3-docker-run.PNG)  
 
+**`docker ps`** : List all the running containers.
+
+![List Running Containers]({{ site.baseurl }}/assets/images/spring-boot-docker/list-running-containers.PNG)  
+
+**`docker top spring-boot-minimal-web-app`** : Show running processes in a container.
+
+![Docker Top]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-top.PNG) 
+
+**`docker stats spring-boot-minimal-web-app`** : Show CPU and memory usage of the running container.
+
+![Docker Stats]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-stats.PNG) 
+
 **`docker stop spring-boot-minimal-web-app`** : Stop the container of the image.
 
 ![Stop Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/6-stop-running-docker-container.PNG)  
+
+**`docker ps -a`** : List all the containers, including the ones that have finished executing.
+
+![List running and stopped containers]({{ site.baseurl }}/assets/images/spring-boot-docker/list-stopped-containers.PNG)  
 
 **`docker restart spring-boot-minimal-web-app`** : Restart the stopped container of the image.
 

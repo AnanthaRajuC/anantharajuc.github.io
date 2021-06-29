@@ -1,5 +1,5 @@
 ---
-title: "MongoDB and Spring Boot quick start"
+title: "MongoDB and Spring Boot"
 author: anantharajuc
 categories: [ Spring Boot, MongoDB ]
 layout: post
