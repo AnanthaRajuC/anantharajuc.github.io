@@ -103,7 +103,7 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ##### Docker
 
-###### Build 
+##### Build 
 
 **`docker images`**  
 *Lists the already present container images.*
@@ -123,7 +123,7 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Inspect Docker Image]({{ site.baseurl }}/assets/images/spring-boot-docker/inspect.PNG)  
 
-###### Run, Stop and Restart
+##### Run, Stop and Restart
 
 **`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`**  
 *Run the newly created docker image.*
@@ -160,7 +160,7 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Restart Docker Container]({{ site.baseurl }}/assets/images/spring-boot-docker/9-docker-container-restart.PNG)  
 
-###### Logs
+##### Logs
 
 **`docker logs spring-boot-minimal-web-app`**  
 *Lists container logs.*
@@ -177,7 +177,7 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-logs-date.PNG) 
 
-###### DockerHub
+##### DockerHub
 
 **`docker login --username=YOUR_DOCKERHUB_USERNAME`**  
 *Login to Docker Hub from your machine.*
@@ -192,7 +192,7 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Docker Push Image]({{ site.baseurl }}/assets/images/spring-boot-docker/docker-hub-push.PNG)  
 
-###### Clean-up
+##### Clean-up
 
 After cleaning up your machine of the said container and the image. To start over repeat the steps mentioned from the build section.
 
