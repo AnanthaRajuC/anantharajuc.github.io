@@ -26,37 +26,33 @@ Replace https://stackoverflow.com/ URL with any other URL with which you're faci
 
 #### Process to export the security certificate
 
-01. Click on the green lock icon in the URL bar of the web browser and click on **`Certificate`** option in the drop-down list.
+1. Click on the green lock icon in the URL bar of the web browser and click on **`Certificate`** option in the drop-down list.
 
 ![Green Lock Icon]({{ site.baseurl }}/assets/images/java-keystore/1-green-lock-icon.png)  
 
-02. Click on  **`Details`** tab.
+2. Click on  **`Details`** tab.
 
 ![Details Tab]({{ site.baseurl }}/assets/images/java-keystore/2-details-tab.PNG)  
 
-03. Click on **`Copy to file`** button. 
+3. Click on **`Copy to file`** button. 
 
 ![Copy to file]({{ site.baseurl }}/assets/images/java-keystore/3-copy-to-file.PNG)  
 
-04. Click on **`Next`** button.
+4. Click on **`Next`** button.
 
 ![Next]({{ site.baseurl }}/assets/images/java-keystore/4-next.PNG)  
 
-05. Select the **`Base-64 encoded X.509 (.CER)`** format radio button option and click on **`Next`** button.
+5. Select the **`Base-64 encoded X.509 (.CER)`** format radio button option and click on **`Next`** button.
 
 ![Base-64 encoded X.509 CER)]({{ site.baseurl }}/assets/images/java-keystore/5-base-64.PNG)  
 
-06. Click on the browse option and navigate to the location (folder) where you'd like the file to be saved, enter a desired file name and Click on **`Next`** button.
+6. Click on the browse option and navigate to the location (folder) where you'd like the file to be saved, enter a desired file name and Click on **`Next`** button.
 
 ![Save]({{ site.baseurl }}/assets/images/java-keystore/6-save.PNG)  
 
 ![Save]({{ site.baseurl }}/assets/images/java-keystore/7-save.PNG)  
 
-07. Settings of the certificate being exported is presented to you for review.
-
-![Review]({{ site.baseurl }}/assets/images/java-keystore/swagger-ui.PNG)  
-
-08. Finally, click on the **`Finish`** button to complete the certificate export process.
+7. Settings of the certificate being exported is presented to you for review. Click on the **`Finish`** button to complete the certificate export process.
 
 ![Finish]({{ site.baseurl }}/assets/images/java-keystore/8-finish.PNG)  
 
@@ -81,6 +77,8 @@ Enter the keystore password as **`changeit`**
 When Prompted with the question **Trust this certificate? [no]:**, type **yes** 
 
 ![Prompt]({{ site.baseurl }}/assets/images/java-keystore/12-trust-certificate-prompt.PNG)  
+
+Restart the machine for the changes to take into effect.
 
 #### Links
 
