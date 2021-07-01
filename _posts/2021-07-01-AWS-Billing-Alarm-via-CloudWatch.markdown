@@ -1,5 +1,5 @@
 ---
-title: "AWS Billing Alerts"
+title: "AWS Billing Alarms via CloudWatch"
 author: anantharajuc
 categories: [ AWS ]
 layout: post
@@ -17,13 +17,15 @@ This post briefly documents the process of setting up **Billing Alarms/Alerts** 
 
 #### Enabling Non-Root user accounts to access Billing Information
 
-By default only the **Root** user account has the access to **Billing Information**. Access to the same can be provided to other user accounts by activating the **IAM** access to the **Billing Information**.
+By default only the **Root** user account has the access to **Billing Information**. Access to the same can be provided to other user accounts by activating the **IAM** access to the Billing Information.
 
 - Naviagte to **My Account** page by clicking on the link available on the top-right corner. Scroll down to **IAM User and Role Access to Billing Information** section and click on **Edit**
 
 - select the **Activate IAM Access** checkbox and click on the **Update** Button.
 
 ![Enabling Non-Root user accounts to access Billing Information]({{ site.baseurl }}/assets/images/aws-billing-alert/1.PNG)  
+
+---
 
 #### Billing Preferences
 
@@ -36,6 +38,8 @@ At the top of the screen, on the left side navigation bar. Click on the **Billin
 Click on the **Save Preferences** button.
 
 ![Billing Preferences]({{ site.baseurl }}/assets/images/aws-billing-alert/2.PNG)  
+
+---
 
 #### Setting-up CloudWatch to create a Billing Alarm
 
@@ -96,6 +100,8 @@ On the next page, review the details and at the bottom of the page click on the 
 ![Billing Alarms Success]({{ site.baseurl }}/assets/images/aws-billing-alert/11.PNG)  
 
 You will receive an email with a link to confirm the subscription to that topic.
+
+---
 
 #### Overview
 

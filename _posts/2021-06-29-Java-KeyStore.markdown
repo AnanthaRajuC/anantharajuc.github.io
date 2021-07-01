@@ -26,33 +26,33 @@ Replace https://stackoverflow.com/ URL with any other URL with which you're faci
 
 #### Process to export the security certificate
 
-1. Click on the green lock icon in the URL bar of the web browser and click on **`Certificate`** option in the drop-down list.
+-	Click on the green lock icon in the URL bar of the web browser and click on **`Certificate`** option in the drop-down list.
 
 ![Green Lock Icon]({{ site.baseurl }}/assets/images/java-keystore/1-green-lock-icon.png)  
 
-2. Click on  **`Details`** tab.
+-	Click on  **`Details`** tab.
 
 ![Details Tab]({{ site.baseurl }}/assets/images/java-keystore/2-details-tab.PNG)  
 
-3. Click on **`Copy to file`** button. 
+-	Click on **`Copy to file`** button. 
 
 ![Copy to file]({{ site.baseurl }}/assets/images/java-keystore/3-copy-to-file.PNG)  
 
-4. Click on **`Next`** button.
+-	Click on **`Next`** button.
 
 ![Next]({{ site.baseurl }}/assets/images/java-keystore/4-next.PNG)  
 
-5. Select the **`Base-64 encoded X.509 (.CER)`** format radio button option and click on **`Next`** button.
+-	Select the **`Base-64 encoded X.509 (.CER)`** format radio button option and click on **`Next`** button.
 
 ![Base-64 encoded X.509 CER)]({{ site.baseurl }}/assets/images/java-keystore/5-base-64.PNG)  
 
-6. Click on the browse option and navigate to the location (folder) where you'd like the file to be saved, enter a desired file name and Click on **`Next`** button.
+-	Click on the browse option and navigate to the location (folder) where you'd like the file to be saved, enter a desired file name and Click on **`Next`** button.
 
 ![Save]({{ site.baseurl }}/assets/images/java-keystore/6-save.PNG)  
 
 ![Save]({{ site.baseurl }}/assets/images/java-keystore/7-save.PNG)  
 
-7. Settings of the certificate being exported is presented to you for review. Click on the **`Finish`** button to complete the certificate export process.
+-	Settings of the certificate being exported is presented to you for review. Click on the **`Finish`** button to complete the certificate export process.
 
 ![Finish]({{ site.baseurl }}/assets/images/java-keystore/8-finish.PNG)  
 
