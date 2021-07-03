@@ -65,11 +65,17 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 	- The Build log can also be viewed in the Heroku console under the project's **Activity** tab.
 
 	![Build Log - Heroku]({{ site.baseurl }}/assets/images/spring-boot-heroku/build-log-heroku.PNG)  
+	
+#### Accessing the deployed application	
 
 - Access the deployed web application from the URL **[APP_NAME].herokuapp.com**. In case of the above mentioned project the URL will be **spring-boot-minimal-web-app.herokuapp.com**
 
 ![App URL]({{ site.baseurl }}/assets/images/spring-boot-heroku/app-url.PNG)  
 
+#### Cleanup
+
 - In order to delete the project, navigate to the bottom of the **Settings** tab and click on the **Delete** button.
 
 ![Delete Project]({{ site.baseurl }}/assets/images/spring-boot-heroku/delete-project.PNG)  
+
+--- 

@@ -1,7 +1,7 @@
 ---
 title: "AWS Billing Alarms via CloudWatch"
 author: anantharajuc
-categories: [ AWS ]
+categories: [ Cloud, AWS ]
 layout: post
 date: 2021-07-01 08:00
 image: /assets/images/aws-cloudwatch.jpg
