@@ -26,7 +26,8 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 ##### **`Presently Reading`**
 
 1. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**  
-2. *Invent and Wander: The Collected Writings of Jeff Bezos* by **Jeff Bezos**  
+2. *Zero to One: Notes on Startups, or How to Build the Future* by **Peter Thiel, Blake Masters**
+
 ---
 
 ##### **`Technical`**
@@ -114,7 +115,8 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 - **Others**
 
 	1. *Memos from the Chairman* by **Alan C. Greenberg**  
-	
+	2. *Invent and Wander: The Collected Writings of Jeff Bezos* by **Jeff Bezos** **`++`**  
+
 ---
 
 ##### **`Modern Philosophy - Work - Life - Business`**
