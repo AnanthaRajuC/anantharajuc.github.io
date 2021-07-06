@@ -4,7 +4,7 @@ author: anantharajuc
 categories: [ Cloud, AWS ]
 layout: post
 date: 2021-07-05 20:10
-image: /assets/images/maven-docker-hub.PNG
+image: /assets/images/maven-docker-hub.png
 ---
 
 This post briefly documents the process of using [dockerfile-maven](https://github.com/spotify/dockerfile-maven), a Maven tool for integrating Docker build process with the Maven build process.
@@ -35,7 +35,7 @@ This post briefly documents the process of using [dockerfile-maven](https://gith
 
 A java project does not necessarily have any library dependency in order to create and push docker image of that project.
 
-However, in the plugins section of the **`pom.xml`** dependency management file there must be the dockerfile-maven plugin.
+However, in the plugins section of the **`pom.xml`** dependency management file there must be the [dockerfile-maven plugin](https://github.com/spotify/dockerfile-maven).
 
 ~~~xml
 <!--  Plugin for building and pushing Docker image to Docker Hub. -->      	        
@@ -63,7 +63,7 @@ However, in the plugins section of the **`pom.xml`** dependency management file 
 </plugin>  	       
 ~~~
 
-*code*: [pom.xml](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/pom.xml)
+*Reference code*: [pom.xml](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/pom.xml)
 
 In the same **`pom.xml`** file, add the following details as well. 
 
@@ -73,7 +73,7 @@ In the same **`pom.xml`** file, add the following details as well.
 <packaging>jar</packaging>
 ~~~
 
-*Note*: artifactId must be in lower case.
+*Note*: **artifactId** must be in lower case.
 
 #### Basic Usage
 
@@ -102,11 +102,11 @@ ADD ${JAR_FILE} Spring-Boot-Minimal-Web-App-latest.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boot-Minimal-Web-App-latest.jar"]
 ~~~
 
-*code*: [Dockerfile](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/Dockerfile)
+*Reference code*: [Dockerfile](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/Dockerfile)
 
 ##### Docker Hub
 
-- Create a account on Docker Hub if you don't already have one.
+- Create a account on [Docker Hub](https://hub.docker.com/) if you don't already have one.
 
 - Create a repository with a name matching the project's **artifactId**. For this example, the Docker Hub repository name is **spring-boot-minimal-web-app**
 
@@ -115,6 +115,16 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 From the command line, navigate to project directory where the **pom.xml** file is present.
 
 **`mvn install`**  
-*In the execution section of the above described plugin, we have mentioned the usage of* **install** *phase with the* **build** *and* **push** goals. This will build the docker image as per the Dockerfile and push the image to the specified Docker Hub repository of the specified Docker Hub user.
+*In the execution section of the above described plugin, we have mentioned the usage of* **install** *phase with the* **build** *and* **push** *goals. This will run the tests, build the jar file, build the docker image as per the Dockerfile and push the image to the specified [Docker Hub Repository](https://hub.docker.com/r/anantha/spring-boot-minimal-web-app) of the specified [Docker Hub User](https://hub.docker.com/u/anantha).*
+
+This step will club multiple other steps into a single step and ease the entire process.
+
+![MVN Install]({{ site.baseurl }}/assets/images/maven-docker-hub/1-mvn-install.png)  
+
+![MVN Tests]({{ site.baseurl }}/assets/images/maven-docker-hub/2-mvn-tests.png)  
+
+![MVN Dockerfile]({{ site.baseurl }}/assets/images/maven-docker-hub/3-mvn-dockerfile.png)  
+
+![MVN Dockerfile Push]({{ site.baseurl }}/assets/images/maven-docker-hub/4-mvn-dockerfile-push.png)  
 
 ---
