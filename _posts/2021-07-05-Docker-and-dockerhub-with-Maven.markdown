@@ -73,7 +73,7 @@ In the same **`pom.xml`** file, add the following details as well.
 <packaging>jar</packaging>
 ~~~
 
-*Note*: **artifactId** must be in lower case.
+*Note*: **artifactId** must be in lower case and must match the repository name created on Docker Hub.
 
 #### Basic Usage
 
@@ -119,12 +119,12 @@ From the command line, navigate to project directory where the **pom.xml** file 
 
 This step will club multiple other steps into a single step and ease the entire process.
 
-![MVN Install]({{ site.baseurl }}/assets/images/maven-docker-hub/1-mvn-install.png)  
+![MVN Install]({{ site.baseurl }}/assets/images/maven-docker-hub/1-mvn-install.PNG)  
 
-![MVN Tests]({{ site.baseurl }}/assets/images/maven-docker-hub/2-mvn-tests.png)  
+![MVN Tests]({{ site.baseurl }}/assets/images/maven-docker-hub/2-mvn-tests.PNG)  
 
-![MVN Dockerfile]({{ site.baseurl }}/assets/images/maven-docker-hub/3-mvn-dockerfile.png)  
+![MVN Dockerfile]({{ site.baseurl }}/assets/images/maven-docker-hub/3-mvn-dockerfile.PNG)  
 
-![MVN Dockerfile Push]({{ site.baseurl }}/assets/images/maven-docker-hub/4-mvn-dockerfile-push.png)  
+![MVN Dockerfile Push]({{ site.baseurl }}/assets/images/maven-docker-hub/4-mvn-dockerfile-push.PNG)  
 
 ---
