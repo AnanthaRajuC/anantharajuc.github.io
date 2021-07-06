@@ -79,6 +79,8 @@ ADD ${JAR_FILE} Spring-Boot-Minimal-Web-App-latest.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boot-Minimal-Web-App-latest.jar"]
 ~~~
 
+*code*: [Dockerfile](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/Dockerfile)
+
 ##### Maven
 
 From the command line, navigate to project directory where the **pom.xml** file is present.
