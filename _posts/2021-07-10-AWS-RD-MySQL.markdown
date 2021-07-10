@@ -15,6 +15,8 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 - Access to [AWS Management Console](https://aws.amazon.com/console/)
 
+---
+
 #### Database Configuration
 
 - From the services drop down from the Navigation bar, select the **`RDS`** service from the Database section.
@@ -45,9 +47,9 @@ This post briefly documents the process of creating **MySQL** Database via the A
 ##### Settings, Credentials Settings
 		
 - **`DB instance identifier`** : **some_identifier**  
-- **`Master Username`** : **some_username**  
-- **`Master Password`** : **some_password**  
-- **`Confirm Password`** : **some_password** 
+- **`Master Username`** : **some_username** *(ex: sbmwa_aws_user)*    
+- **`Master Password`** : **some_password** *(ex: sbmwa_aws_pwd)*    
+- **`Confirm Password`** : **some_password** *(ex: sbmwa_aws_pwd)*   
 
 ![Settings]({{ site.baseurl }}/assets/images/aws-rds-mysql/6.PNG)  	 
 
@@ -75,5 +77,29 @@ This post briefly documents the process of creating **MySQL** Database via the A
 - Finally, at the end of the page click on the **`Create database`** button.
 
 ![Create database]({{ site.baseurl }}/assets/images/aws-rds-mysql/13.PNG)  
+
+---
+
+#### Connectivity and security
+
+##### Connectivity and security
+
+![Connectivity and security]({{ site.baseurl }}/assets/images/aws-rds-mysql/15.PNG)  
+
+##### Security Groups
+
+![Security Groups]({{ site.baseurl }}/assets/images/aws-rds-mysql/16.PNG)  
+
+##### Edit inbound rules
+
+![Edit inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/17.PNG) 
+
+##### Add rules
+
+![Add rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/19.PNG) 
+
+##### Inbound rules
+
+![Inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/20.PNG) 
 
 ---
