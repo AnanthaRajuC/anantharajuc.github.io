@@ -131,28 +131,28 @@ description: "Personal Blog"
             </div>
 			
 		<!-- fifth latest post -->
-        {%- assign fourth_post = site.posts[3] -%}        
+        {%- assign fifth_post = site.posts[4] -%}        
         <div class="mb-3 d-flex align-items-center">                
-                {% if fourth_post.image %}
+                {% if fifth_post.image %}
                 <div class="col-md-4">
-                <a href="{{site.baseurl}}{{fourth_post.url}}">
-                <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
+                <a href="{{site.baseurl}}{{fifth_post.url}}">
+                <img class="w-100" src="{% if fifth_post.image contains "://" %}{{ fifth_post.image }}{% else %}{{site.baseurl}}/{{ fifth_post.image }}{% endif %}" alt="{{ fifth_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
                 <div>
                     <h2 class="mb-2 h6 font-weight-bold">
-                    <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
+                    <a class="text-dark" href="{{site.baseurl}}{{fifth_post.url}}">{{ fifth_post.title }}</a>
                     </h2>
                     <small class="d-block text-muted">
                         In <span class="catlist">
-                        {% for category in fourth_post.categories %}
+                        {% for category in fifth_post.categories %}
                         <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                         {% endfor %}
                         </span>                   
                     </small>
                     <small class="text-muted">
-                        {{ fourth_post.date | date: '%b %d, %Y' }}
+                        {{ fifth_post.date | date: '%b %d, %Y' }}
                     </small>
                 </div>
             </div>
