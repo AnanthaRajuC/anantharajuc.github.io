@@ -17,16 +17,24 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 #### Database Configuration
 
-- From the services drop down from the Navigation bar, select the **`RDS`** service from the Database section. 
+- From the services drop down from the Navigation bar, select the **`RDS`** service from the Database section.
+
+![Services]({{ site.baseurl }}/assets/images/aws-rds-mysql/1.PNG)   
+
+![Databases]({{ site.baseurl }}/assets/images/aws-rds-mysql/2.PNG)   
 
 - In the following page, configure the settings.
 
 ##### Database Creation
 
-		- Database creation method : Standard create  
-		- Engine Type : MySQL  
-		- Edition : MySQL Community  
-		- Version : MySQL 8.0.23 (or whatever is the latest avaialable version)  
+- **`Database creation method`** : **Standard create**  
+- **`Engine Type`** : **MySQL**  
+- **`Edition`** : **MySQL Community**  
+- **`Version`** : **MySQL 8.0.23** *(or whatever is the latest avaialable version)*  
+
+![Database Creation method]({{ site.baseurl }}/assets/images/aws-rds-mysql/3.PNG)  
+
+![Database Creation Details]({{ site.baseurl }}/assets/images/aws-rds-mysql/4.PNG)  
 
 ##### Templates
 		
