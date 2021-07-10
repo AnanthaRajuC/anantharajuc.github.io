@@ -19,11 +19,11 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 - From the services drop down from the Navigation bar, select the **`RDS`** service from the Database section.
 
-![Services]({{ site.baseurl }}/assets/images/aws-rds-mysql/1.PNG)   
+![Services]({{ site.baseurl }}/assets/images/aws-rds-mysql/1.png)   
 
 ![Databases]({{ site.baseurl }}/assets/images/aws-rds-mysql/2.PNG)   
 
-- In the following page, configure the settings.
+- In the following page, configure the database settings.
 
 ##### Database Creation
 
@@ -38,33 +38,42 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 ##### Templates
 		
-		- Templates : Free Tier  
+- **`Templates`** : **Free Tier**  
 		
-##### Settings
+![Templates]({{ site.baseurl }}/assets/images/aws-rds-mysql/5.PNG)  		
 		
-		- DB instance identifier : some_identifier  
+##### Settings, Credentials Settings
 		
-###### Credentials Settings
-		
-		- Master Username : some_username  
-		- Master Password : some_password  
-		- Confirm Password : some_password  
+- **`DB instance identifier`** : **some_identifier**  
+- **`Master Username`** : **some_username**  
+- **`Master Password`** : **some_password**  
+- **`Confirm Password`** : **some_password** 
+
+![Settings]({{ site.baseurl }}/assets/images/aws-rds-mysql/6.PNG)  	 
 
 ##### Connectivity
 		
-		- Virtual private cloud : Default VPC  
-		- Subnet group : default  
-		- Public access : Yes  
-		- VPC security group : Choose existing  
+- **`Virtual private cloud`** : **Default VPC**  
+- **`Subnet group`** : **default**  
+- **`Public access`** : **Yes**  
+- **`VPC security group`** : **Choose existing**  
+
+![Connectivity]({{ site.baseurl }}/assets/images/aws-rds-mysql/9.PNG)  	 
 		
 ##### Database authentication
 		
-		- Database Authentication : Password authentication
+- **`Database Authentication`** : **Password authentication**
 
-##### Database options
+![Database authentication]({{ site.baseurl }}/assets/images/aws-rds-mysql/11.PNG)  	 
+
+##### Additional Configuration
 		
-		- Initial database name : Schema name  
+- **`Initial database name`** : **Schema name** *(ex: sbmwa_aws)*  
+
+![Additional Configuration]({{ site.baseurl }}/assets/images/aws-rds-mysql/12.PNG)  	 
 	
 - Finally, at the end of the page click on the **`Create database`** button.
+
+![Create database]({{ site.baseurl }}/assets/images/aws-rds-mysql/13.PNG)  
 
 ---
