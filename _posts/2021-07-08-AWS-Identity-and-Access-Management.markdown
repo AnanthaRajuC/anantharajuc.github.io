@@ -17,102 +17,94 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 #### User Groups
 
-By default only the **`Root`** user account has the access to **`Billing Information`**. Access to the same can be provided to other user accounts by activating the **`IAM`** access to the Billing Information.
+- From the services drop down from the Navigation bar, select the **`Identity and Access Management (IAM)`** service. 
 
-- Naviagte to **`My Account`** page by clicking on the link available on the top-right corner. Scroll down to **`IAM User and Role Access to Billing Information`** section and click on **Edit**
+- From the left side navigation pane under **`Access Management`**, select the **`User groups`** option and click on the **`Create group`** button.
 
-- select the **`Activate IAM Access`** checkbox and click on the **`Update`** Button.
+![User groups]({{ site.baseurl }}/assets/images/aws-iam/23.PNG)  
 
-![Enabling Non-Root user accounts to access Billing Information]({{ site.baseurl }}/assets/images/aws-billing-alert/1.PNG)  
+- In the following page, Name the group.
 
----
+![Name the group]({{ site.baseurl }}/assets/images/aws-iam/24.PNG)  
 
-#### Billing Preferences
+- Under the **`Attach permissions policies`** section, attach all the needed policies as per the requirement.
 
-At the top of the screen, on the left side navigation bar. Click on the **`Billing Preferences`** option. Select the following checkboxes:
-
-- **Receive PDF invoice by Email**  
-- **Receive Free Tier Usage Alert** (*This is different from Billing Alarm*)   
-- **Receive Billing Alerts** (*Mandatory for setting up Billing Alarm in CloudWatch service*)  
-
-Click on the **`Save Preferences`** button.
-
-![Billing Preferences]({{ site.baseurl }}/assets/images/aws-billing-alert/2.PNG)  
+![Attach permissions policies]({{ site.baseurl }}/assets/images/aws-iam/25.PNG)  
 
 ---
 
-#### Setting-up CloudWatch to create a Billing Alarm
+#### Users 
 
-CloudWatch is a monitoring service, it can be used for performance monitoring. Metrics associated with billing can also be monitored.
+- From the left side navigation pane under **`Access Management`**, select the **`Users`** option and click on the **`Add user`** button.
 
-Change the region to **`US East (N. Virginia) us-east-1`**. All billing information is located within this region.
+![Users]({{ site.baseurl }}/assets/images/aws-iam/26.PNG)  
 
-Navigate to **`CloudWatch`** service under the **`Management & Governance`** section.
+- In the following page, set the **`User name`**.
 
-- Click on **`Billing`** menu on the left side navigation bar. 
-- Click on **`Create Alarm`** button.
+- under the **`Select AWS access type`**, configure how the user will access AWS with the Access type option. Programmatic access, AWS Management Console access. Set the console password or autogenerate it.
 
-![Billing alarms]({{ site.baseurl }}/assets/images/aws-billing-alert/3.PNG)  
+- click on **`Next: Permissions`** button
 
-- Click on **`Select Metric`** button.
+![Add user]({{ site.baseurl }}/assets/images/aws-iam/27.PNG)  
 
-![Metric]({{ site.baseurl }}/assets/images/aws-billing-alert/4.PNG)  
+##### Permissions
 
-- Click on the **`Billing`** Metrics option.
+- Add the user to the previously created **`User group`**.
 
-![Billing metric]({{ site.baseurl }}/assets/images/aws-billing-alert/5.PNG)  
+- click on **`Next: Tags`** button.
 
-- Click on the **`Total Estimated Charge`** Metrics option.
+![Permissions]({{ site.baseurl }}/assets/images/aws-iam/28.PNG)  
 
-![Total Estimated Charge]({{ site.baseurl }}/assets/images/aws-billing-alert/6.PNG)  
+---
 
-- Select the **`USD`** Currency option.
-- Click on **`Select metric`** button on the bottom right.
+##### Tags
 
-![Metrics USD]({{ site.baseurl }}/assets/images/aws-billing-alert/7.PNG)  
+- Add tags as a **Key : Value** pair as per the need.
 
-Under the **`Conditions`** section, select the *Threshold type* as **`Static`**. Define the alarm condition *Whenever Estimation charges is* as **`Greater`** and define the *threshold value* as some **`USD`** value which is acceptable to you, say for example **`10`**.
+- click on **`Next: Review`** button.
 
-When there is a forecast from AWS that you will exceed the 10 USD spend, you will receive a Billing Alarm.
+![Tags]({{ site.baseurl }}/assets/images/aws-iam/29.PNG)  
 
-![Conditions]({{ site.baseurl }}/assets/images/aws-billing-alert/8.PNG)  
+---
 
-- Click on **Next** button in the same page. There we will configure notifications.
+##### Review
 
-Set **`Alarm State trigger`** to **`In alarm`** mode.
+- All the selected options from the previous steps are presented for your review. Should you find any discrepencies, go back to the previous steps and fix them accordingly. Once everything is as per your need, click on the **`Create user`** button.
 
-Select **`Create new topic`** option to create a new *SNS Topic*.
+- click on **`Next: Review`** button. On the next page you will see a **`Success`** message upon the creation of the new user. click on the **`Close`** button.
 
-Configure a new topic name and the email endpoint that must receive the notifications and click on **`Create topic`** button.
+![Review]({{ site.baseurl }}/assets/images/aws-iam/30.PNG)  
 
-At the bottom of the page, click on the **Next** button.
+![Success]({{ site.baseurl }}/assets/images/aws-iam/31.PNG) 
 
-![Notification]({{ site.baseurl }}/assets/images/aws-billing-alert/9.PNG)  
+---
 
-- Add **`Name`** and **`Description`** to the alarm. and click on the **Next** button.
+##### User
 
-![Name and Description]({{ site.baseurl }}/assets/images/aws-billing-alert/10.PNG)  
+- In the Users section, you will see the newly created user. Click on the user.
 
-- On the next page, review the details and at the bottom of the page click on the **`Create Alarm`** button.
+![User]({{ site.baseurl }}/assets/images/aws-iam/32.PNG)  
 
-![Billing Alarms Success]({{ site.baseurl }}/assets/images/aws-billing-alert/11.PNG)  
+- Click on the **`Security credentials`** tab, click on **`Create access key`** if you'd like to create **`Access key`** for this user.
 
-**Note** : *You will receive an email with a link to confirm the subscription to that topic*.
+![Security credentials]({{ site.baseurl }}/assets/images/aws-iam/33.PNG)  
+
+![Access Key]({{ site.baseurl }}/assets/images/aws-iam/34.PNG)  
 
 ---
 
 #### Overview
 
-**SNS Topics Details**.
+**Sign in**
 
-![SNS Topic Details]({{ site.baseurl }}/assets/images/aws-billing-alert/12.PNG)  
+![Sign in]({{ site.baseurl }}/assets/images/aws-iam/36.PNG)  
 
-**CloudWatch overview**.
+**Sign in as IAM User**
 
-![CloudWatch overview]({{ site.baseurl }}/assets/images/aws-billing-alert/13.PNG)  
+![Sign in as IAM User]({{ site.baseurl }}/assets/images/aws-iam/37.PNG)  
 
-**CloudWatch overview of Billing Service**.
+**Logged-in user**
 
-![CloudWatch overview of Billing Service]({{ site.baseurl }}/assets/images/aws-billing-alert/14.PNG)  
+![Logged-in user]({{ site.baseurl }}/assets/images/aws-billing-alert/38.PNG)  
 
 ---
