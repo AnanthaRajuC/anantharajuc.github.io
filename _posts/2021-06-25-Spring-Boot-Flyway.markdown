@@ -22,14 +22,6 @@ This post briefly documents the usage of **Flyway** for Relational Database vers
 
 [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of the aforementioned tool.
 
-| *Method*   |    |  *URL*                                 |
-|------------|----|----------------------------------------|
-| **GET**    |    | **`http://localhost:8080/index.html`** |
-| **GET**    |    | **`http://localhost:8080/`**           |
-| **PUT**    |    | **`http://localhost:8080/`**           | 
-| **POST**   |    | **`http://localhost:8080/`**           | 
-| **DELETE** |    | **`http://localhost:8080/`**           |
-
 #### Dependencies
 
 This implementation has two dependencies, **flyway-core** and **h2**. The **maven**/**gradle** dependencies of the same are mentioned below.

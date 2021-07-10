@@ -21,14 +21,6 @@ This post briefly documents the usage of **Swagger UI**, a visual documentation 
 
 [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of the aforementioned tool.
 
-| *Method*   |    |  *URL*                                 |
-|------------|----|----------------------------------------|
-| **GET**    |    | **`http://localhost:8080/index.html`** |
-| **GET**    |    | **`http://localhost:8080/`**           |
-| **PUT**    |    | **`http://localhost:8080/`**           | 
-| **POST**   |    | **`http://localhost:8080/`**           | 
-| **DELETE** |    | **`http://localhost:8080/`**           |
-
 #### Dependencies
 
 This implementation has two dependencies, **springdoc-openapi-ui** and **swagger-annotations**. The **maven**/**gradle** dependencies of the same are mentioned below.

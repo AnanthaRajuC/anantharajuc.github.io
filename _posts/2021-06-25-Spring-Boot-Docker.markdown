@@ -23,14 +23,6 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 
 [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the creation and usage of the created docker image.
 
-| *Method*   |    |  *URL*                                 |
-|------------|----|----------------------------------------|
-| **GET**    |    | **`http://localhost:8080/index.html`** |
-| **GET**    |    | **`http://localhost:8080/`**           |
-| **PUT**    |    | **`http://localhost:8080/`**           | 
-| **POST**   |    | **`http://localhost:8080/`**           | 
-| **DELETE** |    | **`http://localhost:8080/`**           |
-
 #### Dependencies
 
 A java project does not necessarily have any library dependency in order to create a docker image of that project.
