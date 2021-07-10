@@ -105,6 +105,6 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 **Logged-in user**
 
-![Logged-in user]({{ site.baseurl }}/assets/images/aws-billing-alert/38.PNG)  
+![Logged-in user]({{ site.baseurl }}/assets/images/aws-iam/38.PNG)  
 
 ---
