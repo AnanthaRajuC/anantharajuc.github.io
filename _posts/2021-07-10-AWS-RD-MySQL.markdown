@@ -103,3 +103,30 @@ This post briefly documents the process of creating **MySQL** Database via the A
 ![Inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/20.PNG) 
 
 ---
+
+#### Accessing the Database via MySQL Workbench
+
+##### Setup new connection
+
+![Setup new connection]({{ site.baseurl }}/assets/images/aws-rds-mysql/21.PNG) 
+
+##### MySQL connection result
+
+![MySQL connection result]({{ site.baseurl }}/assets/images/aws-rds-mysql/22.PNG) 
+
+##### MySQL connection result
+
+![Inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/23.PNG) 
+
+---
+
+
+
+
+
+
+
+
+
+
+
