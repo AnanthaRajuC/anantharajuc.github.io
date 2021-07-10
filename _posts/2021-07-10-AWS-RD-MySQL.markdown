@@ -114,9 +114,9 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 ![MySQL connection result]({{ site.baseurl }}/assets/images/aws-rds-mysql/22.PNG) 
 
-##### MySQL connection result
+##### MySQL Workbench
 
-![Inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/23.PNG) 
+![MySQL Workbench]({{ site.baseurl }}/assets/images/aws-rds-mysql/23.PNG) 
 
 ---
 
