@@ -1,7 +1,7 @@
 ---
 title: "Docker and dockerhub with Maven"
 author: anantharajuc
-categories: [ Cloud, AWS ]
+categories: [ Docker, Docker Hub, Maven ]
 layout: post
 date: 2021-07-05 20:10
 image: /assets/images/maven-docker-hub.png
