@@ -9,8 +9,11 @@ tags: [sticky]
 
 A selective list of books (Technical, Non-Technical, Others) i've read over the last couple of years.  
 
+--- 
+
 - [Presently Reading](#presently-reading)
 - [Technical](#technical)
+- [Companies](#companies)
 - [Product Building](#product-building)
 - [Biography-Autobiography](#biography---autobiography)
 - [Music](#music)
@@ -44,6 +47,8 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 	1. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* **`++`**  
 	2. *The Everything Store: Jeff Bezos and the Age of Amazon* **`++`** 
+	
+--- 	
 
 - **Others**
 
