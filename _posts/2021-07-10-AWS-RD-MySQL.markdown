@@ -46,7 +46,7 @@ This post briefly documents the process of creating **MySQL** Database via the A
 		
 ##### Settings, Credentials Settings
 		
-- **`DB instance identifier`** : **some_identifier**  
+- **`DB instance identifier`** : **some_identifier** *(ex: sbmwa)*    
 - **`Master Username`** : **some_username** *(ex: sbmwa_aws_user)*    
 - **`Master Password`** : **some_password** *(ex: sbmwa_aws_pwd)*    
 - **`Confirm Password`** : **some_password** *(ex: sbmwa_aws_pwd)*   

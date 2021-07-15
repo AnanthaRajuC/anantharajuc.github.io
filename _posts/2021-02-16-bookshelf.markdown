@@ -7,7 +7,7 @@ image: assets/images/bookshelf.jpg
 tags: [sticky]
 ---
 
-A selective list of books (Technical, Non-Technical, Others) i've read over the last couple of years.
+A selective list of books (Technical, Non-Technical, Others) i've read over the last couple of years.  
 
 - [Presently Reading](#presently-reading)
 - [Technical](#technical)
@@ -38,7 +38,19 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 ---
 
-##### **`Product Building`**
+##### **`Comapnies`**
+
+- **Brad Stone**
+
+	1. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* **`++`**  
+	2. *The Everything Store: Jeff Bezos and the Age of Amazon* **`++`** 
+
+- **Others**
+
+	1. *Liftoff: Elon Musk and the Desperate Early Days That Launched SpaceX* by **Eric Berger**
+---
+
+##### **`Product Building (Hardware & Software)`**
 
 1. *Inspired: How to Create Tech Products Customers Love* by **Marty Cagan**
 
@@ -106,16 +118,9 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 ##### **`Business/Entrepreneurship`**
 
-- **Brad Stone**
-
-	1. *Amazon Unbound: Jeff Bezos and the Invention of a Global Empire* **`++`**  
-	2. *The Everything Store: Jeff Bezos and the Age of Amazon* **`++`**  
-
-- **Others**
-
-	1. *Memos from the Chairman* by **Alan C. Greenberg**  
-	2. *Invent and Wander: The Collected Writings of Jeff Bezos* by **Jeff Bezos** **`++`**  
-	3. *Zero to One: Notes on Startups, or How to Build the Future* by **Peter Thiel, Blake Masters**
+1. *Memos from the Chairman* by **Alan C. Greenberg**  
+2. *Invent and Wander: The Collected Writings of Jeff Bezos* by **Jeff Bezos** **`++`**  
+3. *Zero to One: Notes on Startups, or How to Build the Future* by **Peter Thiel, Blake Masters**  **`++`**  
 
 ---
 
