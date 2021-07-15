@@ -47,7 +47,8 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 - **Others**
 
-	1. *Liftoff: Elon Musk and the Desperate Early Days That Launched SpaceX* by **Eric Berger**
+	1. *Liftoff: Elon Musk and the Desperate Early Days That Launched SpaceX* by **Eric Berger**  
+	
 ---
 
 ##### **`Product Building (Hardware & Software)`**
