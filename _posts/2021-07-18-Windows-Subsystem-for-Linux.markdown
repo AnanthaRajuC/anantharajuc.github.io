@@ -15,11 +15,13 @@ This post documents the process of enabling and manually installing Windows Subs
 
 #### Minimum Requirements
 
-- Windows 10 Operating System
+- Windows 10 Operating System [*Details*](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2)  
 
 ---
 
 #### Enablement - Settings
+
+##### Enable the Windows Subsystem for Linux
 
 ![Update and Security]({{ site.baseurl }}/assets/images/wsl/1.PNG)   
 
@@ -39,7 +41,9 @@ This post documents the process of enabling and manually installing Windows Subs
 
 ![Windows Subsystem for Linux]({{ site.baseurl }}/assets/images/wsl/9.PNG) 
 
-##### Installation - Store
+##### Installation of Linux distribution of your choice from Microsoft Store
+
+Linux Distribution [*Details*](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice)  
 
 ![Ubuntu - Search]({{ site.baseurl }}/assets/images/wsl/12.PNG)  
 
@@ -47,7 +51,11 @@ This post documents the process of enabling and manually installing Windows Subs
 
 ![Ubuntu - Launch]({{ site.baseurl }}/assets/images/wsl/14.PNG)  
 
-![Ubuntu - Launch]({{ site.baseurl }}/assets/images/wsl/17.PNG)  
+Create a user account and password for your new Linux distribution. [*Details*](https://docs.microsoft.com/en-us/windows/wsl/user-support)  
+
+![Ubuntu - Account]({{ site.baseurl }}/assets/images/wsl/17.PNG)  
+
+This process concludes the installation and set up of a Linux distribution that is completely integrated with your Windows operating system!
 
 ##### Demonstration
 		
