@@ -109,6 +109,23 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
+**<a href="https://wakatime.com/" target="_blank" >WakaTime</a>**  
+*Quantify your coding. Metrics, insights, and time tracking automatically generated from your programming activity.*  
+
+---
+
+###### Online IDE's
+
+**<a href="https://tio.run/#" target="_blank" >Try It Online</a>**  
+*Online compiler for several practical and recreational programming languages.*  
+
+---
+
+**<a href="https://ideone.com/" target="_blank" >Ideone</a>**  
+*An online compiler and debugging tool which allows you to compile source code and execute it online in more than 60 programming languages.*  
+
+---
+
 ###### Platform as a Service (PaaS - Free Tier)
 
 **<a href="https://www.heroku.com/" target="_blank" >Heroku</a>**  
@@ -561,5 +578,37 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 **<a href="https://github.com/quicktype/quicktype" target="_blank" >quicktype</a>**  
 *Generate types and converters from JSON, Schema, and GraphQL*  
+
+---
+
+###### Services
+
+**<a href="http://htmlpreview.github.io/" target="_blank" >GitHub and BitBucket HTML Preview</a>** 
+*GitHub and BitBucket HTML Files' Preview.*      
+
+---
+
+**<a href="https://anvaka.github.io/common-words/#?lang=java" target="_blank" >Common Words</a>**  
+*Visualization of common words in different programming languages.*  
+
+---
+
+**<a href="http://www.useragentstring.com/" target="_blank" >User Agent String</a>**  
+*Analyze User Agent of you browser or any other user agent string.*  
+
+---
+
+**<a href="https://uptime.is/" target="_blank" >Uptime</a>**  
+*SLA & Uptime Calculator.* 
+
+---
+
+**<a href="https://apiembed.com/" target="_blank" >APIembed</a>**  
+*Embeddable API Code snippets - Auto-generated code snippets in many programming languages for your website, blog or API documentation.* 
+
+---
+
+**<a href="https://reqres.in/" target="_blank" >REQ RES</a>**  
+*A hosted REST-API ready to respond to your AJAX requests.* 
 
 ---
