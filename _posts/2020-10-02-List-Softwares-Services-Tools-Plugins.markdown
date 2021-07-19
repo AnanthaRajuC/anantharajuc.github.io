@@ -5,6 +5,7 @@ categories: [ Softwares, List ]
 layout: post
 date: 2020-10-02 17:20
 image: /assets/images/list.PNG
+tags: [featured]
 ---
 
 Living document containing a list of free and Open-source softwares, Tools, Plugins, Utilities and services (Online/Offline).

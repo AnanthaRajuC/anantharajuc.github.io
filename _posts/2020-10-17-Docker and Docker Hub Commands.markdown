@@ -5,7 +5,6 @@ author: anantharajuc
 categories: [ Docker, Docker Hub, Containers, CLI ]
 date: 2020-10-17 09:40
 image: assets/images/docker.png
-tags: [featured]
 ---
 
 Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. The following is a non-exhaustive list of commonly used Docker Commands for quick reference.
