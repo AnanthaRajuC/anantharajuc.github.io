@@ -13,11 +13,13 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ###### Various
 
-**<a href="http://stackshare.io/" target="_blank" >stackshare</a>** : *Discover and discuss the best software tools and services.* 
+**<a href="http://stackshare.io/" target="_blank" >stackshare</a>**  
+*Discover and discuss the best software tools and services.*  
 
 ---
 
-**<a href="http://apns-gcm.bryantan.info/" target="_blank" >APNS/GCM Online Tester</a>** : *Online tool to test Apple Push Notification service (APNS) and Google Cloud Messaging (GCM).* 
+**<a href="http://apns-gcm.bryantan.info/" target="_blank" >APNS/GCM Online Tester</a>**  
+*Online tool to test Apple Push Notification service (APNS) and Google Cloud Messaging (GCM).*  
 
 ---
 
@@ -234,142 +236,226 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ### IDE's (Online/Offline) and Plugins
 
-|----------	|:-------------	|
-|<a href="https://codenvy.io" target="_blank" >Codenvy</a>|Self-service Eclipse Che workspaces.|
-|||
-|<a href="http://www.tutorialspoint.com/codingground.htm" target="_blank" >Coding Ground - TutorialsPoint</a>|Code in almost all popular languages using Coding Ground. Edit, compile, execute and share your projects, 100% cloud.|
-|||
-|<a href="https://devops.datenkollektiv.de/banner.txt/index.html" target="_blank" >Online Spring Boot Banner Generator</a>|Online Spring Boot Banner Generator.|
+**<a href="https://codenvy.io" target="_blank" >Codenvy</a>** : *Self-service Eclipse Che workspaces.*  
+
+---
+
+**<a href="http://www.tutorialspoint.com/codingground.htm" target="_blank" >Coding Ground - TutorialsPoint</a>** : *Code in almost all popular languages using Coding Ground. Edit, compile, execute and share your projects, 100% cloud.*  
+
+---
+
+**<a href="https://devops.datenkollektiv.de/banner.txt/index.html" target="_blank" >Online Spring Boot Banner Generator</a>** : *Online Spring Boot Banner Generator.*  
+
+---
 
 ### Virtualization
 
-|----------	|:------------	|
-|<a href="http://www.vmware.com/in/products/player" target="_blank" >VMware Workstation</a>|A streamlined desktop virtualization application that runs one or more operating systems on the same computer without rebooting.|
+**<a href="http://www.vmware.com/in/products/player" target="_blank" >VMware Workstation</a>** : *A streamlined desktop virtualization application that runs one or more operating systems on the same computer without rebooting.*  
+
+---
 
 ### Web Browsers
 
-|----------	|:------------	|
-|<a href="https://blisk.io/" target="_blank" >Blisk</a>|A free browser for web developers, toolbox for development, debugging and testing: emulation, sync, analytics, and screenshots.|
-|<a href="https://brave.com/" target="_blank" >brave</a>|A free browser, automatically blocks ads and trackers, making it faster and safer|
+**<a href="https://blisk.io/" target="_blank" >Blisk</a>** : *A free browser for web developers, toolbox for development, debugging and testing: emulation, sync, analytics, and screenshots.*  
+
+---
+
+**<a href="https://brave.com/" target="_blank" >brave</a>** : *A free browser, automatically blocks ads and trackers, making it faster and safer.*  
   
+---
 
 ### Web Browser Plugins
 
-|----------	|:------------	|
-|<a href="https://www.checkbot.io" target="_blank" >Checkbot</a>|Browser extension that tests if your website follows 50+ SEO, speed and security best practices. Crawls your site checking multiple pages at once.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien" target="_blank" >Isometric Contributions</a>|This extension allows you to toggle between the normal GitHub contribution chart and an isometric pixel art version.|
-|||
-|<a href="http://getfireshot.com/" target="_blank" >FireShot</a>|Capture full web page screenshots in Firefox, Chrome, Opera or IE, and then edit and save them.|
-|||
-|<a href="http://fvdspeeddial.com/" target="_blank" >FVD Speed Dial</a>|Tool for saving and organizing the links to your favorite sites.|
-|||
-|<a href="https://addons.mozilla.org/en-US/firefox/addon/poster/" target="_blank" >Poster</a>|A developer tool for interacting with web services and other web resources that lets you make HTTP requests, set the entity body, and content type. This allows you to interact with web services and inspect the results.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl?hl=en" target="_blank" >Hover Zoom</a>|Browse images galleries with ease: move the mouse cursor over thumbnails to view images in their full size without loading a new page.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/floating-for-youtube/jjphmlaoffndcnecccgemfdaaoighkel" target="_blank" >Floating for YouTube™</a>|Always on top Floating Mini Player for YouTube™.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/floating-for-youtube-exte/egncdnniomonjgpjbapalkckojhkfddk" target="_blank" >Floating for YouTube™ Extension</a>|Open YouTube video in Floating Mini Player for YouTube™.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm" target="_blank" >WhatFont</a>|The easiest way to identify fonts on web pages.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/alexa-traffic-rank/cknebhggccemgcnbidipinkifmmegdel" target="_blank" >Alexa Traffic Rank</a>|The Official Alexa Traffic Rank Extension, providing Alexa Traffic Rank and site Information when clicked.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn" target="_blank" >Clear Cache</a>|Clear your cache and browsing data with a single click of a button.|
-|||
-|<a href="https://chrome.google.com/webstore/detail/speedtest-by-ookla/pgjjikdiikihdfpoppgaidccahalehjh" target="_blank" >Speedtest by Ookla</a>|Take a Speedtest directly from your Google Chrome toolbar to quickly test your internet performance.|
-|||
-|<a href="http://tampermonkey.net/" target="_blank" >Tampermonkey</a>|userscript manager, with over 10 million users. It's available for Chrome, Microsoft Edge, Safari, Opera Next, and Firefox.|
-|||
-|<a href="https://github.com/harshjv/github-repo-size" target="_blank" >GitHub Repository Size</a>|Automatically adds repository size to GitHub's repository summary|
-|||
-|<a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en" target="_blank" >LiveReload</a>|LiveReload monitors changes in the file system. As soon as you save a file, it is preprocessed as needed, and the browser is refreshed|
+**<a href="https://www.checkbot.io" target="_blank" >Checkbot</a>** : *Browser extension that tests if your website follows 50+ SEO, speed and security best practices. Crawls your site checking multiple pages at once.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/isometric-contributions/mjoedlfflcchnleknnceiplgaeoegien" target="_blank" >Isometric Contributions</a>** : *This extension allows you to toggle between the normal GitHub contribution chart and an isometric pixel art version.*  
+
+---
+
+**<a href="http://getfireshot.com/" target="_blank" >FireShot</a>** : *Capture full web page screenshots in Firefox, Chrome, Opera or IE, and then edit and save them.*  
+
+---
+
+**<a href="http://fvdspeeddial.com/" target="_blank" >FVD Speed Dial</a>** : *Tool for saving and organizing the links to your favorite sites.*  
+
+---
+
+**<a href="https://addons.mozilla.org/en-US/firefox/addon/poster/" target="_blank" >Poster</a>** : *A developer tool for interacting with web services and other web resources that lets you make HTTP requests, set the entity body, and content type. This allows you to interact with web services and inspect the results.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/hover-zoom/nonjdcjchghhkdoolnlbekcfllmednbl?hl=en" target="_blank" >Hover Zoom</a>** : *Browse images galleries with ease: move the mouse cursor over thumbnails to view images in their full size without loading a new page.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/floating-for-youtube/jjphmlaoffndcnecccgemfdaaoighkel" target="_blank" >Floating for YouTube™</a>** : *Always on top Floating Mini Player for YouTube™.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/floating-for-youtube-exte/egncdnniomonjgpjbapalkckojhkfddk" target="_blank" >Floating for YouTube™ Extension</a>** : *Open YouTube video in Floating Mini Player for YouTube™.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm" target="_blank" >WhatFont</a>** : *The easiest way to identify fonts on web pages.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/alexa-traffic-rank/cknebhggccemgcnbidipinkifmmegdel" target="_blank" >Alexa Traffic Rank</a>** : *The Official Alexa Traffic Rank Extension, providing Alexa Traffic Rank and site Information when clicked.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn" target="_blank" >Clear Cache</a>** : *Clear your cache and browsing data with a single click of a button.*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/speedtest-by-ookla/pgjjikdiikihdfpoppgaidccahalehjh" target="_blank" >Speedtest by Ookla</a>** : *Take a Speedtest directly from your Google Chrome toolbar to quickly test your internet performance.*  
+
+---
+
+**<a href="http://tampermonkey.net/" target="_blank" >Tampermonkey</a>** : *userscript manager, with over 10 million users. It's available for Chrome, Microsoft Edge, Safari, Opera Next, and Firefox.*  
+
+---
+
+**<a href="https://github.com/harshjv/github-repo-size" target="_blank" >GitHub Repository Size</a>** : *Automatically adds repository size to GitHub's repository summary*  
+
+---
+
+**<a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en" target="_blank" >LiveReload</a>** : *LiveReload monitors changes in the file system. As soon as you save a file, it is preprocessed as needed, and the browser is refreshed*  
 
 ### Fiddles
 
-|----------	|:------	|
-|<a href="http://phpfiddle.org/" target="_blank" >PhpFiddle</a>|PhpFiddle provides Web IDE, Web Tools, APIs, Widgets, PHP Libraries, programming resources and execution environment for PHP/MySQL/SQLite, HTML/CSS and JavaScript coding online. PhpFiddle allows people to test PHP code snippets, create, execute and download web applications, for example, Zend Framework 2 projects.|
-|||
-|<a href="https://dotnetfiddle.net/" target="_blank" >.NET Fiddle</a>|NET sandbox for developers to quickly try out code and share code snippets.|
-|||
-|<a href="https://bmfiddle.com/" target="_blank" >Business Model Fiddle</a>|Free and Easy way to Capture and Develop Your Ideas.|
-|||
-|<a href="https://jsfiddle.net/" target="_blank" >JSFiddle</a>|Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.|
-|||
-|<a href="https://github.com/AnanthaRajuC/Useful-Softwares-Tools-list/blob/master/Fiddles.md" target="_blank" >(more Fiddles)</a>||
+**<a href="http://phpfiddle.org/" target="_blank" >PhpFiddle</a>** : *PhpFiddle provides Web IDE, Web Tools, APIs, Widgets, PHP Libraries, programming resources and execution environment for PHP/MySQL/SQLite, HTML/CSS and JavaScript coding online. PhpFiddle allows people to test PHP code snippets, create, execute and download web applications, for example, Zend Framework 2 projects.*  
+
+---
+
+**<a href="https://dotnetfiddle.net/" target="_blank" >.NET Fiddle</a>** : *NET sandbox for developers to quickly try out code and share code snippets.*  
+
+---
+
+**<a href="https://bmfiddle.com/" target="_blank" >Business Model Fiddle</a>** : *Free and Easy way to Capture and Develop Your Ideas.*  
+
+---
+
+**<a href="https://jsfiddle.net/" target="_blank" >JSFiddle</a>** : *Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.*  
+
+---
+
+**<a href="https://github.com/AnanthaRajuC/Useful-Softwares-Tools-list/blob/master/Fiddles.md" target="_blank" >(more Fiddles)</a>** : **  
 
 ### Communication
 
-|----------	|:------	|
-|<a href="https://gitter.im/" target="_blank" >Gitter</a>|communication product for communities and teams on GitHub.|
-|||
-|<a href="https://slack.com/" target="_blank" >Slack</a>|Slack brings all your communication together in one place. A messaging app for teams|
-|||
-|<a href="https://trello.com/" target="_blank" >Trello</a>|Communicate, collaborate, and get anything you need to get done. Trello is a visual way to update and see progress on all your projects.|
-|||
-|<a href="https://www.hipchat.com/" target="_blank" >HipChat</a>|HipChat is hosted group chat and video chat built for teams. Supercharge real-time collaboration with persistent chat rooms, file sharing, and screen sharing.|
+**<a href="https://gitter.im/" target="_blank" >Gitter</a>** : *communication product for communities and teams on GitHub.*  
+
+---
+
+**<a href="https://slack.com/" target="_blank" >Slack</a>** : *Slack brings all your communication together in one place. A messaging app for teams*  
+
+---
+
+**<a href="https://trello.com/" target="_blank" >Trello</a>** : *Communicate, collaborate, and get anything you need to get done. Trello is a visual way to update and see progress on all your projects.*  
+
+---
+
+**<a href="https://www.hipchat.com/" target="_blank" >HipChat</a>** : *HipChat is hosted group chat and video chat built for teams. Supercharge real-time collaboration with persistent chat rooms, file sharing, and screen sharing.*  
 
 ### Editor
 
-|----------	|:------	|
-|<a href="https://www.gitbook.com/editor" target="_blank" >GitBook Editor</a>|Expressive Markup (Markdown/Asciidoc), Advanced proofreading, Version Control|
-|||
-|<a href="https://laverna.cc/index.html" target="_blank" >Laverna</a>|Markdown note taking app focused on privacy. Consider it like open source alternative to Evernote.|
-|||
+**<a href="https://www.gitbook.com/editor" target="_blank" >GitBook Editor</a>** : *Expressive Markup (Markdown/Asciidoc), Advanced proofreading, Version Control*  
+
+---
+
+**<a href="https://laverna.cc/index.html" target="_blank" >Laverna</a>** : *Markdown note taking app focused on privacy. Consider it like open source alternative to Evernote.*  
+
+---
 
 ### Presentation
 
-|----------	|:------	|
-|<a href="https://speakerdeck.com/" target="_blank" >Speaker Deck</a>|Speaker Deck is the best way to share presentations online.|
-|||
-|<a href="http://www.slideshare.net/" target="_blank" >SlideShare</a>|Discover, Share, and Present presentations and infographics with the world's largest professional content sharing community.|
-|||
-|<a href="https://yhatt.github.io/marp/" target="_blank" >Marp</a>|Markdown presentation writer with Markdown, powered by Electron.|
+**<a href="https://speakerdeck.com/" target="_blank" >Speaker Deck</a>** : *Speaker Deck is the best way to share presentations online.*  
+
+---
+
+**<a href="http://www.slideshare.net/" target="_blank" >SlideShare</a>** : *Discover, Share, and Present presentations and infographics with the world's largest professional content sharing community.*  
+
+---
+
+**<a href="https://yhatt.github.io/marp/" target="_blank" >Marp</a>** : *Markdown presentation writer with Markdown, powered by Electron.*  
 
 ### Entertainment
 
-|----------	|:------	|
-|<a href="http://www.commitstrip.com/en/?" target="_blank" >CommitStrip</a>|A daily strip recounting funny anecdotes of life as a coder mixed up with a dash of topical tech news.|
-|||
-|<a href="http://donthitsave.com/" target="_blank" >Don't Hit Save</a>|A comic about tech, the workplace, and indie game development.|
+**<a href="http://www.commitstrip.com/en/?" target="_blank" >CommitStrip</a>** : *A daily strip recounting funny anecdotes of life as a coder mixed up with a dash of topical tech news.*  
+
+---
+
+**<a href="http://donthitsave.com/" target="_blank" >Don't Hit Save</a>** : *A comic about tech, the workplace, and indie game development.*  
 
 ### Java
 
-|----------	|:------	|
-|<a href="https://www.codota.com/" target="_blank" >Codota</a>|AI Pair Programmer. Provides contextual code suggestions based on your code.|
-|||
-|<a href="http://www.java2s.com/Code/Jar/CatalogJar.htm" target="_blank" >java2s</a>|Jar File Download examples (example source code) Organized by topic.|
-|||
-|<a href="http://java-design-patterns.com/" target="_blank" >Java Design Patterns</a>|Collection of several design patterns implemented in Java.|
-|||
-|<a href="http://jd.benow.ca/" target="_blank" >Java Decompiler</a>|Tool to decompile and analyze Java 5 “byte code” and the later versions.|
-|||
-|<a href="https://github.com/skylot/jadx" target="_blank" >jadx - Dex to Java decompiler</a>|Command line and GUI tools for produce Java source code from Android Dex and Apk files.|
-|||
-|<a href="https://github.com/skylot/jadxhttps://bytecodeviewer.com/" target="_blank" >Bytecode Viewer</a>|A Java 8 Jar & Android APK Reverse Engineering Suite (Decompiler, Editor, Debugger & More).|
+**<a href="https://www.codota.com/" target="_blank" >Codota</a>** : *AI Pair Programmer. Provides contextual code suggestions based on your code.*  
+
+---
+
+**<a href="http://www.java2s.com/Code/Jar/CatalogJar.htm" target="_blank" >java2s</a>** : *Jar File Download examples (example source code) Organized by topic.*  
+
+---
+
+**<a href="http://java-design-patterns.com/" target="_blank" >Java Design Patterns</a>** : *Collection of several design patterns implemented in Java.*  
+
+---
+
+**<a href="http://jd.benow.ca/" target="_blank" >Java Decompiler</a>** : *Tool to decompile and analyze Java 5 “byte code” and the later versions.*  
+
+---
+
+**<a href="https://github.com/skylot/jadx" target="_blank" >jadx - Dex to Java decompiler</a>** : *Command line and GUI tools for produce Java source code from Android Dex and Apk files.*  
+
+---
+
+**<a href="https://github.com/skylot/jadxhttps://bytecodeviewer.com/" target="_blank" >Bytecode Viewer</a>** : *A Java 8 Jar & Android APK Reverse Engineering Suite (Decompiler, Editor, Debugger & More).*  
 
 ### Others
 
-|----------	|:------	|
-|<a href="https://www.katacoda.com/" target="_blank" >Katacoda</a>|Interactive Learning Platform for Software Engineers.|
-|||
-|<a href="https://howsecureismypassword.net/" target="_blank" >HOW SECURE IS MY PASSWORD?</a>|Password strength meter.|
-|||
-|<a href="https://dzone.com/" target="_blank" >DZone</a>|Community and publisher of technical content for software professionals.|
-|||
-|<a href="https://www.codeproject.com/" target="_blank" >CodeProject</a>|Free source code and tutorials for Windows developers. Programming help for Visual Basic.Net and other .Net family languages.|
-|||
-|<a href="http://www.devopsbookmarks.com/" target="_blank" >DevOps Bookmarks</a>|Discover tools and frameworks in the DevOps landscape.|
-|||
-|<a href="http://www.algomation.com/" target="_blank" >Algomation</a>|a platform for viewing, creating and sharing any type of algorithm.|
-|||
-|<a href="https://github.com/kovidgoyal/calibre" target="_blank" >Calibre</a>|ebook manager.|
-|||
-|<a href="https://xebialabs.com/devops-diagram-generator" target="_blank" >DevOps Diagram Generator</a>|Map your DevOps Toolchain .|
-|||
-|<a href="https://www.lambdatest.com/" target="_blank" >Lambda Test</a>|Cross Browser Testing Cloud|
-|||
-|<a href="https://www.epochconverter.com/" target="_blank" >Epoch Converter</a>|Epoch & Unix Timestamp Conversion Tools|
-|||
-|<a href="https://github.com/quicktype/quicktype" target="_blank" >quicktype</a>|Generate types and converters from JSON, Schema, and GraphQL|
+**<a href="https://www.katacoda.com/" target="_blank" >Katacoda</a>** : *Interactive Learning Platform for Software Engineers.*  
+
+---
+
+**<a href="https://howsecureismypassword.net/" target="_blank" >HOW SECURE IS MY PASSWORD?</a>** : *Password strength meter.*  
+
+---
+
+**<a href="https://dzone.com/" target="_blank" >DZone</a>** : *Community and publisher of technical content for software professionals.*  
+
+---
+
+**<a href="https://www.codeproject.com/" target="_blank" >CodeProject</a>** : *Free source code and tutorials for Windows developers. Programming help for Visual Basic.Net and other .Net family languages.*  
+
+---
+
+**<a href="http://www.devopsbookmarks.com/" target="_blank" >DevOps Bookmarks</a>** : *Discover tools and frameworks in the DevOps landscape.*  
+
+---
+
+**<a href="http://www.algomation.com/" target="_blank" >Algomation</a>** : *a platform for viewing, creating and sharing any type of algorithm.*  
+
+---
+
+**<a href="https://github.com/kovidgoyal/calibre" target="_blank" >Calibre</a>** : *ebook manager.*  
+
+---
+
+**<a href="https://xebialabs.com/devops-diagram-generator" target="_blank" >DevOps Diagram Generator</a>** : *Map your DevOps Toolchain .*  
+
+---
+
+**<a href="https://www.lambdatest.com/" target="_blank" >Lambda Test</a>** : *Cross Browser Testing Cloud*  
+
+---
+
+**<a href="https://www.epochconverter.com/" target="_blank" >Epoch Converter</a>** : *Epoch & Unix Timestamp Conversion Tools*  
+
+---
+
+**<a href="https://github.com/quicktype/quicktype" target="_blank" >quicktype</a>** : *Generate types and converters from JSON, Schema, and GraphQL*  
+
+---
