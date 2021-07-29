@@ -58,7 +58,7 @@ links local branchName with remote corresponding branch
 
 ##### STEP 5/6: release code from **develop** branch (Normally code is released from a dedicated **release** branch taken from **develop**). In this case assume develop contains valid releaseable code.
 
-1. **`git checkout master`**
+1. **`git checkout main`**
 
 2. **`git pull`**
 
