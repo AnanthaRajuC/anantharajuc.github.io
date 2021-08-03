@@ -2,6 +2,7 @@
 title: "Apache Maven Commands"
 author: anantharajuc
 categories: [ Maven, Java, CLI ]
+tags: [ Maven, Java, CLI ]
 layout: post
 date: 2020-10-17 12:00
 image: /assets/images/Apache-Maven.png

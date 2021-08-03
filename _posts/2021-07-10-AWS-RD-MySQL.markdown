@@ -2,6 +2,7 @@
 title: "AWS Relational Database : MySQL"
 author: anantharajuc
 categories: [ Cloud, AWS, MySQL ]
+tags: [ Cloud, AWS, MySQL ]
 layout: post
 date: 2021-07-08 09:50
 image: /assets/images/aws-rds-mysql.jpg

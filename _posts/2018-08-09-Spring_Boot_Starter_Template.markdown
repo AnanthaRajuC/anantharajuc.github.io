@@ -2,6 +2,7 @@
 title: "Spring Boot Application Template"
 author: anantharajuc
 categories: [ Spring Boot, Web Application ]
+tags: [ Spring Boot, Web Application ]
 layout: post
 date: 2018-08-09 07:30
 image: /assets/images/spring-boot-logo.jpg

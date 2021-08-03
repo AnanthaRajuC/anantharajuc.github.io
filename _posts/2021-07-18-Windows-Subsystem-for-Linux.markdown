@@ -2,6 +2,7 @@
 title: "Windows Subsystem for Linux"
 author: anantharajuc
 categories: [ Windows, Operating System ]
+tags: [ Windows, Operating System ]
 layout: post
 date: 2021-07-18 18:50
 image: /assets/images/wsl.png

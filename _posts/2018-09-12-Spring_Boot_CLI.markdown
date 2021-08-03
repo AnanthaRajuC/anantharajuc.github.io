@@ -3,6 +3,7 @@ layout: post
 title: "Spring Boot CLI"
 author: anantharajuc
 categories: [ Spring Boot, CLI ]
+tags: [ Spring Boot, CLI ]
 date: 2018-09-12 07:30
 image: /assets/images/spring-boot-logo.jpg
 ---

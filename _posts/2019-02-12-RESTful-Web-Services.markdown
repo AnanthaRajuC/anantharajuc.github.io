@@ -2,6 +2,7 @@
 title: "RESTful Web Services architecture style"
 author: anantharajuc
 categories: [ Web Services, REST ]
+tags: [ Web Services, REST ]
 layout: post
 date: 2019-02-12 12:30
 image: /assets/images/rest.png

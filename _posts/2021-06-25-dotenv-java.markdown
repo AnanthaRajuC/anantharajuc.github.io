@@ -2,6 +2,7 @@
 title: "Loading Environment Variables via dotenv-java"
 author: anantharajuc
 categories: [ Spring Boot, Java ]
+tags: [ Spring Boot, Java ]
 layout: post
 date: 2021-06-25 08:10
 image: /assets/images/dotenv-java.png

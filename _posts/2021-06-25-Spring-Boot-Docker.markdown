@@ -2,6 +2,7 @@
 title: "Docker and Spring Boot"
 author: anantharajuc
 categories: [ Spring Boot, Docker ]
+tags: [ Spring Boot, Docker ]
 layout: post
 date: 2021-06-25 17:30
 image: /assets/images/spring-boot-docker.jpg

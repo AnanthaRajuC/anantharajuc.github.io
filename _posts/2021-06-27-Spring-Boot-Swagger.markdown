@@ -2,6 +2,7 @@
 title: "Swagger UI and Spring Boot"
 author: anantharajuc
 categories: [ Spring Boot, Swagger UI ]
+tags: [ Spring Boot, Swagger UI ]
 layout: post
 date: 2021-06-27 18:40
 image: /assets/images/spring-boot-swagger-ui.jpg

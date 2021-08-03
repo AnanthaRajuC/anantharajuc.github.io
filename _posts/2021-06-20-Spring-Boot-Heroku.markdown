@@ -2,6 +2,7 @@
 title: "Deploying Spring Boot Web Application on Heroku"
 author: anantharajuc
 categories: [ Cloud, Heroku, Spring Boot, Java ]
+tags: [ Cloud, Heroku, Spring Boot, Java ]
 layout: post
 date: 2021-06-20 19:35
 image: /assets/images/spring-boot-heroku.jpg

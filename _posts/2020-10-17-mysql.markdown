@@ -3,6 +3,7 @@ layout: post
 title: "MySQL Commands"
 author: anantharajuc
 categories: [ MySQL, Database, CLI ]
+tags: [ MySQL, Database, CLI ]
 date: 2020-10-17 12:00
 image: assets/images/MySQL.png
 ---

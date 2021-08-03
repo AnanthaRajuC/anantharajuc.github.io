@@ -2,6 +2,7 @@
 title: "Essential Reading - Software Engineering"
 author: anantharajuc
 categories: [ Book, Article, List ]
+tags: [ Book, Article, List ]
 layout: post
 date: 2018-07-29 17:00
 image: /assets/images/reading.jpg
@@ -10,6 +11,7 @@ image: /assets/images/reading.jpg
 Select compilation of articles and books on Software Development and its related aspects.
 
 ### Classification
+
 - [Articles](#articles)
 - [Articles Technical](#articles - technical)
 - [Books](#books)

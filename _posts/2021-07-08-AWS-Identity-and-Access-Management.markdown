@@ -2,6 +2,7 @@
 title: "AWS Identity and Access Management (IAM) : User groups, Policies and Users"
 author: anantharajuc
 categories: [ Cloud, AWS ]
+tags: [ Cloud, AWS ]
 layout: post
 date: 2021-07-08 09:50
 image: /assets/images/aws-iam.jpg

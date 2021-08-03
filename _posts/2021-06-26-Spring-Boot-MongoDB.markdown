@@ -2,6 +2,7 @@
 title: "MongoDB and Spring Boot"
 author: anantharajuc
 categories: [ Spring Boot, MongoDB ]
+tags: [ Spring Boot, MongoDB ]
 layout: post
 date: 2021-06-26 11:10
 image: /assets/images/spring-boot-mongodb.jpg

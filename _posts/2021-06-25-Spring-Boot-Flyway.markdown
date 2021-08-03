@@ -2,6 +2,7 @@
 title: "Flyway version control for Relational Databases with Spring Boot"
 author: anantharajuc
 categories: [ Spring Boot, Java ]
+tags: [ Spring Boot, Java ]
 layout: post
 date: 2021-06-25 10:40
 image: /assets/images/spring-boot-flyway.jpg

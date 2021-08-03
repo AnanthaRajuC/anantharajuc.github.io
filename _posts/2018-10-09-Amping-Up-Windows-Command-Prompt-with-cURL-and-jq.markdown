@@ -3,6 +3,7 @@ layout: post
 title: "Amping-Up Windows Command Prompt with cURL and JQ"
 author: anantharajuc
 categories: [ cURL, JQ, CMD, CLI, Windows ]
+tags: [ cURL, JQ, CMD, CLI, Windows ]
 date: 2018-10-09 17:40
 image: /assets/images/curl-logo.svg
 ---
