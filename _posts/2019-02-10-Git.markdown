@@ -2,6 +2,7 @@
 title: "Git"
 author: anantharajuc
 categories: [ Git, CLI ]
+tags: [ Git, CLI ]
 layout: post
 date: 2019-02-10 07:30
 image: /assets/images/Git.png
@@ -82,8 +83,10 @@ Push all branches to your remote repository
 #### Deleting a branch
 
 *	**`git push -d origin <branch name>`**  
+Remove a remote branch from the server
 
 *	**`git branch -d <branch name>`**  
+Delete local branch
 
 ---
 
@@ -176,6 +179,9 @@ find the URL of the remote repository
 
 *	**`git remote -v`**   
 List all currently configured remote repositories
+
+*	**`git diff file.file_type`**  
+See changes to a specific file using git
 
 ---
 

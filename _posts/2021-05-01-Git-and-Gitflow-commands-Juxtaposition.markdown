@@ -2,6 +2,7 @@
 title: "Gitflow and Git commands juxtaposition"
 author: anantharajuc
 categories: [ Git, CLI ]
+tags: [ Git, CLI ]
 layout: post
 date: 2021-05-01 16:00
 image: /assets/images/Git.png
