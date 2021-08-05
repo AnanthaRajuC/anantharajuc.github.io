@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "MongoDB Commands - " 
+title: "MongoDB Commands" 
 author: anantharajuc
 categories: [ MongoDB, Database, CLI ]
 tags: [ MongoDB, Database, CLI ]
 date: 2020-10-17 12:00
-image: assets/images/mongodb.PNG
+image: assets/images/mongodb.png
 ---
 
 MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
