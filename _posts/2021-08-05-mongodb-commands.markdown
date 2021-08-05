@@ -4,7 +4,7 @@ title: "MongoDB Commands"
 author: anantharajuc
 categories: [ MongoDB, Database, CLI ]
 tags: [ MongoDB, Database, CLI ]
-date: 2020-10-17 12:00
+date: 2021-08-05 19:00
 image: assets/images/mongodb.png
 ---
 
