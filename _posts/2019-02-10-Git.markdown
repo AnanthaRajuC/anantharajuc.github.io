@@ -177,6 +177,9 @@ tell git to use **gitmessage.txt** as the default message that appears in your e
 *	**`git remote show origin`**   
 find the URL of the remote repository
 
+*	**`git remote set-url origin https://github.com/user/new-repo.git`**   
+change the URI (URL) for a remote Git repository
+
 *	**`git remote -v`**   
 List all currently configured remote repositories
 

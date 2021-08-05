@@ -64,6 +64,15 @@ Quick Links :
 - [Running Tests](#running-tests)
 - [Others](#others)
 
+### Maven Dependency Scopes mapped with phases
+
+1. compile (maven default scope) - build, test, and run
+2. provided - build and test
+3. runtime - test and run 
+4. test - compile and test
+5. system - similar to ones with scope provided
+6. import
+
 ---
 
 #### Packaging
