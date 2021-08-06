@@ -18,13 +18,27 @@ The following is a non-exhaustive list of commonly used MongoDB Commands for qui
 Print a list of all databases on the server.   
 
 *	**`use <db>`**  
-Switch current database to `<db>`.    
+Switch current database to `<db>`. If this database doesn’t exist, it will be newly created.   
 
-*	**`show collections`**  
-Print a list of all collections for current database.  
+*	**`db`**  
+View the current database.  
 
-*	**`db.getCollectionNames()`**  
+*	**`show collections`** or **`db.getCollectionNames()`**  
 Get the list of all collections in the current database. 
 
 *	**`db.dropDatabase()`**  
 Drops the current database.  
+
+*	**`db.<collection name>.insertOne(<JSON>)`**   
+Insert JSON to the collection of the current DB.  
+*Example*: **db.student.insertOne( {x:1} )**
+
+*	**`db.<collection name>.find()`**    
+View the contents of a collection.   
+*Example*: **db.student.find()**   
+
+*	**`db.<collection name>.find().pretty()`**   
+View the contents of a collection nicely formatted.  
+*Example*: **db.student.find().pretty()**  
+
+
