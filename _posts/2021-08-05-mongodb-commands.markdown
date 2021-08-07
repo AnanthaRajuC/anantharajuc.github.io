@@ -33,6 +33,17 @@ Drops the current database.
 Insert JSON to the collection of the current DB.  
 *Example*: **db.student.insertOne( {x:1} )**
 
+*	**`db.<collection name>.insert(  
+[  
+     { _id: 1, name: "Java Hut", description: "Coffee and cakes" },  
+     { _id: 2, name: "Burger Buns", description: "Gourmet hamburgers" },  
+     { _id: 3, name: "Coffee Shop", description: "Just coffee" },  
+     { _id: 4, name: "Clothes Clothes Clothes", description: "Discount clothing" },  
+     { _id: 5, name: "Java Shopping", description: "Indonesian goods" }  
+   ]
+)`**  
+Bulk insert (sample) data into a collection
+
 *	**`db.<collection name>.find()`**    
 View the contents of a collection.   
 *Example*: **db.student.find()**   
