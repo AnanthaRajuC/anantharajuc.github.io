@@ -20,17 +20,8 @@ permalink: /tags/
 
     {% endfor %}
   </ul>
-  
- <!--<div class="mb-4">
-	<span class="taglist">
-	{% for tag in page.tags %}
-	  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="{{site.baseurl}}/tags.html#{{ tag | downcase }}">{{ tag | downcase }}</a>
-	{% endfor %}
-	</span>
-</div>-->
 
   {% for tag in site.tags %}
-  <!--<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>-->
   <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] }}"><span>{{ tag[0] }}</span></h4>
     <ul class="tag">
       {% for post in tag[1] %}
@@ -39,16 +30,24 @@ permalink: /tags/
             {% if post.link %}
               <a href="{{ post.link }}">
             {% else %}
+			
+			
+<time>{{ post.date | date: "%Y-%m-%d" }}</time>
               <a href="{{ site.baseurl }}{{ post.url }}">
+
+			  
+			  
             {% endif %}
                 {{ post.title }}
+				<!--<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a> -->
               </a>
-              <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+              
           </li>
         {% endif %}
       {% endfor %}
     </ul>
   {% endfor %}
+  
   
   <!--{% for tag in site.tags %} 
         <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] | downcase }}"><span>{{ tag[0] }}</span></h4>
@@ -67,4 +66,8 @@ permalink: /tags/
 
         {% endfor %}-->
   
+  
+  
+  
+
 </div>
