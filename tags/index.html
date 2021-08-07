@@ -34,7 +34,9 @@ permalink: /tags/
               <a href="{{ site.baseurl }}{{ post.url }}">
 
             {% endif %}
-                {{ post.title }}
+			
+			
+               <h2 class="mb-1 h4 font-weight-bold"> {{ post.title }}</h2>
 				
               </a>
 			  
@@ -55,6 +57,10 @@ permalink: /tags/
 	</small>
 
           </li>
+		  
+		  <br>
+		  <br>
+		  
         {% endif %}
       {% endfor %}
     </ul>
