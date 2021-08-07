@@ -30,16 +30,12 @@ permalink: /tags/
             {% if post.link %}
               <a href="{{ post.link }}">
             {% else %}
-			
-			
 
               <a href="{{ site.baseurl }}{{ post.url }}">
 
-			  
-			  
             {% endif %}
                 {{ post.title }}
-				<!--<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a> -->
+				
               </a>
 			  
 			  <p class="excerpt">
@@ -57,40 +53,11 @@ permalink: /tags/
 	<small class="text-muted">
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
-	
-	
-	
-	
-	
-	
-			  
-              
+
           </li>
         {% endif %}
       {% endfor %}
     </ul>
   {% endfor %}
-  
-  
-  <!--{% for tag in site.tags %} 
-        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] | downcase }}"><span>{{ tag[0] }}</span></h4>
-            
-        {% assign pages_list = tag[1] %}
-        {% for post in pages_list %}
-        {% if post.title != null %}
-          {% if group == null or group == post.group %}
-         
-            {% include main-loop-card.html %}
-          {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
-
-        {% endfor %}-->
-  
-  
-  
-  
 
 </div>
