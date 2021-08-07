@@ -32,7 +32,7 @@ permalink: /tags/
             {% else %}
 			
 			
-<time>{{ post.date | date: "%Y-%m-%d" }}</time>
+
               <a href="{{ site.baseurl }}{{ post.url }}">
 
 			  
@@ -41,6 +41,29 @@ permalink: /tags/
                 {{ post.title }}
 				<!--<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a> -->
               </a>
+			  
+			  <p class="excerpt">
+	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
+	</p>
+	
+	
+	<small class="d-block text-muted">
+		In <span class="catlist">
+		{% for category in post.categories %}
+		<a class="text-capitalize text-muted smoothscroll" href="#{{ tag[0] }}">{{ category }}</a><span class="sep">, </span>
+		{% endfor %}
+		</span>
+	</small>
+	<small class="text-muted">
+		{{ post.date | date: '%b %d, %Y' }}
+	</small>
+	
+	
+	
+	
+	
+	
+			  
               
           </li>
         {% endif %}
