@@ -11,21 +11,25 @@ permalink: /archive/
 <ul class="archive">
   {% for post in site.posts %}
     {% unless post.next %}
-      <h2>{{ post.date | date: '%Y' }}</h2>
+
+	  <h4 class="font-weight-bold spanborder text-capitalize">{{ post.date | date: '%Y' }}</h4>
+	  
     {% else %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
       {% if year != nyear %}
-        <h2>{{ post.date | date: '%Y' }}</h2>
+	  </br>
+        <h4 class="font-weight-bold spanborder text-capitalize">{{ post.date | date: '%Y' }}</h4>
+
       {% endif %}
     {% endunless %}
 
     <li>
-	  <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+	  <time class="font-weight-bold spanborder text-capitalize">{{ post.date | date: "%Y-%m-%d" }}  -  </time>
       {% if post.link %}
-      <a href="{{ post.link }}">
+      <a class="font-weight-bold spanborder text-capitalize" href="{{ post.link }}">
       {% else %}
-      <a href="{{ site.baseurl }}{{ post.url }}">
+      <a class="font-weight-bold spanborder text-capitalize" href="{{ site.baseurl }}{{ post.url }}">
       {% endif %}
         {{ post.title }}
       </a>
