@@ -9,16 +9,25 @@ permalink: /tags/
 {% endif %}
 
 <div class="tags">
+
   <ul class="label">
     {% for tag in site.tags %}
-    <li>
-      <a href="#{{ tag[0] }}">
+
+      <a class="sscroll btn btn-light btn-sm font-weight-bold" href="#{{ tag[0] }}">
         <span>{{ tag[0] }}</span>
         <span class="count">{{ tag[1] | size }}</span>
       </a>
-    </li>
+
     {% endfor %}
   </ul>
+  
+ <!--<div class="mb-4">
+	<span class="taglist">
+	{% for tag in page.tags %}
+	  <a class="sscroll btn btn-light btn-sm font-weight-bold" href="{{site.baseurl}}/tags.html#{{ tag | downcase }}">{{ tag | downcase }}</a>
+	{% endfor %}
+	</span>
+</div>-->
 
   {% for tag in site.tags %}
   <!--<h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>-->
