@@ -1,5 +1,5 @@
 ---
-title: "Docker and Spring Boot"
+title: "Spring Boot Application Containerization with Docker"
 author: anantharajuc
 categories: [ Spring Boot, Docker ]
 tags: [ Spring Boot, Docker ]

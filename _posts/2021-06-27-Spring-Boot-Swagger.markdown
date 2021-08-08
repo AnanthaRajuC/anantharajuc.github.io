@@ -1,5 +1,5 @@
 ---
-title: "Swagger UI and Spring Boot"
+title: "Spring Boot and Swagger UI REST API Documentation Tool"
 author: anantharajuc
 categories: [ Spring Boot, Swagger UI ]
 tags: [ Spring Boot, Swagger UI ]

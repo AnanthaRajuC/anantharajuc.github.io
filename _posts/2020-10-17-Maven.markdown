@@ -1,5 +1,5 @@
 ---
-title: "Apache Maven Commands"
+title: "Apache Maven Build Automation Tool Commands"
 author: anantharajuc
 categories: [ Maven, Java, CLI ]
 tags: [ Maven, Java, CLI ]

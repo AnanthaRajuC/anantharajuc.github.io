@@ -1,5 +1,5 @@
 ---
-title: "Flyway version control for Relational Databases with Spring Boot"
+title: "Spring Boot with Flyway version control for Relational Databases"
 author: anantharajuc
 categories: [ Spring Boot, Java ]
 tags: [ Spring Boot, Java ]

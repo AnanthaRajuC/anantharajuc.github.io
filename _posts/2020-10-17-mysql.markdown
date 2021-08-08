@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MySQL Commands"
+title: "MySQL Relational Database Management System Commands"
 author: anantharajuc
 categories: [ MySQL, Database, CLI ]
 tags: [ MySQL, Database, CLI ]

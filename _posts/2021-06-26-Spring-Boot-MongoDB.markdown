@@ -1,5 +1,5 @@
 ---
-title: "MongoDB and Spring Boot"
+title: "Spring Boot and NoSQL Database MongoDB"
 author: anantharajuc
 categories: [ Spring Boot, MongoDB ]
 tags: [ Spring Boot, MongoDB ]

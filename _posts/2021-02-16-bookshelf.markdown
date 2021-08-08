@@ -2,9 +2,9 @@
 layout: post
 title:  "Bookshelf"
 author: anantharajuc
-categories: [ Personal ]
+categories: [ Personal, List ]
 image: assets/images/bookshelf.jpg
-tags: [sticky]
+tags: [Personal, List, sticky]
 ---
 
 A selective list of books (Technical, Non-Technical, Others) i've read over the last couple of years.  

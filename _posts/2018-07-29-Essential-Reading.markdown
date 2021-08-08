@@ -1,8 +1,8 @@
 ---
 title: "Essential Reading - Software Engineering"
 author: anantharajuc
-categories: [ Book, Article, List ]
-tags: [ Book, Article, List ]
+categories: [ Reading, List ]
+tags: [ Reading, List ]
 layout: post
 date: 2018-07-29 17:00
 image: /assets/images/reading.jpg

@@ -1,5 +1,5 @@
 ---
-title: "Deploying Spring Boot Web Application on Heroku"
+title: "Spring Boot Web Application Deployment on Heroku (PaaS)"
 author: anantharajuc
 categories: [ Cloud, Heroku, Spring Boot, Java ]
 tags: [ Cloud, Heroku, Spring Boot, Java ]
