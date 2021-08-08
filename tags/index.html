@@ -23,7 +23,7 @@ permalink: /tags/
   </ul>
 
   {% for tag in site.tags %}
-  <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] }}"><span>{{ tag[0] }}</span></h4>
+  <h4 class="font-weight-bold text-danger spanborder text-capitalize" id="{{ tag[0] }}"><span>{{ tag[0] }}</span></h4>
     <ul class="tag">
       {% for post in tag[1] %}
         {% if post.title != null %}
