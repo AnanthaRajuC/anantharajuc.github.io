@@ -43,7 +43,7 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 
 ##### ER Diagram
 
-![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot-mongodb/database-er-diagram.png)  
+![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot-mongodb/database-er-diagram.PNG)  
 
 ##### Sample Valid JSON Request Body for PUT and POST requests.
 
