@@ -1,5 +1,5 @@
 ---
-title: "Git"
+title: "Git Distributed Version Control System"
 author: anantharajuc
 categories: [ Git, CLI ]
 tags: [ Git, CLI ]

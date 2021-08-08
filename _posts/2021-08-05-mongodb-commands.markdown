@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MongoDB Commands" 
+title: "MongoDB NoSQL Database Commands" 
 author: anantharajuc
 categories: [ MongoDB, Database, CLI ]
 tags: [ MongoDB, Database, CLI ]
