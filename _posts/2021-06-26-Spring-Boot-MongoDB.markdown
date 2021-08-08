@@ -30,7 +30,7 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 
 #### Sample Project
 
-[Spring Boot MongoDB](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB) is the sample Spring Boot app i've used to illustrate the usage of MongoDB.
+[Spring Boot MongoDB](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB) is the sample **CRUD** Spring Boot application i've used to illustrate the usage of MongoDB.
 
 | *Method*   |    |  *URL*                                                |
 |------------|----|-------------------------------------------------------|
@@ -41,9 +41,13 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 | **POST**   |    | **`http://localhost:8080/api/v1/student/name/{name}`**|
 | **DELETE** |    | **`http://localhost:8080/api/v1/student/{id}`**       |
 
+##### ER Diagram
+
+![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot-mongodb/database-er-diagram.png)  
+
 ##### Sample Valid JSON Request Body for PUT and POST requests.
 
-```json
+```javascript
 {
     "name": "John Doe",
     "email": "example@domain.com",
