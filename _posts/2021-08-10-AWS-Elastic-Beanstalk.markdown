@@ -22,6 +22,8 @@ This post briefly documents the process of deploying a Spring Boot based web app
 
 [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the AWS Elastic Beanstalk platform.
 
+Find details on how to build an executable jar [here](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/documents/INSTALLATION.MD#building-the-jar).
+
 ---
 
 #### AWS RDS MySQL Creation and Configuration
