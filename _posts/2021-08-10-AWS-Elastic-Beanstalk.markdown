@@ -12,13 +12,13 @@ This post briefly documents the process of deploying a Spring Boot based web app
 
 ---
 
-#### Minimum Requirements
+###### Minimum Requirements
 
 - Access to [AWS Management Console](https://aws.amazon.com/console/)
 
 ---
 
-#### Sample Project
+###### Sample Project
 
 [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the AWS Elastic Beanstalk platform.
 
@@ -26,39 +26,39 @@ Find details on how to build an executable jar [here](https://github.com/Anantha
 
 ---
 
-#### AWS RDS MySQL Creation and Configuration
+##### AWS RDS MySQL Creation and Configuration
 
-- Refer the following post detailing the process of creating **MySQL** Database via the AWS **RDS** service.
+Refer the following post detailing the process of creating **MySQL** Database via the AWS **RDS** service. This is an essential part of the process since the sample application will be connected to a relational database.
 
 [https://anantharajuc.github.io/AWS-RD-MySQL/](https://anantharajuc.github.io/AWS-RD-MySQL/)
 
-#### AWS Beanstalk - Creating Environment
+##### AWS Beanstalk - Creating Environment
 
-##### Create a new environment
+###### Create a new environment
 
 ![Create a new environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/1.PNG) 
 
-##### Select environment tier
+###### Select environment tier
 
 ![Select environment tier]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/2.PNG) 
 
-##### create a web server environment
+###### create a web server environment
 
 ![create a web server environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/3.PNG) 
 
-##### Environment information
+###### Environment information
 
 ![Environment information]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/4.PNG) 
 
-##### Platform
+###### Platform
 
 ![Platform]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/5.PNG) 
 
-##### Application code
+###### Application code
 
 ![Application code]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/6.PNG) 
 
-##### Log
+###### Log
 
 ![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/7.PNG) 
 
