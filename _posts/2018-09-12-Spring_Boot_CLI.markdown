@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Spring Boot CLI"
+title: "Generating Spring Boot Skeleton Project via Spring Boot CLI"
 author: anantharajuc
 categories: [ Spring Boot, CLI ]
 tags: [ Spring Boot, CLI ]

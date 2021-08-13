@@ -1,5 +1,5 @@
 ---
-title: "Bookmarc"
+title: "Bookmarc - A Portable Web Browser Bookmark's Manager"
 author: anantharajuc
 categories: [ Spring Boot, Web Application ]
 layout: post

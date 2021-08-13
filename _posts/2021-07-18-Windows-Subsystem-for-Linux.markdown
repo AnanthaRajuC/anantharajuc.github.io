@@ -1,5 +1,5 @@
 ---
-title: "Windows Subsystem for Linux"
+title: "Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu"
 author: anantharajuc
 categories: [ Windows, Operating System ]
 tags: [ Windows, Operating System ]
