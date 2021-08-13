@@ -1,5 +1,5 @@
 ---
-title: "Spring Boot Web Application Deployment on AWS Elastic Beanstalk and AWS RDS"
+title: "Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS"
 author: anantharajuc
 categories: [ Cloud, AWS, Spring Boot ]
 tags: [ Cloud, AWS,  Spring Boot ]
@@ -112,7 +112,7 @@ Refer the following post detailing the process of creating **MySQL** Database vi
 
 ###### **`Terminate Environment`**
 
-![Terminate Environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/24.PNG) 
+![Terminate Environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/24.png) 
 
 ###### **`Confirm Environment Termination`**
 
