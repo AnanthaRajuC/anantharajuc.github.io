@@ -1,8 +1,8 @@
 ---
-title: "AWS : Elastic Beanstalk"
+title: "Spring Boot Web Application Deployment on AWS Elastic Beanstalk and AWS RDS"
 author: anantharajuc
-categories: [ Cloud, AWS ]
-tags: [ Cloud, AWS ]
+categories: [ Cloud, AWS, Spring Boot ]
+tags: [ Cloud, AWS,  Spring Boot ]
 layout: post
 date: 2021-08-10 19:15
 image: /assets/images/aws-elastic-beanstalk.png
@@ -65,4 +65,69 @@ Refer the following post detailing the process of creating **MySQL** Database vi
 ###### **`Log`**
 
 ![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/7.PNG) 
+
+##### **`Edit inbound rules for the web app deployed on Elastic Beanstalk to access the Database`**
+
+###### **`Edit inbound rules`**
+
+![Edit inbound rules]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/12.PNG) 
+
+##### **`Environment Overview`**
+
+###### **`Environment setup complete`**
+
+![Environment setup complete]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/8.PNG) 
+
+###### **`Application`**
+
+![Application]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/16.PNG) 
+
+###### **`Configuration`**
+
+![Configuration]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/17.PNG) 
+
+###### **`Monitoring`**
+
+![Monitoring]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/20.PNG) 
+
+###### **`Events`**
+
+![Monitoring]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/23.PNG) 
+
+##### **`Output`**
+
+###### **`Web Page`**
+
+![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/10.PNG) 
+
+###### **`API Endpoint`**
+
+![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/9.PNG) 
+
+###### **`API In Action`**
+
+![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/11.PNG) 
+
+##### **`Cleanup`**
+
+###### **`Terminate Environment`**
+
+![Terminate Environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/24.PNG) 
+
+###### **`Confirm Environment Termination`**
+
+![Terminate Environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/25.PNG) 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
