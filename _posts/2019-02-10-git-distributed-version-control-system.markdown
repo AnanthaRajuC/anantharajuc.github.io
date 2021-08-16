@@ -24,6 +24,13 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 ---
 
+#### Configuration
+
+*	**`git config --global commit.template ~/.gitmessage.txt`**   
+Tell git to use **gitmessage.txt** as the default message that appears in your editor when you run **git commit** command
+
+---
+
 #### Initialization
 
 *	**`git init`**  
@@ -50,21 +57,37 @@ commits the changed files in staging area to **HEAD**
 
 ---
 
-#### Pushing changes
+#### Remote
 
-*	**`git push origin master`**  
-push the changes to your remote repository (Change **master** to whatever **branch** you want to push your changes to)
+*	**`git remote set-url origin https://github.com/user/new-repo.git`**   
+Change the URI (URL) for a remote Git repository
+
+*	**`git remote show origin`**   
+Find the URL of the remote repository.
+
+*	**`git remote -v`**   
+List all currently configured remote repositories
+
+---
+
+#### Pulling and Pushing changes
+
+*	**`git pull`**   
+update your local repository to the newest remote commit.
+
+*	**`git push origin <branch>`**  
+push the changes to your remote repository.
 
 *	**`git remote add origin <server>`**  
-If you have not cloned an existing repository and want to connect your repository to a remote server
+If you have not cloned an existing repository and want to connect your repository to a remote server.
 
 ---
 
 #### Branching
 
 1. **Branches** are used to develop features isolated from each other.
-2. **master** branch is the **default** branch in a repository.
-3. other branches are used for development and merged back to the master branch upon completion.
+2. **main/master** branch is the **default** branch in a repository.
+3. other branches are used for development and merged back to the main/master branch upon completion.
 
 *	**`git checkout -b feature_x`**  
 create a new branch named **feature_x** and switch to it using
@@ -78,20 +101,13 @@ push from local to remote **branch**
 *	**`git push --all origin`**  
 Push all branches to your remote repository
 
----
-
-#### Deleting a branch
+##### Deleting a branch
 
 *	**`git push -d origin <branch name>`**  
 Remove a remote branch from the server
 
 *	**`git branch -d <branch name>`**  
 Delete local branch
-
----
-
-*	**`git pull`**   
-update your local repository to the newest remote commit
 
 ---
 
@@ -170,18 +186,6 @@ opens a local git-log manual (html) page
 
 *	**`gitk`**   
 opens a built-in git GUI desktop application
-
-*	**`git config --global commit.template ~/.gitmessage.txt`**   
-tell git to use **gitmessage.txt** as the default message that appears in your editor when you run **git commit** command
-
-*	**`git remote show origin`**   
-find the URL of the remote repository
-
-*	**`git remote set-url origin https://github.com/user/new-repo.git`**   
-change the URI (URL) for a remote Git repository
-
-*	**`git remote -v`**   
-List all currently configured remote repositories
 
 *	**`git diff file.file_type`**  
 See changes to a specific file using git
