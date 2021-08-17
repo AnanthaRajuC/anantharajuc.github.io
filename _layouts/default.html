@@ -44,7 +44,19 @@
         </button>
         <div class="navbar-collapse collapse" id="navbarColor02" style="">
             <ul class="navbar-nav mr-auto d-flex align-items-center">
-               {% include menu-header.html %}
+                {% include menu-header.html %}
+				
+				
+		<!--<li class="nav-item"><a class="nav-link" href="#"> Services </a></li>
+		<li class="nav-item dropdown">
+		   <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Hover me  </a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+			  <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+			  <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+		    </ul>
+		</li>-->
+
             </ul>
             <ul class="navbar-nav ml-auto d-flex align-items-center">
                 {% include search-lunr.html %}
@@ -70,6 +82,43 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <script src="{{site.baseurl}}/assets/js/theme.js"></script>
+	
+	<script>
+	document.addEventListener("DOMContentLoaded", function(){
+// make it as accordion for smaller screens
+if (window.innerWidth > 992) {
+
+	document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+
+		everyitem.addEventListener('mouseover', function(e){
+
+			let el_link = this.querySelector('a[data-bs-toggle]');
+
+			if(el_link != null){
+				let nextEl = el_link.nextElementSibling;
+				el_link.classList.add('show');
+				nextEl.classList.add('show');
+			}
+
+		});
+		everyitem.addEventListener('mouseleave', function(e){
+			let el_link = this.querySelector('a[data-bs-toggle]');
+
+			if(el_link != null){
+				let nextEl = el_link.nextElementSibling;
+				el_link.classList.remove('show');
+				nextEl.classList.remove('show');
+			}
+
+
+		})
+	});
+
+}
+// end if innerWidth
+}); 
+// DOMContentLoaded  end
+	</script>
 
 
     <!-- Footer
