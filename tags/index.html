@@ -14,10 +14,10 @@ permalink: /tags/
   
     {% for tag in site.tags %}
 
-      <a class="sscroll btn btn-light btn-sm font-weight-bold" href="#{{ tag[0] }}">
-        <span>{{ tag[0] }}</span>
-        <span class="count text-danger">{{ tag[1] | size }}</span>
-      </a>
+	<a class="sscroll btn btn-light btn-sm font-weight-bold" href="#{{ tag[0] }}">
+		<span>{{ tag[0] }}</span>
+		<span class="count text-danger">{{ tag[1] | size }}</span>
+	</a>
 
     {% endfor %}
   </ul>
@@ -35,13 +35,12 @@ permalink: /tags/
               <a href="{{ site.baseurl }}{{ post.url }}">
 
             {% endif %}
-			
-			
-               <h2 class="mb-1 h4 font-weight-bold"> {{ post.title }}</h2>
+
+            <h2 class="mb-1 h4 font-weight-bold"> {{ post.title }}</h2>
 				
-              </a>
+            </a>
 			  
-			  <p class="excerpt">
+			<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
 	</p>
 	
@@ -57,14 +56,13 @@ permalink: /tags/
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
 
-          
+	<br>
+	<br>
 		  
-		  <br>
-		  <br>
-		  
-        {% endif %}
-      {% endfor %}
+	{% endif %}
+	{% endfor %}
     </ul>
-  {% endfor %}
+	
+	{% endfor %}
 
 </div>

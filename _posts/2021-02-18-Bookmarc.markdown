@@ -6,6 +6,7 @@ layout: post
 date: 2021-02-18 10:30
 image: /assets/images/bookmark.jpg
 tags: [project, Spring Boot, Web Application]
+github: https://github.com/AnanthaRajuC/Bookmarc
 ---
 
 Bookmarc is a portable web Browsers' bookmark's manager. The idea behind this project is to conveniently browse through and manage the URLs bookmarked to be revisited later on.
