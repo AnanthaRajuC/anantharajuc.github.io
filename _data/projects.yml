@@ -1,0 +1,23 @@
+- title: Spring Boot Application Template/Starter-Project
+  description: The only thing better than a Maven archetype is a repo you can fork with everything already setup to speed up the creation of new Spring Boot based Web applications, just fork-and-code. This repository contains a recipe/scaffolding for bootstrapping a Monolithic Web Application with the features & Technology stack listed below. Delete the sample code (or keep it.) and add your own, you’re good to go. Essentially it's a simple on-demand application backend for rapd-prototyping.
+  read: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/README.md#spring-boot-application-templatestarter-project-
+  github: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template
+  gh_user_repo: AnanthaRajuC/Spring-Boot-Application-Template
+  
+- title: Bookmarc - A Portable Web Browser Bookmark's Manager
+  description: Bookmarc is a portable web Browsers' bookmark's manager. The idea behind this project is to conveniently browse through and manage the URLs bookmarked to be revisited later on.
+  read: https://github.com/AnanthaRajuC/Bookmarc/blob/main/README.md#bookmarc
+  github: https://github.com/AnanthaRajuC/Bookmarc
+  gh_user_repo: AnanthaRajuC/Bookmarc
+  
+- title: Reserved Key Words- A list of various programming languages
+  description: In a computer language, a reserved word (also known as a reserved identifier) is a word that cannot be used as an identifier, such as the name of a variable, function, or label – it is "reserved from use". This is a non-exhaustive list of such Reserved Key Words of various programming languages.
+  read: https://github.com/AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages#reserved-key-words-list-of-various-programming-languages
+  github: https://github.com/AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages
+  gh_user_repo: AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages
+
+- title: List of programming language lists
+  description: A compilation of various lists of programming languages grouped by type.
+  read: https://github.com/AnanthaRajuC/List-of-programming-language-lists#list-of-programming-language-lists
+  github: https://github.com/AnanthaRajuC/List-of-programming-language-lists
+  gh_user_repo: AnanthaRajuC/List-of-programming-language-lists
