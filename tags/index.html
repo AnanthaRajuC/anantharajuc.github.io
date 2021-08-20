@@ -8,9 +8,12 @@ permalink: /tags/
   <h2>No post found</h2>
 {% endif %}
 
+<div class="row mt-3">
+
+<div class="col-md-8 main-loop">
 <div class="tags">
 
-  <ul class="label">
+  <!--<ul class="label">
   
     {% for tag in site.tags %}
 
@@ -20,7 +23,7 @@ permalink: /tags/
 	</a>
 
     {% endfor %}
-  </ul>
+  </ul>-->
 
   {% for tag in site.tags %}
   <h4 class="font-weight-bold text-danger spanborder text-capitalize" id="{{ tag[0] }}"><span>{{ tag[0] }}</span></h4>
@@ -64,5 +67,17 @@ permalink: /tags/
     </ul>
 	
 	{% endfor %}
+
+</div>
+</div>
+
+<div class="col-md-4">
+        {% include sidebar-tags.html %}    
+</div>
+
+    
+</div>
+
+
 
 </div>
