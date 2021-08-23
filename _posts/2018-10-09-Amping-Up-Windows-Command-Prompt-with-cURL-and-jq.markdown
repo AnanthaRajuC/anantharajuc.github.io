@@ -30,7 +30,7 @@ image: /assets/images/curl-logo.svg
 - To test if the tool is configured correctly, open the command prompt and execute the command **`curl https://postman-echo.com/get?test=123`**
 - Correct configuration of the tool will return the following response 
 
-![curl postman]({{ site.baseurl }}/assets/images/curl-example.PNG)
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/curl-example.PNG" /></div>
 
 - cURL can also be used with a web URL, **`curl www.example.com`**
 
@@ -44,7 +44,7 @@ image: /assets/images/curl-logo.svg
 
 - To pretty print the JSON response append **` | jq`** to the command. Example **`curl https://postman-echo.com/get?test=123 | jq`**
 
-![curl example pretty print]({{ site.baseurl }}/assets/images/curl-example-pretty-print.PNG)
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/curl-example-pretty-print.PNG" /></div>
 
 ```
 {
