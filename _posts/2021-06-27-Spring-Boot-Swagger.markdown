@@ -62,25 +62,37 @@ or
 implementation group: 'io.swagger', name: 'swagger-annotations', version: '1.6.1'
 ~~~
 
+#### Properties
+
+In the application.properties file configure the following optional key-values.
+
+~~~txt
+# https://springdoc.org/properties.html
+
+# For custom path of the swagger-ui HTML documentation
+# http://localhost:8080/spring-boot-minimal-webapp.html
+springdoc.swagger-ui.path=/spring-boot-minimal-webapp.html
+
+# To enable/disable the swagger-ui endpoint
+springdoc.swagger-ui.enabled=true
+~~~
+
 #### Basic Usage
 
 Swagger provides with annotations specific to class types (**Controller**, **Model** etc.,) which are to be placed and populated with appropriate values.
 
 ##### Model Class Annotations
 
-**`@ApiModel(description="Simple JavaBean domain object representing RESTcontrollerResponse")`**
+**`@ApiModel(description="Simple JavaBean domain object representing RESTcontrollerResponse")`**  
+This annotation essentially describes what exactly a model is.  
 
-This annotation essentially describes what exactly a model is.
-
-**`@Schema(description="RESTcontrollerResponse content", example="HTTP Method Handled.", required=true)`**
-
-Each attribute of the model captures a specific feature. We can describe, provide and examplr and indicate if the attribute is mandatory when initializing the object.
+**`@Schema(description="RESTcontrollerResponse content", example="HTTP Method Handled.", required=true)`**  
+Each attribute of the model captures a specific feature. We can describe, provide and examplr and indicate if the attribute is mandatory when initializing the object.  
 
 ##### Controller Class Annotations
 
-**`@Operation(summary="HTTP GET Operation")`**
-
-This annotation describes the particular functionality a REST endpoint offers.
+**`@Operation(summary="HTTP GET Operation")`**  
+This annotation describes the particular functionality a REST endpoint offers.  
 
 ##### URLs
 
