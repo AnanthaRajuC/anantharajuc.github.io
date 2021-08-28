@@ -5,7 +5,7 @@ categories: [ Spring Boot, Java ]
 tags: [ Spring Boot, Java ]
 layout: post
 date: 2021-06-25 10:40
-image: /assets/images/spring-boot/flyway.jpg
+image: /assets/images/spring-boot-flyway.jpg
 ---
 
 This post briefly documents the usage of **Flyway** for Relational Database version control. Flyway supports some of the most popular DBs available today, the list of the same can found [here](https://flywaydb.org/documentation/database/aurora-mysql).
@@ -25,7 +25,7 @@ This post briefly documents the usage of **Flyway** for Relational Database vers
 
 Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/imagesimages/common/spring-boot-minimal-web-app.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 

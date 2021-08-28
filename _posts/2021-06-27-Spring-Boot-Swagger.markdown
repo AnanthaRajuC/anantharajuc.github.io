@@ -5,7 +5,7 @@ categories: [ Spring Boot, Swagger UI ]
 tags: [ Spring Boot, Swagger UI ]
 layout: post
 date: 2021-06-27 18:40
-image: /assets/images/spring-boot/swagger-ui.jpg
+image: /assets/images/spring-boot-swagger-ui.jpg
 ---
 
 This post briefly documents the usage of **Swagger UI**, a visual documentation tool making it easy for back end implementation and client side consumption. 
@@ -24,7 +24,7 @@ This post briefly documents the usage of **Swagger UI**, a visual documentation 
 
 Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/imagesimages/common/spring-boot-minimal-web-app.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 

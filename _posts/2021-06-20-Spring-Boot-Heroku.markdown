@@ -5,7 +5,7 @@ categories: [ Cloud, Heroku, Spring Boot, Java ]
 tags: [ Cloud, Heroku, Spring Boot, Java ]
 layout: post
 date: 2021-06-20 19:35
-image: /assets/images/spring-boot/heroku.jpg
+image: /assets/images/spring-boot-heroku.jpg
 ---
 
 This post documents the necessary steps needed to deploy a simple web application packaged as a jar file and developed using Java Spring Boot framework on Heroku, using the Heroku Git deployment method.
@@ -23,7 +23,7 @@ This post documents the necessary steps needed to deploy a simple web applicatio
 
 Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/imagesimages/common/spring-boot-minimal-web-app.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Heroku Deployment steps
 

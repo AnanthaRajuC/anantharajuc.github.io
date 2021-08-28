@@ -5,7 +5,7 @@ categories: [ Spring Boot, MongoDB ]
 tags: [ Spring Boot, MongoDB ]
 layout: post
 date: 2021-06-26 11:10
-image: /assets/images/spring-boot/mongodb.jpg
+image: /assets/images/spring-boot-mongodb.jpg
 ---
 
 This post briefly documents the usage of **MongoDB**, a general purpose, document-based, distributed database with Spring Boot. 

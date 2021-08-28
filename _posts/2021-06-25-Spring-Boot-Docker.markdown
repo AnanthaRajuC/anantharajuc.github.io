@@ -5,7 +5,7 @@ categories: [ Spring Boot, Docker ]
 tags: [ Spring Boot, Docker ]
 layout: post
 date: 2021-06-25 17:30
-image: /assets/images/spring-boot/docker.jpg
+image: /assets/images/spring-boot-docker.jpg
 ---
 
 This post briefly documents the creation of a [Docker](https://www.docker.com/) image from a [Spring Boot](https://spring.io/projects/spring-boot) based Java (Web Application) project.
@@ -26,7 +26,7 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 
 Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/imagesimages/common/spring-boot-minimal-web-app.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 
