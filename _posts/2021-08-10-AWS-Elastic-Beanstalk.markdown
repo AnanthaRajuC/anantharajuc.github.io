@@ -5,7 +5,7 @@ categories: [ Cloud, AWS, Spring Boot ]
 tags: [ Cloud, AWS,  Spring Boot ]
 layout: post
 date: 2021-08-10 19:15
-image: /assets/images/aws-elastic-beanstalk.png
+image: /assets/images/aws/aws-elastic-beanstalk.png
 ---
 
 This post briefly documents the process of deploying a Spring Boot based web application on the AWS Elastic Beanstalk platform. This application will be connected to an AWS managed MySQL Relational Database system.
@@ -40,83 +40,83 @@ Refer the following post detailing the process of creating **MySQL** Database vi
 
 ###### **`Create a new environment`**
 
-![Create a new environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/1.PNG) 
+![Create a new environment]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/1.PNG) 
 
 ###### **`Select environment tier`**
 
-![Select environment tier]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/2.PNG) 
+![Select environment tier]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/2.PNG) 
 
 ###### **`Create a web server environment`**
 
-![create a web server environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/3.PNG) 
+![create a web server environment]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/3.PNG) 
 
 ###### **`Environment information`**
 
-![Environment information]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/4.PNG) 
+![Environment information]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/4.PNG) 
 
 ###### **`Platform`**
 
-![Platform]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/5.PNG) 
+![Platform]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/5.PNG) 
 
 ###### **`Application code`**
 
-![Application code]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/6.PNG) 
+![Application code]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/6.PNG) 
 
 ###### **`Log`**
 
-![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/7.PNG) 
+![Log]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/7.PNG) 
 
 ##### **`Edit inbound rules for the web app deployed on Elastic Beanstalk to access the Database`**
 
 ###### **`Edit inbound rules`**
 
-![Edit inbound rules]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/12.PNG) 
+![Edit inbound rules]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/12.PNG) 
 
 ##### **`Environment Overview`**
 
 ###### **`Environment setup complete`**
 
-![Environment setup complete]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/8.PNG) 
+![Environment setup complete]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/8.PNG) 
 
 ###### **`Application`**
 
-![Application]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/16.PNG) 
+![Application]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/16.PNG) 
 
 ###### **`Configuration`**
 
-![Configuration]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/17.PNG) 
+![Configuration]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/17.PNG) 
 
 ###### **`Monitoring`**
 
-![Monitoring]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/20.PNG) 
+![Monitoring]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/20.PNG) 
 
 ###### **`Events`**
 
-![Monitoring]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/23.PNG) 
+![Monitoring]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/23.PNG) 
 
 ##### **`Output`**
 
 ###### **`Web Page`**
 
-![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/10.PNG) 
+![Log]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/10.PNG) 
 
 ###### **`API Endpoint`**
 
-![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/9.PNG) 
+![Log]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/9.PNG) 
 
 ###### **`API In Action`**
 
-![Log]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/11.PNG) 
+![Log]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/11.PNG) 
 
 ##### **`Cleanup`**
 
 ###### **`Terminate Environment`**
 
-![Terminate Environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/24.png) 
+![Terminate Environment]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/24.png) 
 
 ###### **`Confirm Environment Termination`**
 
-![Terminate Environment]({{ site.baseurl }}/assets/images/aws-elastic-beanstalk/25.PNG) 
+![Terminate Environment]({{ site.baseurl }}/assets/images/aws/aws-elastic-beanstalk/25.PNG) 
 
 
 

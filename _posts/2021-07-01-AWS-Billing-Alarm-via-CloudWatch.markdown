@@ -5,7 +5,7 @@ categories: [ Cloud, AWS ]
 tags: [ Cloud, AWS ]
 layout: post
 date: 2021-07-01 08:00
-image: /assets/images/aws-cloudwatch.jpg
+image: /assets/images/aws/aws-cloudwatch.jpg
 ---
 
 This post briefly documents the process of setting up **Billing Alarm** via the **CloudWatch** service.
@@ -24,7 +24,7 @@ By default only the **`Root`** user account has the access to **`Billing Informa
 
 - select the **`Activate IAM Access`** checkbox and click on the **`Update`** Button.
 
-![Enabling Non-Root user accounts to access Billing Information]({{ site.baseurl }}/assets/images/aws-billing-alert/1.PNG)  
+![Enabling Non-Root user accounts to access Billing Information]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/1.PNG)  
 
 ---
 
@@ -38,7 +38,7 @@ At the top of the screen, on the left side navigation bar. Click on the **`Billi
 
 Click on the **`Save Preferences`** button.
 
-![Billing Preferences]({{ site.baseurl }}/assets/images/aws-billing-alert/2.PNG)  
+![Billing Preferences]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/2.PNG)  
 
 ---
 
@@ -53,30 +53,30 @@ Navigate to **`CloudWatch`** service under the **`Management & Governance`** sec
 - Click on **`Billing`** menu on the left side navigation bar. 
 - Click on **`Create Alarm`** button.
 
-![Billing alarms]({{ site.baseurl }}/assets/images/aws-billing-alert/3.PNG)  
+![Billing alarms]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/3.PNG)  
 
 - Click on **`Select Metric`** button.
 
-![Metric]({{ site.baseurl }}/assets/images/aws-billing-alert/4.PNG)  
+![Metric]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/4.PNG)  
 
 - Click on the **`Billing`** Metrics option.
 
-![Billing metric]({{ site.baseurl }}/assets/images/aws-billing-alert/5.PNG)  
+![Billing metric]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/5.PNG)  
 
 - Click on the **`Total Estimated Charge`** Metrics option.
 
-![Total Estimated Charge]({{ site.baseurl }}/assets/images/aws-billing-alert/6.PNG)  
+![Total Estimated Charge]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/6.PNG)  
 
 - Select the **`USD`** Currency option.
 - Click on **`Select metric`** button on the bottom right.
 
-![Metrics USD]({{ site.baseurl }}/assets/images/aws-billing-alert/7.PNG)  
+![Metrics USD]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/7.PNG)  
 
 Under the **`Conditions`** section, select the *Threshold type* as **`Static`**. Define the alarm condition *Whenever Estimation charges is* as **`Greater`** and define the *threshold value* as some **`USD`** value which is acceptable to you, say for example **`10`**.
 
 When there is a forecast from AWS that you will exceed the 10 USD spend, you will receive a Billing Alarm.
 
-![Conditions]({{ site.baseurl }}/assets/images/aws-billing-alert/8.PNG)  
+![Conditions]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/8.PNG)  
 
 - Click on **Next** button in the same page. There we will configure notifications.
 
@@ -88,15 +88,15 @@ Configure a new topic name and the email endpoint that must receive the notifica
 
 At the bottom of the page, click on the **Next** button.
 
-![Notification]({{ site.baseurl }}/assets/images/aws-billing-alert/9.PNG)  
+![Notification]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/9.PNG)  
 
 - Add **`Name`** and **`Description`** to the alarm. and click on the **Next** button.
 
-![Name and Description]({{ site.baseurl }}/assets/images/aws-billing-alert/10.PNG)  
+![Name and Description]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/10.PNG)  
 
 - On the next page, review the details and at the bottom of the page click on the **`Create Alarm`** button.
 
-![Billing Alarms Success]({{ site.baseurl }}/assets/images/aws-billing-alert/11.PNG)  
+![Billing Alarms Success]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/11.PNG)  
 
 **Note** : *You will receive an email with a link to confirm the subscription to that topic*.
 
@@ -106,14 +106,14 @@ At the bottom of the page, click on the **Next** button.
 
 **SNS Topics Details**.
 
-![SNS Topic Details]({{ site.baseurl }}/assets/images/aws-billing-alert/12.PNG)  
+![SNS Topic Details]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/12.PNG)  
 
 **CloudWatch overview**.
 
-![CloudWatch overview]({{ site.baseurl }}/assets/images/aws-billing-alert/13.PNG)  
+![CloudWatch overview]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/13.PNG)  
 
 **CloudWatch overview of Billing Service**.
 
-![CloudWatch overview of Billing Service]({{ site.baseurl }}/assets/images/aws-billing-alert/14.PNG)  
+![CloudWatch overview of Billing Service]({{ site.baseurl }}/assets/images/aws/aws-billing-alert/14.PNG)  
 
 ---

@@ -94,6 +94,9 @@ Each attribute of the model captures a specific feature. We can describe, provid
 **`@Operation(summary="HTTP GET Operation")`**  
 This annotation describes the particular functionality a REST endpoint offers.  
 
+**`@ApiResponse(responseCode = "200", description = "Found the person", content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Person.class))})`**  
+This annotation describes the API response.  
+
 ##### URLs
 
 - *Visual Documentation* : [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)

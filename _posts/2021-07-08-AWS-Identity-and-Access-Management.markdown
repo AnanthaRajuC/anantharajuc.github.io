@@ -5,7 +5,7 @@ categories: [ Cloud, AWS ]
 tags: [ Cloud, AWS ]
 layout: post
 date: 2021-07-08 09:50
-image: /assets/images/aws-iam.jpg
+image: /assets/images/aws/aws-iam.jpg
 ---
 
 This post briefly documents the process of creating AWS IAM **User groups**, and attaching **permissions policies** to it and then creating the **Users** and adding them to the created User groups via the **Identity and Access Management (IAM)** service.
@@ -22,15 +22,15 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - From the left side navigation pane under **`Access Management`**, select the **`User groups`** option and click on the **`Create group`** button.
 
-![User groups]({{ site.baseurl }}/assets/images/aws-iam/23.PNG)  
+![User groups]({{ site.baseurl }}/assets/images/aws/aws-iam/23.PNG)  
 
 - In the following page, Name the group.
 
-![Name the group]({{ site.baseurl }}/assets/images/aws-iam/24.PNG)  
+![Name the group]({{ site.baseurl }}/assets/images/aws/aws-iam/24.PNG)  
 
 - Under the **`Attach permissions policies`** section, attach all the needed policies as per the requirement.
 
-![Attach permissions policies]({{ site.baseurl }}/assets/images/aws-iam/25.PNG)  
+![Attach permissions policies]({{ site.baseurl }}/assets/images/aws/aws-iam/25.PNG)  
 
 ---
 
@@ -38,7 +38,7 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - From the left side navigation pane under **`Access Management`**, select the **`Users`** option and click on the **`Add user`** button.
 
-![Users]({{ site.baseurl }}/assets/images/aws-iam/26.PNG)  
+![Users]({{ site.baseurl }}/assets/images/aws/aws-iam/26.PNG)  
 
 - In the following page, set the **`User name`**.
 
@@ -46,7 +46,7 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - click on **`Next: Permissions`** button
 
-![Add user]({{ site.baseurl }}/assets/images/aws-iam/27.PNG)  
+![Add user]({{ site.baseurl }}/assets/images/aws/aws-iam/27.PNG)  
 
 ##### Permissions
 
@@ -54,7 +54,7 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - click on **`Next: Tags`** button.
 
-![Permissions]({{ site.baseurl }}/assets/images/aws-iam/28.PNG)  
+![Permissions]({{ site.baseurl }}/assets/images/aws/aws-iam/28.PNG)  
 
 ---
 
@@ -64,7 +64,7 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - click on **`Next: Review`** button.
 
-![Tags]({{ site.baseurl }}/assets/images/aws-iam/29.PNG)  
+![Tags]({{ site.baseurl }}/assets/images/aws/aws-iam/29.PNG)  
 
 ---
 
@@ -74,9 +74,9 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - click on **`Next: Review`** button. On the next page you will see a **`Success`** message upon the creation of the new user. click on the **`Close`** button.
 
-![Review]({{ site.baseurl }}/assets/images/aws-iam/30.PNG)  
+![Review]({{ site.baseurl }}/assets/images/aws/aws-iam/30.PNG)  
 
-![Success]({{ site.baseurl }}/assets/images/aws-iam/31.PNG) 
+![Success]({{ site.baseurl }}/assets/images/aws/aws-iam/31.PNG) 
 
 ---
 
@@ -84,13 +84,13 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 - In the Users section, you will see the newly created user. Click on the user.
 
-![User]({{ site.baseurl }}/assets/images/aws-iam/32.PNG)  
+![User]({{ site.baseurl }}/assets/images/aws/aws-iam/32.PNG)  
 
 - Click on the **`Security credentials`** tab, click on **`Create access key`** if you'd like to create **`Access key`** for this user.
 
-![Security credentials]({{ site.baseurl }}/assets/images/aws-iam/33.PNG)  
+![Security credentials]({{ site.baseurl }}/assets/images/aws/aws-iam/33.PNG)  
 
-![Access Key]({{ site.baseurl }}/assets/images/aws-iam/34.PNG)  
+![Access Key]({{ site.baseurl }}/assets/images/aws/aws-iam/34.PNG)  
 
 ---
 
@@ -98,14 +98,14 @@ This post briefly documents the process of creating AWS IAM **User groups**, and
 
 **Sign in**
 
-![Sign in]({{ site.baseurl }}/assets/images/aws-iam/36.PNG)  
+![Sign in]({{ site.baseurl }}/assets/images/aws/aws-iam/36.PNG)  
 
 **Sign in as IAM User**
 
-![Sign in as IAM User]({{ site.baseurl }}/assets/images/aws-iam/37.PNG)  
+![Sign in as IAM User]({{ site.baseurl }}/assets/images/aws/aws-iam/37.PNG)  
 
 **Logged-in user**
 
-![Logged-in user]({{ site.baseurl }}/assets/images/aws-iam/38.PNG)  
+![Logged-in user]({{ site.baseurl }}/assets/images/aws/aws-iam/38.PNG)  
 
 ---

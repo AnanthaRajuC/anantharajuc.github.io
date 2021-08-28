@@ -5,7 +5,7 @@ categories: [ Cloud, AWS, MySQL ]
 tags: [ Cloud, AWS, MySQL ]
 layout: post
 date: 2021-07-08 09:50
-image: /assets/images/aws-rds-mysql.jpg
+image: /assets/images/aws/aws-rds-mysql.jpg
 ---
 
 This post briefly documents the process of creating **MySQL** Database via the AWS **RDS** service.
@@ -22,9 +22,9 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 - From the services drop down from the Navigation bar, select the **`RDS`** service from the Database section.
 
-![Services]({{ site.baseurl }}/assets/images/aws-rds-mysql/1.png)   
+![Services]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/1.png)   
 
-![Databases]({{ site.baseurl }}/assets/images/aws-rds-mysql/2.PNG)   
+![Databases]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/2.PNG)   
 
 - In the following page, configure the database settings.
 
@@ -35,15 +35,15 @@ This post briefly documents the process of creating **MySQL** Database via the A
 - **`Edition`** : **MySQL Community**  
 - **`Version`** : **MySQL 8.0.23** *(or whatever is the latest avaialable version)*  
 
-![Database Creation method]({{ site.baseurl }}/assets/images/aws-rds-mysql/3.PNG)  
+![Database Creation method]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/3.PNG)  
 
-![Database Creation Details]({{ site.baseurl }}/assets/images/aws-rds-mysql/4.PNG)  
+![Database Creation Details]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/4.PNG)  
 
 ##### Templates
 		
 - **`Templates`** : **Free Tier**  
 		
-![Templates]({{ site.baseurl }}/assets/images/aws-rds-mysql/5.PNG)  		
+![Templates]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/5.PNG)  		
 		
 ##### Settings, Credentials Settings
 		
@@ -52,7 +52,7 @@ This post briefly documents the process of creating **MySQL** Database via the A
 - **`Master Password`** : **some_password** *(ex: sbmwa_aws_pwd)*    
 - **`Confirm Password`** : **some_password** *(ex: sbmwa_aws_pwd)*   
 
-![Settings]({{ site.baseurl }}/assets/images/aws-rds-mysql/6.PNG)  	 
+![Settings]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/6.PNG)  	 
 
 ##### Connectivity
 		
@@ -61,23 +61,23 @@ This post briefly documents the process of creating **MySQL** Database via the A
 - **`Public access`** : **Yes**  
 - **`VPC security group`** : **Choose existing**  
 
-![Connectivity]({{ site.baseurl }}/assets/images/aws-rds-mysql/9.PNG)  	 
+![Connectivity]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/9.PNG)  	 
 		
 ##### Database authentication
 		
 - **`Database Authentication`** : **Password authentication**
 
-![Database authentication]({{ site.baseurl }}/assets/images/aws-rds-mysql/11.PNG)  	 
+![Database authentication]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/11.PNG)  	 
 
 ##### Additional Configuration
 		
 - **`Initial database name`** : **Schema name** *(ex: sbmwa_aws)*  
 
-![Additional Configuration]({{ site.baseurl }}/assets/images/aws-rds-mysql/12.PNG)  	 
+![Additional Configuration]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/12.PNG)  	 
 	
 - Finally, at the end of the page click on the **`Create database`** button.
 
-![Create database]({{ site.baseurl }}/assets/images/aws-rds-mysql/13.PNG)  
+![Create database]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/13.PNG)  
 
 ---
 
@@ -85,23 +85,23 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 ##### Connectivity and security
 
-![Connectivity and security]({{ site.baseurl }}/assets/images/aws-rds-mysql/15.PNG)  
+![Connectivity and security]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/15.PNG)  
 
 ##### Security Groups
 
-![Security Groups]({{ site.baseurl }}/assets/images/aws-rds-mysql/16.PNG)  
+![Security Groups]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/16.PNG)  
 
 ##### Edit inbound rules
 
-![Edit inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/17.PNG) 
+![Edit inbound rules]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/17.PNG) 
 
 ##### Add rules
 
-![Add rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/19.PNG) 
+![Add rules]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/19.PNG) 
 
 ##### Inbound rules
 
-![Inbound rules]({{ site.baseurl }}/assets/images/aws-rds-mysql/20.PNG) 
+![Inbound rules]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/20.PNG) 
 
 ---
 
@@ -109,15 +109,15 @@ This post briefly documents the process of creating **MySQL** Database via the A
 
 ##### Setup new connection
 
-![Setup new connection]({{ site.baseurl }}/assets/images/aws-rds-mysql/21.PNG) 
+![Setup new connection]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/21.PNG) 
 
 ##### MySQL connection result
 
-![MySQL connection result]({{ site.baseurl }}/assets/images/aws-rds-mysql/22.PNG) 
+![MySQL connection result]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/22.PNG) 
 
 ##### MySQL Workbench
 
-![MySQL Workbench]({{ site.baseurl }}/assets/images/aws-rds-mysql/23.PNG) 
+![MySQL Workbench]({{ site.baseurl }}/assets/images/aws/aws-rds-mysql/23.PNG) 
 
 ---
 
