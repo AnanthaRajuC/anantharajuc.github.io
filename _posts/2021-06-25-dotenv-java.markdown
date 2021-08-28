@@ -23,7 +23,11 @@ We are consciously avoiding using **`System.getenv(...)`** to do the same.
 
 #### Sample Project
 
-[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of the aforementioned tool.
+[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot web application i've used to illustrate the usage of the aforementioned tool.
+
+Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 

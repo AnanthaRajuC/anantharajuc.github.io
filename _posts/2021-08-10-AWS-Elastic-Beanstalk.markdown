@@ -20,7 +20,11 @@ This post briefly documents the process of deploying a Spring Boot based web app
 
 ##### **`Sample Project`**
 
-[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to deploy on the AWS Elastic Beanstalk platform.
+[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot web application i've used to deploy on the AWS Elastic Beanstalk platform.
+
+Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 Find details on how to build an executable jar [here](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/documents/INSTALLATION.MD#building-the-jar).
 

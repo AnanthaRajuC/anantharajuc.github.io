@@ -22,7 +22,11 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 
 #### Sample Project
 
-[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the creation and usage of the created docker image.
+[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot web application i've used to illustrate the creation and usage of the created docker image.
+
+Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 

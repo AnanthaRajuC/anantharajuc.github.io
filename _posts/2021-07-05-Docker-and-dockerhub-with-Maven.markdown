@@ -22,15 +22,11 @@ This post briefly documents the process of using [dockerfile-maven](https://gith
 
 #### Sample Project
 
-[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot app i've used to illustrate the usage of [dockerfile-maven](https://github.com/spotify/dockerfile-maven)
+[Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot web application i've used to illustrate the usage of [dockerfile-maven](https://github.com/spotify/dockerfile-maven)
 
-| *Method*   |    |  *URL*                                 |
-|------------|----|----------------------------------------|
-| **GET**    |    | **`http://localhost:8080/index.html`** |
-| **GET**    |    | **`http://localhost:8080/`**           |
-| **PUT**    |    | **`http://localhost:8080/`**           | 
-| **POST**   |    | **`http://localhost:8080/`**           | 
-| **DELETE** |    | **`http://localhost:8080/`**           |
+Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 
