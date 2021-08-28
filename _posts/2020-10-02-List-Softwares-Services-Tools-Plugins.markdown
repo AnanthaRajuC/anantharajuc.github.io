@@ -12,7 +12,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Various
+##### `Various`
 
 **<a href="http://stackshare.io/" target="_blank" >stackshare</a>**  
 *Discover and discuss the best software tools and services.*  
@@ -114,7 +114,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Online IDE's
+##### `Online IDE's`
 
 **<a href="https://tio.run/#" target="_blank" >Try It Online</a>**  
 *Online compiler for several practical and recreational programming languages.*  
@@ -126,7 +126,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Platform as a Service (PaaS - Free Tier)
+##### `Platform as a Service (PaaS - Free Tier)`
 
 **<a href="https://www.heroku.com/" target="_blank" >Heroku</a>**  
 *Cloud platform that lets you build, deliver, monitor and scale apps.* 
@@ -148,7 +148,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Markdown
+##### `Markdown`
 
 **<a href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf" target="_blank" >Markdown PDF</a>**  
 *This Visual Studio Code extension convert Markdown file to pdf, html, png or jpeg file.* 
@@ -170,14 +170,14 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Version control
+##### `Version control`
 
 **<a href="https://www.sourcetreeapp.com/" target="_blank" >Sourcetree</a>**  
 *A free Git GUI client for Windows and Mac.* 
 
 ---
 
-###### Data
+##### `Data`
 
 
 **<a href="https://www.kaggle.com/datasets" target="_blank" >Kaggle Datasets</a>**  
@@ -220,7 +220,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### API's and Web Services
+##### `API's and Web Services`
 
 
 **<a href="http://www.downforeveryoneorjustme.com/" target="_blank" >down for everyone or just me</a>**  
@@ -269,7 +269,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Design
+##### `Design`
 
 **<a href="https://www.behance.net/" target="_blank" >Behance</a>**  
 *Showcase and discover the latest work from top online portfolios by creative professionals across industries.* 
@@ -301,7 +301,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-### IDE's (Online/Offline) and Plugins
+##### `IDE's (Online/Offline) and Plugins`
 
 **<a href="https://codenvy.io" target="_blank" >Codenvy</a>**  
 *Self-service Eclipse Che workspaces.*  
@@ -318,14 +318,14 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-### Virtualization
+##### `Virtualization`
 
 **<a href="http://www.vmware.com/in/products/player" target="_blank" >VMware Workstation</a>**  
 *A streamlined desktop virtualization application that runs one or more operating systems on the same computer without rebooting.*  
 
 ---
 
-### Web Browsers
+##### `Web Browsers`
 
 **<a href="https://blisk.io/" target="_blank" >Blisk</a>**  
 *A free browser for web developers, toolbox for development, debugging and testing: emulation, sync, analytics, and screenshots.*  
@@ -337,7 +337,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
   
 ---
 
-### Web Browser Plugins
+##### `Web Browser Plugins`
 
 **<a href="https://www.checkbot.io" target="_blank" >Checkbot</a>**  
 *Browser extension that tests if your website follows 50+ SEO, speed and security best practices. Crawls your site checking multiple pages at once.*  
@@ -412,7 +412,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 **<a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en" target="_blank" >LiveReload</a>**  
 *LiveReload monitors changes in the file system. As soon as you save a file, it is preprocessed as needed, and the browser is refreshed*  
 
-### Fiddles
+##### `Fiddles`
 
 **<a href="http://phpfiddle.org/" target="_blank" >PhpFiddle</a>**  
 *PhpFiddle provides Web IDE, Web Tools, APIs, Widgets, PHP Libraries, programming resources and execution environment for PHP/MySQL/SQLite, HTML/CSS and JavaScript coding online. PhpFiddle allows people to test PHP code snippets, create, execute and download web applications, for example, Zend Framework 2 projects.*  
@@ -437,7 +437,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 **<a href="https://github.com/AnanthaRajuC/Useful-Softwares-Tools-list/blob/master/Fiddles.md" target="_blank" >(more Fiddles)</a>**  
 **  
 
-### Communication
+##### `Communication`
 
 **<a href="https://gitter.im/" target="_blank" >Gitter</a>**  
 *communication product for communities and teams on GitHub.*  
@@ -457,7 +457,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 **<a href="https://www.hipchat.com/" target="_blank" >HipChat</a>**  
 *HipChat is hosted group chat and video chat built for teams. Supercharge real-time collaboration with persistent chat rooms, file sharing, and screen sharing.*  
 
-### Editor
+##### `Editor`
 
 **<a href="https://www.gitbook.com/editor" target="_blank" >GitBook Editor</a>**  
 *Expressive Markup (Markdown/Asciidoc), Advanced proofreading, Version Control*  
@@ -469,7 +469,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-### Presentation
+##### `Presentation`
 
 **<a href="https://speakerdeck.com/" target="_blank" >Speaker Deck</a>**  
 *Speaker Deck is the best way to share presentations online.*  
@@ -484,7 +484,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 **<a href="https://yhatt.github.io/marp/" target="_blank" >Marp</a>**  
 *Markdown presentation writer with Markdown, powered by Electron.*  
 
-### Entertainment
+##### `Entertainment`
 
 **<a href="http://www.commitstrip.com/en/?" target="_blank" >CommitStrip</a>**  
 *A daily strip recounting funny anecdotes of life as a coder mixed up with a dash of topical tech news.*  
@@ -494,7 +494,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 **<a href="http://donthitsave.com/" target="_blank" >Don't Hit Save</a>**  
 *A comic about tech, the workplace, and indie game development.*  
 
-### Java
+##### `Java`
 
 **<a href="https://www.codota.com/" target="_blank" >Codota</a>**  
 *AI Pair Programmer. Provides contextual code suggestions based on your code.*  
@@ -524,7 +524,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 **<a href="https://github.com/skylot/jadxhttps://bytecodeviewer.com/" target="_blank" >Bytecode Viewer</a>**  
 *A Java 8 Jar & Android APK Reverse Engineering Suite (Decompiler, Editor, Debugger & More).*  
 
-### Others
+##### `Others`
 
 **<a href="https://www.katacoda.com/" target="_blank" >Katacoda</a>**  
 *Interactive Learning Platform for Software Engineers.*  
@@ -581,7 +581,7 @@ Living document containing a list of free and Open-source softwares, Tools, Plug
 
 ---
 
-###### Services
+##### `Services`
 
 **<a href="http://htmlpreview.github.io/" target="_blank" >GitHub and BitBucket HTML Preview</a>** 
 *GitHub and BitBucket HTML Files' Preview.*      
