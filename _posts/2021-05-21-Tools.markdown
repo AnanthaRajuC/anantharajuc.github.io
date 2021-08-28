@@ -12,7 +12,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### `Desktop IDE's`
+##### `Desktop IDE's`
 
 **<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>**  
 *Java Integrated Development Environment (IDE).*  
@@ -29,7 +29,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Eclipse and Other IDE Plugin's
+##### `Eclipse and Other IDE Plugin's`
 
 **<a href="https://marketplace.eclipse.org/content/ansi-escape-console" target="_blank" >ANSI Escape in Console</a>**  
 *This Eclipse plugin interprets the ANSI escape sequences to color the console output.*  
@@ -46,7 +46,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Online IDE's
+##### `Online IDE's`
 
 **<a href="https://www.gitpod.io/" target="_blank" >Gitpod</a>**  
 *One-Click Online IDE for GitHub.*  
@@ -58,7 +58,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Command Line Tools
+##### `Command Line Tools`
 
 **<a href="https://curl.haxx.se/" target="_blank" >Curl</a>**  
 *Command line tool and library for transferring data with URLs.*   
@@ -75,14 +75,14 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Virtualization
+##### `Virtualization`
 
 **<a href="https://www.virtualbox.org/" target="_blank" >VirtualBox</a>**  
 *VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use.*   
 
 ---
 
-###### Containerization  
+##### `Containerization` 
 
 **<a href="https://www.docker.com/products/docker-desktop" target="_blank" >Docker Desktop</a>**  
 *The fastest way to containerize applications on desktop.*   
@@ -92,14 +92,14 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Editor
+##### `Editor`
 
 **<a href="https://notepad-plus-plus.org/" target="_blank" >Notepad++</a>**
 *Free source code editor which supports several programming languages running under the MS Windows environment.*  
 
 ---
 
-###### GitHub Bots
+##### `GitHub Bots`
 
 **<a href="https://dependabot.com/" target="_blank" >Dependabot</a>**  
 *Automated dependency updates.*    
@@ -111,7 +111,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Desktop Applications
+##### `Desktop Applications`
 
 **<a href="https://ngrok.com/" target="_blank" >ngrok</a>**  
 *Secure introspectable tunnels to localhost.*  
@@ -133,7 +133,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Chrome Web Browser Extension's
+##### `Chrome Web Browser Extension's`
 
 **<a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh" target="_blank" >JSON Viewer</a>**  
 *Chrome extension for printing JSON and JSONP. Customizable JSON/JSONP highlighter.*    
@@ -174,7 +174,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Services
+##### `Services`
 
 **<a href="https://fossa.io/" target="_blank" >FOSSA</a>**  
 *Dependency tracking, license compliance and attribution notices on autopilot.*  
