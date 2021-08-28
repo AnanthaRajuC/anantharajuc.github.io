@@ -5,7 +5,7 @@ categories: [ Spring Boot, Swagger UI ]
 tags: [ Spring Boot, Swagger UI ]
 layout: post
 date: 2021-06-27 18:40
-image: /assets/images/spring-boot-swagger-ui.jpg
+image: /assets//spring-boot/swagger-ui.jpg
 ---
 
 This post briefly documents the usage of **Swagger UI**, a visual documentation tool making it easy for back end implementation and client side consumption. 
@@ -105,10 +105,10 @@ This annotation describes the API response.
 
 - *Visual Documentation* : [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-![Swagger UI]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-ui.png)  
+![Swagger UI]({{ site.baseurl }}/assets//spring-boot/swagger/swagger-ui.png)  
 
 - *OpenAPI description in json format* : [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
 
-![OpenAPI Description]({{ site.baseurl }}/assets/images/spring-boot-swagger/swagger-api.png)  
+![OpenAPI Description]({{ site.baseurl }}/assets//spring-boot/swagger/swagger-api.png)  
 
 ---
