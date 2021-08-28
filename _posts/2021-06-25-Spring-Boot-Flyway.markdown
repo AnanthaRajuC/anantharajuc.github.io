@@ -5,7 +5,7 @@ categories: [ Spring Boot, Java ]
 tags: [ Spring Boot, Java ]
 layout: post
 date: 2021-06-25 10:40
-image: /assets//spring-boot/flyway.jpg
+image: /assets/images/spring-boot/flyway.jpg
 ---
 
 This post briefly documents the usage of **Flyway** for Relational Database version control. Flyway supports some of the most popular DBs available today, the list of the same can found [here](https://flywaydb.org/documentation/database/aurora-mysql).
@@ -25,7 +25,7 @@ This post briefly documents the usage of **Flyway** for Relational Database vers
 
 Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/imagesimages/common/spring-boot-minimal-web-app.PNG" /></div>
 
 #### Dependencies
 
@@ -133,14 +133,14 @@ In this project there are two files, **`V0_0_1__SBMWA_structure.sql`** (First fi
 
 H2DB can be accessed via a web console at **`http://localhost:8080/h2-console`**
 
-![H2DB Console]({{ site.baseurl }}/assets//spring-boot/flyway/sbmwa-h2-console.PNG)  
+![H2DB Console]({{ site.baseurl }}/assets/images/spring-boot/flyway/sbmwa-h2-console.PNG)  
 
 Upon execution of the program for the first, a table named **flyway_schema_history** will be created and it will maintain the history of database migrations.
 
-![H2DB Flyway Schema History Table]({{ site.baseurl }}/assets//spring-boot/flyway/sbmwa-h2-flyway_schema_history.PNG)  
+![H2DB Flyway Schema History Table]({{ site.baseurl }}/assets/images/spring-boot/flyway/sbmwa-h2-flyway_schema_history.PNG)  
 
 The actual tables and the necessary data to be populated into those tables as defined in the **`.sql`** files will also be available for use by the application. 
 
-![Tables and Data]({{ site.baseurl }}/assets//spring-boot/flyway/sbmwa-h2-tabel-data.PNG)  
+![Tables and Data]({{ site.baseurl }}/assets/images/spring-boot/flyway/sbmwa-h2-tabel-data.PNG)  
 
 ---

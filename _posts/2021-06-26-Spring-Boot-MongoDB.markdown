@@ -5,7 +5,7 @@ categories: [ Spring Boot, MongoDB ]
 tags: [ Spring Boot, MongoDB ]
 layout: post
 date: 2021-06-26 11:10
-image: /assets//spring-boot/mongodb.jpg
+image: /assets/images/spring-boot/mongodb.jpg
 ---
 
 This post briefly documents the usage of **MongoDB**, a general purpose, document-based, distributed database with Spring Boot. 
@@ -26,7 +26,7 @@ For other platforms, check the installation guide by **MongoDB**.
 
 Start the **mongod** server from the **`\bin`** folder of the MongoDB installation location (*`C:\Program Files\MongoDB\Server\4.0\bin`*). 
 
-![MongoDB Start]({{ site.baseurl }}/assets//spring-boot/mongodb/start-mongod-server.PNG)  
+![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot/mongodb/start-mongod-server.PNG)  
 
 #### Sample Project
 
@@ -43,7 +43,7 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 
 ##### ER Diagram
 
-![MongoDB Start]({{ site.baseurl }}/assets//spring-boot/mongodb/database-er-diagram.PNG)  
+![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot/mongodb/database-er-diagram.PNG)  
 
 ##### Sample Valid JSON Request Body for PUT and POST requests.
 
