@@ -12,7 +12,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ---
 
-###### Desktop IDE's
+###### `Desktop IDE's`
 
 **<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>**  
 *Java Integrated Development Environment (IDE).*  
