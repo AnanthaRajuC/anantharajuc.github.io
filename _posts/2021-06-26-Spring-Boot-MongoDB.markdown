@@ -30,16 +30,11 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 
 #### Sample Project
 
-[Spring Boot MongoDB](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB) is the sample **CRUD** Spring Boot application i've used to illustrate the usage of MongoDB.
+[Spring Boot MongoDB](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB) is the sample **CRUD** Spring Boot web application i've used to illustrate the usage of MongoDB.
 
-| *Method*   |    |  *URL*                                                |
-|------------|----|-------------------------------------------------------|
-| **GET**    |    | **`http://localhost:8080/api/v1/student`**            |
-| **GET**    |    | **`http://localhost:8080/api/v1/student/{id}`**       |
-| **PUT**    |    | **`http://localhost:8080/api/v1/student/{id}`**       |
-| **POST**   |    | **`http://localhost:8080/api/v1/student`**            |
-| **POST**   |    | **`http://localhost:8080/api/v1/student/name/{name}`**|
-| **DELETE** |    | **`http://localhost:8080/api/v1/student/{id}`**       |
+Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/spring-boot/url.PNG" /></div>
 
 ##### ER Diagram
 
