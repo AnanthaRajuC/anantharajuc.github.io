@@ -34,7 +34,7 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 
 Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the application URLs.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/spring-boot/url.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/spring-boot/mongodb/url.PNG" /></div>
 
 ##### ER Diagram
 
