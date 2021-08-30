@@ -29,17 +29,25 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 #### Dependencies
 
-This implementation has two dependencies, **flyway-core** and **h2**. The **maven**/**gradle** dependencies of the same are mentioned below.
+This implementation has **spring-boot-starter-test** and **h2**. The **maven**/**gradle** dependencies of the same are mentioned below.
 
-##### Flyway
+##### spring-boot-starter-test
 
 ~~~xml
-<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
 <dependency>
-    <groupId>org.flywaydb</groupId>
-    <artifactId>flyway-core</artifactId>
-    <version>7.10.0</version>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
 </dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+</dependency>
+<dependency>
+	<groupId>com.h2database</groupId>
+	<artifactId>h2</artifactId>
+	<scope>runtime</scope>
+</dependency>	
 ~~~
 
 or
@@ -47,24 +55,6 @@ or
 ~~~txt
 // https://mvnrepository.com/artifact/org.flywaydb/flyway-core
 implementation group: 'org.flywaydb', name: 'flyway-core', version: '7.10.0'
-~~~
-
-##### H2DB
-
-~~~xml
-<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
-<dependency>
-    <groupId>com.h2database</groupId>
-    <artifactId>h2</artifactId>
-    <version>1.4.200</version>
-</dependency>
-~~~
-
-or
-
-~~~txt
-// https://mvnrepository.com/artifact/com.h2database/h2
-testImplementation group: 'com.h2database', name: 'h2', version: '1.4.200'
 ~~~
 
 #### Basic Usage
