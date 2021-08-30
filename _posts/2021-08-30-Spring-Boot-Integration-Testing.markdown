@@ -10,6 +10,25 @@ image: /assets/images/spring-boot-testing.jpg
 
 This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework.
 
+Unit test's targets small units of code ex: a method, a class. Integration Test covers multiple units because it tests the interaction between two or more components. 
+
+Spring Boot Web Applications are built in multiple layers. 
+
+- Web Controller Layer  
+- Business Service Layer  
+- Data Repository Layer  
+
+**`given-when-then`** human readable test methodology is followed here. It lends more clarity to our tests as we are following a natural language that is easy to read.
+
+- **`given`**  
+pre-conditions and requirements for actions.  
+
+- **`when`**  
+action we want to test.  
+
+- **`then`**  
+verification of what should happen after execution of action.  
+
 ---
 
 #### Minimum Software Requirements
@@ -20,6 +39,8 @@ This post briefly captures the process of writing integration tests for a Spring
 - [Mockito](https://site.mockito.org/)
 - [JUnit5](https://junit.org/junit5/)
 - [Lombok](https://projectlombok.org/)
+
+*Note*: Ensure JUnit5 is on the project build path.
 
 ---
 
@@ -39,23 +60,7 @@ In the **`application.properties`** file present in the **resources** folder, se
 
 This implementation has a dependency on **spring-boot-starter-test**, **h2**, **lombok** dependencies. The **maven**/**gradle** dependencies of the same are mentioned below.
 
-~~~xml
-<dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-test</artifactId>
-	<scope>test</scope>
-</dependency>
-<dependency>
-	<groupId>com.h2database</groupId>
-	<artifactId>h2</artifactId>
-	<scope>runtime</scope>
-</dependency>	
-<dependency>
-	<groupId>org.projectlombok</groupId>
-	<artifactId>lombok</artifactId>
-	<optional>true</optional>
-</dependency>
-~~~
+<script src="https://gist.github.com/AnanthaRajuC/c045ba794147177ae597218f685e6132.js"></script>
 
 ---
 
