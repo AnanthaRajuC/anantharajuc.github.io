@@ -8,7 +8,9 @@ date: 2021-07-05 20:10
 image: /assets/images/maven-docker-hub.png
 ---
 
-This post briefly documents the process of using [dockerfile-maven](https://github.com/spotify/dockerfile-maven), a Maven tool for integrating Docker build process with the Maven build process.
+This post briefly documents the process of using [dockerfile-maven](https://github.com/spotify/dockerfile-maven), a Maven tool for integrating Docker build process with the Maven build process. Here we use the aforementioned plugin to build and push docker images from local development environment/machine to DockerHub.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/maven-docker-hub/illustration.png" /></div>
 
 ---
 
@@ -72,6 +74,16 @@ In the same **`pom.xml`** file, add the following details as well.
 
 *Note*: **artifactId** must be in lower case and must match the repository name created on Docker Hub.
 
+Ensure that you are able to package the project into an executable jar. If there's an issue at this step, make sure you have the following plugin in your pom.xml file to build the project.
+
+~~~xml
+<!-- Package as an executable jar/war. -->
+<plugin>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
+</plugin>
+~~~
+
 #### Basic Usage
 
 Create a file named **`Dockerfile`** in the root of your project with the following details.
@@ -105,7 +117,9 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 
 - Create a account on [Docker Hub](https://hub.docker.com/) if you don't already have one.
 
-- Create a repository with a name matching the project's **artifactId**. For this example, the Docker Hub repository name is **spring-boot-minimal-web-app**
+- Create a repository with a name matching the project's **artifactId**. For this example, the Docker Hub repository name is **spring-boot-minimal-web-app**  
+
+*Note*: DockerHub repository name supports only lower case letters and the _ character
 
 ##### Maven
 
