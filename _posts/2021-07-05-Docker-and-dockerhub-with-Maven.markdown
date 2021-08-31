@@ -121,6 +121,12 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 
 *Note*: DockerHub repository name supports only lower case letters and the _ character
 
+**Important**: Authenticate your machine for pushing images to dockerhub
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/maven-docker-hub/docker-login.PNG" /></div>
+
+[docker login](https://docs.docker.com/engine/reference/commandline/login/)
+
 ##### Maven
 
 From the command line, navigate to project directory where the **pom.xml** file is present.
