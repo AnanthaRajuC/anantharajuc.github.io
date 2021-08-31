@@ -36,31 +36,7 @@ A java project does not necessarily have any library dependency in order to crea
 
 However, in the plugins section of the **`pom.xml`** dependency management file there must be the [dockerfile-maven plugin](https://github.com/spotify/dockerfile-maven).
 
-~~~xml
-<!--  Plugin for building and pushing Docker image to Docker Hub. -->      	        
-<plugin>
-	<groupId>com.spotify</groupId>
-	<artifactId>dockerfile-maven-plugin</artifactId>
-	<version>1.4.13</version>
-	<configuration>
-		<repository>YOUR_DOCKER_HUB_USERNAME/${project.artifactId}</repository>
-		<tag>${project.version}</tag>
-		<buildArgs>
-			<JAR_FILE>target/${project.artifactId}-${project.version}.jar</JAR_FILE>
-		</buildArgs>
-	</configuration>
-	<executions>
-		<execution>
-			<id>default</id>
-			<phase>install</phase>
-			<goals>
-				<goal>build</goal>
-				<goal>push</goal>
-			</goals>
-		</execution>
-	</executions>
-</plugin>  	       
-~~~
+<script src="https://gist.github.com/AnanthaRajuC/3d29af2443cb258798e9c660418d0a6a.js"></script>
 
 *Reference code*: [pom.xml](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/pom.xml)
 
@@ -88,28 +64,7 @@ Ensure that you are able to package the project into an executable jar. If there
 
 Create a file named **`Dockerfile`** in the root of your project with the following details.
 
-~~~txt
-# Start with a base image containing Java runtime
-FROM openjdk:8-jdk-alpine
-
-# Add Maintainer Info
-LABEL maintainer="example@domain.com"
-
-# Add a volume pointing to /tmp
-VOLUME /tmp
-
-# Make port 8080 available to the world outside this container
-EXPOSE 8080
-
-# The application's jar file
-ARG JAR_FILE=target/Spring-Boot-Minimal-Web-App-latest.jar
-
-# Add the application's jar to the container
-ADD ${JAR_FILE} Spring-Boot-Minimal-Web-App-latest.jar
-
-# Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boot-Minimal-Web-App-latest.jar"]
-~~~
+<script src="https://gist.github.com/AnanthaRajuC/cb8ff191f322dd8d2220a2f2cb870fbc.js"></script>
 
 *Reference code*: [Dockerfile](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/Dockerfile)
 
@@ -125,7 +80,7 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/maven-docker-hub/docker-login.PNG" /></div>
 
-[docker login](https://docs.docker.com/engine/reference/commandline/login/)
+[docker login documentation](https://docs.docker.com/engine/reference/commandline/login/)
 
 ##### Maven
 
