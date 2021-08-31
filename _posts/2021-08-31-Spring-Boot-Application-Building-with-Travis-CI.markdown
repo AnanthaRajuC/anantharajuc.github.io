@@ -46,15 +46,25 @@ Add a a **`Dockerfile`** file to the project.
 
 <script src="https://gist.github.com/AnanthaRajuC/cb8ff191f322dd8d2220a2f2cb870fbc.js"></script>
 
-#### **`.travis.yml`**
+#### **`.travis.yml`**  
 
 Add a **`.travis.yml`** file to the project.
 
 <script src="https://gist.github.com/AnanthaRajuC/1a3588a49b06b4623c793001913c557c.js"></script>
 
-#### **`Travis CI`**
+#### **`Docker Hub`**  
 
-Login to (https://app.travis-ci.com)[https://app.travis-ci.com] and activate the repository of interest.
+In the **`Security`** section of your Docker Hub account **`Settings`** page, click on the **`New Access Token`** button to generate a new access token with **`Read`**, **`Write`**, **`Delete`** scope. If you prefer using an existing access token, use it.
+
+*Note* : This access token will be used as the value for the *DOCKER_PASS* **`Environment Variables`** key.
+
+*Reference* : [https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token](https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token)
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/6-docker-hub-access-token.png" /></div>
+
+#### **`Travis CI`**  
+
+Login to [https://app.travis-ci.com](https://app.travis-ci.com) and activate the repository of interest.
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/1-travis-ci-login.png" /></div>
 
@@ -72,17 +82,8 @@ In Travis CI dashboard, under the repositories tab click on the settings button 
 
 In the **`Environment Variables`** section of **`Settings`** tab of the selected repository, add Docker Hub user details.
 
-`DOCKER_USER` : `YOUR_DOCKER_HUB_USERNAME`    
-`DOCKER_PASS` : `YOUR_DOCKER_HUB_ACCESS_TOKEN`    
+*DOCKER_USER* : *YOUR_DOCKER_HUB_USERNAME*  
+*DOCKER_PASS* : *YOUR_DOCKER_HUB_ACCESS_TOKEN*  
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/5-docker-hub-credentials.png" /></div>
-
-
-
-
-
-
-
-
-
 
