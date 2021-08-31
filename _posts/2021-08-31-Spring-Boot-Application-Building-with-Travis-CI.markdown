@@ -56,26 +56,26 @@ Add a **`.travis.yml`** file to the project.
 
 Login to (https://app.travis-ci.com)[https://app.travis-ci.com] and activate the repository of interest.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/1-travis-ci-login.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/1-travis-ci-login.png" /></div>
 
 Approve & Install Travis CI on the selected repository.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/2-github-approve-install-travis-ci.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/2-github-approve-install-travis-ci.png" /></div>
 
 Confirm  Travis CI installation by entering the GitHub account password.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/3-confirm-access.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/3-confirm-access.png" /></div>
 
 In Travis CI dashboard, under the repositories tab click on the settings button associated with the repository.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/4-repositories.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/4-repositories.png" /></div>
 
 In the **`Environment Variables`** section of **`Settings`** tab of the selected repository, add Docker Hub user details.
 
--	`DOCKER_USER` : `YOUR_DOCKER_HUB_USERNAME`  
--	`DOCKER_PASS` : `YOUR_DOCKER_HUB_ACCESS_TOKEN`  
+`DOCKER_USER` : `YOUR_DOCKER_HUB_USERNAME`    
+`DOCKER_PASS` : `YOUR_DOCKER_HUB_ACCESS_TOKEN`    
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/5-docker-hub-credentials.PNG" /></div>
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/5-docker-hub-credentials.png" /></div>
 
 
 
