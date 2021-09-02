@@ -99,6 +99,7 @@ git push origin main
 
 We can now expect travis ci to run the tests, build the docker image of the application and push the same to dockerhub.
 
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/7-travis-ci-job-status.png" /></div>
 
-
+---
 
