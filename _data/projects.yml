@@ -3,6 +3,8 @@
   read: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/README.md#spring-boot-application-templatestarter-project-
   github: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template
   gh_user_repo: AnanthaRajuC/Spring-Boot-Application-Template
+  travis_ci_url: https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template
+  travis_ci_status: https://api.travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master
   
 - title: Bookmarc - A Portable Web Browser Bookmark's Manager
   description: Bookmarc is a portable web Browsers' bookmark's manager. The idea behind this project is to conveniently browse through and manage the URLs bookmarked to be revisited later on.

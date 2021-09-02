@@ -87,3 +87,16 @@ In the **`Environment Variables`** section of **`Settings`** tab of the selected
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/5-docker-hub-credentials.png" /></div>
 
+#### **`GitHub`**  
+
+Now that we've configured the sample Spring Boot Application with necessary files (Dockerfile, .travis.yml) and the required services (Travis CI, Docker Hub) with necessary environment variables and access tokens, we can push the code changes from our local development machine to our remote GitHub repository. 
+
+```shell
+git push origin main
+```
+
+We can now expect travis ci to run the tests, build the docker image of the application and push the same to dockerhub.
+
+
+
+
