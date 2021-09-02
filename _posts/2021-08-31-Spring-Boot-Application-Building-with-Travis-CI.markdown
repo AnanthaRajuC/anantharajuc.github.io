@@ -13,7 +13,9 @@ This post briefly captures the process of triggering a Spring Boot application d
 1. Developer pushes code to GitHub
 2. Job is triggered in Travis CI  
 	2.1 Travis CI builds Docker Image and pushes to Docker Hub  
-
+	
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/continuous-delivery-with-travis-ci-architecture.png" /></div>  
+	
 ---
 
 #### Minimum Software Requirements
