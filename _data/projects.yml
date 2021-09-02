@@ -13,15 +13,21 @@
   read: https://github.com/AnanthaRajuC/Bookmarc/blob/main/README.md#bookmarc
   github: https://github.com/AnanthaRajuC/Bookmarc
   gh_user_repo: AnanthaRajuC/Bookmarc
+  gh_last_commit_url: https://github.com/AnanthaRajuC/Bookmarc/commits/master
+  gh_last_commit_status: https://img.shields.io/github/last-commit/anantharajuc/Bookmarc
   
 - title: Reserved Key Words- A list of various programming languages
   description: In a computer language, a reserved word (also known as a reserved identifier) is a word that cannot be used as an identifier, such as the name of a variable, function, or label – it is "reserved from use". This is a non-exhaustive list of such Reserved Key Words of various programming languages.
   read: https://github.com/AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages#reserved-key-words-list-of-various-programming-languages
   github: https://github.com/AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages
   gh_user_repo: AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages
+  gh_last_commit_url: https://github.com/AnanthaRajuC/Reserved-Key-Words-list-of-various-programming-languages/commits/master
+  gh_last_commit_status: https://img.shields.io/github/last-commit/anantharajuc/Reserved-Key-Words-list-of-various-programming-languages
 
 - title: List of programming language lists
   description: A compilation of various lists of programming languages grouped by type.
   read: https://github.com/AnanthaRajuC/List-of-programming-language-lists#list-of-programming-language-lists
   github: https://github.com/AnanthaRajuC/List-of-programming-language-lists
   gh_user_repo: AnanthaRajuC/List-of-programming-language-lists
+  gh_last_commit_url: https://github.com/AnanthaRajuC/List-of-programming-language-lists/commits/master
+  gh_last_commit_status: https://img.shields.io/github/last-commit/anantharajuc/List-of-programming-language-lists
