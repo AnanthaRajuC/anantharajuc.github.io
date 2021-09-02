@@ -44,7 +44,7 @@ In the **`application.properties`** file present in the **resources** folder, se
 
 #### **`Dockerfile`**
 
-Add a a **`Dockerfile`** file to the project.
+Add a **`Dockerfile`** file to the project.
 
 <script src="https://gist.github.com/AnanthaRajuC/cb8ff191f322dd8d2220a2f2cb870fbc.js"></script>
 
@@ -102,4 +102,3 @@ We can now expect travis ci to run the tests, build the docker image of the appl
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/7-travis-ci-job-status.png" /></div>
 
 ---
-
