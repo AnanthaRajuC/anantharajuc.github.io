@@ -1,8 +1,8 @@
 ---
-title: "Spring Boot Application Docker Image Building & Pushing to Docker Hub from GitHub code push trigger with Travis CI"
+title: "Spring Boot Application Continuous Delivery with Travis CI, GitHub and Docker Hub"
 author: anantharajuc
-categories: [ CI, Spring Boot, Travis CI, GitHub, Docker Hub ]
-tags: [ CI, Spring Boot, Travis CI, GitHub, Docker Hub ]
+categories: [ CI, Spring Boot, Travis CI, GitHub, Docker Hub, Continuous Delivery ]
+tags: [ CI, Spring Boot, Travis CI, GitHub, Docker Hub, Continuous Delivery ]
 layout: post
 date: 2021-08-31 10:50
 image: /assets/images/spring-boot-github-travis-ci.jpg

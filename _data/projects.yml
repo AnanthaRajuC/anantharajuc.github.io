@@ -3,6 +3,8 @@
   read: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/README.md#spring-boot-application-templatestarter-project-
   github: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template
   gh_user_repo: AnanthaRajuC/Spring-Boot-Application-Template
+  gh_last_commit_url: https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/commits/master
+  gh_last_commit_status: https://img.shields.io/github/last-commit/anantharajuc/Spring-Boot-Application-Template
   travis_ci_url: https://travis-ci.org/github/AnanthaRajuC/Spring-Boot-Application-Template
   travis_ci_status: https://api.travis-ci.org/AnanthaRajuC/Spring-Boot-Application-Template.svg?branch=master
   
