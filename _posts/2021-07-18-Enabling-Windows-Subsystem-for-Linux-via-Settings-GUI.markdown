@@ -1,8 +1,8 @@
 ---
-title: "Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu"
+title: "Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI"
 author: anantharajuc
-categories: [ Windows, Operating System ]
-tags: [ Windows, Operating System ]
+categories: [ WSL, Operating System ]
+tags: [ WSL, Operating System ]
 layout: post
 date: 2021-07-18 18:50
 image: /assets/images/wsl.png
@@ -57,7 +57,7 @@ Create a user account and password for your new Linux distribution. [*Details*](
 ![Ubuntu - Account]({{ site.baseurl }}/assets/images/wsl/17.PNG)  
 
 This process concludes the installation and set up of a Linux distribution that is completely integrated with your Windows operating system!
-
+	
 ##### Demonstration
 		
 ![Command Line]({{ site.baseurl }}/assets/images/wsl/18.PNG)  		
