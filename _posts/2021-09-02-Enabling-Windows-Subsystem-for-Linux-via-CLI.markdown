@@ -12,6 +12,8 @@ The **Windows Subsystem for Linux** lets developers run a **GNU/Linux** environm
 
 This post documents the process of enabling and manually installing Windows Subsystem for Linux on the **Windows 10** OS platform via CLI as described by Ubuntu [https://ubuntu.com/wsl](https://ubuntu.com/wsl).
 
+Alternatively, check out this post on [Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI]({{ site.baseurl }}/Enabling-Windows-Subsystem-for-Linux-via-Settings-GUI/)  
+
 ---
 
 #### Minimum Requirements
