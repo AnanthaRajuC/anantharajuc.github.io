@@ -101,4 +101,10 @@ We can now expect travis ci to run the tests, build the docker image of the appl
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/7-travis-ci-job-status.png" /></div>
 
+#### **`Docker Hub`**  
+
+Finally, the lastest docker image of the application must be present in your docker hub registry.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/8-docker-hub-image.PNG" /></div>
+
 ---
