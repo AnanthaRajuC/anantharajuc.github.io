@@ -33,6 +33,7 @@ Start the **mongod** server from the **`\bin`** folder of the MongoDB installati
 <a class="github-button" href="https://github.com/AnanthaRajuC/Spring-Boot-MongoDB" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star AnanthaRajuC/Spring-Boot-MongoDB on GitHub">Star</a>
 <a class="github-button" href="https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork AnanthaRajuC/Spring-Boot-MongoDB on GitHub">Fork</a>
 <a class="github-button" href="https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/archive/HEAD.zip" data-icon="octicon-download" data-size="large" aria-label="Download AnanthaRajuC/Spring-Boot-MongoDB on GitHub">Download</a>
+<a href="https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/commits/master"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/anantharajuc/Spring-Boot-MongoDB"></a>
 
 [Spring Boot MongoDB](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB) is the sample **CRUD** Spring Boot web application i've used to illustrate the usage of MongoDB.
 
