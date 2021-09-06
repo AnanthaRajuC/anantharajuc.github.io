@@ -1,8 +1,8 @@
 ---
 title: "Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI"
 author: anantharajuc
-categories: [ WSL, Operating System ]
-tags: [ WSL, Operating System ]
+categories: [ WSL, Operating System, Installation ]
+tags: [ WSL, Operating System, Installation ]
 layout: post
 date: 2021-07-18 18:50
 image: /assets/images/wsl.png
