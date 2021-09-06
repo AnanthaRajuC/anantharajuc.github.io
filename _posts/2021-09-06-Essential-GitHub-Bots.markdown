@@ -10,7 +10,7 @@ image: /assets/images/github-bot.png
 
 GitHub bots are essentially GitHub apps to automate and improve software development workflow. The following is a compilation of a few **open source and free to use** GitHub bots i rely on to ease certain aspects of my software development flow.
 
-You can explore other GitHub apps on the (GitHub marketplace)[https://github.com/marketplace](https://github.com/marketplace).
+You can explore other GitHub apps on the [GitHub marketplace](https://github.com/marketplace).
 
 To build you own GitHub apps, refer [Probot](https://probot.github.io/docs/), a framework for building GitHub Apps in [Node.js](https://nodejs.org/en/).
 
