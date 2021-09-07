@@ -18,6 +18,8 @@ This post briefly documents the usage of **MongoDB**, a general purpose, documen
 - [MongoDB](https://docs.mongodb.com/manual/installation/) Community Edition Server
 - [Postman](https://www.postman.com/downloads/)
 
+---
+
 ##### MongoDB Installation
 
 On Windows platform, create a folder titled **data** inside another folder named **db**, in **`C:`** drive. (*`C:\data\db`*)
@@ -27,6 +29,8 @@ For other platforms, check the installation guide by **MongoDB**.
 Start the **mongod** server from the **`\bin`** folder of the MongoDB installation location (*`C:\Program Files\MongoDB\Server\4.0\bin`*). 
 
 ![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot/mongodb/start-mongod-server.PNG)  
+
+---
 
 #### Sample Project
 
@@ -41,9 +45,15 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/spring-boot/mongodb/url.PNG" /></div>
 
+*Noticed an issue with this website? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/pulls) on GitHub!*
+
+---
+
 ##### ER Diagram
 
 ![MongoDB Start]({{ site.baseurl }}/assets/images/spring-boot/mongodb/database-er-diagram.PNG)  
+
+---
 
 ##### Sample Valid JSON Request Body for PUT and POST requests.
 
@@ -82,6 +92,8 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 }
 ```
 
+---
+
 #### Dependencies
 
 This implementation has one dependency, **spring-boot-starter-data-mongodb**. The **maven**/**gradle** dependencies of the same is mentioned below.
@@ -101,6 +113,8 @@ or
 implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 ~~~
 
+---
+
 #### Basic Usage
 
 ##### Application Configuration
@@ -117,6 +131,8 @@ spring.data.mongodb.port=27017
 # Database name.
 spring.data.mongodb.database=spring
 ~~~
+
+---
 
 ##### Application Execution
 
