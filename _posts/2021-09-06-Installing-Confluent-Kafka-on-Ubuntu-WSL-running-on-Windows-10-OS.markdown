@@ -18,8 +18,8 @@ This post documents the process of installing Confluent Kafka community edition 
 
 **Note**: *To enable/install WSL on Windows 10, refer to the following posts.*
 
-	- [Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via CLI](https://anantharajuc.github.io/Enabling-Windows-Subsystem-for-Linux-via-CLI/)  
-	- [Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI](https://anantharajuc.github.io/Enabling-Windows-Subsystem-for-Linux-via-Settings-GUI/)  
+- [Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via CLI](https://anantharajuc.github.io/Enabling-Windows-Subsystem-for-Linux-via-CLI/)  
+- [Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI](https://anantharajuc.github.io/Enabling-Windows-Subsystem-for-Linux-via-Settings-GUI/)  
 
 ---
 
@@ -27,11 +27,11 @@ This post documents the process of installing Confluent Kafka community edition 
 
 From a browser on your Windows 10 OS, navigate to [https://www.confluent.io/get-started?product=software](https://www.confluent.io/get-started?product=software), provide the necessary details.  
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/15.PNG" /></div>    
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/15.png" /></div>    
 
 you will now be re-directed to [https://www.confluent.io/installation](https://www.confluent.io/installation) page. Click on the **TAR** download button to save the software on your Windows 10 OS file system. The size of the file is approximately **1.4 GB**.  
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/16.PNG" /></div>    
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/16.png" /></div>    
 
 ---
 
@@ -77,6 +77,8 @@ Add **CONFLUENT_HOME** and also set **PATH** to include the kafka `/bin` folder.
 
 To check if **CONFLUENT_HOME** has been successfully set or not, issue `echo $CONFLUENT_HOME` command.
 
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/24.PNG" /></div>  
+
 ---
 
 ##### UPDATE Confluent Kafka server.properties file  
@@ -85,7 +87,7 @@ Edit **listeners**, **advertised.listeners** values and uncomment **listener.sec
 
 Example: `nano /home/anantharajuc/confluent-6.2.0/etc/kafka/server.properties`
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/23.PNG" /></div>  
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/25.PNG" /></div>  
 
 ---
 
