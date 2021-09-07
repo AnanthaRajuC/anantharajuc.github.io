@@ -99,7 +99,7 @@ Now, start the confluent services by issuing the `Start Confluent Kafka Server` 
 
 In a web browser on your Windows 10 OS, navigate to **http://localhost:9021/** to view the Confluent Kafka web portal.
 
-<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/27.PNG" /></div>    
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/kafka-on-wsl/27.png" /></div>    
 
 ---
 
