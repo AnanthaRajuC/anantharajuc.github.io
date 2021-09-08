@@ -54,6 +54,8 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 In the **`application.properties`** file present in the **resources** folder, set the **`spring.profiles.active`** value to **application-h2db**.  
 
+*Noticed an issue with this Sample Project? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls) on GitHub!*
+
 ---
 
 #### Dependencies

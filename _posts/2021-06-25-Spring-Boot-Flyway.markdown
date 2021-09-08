@@ -27,6 +27,8 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
+*Noticed an issue with this Sample Project? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls) on GitHub!*
+
 #### Dependencies
 
 This implementation has **spring-boot-starter-test** and **h2**. The **maven**/**gradle** dependencies of the same are mentioned below.

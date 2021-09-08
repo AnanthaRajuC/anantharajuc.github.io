@@ -40,6 +40,8 @@ In the **`application.properties`** file present in the **resources** folder, se
 
 *Note*: **`mvn package -Dmaven.test.skip=true`** Command to build the project by skipping all tests.
 
+*Noticed an issue with this Sample Project? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls) on GitHub!*
+
 ---
 
 #### **`Dockerfile`**

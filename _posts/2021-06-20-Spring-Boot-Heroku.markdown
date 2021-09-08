@@ -25,6 +25,8 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/common/spring-boot-minimal-web-app.PNG" /></div>
 
+*Noticed an issue with this Sample Project? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls) on GitHub!*
+
 #### Heroku Deployment steps
 
 - In this step we assume that the project repository (source code files) is tracked through git, the code is committed and is ready for deployment.
