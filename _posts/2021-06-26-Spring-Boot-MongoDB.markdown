@@ -45,7 +45,7 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/spring-boot/mongodb/url.PNG" /></div>
 
-*Noticed an issue with this website? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/pulls) on GitHub!*
+*Noticed an issue with this Sample Project? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-MongoDB/pulls) on GitHub!*
 
 ---
 
