@@ -140,7 +140,7 @@ Connect to the DB by entering the following details in MySQL Workbench.
 
 ---
 
-#### Cleanup
+#### Management
 
 **`docker stop [container_id]`**  
 Stop the container.
@@ -152,6 +152,15 @@ List all the containers, including the ones that have finished executing to chec
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/docker-mysql/16.PNG" /></div>  
 
+**`docker restart [container_name]`**  
+Restart the container.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/docker-mysql/18.PNG" /></div>  
+
+---
+
+#### Cleanup
+
 **`docker rm [container_name]`**  
 Remove the container.
 
@@ -162,6 +171,5 @@ List all the containers, including the ones that have finished executing to chec
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/docker-mysql/15.PNG" /></div>    
 
----
 
 
