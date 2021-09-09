@@ -18,6 +18,9 @@
 
     <!-- Bootstrap Modified -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+	
+	<!-- Dark Mode Switch CSS -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/dark-mode.css">
 
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
@@ -61,6 +64,16 @@
             <ul class="navbar-nav ml-auto d-flex align-items-center">
                 {% include search-lunr.html %}
             </ul>
+			
+			<ul  class="navbar-nav ml-auto d-flex align-items-center">
+			<div class="form-check form-switch">
+				<input type="checkbox" class="form-check-input" id="darkSwitch">
+				<label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+			</div>
+			<script src="{{site.baseurl}}/assets/js/dark-mode-switch.min.js"></script>
+			</ul>
+			
+			
         </div>
     </div>
     </nav>
