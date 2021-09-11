@@ -43,6 +43,30 @@ permalink: "/about/"
     </div>
 	
 	</br>
+	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>Latest Articles</span> <a href="{{site.baseurl}}/index.html"><span style="float:right;">View All</span></a></h4>
+
+	<!-- latest post -->
+    {% assign latest_post = site.posts[0] %}
+	
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ latest_post.date | date: '%b %d, %Y' }}</small></span></p>
+	 
+	<!-- second latest post -->
+    {%- assign second_post = site.posts[1] -%}   
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ second_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ second_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	<!-- third latest post -->
+    {%- assign third_post = site.posts[2] -%}        
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ third_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ third_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	<!-- fourth latest post -->
+    {%- assign fourth_post = site.posts[3] -%}        
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ fourth_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ fourth_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	<!-- fifth latest post -->
+    {%- assign fifth_post = site.posts[4] -%}        
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ fifth_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ fifth_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	</br>
 	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>Projects</span></h4>
 	
 	
