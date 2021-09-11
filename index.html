@@ -7,211 +7,119 @@ description: "Personal Blog"
 ---
 
 <div class="container">
-   {% if page.url == "/" %}
-   <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-   <div class="row remove-site-content-margin">
-   
-      <!-- latest post -->
-      {% assign latest_post = site.posts[0] %}
-      <div class="col-md-6">
-         <div class="card border-0 mb-4 box-shadow">   
-            <a href="{{site.baseurl}}{{latest_post.url}}">
-            <div class="topfirstimage" style="background-image: url({% if latest_post.image contains "://" %}{{ latest_post.image }}{% else %} {{site.baseurl}}/{{ latest_post.image}}{% endif %}); height: 200px;    background-size: cover;    background-repeat: no-repeat;">
-         </div>
-         </a>
-         <div class="card-body px-0 pb-0 d-flex flex-column align-items-start">
-            <h2 class="h4 font-weight-bold">
-               <a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.title }}</a>
-            </h2>
-            <p class="excerpt">
-               {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}
-            </p>
+
+</br>
+
+    <div class="row gap-y listrecent listrecent listauthor">
+    {% for author in site.authors %}
+        <div>
+            <div class="p-4 border rounded">
+            <div class="row">
+            <div class="col-md-3 mb-4 mb-md-0"><img alt="{{ author[1].name }}" src="{{site.baseurl}}/{{ author[1].avatar }}" height="200" width="200"></div>
+            <div class="col-md-9">
+            <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
+            <!--<h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
+            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>-->
+            <div class="excerpt">{{ author[1].bio }}</div>
+            </a>
+            <div class="icon-block mt-3 d-flex justify-content-between">  
             <div>
-               <small class="d-block text-muted">
-               In <span class="catlist">
-               {% for category in latest_post.categories %}
-               <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-               {% endfor %}
-               </span>                   
-               </small>
-               <small class="text-muted">
-               {{ latest_post.date | date: '%b %d, %Y' }}
-               </small>
+            <a target="_blank" href="{{ author[1].twitter }}"><i class="fab fa-twitter text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].instagram }}"><i class="fab fa-instagram text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].github }}"><i class="fab fa-github text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].linkedin }}"><i class="fab fa-linkedin text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].spotify }}"><i class="fab fa-spotify text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].stackoverflow }}"><i class="fab fa-stack-overflow text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].goodreads }}"><i class="fab fa-goodreads text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].soundcloud }}"><i class="fab fa-soundcloud text-muted" aria-hidden="true"></i></a>  &nbsp;
+			<a target="_blank" href="{{ author[1].quora }}"><i class="fab fa-quora text-muted" aria-hidden="true"></i></a>  &nbsp;
+            <a target="_blank" href="{{ author[1].site }}"><i class="fa fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;
+			<a target="_blank" href="{{ author[1].clubhouse }}"><i class="far fa-hand-paper text-muted" aria-hidden="true"></i></a> &nbsp;
             </div>
-         </div>
-      </div>
-   </div>
-   <div class="col-md-6">
-   
-      <!-- second latest post -->
-      {%- assign second_post = site.posts[1] -%}        
-      <div class="mb-3 d-flex align-items-center">
-         {% if second_post.image %}
-         <div class="col-md-4">
-            <a href="{{site.baseurl}}{{second_post.url}}">
-               <!-- <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{ second_post.image | absolute_url }}{% endif %}" alt="{{ second_post.title }}"> -->
-               <img class="w-100" src="{% if second_post.image contains "://" %}{{ second_post.image }}{% else %}{{site.baseurl}}/{{second_post.image}}{% endif %}" alt="{{ second_post.title }}">
-            </a>
-         </div>
-         {% endif %}                
-         <div>
-            <h2 class="mb-2 h6 font-weight-bold">
-               <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
-            </h2>
-            <small class="d-block text-muted">
-            In <span class="catlist">
-            {% for category in second_post.categories %}
-            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-            {% endfor %}
-            </span>                   
-            </small>
-            <small class="text-muted">
-            {{ second_post.date | date: '%b %d, %Y' }}
-            </small>
-         </div>
-      </div>
-	  
-      <!-- third latest post -->
-      {%- assign third_post = site.posts[2] -%}        
-      <div class="mb-3 d-flex align-items-center">
-         {% if third_post.image %}
-         <div class="col-md-4">
-            <a href="{{site.baseurl}}{{third_post.url}}">
-            <img class="w-100" src="{% if third_post.image contains "://" %}{{ third_post.image }}{% else %}{{site.baseurl}}/{{ third_post.image }}{% endif %}" alt="{{ third_post.title }}">
-            </a>
-         </div>
-         {% endif %}                
-         <div>
-            <h2 class="mb-2 h6 font-weight-bold">
-               <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
-            </h2>
-            <small class="d-block text-muted">
-            In <span class="catlist">
-            {% for category in third_post.categories %}
-            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-            {% endfor %}
-            </span>                   
-            </small>
-            <small class="text-muted">
-            {{ third_post.date | date: '%b %d, %Y' }}
-            </small>
-         </div>
-      </div>
-	  
-      <!-- fourth latest post -->
-      {%- assign fourth_post = site.posts[3] -%}        
-      <div class="mb-3 d-flex align-items-center">
-         {% if fourth_post.image %}
-         <div class="col-md-4">
-            <a href="{{site.baseurl}}{{fourth_post.url}}">
-            <img class="w-100" src="{% if fourth_post.image contains "://" %}{{ fourth_post.image }}{% else %}{{site.baseurl}}/{{ fourth_post.image }}{% endif %}" alt="{{ fourth_post.title }}">
-            </a>
-         </div>
-         {% endif %}                
-         <div>
-            <h2 class="mb-2 h6 font-weight-bold">
-               <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
-            </h2>
-            <small class="d-block text-muted">
-            In <span class="catlist">
-            {% for category in fourth_post.categories %}
-            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-            {% endfor %}
-            </span>                   
-            </small>
-            <small class="text-muted">
-            {{ fourth_post.date | date: '%b %d, %Y' }}
-            </small>
-         </div>
-      </div>
-	  
-      <!-- fifth latest post -->
-      {%- assign fifth_post = site.posts[4] -%}        
-      <div class="mb-3 d-flex align-items-center">
-         {% if fifth_post.image %}
-         <div class="col-md-4">
-            <a href="{{site.baseurl}}{{fifth_post.url}}">
-            <img class="w-100" src="{% if fifth_post.image contains "://" %}{{ fifth_post.image }}{% else %}{{site.baseurl}}/{{ fifth_post.image }}{% endif %}" alt="{{ fifth_post.title }}">
-            </a>
-         </div>
-         {% endif %}                
-         <div>
-            <h2 class="mb-2 h6 font-weight-bold">
-               <a class="text-dark" href="{{site.baseurl}}{{fifth_post.url}}">{{ fifth_post.title }}</a>
-            </h2>
-            <small class="d-block text-muted">
-            In <span class="catlist">
-            {% for category in fifth_post.categories %}
-            <a class="text-capitalize text-muted smoothscroll" href="{{site.baseurl}}/categories.html#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
-            {% endfor %}
-            </span>                   
-            </small>
-            <small class="text-muted">
-            {{ fifth_post.date | date: '%b %d, %Y' }}
-            </small>
-         </div>
-      </div>
-   </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+	
+	</br>
+	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>Latest Articles</span> <a href="{{site.baseurl}}/index.html"><span style="float:right;">View All</span></a></h4>
+
+	<!-- latest post -->
+    {% assign latest_post = site.posts[0] %}
+	
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ latest_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ latest_post.date | date: '%b %d, %Y' }}</small></span></p>
+	 
+	<!-- second latest post -->
+    {%- assign second_post = site.posts[1] -%}   
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ second_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ second_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	<!-- third latest post -->
+    {%- assign third_post = site.posts[2] -%}        
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ third_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ third_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	<!-- fourth latest post -->
+    {%- assign fourth_post = site.posts[3] -%}        
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ fourth_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ fourth_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	<!-- fifth latest post -->
+    {%- assign fifth_post = site.posts[4] -%}        
+	<p class="font-weight-bold"><a class="text-dark" href="{{site.baseurl}}{{latest_post.url}}">{{ fifth_post.title }}</a> <span style="float:right;"><small class="text-muted">{{ fifth_post.date | date: '%b %d, %Y' }}</small></span></p>
+	
+	</br>
+	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>Projects</span></h4>
+	
+	
+	<div class="row gap-y listrecent listrecent listauthor">
+        <div>
+            <div class="p-4 border rounded">
+            
+            <a href="{{site.baseurl}}/author-{{ author[1].name | slugify }}">
+                <h1 class="mb-3">Spring Boot Application Template/Starter-Project</h1> 
+				<a class="github-button" href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star AnanthaRajuC/Spring-Boot-Application-Template on GitHub">Star</a>
+				<a class="github-button" href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork AnanthaRajuC/Spring-Boot-Application-Template on GitHub">Fork</a>
+                <a class="github-button" href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/archive/HEAD.zip" data-icon="octicon-download" data-size="large" aria-label="Download AnanthaRajuC/Spring-Boot-Application-Template on GitHub">Download</a>				
+				</br>
+				</br>
+				<p class="excerpt">The only thing better than a Maven archetype is a repo you can fork with everything already setup to speed up the creation of new Spring Boot based Web applications, just fork-and-code. This repository contains a recipe/scaffolding for bootstrapping a Monolithic Web Application with the features & Technology stack listed below. Delete the sample code (or keep it.) and add your own, you’re good to go. Essentially it's a simple on-demand application backend for rapd-prototyping.</p>
+				<a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/README.md#spring-boot-application-templatestarter-project-" class="btn btn-dark">Read More</a>
+				<a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template" class="btn btn-primary"> <i class="fab fa-github"></i> Code</a>
+				
+            </div>
+        </div>
+    </div>
+	
+	</br>
+	
+	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>Contact</span></h4>
+	<p class="excerpt">You may contact me through my email <code>arcswdev@gmail.com</code> or tweet at <code>@anantharajuc</code> if you have any questions or would like to bring up any issues.</p>
+
+	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>GitHub Calendar</span></h4>
+	
+	<div class="calendar">
+	<!-- Loading stuff -->
+		Loading GitHub Contributions calendar.
+	</div>
+	
+	</br>
+	
+	<h4 class="font-weight-bold spanborder text-danger text-capitalize"><span>GitHub Feed</span></h4>
+	
+	<div id="feed">Loading GitHub Feed.</div>
+
 </div>
 
-<!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
-{% for post in site.posts %} 
-{% if post.tags contains "sticky" %}
-<div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
-   <div class="pl-4 pr-0 h-100 tofront">
-      <div class="row justify-content-between">
-         <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
-            <h1 class="mb-3">{{post.title}}</h1>
-            <p class="mb-3 lead">
-               {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
-            </p>
-            <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
-         </div>
-         <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{site.baseurl}}/{{ post.image }});">	
-         </div>
-      </div>
-   </div>
-</div>
-{% endif %}
-{% endfor %}
-{% endif %} <!--endif page url is / -->
-<!-- Now the rest of the posts with the usual loop but with an offset:4 on the first page so we can skeep the first 4 posts displayed above -->
+<script>
+    GitHubCalendar(".calendar", "AnanthaRajuC", { responsive: true });
+</script>
 
-<div class="row mt-3">
-   <div class="col-md-8 main-loop">
-      <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
-      {% for post in paginator.posts %}
-      {% include main-loop-card.html %}
-      {% endfor %}
-      <div class="mt-5">
-         <!-- Pagination links -->
-         {% if paginator.total_pages > 1 %}
-         <ul class="pagination">
-            {% if paginator.previous_page %}
-            <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
-            {% else %}
-            <li class="page-item disabled"><span class="prev page-link">&laquo;</span></li>
-            {% endif %}
-            {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-            <li class="page-item disabled"><span class="webjeda page-link">{{ page }}</span></li>
-            {% elsif page == 1 %}
-            <li class="page-item"><a class="page-link" href="{{site.baseurl}}/">{{ page }}</a></li>
-            {% else %}
-            <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-            {% endif %}
-            {% endfor %}
-            {% if paginator.next_page %}
-            <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
-            {% else %}
-            <li class="page-item disabled"><span class="next page-link">&raquo;</span></li>
-            {% endif %}
-         </ul>
-         {% endif %}      
-      </div>
-   </div>
-   <div class="col-md-4">
-      {% include sidebar-featured.html %}    
-   </div>
-</div>
-</div>
+<script>
+    GitHubActivity.feed({
+  username: "AnanthaRajuC",
+  selector: "#feed",
+  limit: 10, // optional
+});
+
+</script>
