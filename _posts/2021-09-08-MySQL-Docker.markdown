@@ -12,11 +12,36 @@ This post briefly documents the process of pulling a [MySQL](https://hub.docker.
 
 ---
 
-#### Minimum Requirements
+#### Introduction
 
-- [Docker](https://www.docker.com/)
+**MySQL** is a relational database management system based on SQL – Structured Query Language. 
+
+**MySQL Workbench** is a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL database system.
+
+**Docker** is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.
 
 ---
+
+#### Goals
+
+1. Pull a MySQL Docker Image from Docker Hub  
+2. Run the downloaded MySQL Docker Image
+3. Connect to the Database via CLI
+4. Interact with the MySQL Database via CLI
+5. Interact with the MySQL Database via MySQL Workbench
+6. Container Management (Stop, Restart, Stats)
+7. Cleanup (Remove) 
+
+---
+
+#### Minimum Software Requirements
+
+- [Docker](https://www.docker.com/)
+- [MySQL Workbench](https://www.mysql.com/products/workbench/)
+
+---
+
+##### Getting Started 
 
 #### Setup
 
@@ -30,7 +55,7 @@ Check if you already have any existing MySQL images locally.
 
 ---
 
-#### DockerHub
+#### **`Step 1 - Pull a MySQL Docker Image from Docker Hub`** 
 
 Check all of the available tags that can be downloaded from this link. https://hub.docker.com/_/mysql?tab=tags  
 
@@ -48,7 +73,7 @@ Check if the MySQL Docker image has been successfully pulled.
 
 ---
 
-#### Run the MySQL Docker Image
+#### **`Step 2 - Run the downloaded MySQL Docker Image`** 
 
 **`docker run --name mysql-docker -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=sbat -e MYSQL_USER=sbat -e MYSQL_PASSWORD=sbat -d mysql:8.0.26`**  
 Run the MySQL docker image.  
@@ -73,7 +98,7 @@ List all the running containers to check if your image is running.
 
 ---
 
-#### Connect to the Database via CLI
+#### **`Step 3 - Connect to the Database via CLI`** 
 
 **`docker exec -it mysql-docker mysql -u sbat -p sbat`**  
 Connect to MySQL image via interactive CLI.  
@@ -96,7 +121,7 @@ Other ways to connect to the Database docker image.
 
 ---
 
-#### Interacting with the MySQL Database via CLI
+#### **`Step 4 - Interact with the MySQL Database via CLI`** 
 
 **`show databases;`**  
 Lists the databases on the MySQL server host.  
@@ -125,7 +150,7 @@ Quit MySQL shell.
 
 ---
 
-#### Interacting with the MySQL Database via CLI
+#### **`Step 5 - Interact with the MySQL Database via MySQL Workbench`** 
 
 Connect to the DB by entering the following details in MySQL Workbench.  
 
@@ -140,7 +165,7 @@ Connect to the DB by entering the following details in MySQL Workbench.
 
 ---
 
-#### Management
+#### **`Step 6 - Container Management (Stop, Restart, Stats)`** 
 
 **`docker stop [container_id]`**  
 Stop the container.
@@ -159,7 +184,7 @@ Restart the container.
 
 ---
 
-#### Cleanup
+#### **`Cleanup (Remove)`** 
 
 **`docker rm [container_name]`**  
 Remove the container.
@@ -171,5 +196,5 @@ List all the containers, including the ones that have finished executing to chec
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/docker-mysql/15.PNG" /></div>    
 
-
+---
 

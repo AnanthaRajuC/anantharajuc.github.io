@@ -12,6 +12,12 @@ This post briefly documents the usage of **Flyway** for Relational Database vers
 
 ---
 
+#### Introduction
+
+Flyway is an open-source database migration tool. It strongly favors simplicity and convention over configuration.
+
+---
+
 #### Minimum Software Requirements
 
 - Java

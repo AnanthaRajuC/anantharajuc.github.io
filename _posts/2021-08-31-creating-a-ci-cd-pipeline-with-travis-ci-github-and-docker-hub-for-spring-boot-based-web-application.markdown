@@ -1,5 +1,5 @@
 ---
-title: "Spring Boot Application Continuous Delivery with Travis CI, GitHub and Docker Hub"
+title: "Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application"
 author: anantharajuc
 categories: [ CI, Spring Boot, Travis CI, GitHub, Docker Hub, Continuous Delivery ]
 tags: [ CI, Spring Boot, Travis CI, GitHub, Docker Hub, Continuous Delivery ]
@@ -9,6 +9,16 @@ image: /assets/images/spring-boot-github-travis-ci.jpg
 ---
 
 This post briefly captures the process of triggering a Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub.
+
+---
+
+#### Introduction
+
+**GitHub** is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+
+**Travis CI** is a hosted continuous integration service used to build and test software projects hosted on GitHub and Bitbucket.
+
+**Docker Hub** Docker Hub is a service provided by Docker for finding and sharing container images with your team. It is the world’s largest repository of container images with an array of content sources including container community developers, open source projects and independent software vendors (ISV) building and distributing their code in containers.
 
 ---
 
@@ -32,17 +42,9 @@ This post briefly captures the process of triggering a Spring Boot application d
 
 ---
 
-#### Introduction
+#### Getting Started
 
-**GitHub** is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
-
-**Travis CI** is a hosted continuous integration service used to build and test software projects hosted on GitHub and Bitbucket.
-
-**Docker Hub** Docker Hub is a service provided by Docker for finding and sharing container images with your team. It is the world’s largest repository of container images with an array of content sources including container community developers, open source projects and independent software vendors (ISV) building and distributing their code in containers.
-
----
-
-#### **`Sample Project`**
+##### **`Sample Project`**
 
 [Spring Boot Minimal Web App](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App) is the sample Spring Boot web application i've used to illustrate Integration Testing.  
 
