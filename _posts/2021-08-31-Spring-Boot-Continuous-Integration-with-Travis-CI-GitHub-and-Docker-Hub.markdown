@@ -10,9 +10,13 @@ image: /assets/images/spring-boot-github-travis-ci.jpg
 
 This post briefly captures the process of triggering a Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub.
 
+---
+
+#### Goals
+
 1. Developer pushes code to GitHub
 2. Job is triggered in Travis CI  
-	2.1 Travis CI builds Docker Image and pushes to Docker Hub  
+3. Travis CI builds Docker Image and pushes to Docker Hub  
 	
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/continuous-delivery-with-travis-ci-architecture.png" /></div>  
 	
@@ -25,6 +29,16 @@ This post briefly captures the process of triggering a Spring Boot application d
 - [GitHub account](https://github.com/) (FREE) 
 - [Travis CI account](https://www.travis-ci.com/) (FREE) 
 - [dockerhub account](https://hub.docker.com/) (FREE) 
+
+---
+
+#### Introduction
+
+**GitHub** is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+
+**Travis CI** is a hosted continuous integration service used to build and test software projects hosted on GitHub and Bitbucket.
+
+**Docker Hub** Docker Hub is a service provided by Docker for finding and sharing container images with your team. It is the world’s largest repository of container images with an array of content sources including container community developers, open source projects and independent software vendors (ISV) building and distributing their code in containers.
 
 ---
 
@@ -44,19 +58,15 @@ In the **`application.properties`** file present in the **resources** folder, se
 
 ---
 
-#### **`Dockerfile`**
-
-Add a **`Dockerfile`** file to the project.
+#### **`Step 1 - Add Dockerfile file to the project.`**
 
 <script src="https://gist.github.com/AnanthaRajuC/cb8ff191f322dd8d2220a2f2cb870fbc.js"></script>
 
-#### **`.travis.yml`**  
-
-Add a **`.travis.yml`** file to the project.
+#### **`Step 2 - Add .travis.yml file to the project.`**  
 
 <script src="https://gist.github.com/AnanthaRajuC/1a3588a49b06b4623c793001913c557c.js"></script>
 
-#### **`Docker Hub`**  
+#### **`Step 3 - Generate Access Token from Docker Hub`**  
 
 In the **`Security`** section of your Docker Hub account **`Settings`** page, click on the **`New Access Token`** button to generate a new access token with **`Read`**, **`Write`**, **`Delete`** scope. If you prefer using an existing access token, use it.
 
@@ -66,7 +76,7 @@ In the **`Security`** section of your Docker Hub account **`Settings`** page, cl
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/6-docker-hub-access-token.png" /></div>
 
-#### **`Travis CI`**  
+#### **`Step 4 - Activate GitHub Repository in Travis CI`**  
 
 Login to [https://app.travis-ci.com](https://app.travis-ci.com) and activate the repository of interest.
 
@@ -91,7 +101,7 @@ In the **`Environment Variables`** section of **`Settings`** tab of the selected
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/5-docker-hub-credentials.png" /></div>
 
-#### **`GitHub`**  
+#### **`Step 5 - Push Code to GitHub`**  
 
 Now that we've configured the sample Spring Boot Application with necessary files (Dockerfile, .travis.yml) and the required services (Travis CI, Docker Hub) with necessary environment variables and access tokens, we can push the code changes from our local development machine to our remote GitHub repository. 
 
@@ -99,11 +109,13 @@ Now that we've configured the sample Spring Boot Application with necessary file
 git push origin main
 ```
 
+#### **`Outcome: Travis CI`**  
+
 We can now expect travis ci to run the tests, build the docker image of the application and push the same to dockerhub.
 
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/travis-ci-dockerhhub/7-travis-ci-job-status.png" /></div>
 
-#### **`Docker Hub`**  
+#### **`Outcome: Docker Hub`**  
 
 Finally, the lastest docker image of the application must be present in your docker hub registry.
 
