@@ -1,11 +1,11 @@
 ---
-layout - post
-title - "Gitflow Workflow"
-author - anantharajuc
-categories - [ Git, CLI ]
-tags - [ Git, CLI ]
-date - 2020-10-13 13 -30
-image - /assets/images/Git.png
+layout: post
+title: "Gitflow Workflow"
+author: anantharajuc
+categories: [ Git, CLI ]
+tags: [ Git, CLI ]
+date: 2020-10-13 13 -30
+image: /assets/images/Git.png
 ---
 
 This post briefly captures the process of using **Gitflow Workflow** for version controlling a project.

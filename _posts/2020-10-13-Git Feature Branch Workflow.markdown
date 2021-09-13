@@ -1,11 +1,11 @@
 ---
-title - "Git Feature Branch Workflow"
-author - anantharajuc
-categories - [ Git, CLI ]
-tags - [ Git, CLI ]
-layout - post
-date - 2020-10-13 13 -30
-image - /assets/images/Git.png
+title: "Git Feature Branch Workflow"
+author: anantharajuc
+categories: [ Git, CLI ]
+tags: [ Git, CLI ]
+layout: post
+date: 2020-10-13 13 -30
+image: /assets/images/Git.png
 ---
 
 This post briefly captures the process of using **Feature Branch Workflow** for version controlling a project.
