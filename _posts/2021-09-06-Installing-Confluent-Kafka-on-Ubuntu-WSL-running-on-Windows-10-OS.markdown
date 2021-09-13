@@ -12,6 +12,24 @@ This post documents the process of installing Confluent Kafka community edition 
 
 ---
 
+#### Introduction
+
+**Confluent Kafka** is mainly a data streaming platform consisting of most of the Kafka features and a few other things. Its main objective is not limited to provide a pub-sub platform only but also to provide data storage and processing capabilities.
+
+--- 
+
+#### Goals
+
+1. Downlod Confluent Kafka
+2. Copy Confluent Kafka from Windows OS to Linux  
+3. Unzip Confluent Kafka TAR file
+4. Set CONFLUENT_HOME and PATH values
+5. UPDATE Confluent Kafka server.properties file
+6. Kafka Management (Start, Stop)
+7. Cleanup (Remove) 
+
+---
+
 #### Minimum Requirements
 
 - Windows 10 Operating System with WSL enabled/installed.
@@ -35,7 +53,7 @@ you will now be re-directed to [https://www.confluent.io/installation](https://w
 
 ---
 
-##### Downlod Confluent Kafka from Windows OS to Linux  
+##### Copy Confluent Kafka from Windows OS to Linux  
 
 From your Ubuntu WSL command prompt enter `ll /mnt/` to view the Windows 10 OS hard disk partions.
 

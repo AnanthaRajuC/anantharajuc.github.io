@@ -19,14 +19,28 @@ Using the Spring Boot CLI to Generate Spring Boot Skeleton Project
 
 ---
 
-## CLI
+#### Introduction
 
-A command-line interface or command language interpreter (CLI), also known as command-line user interface, console user interface and character user interface (CUI), is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). A program which handles the interface is called a command language interpreter or shell (computing)
+**Spring Boot CLI** is a command line tool that you can use if you want to quickly develop a Spring application. It lets you run Groovy scripts, which means that you have a familiar Java-like syntax without so much boilerplate code. You can also bootstrap a new project or write your own command for it.
 
-## Installation 
+**Command Language Interpreter (CLI)**, also known as command-line user interface, console user interface and character user interface (CUI), is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). A program which handles the interface is called a command language interpreter or shell (computing)
 
-* 	Pre-requisites
-    - [Java SDK ](https://www.java.com/en/) v1.8 or higher
+--- 
+
+#### Goals
+
+1. Download & Install Spring Boot CLI
+2. Using the CLI to Generate Spring Boot Skeleton Project
+
+--- 
+
+#### Minimum Requirements
+
+- [Java SDK ](https://www.java.com/en/) v1.8 or higher
+
+---
+
+#### **`Step 1 - Download & Install Spring Boot CLI`** 
 
 * 	Spring Boot CLI [Download Link](https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation)
  
@@ -39,7 +53,9 @@ A command-line interface or command language interpreter (CLI), also known as co
 
 * 	No specific environment variables are required to run the CLI
 
-## Using the CLI
+---
+
+#### **`Step 2 - Using the CLI to Generate Spring Boot Skeleton Project`** 
 
 *	**`spring`**  
 A help screen is displayed.
@@ -59,7 +75,9 @@ Create a maven project that uses Java 8 and jar packaging.
 *	**`spring shell`**  
 Command to launch an integrated shell on a Windows machine. From inside the embedded shell, you can run other commands directly. **`$ version`**
 
-## Running the Jar
+---
+
+#### Running the Jar
 
 *	**`Java -jar Application-Jar-Name.Jar`**  
 Running the Spring Boot Application Jar
@@ -67,7 +85,9 @@ Running the Spring Boot Application Jar
 *	**`Java -jar -Dserver.port=9090 Application-Jar-Name.Jar`**  
 Running Multiple Instances of Spring Boot Project on Different Ports
 
-## Other Commands
+---
+
+#### Other Commands
 
 *	**`jcmd`**  
 lists all running Java processes
@@ -80,3 +100,5 @@ displays information about running java processes
 
 *	**`echo %JAVA_HOME%`**  
 prints environment variable **JAVA_HOME**
+
+---

@@ -32,7 +32,7 @@ This post briefly captures the process of triggering a Spring Boot application d
 	
 ---
 
-#### Minimum Software Requirements
+#### Minimum Requirements
 
 - Java
 - Maven

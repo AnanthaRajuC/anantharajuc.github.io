@@ -1,24 +1,53 @@
 ---
-layout: post
-title: "Gitflow Workflow"
-author: anantharajuc
-categories: [ Git, CLI ]
-tags: [ Git, CLI ]
-date: 2020-10-13 13:30
-image: /assets/images/Git.png
+layout - post
+title - "Gitflow Workflow"
+author - anantharajuc
+categories - [ Git, CLI ]
+tags - [ Git, CLI ]
+date - 2020-10-13 13 -30
+image - /assets/images/Git.png
 ---
 
-Gitflow Workflow is a Git strategy that helps with continuous software development and implementing DevOps practices. It was first published and made popular by Vincent Driessen at nvie. The Gitflow Workflow defines a strict branching model designed around the project release. This provides a robust framework for managing larger projects.  
+This post briefly captures the process of using **Gitflow Workflow** for version controlling a project.
 
-##### STEP 1/6: clone a remote git repository
-				
+Alternatively, check out this post on [Git Feature Branch Workflow]({{ site.baseurl }}/Git-Feature-Branch-Workflow/)  
+
+---
+
+#### Introduction
+
+**Git** is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.
+
+**Gitflow Workflow** is a Git strategy that helps with continuous software development and implementing DevOps practices. It was first published and made popular by Vincent Driessen at nvie. The Gitflow Workflow defines a strict branching model designed around the project release. This provides a robust framework for managing larger projects.  
+
+---
+
+#### Goals
+
+1. Clone a remote git repository
+2. Create **DEVELOP** branch
+3. Create/checkout **FEATURE** branch
+4. Integrate featureBranch branch with the main code-line
+5. Release code from **develop** branch
+6. Create a tag representing the release
+
+---
+
+#### Minimum Requirements
+
+- [Git](https://git-scm.com/)
+
+---
+
+##### **`STEP 1 - clone a remote git repository`**  
+
 *	**`git clone <remote-repository-url>`**  
 clone a remote git repository to a local system.  
-example: **`git clone https://github.com/username/repository.git`**
+example - **`git clone https -//github.com/username/repository.git`**
 
 ---
 
-##### STEP 2/6: create **DEVELOP** branch - This is the main code-line
+##### **`STEP 2 - create **DEVELOP** branch - This is the main code-line`**  
 
 1. **`git checkout -b develop`**  
 create and switch to a branch called **develop**
@@ -29,7 +58,7 @@ push local branch to remote repository for the first time (first time only)
 
 ---
 
-##### STEP 3/6: create/checkout **FEATURE** branch 
+##### **`STEP 3 - create/checkout **FEATURE** branch`**   
 
 1. **`git checkout -b featureBranch`**  
 create and switch to a branch called featureBranch
@@ -45,7 +74,7 @@ links local branchName with remote corresponding branch
 
 ---
 
-##### STEP 4/6: integrate featureBranch branch with the main code-line i.e., the **DEVELOP** branch
+##### **`STEP 4 - integrate featureBranch branch with the main code-line i.e., the **DEVELOP** branch`**  
  
 1. **`git checkout develop`**
 
@@ -57,7 +86,7 @@ links local branchName with remote corresponding branch
 
 ---
 
-##### STEP 5/6: release code from **develop** branch (Normally code is released from a dedicated **release** branch taken from **develop**). In this case assume develop contains valid releaseable code.
+##### **`STEP 5 - release code from **develop** branch (Normally code is released from a dedicated **release** branch taken from **develop**). In this case assume develop contains valid releaseable code.`**  
 
 1. **`git checkout main`**
 
@@ -69,7 +98,7 @@ links local branchName with remote corresponding branch
 
 ---
 
-##### STEP 6/6: create a tag representing the release
+##### **`STEP 6 - create a tag representing the release`**  
 
 A **tag** is a special branch which can be setup to read only, giving us the certainity to always have a branch we can go back to in-order to reproduce releaseable code
 
