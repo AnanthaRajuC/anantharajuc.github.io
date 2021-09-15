@@ -101,13 +101,7 @@ A compilation of tools and services i most commonly use to create software.
 
 ##### `GitHub Bots`
 
-**<a href="https://dependabot.com/" target="_blank" >Dependabot</a>**  
-*Automated dependency updates.*    
-
----
-
-**<a href="https://github.com/marketplace/imgbot" target="_blank" >Imgbot</a>**  
-*Bot that optimizes your images.*    
+check out this post [Essential GitHub Bots]({{ site.baseurl }}/Essential-GitHub-Bots/) to know more.
 
 ---
 
@@ -120,6 +114,11 @@ A compilation of tools and services i most commonly use to create software.
 
 **<a href="https://www.postman.com/" target="_blank" >Postman</a>**  
 *Collaboration Platform for API Development.*  
+
+---
+
+**<a href="https://altair.sirmuel.design/" target="_blank" >Altair GraphQL Client</a>**  
+*Test, debug GraphQL queries and implementations*  
 
 ---
 
