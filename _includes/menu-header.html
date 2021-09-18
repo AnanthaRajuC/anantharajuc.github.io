@@ -1,13 +1,39 @@
-<!--  Replace menu links here -->
+<style type="text/css">
+.dropdown-large{ padding:1rem; }
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	.dropdown-large{min-width:500px;}
+}	
+/* ============ desktop view .end// ============ */
+</style>
+
+<!--  Replace menu links here  -->
 
 <li class="nav-item dropdown">
-	<a class="nav-link dropdown-toggle" href="{{site.baseurl}}/blog/" data-bs-toggle="dropdown" onclick="" style="text-decoration:none" onmouseover="style='text-decoration:underline;text-decoration-color:red;'" onmouseout="style='text-decoration:none'">Blog</a>
-	<ul class="dropdown-menu">
-	  <li><a class="dropdown-item nav-link" href="{{site.baseurl}}/blog/"> <i class="far fa-newspaper"></i>&nbsp;&nbsp;&nbsp;Posts</a></li>
-	  <li><a class="dropdown-item nav-link" href="{{site.baseurl}}/tags/"> <i class="fas fa-hashtag"></i>&nbsp;&nbsp;&nbsp;Tags</a></li>
-	  <li><a class="dropdown-item nav-link" href="{{site.baseurl}}/archive/"> <i class="fas fa-archive"></i>&nbsp;&nbsp;&nbsp;Archive</a></li>
-	</ul>
-</li>
+		<a class="nav-link dropdown-toggle" href="{{site.baseurl}}/blog/" data-bs-toggle="dropdown"> Blog  </a>
+		<div class="dropdown-menu dropdown-large">
+			<div class="row g-3">
+				<div class="col-6">
+					<h6 class="title">Browse</h6>
+					<ul class="list-unstyled">
+						<li><a class="dropdown-item nav-link" href="{{site.baseurl}}/blog/"> <i class="far fa-newspaper"></i>&nbsp;&nbsp;&nbsp;Posts</a></li>
+						<li><a class="dropdown-item nav-link" href="{{site.baseurl}}/tags/"> <i class="fas fa-hashtag"></i>&nbsp;&nbsp;&nbsp;Tags</a></li>
+						<li><a class="dropdown-item nav-link" href="{{site.baseurl}}/archive/"> <i class="fas fa-archive"></i>&nbsp;&nbsp;&nbsp;Archive</a></li>
+					</ul>
+				</div><!-- end col-3 -->
+				<div class="col-6">
+					<h6 class="title">Categories</h6>
+					<ul class="list-unstyled">
+						<li><a href="{{site.baseurl}}/tags/#Spring%20Boot">Spring Boot </a></li>
+					</ul>
+				</div><!-- end col-3 -->
+			</div><!-- end row -->
+		</div> <!-- dropdown-large.// -->
+	</li>
+
+
+
 <li class="nav-item">
 	<a class="nav-link" href="{{site.baseurl}}/projects/" style="text-decoration:none" onmouseover="style='text-decoration:underline;text-decoration-color:red;'" onmouseout="style='text-decoration:none'">Projects</a>
 </li>
@@ -21,5 +47,8 @@
 <!--<li class="nav-item">
 <a class="nav-link" href="{{site.baseurl}}/contact.html">Contact</a>
 </li>-->
+
+
+
 
 
