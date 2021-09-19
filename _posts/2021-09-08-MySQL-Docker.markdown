@@ -197,4 +197,3 @@ List all the containers, including the ones that have finished executing to chec
 <div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/docker-mysql/15.PNG" /></div>    
 
 ---
-

@@ -19,24 +19,18 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 **`++`** *Top books with high reread value that elicited strong emotions.* 
 
----
-
-##### **`Presently Reading`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Presently Reading</span></h5>
 
 1. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**  
 
----
-
-##### **`Technical`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Technical</span></h5>
 
 1. *UNIX: A History and a Memoir* by **Brian W. Kernighan**
 2. *The Systems Bible: The Beginner's Guide to Systems Large and Small: Being the Third Edition of Systemantics* by **John Gall** **`++`**
 3. *Competing in the Age of AI: Strategy and Leadership When Algorithms and Networks Run the World* by **Marco Iansiti, Karim R. Lakhani**
 4. *Software Engineering at Google: Lessons Learned from Programming Over Time* by **Titus Winters**
 
----
-
-##### **`Comapnies`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Companies</span></h5>
 
 - **Brad Stone**
 
@@ -48,16 +42,13 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 - **Others**
 
 	1. *Liftoff: Elon Musk and the Desperate Early Days That Launched SpaceX* by **Eric Berger**  
+	2. *Power Play: Tesla, Elon Musk, and the Bet of the Century* by **Tim Higgins**  
 	
----
-
-##### **`Product Building (Hardware & Software)`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Product Building (Hardware & Software)</span></h5>
 
 1. *Inspired: How to Create Tech Products Customers Love* by **Marty Cagan**
 
----
-
-##### **`Biography - Autobiography`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Biography - Autobiography</span></h5>
 
 1. *Steve Jobs* by **Walter Isaacson** 
 2. *I Am Ozzy* by **Ozzy Osbourne, Chris Ayres**
@@ -66,15 +57,11 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 5. *Death Clutch: My Story of Determination, Domination, and Survival* by **Brock Lesnar**
 6. *When Breath Becomes Air* by **Paul Kalanithi**
 
----
-
-##### **`Music`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Music</span></h5>
 
 1. *Rust in Peace: The Inside Story of the Megadeth Masterpiece* by **Dave Mustaine**
 
----
-
-##### **`Fiction`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Fiction</span></h5>
 
 - **Dan Brown** 
 
@@ -103,46 +90,36 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 	1. *The Chamber* by **John Grisham**
 	2. *The Monk Who Sold His Ferrari* by **Robin S. Sharma**
 
----
-	
-##### **`Science`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Science</span></h5>
 
 1. *The Angel and the Assassin: The Tiny Brain Cell That Changed the Course of Medicine* by **Donna Jackson Nakazawa**	
 
----
-
-##### **`Non - Fiction`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Non-Fiction</span></h5>
 
 1. *Stay Hungry Stay Foolish* by **Rashmi Bansal**
 
----
-
-##### **`Business/Entrepreneurship`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Business/Entrepreneurship</span></h5>
 
 1. *Memos from the Chairman* by **Alan C. Greenberg**  
 2. *Invent and Wander: The Collected Writings of Jeff Bezos* by **Jeff Bezos** **`++`**  
 3. *Zero to One: Notes on Startups, or How to Build the Future* by **Peter Thiel, Blake Masters**  **`++`**  
 
----
-
-##### **`Modern Philosophy - Work - Life - Business`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Modern Philosophy - Work - Life - Business</span></h5>
 
 1. *The Almanack of Naval Ravikant: A Guide to Wealth and Happiness* by **Eric Jorgenson** **`++`**
 2. *Principles: Life and Work* by **Ray Dalio** **`++`**  
 
----
-
-##### **`Poetry`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Poetry</span></h5>
 
 - **Rupi Kaur**
 
 	1. *The Sun and Her Flowers*
 	2. *Milk and Honey* **`++`**
 
----
-
-##### **`Resources`**
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Resources</span></h5>
 
 1. <a href="https://bookauthority.org/">Book Authority</a> - Book recommendations by thought leaders.
 2. <a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations. 
 2. <a href="https://calibre-ebook.com/">Calibre</a> - E-book management. 
+
+---
