@@ -4,7 +4,7 @@ author: anantharajuc
 categories: [ Softwares, List ]
 layout: post
 date: 2020-10-02 17:20
-image: /assets/images/list.png
+image: /assets/images/list.PNG
 tags: [Softwares, List, featured]
 ---
 
