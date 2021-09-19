@@ -11,7 +11,7 @@
 - [Mailchimp](https://mailchimp.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
+- [GitHub Gist](https://gist.github.com/)
 - [GitHub calendar](https://github.com/Bloggify/github-calendar)
 - [GitHub Activity](https://github.com/caseyscarborough/github-activity)
 - [dark-mode-switch](https://github.com/coliff/dark-mode-switch)
-

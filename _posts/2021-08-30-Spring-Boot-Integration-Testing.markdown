@@ -2,7 +2,7 @@
 title: "Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)"
 author: anantharajuc
 categories: [ Testing, Spring Boot ]
-tags: [ Testing, Spring Boot ]
+tags: [ Testing, Spring Boot, featured]
 layout: post
 date: 2021-08-30 15:30
 image: /assets/images/spring-boot-testing.jpg

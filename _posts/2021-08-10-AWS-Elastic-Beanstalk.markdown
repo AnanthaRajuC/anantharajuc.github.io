@@ -2,7 +2,7 @@
 title: "Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS"
 author: anantharajuc
 categories: [ Cloud, AWS, Spring Boot ]
-tags: [ Cloud, AWS,  Spring Boot ]
+tags: [ Cloud, AWS,  Spring Boot, featured]
 layout: post
 date: 2021-08-10 19:15
 image: /assets/images/aws/aws-elastic-beanstalk.png

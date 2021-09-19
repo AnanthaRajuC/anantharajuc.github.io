@@ -2,7 +2,7 @@
 title: "Docker and DockerHub integration with Maven build process"
 author: anantharajuc
 categories: [ Docker, Docker Hub, Maven ]
-tags: [ Docker, Docker Hub, Maven ]
+tags: [ Docker, Docker Hub, Maven, featured]
 layout: post
 date: 2021-07-05 20:10
 image: /assets/images/maven-docker-hub.png
