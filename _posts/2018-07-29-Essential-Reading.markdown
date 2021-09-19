@@ -16,16 +16,12 @@ Select compilation of articles and books on Software Development and its related
 - [Articles Technical](#articles - technical)
 - [Books](#books)
 
----
-
-###### Books
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Books</span></h5>
 
 **<a href="http://linux-training.be/linuxfun.pdf" target="_blank" >Linux Fundamentals</a>**  
 *Teaches you the very fundamentals of Linux (or Unix!). This book is for beginners, novices, anyone who wants to become a Linux developer or Linux system administrator. It contains basic knowledge, but advanced users will also benefit from this book.*  
 
----
-
-###### Articles
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Articles</span></h5>
 
 **<a href="https://medium.freecodecamp.org/how-to-write-a-good-software-design-document-66fcf019569c" target="_blank" >How to write a good software design doc</a>**  
 *This article is an attempt at describing what makes a design document great.*  
@@ -40,9 +36,7 @@ Select compilation of articles and books on Software Development and its related
 **<a href="https://github.com/braydie/HowToBeAProgrammer" target="_blank" >How To Be A Programmer</a>**  
 *An attempt to summarize as concisely as possible those things that the author of the article wishes someone had explained to him/her when he/she was twenty-one.* 
 
----
-
-###### Articles - Technical
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Articles - Technical</span></h5>
 
 **<a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a>**  
 *A popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen.</a>* 
@@ -61,10 +55,5 @@ Select compilation of articles and books on Software Development and its related
 
 **<a href="https://agilemanifesto.org/principles.html" target="_blank" >Principles behind the Agile Manifesto</a>**  
 *Manifesto for Agile Software Development.* 
-
----
-
-**<a href="https://github.com/github/choosealicense.com" target="_blank" >Choose A License</a>**  
-*A site to provide non-judgmental guidance on choosing a license for your open source project.*  
 
 ---

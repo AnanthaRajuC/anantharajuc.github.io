@@ -10,9 +10,7 @@ tags: [Personal, List, featured]
 
 A compilation of tools and services i most commonly use to create software. 
 
----
-
-##### `Desktop IDE's`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Desktop IDE's</span></h5>
 
 **<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>**  
 *Java Integrated Development Environment (IDE).*  
@@ -27,9 +25,7 @@ A compilation of tools and services i most commonly use to create software.
 **<a href="https://code.visualstudio.com/" target="_blank" >Visual Studio Code</a>**  
 *Open Source code editor by Microsoft.*    
 
----
-
-##### `Eclipse and Other IDE Plugin's`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Eclipse and Other IDE Plugin's</span></h5>
 
 **<a href="https://marketplace.eclipse.org/content/ansi-escape-console" target="_blank" >ANSI Escape in Console</a>**  
 *This Eclipse plugin interprets the ANSI escape sequences to color the console output.*  
@@ -44,9 +40,7 @@ A compilation of tools and services i most commonly use to create software.
 **<a href="https://marketplace.eclipse.org/content/spring-tools-aka-spring-ide-and-spring-tool-suite" target="_blank" >Spring Tools (aka Spring IDE and Spring Tool Suite)</a>**  
 *Eclipse-powered development environment for building Spring-powered enterprise applications.*  
 
----
-
-##### `Online IDE's`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Online IDE's</span></h5>
 
 **<a href="https://www.gitpod.io/" target="_blank" >Gitpod</a>**  
 *One-Click Online IDE for GitHub.*  
@@ -56,9 +50,7 @@ A compilation of tools and services i most commonly use to create software.
 **<a href="http://codepen.io/" target="_blank" >CODEPEN</a>**  
 *Playground for the front end web.*  
 
----
-
-##### `Command Line Tools`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Command Line Tools</span></h5>
 
 **<a href="https://curl.haxx.se/" target="_blank" >Curl</a>**  
 *Command line tool and library for transferring data with URLs.*   
@@ -73,16 +65,12 @@ A compilation of tools and services i most commonly use to create software.
 **<a href="http://cmder.net/" target="_blank" >cmder</a>**  
 *Portable console emulator for Windows.*  
 
----
-
-##### `Virtualization`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Virtualization</span></h5>
 
 **<a href="https://www.virtualbox.org/" target="_blank" >VirtualBox</a>**  
 *VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use.*   
 
----
-
-##### `Containerization` 
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Containerization</span></h5>
 
 **<a href="https://www.docker.com/products/docker-desktop" target="_blank" >Docker Desktop</a>**  
 *The fastest way to containerize applications on desktop.*   
@@ -90,22 +78,16 @@ A compilation of tools and services i most commonly use to create software.
 **<a href="https://www.docker.com/products/docker-desktop" target="_blank" >Docker Hub</a>**  
 *Create, manage, and deliver container applications.*   
 
----
-
-##### `Editor`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Editor</span></h5>
 
 **<a href="https://notepad-plus-plus.org/" target="_blank" >Notepad++</a>**
 *Free source code editor which supports several programming languages running under the MS Windows environment.*  
 
----
-
-##### `GitHub Bots`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>GitHub Bots</span></h5>
 
 check out this post [Essential GitHub Bots]({{ site.baseurl }}/Essential-GitHub-Bots/) to know more.
 
----
-
-##### `Desktop Applications`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Desktop Applications</span></h5>
 
 **<a href="https://ngrok.com/" target="_blank" >ngrok</a>**  
 *Secure introspectable tunnels to localhost.*  
@@ -130,9 +112,7 @@ check out this post [Essential GitHub Bots]({{ site.baseurl }}/Essential-GitHub-
 **<a href="https://technet.microsoft.com/en-gb/sysinternals/bb897437" target="_blank" >TCPView</a>**  
 *Windows program that will show you detailed listings of all TCP and UDP endpoints on your system, including the local and remote addresses and state of TCP connections.*    
 
----
-
-##### `Chrome Web Browser Extension's`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Chrome Web Browser Extension's</span></h5>
 
 **<a href="https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh" target="_blank" >JSON Viewer</a>**  
 *Chrome extension for printing JSON and JSONP. Customizable JSON/JSONP highlighter.*    
@@ -171,9 +151,7 @@ check out this post [Essential GitHub Bots]({{ site.baseurl }}/Essential-GitHub-
 **<a href="https://developers.google.com/web/tools/lighthouse/" target="_blank" >Lighthouse</a>**  
 *Lighthouse is an open-source, automated tool for improving the quality of web pages.*  
 
----
-
-##### `Services`
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Services</span></h5>
 
 **<a href="https://fossa.io/" target="_blank" >FOSSA</a>**  
 *Dependency tracking, license compliance and attribution notices on autopilot.*  
