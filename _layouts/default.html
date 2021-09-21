@@ -43,6 +43,14 @@
 	<script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+	<!-- and it's easy to individually load additional languages -->
+	<script src="{{site.baseurl}}/assets/js/highlight/java.min"></script>
+	<script src="{{site.baseurl}}/assets/js/highlight/dockerfile.min"></script>
+
+	<script>hljs.highlightAll();</script>
+
     {% include tracking-header.html %}
 
 
