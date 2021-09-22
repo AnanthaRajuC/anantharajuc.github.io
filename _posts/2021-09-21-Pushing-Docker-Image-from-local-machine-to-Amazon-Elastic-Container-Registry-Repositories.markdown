@@ -5,7 +5,7 @@ categories: [ Docker, AWS ]
 tags: [ Docker, AWS ]
 layout: post
 date: 2021-09-21 18:45
-image: /assets/images/aws-ecs.jpg
+image: /assets/images/aws/aws-ecs.jpg
 ---
 
 This post briefly documents the process of pushing a Docker Image of a Spring Boot based Web App from local machine to [Amazon Elastic Container Registry Repositories](https://aws.amazon.com/ecr/).
