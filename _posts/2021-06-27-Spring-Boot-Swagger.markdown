@@ -8,9 +8,14 @@ date: 2021-06-27 18:40
 image: /assets/images/spring-boot-swagger-ui.jpg
 ---
 
-This post briefly documents the usage of **Swagger UI**, a visual documentation tool making it easy for back end implementation and client side consumption. 
+This post briefly documents the usage of [wagger UI](https://swagger.io/tools/swagger-ui/), a visual documentation tool making it easy for back end implementation and client side consumption. 
 
 ---
+
+#### Introduction
+
+**Swagger UI** allows anyone — be it your development team or your end consumers — to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client side consumption.
+
 
 #### Minimum Software Requirements
 
