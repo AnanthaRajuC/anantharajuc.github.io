@@ -264,20 +264,3 @@ See changes to a specific file using git
 *	**`git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"`**   
 
 ---
-
-#### Additional Reading
-
-<a href="https://guides.github.com/introduction/flow/" target="_blank" >Understanding the GitHub flow</a>
-
---- 
-
-#### Resources
-
-- <a href="https://github.com/k88hudson/git-flight-rules" target="_blank" >Flight rules for Git </a>- a guide for programmers using Git about what to do when things go wrong
-- <a href="https://chris.beams.io/posts/git-commit/" target="_blank" >How to Write a Git Commit Message</a>
-- <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target="_blank" >A Note About Git Commit Messages</a>
-- <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >Pro Git</a> by <a href="http://scottchacon.com/about.html" target="_blank" >Scott Chacon</a> and Ben Straub is available to read online for free and download (PDF, EPUB, MOBI).
-- <a href="https://chris.beams.io/posts/git-commit/" target="_blank" >How to Write a Git Commit Message</a>
-- <a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" >Conventional Commits - A specification for adding human and machine readable meaning to commit messages</a>
-
---- 
