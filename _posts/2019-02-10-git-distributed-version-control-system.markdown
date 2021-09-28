@@ -28,13 +28,28 @@ Local repository consists of three **trees** maintained by git.
 
 ---
 
+#### Goals
+
+1. Initialization  
+2. Local Workflow  
+	2.1 Undo Changes  
+	2.2 Tagging  
+	2.3 Logs
+	2.3 Branching  
+		2.3.1 Deleting a Branch
+3. Remote Repository  	
+	3.1 Pulling & Pushing Changes  
+4. Others	
+
+---
+
 #### Minimum Software Requirements
 
 - [Git](https://git-scm.com/)
 
 ---
 
-#### Initialization
+#### 1. Initialization
 
 *	**`git init`**  
 Initializes a new git repository
@@ -51,7 +66,7 @@ creates a working copy of a remote repository
 
 ---
 
-#### Local workflow
+#### 2. Local workflow
 
 *	**`git add <filename>`**  
 add a single changed file to staging area (**Index**)
@@ -68,99 +83,12 @@ commits the changed files in staging area to **HEAD**
 
 ---
 
-#### Remote
-
-*	**`git remote set-url origin https://github.com/user/new-repo.git`**   
-Change the URI (URL) for a remote Git repository
-
---- 
-
-*	**`git remote show origin`**   
-Find the URL of the remote repository.
-
---- 
-
-*	**`git remote -v`**   
-List all currently configured remote repositories
+*	**`git diff file-name.file_type`**  
+See changes to a specific file using git
 
 ---
 
-#### Pulling and Pushing changes
-
-*	**`git pull`**   
-update your local repository to the newest remote commit.
-
---- 
-
-*	**`git push origin <branch>`**  
-push the changes to your remote repository.
-
---- 
-
-*	**`git remote add origin <server>`**  
-If you have not cloned an existing repository and want to connect your repository to a remote server.
-
----
-
-#### Branching
-
-1. **Branches** are used to develop features isolated from each other.
-2. **main/master** branch is the **default** branch in a repository.
-3. other branches are used for development and merged back to the main/master branch upon completion.
-
-*	**`git checkout -b feature_x`**  
-create a new branch named **feature_x** and switch to it using
-
---- 
-
-*	**`git checkout master`**  
-switch back to master branch
-
---- 
-
-*	**`git push origin <branch>`**  
-push from local to remote **branch**
-
---- 
-
-*	**`git push --all origin`**  
-Push all branches to your remote repository
-
-##### Deleting a branch
-
-*	**`git push -d origin <branch name>`**  
-Remove a remote branch from the server
-
---- 
-
-*	**`git branch -d <branch name>`**  
-Delete local branch
-
----
-
-#### Tagging
-
-*	**`git tag 1.0.0 1b2e1d63ff`**   
-create a new tag named <a href="https://semver.org/" target="_blank" >1.0.0</a> where 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag
-
---- 
-
-*	**`git tag -a 'Version_1_0' -m 'Simple UI' HEAD`**   
-Create Tag - Tag operation allows giving meaningful names to a specific version in the repository.
-
---- 
-
-*	**`git push origin tag Version_1_0`**   
-push the tag into the remote repository
-
---- 
-
-*	**`git tag -l`**   
-view all the available tags
-
----
-
-#### Undo all working dir changes including new files
+##### 2.1 Undo all working dir changes including new files
 
 Delete all changes from working directory including new untracked files.
 
@@ -189,11 +117,33 @@ Remove untracked
  
 --- 
 
-**Reference:** https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files
+*Reference: https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files*
 
 ---
 
-#### Log
+##### 2.2 Tagging
+
+*	**`git tag 1.0.0 1b2e1d63ff`**   
+create a new tag named <a href="https://semver.org/" target="_blank" >1.0.0</a> where 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag
+
+--- 
+
+*	**`git tag -a 'Version_1_0' -m 'Simple UI' HEAD`**   
+Create Tag - Tag operation allows giving meaningful names to a specific version in the repository.
+
+--- 
+
+*	**`git push origin tag Version_1_0`**   
+push the tag into the remote repository
+
+--- 
+
+*	**`git tag -l`**   
+view all the available tags
+
+---
+
+##### 2.3 Logs
 
 *	**`git log`**   
 displays repository commit history
@@ -242,7 +192,83 @@ output with one commit per line.
 
 ---
 
-#### Others
+*	**`git log --oneline -5 --author JohnDoe --before "Fri Mar 26 2009"`**   
+
+---
+
+##### 2.4 Branching
+
+1. **Branches** are used to develop features isolated from each other.
+2. **main/master** branch is the **default** branch in a repository.
+3. other branches are used for development and merged back to the main/master branch upon completion.
+
+*	**`git checkout -b feature_x`**  
+create a new branch named **feature_x** and switch to it using
+
+--- 
+
+*	**`git checkout master`**  
+switch back to master branch
+
+--- 
+
+*	**`git push origin <branch>`**  
+push from local to remote **branch**
+
+--- 
+
+*	**`git push --all origin`**  
+Push all branches to your remote repository
+
+---
+
+###### 2.4.1 Deleting a branch
+
+*	**`git push -d origin <branch name>`**  
+Remove a remote branch from the server
+
+--- 
+
+*	**`git branch -d <branch name>`**  
+Delete local branch
+
+---
+
+#### 3. Remote Repository
+
+*	**`git remote add origin <server>`**  
+If you have not cloned an existing repository and want to connect your repository to a remote server.
+
+---
+
+*	**`git remote set-url origin https://github.com/user/new-repo.git`**   
+Change the URI (URL) for a remote Git repository
+
+--- 
+
+*	**`git remote show origin`**   
+Find the URL of the remote repository.
+
+--- 
+
+*	**`git remote -v`**   
+List all currently configured remote repositories
+
+---
+
+##### 3.1 Pulling and Pushing changes
+
+*	**`git pull`**   
+update your local repository to the newest remote commit.
+
+--- 
+
+*	**`git push origin <branch>`**  
+push the changes to your remote repository.
+
+--- 
+
+#### 4. Others
 
 *	**`git log --help`**   
 opens a local git-log manual (html) page
@@ -253,14 +279,3 @@ opens a local git-log manual (html) page
 opens a built-in git GUI desktop application
 
 --- 
-
-*	**`git diff file.file_type`**  
-See changes to a specific file using git
-
----
-
-#### Examples
-
-*	**`git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"`**   
-
----
