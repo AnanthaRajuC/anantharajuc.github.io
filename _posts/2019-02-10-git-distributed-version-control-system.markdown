@@ -18,7 +18,7 @@ Refer https://github.com/AnanthaRajuC/Gitflow-Workflow for **Gitflow Workflow** 
 
 #### Introduction
 
-**Git** is a distributed version-control system for tracking changes in source code during software development.  
+**Git** is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows. 
 
 Local repository consists of three **trees** maintained by git.  
 
@@ -263,22 +263,6 @@ See changes to a specific file using git
 *	**`git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"`**   
 
 ---
-
-#### commit.template
-
-If you set this to the path of a file on your system, for instance consider a template file at                     `C:\CC_Applications/git-commit-template.txt` 
-
-<script src="https://gist.github.com/AnanthaRajuC/7c064859b3ef1c046c3070801e512001.js?file=git-commit-template.txt"></script>
-
-Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.
-
-Here is a template originally written by Tim Pope <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>
-
-A sample command to set a commit.template is as follows:
-
-*	**`git config --global commit.template C:\CC_Applications/git-commit-template.txt`**   
-
---- 
 
 ## A successful Git branching model
 
