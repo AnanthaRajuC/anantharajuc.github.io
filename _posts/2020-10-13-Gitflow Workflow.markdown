@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gitflow Workflow"
+title: "Gitflow Workflow Branching Model"
 author: anantharajuc
 categories: [ Git, CLI ]
 tags: [ Git, CLI ]
@@ -8,9 +8,15 @@ date: 2020-10-13 13 -30
 image: /assets/images/Git.png
 ---
 
-This post briefly captures the process of using **Gitflow Workflow** for version controlling a project.
+This post briefly captures the process of using **Gitflow Workflow** for version controlling a project. It is a development model introduced by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen</a> which helps form an elegant mental model that is easy to comprehend and allows team members to develop a shared understanding of the branching strategy and releasing management processes.
 
-Alternatively, check out this post on [Git Feature Branch Workflow]({{ site.baseurl }}/Git-Feature-Branch-Workflow/)  
+Read more about the model here, <https://nvie.com/posts/a-successful-git-branching-model/>.  
+
+Alternatively, check out this post on [Git Feature Branch Workflow]({{ site.baseurl }}/Git-Feature-Branch-Workflow/).  
+
+*Visual Representation of the idea behind the Gitflow Workflow:* 
+
+![git model]({{ site.baseurl }}/assets/images/git-model@2x.png)
 
 ---
 
@@ -33,7 +39,7 @@ Alternatively, check out this post on [Git Feature Branch Workflow]({{ site.base
 
 ---
 
-#### Minimum Requirements
+#### Minimum Software Requirements
 
 - [Git](https://git-scm.com/)
 

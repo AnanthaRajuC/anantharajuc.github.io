@@ -1,5 +1,5 @@
 ---
-title: "Git Distributed Version Control System"
+title: "Git : Distributed Version Control System"
 author: anantharajuc
 categories: [ Git, CLI ]
 tags: [ Git, CLI ]
@@ -28,10 +28,9 @@ Local repository consists of three **trees** maintained by git.
 
 ---
 
-#### Configuration
+#### Minimum Software Requirements
 
-*	**`git config --global commit.template ~/.gitmessage.txt`**   
-Tell git to use **gitmessage.txt** as the default message that appears in your editor when you run **git commit** command
+- [Git](https://git-scm.com/)
 
 ---
 
@@ -192,6 +191,8 @@ Remove untracked
 
 **Reference:** https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files
 
+---
+
 #### Log
 
 *	**`git log`**   
@@ -263,16 +264,6 @@ See changes to a specific file using git
 *	**`git log --oneline -5 --author cbeams --before "Fri Mar 26 2009"`**   
 
 ---
-
-## A successful Git branching model
-
-It is a development model introduced by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen</a> which helps form an elegant mental model that is easy to comprehend and allows team members to develop a shared understanding of the branching strategy and releasing management processes.
-
-![git model]({{ site.baseurl }}/assets/images/git-model@2x.png)
-
-Read more about the model here, <https://nvie.com/posts/a-successful-git-branching-model/> 
-
---- 
 
 #### Additional Reading
 
