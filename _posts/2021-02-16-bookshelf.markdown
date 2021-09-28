@@ -21,6 +21,8 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Presently Reading</span></h5>
 
+1. *Androids: The Team That Built the Android Operating System* by **Chet Haase**  
+2. *The Space Barons: Elon Musk, Jeff Bezos, and the Quest to Colonize the Cosmos* by **Christian Davenport**  
 1. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**  
 
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Technical</span></h5>
