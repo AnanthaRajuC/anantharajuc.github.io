@@ -181,6 +181,26 @@ description: "Personal Blog"
 
    <div class="col-md-8 main-loop">
       <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+	  
+	  
+	  
+	  {% assign posts = site.posts | where:"author","anantharajuc" %}
+            {% for post in posts %}
+            {% include main-loop-card.html %}
+            {% endfor %}
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
       {% for post in paginator.posts %}
       {% include main-loop-card.html %}
       {% endfor %}
