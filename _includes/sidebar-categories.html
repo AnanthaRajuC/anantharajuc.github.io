@@ -1,5 +1,5 @@
 <div class="sticky-top sticky-top-offset">
 		{% for category in site.categories %}
-		<a class="sscroll btn btn-light btn-sm font-weight-bold smoothscroll" href="{{site.baseurl}}/categories.html#{{ category[0] | downcase }}">{{ category[0] }} </span><span class="count text-danger">{{ category[1] | size }}</span></a>
+		<a class="sscroll btn btn-light btn-sm font-weight-bold smoothscroll" href="{{site.baseurl}}/categories/#{{ category[0] | downcase }}">{{ category[0] }} </span><span class="count text-danger">{{ category[1] | size }}</span></a>
 		{% endfor %}
 </div> 
