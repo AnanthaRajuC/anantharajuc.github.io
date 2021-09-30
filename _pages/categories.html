@@ -1,11 +1,11 @@
 ---
 title: "Categories"
-layout: default
+layout: page
 permalink: "/categories.html"
 ---
 
-<div class="container">
-
+<div class="row mt-3">
+	<div class="col-md-8 main-loop">
         <h1 class="font-weight-bold title h6 text-uppercase mb-4">Categories</h1>
             
         {% for category in site.categories %} 
@@ -24,6 +24,9 @@ permalink: "/categories.html"
         {% assign group = nil %}
 
         {% endfor %}
-
+	</div>
+	<div class="col-md-4">
+      {% include sidebar-tags.html %}    
+   </div>
 
 </div>
