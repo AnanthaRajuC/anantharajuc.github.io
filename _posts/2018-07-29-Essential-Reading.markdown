@@ -44,8 +44,8 @@ Select compilation of articles and books on Software Development and its related
 
 ---
 
-**<a href="https://www.contributor-covenant.org/" target="_blank" >Contributor Covenant</a>**  
-*A Code of Conduct for Open Source Projects.* 
+**<a href="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/" target="_blank" >Joel Test</a>**  
+*A test formulated by JOEL SPOLSKY for measuring how good a software team is.* 
 
 ---
 
