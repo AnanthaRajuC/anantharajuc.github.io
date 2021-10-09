@@ -8,12 +8,19 @@ date: 2020-10-17 12:00
 image: assets/images/MySQL.png
 ---
 
-MySQL is an open-source relational database management system (RDBMS). 
+The following post captures a non-exhaustive list of some of the most commonly used MySQL Commands as a source of quick reference.
 
-The following is a non-exhaustive list of commonly used MySQL Commands for quick reference.
+---
 
+#### Introduction
 
-Quick Links :
+**MySQL** is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. 
+
+ **SQL** is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database. 
+
+---
+
+#### Quick Links :
 
 - [Description](#description)
 - [Meta](#meta)
@@ -24,20 +31,22 @@ Quick Links :
 
 #### Description
 
+The following are the logical groups in SQL.
+
+*	**DDL** - *Data Definition or Data Description Language is a syntax for creating and modifying database objects such as tables, indices, and users.*  
+**`CREATE`**, **`ALTER`**, **`DROP`**, **`TRUNCATE`**, **`RENAME`**    
+
+*	**DML** - *Data Manipulation Language is a computer programming language used for adding (inserting), deleting, and modifying (updating) data in a database.*  
+**`INSERT`**, **`UPDATE`**, **`DELETE`**      
+
+*	**DCL** - *Data Control Language is a syntax similar to a computer programming language used to control access to data stored in a database (Authorization).*   
+**`GRANT`**, **`REVOKE`**      
+
 *	**DQL** - Data Query Language  
 **`SELECT`** 
 
-*	**DDL** - Data Definition Language  
-**`CREATE`**, **`ALTER`**, **`DROP`**, **`TRUNCATE`**, **`RENAME`**    
-
-*	**DML** - Data Manipulation Language  
-**`INSERT`**, **`UPDATE`**, **`DELETE`**      
-
 *	**DTL/TCL** - Data Transition/Transition Control Language  
-**`COMMIT`**, **`ROLLBACK`**, **`SAVE POINT`** 
-
-*	**DCL** - Data Control Language  
-**`GRANT`**, **`REVOKE`**              
+**`COMMIT`**, **`ROLLBACK`**, **`SAVE POINT`**         
 
 ---
 

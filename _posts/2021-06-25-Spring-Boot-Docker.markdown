@@ -1,5 +1,5 @@
 ---
-title: "Spring Boot Application Containerization with Docker"
+title: "Spring Boot Application Containerization with Docker and Pushing the Docker Imahe to DockerHub"
 author: anantharajuc
 categories: [ Spring Boot, Docker ]
 tags: [ Spring Boot, Docker ]
@@ -12,6 +12,27 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 
 ---
 
+#### Introduction
+
+**Spring Boot** makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". It take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need minimal Spring configuration.
+
+**Docker** is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.
+
+---
+
+#### Goals
+
+1. Dependencies  
+2. Dockerfile  
+3. Build the jar file from the source code  
+4. Build the Docker image from the jar file  
+5. Run, Stop and Restart the Dockerized App   
+	5.1 Application Logs    
+6. Push the Docker Image to DockerHub  
+7. Clean-up  
+
+---
+
 #### Minimum Software Requirements
 
 - Java
@@ -20,6 +41,18 @@ This post briefly documents the creation of a [Docker](https://www.docker.com/) 
 - [Oracle VM VirtualBox](https://www.virtualbox.org/) or any other [hypervisor](https://en.wikipedia.org/wiki/Hypervisor)
 - [Postman](https://www.postman.com/downloads/)
 - [Lombok](https://projectlombok.org/)
+
+---
+
+##### Getting Started 
+
+#### Setup
+
+Start your local Docker Instance if necessary.
+
+<div style="text-align:center"><img src="{{ site.baseurl }}/assets/images/docker-mysql/1.PNG" /></div>    
+
+--- 
 
 #### Sample Project
 
@@ -31,7 +64,9 @@ Navigate to [http://localhost:8080/](http://localhost:8080/) to discover the app
 
 *Noticed an issue with this Sample Project? Open an [issue](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues) or a [PR](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls) on GitHub!*
 
-#### Dependencies
+---
+
+#### Step 1 - Dependencies
 
 A java project does not necessarily have any library dependency in order to create a docker image of that project.
 
@@ -52,7 +87,9 @@ In the same **`pom.xml`** file, add the following details as well.
 <packaging>jar</packaging>
 ~~~
 
-#### Basic Usage
+---
+
+#### Step 2 - Dockerfile
 
 Create a file named **`Dockerfile`** in the root of your project with the following details.
 
@@ -81,7 +118,9 @@ ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/Spring-Boo
 
 *code*: [Dockerfile](https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/Dockerfile)
 
-##### Maven
+---
+
+#### Step 3 - Build the jar file from the source code
 
 From the command line, navigate to project directory where the **pom.xml** file is present.
 
@@ -103,9 +142,11 @@ From the command line, navigate to project directory where the **pom.xml** file 
 
 The above mentioned **.jar** file is present inside the **/target** directory.
 
+---
+
 ##### Docker
 
-##### Build 
+#### Step 4 - Build the Docker image from the jar file
 
 **`docker images`**  
 *Lists the already present container images.*
@@ -125,7 +166,9 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Inspect Docker Image]({{ site.baseurl }}/assets/images/spring-boot/docker/inspect.PNG)  
 
-##### Run, Stop and Restart
+---
+
+#### Step 5 - Run, Stop and Restart the Dockerized App
 
 **`docker run -p 8080:8080 --name spring-boot-minimal-web-app spring-boot-minimal-web-app`**  
 *Run the newly created docker image.*
@@ -162,7 +205,9 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Restart Docker Container]({{ site.baseurl }}/assets/images/spring-boot/docker/9-docker-container-restart.PNG)  
 
-##### Logs
+---
+
+##### Step 5.1 - Application Logs
 
 **`docker logs spring-boot-minimal-web-app`**  
 *Lists container logs.*
@@ -179,7 +224,9 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Docker Logs with date]({{ site.baseurl }}/assets/images/spring-boot/docker/docker-logs-date.PNG) 
 
-##### DockerHub
+---
+
+#### Step 6 -  Push the Docker Image to DockerHub
 
 **`docker login --username=YOUR_DOCKERHUB_USERNAME`**  
 *Login to Docker Hub from your machine.*
@@ -194,7 +241,9 @@ The above mentioned **.jar** file is present inside the **/target** directory.
 
 ![Docker Push Image]({{ site.baseurl }}/assets/images/spring-boot/docker/docker-hub-push.PNG)  
 
-##### Clean-up
+---
+
+#### Step 7 - Clean-up
 
 After cleaning up your machine of the said container and the image. To start over repeat the steps mentioned from the build section.
 
