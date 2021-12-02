@@ -10,6 +10,22 @@ tags: [Personal, List, featured]
 
 A compilation of tools and services i most commonly use to create software. 
 
+<h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>CLI's</span></h5>
+
+**<a href="https://cloud.google.com/sdk/" target="_blank" >Google Cloud SDK</a>**  
+*Google Cloud SDK.*  
+
+**<a href="https://cli.github.com/" target="_blank" >GitHub CLI</a>**  
+*GitHub CLI.*  
+
+**<a href="https://aws.amazon.com/cli/" target="_blank" >AWS CLI</a>**  
+*AWS Command Line Interface.*  
+
+**<a href="https://aws.amazon.com/cli/" target="_blank" >AWS SAM CLI</a>**  
+*AWS Serverless Application Model Command Line Interface.*  
+
+---
+
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Desktop IDE's</span></h5>
 
 **<a href="https://www.eclipse.org/ide/" target="_blank" >Eclipse IDE</a>**  
@@ -106,6 +122,11 @@ check out this post [Essential GitHub Bots]({{ site.baseurl }}/Essential-GitHub-
 
 **<a href="https://git-scm.com/" target="_blank" >Git</a>**  
 *Free and open source distributed version control system.*    
+
+---
+
+**<a href="https://keystore-explorer.org/" target="_blank" >KeyStore Explorer</a>**  
+*An open source GUI replacement for the Java command-line utilities keytool and jarsigner.*    
 
 ---
 
