@@ -1,21 +1,23 @@
-</br>
+<Style>
 
-<div class="card is-marginless is-paddingless" >
-<div class="row no-gutters">
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #7f7fd5;
+  background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
 
+}
+</style>
+
+<div class="card">
 <div class="mb-5 d-flex justify-content-between main-loop-card">
-
-{% if post.image %}
-	<div class="col-md-3 pr-0 text-right">
-	<a href="{{site.baseurl}}{{post.url}}">
-	<img class="image is-16by9" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-	</a>
-	</div>
-{% endif %}
-
 <div class="pr-3">
 	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="title is-size-4-touch" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+	<a class="text-dark" href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
 	</h2>
 	<p class="excerpt">
 	   {{ post.excerpt  | strip_html | strip_newlines | truncate: 186}}
@@ -31,9 +33,13 @@
 		{{ post.date | date: '%b %d, %Y' }}
 	</small>
 </div>
-
-
+{% if post.image %}
+	<div class="col-md-3 pr-0 text-right">
+	<a href="{{site.baseurl}}{{post.url}}">
+	<img class="w-100" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+	</a>
+	</div>
+{% endif %}
 </div>
-
 </div>
-</div>
+</br>
