@@ -21,8 +21,7 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Presently Reading</span></h5>
 
-1. *Androids: The Team That Built the Android Operating System* by **Chet Haase**  
-2. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**  
+1. *Harry Potter and the Philosopher's Stone* by **J. K. Rowling**  
 
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Technical</span></h5>
 
@@ -47,7 +46,9 @@ A selective list of books (Technical, Non-Technical, Others) i've read over the 
 	
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Product Building (Hardware & Software)</span></h5>
 
-1. *Inspired: How to Create Tech Products Customers Love* by **Marty Cagan**
+1. *Inspired: How to Create Tech Products Customers Love* by **Marty Cagan**  
+2. *Androids: The Team That Built the Android Operating System* by **Chet Haase**  
+3. *Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software* by **Sankaran Prithviraj**  
 
 <h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Biography - Autobiography</span></h5>
 
