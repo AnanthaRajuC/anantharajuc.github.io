@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 13:39:58 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 13:51:25 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><strong>Git</strong> is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
 <ol>
@@ -168,6 +168,223 @@ verification of what should happen after execution of action.</p>
 <li><a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations.</li>
 <li><a href="https://calibre-ebook.com/">Calibre</a> - E-book management.</li>
 </ol>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Docker and Docker Hub Commands]]></title><description><![CDATA[Docker and Docker Hub Commands]]></description><link>http://localhost:2368/docker-and-docker-hub-commands/</link><guid isPermaLink="false">6224ba5d9d43e5144f9704e3</guid><category><![CDATA[Docker]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Docker and Docker Hub Commands"><p>Docker is a set of platform as a service products that use OS-level virtualisation to deliver software in packages called containers. The following is a non-exhaustive list of commonly used Docker Commands for quick reference.</p><!--kg-card-begin: markdown--><p>Quick Links :</p>
+<ul>
+<li><a href="#docker-meta">Docker Meta</a></li>
+<li><a href="#docker-volumes">Docker Volumes</a></li>
+<li><a href="#docker-logging">Docker Logging</a></li>
+<li><a href="#docker-stats">Docker Stats</a></li>
+<li><a href="#docker-basic-queries">Docker Basic Queries</a></li>
+<li><a href="#docker-container-state-change">Docker  Container State Change</a></li>
+<li><a href="#docker-management">Docker Management</a></li>
+<li><a href="#mysql-docker-container---connecting-to-the-mysql-docker-image-via-cli">MySQL Docker Container - Connecting to the MySQL docker image via CLI</a></li>
+<li><a href="#docker-hub">Docker Hub</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-meta">Docker Meta</h4>
+<ul>
+<li>
+<p><strong>docker-machine ip default</strong><br>
+Check your docker IP default, usually <strong>192.168.99.102</strong></p>
+</li>
+<li>
+<p><strong>docker-machine ip</strong><br>
+Find Docker Toolbox IP address, usually <strong>192.168.99.102</strong></p>
+</li>
+<li>
+<p><strong>docker version</strong><br>
+Displays the docker version information</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-volumes">Docker Volumes</h4>
+<p>Volumes are the preferred mechanism for persisting data generated by and used by Docker containers.</p>
+<ul>
+<li>
+<p><strong>docker volume ls</strong><br>
+list volumes</p>
+</li>
+<li>
+<p><strong>docker volume ls -f dangling=true</strong><br>
+list dangling volumes</p>
+</li>
+<li>
+<p><strong>docker volume rm [volume_name]</strong><br>
+remove volume</p>
+</li>
+<li>
+<p><strong>docker volume prune</strong><br>
+remove all dangling volumes</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-logging">Docker Logging</h4>
+<ul>
+<li>
+<p><strong>docker logs [container_id]</strong><br>
+List container logs</p>
+</li>
+<li>
+<p><strong>docker logs [container_id] --tail N</strong><br>
+List container logs, <strong><code>--tail</code></strong> flag will show the last <strong>N</strong> lines of logs</p>
+</li>
+<li>
+<p><strong>docker logs [container_id] --since YYYY-MM-DD</strong><br>
+List container logs since a particular date</p>
+</li>
+<li>
+<p><strong>docker logs [container_id] --since YYYY-MM-DDTHH:MM:SS.000000000Z</strong><br>
+List container logs since a particular timestamp</p>
+</li>
+<li>
+<p><strong>docker logs -f [container_id]</strong><br>
+Look at the logs of a container</p>
+</li>
+<li>
+<p><strong>docker inspect [container_id]</strong><br>
+Examine a container&apos;s metadata in Docker</p>
+</li>
+<li>
+<p><strong>docker inspect --format=&apos;{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}&apos; [container_id]</strong><br>
+Use --format to inspect specific fields from the returned container&apos;s metadata JSON</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-stats">Docker Stats</h4>
+<ul>
+<li>
+<p><strong>docker stats</strong>  							<br>
+Show CPU and memory usage of all running containers</p>
+</li>
+<li>
+<p><strong>docker stats [container_name]</strong>  						<br>
+Show CPU and memory usage of a particular running container</p>
+</li>
+<li>
+<p><strong>docker stats [container1_name] [container2_name]</strong>  			<br>
+Show CPU and memory usage of container1, container2</p>
+</li>
+<li>
+<p><strong>docker top [container_name]</strong>  			<br>
+Show running processes in a container</p>
+</li>
+<li>
+<p><strong>docker system df</strong>  			<br>
+Show storage usage</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-basic-queries">Docker Basic Queries</h4>
+<ul>
+<li>
+<p><strong>docker images</strong>  			<br>
+Take a look at the container images.</p>
+</li>
+<li>
+<p><strong>docker images -a</strong>  			<br>
+shows  every image, including intermediate image layers.</p>
+</li>
+<li>
+<p><strong>docker images -f dangling=true</strong><br>
+list dangling images</p>
+</li>
+<li>
+<p><strong>docker image ls</strong>  			<br>
+Take a look at the container images.</p>
+</li>
+<li>
+<p><strong>docker ps</strong>  			<br>
+List all the running containers.</p>
+</li>
+<li>
+<p><strong>docker ps -a</strong>  			<br>
+List all the containers, including the ones that have finished executing.</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-container-state-change">Docker  Container State Change</h4>
+<ul>
+<li>
+<p><strong>docker run [container_name]</strong><br>
+Run a container.</p>
+</li>
+<li>
+<p><strong>docker run -p 8080:8080 [container_name]</strong><br>
+Run a container by mapping a port on docker to a port on localhost</p>
+</li>
+<li>
+<p><strong>docker stop [container_id]</strong><br>
+Stop a container</p>
+</li>
+<li>
+<p><strong>docker restart [container_name]</strong><br>
+Restart a container.</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-management">Docker Management</h4>
+<ul>
+<li>
+<p><strong>docker build -t [project name] .</strong><br>
+Build a Docker Image</p>
+</li>
+<li>
+<p><strong>docker system prune</strong><br>
+Clean up any resources &#x2014; images, containers, volumes, and networks &#x2014; that are dangling (not associated with a container)</p>
+</li>
+<li>
+<p><strong>docker system prune -a</strong><br>
+Remove any stopped containers and all unused images (not just dangling images)</p>
+</li>
+<li>
+<p><strong>docker rm [container_id-or-name]</strong><br>
+Remove a container with a particular container name</p>
+</li>
+<li>
+<p><strong>docker rm $(docker ps -a -q)</strong><br>
+Stop and remove all containers</p>
+</li>
+<li>
+<p><strong>docker rm -v container_name</strong><br>
+Remove a container and its volume</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysql-docker-containerconnecting-to-the-mysql-docker-image-via-cli">MySQL Docker Container - Connecting to the MySQL docker image via CLI</h4>
+<ul>
+<li>
+<p><strong>docker exec mysql-docker mysql -usbat -psbat -e &apos;show databases;&apos;</strong><br>
+Connect to MySQL image without interactive CLI.</p>
+</li>
+<li>
+<p><strong>docker exec -it mysql-docker mysql -usbat -psbat -e &apos;show databases;&apos;</strong><br>
+Connect to MySQL image without interactive CLI.</p>
+</li>
+<li>
+<p><strong>docker exec -it mysql-docker mysql -usbat -psbat</strong><br>
+Connect to MySQL image via interactive CLI.</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="docker-hub">Docker Hub</h4>
+<p>Docker Hub is a service provided by Docker for finding and sharing container images.</p>
+<ul>
+<li>
+<p><strong>docker pull [container_name]</strong>  							<br>
+Logout a Docker image from Docker Hub</p>
+</li>
+<li>
+<p><strong>docker logout</strong><br>
+Logout of Docker Hub from the local machine.</p>
+</li>
+<li>
+<p><strong><code>docker login --username=YOUR_DOCKERHUB_USERNAME</code></strong><br>
+Login to Docker Hub from your machine.</p>
+</li>
+<li>
+<p><strong><code>docker tag &lt;existing-image&gt; &lt;hub-user&gt;/&lt;repo-name&gt;[:&lt;tag&gt;]</code></strong><br>
+Re-tagging an existing local image</p>
+</li>
+<li>
+<p><strong><code>docker commit &lt;existing-container&gt; &lt;hub-user&gt;/&lt;repo-name&gt;[:&lt;tag&gt;]</code></strong><br>
+Commit changes</p>
+</li>
+<li>
+<p><strong><code>docker push &lt;hub-user&gt;/&lt;repo-name&gt;:&lt;tag&gt;</code></strong><br>
+Push this repository to the registry designated by its name or tag</p>
+</li>
+</ul>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Gitflow Workflow Branching Model]]></title><description><![CDATA[This post briefly captures the process of using Gitflow Workflow for version controlling a project. ]]></description><link>http://localhost:2368/gitflow-workflow-branching-model/</link><guid isPermaLink="false">6224b8179d43e5144f9704b7</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 13 Oct 2020 00:00:00 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly captures the process of using <strong>Gitflow Workflow</strong> for version controlling a project. It is a development model introduced by <a href="https://nvie.com/about/" target="_blank">Vincent Driessen</a> which helps form an elegant mental model that is easy to comprehend and allows team members to develop a shared understanding of the branching strategy and releasing management processes.</p>
 <p>Read more about the model here, <a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a>.</p>
 <p><em>Visual Representation of the idea behind the Gitflow Workflow:</em></p>
