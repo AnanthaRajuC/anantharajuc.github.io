@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 13:20:15 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 13:39:58 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><strong>Git</strong> is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
 <ol>
@@ -168,6 +168,150 @@ verification of what should happen after execution of action.</p>
 <li><a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations.</li>
 <li><a href="https://calibre-ebook.com/">Calibre</a> - E-book management.</li>
 </ol>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Gitflow Workflow Branching Model]]></title><description><![CDATA[This post briefly captures the process of using Gitflow Workflow for version controlling a project. ]]></description><link>http://localhost:2368/gitflow-workflow-branching-model/</link><guid isPermaLink="false">6224b8179d43e5144f9704b7</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 13 Oct 2020 00:00:00 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly captures the process of using <strong>Gitflow Workflow</strong> for version controlling a project. It is a development model introduced by <a href="https://nvie.com/about/" target="_blank">Vincent Driessen</a> which helps form an elegant mental model that is easy to comprehend and allows team members to develop a shared understanding of the branching strategy and releasing management processes.</p>
+<p>Read more about the model here, <a href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a>.</p>
+<p><em>Visual Representation of the idea behind the Gitflow Workflow:</em></p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/git-model@2x.png" class="kg-image" alt loading="lazy" width="1150" height="1524" srcset="http://localhost:2368/content/images/size/w600/2022/03/git-model@2x.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/git-model@2x.png 1000w, http://localhost:2368/content/images/2022/03/git-model@2x.png 1150w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>Git</strong> is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
+<p><strong>Gitflow Workflow</strong> is a Git strategy that helps with continuous software development and implementing DevOps practices. It was first published and made popular by Vincent Driessen at nvie. The Gitflow Workflow defines a strict branching model designed around the project release. This provides a robust framework for managing larger projects.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ol>
+<li>Clone a remote git repository</li>
+<li>Create <strong>DEVELOP</strong> branch</li>
+<li>Create/checkout <strong>FEATURE</strong> branch</li>
+<li>Integrate featureBranch branch with the main code-line</li>
+<li>Release code from <strong>develop</strong> branch</li>
+<li>Create a tag representing the release</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-1clone-a-remote-git-repository"><strong>STEP 1 - clone a remote git repository</strong></h5>
+<ul>
+<li><strong>git clone <remote-repository-url></remote-repository-url></strong><br>
+clone a remote git repository to a local system.<br>
+example - <strong><code>git clone https -//github.com/username/repository.git</code></strong></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-2create-develop-branchthis-is-the-main-code-line"><strong>STEP 2 - create <strong>DEVELOP</strong> branch - This is the main code-line</strong></h5>
+<ol>
+<li>
+<p><strong>git checkout -b develop</strong><br>
+create and switch to a branch called <strong>develop</strong></p>
+</li>
+<li>
+<p><strong>git push -u origin develop</strong><br>
+links local <strong>develop</strong> branch with remote corresponding <strong>develop</strong> branch<br>
+push local branch to remote repository for the first time (first time only)</p>
+</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-3createcheckout-feature-branch"><strong>STEP 3 - create/checkout <strong>FEATURE</strong> branch</strong></h5>
+<ol>
+<li>
+<p><strong>git checkout -b featureBranch</strong><br>
+create and switch to a branch called featureBranch</p>
+<p>1.1 <strong>git add .</strong><br>
+add or modify files</p>
+<p>1.2 <strong>git commit -m &quot;ADD/MODIFY File/s&quot;</strong><br>
+commit changes</p>
+</li>
+<li>
+<p><strong>git push -u origin featureBranch</strong><br>
+links local branchName with remote corresponding branch</p>
+</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-4integrate-featurebranch-branch-with-the-main-code-line-ie-the-develop-branch"><strong>STEP 4 - integrate featureBranch branch with the main code-line i.e., the <strong>DEVELOP</strong> branch</strong></h5>
+<ol>
+<li>
+<p><strong>git checkout develop</strong></p>
+</li>
+<li>
+<p><strong>git pull</strong></p>
+</li>
+<li>
+<p><strong>git merge featureBranch</strong></p>
+</li>
+<li>
+<p><strong>git push</strong></p>
+</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-5release-code-from-develop-branch-normally-code-is-released-from-a-dedicated-release-branch-taken-from-develop-in-this-case-assume-develop-contains-valid-releaseable-code"><strong>STEP 5 - release code from <strong>develop</strong> branch (Normally code is released from a dedicated <strong>release</strong> branch taken from <strong>develop</strong>). In this case assume develop contains valid releaseable code.</strong></h5>
+<ol>
+<li>
+<p><strong>git checkout main</strong></p>
+</li>
+<li>
+<p><strong>git pull</strong></p>
+</li>
+<li>
+<p><strong>git merge develop</strong></p>
+</li>
+<li>
+<p><strong>git push</strong></p>
+</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-6create-a-tag-representing-the-release"><strong>STEP 6 - create a tag representing the release</strong></h5>
+<p>A <strong>tag</strong> is a special branch which can be setup to read only, giving us the certainity to always have a branch we can go back to in-order to reproduce releaseable code</p>
+<ol>
+<li>
+<p><strong>git tag &quot;1.0.0.RELEASE&quot; -m &quot;Releasing version 1.0.0&quot;</strong></p>
+</li>
+<li>
+<p><strong>git push --tags</strong></p>
+</li>
+</ol>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Git Feature Branch Workflow Model]]></title><description><![CDATA[This post briefly captures the process of using Feature Branch Workflow for version controlling a project.]]></description><link>http://localhost:2368/git-feature-branch-workflow-model/</link><guid isPermaLink="false">6224b6629d43e5144f97048c</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 13 Oct 2020 00:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of using <strong>Feature Branch Workflow</strong> for version controlling a project.</p><p><strong>Introduction</strong></p><!--kg-card-begin: markdown--><p><strong>Git</strong> is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
+<p><strong>Feature Branch Workflow</strong>, the core idea behind this is that all feature development should take place in a dedicated branch instead of the master branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the master branch will never contain broken code, which is a huge advantage for continuous integration environments.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ol>
+<li>Clone a remote git repository</li>
+<li>Create a branch</li>
+<li>Merge branch with master branch</li>
+<li>Push local changes to remote repository</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-requirements">Minimum Requirements</h4>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-1clone-a-remote-git-repository"><strong>STEP 1 - Clone a remote git repository</strong></h4>
+<ul>
+<li><strong>git clone <remote-repository-url></remote-repository-url></strong><br>
+clone a remote repository to a local system.<br>
+example - <strong><code>git clone https -//github.com/username/repository.git</code></strong></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-2create-a-branch"><strong>STEP 2 - Create a branch</strong></h4>
+<ol>
+<li>
+<p><strong>git checkout -b branchName</strong><br>
+create and switch to a branch called branchName</p>
+</li>
+<li>
+<p><strong>git push -u origin branchName</strong><br>
+links local branchName with remote corresponding branch<br>
+push local branch to remote repository for the first time (first time only)</p>
+</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-3merge-branch-with-master-branch"><strong>STEP 3 - Merge branch with master branch</strong></h4>
+<ol>
+<li>
+<p><strong>git check out master</strong><br>
+point local environment to master branch</p>
+</li>
+<li>
+<p><strong>git pull</strong><br>
+ensure local copy of our master branch has all latest changes from remote repository</p>
+</li>
+<li>
+<p><strong>git merge branchName</strong><br>
+merge branch changes from branchName with current branch. In this case, master branch</p>
+</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-4push-local-changes-to-remote-repository"><strong>STEP 4 - Push local changes to remote repository</strong></h4>
+<ol>
+<li><strong>git push</strong><br>
+push local master to remote master</li>
+</ol>
+<p>Now local and master is up-to-date.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Useful Software's, Services, Tools, Plugins list]]></title><description><![CDATA[Living document containing a list of free and Open-source software's, Tools, Plugins, Utilities and services (Online/Offline).]]></description><link>http://localhost:2368/useful-softwares-services-tools-plugins-list/</link><guid isPermaLink="false">6224b10f9d43e5144f970417</guid><category><![CDATA[Personal]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Fri, 02 Oct 2020 00:00:00 GMT</pubDate><content:encoded><![CDATA[<p>Living document containing a list of free and Open-source software&apos;s, Tools, Plugins, Utilities and services (Online/Offline).</p><!--kg-card-begin: markdown--><h5 id="various">Various</h5>
 <p><strong><a href="http://stackshare.io/" target="_blank">stackshare</a></strong><br>
 <em>Discover and discuss the best software tools and services.</em></p>
@@ -390,7 +534,9 @@ verification of what should happen after execution of action.</p>
 <em>Epoch &amp; Unix Timestamp Conversion Tools</em></p>
 <p><strong><a href="https://github.com/quicktype/quicktype" target="_blank">quicktype</a></strong><br>
 <em>Generate types and converters from JSON, Schema, and GraphQL</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="services">Services</h5>
+<!--kg-card-end: markdown--><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" id="services">Services</h2></div><!--kg-card-begin: markdown--><!--
+*** Services
+-->
 <p><strong><a href="http://htmlpreview.github.io/" target="_blank">GitHub and BitBucket HTML Preview</a></strong><br>
 <em>GitHub and BitBucket HTML Files&apos; Preview.</em></p>
 <p><strong><a href="https://anvaka.github.io/common-words/#?lang=java" target="_blank">Common Words</a></strong><br>
