@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Bookshelf</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=46fbfacc1e.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=46fbfacc1e" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=46fbfacc1e" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=46fbfacc1e" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=46fbfacc1e" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=46fbfacc1e.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=46fbfacc1e" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=46fbfacc1e") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=46fbfacc1e") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=46fbfacc1e") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=46fbfacc1e") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=46fbfacc1e") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=46fbfacc1e") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=46fbfacc1e");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=46fbfacc1e") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=46fbfacc1e") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=46fbfacc1e") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=46fbfacc1e") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=46fbfacc1e.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=46fbfacc1e.css" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Bookshelf" />
+    <meta property="og:description" content="A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the last couple of years. Presently Reading Harry Potter and the Philosopher&#x27;s Stone by J. K. Rowling Technical UNIX: A History and a Memoir by Brian W. Kernighan The Systems Bible: The Beginner&#x27;s Guide to Systems Large and Small:" />
+    <meta property="og:url" content="http://localhost:2368/bookshelf/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2022/03/photo-1646236991873-cd86a00618d8.jpg" />
+    <meta property="article:published_time" content="2022-03-06T11:27:56.000Z" />
+    <meta property="article:modified_time" content="2022-03-06T11:27:56.000Z" />
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bookshelf" />
+    <meta name="twitter:description" content="A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the last couple of years. Presently Reading Harry Potter and the Philosopher&#x27;s Stone by J. K. Rowling Technical UNIX: A History and a Memoir by Brian W. Kernighan The Systems Bible: The Beginner&#x27;s Guide to Systems Large and Small:" />
+    <meta name="twitter:url" content="http://localhost:2368/bookshelf/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2022/03/photo-1646236991873-cd86a00618d8.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="1528" />
+    <meta property="og:image:height" content="955" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Bookshelf",
+    "url": "http://localhost:2368/bookshelf/",
+    "datePublished": "2022-03-06T11:27:56.000Z",
+    "dateModified": "2022-03-06T11:27:56.000Z",
+    "description": "A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the\nlast couple of years.\n\nPresently Reading\n 1. Harry Potter and the Philosopher&#x27;s Stone by J. K. Rowling\n\nTechnical\n 1. UNIX: A History and a Memoir by Brian W. Kernighan\n 2. The Systems Bible: The Beginner&#x27;s Guide to Systems Large and Small: Being\n    the Third Edition of Systemantics by John Gall ++\n 3. Competing in the Age of AI: Strategy and Leadership When Algorithms and\n    Networks Run the World by Marco Iansiti",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.38" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.15.0/umd/portal.min.js" data-ghost="http://localhost:2368/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="../public/cards.min.js%3Fv=46fbfacc1e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=46fbfacc1e.css">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template">
+    
+
+
+
+  
+<header class="m-header  js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-home">
+      <a href="../index.html">Home</a>
+    </li>
+    <li class="nav-about">
+      <a href="http://localhost:2368/about/">About</a>
+    </li>
+    <li class="nav-collection">
+      <a href="http://localhost:2368/tag/getting-started/">Collection</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+    <li class="nav-portal">
+      <a href="http://localhost:2368/portal/">Portal</a>
+    </li>
+
+                <li class="more">
+                  <span>
+                    <a href="javascript:void(0);" class="js-open-secondary-menu">
+                      More
+                      <span class="icon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                  </span>
+                </li>
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture no-picture">
+                                        <img src="../assets/images/no-image.png%3Fv=46fbfacc1e" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Bookshelf">
+                                      Bookshelf
+                                    </h3>
+                                    <span class="m-recent-article__date">a few seconds ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                              <li class="m-not-found">No tags found :(</li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="secondary-navigation-template" style="display: none;">
+      
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+    </div>
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero no-picture in-post" data-aos="fade">
+    </section>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post no-image js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Bookshelf</h1>
+              <div class="m-heading__meta">
+                <span class="m-heading__meta__time">Mar 6, 2022</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/bookshelf/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Bookshelf&url=http://localhost:2368/bookshelf/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p>A selective list of books (Technical, Non-Technical, Others) I've read over the last couple of years.</p><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Presently Reading</span></h5>
+<ol>
+<li><em>Harry Potter and the Philosopher's Stone</em> by <strong>J. K. Rowling</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Technical</span></h5>
+<ol>
+<li><em>UNIX: A History and a Memoir</em> by <strong>Brian W. Kernighan</strong></li>
+<li><em>The Systems Bible: The Beginner's Guide to Systems Large and Small: Being the Third Edition of Systemantics</em> by <strong>John Gall</strong> <strong><code>++</code></strong></li>
+<li><em>Competing in the Age of AI: Strategy and Leadership When Algorithms and Networks Run the World</em> by <strong>Marco Iansiti, Karim R. Lakhani</strong></li>
+<li><em>Software Engineering at Google: Lessons Learned from Programming Over Time</em> by <strong>Titus Winters</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Product Building (Hardware & Software)</span></h5>
+<ol>
+<li><em>Inspired: How to Create Tech Products Customers Love</em> by <strong>Marty Cagan</strong></li>
+<li><em>Androids: The Team That Built the Android Operating System</em> by <strong>Chet Haase</strong></li>
+<li><em>Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software</em> by <strong>Sankaran Prithviraj</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Biography - Autobiography</span></h5>
+<ol>
+<li><em>Steve Jobs</em> by <strong>Walter Isaacson</strong></li>
+<li><em>I Am Ozzy</em> by <strong>Ozzy Osbourne, Chris Ayres</strong></li>
+<li><em>Simply Fly</em> by <strong>G.R. Gopinath</strong></li>
+<li><em>Made in Japan: Akio Morita and Sony</em> by <strong>Akio Morita, Edwin M. Reingold, Mitsuko Shimomura</strong></li>
+<li><em>Death Clutch: My Story of Determination, Domination, and Survival</em> by <strong>Brock Lesnar</strong></li>
+<li><em>When Breath Becomes Air</em> by <strong>Paul Kalanithi</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Music</span></h5>
+<ol>
+<li><em>Rust in Peace: The Inside Story of the Megadeth Masterpiece</em> by <strong>Dave Mustaine</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Fiction</span></h5>
+<ul>
+<li>
+<p><strong>Dan Brown</strong></p>
+<ol>
+<li><em>The Da Vinci Code (Robert Langdon #2)</em></li>
+<li><em>The Lost Symbol (Robert Langdon #3)</em></li>
+<li><em>Digital Fortress</em></li>
+</ol>
+</li>
+<li>
+<p><strong>Paulo Coelho</strong></p>
+<ol>
+<li><em>The Winner Stands Alone</em></li>
+<li><em>The Alchemist</em></li>
+</ol>
+</li>
+<li>
+<p><strong>Jeffrey Archer</strong></p>
+<ol>
+<li><em>Only Time Will Tell (The Clifton Chronicles #1)</em></li>
+<li><em>Not a Penny More, Not a Penny Less</em></li>
+</ol>
+</li>
+<li>
+<p><strong>Others</strong></p>
+<ol>
+<li><em>The Chamber</em> by <strong>John Grisham</strong></li>
+<li><em>The Monk Who Sold His Ferrari</em> by <strong>Robin S. Sharma</strong></li>
+</ol>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Science</span></h5>
+<ol>
+<li><em>The Angel and the Assassin: The Tiny Brain Cell That Changed the Course of Medicine</em> by <strong>Donna Jackson Nakazawa</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Non-Fiction</span></h5>
+<ol>
+<li><em>Stay Hungry Stay Foolish</em> by <strong>Rashmi Bansal</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Business/Entrepreneurship</span></h5>
+<ol>
+<li><em>Memos from the Chairman</em> by <strong>Alan C. Greenberg</strong></li>
+<li><em>Invent and Wander: The Collected Writings of Jeff Bezos</em> by <strong>Jeff Bezos</strong> <strong><code>++</code></strong></li>
+<li><em>Zero to One: Notes on Startups, or How to Build the Future</em> by <strong>Peter Thiel, Blake Masters</strong>  <strong><code>++</code></strong></li>
+<li><em>The Space Barons: Elon Musk, Jeff Bezos, and the Quest to Colonize the Cosmos</em> by <strong>Christian Davenport</strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Modern Philosophy - Work - Life - Business</span></h5>
+<ol>
+<li><em>The Almanack of Naval Ravikant: A Guide to Wealth and Happiness</em> by <strong>Eric Jorgenson</strong> <strong><code>++</code></strong></li>
+<li><em>Principles: Life and Work</em> by <strong>Ray Dalio</strong> <strong><code>++</code></strong></li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Poetry</span></h5>
+<ul>
+<li>
+<p><strong>Rupi Kaur</strong></p>
+<ol>
+<li><em>The Sun and Her Flowers</em></li>
+<li><em>Milk and Honey</em> <strong><code>++</code></strong></li>
+</ol>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Resources</span></h5>
+<ol>
+<li><a href="https://bookauthority.org/">Book Authority</a> - Book recommendations by thought leaders.</li>
+<li><a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations.</li>
+<li><a href="https://calibre-ebook.com/">Calibre</a> - E-book management.</li>
+</ol>
+<!--kg-card-end: markdown-->
+            </div>
+          </div>
+        </div>
+          <section class="m-subscribe-section js-newsletter">
+            <div class="l-wrapper in-post">
+              <div class="m-subscribe-section__content">
+                <div class="m-subscribe-section__text">
+                  <h4 class="m-subscribe-section__title">Subscribe to our newsletter</h4>
+                  <p class="m-subscribe-section__description">
+                    Get the latest posts delivered right to your inbox.
+                  </p>
+                </div>
+                <div class="m-subscribe-section__form">
+                  
+<div class="m-subscribe-section__form">
+  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+    <div class="m-subscribe__form">
+      <div class="pos-relative">
+        <label for="newsletter-input" class="sr-only">Your email address</label>
+        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+          placeholder="Your email address" required />
+      </div>
+      <button id="newsletter-button" class="m-button primary block" type="submit">Subscribe</button>
+    </div>
+    <div class="m-subscribe__success">
+      <header class="m-heading no-margin">
+        <img src="../assets/images/success.png%3Fv=46fbfacc1e" alt="Success!" class="m-subscribe__success_icon">
+        <p class="m-heading__description in-newsletter-form">
+          Now check your inbox and click the link to confirm your subscription.
+        </p>
+      </header>
+    </div>
+    <p class="m-subscribe__invalid m-small-text">
+      Please enter a valid email address
+    </p>
+    <p class="m-subscribe__error m-small-text">
+      Oops! There was an error sending the email, please try later.
+    </p>
+  </form>
+</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="Secondary menu in footer">
+        
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+      </nav>
+    <nav class="m-footer-social">
+        <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="icon-facebook" aria-hidden="true"></span>
+        </a>
+        <a href="https://twitter.com/ghost" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=46fbfacc1e.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=46fbfacc1e"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=46fbfacc1e"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=46fbfacc1e"></script>
+    <script defer src="../assets/js/app.js%3Fv=46fbfacc1e"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=46fbfacc1e"></script>
+
+
+    
+  </body>
+</html>
