@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 13:51:25 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 14:00:29 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><strong>Git</strong> is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
 <ol>
@@ -168,6 +168,121 @@ verification of what should happen after execution of action.</p>
 <li><a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations.</li>
 <li><a href="https://calibre-ebook.com/">Calibre</a> - E-book management.</li>
 </ol>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Apache Maven Build Automation Tool Commands]]></title><description><![CDATA[Apache Maven is a software project management and comprehension tool.]]></description><link>http://localhost:2368/apache-maven-build-automation-tool-commands/</link><guid isPermaLink="false">6224bcd59d43e5144f970523</guid><category><![CDATA[Apache Maven]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project&apos;s build, reporting and documentation from a central piece of information. Maven can also be used to build and manage projects written in C, C#, Ruby, Scala, etc.,</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="maven-lifecycle">Maven Lifecycle</h3>
+<p>It has 3 built-in lifecycle&apos;s. Each lifecycle has a sequence of phases which are executed in a specific order. A maven phase represents a stage in the maven build lifecycle. Each phase is responsible for a specific task.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="default">Default</h4>
+<ul>
+<li>
+<p>It is the main build lifecycle.</p>
+</li>
+<li>
+<p>It has 23 phases.</p>
+</li>
+<li>
+<p>The following is a list of some important phases in the Default build lifecycle.</p>
+<ul>
+<li><strong>validate</strong> - Checks if all the information necessary for the build are available.</li>
+<li><strong>compile</strong> - Compiles the source code of the project. <strong><code>test-compile</code></strong> compiles the test source code.</li>
+<li><strong>test</strong> - Runs the unit tests of the application.</li>
+<li><strong>package</strong> - Packages the compiled source code into a distributable format (WAR/JAR).</li>
+<li><strong>install</strong> - Install the package to a local repository.</li>
+<li><strong>deploy</strong> - The last phase in the default build lifecycle copies the package to a remote repository.</li>
+</ul>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="clean">Clean</h4>
+<ul>
+<li>
+<p>It cleans the project and removes the files from the previous build.</p>
+</li>
+<li>
+<p>It has 3 phases</p>
+<ol>
+<li><strong>pre-clean</strong></li>
+<li><strong>clean</strong></li>
+<li><strong>post-clean</strong></li>
+</ol>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="site">Site</h4>
+<ul>
+<li>
+<p>Creates project&apos;s site documentation.</p>
+</li>
+<li>
+<p>It has 4 phases</p>
+<ol>
+<li><strong>pre-site</strong></li>
+<li><strong>site</strong></li>
+<li><strong>post-site</strong></li>
+<li><strong>site-deploy</strong></li>
+</ol>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="maven-goals">Maven Goals</h3>
+<p>Each maven phase is a sequence of goals. Each goal is responsible for a specific task. When a phase is run, all goals bound to this phase is executed in order.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="maven-plugin">Maven Plugin</h3>
+<p>A maven plugin is a group of goals. All execution in maven is done by plugins. A plugin is mapped to a goal and executed as apart of it. Phase is mapped to multiple goals. These goals are executed by a plugin. A plugin configuration can be modified using the plugin declaration.</p>
+<p>The following is a non-exhaustive list of commonly used Maven Commands for quick reference.</p>
+<p>Quick Links :</p>
+<ul>
+<li><a href="#packaging">Packaging</a></li>
+<li><a href="#running-tests">Running Tests</a></li>
+<li><a href="#others">Others</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="maven-dependency-scopes-mapped-with-phases">Maven Dependency Scopes mapped with phases</h3>
+<ol>
+<li>compile (maven default scope) - build, test, and run</li>
+<li>provided - build and test</li>
+<li>runtime - test and run</li>
+<li>test - compile and test</li>
+<li>system - similar to ones with scope provided</li>
+<li>import</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="packaging">Packaging</h4>
+<ul>
+<li>
+<p><strong>mvn package -Dmaven.test.skip=true</strong><br>
+The project will be built without compiling the tests.</p>
+</li>
+<li>
+<p><strong>mvn clean package</strong><br>
+Compiles the code and also packages it.</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="running-tests">Running Tests</h4>
+<ul>
+<li>
+<p><strong>mvn test</strong><br>
+Run all the unit test classes.</p>
+</li>
+<li>
+<p><strong>mvn -Dtest=TestApp1 test</strong><br>
+Run a single test class.</p>
+</li>
+<li>
+<p><strong>mvn -Dtest=TestApp1,TestApp2 test</strong><br>
+Run multiple test classes.</p>
+</li>
+<li>
+<p><strong><code>mvn -Dtest=TestApp1#methodname test</code></strong><br>
+Run a single test method from a test class.</p>
+</li>
+<li>
+<p><strong><code>mvn -Dtest=TestApp1#testHello* test</code></strong><br>
+Run all test methods that match pattern &apos;testHello*&apos; from a test class.</p>
+</li>
+<li>
+<p><strong><code>mvn -Dtest=TestApp1#testHello*+testMagic* test</code></strong><br>
+Run all test methods match pattern &apos;testHello*&apos; and &apos;testMagic*&apos; from a test class.</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="others">Others</h4>
+<ul>
+<li><strong>mvn cobertura:cobertura</strong><br>
+Generates Cobertura code coverage reports.</li>
+</ul>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Docker and Docker Hub Commands]]></title><description><![CDATA[Docker and Docker Hub Commands]]></description><link>http://localhost:2368/docker-and-docker-hub-commands/</link><guid isPermaLink="false">6224ba5d9d43e5144f9704e3</guid><category><![CDATA[Docker]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Docker and Docker Hub Commands"><p>Docker is a set of platform as a service products that use OS-level virtualisation to deliver software in packages called containers. The following is a non-exhaustive list of commonly used Docker Commands for quick reference.</p><!--kg-card-begin: markdown--><p>Quick Links :</p>
 <ul>
 <li><a href="#docker-meta">Docker Meta</a></li>
