@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 14:22:36 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 06 Mar 2022 14:31:39 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Git Commit Template]]></title><description><![CDATA[Set up a Git Commit Template for adding additional details to a Git commit.]]></description><link>http://localhost:2368/git-commit-template/</link><guid isPermaLink="false">6224a4ad9d43e5144f97037d</guid><category><![CDATA[Git]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Tue, 28 Sep 2021 12:00:00 GMT</pubDate><content:encoded><![CDATA[<p>This post briefly captures the process of setting up a <strong>Git Commit Template</strong> for adding additional details to a <em><strong>git commit</strong></em> along with the mandatory one line <em><strong>commit messages</strong></em>.</p><p>Git will use this file as the default initial message when you commit. The value in creating a custom commit template is that you can use it to remind yourself (or others) of the proper format and style when creating a commit message.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><strong>Git</strong> is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
 <ol>
@@ -1131,6 +1131,97 @@ opens a local git-log manual (html) page</p>
 <li>
 <p><strong>gitk</strong><br>
 opens a built-in git GUI desktop application</p>
+</li>
+</ul>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Generating Spring Boot Skeleton Project via Spring Boot CLI]]></title><description><![CDATA[Using the Spring Boot CLI to Generate Spring Boot Skeleton Project.]]></description><link>http://localhost:2368/generating-spring-boot-skeleton-project-via-spring-boot-cli/</link><guid isPermaLink="false">6224c4679d43e5144f9705aa</guid><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Wed, 12 Sep 2018 00:00:00 GMT</pubDate><content:encoded><![CDATA[<!--kg-card-begin: markdown--><p>Using the Spring Boot CLI to Generate Spring Boot Skeleton Project.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>Spring Boot CLI</strong> is a command line tool that you can use if you want to quickly develop a Spring application. It lets you run Groovy scripts, which means that you have a familiar Java-like syntax without so much boilerplate code. You can also bootstrap a new project or write your own command for it.</p>
+<p><strong>Command Language Interpreter (CLI)</strong>, also known as command-line user interface, console user interface and character user interface (CUI), is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). A program which handles the interface is called a command language interpreter or shell (computing)</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ol>
+<li>Download &amp; Install Spring Boot CLI</li>
+<li>Using the CLI to Generate Spring Boot Skeleton Project</li>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-requirements">Minimum Requirements</h4>
+<ul>
+<li><a href="https://www.java.com/en/">Java SDK </a> v1.8 or higher</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-1download-install-spring-boot-cli"><strong>Step 1 - Download &amp; Install Spring Boot CLI</strong></h4>
+<ul>
+<li>
+<p>Spring Boot CLI <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation">Download Link</a></p>
+</li>
+<li>
+<p>Installation Steps</p>
+<ul>
+<li>Set <strong>SPRING_HOME</strong> to point to the Spring CLI folder</li>
+<li>Add <strong>SPRING_HOME/bin</strong> to your <strong>PATH</strong> environment variable</li>
+<li>To test if you have successfully installed the CLI you can run either of the following commands:
+<ul>
+<li><strong>spring --version</strong> or <strong>spring version</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>No specific environment variables are required to run the CLI</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-2using-the-cli-to-generate-spring-boot-skeleton-project"><strong>Step 2 - Using the CLI to Generate Spring Boot Skeleton Project</strong></h4>
+<ul>
+<li>
+<p><strong>spring</strong><br>
+A help screen is displayed.</p>
+</li>
+<li>
+<p><strong>spring help</strong><br>
+Get more details about any of the supported commands.</p>
+</li>
+<li>
+<p><strong>spring init --dependencies=web,data-jpa my-example-project</strong><br>
+Create a new maven based spring boot project, <strong>my-example-project</strong> with <strong>spring-boot-starter-web</strong> and <strong>spring-boot-starter-data-jpa</strong> dependencies.</p>
+</li>
+<li>
+<p><strong>spring init --list</strong><br>
+List all the capabilities of Spring Starter.</p>
+</li>
+<li>
+<p><strong>spring init --build=maven --java-version=1.8 --dependencies=web,data-jpa --packaging=jar my-example-project.zip</strong><br>
+Create a maven project that uses Java 8 and jar packaging.</p>
+</li>
+<li>
+<p><strong>spring shell</strong><br>
+Command to launch an integrated shell on a Windows machine. From inside the embedded shell, you can run other commands directly. <strong>$ version</strong></p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="running-the-jar">Running the Jar</h4>
+<ul>
+<li>
+<p><strong>Java -jar Application-Jar-Name.Jar</strong><br>
+Running the Spring Boot Application Jar</p>
+</li>
+<li>
+<p><strong>Java -jar -Dserver.port=9090 Application-Jar-Name.Jar</strong><br>
+Running Multiple Instances of Spring Boot Project on Different Ports</p>
+</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="other-commands">Other Commands</h4>
+<ul>
+<li>
+<p><strong>jcmd</strong><br>
+lists all running Java processes</p>
+</li>
+<li>
+<p><strong>Taskkill /PID PROCESS_ID_OF_RUNNING_APP /F</strong><br>
+replace the <strong>PROCESS_ID_OF_RUNNING_APP</strong> with the actual process id of the running jar found out from executing the previous command to shutdown the running jar.</p>
+</li>
+<li>
+<p><strong>jps -lv</strong><br>
+displays information about running java processes</p>
+</li>
+<li>
+<p><strong>echo %JAVA_HOME%</strong><br>
+prints environment variable <strong>JAVA_HOME</strong></p>
 </li>
 </ul>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Podcasts]]></title><description><![CDATA[Select compilation of Engineering and few Business Podcasts.]]></description><link>http://localhost:2368/podcasts/</link><guid isPermaLink="false">6224ae7f9d43e5144f9703e9</guid><category><![CDATA[Personal]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 29 Jul 2018 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Podcasts"><p>Select compilation of Engineering and few Business Podcasts</p><!--kg-card-begin: markdown--><h6 id="cto-series">CTO Series</h6>
