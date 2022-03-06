@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Podcasts</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=e4789ea68d.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=e4789ea68d" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=e4789ea68d" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=e4789ea68d" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=e4789ea68d" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=e4789ea68d.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=e4789ea68d" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=e4789ea68d") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=e4789ea68d") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=e4789ea68d") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=e4789ea68d") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=e4789ea68d") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=e4789ea68d") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=e4789ea68d");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=e4789ea68d") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=e4789ea68d") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=e4789ea68d") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=e4789ea68d") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=e4789ea68d.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=e4789ea68d.css" media="screen" />
+
+
+    
+
+    <meta name="description" content="Select compilation of Engineering and few Business Podcasts." />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Podcasts" />
+    <meta property="og:description" content="Select compilation of Engineering and few Business Podcasts." />
+    <meta property="og:url" content="http://localhost:2368/podcasts/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2018-07-29T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2022-03-06T12:58:36.000Z" />
+    <meta property="article:tag" content="Personal" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Podcasts" />
+    <meta name="twitter:description" content="Select compilation of Engineering and few Business Podcasts." />
+    <meta name="twitter:url" content="http://localhost:2368/podcasts/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Personal" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1335" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Podcasts",
+    "url": "http://localhost:2368/podcasts/",
+    "datePublished": "2018-07-29T00:00:00.000Z",
+    "dateModified": "2022-03-06T12:58:36.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 1335
+    },
+    "keywords": "Personal",
+    "description": "Select compilation of Engineering and few Business Podcasts.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.38" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.15.0/umd/portal.min.js" data-ghost="http://localhost:2368/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="../public/cards.min.js%3Fv=e4789ea68d"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=e4789ea68d.css">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template tag-personal">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="http://localhost:2368/about/">About</a>
+    </li>
+    <li class="nav-collection">
+      <a href="../tag/spring-boot/index.html">Collection</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+
+                <li class="more">
+                  <span>
+                    <a href="javascript:void(0);" class="js-open-secondary-menu">
+                      More
+                      <span class="icon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                  </span>
+                </li>
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="../git-commit-template/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture no-picture">
+                                        <img src="../assets/images/no-image.png%3Fv=e4789ea68d" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Git Commit Template">
+                                      Git Commit Template
+                                    </h3>
+                                    <span class="m-recent-article__date">5 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture no-picture">
+                                        <img src="../assets/images/no-image.png%3Fv=e4789ea68d" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)">
+                                      Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)
+                                    </h3>
+                                    <span class="m-recent-article__date">6 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../bookshelf/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="../content/images/size/w300/2022/03/bookshelf.jpg" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Bookshelf">
+                                      Bookshelf
+                                    </h3>
+                                    <span class="m-recent-article__date">a year ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Podcasts">
+                                      Podcasts
+                                    </h3>
+                                    <span class="m-recent-article__date">4 years ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/git/index.html">Git</a>
+                            </li>
+                            <li>
+                              <a href="../tag/personal/index.html">Personal</a>
+                            </li>
+                            <li>
+                              <a href="../tag/spring-boot/index.html">Spring Boot</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="secondary-navigation-template" style="display: none;">
+      
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+    </div>
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
+          https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
+          https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
+          https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@mohammadmetri?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Mohammad Metri</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Podcasts</h1>
+              <div class="m-heading__meta">
+                  <a href="../tag/personal/index.html" class="m-heading__meta__tag">Personal</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Jul 29, 2018</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/podcasts/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Podcasts&url=http://localhost:2368/podcasts/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p>Select compilation of Engineering and few Business Podcasts</p><!--kg-card-begin: markdown--><h6 id="cto-series">CTO Series</h6>
+<p>Podcast's featuring CTO's or directly aimed towards an audience of CTO's.</p>
+<p><strong><a href="https://www.thectoadvisor.com/podcast/" target="_blank" >The CTO Advisor</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/@CTOAdvisor" target="_blank" >Keith Townsend</a><br>
+<strong>Topic:</strong> Infrastructure, Future Technologies<br>
+<strong>Description:</strong> A conversation geared toward the CTO or Infrastructure Architect. Shows topics focus on future technologies and keeping today's infrastructure in-line with business requirements.</p>
+<p><strong><a href="https://startupcto.io/" target="_blank" >StartupCTO.io</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/owocki" target="_blank" >Owocki</a> and <a href="https://twitter.com/miles_matthias" target="_blank" >Miles Matthias</a><br>
+<strong>Topic:</strong> Startup Engineering, Leadership<br>
+<strong>Description:</strong> Startup engineering leadership podcast; because your CS degree didn't teach you to lead.</p>
+<p><strong><a href="https://moderncto.io/podcast/" target="_blank" >Modern CTO</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/moderncto_io" target="_blank" >Joel Beasley</a><br>
+<strong>Topic:</strong> Technology<br>
+<strong>Description:</strong> ModernCTO is the place where CTO’s hang out. Listen in on our weekly podcast while we hang out with interesting Fortune 500 CTO’s in Aerospace, Artificial Intelligence, Robotics + Many more industries.</p>
+<p><strong><a href="http://www.ctosatwork.com/" target="_blank" >CTO's at Work</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Technology<br>
+<strong>Description:</strong> A podcast series with Chief Technology Officers (CTOs) talk how they build great products.</p>
+<p><strong><a href="https://podcasts.apple.com/us/podcast/behind-the-tech-with-kevin-scott/id1381008946" target="_blank" >Behind The Tech with Kevin Scott</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/kevin_scott" target="_blank" >Kevin Scott</a><br>
+<strong>Topic:</strong> Technology<br>
+<strong>Description:</strong> Behind the Tech invites listeners to geek out with an amazing line-up of tech heroes who have made our modern world possible.</p>
+<hr>
+<h6 id="organizations">Organizations</h6>
+<p>Podcasts featuring Organization specific topics (products), hosted by respective organizations employee's.</p>
+<p><strong><a href="https://aws.amazon.com/podcasts/aws-techchat/" target="_blank" >AWS TechChat</a></strong><br>
+<strong>Host(s):</strong> <a href="https://au.linkedin.com/in/peterstanski" target="_blank" >Peter Stanski</a> , <a href="https://www.linkedin.com/in/kleinolivier/" target="_blank" >Olivier Klein</a> and <a href="https://www.linkedin.com/in/dean-samuels-31a6a1/" target="_blank" >Dean Samuels</a><br>
+<strong>Topic:</strong> Amazon Web Services, Cloud<br>
+<strong>Description:</strong> A podcast series offering cloud enthusiasts, IT practitioners and developers the latest thinking and insights from AWS subject matter experts.</p>
+<p><strong><a href="https://aws.amazon.com/podcasts/aws-podcast/" target="_blank" >AWS Podcast</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/simon_elisha" target="_blank" >Simon Elisha</a> and <a href="https://twitter.com/jeffbarr" target="_blank" >Jeff Barr</a><br>
+<strong>Topic:</strong> Amazon Web Services, Cloud<br>
+<strong>Description:</strong> Simon Elisha &amp; Jeff Barr discuss various aspects of the AWS offering. Each podcast include AWS news, tech tips, and interviews with startups, AWS partners, and AWS employees.</p>
+<p><strong><a href="https://soundcloud.com/pivotalconversations" target="_blank" >Pivotal Conversations</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/rseroter" target="_blank" >Richard Seroter</a> and <a href="https://twitter.com/cote" target="_blank" >Michael Coté</a><br>
+<strong>Topic:</strong> Pivotal, Cloud Native<br>
+<strong>Description:</strong> Richard Seroter and Coté talk about recent news in the cloud native world and discuss topics around organizations transforming to cloud.</p>
+<p><strong><a href="https://soundcloud.com/pivotal-insights" target="_blank" >Pivotal Insights</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/jeffreyfkelly" target="_blank" >Jeff Kelly</a><br>
+<strong>Topic:</strong> Pivotal, Cloud Native<br>
+<strong>Description:</strong> Pivotal Insights is a regular podcast where we talk about the transformative power that cloud-native platforms, modern application development and analytics have to unlock business value.</p>
+<p><strong><a href="https://www.gcppodcast.com/" target="_blank" >Google Cloud Platform Podcast</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/gcppodcast" target="_blank" >gcppodcast</a><br>
+<strong>Topic:</strong> Google, Cloud<br>
+<strong>Description:</strong> Podcast about GCP Offerings &amp; Technology.</p>
+<p><strong><a href="https://stackoverflow.blog/podcast/" target="_blank" >The Stack Overflow Podcast</a></strong><br>
+<strong>Host(s):</strong> Sara Chipps, Paul Ford, and Ben Popper<br>
+<strong>Topic:</strong> Stack Overflow<br>
+<strong>Description:</strong> A weekly conversation about working in software development, learning to code, and the art and culture of computer programming.</p>
+<p><strong><a href="https://soundcloud.com/lightbend" target="_blank" >Lightbend</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/lightbend" target="_blank" >lightbend</a><br>
+<strong>Topic:</strong> Lightbend<br>
+<strong>Description:</strong> Lightbend is leading the enterprise transformation toward real-time, cloud-native applications.</p>
+<p><strong><a href="https://www.heroku.com/podcasts/codeish" target="_blank" >Code[ish]</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/heroku" target="_blank" >heroku</a><br>
+<strong>Topic:</strong> Software Engineering<br>
+<strong>Description:</strong> Code[ish]|A podcast from the team at Heroku, exploring code, technology, tools, tips, and the life of the developer</p>
+<p><strong><a href="https://blog.codepen.io/radio/" target="_blank" >codepen</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/CodePen" target="_blank" >codepen</a><br>
+<strong>Topic:</strong> codepen<br>
+<strong>Description:</strong> A podcast all about what it's like running a small web software business. The good, the bad, and the ugly.</p>
+<h5 id="oreilly-media">O'Reilly Media</h5>
+<p>Podcasts by O'Reilly Media covering Software Engineering, Bots, Security, Data Science, Emerging Technologies and UI/UX among others.</p>
+<p><strong><a href="https://soundcloud.com/oreilly-radar/sets/oreilly-programming-podcast" target="_blank" >O'Reilly Programming Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Open Source, Programming<br>
+<strong>Description:</strong> Features conversations that give developers, engineers, and architects tips on getting projects done better and faster.</p>
+<p><strong><a href="https://soundcloud.com/oreilly-radar/sets/the-oreilly-data-show-podcast" target="_blank" >The O'Reilly Data Show Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Data Science, AI<br>
+<strong>Description:</strong> Explores the opportunities and techniques driving big data and data science.</p>
+<p><strong><a href="https://soundcloud.com/oreilly-radar/sets/oreilly-bots-podcast" target="_blank" >O'Reilly Bots Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Bots<br>
+**Description:**Bots.</p>
+<p><strong><a href="https://soundcloud.com/oreilly-radar/sets/oreilly-security-podcast" target="_blank" >O'Reilly Security Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> - Security<br>
+<strong>Description:</strong> Examines the challenges and opportunities for security practitioners, with a focus on the people on the frontlines of security, working to build better defenses.</p>
+<p><strong><a href="https://soundcloud.com/oreilly-radar/sets/oreilly-design-podcast" target="_blank" >O'Reilly Design Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Design, UI, UX<br>
+<strong>Description:</strong> Explores how experience design -- and experience designers -- are shaping business, the Internet of Things, and other domains.</p>
+<p><strong><a href="https://soundcloud.com/oreilly-radar/sets/oreilly-media-podcast" target="_blank" >O'Reilly Media Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Emerging Technologies, Innovation<br>
+<strong>Description:</strong> Features interviews with the people working on the forefront of technology.</p>
+<h5 id="blockchain-and-crypto">Blockchain and Crypto</h5>
+<p>Podcasts featuring Blockchain and Crypto related topics and news.</p>
+<p><strong><a href="http://unchainedpodcast.co/" target="_blank" >Unchained</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/laurashin?lang=en" target="_blank" >Laura Shin</a><br>
+<strong>Topic:</strong> Blockchain &amp; Cryptocurrency<br>
+<strong>Description:</strong> In this podcast, host Laura Shin talks with industry pioneers across tech, financial services, health care, government and other sectors about how the blockchain and cryptocurrency will open up new opportunities for incumbents, startups and everyday people to interact more efficiently, directly and globally.</p>
+<p><strong><a href="http://unconfirmed.libsyn.com/" target="_blank" >Unconfirmed</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/laurashin?lang=en" target="_blank" >Laura Shin</a><br>
+<strong>Topic:</strong> Blockchain &amp; Cryptocurrency<br>
+<strong>Description:</strong> Insights and Analysis From the Top Minds in Crypto.</p>
+<p><strong><a href="https://soundcloud.com/what-bitcoin-did" target="_blank" >What Bitcoin Did</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/whatbitcoindid" target="_blank" >Peter McCormack</a><br>
+<strong>Topic:</strong> Blockchain &amp; Cryptocurrency<br>
+<strong>Description:</strong> Crypto Interviews</p>
+<h5 id="startup-leadership-business">Startup Leadership, Business</h5>
+<p>Podcasts featuring startup and business stories.</p>
+<p><strong><a href="https://mastersofscale.com/" target="_blank" >Masters of Scale</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/reidhoffman" target="_blank" >Reid Hoffman</a><br>
+<strong>Topic:</strong> Startup Leadership<br>
+<strong>Description:</strong> An original podcast hosted by LinkedIn Co-Founder and Greylock Partner Reid Hoffman showing how companies grow from zero to a gazillion. The series unfolds like a music-infused detective story as Hoffman tests his theories with famous founders. Masters of Scale is the first American media program to commit to a 50-50 gender balance for guests.</p>
+<p><strong><a href="https://www.npr.org/podcasts/510313/how-i-built-this" target="_blank" >How I Built This with Guy Raz</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/guyraz" target="_blank" >Guy Raz</a><br>
+<strong>Topic:</strong> Business<br>
+<strong>Description:</strong> a podcast about innovators, entrepreneurs, idealists, and the stories behind the movements they built.</p>
+<p><strong><a href="http://www.internethistorypodcast.com/" target="_blank" >Internet History Podcast</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/brianmcc" target="_blank" >Brian McCullough</a><br>
+<strong>Topic:</strong> Internet History, Business Stories/Lessons<br>
+<strong>Description:</strong> An interactive history project, producing a book on the history of the internet era by crowdsourcing facts and first person accounts from listeners. Each podcast represents a new chapter focusing on some section of internet history.</p>
+<h5 id="business">Business</h5>
+<p>Podcasts featuring various Business/Entrepreneurship related topics.</p>
+<p><strong><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbGxpbmNoYW1hdGhqYXNvbi5saWJzeW4uY29tL3Jzcw" target="_blank" >All-In with Chamath, Jason, Sacks &amp; Friedberg</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/chamath?lang=en" target="_blank">Chamath Palihapitiya</a>, <a href="https://twitter.com/DavidSacks?lang=en" target="_blank">David Sacks</a>, <a href="https://twitter.com/friedberg?lang=en" target="_blank">David Friedberg</a><br>
+<strong>Topic:</strong> economics, technology, politics, social, poker<br>
+<strong>Description:</strong> Industry veterans, degenerate gamblers &amp; besties Chamath Palihapitiya, Jason Calacanis, David Sacks &amp; David Friedberg cover all things economic, tech, political, social &amp; poker.</p>
+<h5 id="various">Various</h5>
+<p>Podcasts featuring various Engineering and Technology related topics.</p>
+<p><strong><a href="https://softwareengineeringdaily.com/" target="_blank" >Software Engineering Daily</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/the_prion?lang=en" target="_blank" >Jeff Meyerson</a><br>
+<strong>Topic:</strong> Software Engineering<br>
+<strong>Description:</strong> Features daily interviews about technical software topics.</p>
+<p><strong><a href="http://developeronfire.com/" target="_blank" >Developer on Fire</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/raelyard" target="_blank" >Dave Rael</a><br>
+<strong>Topic:</strong> Developer Bio's<br>
+<strong>Description:</strong> Inspiring software developers tell their stories. The podcast that shares the humanity of developers and tells stories of some of the amazing people in software.</p>
+<p><strong><a href="https://www.codenewbie.org/podcast" target="_blank" >CodeNewbie</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/saronyitbarek" target="_blank" >Saron</a><br>
+<strong>Topic:</strong> Tech News<br>
+<strong>Description:</strong> Stories from people on their coding journey.</p>
+<p><strong><a href="https://egghead.simplecast.fm/" target="_blank" >egghead.io developer chats</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/johnlindquist" target="_blank" >John Lindquist</a> and <a href="https://twitter.com/jhooks" target="_blank" >Joel Hooks</a><br>
+<strong>Topic:</strong> Web Development<br>
+<strong>Description:</strong> egghead.io instructors talk about the latest and greatest in web development. These conversations will take you deeper into the human side of coding web applications and deliver insight that you might not expect.</p>
+<p><strong><a href="https://soundcloud.com/stack-stories" target="_blank" >Stack Stories</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> Tech News<br>
+<strong>Description:</strong> Tech stack confessions from the world's best software engineering teams.</p>
+<p><strong><a href="https://soundcloud.com/programmableweb" target="_blank" >ProgrammableWeb's Developers Rock Podcast</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> API Economy<br>
+<strong>Description:</strong> ProgrammableWeb.com's editor-in-chief discuss current events regarding Web and Mobile Application Development and the API economy.</p>
+<p><strong><a href="https://twimlai.com/" target="_blank" >This Week in Machine Learning &amp; AI</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/samcharrington" target="_blank" >Sam Charrington</a><br>
+<strong>Topic:</strong> AI &amp; ML<br>
+<strong>Description:</strong> TWiML &amp; AI caters to a highly-targeted audience of machine learning &amp; AI enthusiasts. They are data scientists, developers, founders, CTOs, engineers, architects, IT &amp; product leaders, as well as tech-savvy business leaders.</p>
+<p><strong><a href="https://www.dataengineeringpodcast.com/" target="_blank" >Data Engineering Podcast</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/dataengpodcast" target="_blank" >Tobias Macey</a><br>
+<strong>Topic:</strong> Data Engineering<br>
+<strong>Description:</strong> A podcast about data engineering and modern data infrastructure.</p>
+<p><strong><a href="http://www.dataskeptic.com/podcast" target="_blank" >Data Skeptic</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/dataskeptic" target="_blank" >Data Skeptic</a><br>
+<strong>Topic:</strong> Data Engineering<br>
+<strong>Description:</strong> Weekly podcast featuring short mini-episodes explaining high level concepts in data science, and longer interview segments with researchers and practitioners.</p>
+<p><strong><a href="https://soundcloud.com/user-426834320" target="_blank" >API Academy</a></strong><br>
+<strong>Host(s):</strong> -<br>
+<strong>Topic:</strong> API's<br>
+<strong>Description:</strong> APIs, the web and network based software.</p>
+<p><strong><a href="https://www.mappingthejourney.com/" target="_blank" >Mapping The Journey</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/MappingJourney" target="_blank" >Mapping The Journey</a><br>
+<strong>Topic:</strong> Engineers<br>
+<strong>Description:</strong> A podcast with people who are making tremendous strides in tech yet whose stories are seldom heard.</p>
+<p><strong><a href="https://overcast.fm/itunes1099711235/unsupervised-learning-with-daniel-miessler" target="_blank" >Unsupervised Learning with Daniel Miessler</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/danielmiessler" target="_blank" >Daniel Miessler</a><br>
+<strong>Topic:</strong> Security, Technology and Humans<br>
+<strong>Description:</strong> Security, Technology and Humans</p>
+<p><strong><a href="https://podcasts.apple.com/us/podcast/a-bootiful-podcast/id1438691771" target="_blank" >A Bootiful Podcast</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/starbuxman" target="_blank" >Josh Long</a><br>
+<strong>Topic:</strong> Technology Ecosystem<br>
+<strong>Description:</strong> A Podcast, a celebration of the real heroes that drive ecosystems.</p>
+<p><strong><a href="https://codingsans.com/engineering-management-podcast" target="_blank" >Level-up Engineering</a></strong><br>
+<strong>Host(s):</strong> <a href="https://twitter.com/codingsans" target="_blank" >CodingSans</a><br>
+<strong>Topic:</strong> Technology<br>
+<strong>Description:</strong> Reveals actionable management secrets from some of the most successful tech leaders.</p>
+<p><strong><a href="https://givefirst.techstars.com/episodes" target="_blank" >The Give First Podcast</a></strong><br>
+<strong>Host(s):</strong> David Cohen, Brad Feld<br>
+<strong>Topic:</strong> entrepreneurship<br>
+<strong>Description:</strong> Atalk with mentors and founders about what giving first looks like in action, and how it makes great entrepreneurship possible</p>
+<!--kg-card-end: markdown-->
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/personal/index.html" title="Personal">Personal</a>
+                      </li>
+                  </ul>
+                </section>
+            </div>
+          </div>
+        </div>
+          <section class="m-subscribe-section js-newsletter">
+            <div class="l-wrapper in-post">
+              <div class="m-subscribe-section__content">
+                <div class="m-subscribe-section__text">
+                  <h4 class="m-subscribe-section__title">Subscribe to our newsletter</h4>
+                  <p class="m-subscribe-section__description">
+                    Get the latest posts delivered right to your inbox.
+                  </p>
+                </div>
+                <div class="m-subscribe-section__form">
+                  
+<div class="m-subscribe-section__form">
+  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+    <div class="m-subscribe__form">
+      <div class="pos-relative">
+        <label for="newsletter-input" class="sr-only">Your email address</label>
+        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+          placeholder="Your email address" required />
+      </div>
+      <button id="newsletter-button" class="m-button primary block" type="submit">Subscribe</button>
+    </div>
+    <div class="m-subscribe__success">
+      <header class="m-heading no-margin">
+        <img src="../assets/images/success.png%3Fv=e4789ea68d" alt="Success!" class="m-subscribe__success_icon">
+        <p class="m-heading__description in-newsletter-form">
+          Now check your inbox and click the link to confirm your subscription.
+        </p>
+      </header>
+    </div>
+    <p class="m-subscribe__invalid m-small-text">
+      Please enter a valid email address
+    </p>
+    <p class="m-subscribe__error m-small-text">
+      Oops! There was an error sending the email, please try later.
+    </p>
+  </form>
+</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="Secondary menu in footer">
+        
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+      </nav>
+    <nav class="m-footer-social">
+        <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="icon-facebook" aria-hidden="true"></span>
+        </a>
+        <a href="https://twitter.com/ghost" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=e4789ea68d.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=e4789ea68d"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=e4789ea68d"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=e4789ea68d"></script>
+    <script defer src="../assets/js/app.js%3Fv=e4789ea68d"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=e4789ea68d"></script>
+
+
+    
+  </body>
+</html>
