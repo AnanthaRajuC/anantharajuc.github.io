@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Bookshelf</title>
+    <title>Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -75,30 +75,34 @@
 
     
 
-    <meta name="description" content="A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the last couple of years." />
+    <meta name="description" content="This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework." />
     <link rel="canonical" href="index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Bookshelf" />
-    <meta property="og:description" content="A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the last couple of years." />
-    <meta property="og:url" content="http://localhost:2368/bookshelf/" />
-    <meta property="og:image" content="http://localhost:2368/content/images/2022/03/bookshelf.jpg" />
-    <meta property="article:published_time" content="2021-02-16T12:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-06T12:08:14.000Z" />
+    <meta property="og:title" content="Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)" />
+    <meta property="og:description" content="This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework." />
+    <meta property="og:url" content="http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2022/03/photo-1646236991873-cd86a00618d8.jpg" />
+    <meta property="article:published_time" content="2021-08-30T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2022-03-06T12:36:04.000Z" />
+    <meta property="article:tag" content="Spring Boot" />
+    
     <meta property="article:publisher" content="https://www.facebook.com/ghost" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bookshelf" />
-    <meta name="twitter:description" content="A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the last couple of years." />
-    <meta name="twitter:url" content="http://localhost:2368/bookshelf/" />
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2022/03/bookshelf.jpg" />
+    <meta name="twitter:title" content="Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)" />
+    <meta name="twitter:description" content="This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework." />
+    <meta name="twitter:url" content="http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2022/03/photo-1646236991873-cd86a00618d8.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Spring Boot" />
     <meta name="twitter:site" content="@ghost" />
     <meta name="twitter:creator" content="@anantharajuc" />
-    <meta property="og:image:width" content="1535" />
-    <meta property="og:image:height" content="900" />
+    <meta property="og:image:width" content="1528" />
+    <meta property="og:image:height" content="955" />
     
     <script type="application/ld+json">
 {
@@ -130,17 +134,12 @@
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "Bookshelf",
-    "url": "http://localhost:2368/bookshelf/",
-    "datePublished": "2021-02-16T12:00:00.000Z",
-    "dateModified": "2022-03-06T12:08:14.000Z",
-    "image": {
-        "@type": "ImageObject",
-        "url": "http://localhost:2368/content/images/2022/03/bookshelf.jpg",
-        "width": 1535,
-        "height": 900
-    },
-    "description": "A selective list of books (Technical, Non-Technical, Others) I&#x27;ve read over the last couple of years.",
+    "headline": "Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)",
+    "url": "http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/",
+    "datePublished": "2021-08-30T00:00:00.000Z",
+    "dateModified": "2022-03-06T12:36:04.000Z",
+    "keywords": "Spring Boot",
+    "description": "This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework.",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -230,13 +229,13 @@
     </script>
 
   </head>
-  <body class="post-template">
+  <body class="post-template tag-spring-boot">
     
 
 
 
   
-<header class="m-header with-picture js-header">
+<header class="m-header  js-header">
   <div class="m-mobile-topbar" data-aos="fade-down">
     <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
       <span class="icon-menu" aria-hidden="true"></span>
@@ -310,7 +309,7 @@
                                   </a>
                                 </div>
                                 <div class="swiper-slide">
-                                  <a href="../spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/index.html" class="m-recent-article">
+                                  <a href="index.html" class="m-recent-article">
                                     <div class="m-recent-article__picture no-picture">
                                         <img src="../assets/images/no-image.png%3Fv=e4789ea68d" loading="lazy" alt="">
                                     </div>
@@ -321,7 +320,7 @@
                                   </a>
                                 </div>
                                 <div class="swiper-slide">
-                                  <a href="index.html" class="m-recent-article">
+                                  <a href="../bookshelf/index.html" class="m-recent-article">
                                     <div class="m-recent-article__picture ">
                                         <img src="../content/images/size/w300/2022/03/bookshelf.jpg" loading="lazy" alt="">
                                     </div>
@@ -389,38 +388,31 @@
 
 <main class="main-wrap">
     
-  <section class="m-hero with-picture" data-aos="fade">
-    <div class="m-hero__picture in-post">
-      <img
-        srcset="../content/images/size/w300/2022/03/bookshelf.jpgokshelf.jpg 300w../content/images/size/w600/2022/03/bookshelf.jpgookshelf.jpg 600../content/images/size/w1000/2022/03/bookshelf.jpgbookshelf.jpg 100../content/images/size/w2000/2022/03/bookshelf.jpg/bookshelf.jpg 2000w
-        "
-        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
-        src="../content/images/size/w1000/2022/03/bookshelf.jpg"
-        alt=""
-      />
-    </div>
+  <section class="m-hero no-picture in-post" data-aos="fade">
     </section>
   
   <article>
     <div class="l-content in-post">
-        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+        <div class="l-wrapper in-post no-image js-aos-wrapper" data-aos="fade-up"
           data-aos-delay="300">
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
-              <h1 class="m-heading__title in-post">Bookshelf</h1>
+              <h1 class="m-heading__title in-post">Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)</h1>
               <div class="m-heading__meta">
-                <span class="m-heading__meta__time">Feb 16, 2021</span>
+                  <a href="../tag/spring-boot/index.html" class="m-heading__meta__tag">Spring Boot</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Aug 30, 2021</span>
               </div>
             </header>
             <div class="pos-relative js-post-content">
               <div class="m-share">
                 <div class="m-share__content js-sticky">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/bookshelf/"
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
                     <span class="icon-facebook" aria-hidden="true"></span>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=Bookshelf&url=http://localhost:2368/bookshelf/"
+                  <a href="https://twitter.com/intent/tweet?text=Spring%20Boot%20Web%20Application%20Integrating%20Testing%20with%20JUnit%2C%20AssertJ%20and%20Mockito%20(BDDMockito)&url=http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
@@ -432,105 +424,66 @@
                   </button>
                 </div>
               </div>
-              <p>A selective list of books (Technical, Non-Technical, Others) I've read over the last couple of years.</p><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Presently Reading</span></h5>
-<ol>
-<li><em>Harry Potter and the Philosopher's Stone</em> by <strong>J. K. Rowling</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Technical</span></h5>
-<ol>
-<li><em>UNIX: A History and a Memoir</em> by <strong>Brian W. Kernighan</strong></li>
-<li><em>The Systems Bible: The Beginner's Guide to Systems Large and Small: Being the Third Edition of Systemantics</em> by <strong>John Gall</strong> <strong><code>++</code></strong></li>
-<li><em>Competing in the Age of AI: Strategy and Leadership When Algorithms and Networks Run the World</em> by <strong>Marco Iansiti, Karim R. Lakhani</strong></li>
-<li><em>Software Engineering at Google: Lessons Learned from Programming Over Time</em> by <strong>Titus Winters</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Product Building (Hardware & Software)</span></h5>
-<ol>
-<li><em>Inspired: How to Create Tech Products Customers Love</em> by <strong>Marty Cagan</strong></li>
-<li><em>Androids: The Team That Built the Android Operating System</em> by <strong>Chet Haase</strong></li>
-<li><em>Architecting Cloud SaaS Software: Solutions or Products: Engineering Multi-tenanted Distributed Architecture Software</em> by <strong>Sankaran Prithviraj</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Biography - Autobiography</span></h5>
-<ol>
-<li><em>Steve Jobs</em> by <strong>Walter Isaacson</strong></li>
-<li><em>I Am Ozzy</em> by <strong>Ozzy Osbourne, Chris Ayres</strong></li>
-<li><em>Simply Fly</em> by <strong>G.R. Gopinath</strong></li>
-<li><em>Made in Japan: Akio Morita and Sony</em> by <strong>Akio Morita, Edwin M. Reingold, Mitsuko Shimomura</strong></li>
-<li><em>Death Clutch: My Story of Determination, Domination, and Survival</em> by <strong>Brock Lesnar</strong></li>
-<li><em>When Breath Becomes Air</em> by <strong>Paul Kalanithi</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Music</span></h5>
-<ol>
-<li><em>Rust in Peace: The Inside Story of the Megadeth Masterpiece</em> by <strong>Dave Mustaine</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Fiction</span></h5>
+              <p>This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>Unit</strong> testing is a type of software testing where individual units or components (ex: a method, a class) of a software are tested .</p>
+<p><strong>Integration testing</strong> is the phase in software testing in which individual software modules are combined and tested as a group. Integration Test covers multiple units because it tests the interaction between two or more components.</p>
+<p><strong>JUnit</strong> is a unit testing framework for the Java programming language.</p>
+<p><strong>AssertJ</strong> is a Java library that provides a rich set of assertions and truly helpful error messages, improves test code readability.</p>
+<p><strong>Mockito</strong>  is a testing framework that allows the creation of test double objects in automated unit tests for the purpose of test-driven development or behavior-driven development.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ul>
+<li>Data/Repository Layer Testing</li>
+<li>Business/Service Layer Testing</li>
+<li>Web/Controller Layer Testing</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="test-methodology">Test Methodology</h4>
+<p><strong>given-when-then</strong> human readable test methodology is followed here. It lends more clarity to our tests as we are following a natural language that is easy to read.</p>
 <ul>
 <li>
-<p><strong>Dan Brown</strong></p>
-<ol>
-<li><em>The Da Vinci Code (Robert Langdon #2)</em></li>
-<li><em>The Lost Symbol (Robert Langdon #3)</em></li>
-<li><em>Digital Fortress</em></li>
-</ol>
+<p><strong>given</strong><br>
+pre-conditions and requirements for actions.</p>
 </li>
 <li>
-<p><strong>Paulo Coelho</strong></p>
-<ol>
-<li><em>The Winner Stands Alone</em></li>
-<li><em>The Alchemist</em></li>
-</ol>
+<p><strong>when</strong><br>
+action we want to test.</p>
 </li>
 <li>
-<p><strong>Jeffrey Archer</strong></p>
-<ol>
-<li><em>Only Time Will Tell (The Clifton Chronicles #1)</em></li>
-<li><em>Not a Penny More, Not a Penny Less</em></li>
-</ol>
-</li>
-<li>
-<p><strong>Others</strong></p>
-<ol>
-<li><em>The Chamber</em> by <strong>John Grisham</strong></li>
-<li><em>The Monk Who Sold His Ferrari</em> by <strong>Robin S. Sharma</strong></li>
-</ol>
+<p><strong>then</strong><br>
+verification of what should happen after execution of action.</p>
 </li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Science</span></h5>
-<ol>
-<li><em>The Angel and the Assassin: The Tiny Brain Cell That Changed the Course of Medicine</em> by <strong>Donna Jackson Nakazawa</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Non-Fiction</span></h5>
-<ol>
-<li><em>Stay Hungry Stay Foolish</em> by <strong>Rashmi Bansal</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Business/Entrepreneurship</span></h5>
-<ol>
-<li><em>Memos from the Chairman</em> by <strong>Alan C. Greenberg</strong></li>
-<li><em>Invent and Wander: The Collected Writings of Jeff Bezos</em> by <strong>Jeff Bezos</strong> <strong><code>++</code></strong></li>
-<li><em>Zero to One: Notes on Startups, or How to Build the Future</em> by <strong>Peter Thiel, Blake Masters</strong>  <strong><code>++</code></strong></li>
-<li><em>The Space Barons: Elon Musk, Jeff Bezos, and the Quest to Colonize the Cosmos</em> by <strong>Christian Davenport</strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Modern Philosophy - Work - Life - Business</span></h5>
-<ol>
-<li><em>The Almanack of Naval Ravikant: A Guide to Wealth and Happiness</em> by <strong>Eric Jorgenson</strong> <strong><code>++</code></strong></li>
-<li><em>Principles: Life and Work</em> by <strong>Ray Dalio</strong> <strong><code>++</code></strong></li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Poetry</span></h5>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
 <ul>
-<li>
-<p><strong>Rupi Kaur</strong></p>
-<ol>
-<li><em>The Sun and Her Flowers</em></li>
-<li><em>Milk and Honey</em> <strong><code>++</code></strong></li>
-</ol>
-</li>
+<li>Java</li>
+<li><a href="https://www.h2database.com/html/main.html">H2DB</a></li>
+<li><a href="https://assertj.github.io/doc/">AssertJ</a></li>
+<li><a href="https://site.mockito.org/">Mockito</a></li>
+<li><a href="https://junit.org/junit5/">JUnit5</a></li>
+<li><a href="https://projectlombok.org/">Lombok</a></li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Resources</span></h5>
-<ol>
-<li><a href="https://bookauthority.org/">Book Authority</a> - Book recommendations by thought leaders.</li>
-<li><a href="https://www.goodreads.com/">Good Reads</a> - Site for readers and book recommendations.</li>
-<li><a href="https://calibre-ebook.com/">Calibre</a> - E-book management.</li>
-</ol>
-<!--kg-card-end: markdown-->
+<p><em>Note</em>: Ensure JUnit5 is on the project build path.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<p><a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App">Spring Boot Minimal Web App</a> is the sample Spring Boot web application i've used to illustrate Integration Testing.</p>
+<p>Navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> to discover the application URLs.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/spring-boot-minimal-web-app.PNG" class="kg-image" alt loading="lazy" width="1385" height="592" srcset="../content/images/size/w600/2022/03/spring-boot-minimal-web-app.PNG 600w, ../content/images/size/w1000/2022/03/spring-boot-minimal-web-app.PNG 1000w, ../content/images/2022/03/spring-boot-minimal-web-app.PNG 1385w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>In the <strong>application.properties</strong> file present in the <strong>resources</strong> folder, set the <strong>spring.profiles.active</strong> value to <strong>application-h2db</strong>.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependencies">Dependencies</h4>
+<p>This implementation has a dependency on <strong>spring-boot-starter-test</strong>, <strong>h2</strong>, <strong>lombok</strong> dependencies. The <strong>maven</strong>/<strong>gradle</strong> dependencies of the same are mentioned below.</p>
+<script src="https://gist.github.com/AnanthaRajuC/c045ba794147177ae597218f685e6132.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="repository-layer-testing">Repository Layer Testing</h4>
+<p>Repositories are classes or components that encapsulate the logic required to access data sources. They centralize common data access functionality, providing better maintainability and decoupling the infrastructure or technology used to access databases from the domain model layer</p>
+<script src="https://gist.github.com/AnanthaRajuC/9e296dda506d9680cfeb5e8591a8a659.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="service-layer-testing">Service Layer Testing</h4>
+<p>Service layer is an architectural pattern, which aims to organize the services, within a service inventory, into a set of logical layers. Services that are categorized into a particular layer share functionality.</p>
+<script src="https://gist.github.com/AnanthaRajuC/f9a2dd9181be4107c0f3d464525c1c3c.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="controller-layer-testing">Controller Layer Testing</h4>
+<p>The Controller layer is the conductor of operations for a request. It controls the transaction scope and manages the session related information for the request. The controller first dispatches to a command and then calls the appropriate view processing logic to render the response.</p>
+<script src="https://gist.github.com/AnanthaRajuC/160cd6892908f1b225bd1eee7de73c72.js"></script><!--kg-card-end: markdown-->
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/spring-boot/index.html" title="Spring Boot">Spring Boot</a>
+                      </li>
+                  </ul>
+                </section>
             </div>
           </div>
         </div>
