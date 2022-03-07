@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)</title>
+    <title>MongoDB NoSQL Database Commands</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -75,34 +75,34 @@
 
     
 
-    <meta name="description" content="This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework." />
+    <meta name="description" content="A non-exhaustive list of commonly used MongoDB Commands for quick reference." />
     <link rel="canonical" href="index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)" />
-    <meta property="og:description" content="This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework." />
-    <meta property="og:url" content="http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
-    <meta property="article:published_time" content="2021-08-30T00:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-06T14:51:15.000Z" />
-    <meta property="article:tag" content="Spring Boot" />
+    <meta property="og:title" content="MongoDB NoSQL Database Commands" />
+    <meta property="og:description" content="A non-exhaustive list of commonly used MongoDB Commands for quick reference." />
+    <meta property="og:url" content="http://localhost:2368/mongodb-nosql-database-commands/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2021-08-05T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2022-03-07T04:55:05.000Z" />
+    <meta property="article:tag" content="MongoDB" />
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)" />
-    <meta name="twitter:description" content="This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework." />
-    <meta name="twitter:url" content="http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/" />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:title" content="MongoDB NoSQL Database Commands" />
+    <meta name="twitter:description" content="A non-exhaustive list of commonly used MongoDB Commands for quick reference." />
+    <meta name="twitter:url" content="http://localhost:2368/mongodb-nosql-database-commands/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Anantha Raju C" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Spring Boot" />
+    <meta name="twitter:data2" content="MongoDB" />
     <meta name="twitter:site" content="@ghost" />
     <meta name="twitter:creator" content="@anantharajuc" />
     <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="1333" />
+    <meta property="og:image:height" content="1500" />
     
     <script type="application/ld+json">
 {
@@ -132,18 +132,18 @@
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)",
-    "url": "http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/",
-    "datePublished": "2021-08-30T00:00:00.000Z",
-    "dateModified": "2022-03-06T14:51:15.000Z",
+    "headline": "MongoDB NoSQL Database Commands",
+    "url": "http://localhost:2368/mongodb-nosql-database-commands/",
+    "datePublished": "2021-08-05T00:00:00.000Z",
+    "dateModified": "2022-03-07T04:55:05.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&ixlib=rb-1.2.1&q=80&w=2000",
+        "url": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&ixlib=rb-1.2.1&q=80&w=2000",
         "width": 2000,
-        "height": 1333
+        "height": 1500
     },
-    "keywords": "Spring Boot",
-    "description": "This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework.",
+    "keywords": "MongoDB",
+    "description": "A non-exhaustive list of commonly used MongoDB Commands for quick reference.",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -233,7 +233,7 @@
     </script>
 
   </head>
-  <body class="post-template tag-spring-boot">
+  <body class="post-template tag-mongodb">
     
 
 
@@ -318,7 +318,7 @@
                                   </a>
                                 </div>
                                 <div class="swiper-slide">
-                                  <a href="index.html" class="m-recent-article">
+                                  <a href="../spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/index.html" class="m-recent-article">
                                     <div class="m-recent-article__picture ">
                                         <img src="https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
                                     </div>
@@ -329,7 +329,7 @@
                                   </a>
                                 </div>
                                 <div class="swiper-slide">
-                                  <a href="../mongodb-nosql-database-commands/index.html" class="m-recent-article">
+                                  <a href="index.html" class="m-recent-article">
                                     <div class="m-recent-article__picture ">
                                         <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
                                     </div>
@@ -425,20 +425,20 @@
     <div class="m-hero__picture in-post">
       <img
         srcset="
-          https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
-          https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
-          https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
-          https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+          https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
+          https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
+          https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
+          https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
         "
         sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
-        src="https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
+        src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
         alt=""
       />
     </div>
     </section>
         <div class="l-wrapper in-caption">
           <p class="m-small-text align-center">
-            Photo by <a href="https://unsplash.com/@mufidpwt?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Mufid Majnun</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+            Photo by <a href="https://unsplash.com/@6heinz3r?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Gabriel Heinzer</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
           </p>
         </div>
   
@@ -449,21 +449,21 @@
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
-              <h1 class="m-heading__title in-post">Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)</h1>
+              <h1 class="m-heading__title in-post">MongoDB NoSQL Database Commands</h1>
               <div class="m-heading__meta">
-                  <a href="../tag/spring-boot/index.html" class="m-heading__meta__tag">Spring Boot</a>
+                  <a href="../tag/mongodb/index.html" class="m-heading__meta__tag">MongoDB</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
-                <span class="m-heading__meta__time">Aug 30, 2021</span>
+                <span class="m-heading__meta__time">Aug 5, 2021</span>
               </div>
             </header>
             <div class="pos-relative js-post-content">
               <div class="m-share">
                 <div class="m-share__content js-sticky">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/"
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/mongodb-nosql-database-commands/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
                     <span class="icon-facebook" aria-hidden="true"></span>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=Spring%20Boot%20Web%20Application%20Integrating%20Testing%20with%20JUnit%2C%20AssertJ%20and%20Mockito%20(BDDMockito)&url=http://localhost:2368/spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/"
+                  <a href="https://twitter.com/intent/tweet?text=MongoDB%20NoSQL%20Database%20Commands&url=http://localhost:2368/mongodb-nosql-database-commands/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
@@ -475,63 +475,75 @@
                   </button>
                 </div>
               </div>
-              <p>This post briefly captures the process of writing integration tests for a Spring Boot based Web application using JUnit, AssertJ and Mockito (BDDMockito) framework.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><strong>Unit</strong> testing is a type of software testing where individual units or components (ex: a method, a class) of a software are tested .</p>
-<p><strong>Integration testing</strong> is the phase in software testing in which individual software modules are combined and tested as a group. Integration Test covers multiple units because it tests the interaction between two or more components.</p>
-<p><strong>JUnit</strong> is a unit testing framework for the Java programming language.</p>
-<p><strong>AssertJ</strong> is a Java library that provides a rich set of assertions and truly helpful error messages, improves test code readability.</p>
-<p><strong>Mockito</strong>  is a testing framework that allows the creation of test double objects in automated unit tests for the purpose of test-driven development or behavior-driven development.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
-<ul>
-<li>Data/Repository Layer Testing</li>
-<li>Business/Service Layer Testing</li>
-<li>Web/Controller Layer Testing</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="test-methodology">Test Methodology</h4>
-<p><strong>given-when-then</strong> human readable test methodology is followed here. It lends more clarity to our tests as we are following a natural language that is easy to read.</p>
+              <!--kg-card-begin: markdown--><p>MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.</p>
+<p>The following is a non-exhaustive list of commonly used MongoDB Commands for quick reference.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="commands">Commands</h4>
 <ul>
 <li>
-<p><strong>given</strong><br>
-pre-conditions and requirements for actions.</p>
+<p><strong>show dbs</strong> or <strong>show databases</strong><br>
+Print a list of all databases on the server.</p>
 </li>
 <li>
-<p><strong>when</strong><br>
-action we want to test.</p>
+<p><strong><code>use &lt;db&gt;</code></strong><br>
+Switch current database to <code>&lt;db&gt;</code>. If this database doesn’t exist, it will be newly created.</p>
 </li>
 <li>
-<p><strong>then</strong><br>
-verification of what should happen after execution of action.</p>
+<p><strong>db</strong><br>
+View the current database.</p>
+</li>
+<li>
+<p><strong>show collections</strong> or <strong>db.getCollectionNames()</strong><br>
+Get the list of all collections in the current database.</p>
+</li>
+<li>
+<p><strong>db.dropDatabase()</strong><br>
+Drops the current database.</p>
+</li>
+<li>
+<p><strong><code>db.&lt;collection-name&gt;.insertOne(&lt;JSON&gt;)</code></strong><br>
+Insert JSON to the collection of the current DB.<br>
+<em>Example</em>: <strong>db.student.insertOne( {x:1} )</strong></p>
 </li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<pre><code>db.&lt;collection-name&gt;.insert(  
+[  
+     { _id: 1, name: &quot;Java Hut&quot;, description: &quot;Coffee and cakes&quot; },  
+     { _id: 2, name: &quot;Burger Buns&quot;, description: &quot;Gourmet hamburgers&quot; },  
+     { _id: 3, name: &quot;Coffee Shop&quot;, description: &quot;Just coffee&quot; },  
+     { _id: 4, name: &quot;Clothes Clothes Clothes&quot;, description: &quot;Discount clothing&quot; },  
+     { _id: 5, name: &quot;Java Shopping&quot;, description: &quot;Indonesian goods&quot; }  
+   ]
+)
+</code></pre>
+<p>Bulk insert (sample) data into a collection</p>
 <ul>
-<li>Java</li>
-<li><a href="https://www.h2database.com/html/main.html">H2DB</a></li>
-<li><a href="https://assertj.github.io/doc/">AssertJ</a></li>
-<li><a href="https://site.mockito.org/">Mockito</a></li>
-<li><a href="https://junit.org/junit5/">JUnit5</a></li>
-<li><a href="https://projectlombok.org/">Lombok</a></li>
+<li>
+<p><strong><code>db.&lt;collection-name&gt;.find()</code></strong><br>
+View the contents of a collection.<br>
+<em>Example</em>: <strong>db.student.find()</strong></p>
+</li>
+<li>
+<p><strong><code>db.&lt;collection-name&gt;.find().pretty()</code></strong><br>
+View the contents of a collection nicely formatted.<br>
+<em>Example</em>: <strong>db.student.find().pretty()</strong></p>
+</li>
+<li>
+<p><strong><code>db.&lt;collection-name&gt;.createIndex( {field-name1:&quot;text&quot;, field-name2:&quot;text&quot;} )</code></strong><br>
+<strong>Text Index</strong>, to support text search queries on string content.<br>
+<em>Example</em>: <strong>db.stores.createIndex( {name:&quot;text&quot;, description:&quot;text&quot;} )</strong></p>
+</li>
+<li>
+<p><strong><code>db.&lt;collection-name&gt;.find( { $text: { $search: &quot;text to search&quot;} } )</code></strong><br>
+<strong>$text Operator</strong>, perform text searches on a collection with a text index.<br>
+<em>Example</em>: <strong>db.stores.find( { $text: { $search: &quot;java coffee shop&quot; } } )</strong></p>
+</li>
 </ul>
-<p><em>Note</em>: Ensure JUnit5 is on the project build path.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
-<p><a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App">Spring Boot Minimal Web App</a> is the sample Spring Boot web application i've used to illustrate Integration Testing.</p>
-<p>Navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> to discover the application URLs.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/spring-boot-minimal-web-app.PNG" class="kg-image" alt loading="lazy" width="1385" height="592" srcset="../content/images/size/w600/2022/03/spring-boot-minimal-web-app.PNG 600w, ../content/images/size/w1000/2022/03/spring-boot-minimal-web-app.PNG 1000w, ../content/images/2022/03/spring-boot-minimal-web-app.PNG 1385w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>In the <strong>application.properties</strong> file present in the <strong>resources</strong> folder, set the <strong>spring.profiles.active</strong> value to <strong>application-h2db</strong>.</p>
-<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependencies">Dependencies</h4>
-<p>This implementation has a dependency on <strong>spring-boot-starter-test</strong>, <strong>h2</strong>, <strong>lombok</strong> dependencies. The <strong>maven</strong>/<strong>gradle</strong> dependencies of the same are mentioned below.</p>
-<script src="https://gist.github.com/AnanthaRajuC/c045ba794147177ae597218f685e6132.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="repository-layer-testing">Repository Layer Testing</h4>
-<p>Repositories are classes or components that encapsulate the logic required to access data sources. They centralize common data access functionality, providing better maintainability and decoupling the infrastructure or technology used to access databases from the domain model layer</p>
-<script src="https://gist.github.com/AnanthaRajuC/9e296dda506d9680cfeb5e8591a8a659.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="service-layer-testing">Service Layer Testing</h4>
-<p>Service layer is an architectural pattern, which aims to organize the services, within a service inventory, into a set of logical layers. Services that are categorized into a particular layer share functionality.</p>
-<script src="https://gist.github.com/AnanthaRajuC/f9a2dd9181be4107c0f3d464525c1c3c.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="controller-layer-testing">Controller Layer Testing</h4>
-<p>The Controller layer is the conductor of operations for a request. It controls the transaction scope and manages the session related information for the request. The controller first dispatches to a command and then calls the appropriate view processing logic to render the response.</p>
-<script src="https://gist.github.com/AnanthaRajuC/160cd6892908f1b225bd1eee7de73c72.js"></script><!--kg-card-end: markdown-->
+<!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
                   <ul>
                       <li>
-                        <a href="../tag/spring-boot/index.html" title="Spring Boot">Spring Boot</a>
+                        <a href="../tag/mongodb/index.html" title="MongoDB">MongoDB</a>
                       </li>
                   </ul>
                 </section>
@@ -634,58 +646,6 @@ verification of what should happen after execution of action.</p>
           <span>8 months ago</span>
           <span>&bull;</span>
           <span>2 min read</span>
-        </div>
-      </a>
-    </div>
-  </article>
-    </div>
-    <div class="m-recommended-slider__item swiper-slide">
-  <article class="m-article-card  post tag-spring-boot tag-java">
-    <div class="m-article-card__picture">
-      <a href="../spring-boot-and-swagger-ui-rest-api-documentation-tool/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
-        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
-      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
-          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
-      </a>
-    </div>
-      <div class="m-article-card__info">
-        <a href="../tag/spring-boot/index.html" class="m-article-card__tag">Spring Boot</a>
-      <a href="../spring-boot-and-swagger-ui-rest-api-documentation-tool/index.html" class="m-article-card__info-link" aria-label="Spring Boot and Swagger UI REST API Documentation Tool">
-        <div>
-          <h2 class="m-article-card__title js-article-card-title " title="Spring Boot and Swagger UI REST API Documentation Tool">
-            Spring Boot and Swagger UI REST API Documentation Tool
-          </h2>
-        </div>
-        <div class="m-article-card__timestamp">
-          <span>8 months ago</span>
-          <span>&bull;</span>
-          <span>2 min read</span>
-        </div>
-      </a>
-    </div>
-  </article>
-    </div>
-    <div class="m-recommended-slider__item swiper-slide">
-  <article class="m-article-card  post tag-java tag-spring-boot">
-    <div class="m-article-card__picture">
-      <a href="../spring-boot-with-flyway-version-control-for-relational-databases/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
-        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1494264274944-1ba7d9b73135?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fGNvbnRyb2x8ZW58MHx8fHwxNjQ2NjI2MzE1&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
-      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
-          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
-      </a>
-    </div>
-      <div class="m-article-card__info">
-        <a href="../tag/java/index.html" class="m-article-card__tag">Java</a>
-      <a href="../spring-boot-with-flyway-version-control-for-relational-databases/index.html" class="m-article-card__info-link" aria-label="Spring Boot with Flyway version control for Relational Databases">
-        <div>
-          <h2 class="m-article-card__title js-article-card-title " title="Spring Boot with Flyway version control for Relational Databases">
-            Spring Boot with Flyway version control for Relational Databases
-          </h2>
-        </div>
-        <div class="m-article-card__timestamp">
-          <span>8 months ago</span>
-          <span>&bull;</span>
-          <span>3 min read</span>
         </div>
       </a>
     </div>
