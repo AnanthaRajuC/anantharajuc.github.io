@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=353e72b21b.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=353e72b21b" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=353e72b21b" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=353e72b21b" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=353e72b21b" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=353e72b21b.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=353e72b21b" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=353e72b21b") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=353e72b21b") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=353e72b21b") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=353e72b21b") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=353e72b21b") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=353e72b21b") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=353e72b21b");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=353e72b21b") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=353e72b21b") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=353e72b21b") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=353e72b21b") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=353e72b21b.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=353e72b21b.css" media="screen" />
+
+
+    
+
+    <meta name="description" content="Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub." />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application" />
+    <meta property="og:description" content="Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub." />
+    <meta property="og:url" content="http://localhost:2368/creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2021-08-31T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2022-03-08T02:30:20.000Z" />
+    <meta property="article:tag" content="CI/CD" />
+    <meta property="article:tag" content="Docker" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application" />
+    <meta name="twitter:description" content="Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub." />
+    <meta name="twitter:url" content="http://localhost:2368/creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="CI/CD, Docker" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1126" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application",
+    "url": "http://localhost:2368/creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/",
+    "datePublished": "2021-08-31T00:00:00.000Z",
+    "dateModified": "2022-03-08T02:30:20.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 1126
+    },
+    "keywords": "CI/CD, Docker",
+    "description": "Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.38" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.15.0/umd/portal.min.js" data-ghost="http://localhost:2368/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="../public/cards.min.js%3Fv=353e72b21b"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=353e72b21b.css">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template tag-ci-cd tag-docker">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="http://localhost:2368/about/">About</a>
+    </li>
+    <li class="nav-collection">
+      <a href="../tag/spring-boot/index.html">Collection</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+
+                <li class="more">
+                  <span>
+                    <a href="javascript:void(0);" class="js-open-secondary-menu">
+                      More
+                      <span class="icon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                  </span>
+                </li>
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="../git-commit-template/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1572277603731-6941cdb65597?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxjYXN0fGVufDB8fHx8MTY0NjU3OTIxMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Git Commit Template">
+                                      Git Commit Template
+                                    </h3>
+                                    <span class="m-recent-article__date">5 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../essential-github-bots/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1590595906931-81f04f0ccebb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fEdpdEh1YnxlbnwwfHx8fDE2NDY1NzU0MTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Essential GitHub Bots">
+                                      Essential GitHub Bots
+                                    </h3>
+                                    <span class="m-recent-article__date">6 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application">
+                                      Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application
+                                    </h3>
+                                    <span class="m-recent-article__date">6 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../spring-boot-web-application-integrating-testing-with-junit-assertj-and-mockito-bddmockito/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1599493758267-c6c884c7071f?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fHRlc3Rpbmd8ZW58MHx8fHwxNjQ2NTc4MTk2&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)">
+                                      Spring Boot Web Application Integrating Testing with JUnit, AssertJ and Mockito (BDDMockito)
+                                    </h3>
+                                    <span class="m-recent-article__date">6 months ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../tag/database/index.html">Database</a>
+                            </li>
+                            <li>
+                              <a href="../tag/docker/index.html">Docker</a>
+                            </li>
+                            <li>
+                              <a href="../tag/git/index.html">Git</a>
+                            </li>
+                            <li>
+                              <a href="../tag/github/index.html">GitHub</a>
+                            </li>
+                            <li>
+                              <a href="../tag/java/index.html">Java</a>
+                            </li>
+                            <li>
+                              <a href="../tag/mongodb/index.html">MongoDB</a>
+                            </li>
+                            <li>
+                              <a href="../tag/personal/index.html">Personal</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="secondary-navigation-template" style="display: none;">
+      
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+    </div>
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
+          https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
+          https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
+          https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@tinusphtography?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">timea dombi</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application</h1>
+              <div class="m-heading__meta">
+                  <a href="../tag/ci-cd/index.html" class="m-heading__meta__tag">CI/CD</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Aug 31, 2021</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Creating%20a%20CI%2FCD%20Pipeline%20with%20Travis%20CI%2C%20GitHub%20and%20Docker%20Hub%20for%20Spring%20Boot%20based%20Web%20Application&url=http://localhost:2368/creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!--kg-card-begin: markdown--><p>This post briefly captures the process of triggering a Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>GitHub</strong> is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.</p>
+<p><strong>Travis CI</strong> is a hosted continuous integration service used to build and test software projects hosted on GitHub and Bitbucket.</p>
+<p><strong>Docker Hub</strong> Docker Hub is a service provided by Docker for finding and sharing container images with your team. It is the world’s largest repository of container images with an array of content sources including container community developers, open source projects and independent software vendors (ISV) building and distributing their code in containers.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ol>
+<li>Developer pushes code to GitHub</li>
+<li>Job is triggered in Travis CI</li>
+<li>Travis CI builds Docker Image and pushes to Docker Hub</li>
+</ol>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/continuous-delivery-with-travis-ci-architecture.png" class="kg-image" alt loading="lazy" width="1128" height="313" srcset="../content/images/size/w600/2022/03/continuous-delivery-with-travis-ci-architecture.png 600w, ../content/images/size/w1000/2022/03/continuous-delivery-with-travis-ci-architecture.png 1000w, ../content/images/2022/03/continuous-delivery-with-travis-ci-architecture.png 1128w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="minimum-requirements">Minimum Requirements</h4>
+<ul>
+<li>Java</li>
+<li>Maven</li>
+<li><a href="https://github.com/">GitHub account</a> (FREE)</li>
+<li><a href="https://www.travis-ci.com/">Travis CI account</a> (FREE)</li>
+<li><a href="https://hub.docker.com/">dockerhub account</a> (FREE)</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="getting-started">Getting Started</h4>
+<h5 id="sample-project"><strong>Sample Project</strong></h5>
+<p><a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App">Spring Boot Minimal Web App</a> is the sample Spring Boot web application i've used to illustrate Integration Testing.</p>
+<p>Navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> to discover the application URLs.</p>
+<p>In the <strong>application.properties</strong> file present in the <strong>resources</strong> folder, set the <strong><code>spring.profiles.active</code></strong> value to <strong>application-h2db</strong> since we will be running the tests before initiating the build process which is dependent on all the tests passing.</p>
+<p><em>Note</em>: <strong>mvn package -Dmaven.test.skip=true</strong> Command to build the project by skipping all tests.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-1add-dockerfile-file-to-the-project"><strong>Step 1 - Add Dockerfile file to the project.</strong></h4>
+<script src="https://gist.github.com/AnanthaRajuC/cb8ff191f322dd8d2220a2f2cb870fbc.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-2add-travisyml-file-to-the-project"><strong>Step 2 - Add .travis.yml file to the project.</strong></h4>
+<script src="https://gist.github.com/AnanthaRajuC/1a3588a49b06b4623c793001913c557c.js"></script><!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-3generate-access-token-from-docker-hub"><strong>Step 3 - Generate Access Token from Docker Hub</strong></h4>
+<p>In the <strong>Security</strong> section of your Docker Hub account <strong>Settings</strong> page, click on the <strong>New Access Token</strong> button to generate a new access token with <strong>Read</strong>, <strong>Write</strong>, <strong>Delete</strong> scope. If you prefer using an existing access token, use it.</p>
+<p><em>Note</em> : This access token will be used as the value for the <em>DOCKER_PASS</em> <strong>Environment Variables</strong> key.</p>
+<p><em>Reference</em> : <a href="https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token">https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token</a></p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/6-docker-hub-access-token.png" class="kg-image" alt loading="lazy" width="1387" height="875" srcset="../content/images/size/w600/2022/03/6-docker-hub-access-token.png 600w, ../content/images/size/w1000/2022/03/6-docker-hub-access-token.png 1000w, ../content/images/2022/03/6-docker-hub-access-token.png 1387w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="step-4activate-github-repository-in-travis-ci"><strong>Step 4 - Activate GitHub Repository in Travis CI</strong></h4>
+<p>Login to <a href="https://app.travis-ci.com">https://app.travis-ci.com</a> and activate the repository of interest.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/1-travis-ci-login.png" class="kg-image" alt loading="lazy" width="1392" height="1407" srcset="../content/images/size/w600/2022/03/1-travis-ci-login.png 600w, ../content/images/size/w1000/2022/03/1-travis-ci-login.png 1000w, ../content/images/2022/03/1-travis-ci-login.png 1392w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Approve &amp; Install Travis CI on the selected repository.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/2-github-approve-install-travis-ci.png" class="kg-image" alt loading="lazy" width="1032" height="1048" srcset="../content/images/size/w600/2022/03/2-github-approve-install-travis-ci.png 600w, ../content/images/size/w1000/2022/03/2-github-approve-install-travis-ci.png 1000w, ../content/images/2022/03/2-github-approve-install-travis-ci.png 1032w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Confirm  Travis CI installation by entering the GitHub account password.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/3-confirm-access.png" class="kg-image" alt loading="lazy" width="411" height="436"></figure><!--kg-card-begin: markdown--><p>In Travis CI dashboard, under the repositories tab click on the settings button associated with the repository.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/4-repositories.png" class="kg-image" alt loading="lazy" width="1078" height="479" srcset="../content/images/size/w600/2022/03/4-repositories.png 600w, ../content/images/size/w1000/2022/03/4-repositories.png 1000w, ../content/images/2022/03/4-repositories.png 1078w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>In the <strong>Environment Variables</strong> section of <strong>Settings</strong> tab of the selected repository, add Docker Hub user details.</p>
+<p><em>DOCKER_USER</em> : <em>YOUR_DOCKER_HUB_USERNAME</em><br>
+<em>DOCKER_PASS</em> : <em>YOUR_DOCKER_HUB_ACCESS_TOKEN</em></p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/5-docker-hub-credentials.png" class="kg-image" alt loading="lazy" width="1394" height="1679" srcset="../content/images/size/w600/2022/03/5-docker-hub-credentials.png 600w, ../content/images/size/w1000/2022/03/5-docker-hub-credentials.png 1000w, ../content/images/2022/03/5-docker-hub-credentials.png 1394w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="step-5push-code-to-github"><strong>Step 5 - Push Code to GitHub</strong></h4>
+<p>Now that we've configured the sample Spring Boot Application with necessary files (Dockerfile, .travis.yml) and the required services (Travis CI, Docker Hub) with necessary environment variables and access tokens, we can push the code changes from our local development machine to our remote GitHub repository.</p>
+<pre><code class="language-shell">git push origin main
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="outcome-travis-ci"><strong>Outcome: Travis CI</strong></h4>
+<p>We can now expect travis ci to run the tests, build the docker image of the application and push the same to dockerhub.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/7-travis-ci-job-status.png" class="kg-image" alt loading="lazy" width="1386" height="687" srcset="../content/images/size/w600/2022/03/7-travis-ci-job-status.png 600w, ../content/images/size/w1000/2022/03/7-travis-ci-job-status.png 1000w, ../content/images/2022/03/7-travis-ci-job-status.png 1386w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="outcome-docker-hub"><strong>Outcome: Docker Hub</strong></h4>
+<p>Finally, the lastest docker image of the application must be present in your docker hub registry.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/8-docker-hub-image.PNG" class="kg-image" alt loading="lazy" width="1344" height="627" srcset="../content/images/size/w600/2022/03/8-docker-hub-image.PNG 600w, ../content/images/size/w1000/2022/03/8-docker-hub-image.PNG 1000w, ../content/images/2022/03/8-docker-hub-image.PNG 1344w" sizes="(min-width: 720px) 720px"></figure>
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/ci-cd/index.html" title="CI/CD">CI/CD</a>
+                      </li>
+                      <li>
+                        <a href="../tag/docker/index.html" title="Docker">Docker</a>
+                      </li>
+                  </ul>
+                </section>
+            </div>
+          </div>
+        </div>
+          <section class="m-subscribe-section js-newsletter">
+            <div class="l-wrapper in-post">
+              <div class="m-subscribe-section__content">
+                <div class="m-subscribe-section__text">
+                  <h4 class="m-subscribe-section__title">Subscribe to our newsletter</h4>
+                  <p class="m-subscribe-section__description">
+                    Get the latest posts delivered right to your inbox.
+                  </p>
+                </div>
+                <div class="m-subscribe-section__form">
+                  
+<div class="m-subscribe-section__form">
+  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+    <div class="m-subscribe__form">
+      <div class="pos-relative">
+        <label for="newsletter-input" class="sr-only">Your email address</label>
+        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+          placeholder="Your email address" required />
+      </div>
+      <button id="newsletter-button" class="m-button primary block" type="submit">Subscribe</button>
+    </div>
+    <div class="m-subscribe__success">
+      <header class="m-heading no-margin">
+        <img src="../assets/images/success.png%3Fv=353e72b21b" alt="Success!" class="m-subscribe__success_icon">
+        <p class="m-heading__description in-newsletter-form">
+          Now check your inbox and click the link to confirm your subscription.
+        </p>
+      </header>
+    </div>
+    <p class="m-subscribe__invalid m-small-text">
+      Please enter a valid email address
+    </p>
+    <p class="m-subscribe__error m-small-text">
+      Oops! There was an error sending the email, please try later.
+    </p>
+  </form>
+</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+            <section class="m-recommended">
+              <div class="l-wrapper in-recommended">
+                <h3 class="m-section-title in-recommended">Recommended for you</h3>
+                <div class="m-recommended-articles">
+                  <div class="m-recommended-slider swiper js-recommended-slider">
+                    <div class="swiper-wrapper">
+                      
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-docker">
+    <div class="m-article-card__picture">
+      <a href="../docker-and-docker-hub-commands/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1605745341112-85968b19335b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/docker/index.html" class="m-article-card__tag">Docker</a>
+      <a href="../docker-and-docker-hub-commands/index.html" class="m-article-card__info-link" aria-label="Docker and Docker Hub Commands">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Docker and Docker Hub Commands">
+            Docker and Docker Hub Commands
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>a year ago</span>
+          <span>&bull;</span>
+          <span>3 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+                    </div>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-prev" aria-label="Previous">
+                      <span class="icon-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-next" aria-label="Next">
+                      <span class="icon-arrow-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="Secondary menu in footer">
+        
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+      </nav>
+    <nav class="m-footer-social">
+        <a href="https://www.facebook.com/ghost" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="icon-facebook" aria-hidden="true"></span>
+        </a>
+        <a href="https://twitter.com/ghost" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=353e72b21b.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=353e72b21b"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=353e72b21b"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=353e72b21b"></script>
+    <script defer src="../assets/js/app.js%3Fv=353e72b21b"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=353e72b21b"></script>
+
+
+    
+  </body>
+</html>
