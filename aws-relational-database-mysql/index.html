@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS</title>
+    <title>AWS Relational Database: MySQL</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -75,26 +75,26 @@
 
     
 
-    <meta name="description" content="Deploy a Spring Boot based web application on AWS Elastic Beanstalk." />
+    <meta name="description" content="Creating **MySQL** Database via the AWS RDS service." />
     <link rel="canonical" href="index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS" />
-    <meta property="og:description" content="Deploy a Spring Boot based web application on AWS Elastic Beanstalk." />
-    <meta property="og:url" content="http://localhost:2368/spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
-    <meta property="article:published_time" content="2021-08-10T00:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-10T03:12:33.000Z" />
+    <meta property="og:title" content="AWS Relational Database: MySQL" />
+    <meta property="og:description" content="Creating **MySQL** Database via the AWS RDS service." />
+    <meta property="og:url" content="http://localhost:2368/aws-relational-database-mysql/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2021-07-08T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2022-03-10T03:08:48.000Z" />
     <meta property="article:tag" content="Amazon Web Services" />
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS" />
-    <meta name="twitter:description" content="Deploy a Spring Boot based web application on AWS Elastic Beanstalk." />
-    <meta name="twitter:url" content="http://localhost:2368/spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/" />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:title" content="AWS Relational Database: MySQL" />
+    <meta name="twitter:description" content="Creating **MySQL** Database via the AWS RDS service." />
+    <meta name="twitter:url" content="http://localhost:2368/aws-relational-database-mysql/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Anantha Raju C" />
     <meta name="twitter:label2" content="Filed under" />
@@ -102,7 +102,7 @@
     <meta name="twitter:site" content="@ghost" />
     <meta name="twitter:creator" content="@anantharajuc" />
     <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="1125" />
+    <meta property="og:image:height" content="3000" />
     
     <script type="application/ld+json">
 {
@@ -134,18 +134,18 @@
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS",
-    "url": "http://localhost:2368/spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/",
-    "datePublished": "2021-08-10T00:00:00.000Z",
-    "dateModified": "2022-03-10T03:12:33.000Z",
+    "headline": "AWS Relational Database: MySQL",
+    "url": "http://localhost:2368/aws-relational-database-mysql/",
+    "datePublished": "2021-07-08T00:00:00.000Z",
+    "dateModified": "2022-03-10T03:08:48.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&ixlib=rb-1.2.1&q=80&w=2000",
+        "url": "https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&ixlib=rb-1.2.1&q=80&w=2000",
         "width": 2000,
-        "height": 1125
+        "height": 3000
     },
     "keywords": "Amazon Web Services",
-    "description": "Deploy a Spring Boot based web application on AWS Elastic Beanstalk.",
+    "description": "Creating **MySQL** Database via the AWS RDS service.",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -427,20 +427,20 @@
     <div class="m-hero__picture in-post">
       <img
         srcset="
-          https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
-          https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
-          https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
-          https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+          https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
+          https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
+          https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
+          https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
         "
         sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
-        src="https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
+        src="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
         alt=""
       />
     </div>
     </section>
         <div class="l-wrapper in-caption">
           <p class="m-small-text align-center">
-            Photo by <a href="https://unsplash.com/@giggiulena?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Mario Caruso</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+            Photo by <a href="https://unsplash.com/@jaken?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Jake Nebov</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
           </p>
         </div>
   
@@ -451,21 +451,21 @@
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
-              <h1 class="m-heading__title in-post">Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS</h1>
+              <h1 class="m-heading__title in-post">AWS Relational Database: MySQL</h1>
               <div class="m-heading__meta">
                   <a href="../tag/amazon-web-services/index.html" class="m-heading__meta__tag">Amazon Web Services</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
-                <span class="m-heading__meta__time">Aug 10, 2021</span>
+                <span class="m-heading__meta__time">Jul 8, 2021</span>
               </div>
             </header>
             <div class="pos-relative js-post-content">
               <div class="m-share">
                 <div class="m-share__content js-sticky">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/"
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/aws-relational-database-mysql/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
                     <span class="icon-facebook" aria-hidden="true"></span>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=Spring%20Boot%20Web%20Application%20Deployment%20on%20AWS%20Elastic%20Beanstalk%20with%20AWS%20RDS&url=http://localhost:2368/spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/"
+                  <a href="https://twitter.com/intent/tweet?text=AWS%20Relational%20Database%3A%20MySQL&url=http://localhost:2368/aws-relational-database-mysql/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
@@ -477,74 +477,88 @@
                   </button>
                 </div>
               </div>
-              <!--kg-card-begin: markdown--><p>This post briefly documents the process of deploying a Spring Boot based web application on the AWS Elastic Beanstalk platform. This application will be connected to an AWS managed MySQL Relational Database system.</p>
+              <!--kg-card-begin: markdown--><p>This post briefly documents the process of creating <strong>MySQL</strong> Database via the AWS <strong>RDS</strong> service.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><strong>AWS Elastic Beanstalk</strong> is an orchestration service offered by Amazon Web Services for deploying applications which orchestrates various AWS services, including EC2, S3, Simple Notification Service, CloudWatch, autoscaling, and Elastic Load Balancers.</p>
 <p><strong>Amazon Relational Database Service (RDS)</strong> is a distributed relational database service by Amazon Web Services. It is a web service running &quot;in the cloud&quot; designed to simplify the setup, operation, and scaling of a relational database for use in applications.</p>
+<p><strong>MySQL</strong> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
 <ol>
-<li>Amazon Relational Database Service (MySQL) Creation and Configuration</li>
-<li>AWS Beanstalk - Creating Environment<br>
-2.1 Create a new environment<br>
-2.2 Select environment tier<br>
-2.3 Create a web server environment<br>
-2.4 Environment information<br>
-2.5 Platform<br>
-2.6 Application code<br>
-2.7 Log</li>
-<li>Edit inbound rules for the web app deployed on Elastic Beanstalk to access the Database</li>
-<li>Environment Overview<br>
-4.1 Environment setup complete<br>
-4.2 Application<br>
-4.3 Configuration<br>
-4.4 Monitoring<br>
-4.5 Events</li>
-<li>Output<br>
-5.1 Web Page<br>
-5.2 API Endpoint<br>
-5.3 API In Action</li>
-<li>Cleanup<br>
-6.1 Terminate Environment<br>
-6.2 Confirm Environment Termination</li>
+<li>Database Configuration<br>
+1.1 Database Configuration<br>
+1.2 Templates<br>
+1.3 Settings, Credentials Settings<br>
+1.4 Connectivity<br>
+1.5 Database authentication<br>
+1.6 Additional Configuration</li>
+<li>Connectivity and security<br>
+2.1 Connectivity and security Configuration<br>
+2.2 Security Groups<br>
+2.3 Edit inbound rules<br>
+2.4 Add rules<br>
+2.5 Inbound rules</li>
+<li>Accessing the Database via MySQL Workbench<br>
+3.1 Setup new connection<br>
+3.2 MySQL connection result<br>
+3.3 MySQL Workbench</li>
 </ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="minimum-requirements"><strong>Minimum Requirements</strong></h5>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-requirements"><strong>Minimum Requirements</strong></h4>
 <ul>
 <li>Access to <a href="https://aws.amazon.com/console/">AWS Management Console</a></li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="sample-project"><strong>Sample Project</strong></h5>
-<p><a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App">Spring Boot Minimal Web App</a> is the sample Spring Boot web application i've used to deploy on the AWS Elastic Beanstalk platform.</p>
-<p>Navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> to discover the application URLs.</p>
-<p>Find details on how to build an executable jar <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/blob/main/documents/INSTALLATION.MD#building-the-jar">here</a>.</p>
-<p>In the <strong>application.properties</strong> file present in the <strong>resources</strong> folder, set the <strong>spring.profiles.active</strong> value to <strong>mysql-aws</strong>.</p>
-<p>In the <strong>application-mysql-aws.properties</strong> file, set the <strong>server.port</strong> value to <strong>5000</strong>. Also, set the <strong>aws.rds.database.endpoint</strong> value in the same file to the database endpoint generated after following the steps in the next section.</p>
-<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-1aws-rds-mysql-creation-and-configuration"><strong>Step 1 - AWS RDS MySQL Creation and Configuration</strong></h5>
-<p>Refer the following post detailing the process of creating <strong>MySQL</strong> Database via the AWS <strong>RDS</strong> service. This is an essential part of the process since the sample application will be connected to a relational database.</p>
-<p><a href="https://anantharajuc.github.io/aws-relational-database-mysql/">https://anantharajuc.github.io/aws-relational-database-mysql/</a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="step-2aws-beanstalkcreating-environment"><strong>Step 2 - AWS Beanstalk - Creating Environment</strong></h5>
-<h6 id="step-21create-a-new-environment"><strong>Step 2.1 - Create a new environment</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/1-2.PNG" class="kg-image" alt loading="lazy" width="1366" height="661" srcset="../content/images/size/w600/2022/03/1-2.PNG 600w, ../content/images/size/w1000/2022/03/1-2.PNG 1000w, ../content/images/2022/03/1-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-22select-environment-tier"><strong>Step 2.2 - Select environment tier</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/2-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="657" srcset="../content/images/size/w600/2022/03/2-1.PNG 600w, ../content/images/size/w1000/2022/03/2-1.PNG 1000w, ../content/images/2022/03/2-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-23create-a-web-server-environment"><strong>Step 2.3 - Create a web server environment</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/3-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="506" srcset="../content/images/size/w600/2022/03/3-1.PNG 600w, ../content/images/size/w1000/2022/03/3-1.PNG 1000w, ../content/images/2022/03/3-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-24environment-information"><strong>Step 2.4 - Environment information</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/4-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="508" srcset="../content/images/size/w600/2022/03/4-1.PNG 600w, ../content/images/size/w1000/2022/03/4-1.PNG 1000w, ../content/images/2022/03/4-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-25platform"><strong>Step 2.5 - Platform</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/5-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="563" srcset="../content/images/size/w600/2022/03/5-1.PNG 600w, ../content/images/size/w1000/2022/03/5-1.PNG 1000w, ../content/images/2022/03/5-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-26application-code"><strong>Step 2.6 - Application code</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/6-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="815" srcset="../content/images/size/w600/2022/03/6-1.PNG 600w, ../content/images/size/w1000/2022/03/6-1.PNG 1000w, ../content/images/2022/03/6-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-27log"><strong>Step 2.7 - Log</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/7-1.PNG" class="kg-image" alt loading="lazy" width="1363" height="755" srcset="../content/images/size/w600/2022/03/7-1.PNG 600w, ../content/images/size/w1000/2022/03/7-1.PNG 1000w, ../content/images/2022/03/7-1.PNG 1363w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="step-3edit-inbound-rules-for-the-web-app-deployed-on-elastic-beanstalk-to-access-the-database"><strong>Step 3 - Edit inbound rules for the web app deployed on Elastic Beanstalk to access the Database</strong></h5>
-<h6 id="edit-inbound-rules"><strong>Edit inbound rules</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/12-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="735" srcset="../content/images/size/w600/2022/03/12-1.PNG 600w, ../content/images/size/w1000/2022/03/12-1.PNG 1000w, ../content/images/2022/03/12-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="environment-overview"><strong>Environment Overview</strong></h5>
-<h6 id="step-4environment-setup-complete"><strong>Step 4 - Environment setup complete</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/8-2.PNG" class="kg-image" alt loading="lazy" width="1366" height="660" srcset="../content/images/size/w600/2022/03/8-2.PNG 600w, ../content/images/size/w1000/2022/03/8-2.PNG 1000w, ../content/images/2022/03/8-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-41application"><strong>Step 4.1 - Application</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/16-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="663" srcset="../content/images/size/w600/2022/03/16-1.PNG 600w, ../content/images/size/w1000/2022/03/16-1.PNG 1000w, ../content/images/2022/03/16-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-42configuration"><strong>Step 4.2 - Configuration</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/17-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="1593" srcset="../content/images/size/w600/2022/03/17-1.PNG 600w, ../content/images/size/w1000/2022/03/17-1.PNG 1000w, ../content/images/2022/03/17-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-43monitoring"><strong>Step 4.3 - Monitoring</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/20.PNG" class="kg-image" alt loading="lazy" width="1366" height="1266" srcset="../content/images/size/w600/2022/03/20.PNG 600w, ../content/images/size/w1000/2022/03/20.PNG 1000w, ../content/images/2022/03/20.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-44events"><strong>Step 4.4 - Events</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/23.PNG" class="kg-image" alt loading="lazy" width="1366" height="658" srcset="../content/images/size/w600/2022/03/23.PNG 600w, ../content/images/size/w1000/2022/03/23.PNG 1000w, ../content/images/2022/03/23.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="step-5output"><strong>Step 5 - Output</strong></h5>
-<h6 id="step-51web-page"><strong>Step 5.1 - Web Page</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/10-1.PNG" class="kg-image" alt loading="lazy" width="1060" height="449" srcset="../content/images/size/w600/2022/03/10-1.PNG 600w, ../content/images/size/w1000/2022/03/10-1.PNG 1000w, ../content/images/2022/03/10-1.PNG 1060w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-52api-endpoint"><strong>Step 5.2 - API Endpoint</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/9-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="570" srcset="../content/images/size/w600/2022/03/9-1.PNG 600w, ../content/images/size/w1000/2022/03/9-1.PNG 1000w, ../content/images/2022/03/9-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-53api-in-action"><strong>Step 5.3 - API In Action</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/11-1.PNG" class="kg-image" alt loading="lazy" width="935" height="515" srcset="../content/images/size/w600/2022/03/11-1.PNG 600w, ../content/images/2022/03/11-1.PNG 935w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="step-6cleanup"><strong>Step 6 - Cleanup</strong></h5>
-<h6 id="step-61terminate-environment"><strong>Step 6.1 - Terminate Environment</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/24.png" class="kg-image" alt loading="lazy" width="1366" height="664" srcset="../content/images/size/w600/2022/03/24.png 600w, ../content/images/size/w1000/2022/03/24.png 1000w, ../content/images/2022/03/24.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-62confirm-environment-termination"><strong>Step 6.2 - Confirm Environment Termination</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/25.PNG" class="kg-image" alt loading="lazy" width="1366" height="631" srcset="../content/images/size/w600/2022/03/25.PNG 600w, ../content/images/size/w1000/2022/03/25.PNG 1000w, ../content/images/2022/03/25.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="database-configuration"><strong>Database Configuration</strong></h4>
+<ul>
+<li>From the services drop down from the Navigation bar, select the <strong><code>RDS</code></strong> service from the Database section.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/1.png" class="kg-image" alt loading="lazy" width="1366" height="662" srcset="../content/images/size/w600/2022/03/1.png 600w, ../content/images/size/w1000/2022/03/1.png 1000w, ../content/images/2022/03/1.png 1366w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/2-3.PNG" class="kg-image" alt loading="lazy" width="1366" height="659" srcset="../content/images/size/w600/2022/03/2-3.PNG 600w, ../content/images/size/w1000/2022/03/2-3.PNG 1000w, ../content/images/2022/03/2-3.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><ul>
+<li>In the following page, configure the database settings.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="database-creation"><strong>Database Creation</strong></h5>
+<ul>
+<li><strong>Database creation method</strong> : <strong>Standard create</strong></li>
+<li><strong>Engine Type</strong> : <strong>MySQL</strong></li>
+<li><strong>Edition</strong> : <strong>MySQL Community</strong></li>
+<li><strong>Version</strong> : <strong>MySQL 8.0.23</strong> <em>(or whatever is the latest avaialable version)</em></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/3-3.PNG" class="kg-image" alt loading="lazy" width="782" height="292" srcset="../content/images/size/w600/2022/03/3-3.PNG 600w, ../content/images/2022/03/3-3.PNG 782w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/4-3.PNG" class="kg-image" alt loading="lazy" width="745" height="583" srcset="../content/images/size/w600/2022/03/4-3.PNG 600w, ../content/images/2022/03/4-3.PNG 745w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="templates"><strong>Templates</strong></h5>
+<ul>
+<li><strong>Templates</strong> : <strong>Free Tier</strong></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/5-3.PNG" class="kg-image" alt loading="lazy" width="779" height="258" srcset="../content/images/size/w600/2022/03/5-3.PNG 600w, ../content/images/2022/03/5-3.PNG 779w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="settings-credentials-settings"><strong>Settings, Credentials Settings</strong></h5>
+<ul>
+<li><strong>DB instance identifier</strong> : <strong>some_identifier</strong> <em>(ex: sbmwa)</em></li>
+<li><strong>Master Username</strong> : <strong>some_username</strong> <em>(ex: sbmwa_aws_user)</em></li>
+<li><strong>Master Password</strong> : <strong>some_password</strong> <em>(ex: sbmwa_aws_pwd)</em></li>
+<li><strong>Confirm Password</strong> : <strong>some_password</strong> <em>(ex: sbmwa_aws_pwd)</em></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/6-3.PNG" class="kg-image" alt loading="lazy" width="774" height="601" srcset="../content/images/size/w600/2022/03/6-3.PNG 600w, ../content/images/2022/03/6-3.PNG 774w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="connectivity"><strong>Connectivity</strong></h5>
+<ul>
+<li><strong>Virtual private cloud</strong> : <strong>Default VPC</strong></li>
+<li><strong>Subnet group</strong> : <strong>default</strong></li>
+<li><strong>Public access</strong> : <strong>Yes</strong></li>
+<li><strong>VPC security group</strong> : <strong>Choose existing</strong></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/9-3.PNG" class="kg-image" alt loading="lazy" width="774" height="978" srcset="../content/images/size/w600/2022/03/9-3.PNG 600w, ../content/images/2022/03/9-3.PNG 774w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="database-authentication"><strong>Database authentication</strong></h5>
+<ul>
+<li><strong>Database Authentication</strong> : <strong>Password authentication</strong></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/11-2.PNG" class="kg-image" alt loading="lazy" width="775" height="307" srcset="../content/images/size/w600/2022/03/11-2.PNG 600w, ../content/images/2022/03/11-2.PNG 775w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="additional-configuration"><strong>Additional Configuration</strong></h5>
+<ul>
+<li><strong>Initial database name</strong> : <strong>Schema name</strong> <em>(ex: sbmwa_aws)</em></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/12-2.PNG" class="kg-image" alt loading="lazy" width="779" height="590" srcset="../content/images/size/w600/2022/03/12-2.PNG 600w, ../content/images/2022/03/12-2.PNG 779w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><ul>
+<li>Finally, at the end of the page click on the <strong>Create database</strong> button.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/13-1.PNG" class="kg-image" alt loading="lazy" width="774" height="440" srcset="../content/images/size/w600/2022/03/13-1.PNG 600w, ../content/images/2022/03/13-1.PNG 774w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="connectivity-and-security"><strong>Connectivity and security</strong></h4>
+<h5 id="connectivity-and-security-configuration"><strong>Connectivity and security Configuration</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/15-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="658" srcset="../content/images/size/w600/2022/03/15-1.PNG 600w, ../content/images/size/w1000/2022/03/15-1.PNG 1000w, ../content/images/2022/03/15-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="security-groups"><strong>Security Groups</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/16-2.PNG" class="kg-image" alt loading="lazy" width="1366" height="660" srcset="../content/images/size/w600/2022/03/16-2.PNG 600w, ../content/images/size/w1000/2022/03/16-2.PNG 1000w, ../content/images/2022/03/16-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="edit-inbound-rules"><strong>Edit inbound rules</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/17-2.PNG" class="kg-image" alt loading="lazy" width="1366" height="658" srcset="../content/images/size/w600/2022/03/17-2.PNG 600w, ../content/images/size/w1000/2022/03/17-2.PNG 1000w, ../content/images/2022/03/17-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="add-rules"><strong>Add rules</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/19.PNG" class="kg-image" alt loading="lazy" width="1366" height="661" srcset="../content/images/size/w600/2022/03/19.PNG 600w, ../content/images/size/w1000/2022/03/19.PNG 1000w, ../content/images/2022/03/19.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="inbound-rules"><strong>Inbound rules</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/20-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="660" srcset="../content/images/size/w600/2022/03/20-1.PNG 600w, ../content/images/size/w1000/2022/03/20-1.PNG 1000w, ../content/images/2022/03/20-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="accessing-the-database-via-mysql-workbench"><strong>Accessing the Database via MySQL Workbench</strong></h4>
+<h5 id="setup-new-connection"><strong>Setup new connection</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/21.PNG" class="kg-image" alt loading="lazy" width="783" height="492" srcset="../content/images/size/w600/2022/03/21.PNG 600w, ../content/images/2022/03/21.PNG 783w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="mysql-connection-result"><strong>MySQL connection result</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/22.PNG" class="kg-image" alt loading="lazy" width="784" height="490" srcset="../content/images/size/w600/2022/03/22.PNG 600w, ../content/images/2022/03/22.PNG 784w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="mysql-workbench"><strong>MySQL Workbench</strong></h5>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/23-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="737" srcset="../content/images/size/w600/2022/03/23-1.PNG 600w, ../content/images/size/w1000/2022/03/23-1.PNG 1000w, ../content/images/2022/03/23-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
                   <ul>
@@ -660,24 +674,24 @@
     <div class="m-recommended-slider__item swiper-slide">
   <article class="m-article-card  post tag-amazon-web-services">
     <div class="m-article-card__picture">
-      <a href="../aws-relational-database-mysql/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
-        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+      <a href="../spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1533664488202-6af66d26c44a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxzYXRlbGxpdGV8ZW58MHx8fHwxNjQ2NzQ2MzM4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
       <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
           <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
       </a>
     </div>
       <div class="m-article-card__info">
         <a href="../tag/amazon-web-services/index.html" class="m-article-card__tag">Amazon Web Services</a>
-      <a href="../aws-relational-database-mysql/index.html" class="m-article-card__info-link" aria-label="AWS Relational Database: MySQL">
+      <a href="../spring-boot-web-application-deployment-on-aws-elastic-beanstalk-with-aws-rds/index.html" class="m-article-card__info-link" aria-label="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS">
         <div>
-          <h2 class="m-article-card__title js-article-card-title " title="AWS Relational Database: MySQL">
-            AWS Relational Database: MySQL
+          <h2 class="m-article-card__title js-article-card-title " title="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS">
+            Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS
           </h2>
         </div>
         <div class="m-article-card__timestamp">
-          <span>8 months ago</span>
+          <span>7 months ago</span>
           <span>&bull;</span>
-          <span>3 min read</span>
+          <span>4 min read</span>
         </div>
       </a>
     </div>
