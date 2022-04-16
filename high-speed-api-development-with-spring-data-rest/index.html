@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>High speed API development with Spring Data REST</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=961508ae11.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=961508ae11" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=961508ae11" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=961508ae11" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=961508ae11" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=961508ae11.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=961508ae11" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=961508ae11") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=961508ae11") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=961508ae11") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=961508ae11") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=961508ae11") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=961508ae11") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=961508ae11");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=961508ae11") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=961508ae11") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=961508ae11") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=961508ae11") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=961508ae11.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=961508ae11.css" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="High speed API development with Spring Data REST" />
+    <meta property="og:description" content="This post briefly documents the process of rapidly developing a hypermedia-driven REST web service. Introduction Spring Data REST is part of the umbrella Spring Data project. It builds on top of Spring Data repositories, analyzes your application’s domain model and exposes hypermedia-driven HTTP resources for aggregates contained in the" />
+    <meta property="og:url" content="http://localhost:2368/high-speed-api-development-with-spring-data-rest/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2022-04-16T12:46:18.000Z" />
+    <meta property="article:modified_time" content="2022-04-16T12:46:18.000Z" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="High speed API development with Spring Data REST" />
+    <meta name="twitter:description" content="This post briefly documents the process of rapidly developing a hypermedia-driven REST web service. Introduction Spring Data REST is part of the umbrella Spring Data project. It builds on top of Spring Data repositories, analyzes your application’s domain model and exposes hypermedia-driven HTTP resources for aggregates contained in the" />
+    <meta name="twitter:url" content="http://localhost:2368/high-speed-api-development-with-spring-data-rest/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="2580" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "High speed API development with Spring Data REST",
+    "url": "http://localhost:2368/high-speed-api-development-with-spring-data-rest/",
+    "datePublished": "2022-04-16T12:46:18.000Z",
+    "dateModified": "2022-04-16T12:46:18.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 2580
+    },
+    "description": "This post briefly documents the process of rapidly developing a\nhypermedia-driven REST web service.\n\nIntroduction\nSpring Data REST is part of the umbrella Spring Data project. It builds on top\nof Spring Data repositories, analyzes your application’s domain model and\nexposes hypermedia-driven HTTP resources for aggregates contained in the model.\n\nMinimum Software Requirements\n * Java\n\nSample Project\nSpring Data Rest [https://github.com/AnanthaRajuC/spring-data-rest] is the\nsample Spring Boot appl",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.38" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.15.0/umd/portal.min.js" data-ghost="http://localhost:2368/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="../public/cards.min.js%3Fv=961508ae11"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=961508ae11.css">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="http://localhost:2368/about/">About</a>
+    </li>
+    <li class="nav-collection">
+      <a href="../tag/spring-boot/index.html">Collection</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+
+                <li class="more">
+                  <span>
+                    <a href="javascript:void(0);" class="js-open-secondary-menu">
+                      More
+                      <span class="icon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                  </span>
+                </li>
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="High speed API development with Spring Data REST">
+                                      High speed API development with Spring Data REST
+                                    </h3>
+                                    <span class="m-recent-article__date">a minute ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../git-commit-template/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1572277603731-6941cdb65597?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxjYXN0fGVufDB8fHx8MTY0NjU3OTIxMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Git Commit Template">
+                                      Git Commit Template
+                                    </h3>
+                                    <span class="m-recent-article__date">7 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../pushing-docker-image-from-local-machine-to-amazon-elastic-container-registry-repositories/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1567708415513-6ba3822eaec1?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxsb2FkaW5nfGVufDB8fHx8MTY0Njg3OTk1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories">
+                                      Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories
+                                    </h3>
+                                    <span class="m-recent-article__date">7 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../mysql-docker-image/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="MySQL Docker Image">
+                                      MySQL Docker Image
+                                    </h3>
+                                    <span class="m-recent-article__date">7 months ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/amazon-web-services/index.html">Amazon Web Services</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../tag/database/index.html">Database</a>
+                            </li>
+                            <li>
+                              <a href="../tag/docker/index.html">Docker</a>
+                            </li>
+                            <li>
+                              <a href="../tag/git/index.html">Git</a>
+                            </li>
+                            <li>
+                              <a href="../tag/github/index.html">GitHub</a>
+                            </li>
+                            <li>
+                              <a href="../tag/heroku/index.html">Heroku</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="secondary-navigation-template" style="display: none;">
+      
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+    </div>
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
+          https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
+          https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
+          https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1523815378073-a43ae3fbf36a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxzcGVlZHxlbnwwfHx8fDE2NTAxMTA0MjI&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@maxwbender?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Max Bender</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">High speed API development with Spring Data REST</h1>
+              <div class="m-heading__meta">
+                <span class="m-heading__meta__time">Apr 16, 2022</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/high-speed-api-development-with-spring-data-rest/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=High%20speed%20API%20development%20with%20Spring%20Data%20REST&url=http://localhost:2368/high-speed-api-development-with-spring-data-rest/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <p>This post briefly documents the process of rapidly developing a hypermedia-driven REST web service.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>Spring Data REST</strong> is part of the umbrella Spring Data project. It builds on top of Spring Data repositories, analyzes your application’s domain model and exposes hypermedia-driven HTTP resources for aggregates contained in the model.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li>Java</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<p><a href="https://github.com/AnanthaRajuC/spring-data-rest">Spring Data Rest</a> is the sample Spring Boot application i've used to illustrate the usage of the aforementioned tool.</p>
+<p>Navigate to <a href="../api/v1">http://localhost:8080/api/v1</a> to discover the application URLs via HAL Explorer.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/spring-data-rest/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/spring-data-rest/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependencies">Dependencies</h4>
+<p>This implementation has one main dependency, <strong>Rest Repositories</strong>. Optionally, you can add <strong>Rest Repositories HAL explorer</strong> to serve as an interactive documentation provider. The <strong>maven</strong>/<strong>gradle</strong> dependencies of the same are mentioned below.</p>
+<h5 id="rest-repositories">Rest Repositories</h5>
+<pre><code class="language-xml">&lt;!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-rest&lt;/artifactId&gt;
+    &lt;version&gt;2.6.6&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>or</p>
+<pre><code class="language-txt">// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
+implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.6.6'
+</code></pre>
+<h5 id="rest-repositories-hal-explorer">Rest Repositories HAL explorer</h5>
+<pre><code class="language-xml">&lt;!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-hal-explorer --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-data-rest-hal-explorer&lt;/artifactId&gt;
+    &lt;version&gt;3.6.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>or</p>
+<pre><code class="language-txt">// https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-hal-explorer
+implementation group: 'org.springframework.data', name: 'spring-data-rest-hal-explorer', version: '3.6.3'
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="properties">Properties</h4>
+<p>In the application-h2db.properties file configure the following key-values.</p>
+<pre><code class="language-txt"># Base path to be used by Spring Data REST to expose repository resources.
+spring.data.rest.base-path=/api/v1
+# Default size of pages.
+spring.data.rest.default-page-size=25
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="urls">URLs</h5>
+<ul>
+<li><em>Visual Documentation via HAL Explorer</em> : <a href="../api/v1/explorer.html">http://localhost:8080/api/v1/explorer</a></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/04/Screenshot-from-2022-04-16-18-13-24.png" class="kg-image" alt loading="lazy" width="1920" height="955" srcset="../content/images/size/w600/2022/04/Screenshot-from-2022-04-16-18-13-24.png 600w, ../content/images/size/w1000/2022/04/Screenshot-from-2022-04-16-18-13-24.png 1000w, ../content/images/size/w1600/2022/04/Screenshot-from-2022-04-16-18-13-24.png 1600w, ../content/images/2022/04/Screenshot-from-2022-04-16-18-13-24.png 1920w" sizes="(min-width: 720px) 720px"></figure>
+            </div>
+          </div>
+        </div>
+          <section class="m-subscribe-section js-newsletter">
+            <div class="l-wrapper in-post">
+              <div class="m-subscribe-section__content">
+                <div class="m-subscribe-section__text">
+                  <h4 class="m-subscribe-section__title">Subscribe to our newsletter</h4>
+                  <p class="m-subscribe-section__description">
+                    Get the latest posts delivered right to your inbox.
+                  </p>
+                </div>
+                <div class="m-subscribe-section__form">
+                  
+<div class="m-subscribe-section__form">
+  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+    <div class="m-subscribe__form">
+      <div class="pos-relative">
+        <label for="newsletter-input" class="sr-only">Your email address</label>
+        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+          placeholder="Your email address" required />
+      </div>
+      <button id="newsletter-button" class="m-button primary block" type="submit">Subscribe</button>
+    </div>
+    <div class="m-subscribe__success">
+      <header class="m-heading no-margin">
+        <img src="../assets/images/success.png%3Fv=961508ae11" alt="Success!" class="m-subscribe__success_icon">
+        <p class="m-heading__description in-newsletter-form">
+          Now check your inbox and click the link to confirm your subscription.
+        </p>
+      </header>
+    </div>
+    <p class="m-subscribe__invalid m-small-text">
+      Please enter a valid email address
+    </p>
+    <p class="m-subscribe__error m-small-text">
+      Oops! There was an error sending the email, please try later.
+    </p>
+  </form>
+</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="Secondary menu in footer">
+        
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+      </nav>
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=961508ae11.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=961508ae11"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=961508ae11"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=961508ae11"></script>
+    <script defer src="../assets/js/app.js%3Fv=961508ae11"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=961508ae11"></script>
+
+
+    
+  </body>
+</html>
