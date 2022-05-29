@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sat, 16 Apr 2022 14:53:53 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[High speed hypermedia-driven REST API development with Spring Data REST]]></title><description><![CDATA[High speed hypermedia-driven REST API development with Spring Data REST]]></description><link>http://localhost:2368/high-speed-api-development-with-spring-data-rest/</link><guid isPermaLink="false">625aafd2799bd22e2de0dd99</guid><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 16 Apr 2022 12:46:18 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1633419983774-c140f6f425b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxidWxsZXQlMjB0cmFpbnxlbnwwfHx8fDE2NTAxMjA2ODU&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1633419983774-c140f6f425b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxidWxsZXQlMjB0cmFpbnxlbnwwfHx8fDE2NTAxMjA2ODU&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="High speed hypermedia-driven REST API development with Spring Data REST"><p>This post briefly documents the process of rapidly developing a hypermedia-driven REST web service.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 29 May 2022 07:00:19 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of encrypting data in a table using the MySQL native <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt">AES_ENCRYPT()</a> function.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>MySQL</strong> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other;</p>]]></description><link>http://localhost:2368/mysql-aes/</link><guid isPermaLink="false">62661367e6ca0026c4aa9320</guid><category><![CDATA[MySQL]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Apr 2022 03:27:13 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program"><p>This post briefly documents the process of encrypting data in a table using the MySQL native <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt">AES_ENCRYPT()</a> function.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><strong>MySQL</strong> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
+<p>The <strong>AES</strong> (Advanced Encryption Standard), also known by its original name Rijndael, is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology in 2001.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ul>
+<li>MySQL - Encryption</li>
+<li>MySQL - Decryption</li>
+<li>Java - Decryption</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li>MySQL</li>
+<li>MySQL Workbench (Optional)</li>
+<li>Java</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><a href="https://github.com/AnanthaRajuC/aes-mysql-java">aes-mysql-java</a> is the sample Spring Boot web application i&apos;ve used to illustrate the idea.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependencies">Dependencies</h4>
+<p>This implementation has a dependency on <strong>flyway-mysql</strong>, <strong>mysql-connector-java</strong>, <strong>lombok</strong> dependencies. The <strong>maven</strong>/<strong>gradle</strong> dependencies of the same are mentioned below.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
+<p><strong>User</strong> table is created by <strong>Flyway</strong>. Refer to <strong>/src/main/resources/data/mysql/migrations</strong></p>
+<p><strong>secret key</strong>: <em>dsfdfdsfsdfdfsfs</em></p>
+<p>Reference: <a href="https://www.javainuse.com/bytesize">https://www.javainuse.com/bytesize</a> - Online Text(String) Size Calculator Tool (In Bytes)</p>
+<h5 id="mysql">MySQL</h5>
+<pre><code class="language-sql">INSERT INTO user(first_name, last_name, address) VALUES (to_base64(AES_ENCRYPT(&apos;Jane&apos;,&apos;dsfdfdsfsdfdfsfs&apos;))  ,&apos;Doe&apos;,&apos;UK&apos;);
+</code></pre>
+<pre><code class="language-sql">SELECT AES_DECRYPT(from_base64(first_name) , &apos;dsfdfdsfsdfdfsfs&apos;), last_name from user;
+</code></pre>
+<h6 id="reference">Reference</h6>
+<pre><code class="language-sql">SHOW VARIABLES LIKE &apos;%encryption%&apos;;
+</code></pre>
+<pre><code class="language-sql">SET block_encryption_mode = &apos;aes-128-ecb&apos;;
+</code></pre>
+<hr>
+<h5 id="application-execution">Application Execution</h5>
+<p>Build and run the application via an IDE or by issuing the following command:</p>
+<pre><code class="language-shell">mvnw spring-boot:run
+</code></pre>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[High speed hypermedia-driven REST API development with Spring Data REST]]></title><description><![CDATA[High speed hypermedia-driven REST API development with Spring Data REST]]></description><link>http://localhost:2368/high-speed-api-development-with-spring-data-rest/</link><guid isPermaLink="false">625aafd2799bd22e2de0dd99</guid><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 16 Apr 2022 12:46:18 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1633419983774-c140f6f425b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxidWxsZXQlMjB0cmFpbnxlbnwwfHx8fDE2NTAxMjA2ODU&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1633419983774-c140f6f425b0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI5fHxidWxsZXQlMjB0cmFpbnxlbnwwfHx8fDE2NTAxMjA2ODU&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="High speed hypermedia-driven REST API development with Spring Data REST"><p>This post briefly documents the process of rapidly developing a hypermedia-driven REST web service.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><strong>Spring Data REST</strong> is part of the umbrella Spring Data project. It builds on top of Spring Data repositories, analyzes your application&#x2019;s domain model and exposes hypermedia-driven HTTP resources for aggregates contained in the model.</p>
 <p><strong>HAL Explorer</strong> lets you easily explore HAL and HAL-FORMS based HTTP responses. It also supports Spring profiles generated by Spring Data REST. You can point it at any Spring Data REST API and use it to navigate the app and create new resources.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="features">Features</h4>
@@ -806,73 +848,4 @@ View the contents of a collection nicely formatted.<br>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/12-trust-certificate-prompt.PNG" class="kg-image" alt="Adding SSL Certificate to Java KeyStore" loading="lazy" width="605" height="714" srcset="http://localhost:2368/content/images/size/w600/2022/03/12-trust-certificate-prompt.PNG 600w, http://localhost:2368/content/images/2022/03/12-trust-certificate-prompt.PNG 605w"></figure><!--kg-card-begin: markdown--><p>Restart the machine for the changes to take into effect.</p>
 <h4 id="links">Links</h4>
 <p><a href="https://keystore-explorer.org/index.html">KeyStore Explorer</a></p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Spring Boot and Swagger UI REST API Documentation Tool]]></title><description><![CDATA[Use swagger, a visual documentation tool which makes it easy for back end implementation and client side consumption. ]]></description><link>http://localhost:2368/spring-boot-and-swagger-ui-rest-api-documentation-tool/</link><guid isPermaLink="false">62258d2a815c19238c402474</guid><category><![CDATA[Spring Boot]]></category><category><![CDATA[Java]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 27 Jun 2021 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Spring Boot and Swagger UI REST API Documentation Tool"><p>This post briefly documents the usage of <a href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>, a visual documentation tool making it easy for back end implementation and client side consumption.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><strong>Swagger UI</strong> allows anyone &#x2014; be it your development team or your end consumers &#x2014; to visualize and interact with the API&#x2019;s resources without having any of the implementation logic in place. It&#x2019;s automatically generated from your OpenAPI (formerly known as Swagger) Specification, with the visual documentation making it easy for back end implementation and client side consumption.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li>Java</li>
-<li><a href="https://swagger.io/tools/swagger-ui/">SwaggerDoc Open API UI</a> Java Library</li>
-<li>Swagger Annotations Java Library</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
-<p><a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App">Spring Boot Minimal Web App</a> is the sample Spring Boot web application i&apos;ve used to illustrate the usage of the aforementioned tool.</p>
-<p>Navigate to <a href="http://localhost:8080/">http://localhost:8080/</a> to discover the application URLs.</p>
-<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependencies">Dependencies</h4>
-<p>This implementation has two dependencies, <strong>springdoc-openapi-ui</strong> and <strong>swagger-annotations</strong>. The <strong>maven</strong>/<strong>gradle</strong> dependencies of the same are mentioned below.</p>
-<h5 id="swaggerdoc-open-api-ui">SwaggerDoc Open API UI</h5>
-<pre><code class="language-xml">&lt;!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui --&gt;
-&lt;dependency&gt;
-    &lt;groupId&gt;org.springdoc&lt;/groupId&gt;
-    &lt;artifactId&gt;springdoc-openapi-ui&lt;/artifactId&gt;
-    &lt;version&gt;1.5.9&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-<p>or</p>
-<pre><code class="language-txt">// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
-implementation group: &apos;org.springdoc&apos;, name: &apos;springdoc-openapi-ui&apos;, version: &apos;1.5.9&apos;
-</code></pre>
-<h5 id="swagger-annotations">Swagger Annotations</h5>
-<pre><code class="language-xml">&lt;!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations --&gt;
-&lt;dependency&gt;
-    &lt;groupId&gt;io.swagger&lt;/groupId&gt;
-    &lt;artifactId&gt;swagger-annotations&lt;/artifactId&gt;
-    &lt;version&gt;1.6.1&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-<p>or</p>
-<pre><code class="language-txt">// https://mvnrepository.com/artifact/io.swagger/swagger-annotations
-implementation group: &apos;io.swagger&apos;, name: &apos;swagger-annotations&apos;, version: &apos;1.6.1&apos;
-</code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="properties">Properties</h4>
-<p>In the application.properties file configure the following optional key-values.</p>
-<pre><code class="language-txt"># https://springdoc.org/properties.html
-
-# For custom path of the swagger-ui HTML documentation
-# http://localhost:8080/spring-boot-minimal-webapp.html
-springdoc.swagger-ui.path=/spring-boot-minimal-webapp.html
-
-# To enable/disable the swagger-ui endpoint
-springdoc.swagger-ui.enabled=true
-</code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
-<p>Swagger provides with annotations specific to class types (<strong>Controller</strong>, <strong>Model</strong> etc.,) which are to be placed and populated with appropriate values.</p>
-<h5 id="model-class-annotations">Model Class Annotations</h5>
-<p><strong>@ApiModel(description=&quot;Simple JavaBean domain object representing RESTcontrollerResponse&quot;)</strong><br>
-This annotation essentially describes what exactly a model is.</p>
-<p><strong>@Schema(description=&quot;RESTcontrollerResponse content&quot;, example=&quot;HTTP Method Handled.&quot;, required=true)</strong><br>
-Each attribute of the model captures a specific feature. We can describe, provide and examplr and indicate if the attribute is mandatory when initializing the object.</p>
-<h5 id="controller-class-annotations">Controller Class Annotations</h5>
-<p><strong>@Operation(summary=&quot;HTTP GET Operation&quot;)</strong><br>
-This annotation describes the particular functionality a REST endpoint offers.</p>
-<p><strong>@ApiResponse(responseCode = &quot;200&quot;, description = &quot;Found the person&quot;, content = {@Content(mediaType = &quot;application/json&quot;, schema = @Schema(implementation = Person.class))})</strong><br>
-This annotation describes the API response.</p>
-<h5 id="urls">URLs</h5>
-<ul>
-<li><em>Visual Documentation</em> : <a href="http://localhost:8080/swagger-ui.html">http://localhost:8080/swagger-ui.html</a></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/swagger-ui.png" class="kg-image" alt="Spring Boot and Swagger UI REST API Documentation Tool" loading="lazy" width="1366" height="968" srcset="http://localhost:2368/content/images/size/w600/2022/03/swagger-ui.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/swagger-ui.png 1000w, http://localhost:2368/content/images/2022/03/swagger-ui.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><ul>
-<li><em>OpenAPI description in json format</em> : <a href="http://localhost:8080/v3/api-docs">http://localhost:8080/v3/api-docs</a></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/swagger-api.png" class="kg-image" alt="Spring Boot and Swagger UI REST API Documentation Tool" loading="lazy" width="1348" height="147" srcset="http://localhost:2368/content/images/size/w600/2022/03/swagger-api.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/swagger-api.png 1000w, http://localhost:2368/content/images/2022/03/swagger-api.png 1348w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
