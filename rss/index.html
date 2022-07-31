@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 24 Jul 2022 14:40:55 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Music]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Albums</span></h5>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 31 Jul 2022 13:21:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[MySQL Event Scheduler]]></title><description><![CDATA[<p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
+<p><em>MySQL</em> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in</p>]]></description><link>http://localhost:2368/mysql-event-scheduler/</link><guid isPermaLink="false">62dd65692db9293f23326e19</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 31 Jul 2022 13:19:14 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="MySQL Event Scheduler"><p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
+<p><em>MySQL</em> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Minimum Software Requirements</strong></p>
+<ul>
+<li>MySQL</li>
+<li>MySQL Workbench (Optional)</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Goals</strong></p>
+<ul>
+<li>Enable event scheduler</li>
+<li>List existing events from a particular schema</li>
+<li>Create table for example</li>
+<li>Congigure Event Scheduler
+<ul>
+<li>One-time event</li>
+<li>One-time event with delayed start</li>
+<li>Recurring-event with end condition</li>
+</ul>
+</li>
+<li>Drop event scheduler</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Enable event scheduler</strong></p>
+<pre><code class="language-sql">SET GLOBAL event_scheduler = ON;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>List existing events from a particular schema.</strong></p>
+<pre><code class="language-sql">SHOW EVENTS 
+FROM SCHEMA_NAME;
+</code></pre>
+<p><em>events are automatically dropped when it expires</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Create table for example</strong></p>
+<p>create a sample table</p>
+<pre><code class="language-sql">CREATE TABLE event_scheduler_test (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    my_data VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL
+);
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><strong>One-time event</strong></li>
+</ul>
+<pre><code class="language-sql">CREATE EVENT IF NOT EXISTS event_scheduler_test_event_01
+ON SCHEDULE AT CURRENT_TIMESTAMP
+ON COMPLETION PRESERVE -- keeps the event even after it has expired
+DO
+  INSERT INTO my_schema.event_scheduler_test(my_data,created_at)
+  VALUES(&apos;My Event Scheduler Test Data 1&apos;,NOW());
+</code></pre>
+<p><em>ON COMPLETION PRESERVE</em>, keeps the event even after it has expired</p>
+<!--kg-card-end: markdown--><ul><li><strong>One-time event with delayed start</strong></li></ul><!--kg-card-begin: markdown--><pre><code class="language-sql">CREATE EVENT event_scheduler_test_event_02
+ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 1 MINUTE
+ON COMPLETION PRESERVE
+DO
+  INSERT INTO my_schema.event_scheduler_test(my_data,created_at)
+  VALUES(&apos;My Event Scheduler Test Data 2&apos;,NOW());
+</code></pre>
+<!--kg-card-end: markdown--><ul><li><strong>Recurring-event with end condition</strong></li></ul><!--kg-card-begin: markdown--><pre><code class="language-sql">CREATE EVENT event_scheduler_test_event_03	
+ON SCHEDULE EVERY 1 MINUTE					
+STARTS CURRENT_TIMESTAMP					
+ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR	
+DO
+   INSERT INTO mis_dashboard.event_scheduler_test(my_data,created_at)
+   VALUES(&apos;My Event Scheduler Test Data 3&apos;,NOW());
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><em>CREATE EVENT event_scheduler_test_event_03</em> :event name</p>
+<p><em>ON SCHEDULE EVERY 1 MINUTE</em>                 :frequency</p>
+<p><em>STARTS CURRENT_TIMESTAMP</em>                   :event start condition</p>
+<p><em>ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR</em>   :event expiration period</p>
+<!--kg-card-end: markdown--><ul><li>Drop event scheduler</li></ul><!--kg-card-begin: markdown--><pre><code class="language-sql">DROP EVENT event_scheduler_test_event_03;
+</code></pre>
+<!--kg-card-end: markdown--><p><strong>Notes</strong></p><!--kg-card-begin: markdown--><pre><code class="language-sql">SHOW PROCESSLIST;
+</code></pre>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Music]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h5 class="font-weight-bold spanborder text-danger text-capitalize"><span>Albums</span></h5>
 <ol>
 <li><strong>Operation: Mindcrime</strong> by <em>Queensr&#xFF;che</em></li>
 </ol>
@@ -746,85 +818,4 @@ View the contents of a collection nicely formatted.<br>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Ubuntu - Account</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/17-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="620" srcset="http://localhost:2368/content/images/size/w600/2022/03/17-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/17-4.PNG 1000w, http://localhost:2368/content/images/2022/03/17-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>This process concludes the installation and set up of a Linux distribution that is completely integrated with your Windows operating system!</p>
 <h5 id="demonstration">Demonstration</h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/18-2.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1380" height="210" srcset="http://localhost:2368/content/images/size/w600/2022/03/18-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/18-2.PNG 1000w, http://localhost:2368/content/images/2022/03/18-2.PNG 1380w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[AWS Relational Database: MySQL]]></title><description><![CDATA[Creating **MySQL** Database via the AWS RDS service.]]></description><link>http://localhost:2368/aws-relational-database-mysql/</link><guid isPermaLink="false">62296872b8019d22525f4376</guid><category><![CDATA[Amazon Web Services]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Thu, 08 Jul 2021 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="AWS Relational Database: MySQL"><p>This post briefly documents the process of creating <strong>MySQL</strong> Database via the AWS <strong>RDS</strong> service.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><strong>Amazon Relational Database Service (RDS)</strong> is a distributed relational database service by Amazon Web Services. It is a web service running &quot;in the cloud&quot; designed to simplify the setup, operation, and scaling of a relational database for use in applications.</p>
-<p><strong>MySQL</strong> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
-<ol>
-<li>Database Configuration<br>
-1.1 Database Configuration<br>
-1.2 Templates<br>
-1.3 Settings, Credentials Settings<br>
-1.4 Connectivity<br>
-1.5 Database authentication<br>
-1.6 Additional Configuration</li>
-<li>Connectivity and security<br>
-2.1 Connectivity and security Configuration<br>
-2.2 Security Groups<br>
-2.3 Edit inbound rules<br>
-2.4 Add rules<br>
-2.5 Inbound rules</li>
-<li>Accessing the Database via MySQL Workbench<br>
-3.1 Setup new connection<br>
-3.2 MySQL connection result<br>
-3.3 MySQL Workbench</li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-requirements"><strong>Minimum Requirements</strong></h4>
-<ul>
-<li>Access to <a href="https://aws.amazon.com/console/">AWS Management Console</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="database-configuration"><strong>Database Configuration</strong></h4>
-<ul>
-<li>From the services drop down from the Navigation bar, select the <strong><code>RDS</code></strong> service from the Database section.</li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/1.png" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="662" srcset="http://localhost:2368/content/images/size/w600/2022/03/1.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/1.png 1000w, http://localhost:2368/content/images/2022/03/1.png 1366w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/2-3.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="659" srcset="http://localhost:2368/content/images/size/w600/2022/03/2-3.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/2-3.PNG 1000w, http://localhost:2368/content/images/2022/03/2-3.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><ul>
-<li>In the following page, configure the database settings.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="database-creation"><strong>Database Creation</strong></h5>
-<ul>
-<li><strong>Database creation method</strong> : <strong>Standard create</strong></li>
-<li><strong>Engine Type</strong> : <strong>MySQL</strong></li>
-<li><strong>Edition</strong> : <strong>MySQL Community</strong></li>
-<li><strong>Version</strong> : <strong>MySQL 8.0.23</strong> <em>(or whatever is the latest avaialable version)</em></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/3-3.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="782" height="292" srcset="http://localhost:2368/content/images/size/w600/2022/03/3-3.PNG 600w, http://localhost:2368/content/images/2022/03/3-3.PNG 782w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/4-3.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="745" height="583" srcset="http://localhost:2368/content/images/size/w600/2022/03/4-3.PNG 600w, http://localhost:2368/content/images/2022/03/4-3.PNG 745w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="templates"><strong>Templates</strong></h5>
-<ul>
-<li><strong>Templates</strong> : <strong>Free Tier</strong></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/5-3.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="779" height="258" srcset="http://localhost:2368/content/images/size/w600/2022/03/5-3.PNG 600w, http://localhost:2368/content/images/2022/03/5-3.PNG 779w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="settings-credentials-settings"><strong>Settings, Credentials Settings</strong></h5>
-<ul>
-<li><strong>DB instance identifier</strong> : <strong>some_identifier</strong> <em>(ex: sbmwa)</em></li>
-<li><strong>Master Username</strong> : <strong>some_username</strong> <em>(ex: sbmwa_aws_user)</em></li>
-<li><strong>Master Password</strong> : <strong>some_password</strong> <em>(ex: sbmwa_aws_pwd)</em></li>
-<li><strong>Confirm Password</strong> : <strong>some_password</strong> <em>(ex: sbmwa_aws_pwd)</em></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/6-3.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="774" height="601" srcset="http://localhost:2368/content/images/size/w600/2022/03/6-3.PNG 600w, http://localhost:2368/content/images/2022/03/6-3.PNG 774w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="connectivity"><strong>Connectivity</strong></h5>
-<ul>
-<li><strong>Virtual private cloud</strong> : <strong>Default VPC</strong></li>
-<li><strong>Subnet group</strong> : <strong>default</strong></li>
-<li><strong>Public access</strong> : <strong>Yes</strong></li>
-<li><strong>VPC security group</strong> : <strong>Choose existing</strong></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/9-3.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="774" height="978" srcset="http://localhost:2368/content/images/size/w600/2022/03/9-3.PNG 600w, http://localhost:2368/content/images/2022/03/9-3.PNG 774w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="database-authentication"><strong>Database authentication</strong></h5>
-<ul>
-<li><strong>Database Authentication</strong> : <strong>Password authentication</strong></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/11-2.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="775" height="307" srcset="http://localhost:2368/content/images/size/w600/2022/03/11-2.PNG 600w, http://localhost:2368/content/images/2022/03/11-2.PNG 775w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="additional-configuration"><strong>Additional Configuration</strong></h5>
-<ul>
-<li><strong>Initial database name</strong> : <strong>Schema name</strong> <em>(ex: sbmwa_aws)</em></li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/12-2.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="779" height="590" srcset="http://localhost:2368/content/images/size/w600/2022/03/12-2.PNG 600w, http://localhost:2368/content/images/2022/03/12-2.PNG 779w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><ul>
-<li>Finally, at the end of the page click on the <strong>Create database</strong> button.</li>
-</ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/13-1.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="774" height="440" srcset="http://localhost:2368/content/images/size/w600/2022/03/13-1.PNG 600w, http://localhost:2368/content/images/2022/03/13-1.PNG 774w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="connectivity-and-security"><strong>Connectivity and security</strong></h4>
-<h5 id="connectivity-and-security-configuration"><strong>Connectivity and security Configuration</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/15-1.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="658" srcset="http://localhost:2368/content/images/size/w600/2022/03/15-1.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/15-1.PNG 1000w, http://localhost:2368/content/images/2022/03/15-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="security-groups"><strong>Security Groups</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/16-2.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="660" srcset="http://localhost:2368/content/images/size/w600/2022/03/16-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/16-2.PNG 1000w, http://localhost:2368/content/images/2022/03/16-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="edit-inbound-rules"><strong>Edit inbound rules</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/17-2.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="658" srcset="http://localhost:2368/content/images/size/w600/2022/03/17-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/17-2.PNG 1000w, http://localhost:2368/content/images/2022/03/17-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="add-rules"><strong>Add rules</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/19.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="661" srcset="http://localhost:2368/content/images/size/w600/2022/03/19.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/19.PNG 1000w, http://localhost:2368/content/images/2022/03/19.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="inbound-rules"><strong>Inbound rules</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/20-1.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="660" srcset="http://localhost:2368/content/images/size/w600/2022/03/20-1.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/20-1.PNG 1000w, http://localhost:2368/content/images/2022/03/20-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="accessing-the-database-via-mysql-workbench"><strong>Accessing the Database via MySQL Workbench</strong></h4>
-<h5 id="setup-new-connection"><strong>Setup new connection</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/21.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="783" height="492" srcset="http://localhost:2368/content/images/size/w600/2022/03/21.PNG 600w, http://localhost:2368/content/images/2022/03/21.PNG 783w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="mysql-connection-result"><strong>MySQL connection result</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/22.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="784" height="490" srcset="http://localhost:2368/content/images/size/w600/2022/03/22.PNG 600w, http://localhost:2368/content/images/2022/03/22.PNG 784w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="mysql-workbench"><strong>MySQL Workbench</strong></h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/23-1.PNG" class="kg-image" alt="AWS Relational Database: MySQL" loading="lazy" width="1366" height="737" srcset="http://localhost:2368/content/images/size/w600/2022/03/23-1.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/23-1.PNG 1000w, http://localhost:2368/content/images/2022/03/23-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/18-2.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1380" height="210" srcset="http://localhost:2368/content/images/size/w600/2022/03/18-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/18-2.PNG 1000w, http://localhost:2368/content/images/2022/03/18-2.PNG 1380w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>
