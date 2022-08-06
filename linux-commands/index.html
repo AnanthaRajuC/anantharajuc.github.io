@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Commonly Used Linux Commands</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=74f14287e1.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=74f14287e1" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=74f14287e1" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=74f14287e1" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=74f14287e1" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=74f14287e1.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=74f14287e1" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=74f14287e1") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=74f14287e1") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=74f14287e1") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=74f14287e1") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=74f14287e1") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=74f14287e1") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=74f14287e1");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=74f14287e1") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=74f14287e1") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=74f14287e1") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=74f14287e1") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=74f14287e1.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=74f14287e1.css" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Commonly Used Linux Commands" />
+    <meta property="og:description" content="Update Command Description apt update Fetches only the information on latest packages that can be upgraded apt list –upgradable Display the packages that have updates available and therefore can be upgraded on the system. apt upgrade The actual command that does the upgrade of the packages in the system. This" />
+    <meta property="og:url" content="http://localhost:2368/linux-commands/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2022-08-06T04:48:02.000Z" />
+    <meta property="article:modified_time" content="2022-08-06T04:48:02.000Z" />
+    <meta property="article:tag" content="Linux" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Commonly Used Linux Commands" />
+    <meta name="twitter:description" content="Update Command Description apt update Fetches only the information on latest packages that can be upgraded apt list –upgradable Display the packages that have updates available and therefore can be upgraded on the system. apt upgrade The actual command that does the upgrade of the packages in the system. This" />
+    <meta name="twitter:url" content="http://localhost:2368/linux-commands/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Linux" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Commonly Used Linux Commands",
+    "url": "http://localhost:2368/linux-commands/",
+    "datePublished": "2022-08-06T04:48:02.000Z",
+    "dateModified": "2022-08-06T04:48:02.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "Linux",
+    "description": "Update\nCommandDescriptionapt updateFetches only the information on latest packages that\ncan be upgradedapt list –upgradableDisplay the packages that have updates\navailable and therefore can be upgraded on the system.apt upgradeThe actual\ncommand that does the upgrade of the packages in the system. This command can\ninstall new packages if the dependencies require it, but it will never remove\npackages.apt full-upgradeIn addition to upgrading new packages and installing\nnew packages as required, it",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.38" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    <script defer src="https://unpkg.com/@tryghost/portal@~1.15.0/umd/portal.min.js" data-ghost="http://localhost:2368/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="../public/cards.min.js%3Fv=74f14287e1"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=74f14287e1.css">
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template tag-linux">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="http://localhost:2368/about/">About</a>
+    </li>
+    <li class="nav-collection">
+      <a href="../tag/spring-boot/index.html">Collection</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+
+                <li class="more">
+                  <span>
+                    <a href="javascript:void(0);" class="js-open-secondary-menu">
+                      More
+                      <span class="icon-chevron-down" aria-hidden="true"></span>
+                    </a>
+                  </span>
+                </li>
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Commonly Used Linux Commands">
+                                      Commonly Used Linux Commands
+                                    </h3>
+                                    <span class="m-recent-article__date">2 minutes ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../linux-utilities/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Linux (Ubuntu) Utilities">
+                                      Linux (Ubuntu) Utilities
+                                    </h3>
+                                    <span class="m-recent-article__date">29 minutes ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../mysql-event-scheduler/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="MySQL Event Scheduler">
+                                      MySQL Event Scheduler
+                                    </h3>
+                                    <span class="m-recent-article__date">6 days ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../music/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Music">
+                                      Music
+                                    </h3>
+                                    <span class="m-recent-article__date">a month ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/amazon-web-services/index.html">Amazon Web Services</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../tag/database/index.html">Database</a>
+                            </li>
+                            <li>
+                              <a href="../tag/docker/index.html">Docker</a>
+                            </li>
+                            <li>
+                              <a href="../tag/git/index.html">Git</a>
+                            </li>
+                            <li>
+                              <a href="../tag/github/index.html">GitHub</a>
+                            </li>
+                            <li>
+                              <a href="../tag/heroku/index.html">Heroku</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="secondary-navigation-template" style="display: none;">
+      
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+    </div>
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 300w,
+          https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 600w,
+          https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 1000w,
+          https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@jpvalery?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Jp Valery</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Commonly Used Linux Commands</h1>
+              <div class="m-heading__meta">
+                  <a href="../tag/linux/index.html" class="m-heading__meta__tag">Linux</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Aug 6, 2022</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/linux-commands/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Commonly%20Used%20Linux%20Commands&url=http://localhost:2368/linux-commands/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!--kg-card-begin: markdown--><h2 id="update">Update</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apt update</code></td>
+<td>Fetches only the information on latest packages that can be upgraded</td>
+</tr>
+<tr>
+<td><code>apt list –upgradable</code></td>
+<td>Display the packages that have updates available and therefore can be upgraded on the system.</td>
+</tr>
+<tr>
+<td><code>apt upgrade</code></td>
+<td>The actual command that does the upgrade of the packages in the system. This command can install new packages if the dependencies require it, but it will never remove packages.</td>
+</tr>
+<tr>
+<td><code>apt full-upgrade</code></td>
+<td>In addition to upgrading new packages and installing new packages as required, it also removes existing installed packages if it determines that the dependencies are no longer required.</td>
+</tr>
+<tr>
+<td><code>apt autoremove</code></td>
+<td>Removes unused packages which are no longer needed by the dependent packages. This can be executed after <code>apt upgrade</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="files-and-directories">Files and Directories</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td>Shows Present Working Directory</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List all files, directories in the current working directory (Doesn't list hidden/dot files)</td>
+</tr>
+<tr>
+<td><code>ls -a</code></td>
+<td>List all files, directories in the current working directory including the hidden/dot files</td>
+</tr>
+<tr>
+<td><code>ls -al</code></td>
+<td>List all files, directories in the current working directory including the hidden/dot files with additional details</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Navigates back to home directory</td>
+</tr>
+<tr>
+<td><code>cat [FILE_NAME]</code></td>
+<td>Displays the contents of the file</td>
+</tr>
+<tr>
+<td><code>echo &quot;[TEXT]&quot;</code></td>
+<td>Displays the <strong>TEXT</strong> on the screen</td>
+</tr>
+<tr>
+<td><code>echo &quot;[TEXT]&quot; -&gt; [FILE_NAME.FILE_FORMAT]</code></td>
+<td>save the <strong>TEXT</strong> in a with the given <strong>FILE_NAME</strong> and <strong>FILE_FORMAT</strong></td>
+</tr>
+<tr>
+<td><code>touch [FILE_NAME.FILE_FORMAT]</code></td>
+<td>Creates a new file with the given <strong>FILE_NAME</strong> and <strong>FILE_FORMAT</strong></td>
+</tr>
+<tr>
+<td><code>mkdir [DIRECTORY_NAME]</code></td>
+<td>Creates a new directory with the given <strong>DIRECTORY_NAME</strong></td>
+</tr>
+<tr>
+<td><code>rmdir [DIRECTORY_NAME]</code></td>
+<td>Removes the directory with the given <strong>DIRECTORY_NAME</strong></td>
+</tr>
+<tr>
+<td><code>rm [FILE_NAME]</code></td>
+<td>Removes the file with the given <strong>FILE_NAME</strong></td>
+</tr>
+<tr>
+<td><code>lsblk -f</code></td>
+<td>displays block devices, when used with the -f option, it prints file system type on partitions as well</td>
+</tr>
+<tr>
+<td><code>nano [FILE_NAME.FILE_FORMAT]</code></td>
+<td>Creates a new file with the given <strong>FILE_NAME</strong> and <strong>FILE_FORMAT</strong> in nano text editor.</td>
+</tr>
+<tr>
+<td><code>sed -i '/old text/ s//new text/g' file_name.extension</code></td>
+<td>Replace text in a file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="various">Various</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>printenv</code> or <code>env</code></td>
+<td>List all the environment variables</td>
+</tr>
+<tr>
+<td><code>cat /proc/cpuinfo</code></td>
+<td>Display CPU info</td>
+</tr>
+<tr>
+<td><code>find the number of physical CPU cores</code></td>
+<td>find the number of physical CPU cores</td>
+</tr>
+</tbody>
+</table>
+<h2 id="processes">Processes</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ps</code></td>
+<td>Lists current user's running processes</td>
+</tr>
+<tr>
+<td><code>ps aux</code></td>
+<td>Lists all running processes</td>
+</tr>
+<tr>
+<td><code>ps aux | grep $USER</code></td>
+<td>show all running processes, but limit the output to lines containing your username</td>
+</tr>
+</tbody>
+</table>
+<h2 id="others">Others</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>history</code></td>
+<td>Lists recently used commands</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>Shows current date and time</td>
+</tr>
+<tr>
+<td><code>cal</code></td>
+<td>Shows calendar view of the current month</td>
+</tr>
+<tr>
+<td><code>lsb_release -a</code></td>
+<td>Check the Ubuntu version</td>
+</tr>
+<tr>
+<td><code>reboot</code></td>
+<td>Restart/Reboot the computer</td>
+</tr>
+<tr>
+<td><code>sudo poweroff</code></td>
+<td>shut down the system</td>
+</tr>
+<tr>
+<td><code>cat /etc/lsb-release</code></td>
+<td>prints distro information</td>
+</tr>
+<tr>
+<td><code>whereis grub</code></td>
+<td>points to the location of grub</td>
+</tr>
+<tr>
+<td><code>dpkg --print-architecture</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>hostnamectl</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="system">System</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uname -a</code></td>
+<td>Prints system information like kernel release date, version, processor type, etc</td>
+</tr>
+<tr>
+<td><code>uname -sr</code></td>
+<td>returns system information</td>
+</tr>
+<tr>
+<td><code>uname -m</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>who</code></td>
+<td>Shows the logged-in user</td>
+</tr>
+<tr>
+<td><code>whoami</code></td>
+<td>Shows the current user's username</td>
+</tr>
+<tr>
+<td><code>who | wc -l</code></td>
+<td>Displays the count of users currently logged in.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="others">Others</h2>
+<ol>
+<li>ls – The most frequently used command in Linux to list directories</li>
+<li>pwd – Print working directory command in Linux</li>
+<li>cd – Linux command to navigate through directories</li>
+<li>mkdir – Command used to create directories in Linux</li>
+<li>mv – Move or rename files in Linux</li>
+<li>cp – Similar usage as mv but for copying files in Linux</li>
+<li>rm – Delete files or directories</li>
+<li>touch – Create blank/empty files</li>
+<li>ln – Create symbolic links (shortcuts) to other files</li>
+<li>cat – Display file contents on the terminal</li>
+<li>clear – Clear the terminal display</li>
+<li>echo – Print any text that follows the command</li>
+<li>less – Linux command to display paged outputs in the terminal</li>
+<li>man – Access manual pages for all Linux commands</li>
+<li>uname – Linux command to get basic information about the OS</li>
+<li>whoami – Get the active username</li>
+<li>tar – Command to extract and compress files in Linux</li>
+<li>grep – Search for a string within an output</li>
+<li>head – Return the specified number of lines from the top</li>
+<li>tail – Return the specified number of lines from the bottom</li>
+<li>diff – Find the difference between two files</li>
+<li>cmp – Allows you to check if two files are identical</li>
+<li>comm – Combines the functionality of diff and cmp</li>
+<li>sort – Linux command to sort the content of a file while outputting</li>
+<li>export – Export environment variables in Linux</li>
+<li>zip – Zip files in Linux</li>
+<li>unzip – Unzip files in Linux</li>
+<li>ssh – Secure Shell command in Linux</li>
+<li>service – Linux command to start and stop services</li>
+<li>ps – Display active processes</li>
+<li>kill and killall – Kill active processes by process ID or name</li>
+<li>df – Display disk filesystem information</li>
+<li>mount – Mount file systems in Linux</li>
+<li>chmod – Command to change file permissions</li>
+<li>chown – Command for granting ownership of files or folders</li>
+<li>ifconfig – Display network interfaces and IP addresses</li>
+<li>traceroute – Trace all the network hops to reach the destination</li>
+<li>wget – Direct download files from the internet</li>
+<li>ufw – Firewall command</li>
+<li>iptables – Base firewall for all other firewall utilities to interface with</li>
+<li>apt, pacman, yum, rpm – Package managers depending on the distro</li>
+<li>sudo – Command to escalate privileges in Linux</li>
+<li>cal – View a command-line calendar</li>
+<li>alias – Create custom shortcuts for your regularly used commands</li>
+<li>dd – Majorly used for creating bootable USB sticks</li>
+<li>whereis – Locate the binary, source, and manual pages for a command</li>
+<li>whatis – Find what a command is used for</li>
+<li>top – View active processes live with their system usage</li>
+<li>useradd and usermod – Add new user or change existing users data</li>
+<li>passwd – Create or update passwords for existing users</li>
+</ol>
+<!--kg-card-end: markdown-->
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/linux/index.html" title="Linux">Linux</a>
+                      </li>
+                  </ul>
+                </section>
+            </div>
+          </div>
+        </div>
+          <section class="m-subscribe-section js-newsletter">
+            <div class="l-wrapper in-post">
+              <div class="m-subscribe-section__content">
+                <div class="m-subscribe-section__text">
+                  <h4 class="m-subscribe-section__title">Subscribe to our newsletter</h4>
+                  <p class="m-subscribe-section__description">
+                    Get the latest posts delivered right to your inbox.
+                  </p>
+                </div>
+                <div class="m-subscribe-section__form">
+                  
+<div class="m-subscribe-section__form">
+  <form data-members-form="subscribe" id="newsletter-form" class="m-subscribe-section__container">
+    <div class="m-subscribe__form">
+      <div class="pos-relative">
+        <label for="newsletter-input" class="sr-only">Your email address</label>
+        <input data-members-email id="newsletter-input" class="m-input in-subscribe-section" type="email"
+          placeholder="Your email address" required />
+      </div>
+      <button id="newsletter-button" class="m-button primary block" type="submit">Subscribe</button>
+    </div>
+    <div class="m-subscribe__success">
+      <header class="m-heading no-margin">
+        <img src="../assets/images/success.png%3Fv=74f14287e1" alt="Success!" class="m-subscribe__success_icon">
+        <p class="m-heading__description in-newsletter-form">
+          Now check your inbox and click the link to confirm your subscription.
+        </p>
+      </header>
+    </div>
+    <p class="m-subscribe__invalid m-small-text">
+      Please enter a valid email address
+    </p>
+    <p class="m-subscribe__error m-small-text">
+      Oops! There was an error sending the email, please try later.
+    </p>
+  </form>
+</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+            <section class="m-recommended">
+              <div class="l-wrapper in-recommended">
+                <h3 class="m-section-title in-recommended">Recommended for you</h3>
+                <div class="m-recommended-articles">
+                  <div class="m-recommended-slider swiper js-recommended-slider">
+                    <div class="swiper-wrapper">
+                      
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-linux">
+    <div class="m-article-card__picture">
+      <a href="../linux-utilities/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/linux/index.html" class="m-article-card__tag">Linux</a>
+      <a href="../linux-utilities/index.html" class="m-article-card__info-link" aria-label="Linux (Ubuntu) Utilities">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Linux (Ubuntu) Utilities">
+            Linux (Ubuntu) Utilities
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>29 minutes ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+                    </div>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-prev" aria-label="Previous">
+                      <span class="icon-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-next" aria-label="Next">
+                      <span class="icon-arrow-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+      <nav class="m-footer__nav-secondary" role="navigation" aria-label="Secondary menu in footer">
+        
+  <ul class="m-secondary-menu">
+      <li class="nav-data-privacy">
+        <a href="http://localhost:2368/privacy/">Data &amp; privacy</a>
+      </li>
+      <li class="nav-contact">
+        <a href="http://localhost:2368/contact/">Contact</a>
+      </li>
+      <li class="nav-contribute">
+        <a href="http://localhost:2368/contribute/">Contribute →</a>
+      </li>
+  </ul>
+
+      </nav>
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=74f14287e1.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=74f14287e1"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=74f14287e1"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=74f14287e1"></script>
+    <script defer src="../assets/js/app.js%3Fv=74f14287e1"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=74f14287e1"></script>
+
+
+    
+  </body>
+</html>

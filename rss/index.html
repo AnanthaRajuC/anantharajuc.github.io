@@ -1,5 +1,341 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sun, 31 Jul 2022 13:21:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[MySQL Event Scheduler]]></title><description><![CDATA[<p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
-<p><em>MySQL</em> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in</p>]]></description><link>http://localhost:2368/mysql-event-scheduler/</link><guid isPermaLink="false">62dd65692db9293f23326e19</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 31 Jul 2022 13:19:14 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="MySQL Event Scheduler"><p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 4.38</generator><lastBuildDate>Sat, 06 Aug 2022 04:49:52 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Commonly Used Linux Commands]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h2 id="update">Update</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apt update</code></td>
+<td>Fetches only the information on latest packages that can be upgraded</td>
+</tr>
+<tr>
+<td><code>apt list &#x2013;upgradable</code></td>
+<td>Display the packages that have updates available and therefore can be upgraded on the system.</td>
+</tr>
+<tr>
+<td><code>apt upgrade</code></td>
+<td>The actual command that does the upgrade of the packages in the system.</td></tr></tbody></table>]]></description><link>http://localhost:2368/linux-commands/</link><guid isPermaLink="false">62edefa9f110cc283c908e1e</guid><category><![CDATA[Linux]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 06 Aug 2022 04:48:02 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h2 id="update">Update</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>apt update</code></td>
+<td>Fetches only the information on latest packages that can be upgraded</td>
+</tr>
+<tr>
+<td><code>apt list &#x2013;upgradable</code></td>
+<td>Display the packages that have updates available and therefore can be upgraded on the system.</td>
+</tr>
+<tr>
+<td><code>apt upgrade</code></td>
+<td>The actual command that does the upgrade of the packages in the system. This command can install new packages if the dependencies require it, but it will never remove packages.</td>
+</tr>
+<tr>
+<td><code>apt full-upgrade</code></td>
+<td>In addition to upgrading new packages and installing new packages as required, it also removes existing installed packages if it determines that the dependencies are no longer required.</td>
+</tr>
+<tr>
+<td><code>apt autoremove</code></td>
+<td>Removes unused packages which are no longer needed by the dependent packages. This can be executed after <code>apt upgrade</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="files-and-directories">Files and Directories</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td>Shows Present Working Directory</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List all files, directories in the current working directory (Doesn&apos;t list hidden/dot files)</td>
+</tr>
+<tr>
+<td><code>ls -a</code></td>
+<td>List all files, directories in the current working directory including the hidden/dot files</td>
+</tr>
+<tr>
+<td><code>ls -al</code></td>
+<td>List all files, directories in the current working directory including the hidden/dot files with additional details</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Navigates back to home directory</td>
+</tr>
+<tr>
+<td><code>cat [FILE_NAME]</code></td>
+<td>Displays the contents of the file</td>
+</tr>
+<tr>
+<td><code>echo &quot;[TEXT]&quot;</code></td>
+<td>Displays the <strong>TEXT</strong> on the screen</td>
+</tr>
+<tr>
+<td><code>echo &quot;[TEXT]&quot; -&gt; [FILE_NAME.FILE_FORMAT]</code></td>
+<td>save the <strong>TEXT</strong> in a with the given <strong>FILE_NAME</strong> and <strong>FILE_FORMAT</strong></td>
+</tr>
+<tr>
+<td><code>touch [FILE_NAME.FILE_FORMAT]</code></td>
+<td>Creates a new file with the given <strong>FILE_NAME</strong> and <strong>FILE_FORMAT</strong></td>
+</tr>
+<tr>
+<td><code>mkdir [DIRECTORY_NAME]</code></td>
+<td>Creates a new directory with the given <strong>DIRECTORY_NAME</strong></td>
+</tr>
+<tr>
+<td><code>rmdir [DIRECTORY_NAME]</code></td>
+<td>Removes the directory with the given <strong>DIRECTORY_NAME</strong></td>
+</tr>
+<tr>
+<td><code>rm [FILE_NAME]</code></td>
+<td>Removes the file with the given <strong>FILE_NAME</strong></td>
+</tr>
+<tr>
+<td><code>lsblk -f</code></td>
+<td>displays block devices, when used with the -f option, it prints file system type on partitions as well</td>
+</tr>
+<tr>
+<td><code>nano [FILE_NAME.FILE_FORMAT]</code></td>
+<td>Creates a new file with the given <strong>FILE_NAME</strong> and <strong>FILE_FORMAT</strong> in nano text editor.</td>
+</tr>
+<tr>
+<td><code>sed -i &apos;/old text/ s//new text/g&apos; file_name.extension</code></td>
+<td>Replace text in a file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="various">Various</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>printenv</code> or <code>env</code></td>
+<td>List all the environment variables</td>
+</tr>
+<tr>
+<td><code>cat /proc/cpuinfo</code></td>
+<td>Display CPU info</td>
+</tr>
+<tr>
+<td><code>find the number of physical CPU cores</code></td>
+<td>find the number of physical CPU cores</td>
+</tr>
+</tbody>
+</table>
+<h2 id="processes">Processes</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ps</code></td>
+<td>Lists current user&apos;s running processes</td>
+</tr>
+<tr>
+<td><code>ps aux</code></td>
+<td>Lists all running processes</td>
+</tr>
+<tr>
+<td><code>ps aux | grep $USER</code></td>
+<td>show all running processes, but limit the output to lines containing your username</td>
+</tr>
+</tbody>
+</table>
+<h2 id="others">Others</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>history</code></td>
+<td>Lists recently used commands</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td>Shows current date and time</td>
+</tr>
+<tr>
+<td><code>cal</code></td>
+<td>Shows calendar view of the current month</td>
+</tr>
+<tr>
+<td><code>lsb_release -a</code></td>
+<td>Check the Ubuntu version</td>
+</tr>
+<tr>
+<td><code>reboot</code></td>
+<td>Restart/Reboot the computer</td>
+</tr>
+<tr>
+<td><code>sudo poweroff</code></td>
+<td>shut down the system</td>
+</tr>
+<tr>
+<td><code>cat /etc/lsb-release</code></td>
+<td>prints distro information</td>
+</tr>
+<tr>
+<td><code>whereis grub</code></td>
+<td>points to the location of grub</td>
+</tr>
+<tr>
+<td><code>dpkg --print-architecture</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>hostnamectl</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="system">System</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uname -a</code></td>
+<td>Prints system information like kernel release date, version, processor type, etc</td>
+</tr>
+<tr>
+<td><code>uname -sr</code></td>
+<td>returns system information</td>
+</tr>
+<tr>
+<td><code>uname -m</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>who</code></td>
+<td>Shows the logged-in user</td>
+</tr>
+<tr>
+<td><code>whoami</code></td>
+<td>Shows the current user&apos;s username</td>
+</tr>
+<tr>
+<td><code>who | wc -l</code></td>
+<td>Displays the count of users currently logged in.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="others">Others</h2>
+<ol>
+<li>ls &#x2013; The most frequently used command in Linux to list directories</li>
+<li>pwd &#x2013; Print working directory command in Linux</li>
+<li>cd &#x2013; Linux command to navigate through directories</li>
+<li>mkdir &#x2013; Command used to create directories in Linux</li>
+<li>mv &#x2013; Move or rename files in Linux</li>
+<li>cp &#x2013; Similar usage as mv but for copying files in Linux</li>
+<li>rm &#x2013; Delete files or directories</li>
+<li>touch &#x2013; Create blank/empty files</li>
+<li>ln &#x2013; Create symbolic links (shortcuts) to other files</li>
+<li>cat &#x2013; Display file contents on the terminal</li>
+<li>clear &#x2013; Clear the terminal display</li>
+<li>echo &#x2013; Print any text that follows the command</li>
+<li>less &#x2013; Linux command to display paged outputs in the terminal</li>
+<li>man &#x2013; Access manual pages for all Linux commands</li>
+<li>uname &#x2013; Linux command to get basic information about the OS</li>
+<li>whoami &#x2013; Get the active username</li>
+<li>tar &#x2013; Command to extract and compress files in Linux</li>
+<li>grep &#x2013; Search for a string within an output</li>
+<li>head &#x2013; Return the specified number of lines from the top</li>
+<li>tail &#x2013; Return the specified number of lines from the bottom</li>
+<li>diff &#x2013; Find the difference between two files</li>
+<li>cmp &#x2013; Allows you to check if two files are identical</li>
+<li>comm &#x2013; Combines the functionality of diff and cmp</li>
+<li>sort &#x2013; Linux command to sort the content of a file while outputting</li>
+<li>export &#x2013; Export environment variables in Linux</li>
+<li>zip &#x2013; Zip files in Linux</li>
+<li>unzip &#x2013; Unzip files in Linux</li>
+<li>ssh &#x2013; Secure Shell command in Linux</li>
+<li>service &#x2013; Linux command to start and stop services</li>
+<li>ps &#x2013; Display active processes</li>
+<li>kill and killall &#x2013; Kill active processes by process ID or name</li>
+<li>df &#x2013; Display disk filesystem information</li>
+<li>mount &#x2013; Mount file systems in Linux</li>
+<li>chmod &#x2013; Command to change file permissions</li>
+<li>chown &#x2013; Command for granting ownership of files or folders</li>
+<li>ifconfig &#x2013; Display network interfaces and IP addresses</li>
+<li>traceroute &#x2013; Trace all the network hops to reach the destination</li>
+<li>wget &#x2013; Direct download files from the internet</li>
+<li>ufw &#x2013; Firewall command</li>
+<li>iptables &#x2013; Base firewall for all other firewall utilities to interface with</li>
+<li>apt, pacman, yum, rpm &#x2013; Package managers depending on the distro</li>
+<li>sudo &#x2013; Command to escalate privileges in Linux</li>
+<li>cal &#x2013; View a command-line calendar</li>
+<li>alias &#x2013; Create custom shortcuts for your regularly used commands</li>
+<li>dd &#x2013; Majorly used for creating bootable USB sticks</li>
+<li>whereis &#x2013; Locate the binary, source, and manual pages for a command</li>
+<li>whatis &#x2013; Find what a command is used for</li>
+<li>top &#x2013; View active processes live with their system usage</li>
+<li>useradd and usermod &#x2013; Add new user or change existing users data</li>
+<li>passwd &#x2013; Create or update passwords for existing users</li>
+</ol>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Linux (Ubuntu) Utilities]]></title><description><![CDATA[<!--kg-card-begin: markdown--><ul>
+<li><a href="https://github.com/Dr-Noob/cpufetch">cpufetch</a> - Simple yet fancy CPU architecture fetching tool</li>
+</ul>
+<p><img src="http://localhost:2368/content/images/2022/08/cpufetch.gif" alt="cpufetch" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><a href="https://github.com/dylanaraps/neofetch">neofetch</a> - A command-line system information tool written in bash 3.2+</li>
+</ul>
+<p><img src="http://localhost:2368/content/images/2022/08/neofetch.png" alt="neofetch" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><a href="https://github.com/aristocratos/bpytop">bpytop</a> - Linux/OSX/FreeBSD resource monitor</li>
+</ul>
+<p><img src="http://localhost:2368/content/images/2022/08/bpytop.png" alt="bpytop" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><a href="https://www.speedtest.net/apps/cli">Speedtest CLI</a> - Internet connection measurement for developers</li>
+</ul>
+<!--kg-card-end: markdown-->]]></description><link>http://localhost:2368/linux-utilities/</link><guid isPermaLink="false">62ede3f7f110cc283c908dd7</guid><category><![CDATA[Linux]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 06 Aug 2022 04:21:17 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><ul>
+<li><a href="https://github.com/Dr-Noob/cpufetch">cpufetch</a> - Simple yet fancy CPU architecture fetching tool</li>
+</ul>
+<img src="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Linux (Ubuntu) Utilities"><p><img src="http://localhost:2368/content/images/2022/08/cpufetch.gif" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><a href="https://github.com/dylanaraps/neofetch">neofetch</a> - A command-line system information tool written in bash 3.2+</li>
+</ul>
+<p><img src="http://localhost:2368/content/images/2022/08/neofetch.png" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><a href="https://github.com/aristocratos/bpytop">bpytop</a> - Linux/OSX/FreeBSD resource monitor</li>
+</ul>
+<p><img src="http://localhost:2368/content/images/2022/08/bpytop.png" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<li><a href="https://www.speedtest.net/apps/cli">Speedtest CLI</a> - Internet connection measurement for developers</li>
+</ul>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[MySQL Event Scheduler]]></title><description><![CDATA[<p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
+<p><em>MySQL</em> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in</p>]]></description><link>http://localhost:2368/mysql-event-scheduler/</link><guid isPermaLink="false">62dd65692db9293f23326e19</guid><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 31 Jul 2022 13:19:14 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="MySQL Event Scheduler"><p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
 <p><em>MySQL</em> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Minimum Software Requirements</strong></p>
 <ul>
@@ -728,94 +1064,4 @@ verification of what should happen after execution of action.</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/11-1.PNG" class="kg-image" alt="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS" loading="lazy" width="935" height="515" srcset="http://localhost:2368/content/images/size/w600/2022/03/11-1.PNG 600w, http://localhost:2368/content/images/2022/03/11-1.PNG 935w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="step-6cleanup"><strong>Step 6 - Cleanup</strong></h5>
 <h6 id="step-61terminate-environment"><strong>Step 6.1 - Terminate Environment</strong></h6>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/24.png" class="kg-image" alt="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS" loading="lazy" width="1366" height="664" srcset="http://localhost:2368/content/images/size/w600/2022/03/24.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/24.png 1000w, http://localhost:2368/content/images/2022/03/24.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h6 id="step-62confirm-environment-termination"><strong>Step 6.2 - Confirm Environment Termination</strong></h6>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/25.PNG" class="kg-image" alt="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS" loading="lazy" width="1366" height="631" srcset="http://localhost:2368/content/images/size/w600/2022/03/25.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/25.PNG 1000w, http://localhost:2368/content/images/2022/03/25.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[MongoDB NoSQL Database Commands]]></title><description><![CDATA[A non-exhaustive list of commonly used MongoDB Commands for quick reference.]]></description><link>http://localhost:2368/mongodb-nosql-database-commands/</link><guid isPermaLink="false">62258f58815c19238c40249b</guid><category><![CDATA[MongoDB]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Thu, 05 Aug 2021 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="MongoDB NoSQL Database Commands"><p>MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.</p>
-<p>The following is a non-exhaustive list of commonly used MongoDB Commands for quick reference.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="commands">Commands</h4>
-<ul>
-<li>
-<p><strong>show dbs</strong> or <strong>show databases</strong><br>
-Print a list of all databases on the server.</p>
-</li>
-<li>
-<p><strong><code>use &lt;db&gt;</code></strong><br>
-Switch current database to <code>&lt;db&gt;</code>. If this database doesn&#x2019;t exist, it will be newly created.</p>
-</li>
-<li>
-<p><strong>db</strong><br>
-View the current database.</p>
-</li>
-<li>
-<p><strong>show collections</strong> or <strong>db.getCollectionNames()</strong><br>
-Get the list of all collections in the current database.</p>
-</li>
-<li>
-<p><strong>db.dropDatabase()</strong><br>
-Drops the current database.</p>
-</li>
-<li>
-<p><strong><code>db.&lt;collection-name&gt;.insertOne(&lt;JSON&gt;)</code></strong><br>
-Insert JSON to the collection of the current DB.<br>
-<em>Example</em>: <strong>db.student.insertOne( {x:1} )</strong></p>
-</li>
-</ul>
-<pre><code>db.&lt;collection-name&gt;.insert(  
-[  
-     { _id: 1, name: &quot;Java Hut&quot;, description: &quot;Coffee and cakes&quot; },  
-     { _id: 2, name: &quot;Burger Buns&quot;, description: &quot;Gourmet hamburgers&quot; },  
-     { _id: 3, name: &quot;Coffee Shop&quot;, description: &quot;Just coffee&quot; },  
-     { _id: 4, name: &quot;Clothes Clothes Clothes&quot;, description: &quot;Discount clothing&quot; },  
-     { _id: 5, name: &quot;Java Shopping&quot;, description: &quot;Indonesian goods&quot; }  
-   ]
-)
-</code></pre>
-<p>Bulk insert (sample) data into a collection</p>
-<ul>
-<li>
-<p><strong><code>db.&lt;collection-name&gt;.find()</code></strong><br>
-View the contents of a collection.<br>
-<em>Example</em>: <strong>db.student.find()</strong></p>
-</li>
-<li>
-<p><strong><code>db.&lt;collection-name&gt;.find().pretty()</code></strong><br>
-View the contents of a collection nicely formatted.<br>
-<em>Example</em>: <strong>db.student.find().pretty()</strong></p>
-</li>
-<li>
-<p><strong><code>db.&lt;collection-name&gt;.createIndex( {field-name1:&quot;text&quot;, field-name2:&quot;text&quot;} )</code></strong><br>
-<strong>Text Index</strong>, to support text search queries on string content.<br>
-<em>Example</em>: <strong>db.stores.createIndex( {name:&quot;text&quot;, description:&quot;text&quot;} )</strong></p>
-</li>
-<li>
-<p><strong><code>db.&lt;collection-name&gt;.find( { $text: { $search: &quot;text to search&quot;} } )</code></strong><br>
-<strong>$text Operator</strong>, perform text searches on a collection with a text index.<br>
-<em>Example</em>: <strong>db.stores.find( { $text: { $search: &quot;java coffee shop&quot; } } )</strong></p>
-</li>
-</ul>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI]]></title><description><![CDATA[Manually installing Windows Subsystem for Linux on the Windows 10 OS.]]></description><link>http://localhost:2368/enabling-windows-subsystem-for-linux-on-windows-10-with-ubuntu-via-settings-gui/</link><guid isPermaLink="false">622ab494a073f91b0afc101e</guid><category><![CDATA[Windows Subsystem for Linux]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 18 Jul 2021 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1602086232396-bdff9b31bc7d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxleGNhdmF0aW9ufGVufDB8fHx8MTY0Njk2NTkxOA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1602086232396-bdff9b31bc7d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxleGNhdmF0aW9ufGVufDB8fHx8MTY0Njk2NTkxOA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI"><p>The <strong>Windows Subsystem for Linux</strong> lets developers run a <strong>GNU/Linux</strong> environment -- including most command-line tools, utilities, and applications -- directly on Windows, unmodified, without the overhead of a traditional virtual machine or dualboot setup.</p>
-<p>This post documents the process of enabling and manually installing Windows Subsystem for Linux on the <strong>Windows 10</strong> OS platform.</p>
-<p>Alternatively, check out this post on [Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via CLI]({{ site.baseurl }}/Enabling-Windows-Subsystem-for-Linux-via-CLI/)</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-requirements">Minimum Requirements</h4>
-<ul>
-<li>Windows 10 Operating System <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---check-requirements-for-running-wsl-2"><em>Details</em></a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="enablementsettings">Enablement - Settings</h4>
-<h5 id="enable-the-windows-subsystem-for-linux">Enable the Windows Subsystem for Linux</h5>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Update and Security</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/1-5.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/1-5.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/1-5.PNG 1000w, http://localhost:2368/content/images/2022/03/1-5.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>For Developers</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/2-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/2-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/2-4.PNG 1000w, http://localhost:2368/content/images/2022/03/2-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Developer Mode</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/3-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="752" srcset="http://localhost:2368/content/images/size/w600/2022/03/3-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/3-4.PNG 1000w, http://localhost:2368/content/images/2022/03/3-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Developer Mode</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/4-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/4-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/4-4.PNG 1000w, http://localhost:2368/content/images/2022/03/4-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Windows Features</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/5.png" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="783" srcset="http://localhost:2368/content/images/size/w600/2022/03/5.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/5.png 1000w, http://localhost:2368/content/images/2022/03/5.png 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Windows Subsystem for Linux</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/6-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/6-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/6-4.PNG 1000w, http://localhost:2368/content/images/2022/03/6-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Windows Subsystem for Linux</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/7-3.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="754" srcset="http://localhost:2368/content/images/size/w600/2022/03/7-3.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/7-3.PNG 1000w, http://localhost:2368/content/images/2022/03/7-3.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Windows Subsystem for Linux</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/8-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/8-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/8-4.PNG 1000w, http://localhost:2368/content/images/2022/03/8-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Windows Subsystem for Linux</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/9-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/9-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/9-4.PNG 1000w, http://localhost:2368/content/images/2022/03/9-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="installation-of-linux-distribution-of-your-choice-from-microsoft-store">Installation of Linux distribution of your choice from Microsoft Store</h5>
-<p>Linux Distribution <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice"><em>Details</em></a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Ubuntu - Search</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/12-3.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="754" srcset="http://localhost:2368/content/images/size/w600/2022/03/12-3.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/12-3.PNG 1000w, http://localhost:2368/content/images/2022/03/12-3.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Ubuntu - Installation</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/13-2.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="753" srcset="http://localhost:2368/content/images/size/w600/2022/03/13-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/13-2.PNG 1000w, http://localhost:2368/content/images/2022/03/13-2.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Ubuntu - Launch</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/14-1.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="751" srcset="http://localhost:2368/content/images/size/w600/2022/03/14-1.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/14-1.PNG 1000w, http://localhost:2368/content/images/2022/03/14-1.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Create a user account and password for your new Linux distribution. <a href="https://docs.microsoft.com/en-us/windows/wsl/user-support"><em>Details</em></a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Ubuntu - Account</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/17-4.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1381" height="620" srcset="http://localhost:2368/content/images/size/w600/2022/03/17-4.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/17-4.PNG 1000w, http://localhost:2368/content/images/2022/03/17-4.PNG 1381w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>This process concludes the installation and set up of a Linux distribution that is completely integrated with your Windows operating system!</p>
-<h5 id="demonstration">Demonstration</h5>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/18-2.PNG" class="kg-image" alt="Enabling Windows Subsystem for Linux on Windows 10 with Ubuntu via Settings GUI" loading="lazy" width="1380" height="210" srcset="http://localhost:2368/content/images/size/w600/2022/03/18-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/18-2.PNG 1000w, http://localhost:2368/content/images/2022/03/18-2.PNG 1380w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/25.PNG" class="kg-image" alt="Spring Boot Web Application Deployment on AWS Elastic Beanstalk with AWS RDS" loading="lazy" width="1366" height="631" srcset="http://localhost:2368/content/images/size/w600/2022/03/25.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/25.PNG 1000w, http://localhost:2368/content/images/2022/03/25.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>
