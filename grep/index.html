@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Essential Reading - Software Engineering</title>
+    <title>grep - command-line utility for searching plain-text data sets for lines that match a regular expression.</title>
     <link rel="stylesheet" href="../assets/built/screen.css%3Fv=f53442e07e.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,33 +14,72 @@
         var siteUrl = 'http://localhost:2368';
     </script>
 
-    <meta name="description" content="Select compilation of articles and books on Software Development and its related aspects." />
     <link rel="canonical" href="index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Essential Reading - Software Engineering" />
-    <meta property="og:description" content="Select compilation of articles and books on Software Development and its related aspects." />
-    <meta property="og:url" content="http://localhost:2368/essential-reading-software-engineering/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
-    <meta property="article:published_time" content="2018-07-29T00:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-07T03:31:04.000Z" />
-    <meta property="article:tag" content="Personal" />
+    <meta property="og:title" content="grep - command-line utility for searching plain-text data sets for lines that match a regular expression." />
+    <meta property="og:description" content="File
+
+
+
+
+
+Command
+Description
+
+
+
+
+grep SEARCH_PHRASE FILE_NAME.FILE_FORMAT
+Search for a given phrase in a file.
+
+
+grep SEARCH_PHRASE FILE_1_NAME.FILE_FORMAT FILE_2_NAME.FILE_FORMAT
+Search for a given phrase across multiple files.
+
+
+grep &quot;##&quot; MARKDOWN_FILE_1.FILE_FORMAT MARKDOWN_FILE_2.FILE_FORMAT" />
+    <meta property="og:url" content="http://localhost:2368/grep/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2022-08-07T11:41:34.000Z" />
+    <meta property="article:modified_time" content="2022-08-07T11:41:34.000Z" />
+    <meta property="article:tag" content="Linux" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Essential Reading - Software Engineering" />
-    <meta name="twitter:description" content="Select compilation of articles and books on Software Development and its related aspects." />
-    <meta name="twitter:url" content="http://localhost:2368/essential-reading-software-engineering/" />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:title" content="grep - command-line utility for searching plain-text data sets for lines that match a regular expression." />
+    <meta name="twitter:description" content="File
+
+
+
+
+
+Command
+Description
+
+
+
+
+grep SEARCH_PHRASE FILE_NAME.FILE_FORMAT
+Search for a given phrase in a file.
+
+
+grep SEARCH_PHRASE FILE_1_NAME.FILE_FORMAT FILE_2_NAME.FILE_FORMAT
+Search for a given phrase across multiple files.
+
+
+grep &quot;##&quot; MARKDOWN_FILE_1.FILE_FORMAT MARKDOWN_FILE_2.FILE_FORMAT" />
+    <meta name="twitter:url" content="http://localhost:2368/grep/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Anantha Raju C" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Personal" />
+    <meta name="twitter:data2" content="Linux" />
     <meta name="twitter:site" content="@anantharajuc" />
     <meta name="twitter:creator" content="@anantharajuc" />
     <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="1333" />
+    <meta property="og:image:height" content="3286" />
     
     <script type="application/ld+json">
 {
@@ -72,18 +111,18 @@
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "Essential Reading - Software Engineering",
-    "url": "http://localhost:2368/essential-reading-software-engineering/",
-    "datePublished": "2018-07-29T00:00:00.000Z",
-    "dateModified": "2022-03-07T03:31:04.000Z",
+    "headline": "grep - command-line utility for searching plain-text data sets for lines that match a regular expression.",
+    "url": "http://localhost:2368/grep/",
+    "datePublished": "2022-08-07T11:41:34.000Z",
+    "dateModified": "2022-08-07T11:41:34.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&ixlib=rb-1.2.1&q=80&w=2000",
+        "url": "https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&ixlib=rb-1.2.1&q=80&w=2000",
         "width": 2000,
-        "height": 1333
+        "height": 3286
     },
-    "keywords": "Personal",
-    "description": "Select compilation of articles and books on Software Development and its related aspects.",
+    "keywords": "Linux",
+    "description": "File\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ngrep SEARCH_PHRASE FILE_NAME.FILE_FORMAT\nSearch for a given phrase in a file.\n\n\ngrep SEARCH_PHRASE FILE_1_NAME.FILE_FORMAT FILE_2_NAME.FILE_FORMAT\nSearch for a given phrase across multiple files.\n\n\ngrep &quot;##&quot; MARKDOWN_FILE_1.FILE_FORMAT MARKDOWN_FILE_2.FILE_FORMAT\nSearch for sub-headings in across multiple markdown files.\n\n\ngrep &quot;##&quot; *.md\nSearch for sub-headings in across all markdown files via glob pattern.\n\n\n\n\n\nFolder\n\n\n\n\n\nCommand\nDescription\n\n\n\n\ngrep -r SEARCH",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -172,7 +211,7 @@
 <style>:root {--ghost-accent-color: #FF1A75;}</style>
 </head>
 
-<body class="post-template tag-personal">
+<body class="post-template tag-linux">
     <div class="site">
         <header class="site-header">
     <div class="container">
@@ -217,11 +256,11 @@
             
 <div class="content-area">
     <main class="site-main">
-            <article class="post tag-personal single">
+            <article class="post tag-linux single">
                 <header class="post-header container medium">
     <h1 class="post-title">
         
-        Essential Reading - Software Engineering
+        grep - command-line utility for searching plain-text data sets for lines that match a regular expression.
         
     </h1>
         <div class="post-meta">
@@ -241,8 +280,8 @@
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
-                    <time datetime="2018-07-29">
-                        Jul 29, 2018
+                    <time datetime="2022-08-07">
+                        Aug 7, 2022
                     </time>
                 </div>
                 <div class="post-length">1 min read</div>
@@ -253,71 +292,80 @@
             <a class="post-image-link" href="index.html">
                 <img class="post-image lazyload"
 
-                    data-srcset="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHJlYWRpbmd8ZW58MHx8fHwxNjQ2NjIzODQy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
+                    data-srcset="https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Essential Reading - Software Engineering">
+                     data-sizes="auto" alt="grep - command-line utility for searching plain-text data sets for lines that match a regular expression.">
             </a>
         </div>
 
-                <figcaption>Photo by <a href="https://unsplash.com/@christinhumephoto?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Christin Hume</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a></figcaption>
+                <figcaption>Photo by <a href="https://unsplash.com/@wflwong?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Warren Wong</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a></figcaption>
     </figure>
                 <div class="post-content gh-content kg-canvas">
-                    <!--kg-card-begin: markdown--><p>Select compilation of articles and books on Software Development and its related aspects.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="classification">Classification</h3>
-<ul>
-<li><a href="index.html#books">Books</a></li>
-<li><a href="index.html#articles">Articles</a></li>
-<li><a href="index.html#articles-technical">Articles Technical</a></li>
-<li><a href="index.html#git">Git</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="books">Books</h4>
-<p><strong><a href="http://linux-training.be/linuxfun.pdf" target="_blank" >Linux Fundamentals</a></strong><br>
-<em>Teaches you the very fundamentals of Linux (or Unix!). This book is for beginners, novices, anyone who wants to become a Linux developer or Linux system administrator. It contains basic knowledge, but advanced users will also benefit from this book.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="articles">Articles</h4>
-<p><strong><a href="https://medium.freecodecamp.org/how-to-write-a-good-software-design-document-66fcf019569c" target="_blank" >How to write a good software design doc</a></strong><br>
-<em>This article is an attempt at describing what makes a design document great.</em></p>
-<p><strong><a href="https://github.com/webflow/leadership/blob/master/tech_lead.md" target="_blank" >The Webflow Tech Lead Guide</a></strong><br>
-<em>A guide to understand the various aspects of being a Tech Lead.</em></p>
-<p><strong><a href="https://github.com/braydie/HowToBeAProgrammer" target="_blank" >How To Be A Programmer</a></strong><br>
-<em>An attempt to summarize as concisely as possible those things that the author of the article wishes someone had explained to him/her when he/she was twenty-one.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="articlestechnical">Articles - Technical</h4>
-<p><strong><a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2" target="_blank" >README</a> and <a href="https://gist.github.com/PurpleBooth/b24679402957c63ec426" target="_blank" >CONTRIBUTING</a></strong><br>
-<em>Template for projects (GitHub) by <a href="https://github.com/PurpleBooth" target="_blank" >Billie Thompson</a></em></p>
-<p><strong><a href="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/" target="_blank" >Joel Test</a></strong><br>
-<em>A test formulated by JOEL SPOLSKY for measuring how good a software team is.</em></p>
-<p><strong><a href="https://agilemanifesto.org/principles.html" target="_blank" >Principles behind the Agile Manifesto</a></strong><br>
-<em>Manifesto for Agile Software Development.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="git">Git</h4>
-<p><strong><a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank" >A successful Git branching model</a></strong><br>
-<em>A popular branching model for the git version control system by <a href="https://nvie.com/about/" target="_blank" >Vincent Driessen.</a></em></p>
-<p><strong><a href="https://github.com/k88hudson/git-flight-rules" target="_blank" >Flight rules for Git </a></strong><br>
-<em>A guide for programmers using Git about what to do when things go wrong.</em></p>
-<p><strong><a href="https://git-scm.com/book/en/v2" target="_blank" >Pro Git</a></strong><br>
-<em>Book by <a href="http://scottchacon.com/about.html" target="_blank" >Scott Chacon</a> and Ben Straub is available to read online for free and download (PDF, EPUB, MOBI).</em></p>
-<p><strong><a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" >Conventional Commits</a></strong><br>
-<em>A specification for adding human and machine readable meaning to commit messages.</em></p>
-<p><strong><a href="https://chris.beams.io/posts/git-commit/" target="_blank" >How to Write a Git Commit Message</a></strong></p>
-<p><strong><a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html" target="_blank" >A Note About Git Commit Messages</a></strong></p>
-<p><strong><a href="https://guides.github.com/introduction/flow/" target="_blank" >Understanding the GitHub flow</a></strong></p>
+                    <!--kg-card-begin: markdown--><h4 id="file">File</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grep SEARCH_PHRASE FILE_NAME.FILE_FORMAT</code></td>
+<td>Search for a given phrase in a file.</td>
+</tr>
+<tr>
+<td><code>grep SEARCH_PHRASE FILE_1_NAME.FILE_FORMAT FILE_2_NAME.FILE_FORMAT</code></td>
+<td>Search for a given phrase across multiple files.</td>
+</tr>
+<tr>
+<td><code>grep &quot;##&quot; MARKDOWN_FILE_1.FILE_FORMAT MARKDOWN_FILE_2.FILE_FORMAT</code></td>
+<td>Search for sub-headings in across multiple markdown files.</td>
+</tr>
+<tr>
+<td><code>grep &quot;##&quot; *.md</code></td>
+<td>Search for sub-headings in across all markdown files via glob pattern.</td>
+</tr>
+</tbody>
+</table>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="folder">Folder</h4>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>grep -r SEARCH_PHRASE .</code></td>
+<td>Search for a phrase recursively from a given directory and explore all files and sub folders and files within those sub folders.</td>
+</tr>
+<tr>
+<td><code>grep -r SEARCH_PHRASE example/path/to/folder</code></td>
+<td>Search for a phrase recursively from a given directory and explore all files and sub folders and files within those sub folders.</td>
+</tr>
+</tbody>
+</table>
 <!--kg-card-end: markdown-->
                 </div>
                         <div class="post-tags container medium">
-            <a class="post-tag tag-personal" href="../tag/personal/index.html" title="Personal">Personal</a>
+            <a class="post-tag tag-linux" href="../tag/linux/index.html" title="Linux">Linux</a>
     </div>
             </article>
                 <section class="related-posts container medium">
         <div class="post-feed u-hover-wrapper">
                 <article
-    class="post tag-personal featured u-hover-item">
-    <a class="post-link u-permalink" href="../music/index.html"></a>
+    class="post tag-linux u-hover-item">
+    <a class="post-link u-permalink" href="../linux-commands/index.html"></a>
         <figure class="post-media">
         <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../music/index.html">
+            <a class="post-image-link" href="../linux-commands/index.html">
                 <img class="post-image lazyload u-object-fit"
 
-                    data-srcset="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
+                    data-srcset="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Music">
+                     data-sizes="auto" alt="Commonly Used Linux Commands">
             </a>
         </div>
 
@@ -325,15 +373,13 @@
     <div class="post-wrapper">
         <header class="post-header">
     <h4 class="post-title">
-        <a class="post-title-link" href="../music/index.html">
-        Music
+        <a class="post-title-link" href="../linux-commands/index.html">
+        Commonly Used Linux Commands
         </a>
     </h4>
 </header>        <div class="post-excerpt">
-            Albums
- 1. Operation: Mindcrime by Queensrÿche
-
-Songs
+            Update
+CommandDescriptionapt updateFetches only the information on latest packages that
         </div>
         <div class="post-meta">
         <div class="post-meta-left">
@@ -352,25 +398,25 @@ Songs
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
-                    <time datetime="2022-07-03">
-                        Jul 3, 2022
+                    <time datetime="2022-08-06">
+                        Aug 6, 2022
                     </time>
                 </div>
-                <div class="post-length">1 min read</div>
+                <div class="post-length">3 min read</div>
             </div>
         </div>
 </div>    </div>
 </article>                <article
-    class="post tag-personal featured u-hover-item">
-    <a class="post-link u-permalink" href="../bookshelf/index.html"></a>
+    class="post tag-linux u-hover-item">
+    <a class="post-link u-permalink" href="../linux-utilities/index.html"></a>
         <figure class="post-media">
         <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../bookshelf/index.html">
+            <a class="post-image-link" href="../linux-utilities/index.html">
                 <img class="post-image lazyload u-object-fit"
 
-                    data-srcset="https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
+                    data-srcset="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Bookshelf">
+                     data-sizes="auto" alt="Linux (Ubuntu) Utilities">
             </a>
         </div>
 
@@ -378,12 +424,18 @@ Songs
     <div class="post-wrapper">
         <header class="post-header">
     <h4 class="post-title">
-        <a class="post-title-link" href="../bookshelf/index.html">
-        Bookshelf
+        <a class="post-title-link" href="../linux-utilities/index.html">
+        Linux (Ubuntu) Utilities
         </a>
     </h4>
 </header>        <div class="post-excerpt">
-            A selective list of books (Technical, Non-Technical, Others) I've read over the last couple of years.
+            * cpufetch - Simple yet fancy CPU architecture fetching tool
+
+
+
+
+
+ * neofetch
         </div>
         <div class="post-meta">
         <div class="post-meta-left">
@@ -402,11 +454,11 @@ Songs
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
-                    <time datetime="2021-02-16">
-                        Feb 16, 2021
+                    <time datetime="2022-08-06">
+                        Aug 6, 2022
                     </time>
                 </div>
-                <div class="post-length">2 min read</div>
+                <div class="post-length">1 min read</div>
             </div>
         </div>
 </div>    </div>
