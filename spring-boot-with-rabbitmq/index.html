@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Generating Spring Boot Skeleton Project via Spring Boot CLI</title>
+    <title>Spring Boot with RabbitMQ (Producer)</title>
     <link rel="stylesheet" href="../assets/built/screen.css%3Fv=ca4b47ca18.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,25 +14,66 @@
         var siteUrl = 'http://localhost:2368';
     </script>
 
-    <meta name="description" content="Using the Spring Boot CLI to Generate Spring Boot Skeleton Project." />
     <link rel="canonical" href="index.html" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Generating Spring Boot Skeleton Project via Spring Boot CLI" />
-    <meta property="og:description" content="Using the Spring Boot CLI to Generate Spring Boot Skeleton Project." />
-    <meta property="og:url" content="http://localhost:2368/generating-spring-boot-skeleton-project-via-spring-boot-cli/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
-    <meta property="article:published_time" content="2018-09-12T00:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-06T14:34:52.000Z" />
+    <meta property="og:title" content="Spring Boot with RabbitMQ (Producer)" />
+    <meta property="og:description" content="This post briefly documents the usage of RabbitMQ with Spring Boot.
+
+Introduction
+
+
+RabbitMQ is an open source message broker.
+
+
+Minimum Software Requirements
+
+
+ * RabbitMQ
+ * Java
+
+
+Sample Project
+
+
+spring-boot-rabbit-mq-producer is the sample Spring Boot web application i&#x27;ve used to illustrate the usage of the aforementioned tool.
+
+
+Navigate to http://localhost:8080/swagger-ui/" />
+    <meta property="og:url" content="http://localhost:2368/spring-boot-with-rabbitmq/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2022-08-07T15:18:34.000Z" />
+    <meta property="article:modified_time" content="2022-08-07T15:18:34.000Z" />
     <meta property="article:tag" content="Spring Boot" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Generating Spring Boot Skeleton Project via Spring Boot CLI" />
-    <meta name="twitter:description" content="Using the Spring Boot CLI to Generate Spring Boot Skeleton Project." />
-    <meta name="twitter:url" content="http://localhost:2368/generating-spring-boot-skeleton-project-via-spring-boot-cli/" />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:title" content="Spring Boot with RabbitMQ (Producer)" />
+    <meta name="twitter:description" content="This post briefly documents the usage of RabbitMQ with Spring Boot.
+
+Introduction
+
+
+RabbitMQ is an open source message broker.
+
+
+Minimum Software Requirements
+
+
+ * RabbitMQ
+ * Java
+
+
+Sample Project
+
+
+spring-boot-rabbit-mq-producer is the sample Spring Boot web application i&#x27;ve used to illustrate the usage of the aforementioned tool.
+
+
+Navigate to http://localhost:8080/swagger-ui/" />
+    <meta name="twitter:url" content="http://localhost:2368/spring-boot-with-rabbitmq/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Anantha Raju C" />
     <meta name="twitter:label2" content="Filed under" />
@@ -40,7 +81,7 @@
     <meta name="twitter:site" content="@anantharajuc" />
     <meta name="twitter:creator" content="@anantharajuc" />
     <meta property="og:image:width" content="2000" />
-    <meta property="og:image:height" content="1500" />
+    <meta property="og:image:height" content="1124" />
     
     <script type="application/ld+json">
 {
@@ -72,18 +113,18 @@
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "Generating Spring Boot Skeleton Project via Spring Boot CLI",
-    "url": "http://localhost:2368/generating-spring-boot-skeleton-project-via-spring-boot-cli/",
-    "datePublished": "2018-09-12T00:00:00.000Z",
-    "dateModified": "2022-03-06T14:34:52.000Z",
+    "headline": "Spring Boot with RabbitMQ (Producer)",
+    "url": "http://localhost:2368/spring-boot-with-rabbitmq/",
+    "datePublished": "2022-08-07T15:18:34.000Z",
+    "dateModified": "2022-08-07T15:18:34.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&ixlib=rb-1.2.1&q=80&w=2000",
+        "url": "https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&ixlib=rb-1.2.1&q=80&w=2000",
         "width": 2000,
-        "height": 1500
+        "height": 1124
     },
     "keywords": "Spring Boot",
-    "description": "Using the Spring Boot CLI to Generate Spring Boot Skeleton Project.",
+    "description": "This post briefly documents the usage of RabbitMQ with Spring Boot.\n\nIntroduction\n\n\nRabbitMQ is an open source message broker.\n\n\nMinimum Software Requirements\n\n\n * RabbitMQ\n * Java\n\n\nSample Project\n\n\nspring-boot-rabbit-mq-producer is the sample Spring Boot web application i&#x27;ve used to illustrate the usage of the aforementioned tool.\n\n\nNavigate to http://localhost:8080/swagger-ui/index.html#/ to discover the application URLs.\n\n\nNoticed an issue with this Sample Project? Open an issue or a PR on G",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -217,7 +258,7 @@
                 <header class="post-header container medium">
     <h1 class="post-title">
         
-        Generating Spring Boot Skeleton Project via Spring Boot CLI
+        Spring Boot with RabbitMQ (Producer)
         
     </h1>
         <div class="post-meta">
@@ -237,8 +278,8 @@
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
-                    <time datetime="2018-09-12">
-                        Sep 12, 2018
+                    <time datetime="2022-08-07">
+                        Aug 7, 2022
                     </time>
                 </div>
                 <div class="post-length">2 min read</div>
@@ -249,106 +290,57 @@
             <a class="post-image-link" href="index.html">
                 <img class="post-image lazyload"
 
-                    data-srcset="https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1629654297299-c8506221ca97?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxpbnV4fGVufDB8fHx8MTY0NjU3NzIwNA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
+                    data-srcset="https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Generating Spring Boot Skeleton Project via Spring Boot CLI">
+                     data-sizes="auto" alt="Spring Boot with RabbitMQ (Producer)">
             </a>
         </div>
 
-                <figcaption>Photo by <a href="https://unsplash.com/@6heinz3r?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Gabriel Heinzer</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a></figcaption>
+                <figcaption>Photo by <a href="https://unsplash.com/@shakusky?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Zichao Zhang</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a></figcaption>
     </figure>
                 <div class="post-content gh-content kg-canvas">
-                    <!--kg-card-begin: markdown--><p>Using the Spring Boot CLI to Generate Spring Boot Skeleton Project.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><strong>Spring Boot CLI</strong> is a command line tool that you can use if you want to quickly develop a Spring application. It lets you run Groovy scripts, which means that you have a familiar Java-like syntax without so much boilerplate code. You can also bootstrap a new project or write your own command for it.</p>
-<p><strong>Command Language Interpreter (CLI)</strong>, also known as command-line user interface, console user interface and character user interface (CUI), is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). A program which handles the interface is called a command language interpreter or shell (computing)</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
-<ol>
-<li>Download &amp; Install Spring Boot CLI</li>
-<li>Using the CLI to Generate Spring Boot Skeleton Project</li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-requirements">Minimum Requirements</h4>
+                    <p>This post briefly documents the usage of <strong>RabbitMQ</strong> with <strong>Spring Boot</strong>.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><a href="https://www.rabbitmq.com/">RabbitMQ</a> is an open source message broker.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
 <ul>
-<li><a href="https://www.java.com/en/">Java SDK </a> v1.8 or higher</li>
+<li>RabbitMQ</li>
+<li>Java</li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-1download-install-spring-boot-cli"><strong>Step 1 - Download &amp; Install Spring Boot CLI</strong></h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<p><a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer">spring-boot-rabbit-mq-producer</a> is the sample Spring Boot web application i've used to illustrate the usage of the aforementioned tool.</p>
+<p>Navigate to <a href="http://localhost:8080/swagger-ui/index.html#/">http://localhost:8080/swagger-ui/index.html#/</a> to discover the application URLs.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
+<h5 id="rabbitmq">RabbitMQ</h5>
+<pre><code class="language-shell">docker run -p 15672:15672 -p 5672:5672 --hostname my-rabbit --name rabbit-mq rabbitmq:3.7.1-management
+</code></pre>
 <ul>
-<li>
-<p>Spring Boot CLI <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-installing-spring-boot.html#getting-started-manual-cli-installation">Download Link</a></p>
-</li>
-<li>
-<p>Installation Steps</p>
-<ul>
-<li>Set <strong>SPRING_HOME</strong> to point to the Spring CLI folder</li>
-<li>Add <strong>SPRING_HOME/bin</strong> to your <strong>PATH</strong> environment variable</li>
-<li>To test if you have successfully installed the CLI you can run either of the following commands:
-<ul>
-<li><strong>spring --version</strong> or <strong>spring version</strong></li>
+<li>Username: <strong>guest</strong></li>
+<li>Password: <strong>guest</strong></li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>No specific environment variables are required to run the CLI</p>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-2using-the-cli-to-generate-spring-boot-skeleton-project"><strong>Step 2 - Using the CLI to Generate Spring Boot Skeleton Project</strong></h4>
-<ul>
-<li>
-<p><strong>spring</strong><br>
-A help screen is displayed.</p>
-</li>
-<li>
-<p><strong>spring help</strong><br>
-Get more details about any of the supported commands.</p>
-</li>
-<li>
-<p><strong>spring init --dependencies=web,data-jpa my-example-project</strong><br>
-Create a new maven based spring boot project, <strong>my-example-project</strong> with <strong>spring-boot-starter-web</strong> and <strong>spring-boot-starter-data-jpa</strong> dependencies.</p>
-</li>
-<li>
-<p><strong>spring init --list</strong><br>
-List all the capabilities of Spring Starter.</p>
-</li>
-<li>
-<p><strong>spring init --build=maven --java-version=1.8 --dependencies=web,data-jpa --packaging=jar my-example-project.zip</strong><br>
-Create a maven project that uses Java 8 and jar packaging.</p>
-</li>
-<li>
-<p><strong>spring shell</strong><br>
-Command to launch an integrated shell on a Windows machine. From inside the embedded shell, you can run other commands directly. <strong>$ version</strong></p>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="running-the-jar">Running the Jar</h4>
-<ul>
-<li>
-<p><strong>Java -jar Application-Jar-Name.Jar</strong><br>
-Running the Spring Boot Application Jar</p>
-</li>
-<li>
-<p><strong>Java -jar -Dserver.port=9090 Application-Jar-Name.Jar</strong><br>
-Running Multiple Instances of Spring Boot Project on Different Ports</p>
-</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="other-commands">Other Commands</h4>
-<ul>
-<li>
-<p><strong>jcmd</strong><br>
-lists all running Java processes</p>
-</li>
-<li>
-<p><strong>Taskkill /PID PROCESS_ID_OF_RUNNING_APP /F</strong><br>
-replace the <strong>PROCESS_ID_OF_RUNNING_APP</strong> with the actual process id of the running jar found out from executing the previous command to shutdown the running jar.</p>
-</li>
-<li>
-<p><strong>jps -lv</strong><br>
-displays information about running java processes</p>
-</li>
-<li>
-<p><strong>echo %JAVA_HOME%</strong><br>
-prints environment variable <strong>JAVA_HOME</strong></p>
-</li>
-</ul>
+<p><img src="../content/images/2022/08/Screenshot-from-2022-08-07-09-41-13.png" alt="Screenshot-from-2022-08-07-09-41-13" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="application-execution">Application Execution</h5>
+<p>API url's can be accessed at <strong><a href="http://localhost:8080/swagger-ui/index.html#/">http://localhost:8080/swagger-ui/index.html#/</a></strong></p>
+<p><img src="../content/images/2022/08/swagger.png" alt="swagger" loading="lazy"></p>
+<p><strong>Sample JSON body</strong></p>
+<pre><code class="language-json">{
+	&quot;name&quot;: &quot;Jane&quot;,
+	&quot;username&quot;: &quot;janejane&quot;,
+	&quot;address&quot;: {
+		&quot;street&quot;: &quot;Jane Plains&quot;,
+		&quot;suite&quot;: &quot;Suite 779&quot;,
+		&quot;city&quot;: &quot;Wisokyburghh&quot;,
+		&quot;zipcode&quot;: &quot;90565-7771&quot;,
+		&quot;geo&quot;: {
+			&quot;lat&quot;: &quot;-43.9589&quot;,
+			&quot;lng&quot;: &quot;-34.4628&quot;
+		}
+	}
+}
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="../content/images/2022/08/exchanges.png" alt="exchanges" loading="lazy"></p>
+<p><img src="../content/images/2022/08/queues.png" alt="queues" loading="lazy"></p>
+<p><img src="../content/images/2022/08/graph.png" alt="graph" loading="lazy"></p>
 <!--kg-card-end: markdown-->
                 </div>
                         <div class="post-tags container medium">

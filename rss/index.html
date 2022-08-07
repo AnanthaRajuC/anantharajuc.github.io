@@ -1,4 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 07 Aug 2022 11:51:19 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Windows Command Prompt Commands]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="open-command-prompt-from-a-specific-folder">Open Command Prompt from a specific folder</h3>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 07 Aug 2022 15:24:02 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Spring Boot with RabbitMQ (Producer)]]></title><description><![CDATA[<p>This post briefly documents the usage of <strong>RabbitMQ</strong> with <strong>Spring Boot</strong>.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><a href="https://www.rabbitmq.com/">RabbitMQ</a> is an open source message broker.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li>RabbitMQ</li>
+<li>Java</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<p><a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer">spring-boot-rabbit-mq-producer</a> is the sample Spring Boot web application i&apos;ve used to illustrate the usage of the aforementioned tool.</p>
+<p>Navigate to <a href="http://localhost:8080/swagger-ui/index.html#/">http://localhost:</a></p>]]></description><link>http://localhost:2368/spring-boot-with-rabbitmq/</link><guid isPermaLink="false">62e685fcb340ab3254a8ac8b</guid><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 07 Aug 2022 15:18:34 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Spring Boot with RabbitMQ (Producer)"><p>This post briefly documents the usage of <strong>RabbitMQ</strong> with <strong>Spring Boot</strong>.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><a href="https://www.rabbitmq.com/">RabbitMQ</a> is an open source message broker.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li>RabbitMQ</li>
+<li>Java</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<p><a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer">spring-boot-rabbit-mq-producer</a> is the sample Spring Boot web application i&apos;ve used to illustrate the usage of the aforementioned tool.</p>
+<p>Navigate to <a href="http://localhost:8080/swagger-ui/index.html#/">http://localhost:8080/swagger-ui/index.html#/</a> to discover the application URLs.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/spring-boot-rabbit-mq-producer/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
+<h5 id="rabbitmq">RabbitMQ</h5>
+<pre><code class="language-shell">docker run -p 15672:15672 -p 5672:5672 --hostname my-rabbit --name rabbit-mq rabbitmq:3.7.1-management
+</code></pre>
+<ul>
+<li>Username: <strong>guest</strong></li>
+<li>Password: <strong>guest</strong></li>
+</ul>
+<p><img src="http://localhost:2368/content/images/2022/08/Screenshot-from-2022-08-07-09-41-13.png" alt="Spring Boot with RabbitMQ (Producer)" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="application-execution">Application Execution</h5>
+<p>API url&apos;s can be accessed at <strong><a href="http://localhost:8080/swagger-ui/index.html#/">http://localhost:8080/swagger-ui/index.html#/</a></strong></p>
+<p><img src="http://localhost:2368/content/images/2022/08/swagger.png" alt="Spring Boot with RabbitMQ (Producer)" loading="lazy"></p>
+<p><strong>Sample JSON body</strong></p>
+<pre><code class="language-json">{
+	&quot;name&quot;: &quot;Jane&quot;,
+	&quot;username&quot;: &quot;janejane&quot;,
+	&quot;address&quot;: {
+		&quot;street&quot;: &quot;Jane Plains&quot;,
+		&quot;suite&quot;: &quot;Suite 779&quot;,
+		&quot;city&quot;: &quot;Wisokyburghh&quot;,
+		&quot;zipcode&quot;: &quot;90565-7771&quot;,
+		&quot;geo&quot;: {
+			&quot;lat&quot;: &quot;-43.9589&quot;,
+			&quot;lng&quot;: &quot;-34.4628&quot;
+		}
+	}
+}
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2022/08/exchanges.png" alt="Spring Boot with RabbitMQ (Producer)" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2022/08/queues.png" alt="Spring Boot with RabbitMQ (Producer)" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2022/08/graph.png" alt="Spring Boot with RabbitMQ (Producer)" loading="lazy"></p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Windows Command Prompt Commands]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="open-command-prompt-from-a-specific-folder">Open Command Prompt from a specific folder</h3>
 <ul>
 <li>Open the folder location</li>
 <li>Press <strong>alt</strong> + <strong>D</strong></li>
@@ -24,7 +75,7 @@
 </tr>
 <tr>
 <td><strong>dir</strong></td>
-<td>Display a list of files and folders contained inside the</td></tr></tbody></table>]]></description><link>http://localhost:2368/windows-command-prompt/</link><guid isPermaLink="false">62efa5c7b9b374465f92f47c</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 07 Aug 2022 11:50:33 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHdpbmRvd3N8ZW58MHx8fHwxNjU5ODcyNzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h3 id="open-command-prompt-from-a-specific-folder">Open Command Prompt from a specific folder</h3>
+<td>Display a list of files and folders contained inside the</td></tr></tbody></table>]]></description><link>http://localhost:2368/windows-command-prompt/</link><guid isPermaLink="false">62efa5c7b9b374465f92f47c</guid><category><![CDATA[Windows]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 07 Aug 2022 11:50:33 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fHdpbmRvd3N8ZW58MHx8fHwxNjU5ODcyNzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h3 id="open-command-prompt-from-a-specific-folder">Open Command Prompt from a specific folder</h3>
 <ul>
 <li>Open the folder location</li>
 <li>Press <strong>alt</strong> + <strong>D</strong></li>
@@ -1040,33 +1091,4 @@ List all the containers, including the ones that have finished executing to chec
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/26.PNG" class="kg-image" alt="Installing Confluent Kafka on Ubuntu WSL running on Windows 10 OS" loading="lazy" width="1366" height="235" srcset="http://localhost:2368/content/images/size/w600/2022/03/26.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/26.PNG 1000w, http://localhost:2368/content/images/2022/03/26.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>In a web browser on your Windows 10 OS, navigate to <strong><a href="http://localhost:9021/">http://localhost:9021/</a></strong> to view the Confluent Kafka web portal.</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/27.png" class="kg-image" alt="Installing Confluent Kafka on Ubuntu WSL running on Windows 10 OS" loading="lazy" width="1366" height="863" srcset="http://localhost:2368/content/images/size/w600/2022/03/27.png 600w, http://localhost:2368/content/images/size/w1000/2022/03/27.png 1000w, http://localhost:2368/content/images/2022/03/27.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="stop-confluent-kafka">Stop Confluent Kafka</h5>
 <p>To stop the Confluent Kafka services issue the <code>confluent local services stop</code> command.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/28.PNG" class="kg-image" alt="Installing Confluent Kafka on Ubuntu WSL running on Windows 10 OS" loading="lazy" width="1366" height="345" srcset="http://localhost:2368/content/images/size/w600/2022/03/28.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/28.PNG 1000w, http://localhost:2368/content/images/2022/03/28.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[Essential GitHub Bots]]></title><description><![CDATA[This post is a compilation of a few open source and free to use GitHub bots i rely on to ease certain aspects of my software development flow.]]></description><link>http://localhost:2368/essential-github-bots/</link><guid isPermaLink="false">6224bf2d9d43e5144f970554</guid><category><![CDATA[Softwares]]></category><category><![CDATA[GitHub]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 06 Sep 2021 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1495055154266-57bbdeada43e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGJvdHN8ZW58MHx8fHwxNjQ2OTY0Nzc4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1495055154266-57bbdeada43e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGJvdHN8ZW58MHx8fHwxNjQ2OTY0Nzc4&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Essential GitHub Bots"><p>GitHub bots are essentially GitHub apps to automate and improve software development workflow. The following is a compilation of a few <strong>open source and free to use</strong> GitHub bots i rely on to ease certain aspects of my software development flow.</p><p>You can explore other GitHub apps on the <a href="https://github.com/marketplace">GitHub marketplace</a>.</p><p>To build you own GitHub apps, refer <a href="https://probot.github.io/docs/">Probot</a>, a framework for building GitHub Apps in <a href="https://nodejs.org/en/">Node.js</a>.</p><!--kg-card-begin: markdown--><h4 id="minimum-requirements">Minimum Requirements</h4>
-<ul>
-<li>GitHub Account (Free)</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="imgbot">Imgbot</h4>
-<p>This app optimizes images present in your project directory.</p>
-<p><em>Shortly after installing Imgbot, you will receive a pull request with all of your images optimized. Just merge the pull request and you&#x2019;re done!</em></p>
-<ul>
-<li><a href="https://github.com/marketplace/imgbot">https://github.com/marketplace/imgbot</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependabot">Dependabot</h4>
-<p><em>You can use Dependabot to keep the packages you use updated to the latest versions.</em></p>
-<p>Supports Ruby, JavaScript, Python, PHP, Elixir, Rust, Java-Maven, Java-Gradle, .NET, Go, Elm, Git Submodules, Docker, Terraform, GitHub Actions.</p>
-<ul>
-<li><a href="https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically">https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically</a></li>
-<li><a href="https://dependabot.com/">https://dependabot.com/</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="fossabot">Fossabot</h4>
-<p>Open Source License Compliance Management.</p>
-<p><em>Issue&apos;s Pull Requests to remediate vulnerabilities in your dependencies. Automates compliance, security &amp; quality.</em></p>
-<ul>
-<li><a href="https://fossa.com/product/open-source-license-compliance">https://fossa.com/product/open-source-license-compliance</a></li>
-<li><a href="https://app.fossa.com/auth/register">https://app.fossa.com/auth/register</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="snyk">Snyk</h4>
-<p><em>Snyk helps find, fix &amp; prevent known vulnerabilities in your Node.js, Java, Ruby, Python and Scala apps. Snyk is free for open source.</em></p>
-<ul>
-<li><a href="https://github.com/marketplace/snyk">https://github.com/marketplace/snyk</a></li>
-</ul>
-<!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/28.PNG" class="kg-image" alt="Installing Confluent Kafka on Ubuntu WSL running on Windows 10 OS" loading="lazy" width="1366" height="345" srcset="http://localhost:2368/content/images/size/w600/2022/03/28.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/28.PNG 1000w, http://localhost:2368/content/images/2022/03/28.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>
