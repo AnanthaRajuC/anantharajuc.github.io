@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 14 Aug 2022 10:05:56 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[PostgreSQL, pgAdmin on Docker]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of using Postgres, pgAdmin via Docker container.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 14 Aug 2022 11:12:19 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Change Data Capture (CDC) with PostgreSQL and Debezium]]></title><description><![CDATA[<p>This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or</p>]]></description><link>http://localhost:2368/change-data-capture-cdc-with-p/</link><guid isPermaLink="false">62f8cb7e618689890e6a486e</guid><category><![CDATA[Docker]]></category><category><![CDATA[PostgreSQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 14 Aug 2022 11:09:21 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1508423134147-addf71308178?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1508423134147-addf71308178?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Change Data Capture (CDC) with PostgreSQL and Debezium"><p>This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system</p>
+<p>PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.</p>
+<p>Debezium is an open source distributed platform for change data capture.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> (PostgreSQL, Zookeeper, Kafka, Debezium, schema-registry)</li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
+<h4 id="setup">Setup</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/134394876375cc861dfe7d7d223918ab.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/08/12.png" class="kg-image" alt="Change Data Capture (CDC) with PostgreSQL and Debezium" loading="lazy" width="1905" height="331" srcset="http://localhost:2368/content/images/size/w600/2022/08/12.png 600w, http://localhost:2368/content/images/size/w1000/2022/08/12.png 1000w, http://localhost:2368/content/images/size/w1600/2022/08/12.png 1600w, http://localhost:2368/content/images/2022/08/12.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>DB Configuration</p>
+<p><img src="http://localhost:2368/content/images/2022/08/14.png" alt="Change Data Capture (CDC) with PostgreSQL and Debezium" loading="lazy"></p>
+<pre><code class="language-sql">CREATE TABLE STUDENT(id INTEGER PRIMARY KEY, name VARCHAR);
+
+ALTER TABLE public.student REPLICA IDENTITY FULL;
+
+SELECT * FROM STUDENT;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Setup debezium Connector</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/49ec813281221879e412a4e51d1a3136.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/08/15.png" class="kg-image" alt="Change Data Capture (CDC) with PostgreSQL and Debezium" loading="lazy" width="1904" height="508" srcset="http://localhost:2368/content/images/size/w600/2022/08/15.png 600w, http://localhost:2368/content/images/size/w1000/2022/08/15.png 1000w, http://localhost:2368/content/images/size/w1600/2022/08/15.png 1600w, http://localhost:2368/content/images/2022/08/15.png 1904w" sizes="(min-width: 720px) 720px"></figure><p>Tail kafka CDC topic</p><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/2dba6d7e3bde7e1def6e7bf902c08b0e.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/08/16.png" class="kg-image" alt="Change Data Capture (CDC) with PostgreSQL and Debezium" loading="lazy" width="1905" height="168" srcset="http://localhost:2368/content/images/size/w600/2022/08/16.png 600w, http://localhost:2368/content/images/size/w1000/2022/08/16.png 1000w, http://localhost:2368/content/images/size/w1600/2022/08/16.png 1600w, http://localhost:2368/content/images/2022/08/16.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Add, Update, Delete Records in the Table and see it in the kafka topic.</p>
+<pre><code class="language-sql">INSERT INTO STUDENT(id,name) VALUES (1,&apos;JOHN&apos;);
+INSERT INTO STUDENT(id,name) VALUES (2,&apos;JANE&apos;);
+
+UPDATE STUDENT SET name=&apos;JOHNNY&apos; WHERE ID=1;
+</code></pre>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/08/18.png" class="kg-image" alt="Change Data Capture (CDC) with PostgreSQL and Debezium" loading="lazy" width="1907" height="340" srcset="http://localhost:2368/content/images/size/w600/2022/08/18.png 600w, http://localhost:2368/content/images/size/w1000/2022/08/18.png 1000w, http://localhost:2368/content/images/size/w1600/2022/08/18.png 1600w, http://localhost:2368/content/images/2022/08/18.png 1907w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[PostgreSQL, pgAdmin on Docker]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of using Postgres, pgAdmin via Docker container.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p>PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.</p>
 <p>pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL</p>
@@ -927,184 +954,4 @@ spring.data.rest.default-page-size=25
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/6-2.PNG" class="kg-image" alt="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories" loading="lazy" width="1366" height="666" srcset="http://localhost:2368/content/images/size/w600/2022/03/6-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/6-2.PNG 1000w, http://localhost:2368/content/images/2022/03/6-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="step-5push-the-docker-image"><strong>Step 5 - Push the Docker Image</strong></h4>
 <p>execute the commands copied in the previous step in a sequential order to push the Docker image fom your local machine to <strong>AWS ECR</strong>.</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/7-2.PNG" class="kg-image" alt="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories" loading="lazy" width="1347" height="345" srcset="http://localhost:2368/content/images/size/w600/2022/03/7-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/7-2.PNG 1000w, http://localhost:2368/content/images/2022/03/7-2.PNG 1347w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="step-6view-the-pushed-image-its-details"><strong>Step 6 - View the pushed image &amp; its details</strong></h4>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/8-3.PNG" class="kg-image" alt="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories" loading="lazy" width="1366" height="659" srcset="http://localhost:2368/content/images/size/w600/2022/03/8-3.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/8-3.PNG 1000w, http://localhost:2368/content/images/2022/03/8-3.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/9-2.PNG" class="kg-image" alt="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories" loading="lazy" width="1366" height="768" srcset="http://localhost:2368/content/images/size/w600/2022/03/9-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/9-2.PNG 1000w, http://localhost:2368/content/images/2022/03/9-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[MySQL Docker Image]]></title><description><![CDATA[Pull a  MySQL Docker image from docker hub and run a few basic commands to interact with it.]]></description><link>http://localhost:2368/mysql-docker-image/</link><guid isPermaLink="false">6226c0c628558a1cc94500e5</guid><category><![CDATA[Docker]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Wed, 08 Sep 2021 00:00:00 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="MySQL Docker Image"><p>This post briefly documents the process of pulling a <a href="https://hub.docker.com/_/mysql">MySQL</a> <a href="https://www.docker.com/">Docker</a> image from <a href="https://hub.docker.com/">docker hub</a> and running few basic commands to interact with it.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><strong>MySQL</strong> is a relational database management system based on SQL &#x2013; Structured Query Language.</p>
-<p><strong>MySQL Workbench</strong> is a visual database design tool that integrates SQL development, administration, database design, creation and maintenance into a single integrated development environment for the MySQL database system.</p>
-<p><strong>Docker</strong> is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
-<ol>
-<li>Pull a MySQL Docker Image from Docker Hub</li>
-<li>Run the downloaded MySQL Docker Image</li>
-<li>Connect to the Database via CLI</li>
-<li>Interact with the MySQL Database via CLI</li>
-<li>Interact with the MySQL Database via MySQL Workbench</li>
-<li>Container Management (Stop, Restart, Stats)</li>
-<li>Cleanup (Remove)</li>
-</ol>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.docker.com/">Docker</a></li>
-<li><a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
-<h4 id="setup">Setup</h4>
-<p>Start your local Docker Instance if necessary.<br>
-<img src="http://localhost:2368/content/images/2022/03/1.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Check if you already have any existing MySQL images locally. <img src="http://localhost:2368/content/images/2022/03/2.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-1pull-a-mysql-docker-image-from-docker-hub"><strong>Step 1 - Pull a MySQL Docker Image from Docker Hub</strong></h4>
-<p>Check all of the available tags that can be downloaded from this link. <a href="https://hub.docker.com/_/mysql?tab=tags">https://hub.docker.com/_/mysql?tab=tags</a></p>
-<p>For demonstration, i&apos;ll be using the <strong>8.0.26</strong> version of MySQL.</p>
-<p><strong>docker pull mysql:8.0.26</strong><br>
-Pull a MySQL Docker Image</p>
-<p><img src="http://localhost:2368/content/images/2022/03/3.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>docker images</strong><br>
-Check if the MySQL Docker image has been successfully pulled.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/4.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-2run-the-downloaded-mysql-docker-image"><strong>Step 2 - Run the downloaded MySQL Docker Image</strong></h4>
-<p><strong>docker run --name mysql-docker -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=sbat -e MYSQL_USER=sbat -e MYSQL_PASSWORD=sbat -d mysql:8.0.26</strong><br>
-Run the MySQL docker image.</p>
-<p>In the above command, the following parameters can be configured as per your need.</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Example Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--name</code></td>
-<td><em>mysql-docker</em></td>
-</tr>
-<tr>
-<td><code>-p</code></td>
-<td><em>3306:3306</em> (Ports expose)</td>
-</tr>
-<tr>
-<td><code>MYSQL_ROOT_PASSWORD</code></td>
-<td><em>password</em></td>
-</tr>
-<tr>
-<td><code>MYSQL_DATABASE</code></td>
-<td><em>sbat</em></td>
-</tr>
-<tr>
-<td><code>MYSQL_USER</code></td>
-<td><em>sbat</em></td>
-</tr>
-<tr>
-<td><code>MYSQL_PASSWORD</code></td>
-<td><em>sbat</em></td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://localhost:2368/content/images/2022/03/5.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>docker ps</strong><br>
-List all the running containers to check if your image is running.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/6.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-3connect-to-the-database-via-cli"><strong>Step 3 - Connect to the Database via CLI</strong></h4>
-<p><strong>docker exec -it mysql-docker mysql -u sbat -p sbat</strong><br>
-Connect to MySQL image via interactive CLI.</p>
-<p>In the above command, the following parameters are set as configured in the previous step.</p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Example Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-u</td>
-<td><em>sbat</em></td>
-</tr>
-<tr>
-<td>-p</td>
-<td><em>sbat</em></td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://localhost:2368/content/images/2022/03/7.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p>Other ways to connect to the Database docker image.</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>docker exec mysql-docker mysql -usbat -psbat -e &apos;show databases;&apos;</td>
-<td>connect to MySQL image without interactive CLI.</td>
-</tr>
-<tr>
-<td>docker exec -it mysql-docker mysql -usbat -psbat -e &apos;show databases;&apos;</td>
-<td>connect to MySQL image without interactive CLI.</td>
-</tr>
-</tbody>
-</table>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-4interact-with-the-mysql-database-via-cli"><strong>Step 4 - Interact with the MySQL Database via CLI</strong></h4>
-<p><strong>show databases;</strong><br>
-Lists the databases on the MySQL server host.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/8.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>show schemas;</strong><br>
-A synonym for <strong>show databases;</strong></p>
-<p><img src="http://localhost:2368/content/images/2022/03/9.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>use [database_name];</strong><br>
-Select any existing database in the SQL schema.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/10.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>show tables;</strong><br>
-List tables in a Database.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/11.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>exit</strong><br>
-Quit MySQL shell.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/12.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-5interact-with-the-mysql-database-via-mysql-workbench"><strong>Step 5 - Interact with the MySQL Database via MySQL Workbench</strong></h4>
-<p>Connect to the DB by entering the following details in MySQL Workbench.</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><em>Connection Name</em></td>
-<td><em>Any name of your choice</em></td>
-</tr>
-<tr>
-<td><em>Hostname</em></td>
-<td><em>192.168.99.102</em> (use <code>docker-machine ip</code> to find your Docker Toolbox IP address. usually <strong>192.168.99.102</strong>)</td>
-</tr>
-<tr>
-<td><em>Username</em></td>
-<td><em>sbat</em></td>
-</tr>
-<tr>
-<td><em>Password</em></td>
-<td><em>sbat</em></td>
-</tr>
-</tbody>
-</table>
-<p><img src="http://localhost:2368/content/images/2022/03/17.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="step-6container-management-stop-restart-stats"><strong>Step 6 - Container Management (Stop, Restart, Stats)</strong></h4>
-<p><strong>docker stop [container_id]</strong><br>
-Stop the container.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/13.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>docker ps -a</strong><br>
-List all the containers, including the ones that have finished executing to check if your container has been stopped.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/16.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>docker restart [container_name]</strong><br>
-Restart the container.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/18.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="cleanup-remove"><strong>Cleanup (Remove)</strong></h4>
-<p><strong>docker rm [container_name]</strong><br>
-Remove the container.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/14.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<p><strong>docker ps -a</strong><br>
-List all the containers, including the ones that have finished executing to check if your container has been stopped and removed. There wont be any containers listed now.</p>
-<p><img src="http://localhost:2368/content/images/2022/03/15.PNG" alt="MySQL Docker Image" loading="lazy"></p>
-<!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/8-3.PNG" class="kg-image" alt="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories" loading="lazy" width="1366" height="659" srcset="http://localhost:2368/content/images/size/w600/2022/03/8-3.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/8-3.PNG 1000w, http://localhost:2368/content/images/2022/03/8-3.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/03/9-2.PNG" class="kg-image" alt="Pushing Docker Image from local machine to Amazon Elastic Container Registry Repositories" loading="lazy" width="1366" height="768" srcset="http://localhost:2368/content/images/size/w600/2022/03/9-2.PNG 600w, http://localhost:2368/content/images/size/w1000/2022/03/9-2.PNG 1000w, http://localhost:2368/content/images/2022/03/9-2.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item></channel></rss>

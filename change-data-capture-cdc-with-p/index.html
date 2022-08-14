@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Docker - Anantha Raju C</title>
-    <link rel="stylesheet" href="../../assets/built/screen.css%3Fv=3dbea0bc34.css">
+    <title>Change Data Capture (CDC) with PostgreSQL and Debezium</title>
+    <link rel="stylesheet" href="../assets/built/screen.css%3Fv=3dbea0bc34.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap">
@@ -18,22 +18,44 @@
     <meta name="referrer" content="no-referrer-when-downgrade" />
     
     <meta property="og:site_name" content="Anantha Raju C" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Docker - Anantha Raju C" />
-    <meta property="og:url" content="http://localhost:2368/tag/docker/" />
-    <meta property="og:image" content="http://localhost:2368/content/images/2022/03/photo-1646236991873-cd86a00618d8.jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Change Data Capture (CDC) with PostgreSQL and Debezium" />
+    <meta property="og:description" content="This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.
+
+Introduction
+
+
+Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or" />
+    <meta property="og:url" content="http://localhost:2368/change-data-capture-cdc-with-p/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2022-08-14T11:09:21.000Z" />
+    <meta property="article:modified_time" content="2022-08-14T11:09:21.000Z" />
+    <meta property="article:tag" content="Docker" />
+    <meta property="article:tag" content="PostgreSQL" />
+    
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Docker - Anantha Raju C" />
-    <meta name="twitter:url" content="http://localhost:2368/tag/docker/" />
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2022/03/photo-1646236991873-cd86a00618d8.jpg" />
+    <meta name="twitter:title" content="Change Data Capture (CDC) with PostgreSQL and Debezium" />
+    <meta name="twitter:description" content="This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.
+
+Introduction
+
+
+Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or" />
+    <meta name="twitter:url" content="http://localhost:2368/change-data-capture-cdc-with-p/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Docker, PostgreSQL" />
     <meta name="twitter:site" content="@anantharajuc" />
-    <meta property="og:image:width" content="1528" />
-    <meta property="og:image:height" content="955" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
     
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
-    "@type": "Series",
+    "@type": "Article",
     "publisher": {
         "@type": "Organization",
         "name": "Anantha Raju C",
@@ -45,8 +67,33 @@
             "height": 48
         }
     },
-    "url": "http://localhost:2368/tag/docker/",
-    "name": "Docker",
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Change Data Capture (CDC) with PostgreSQL and Debezium",
+    "url": "http://localhost:2368/change-data-capture-cdc-with-p/",
+    "datePublished": "2022-08-14T11:09:21.000Z",
+    "dateModified": "2022-08-14T11:09:21.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1508423134147-addf71308178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "Docker, PostgreSQL",
+    "description": "This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.\n\nIntroduction\n\n\nChange data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system\n\n\nPostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.\n\n\nDebezium is an open sour",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -55,7 +102,7 @@
     </script>
 
     <meta name="generator" content="Ghost 5.8" />
-    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../../rss/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
     <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/portal@~2.5/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="bd0f620eace0890d104223392c" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
 .gh-post-upgrade-cta {
     display: flex;
@@ -121,8 +168,8 @@
     opacity: 0.92;
 }</style>
     <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="bd0f620eace0890d104223392c" data-styles="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
-    <script defer src="../../public/cards.min.js%3Fv=3dbea0bc34"></script>
-    <link rel="stylesheet" type="text/css" href="../../public/cards.min.css%3Fv=3dbea0bc34.css">
+    <script defer src="../public/cards.min.js%3Fv=3dbea0bc34"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=3dbea0bc34.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88776389-2"></script>
 <script>
@@ -135,13 +182,13 @@
 <style>:root {--ghost-accent-color: #FF1A75;}</style>
 </head>
 
-<body class="tag-template tag-docker">
+<body class="post-template tag-docker tag-postgresql">
     <div class="site">
         <header class="site-header">
     <div class="container">
         <div class="navbar">
             <div class="navbar-left">
-                <a class="logo" href="../../index.html">
+                <a class="logo" href="../index.html">
         <span class="logo-text">Anantha Raju C</span>
 </a>            </div>
             <div class="navbar-right">
@@ -149,9 +196,9 @@
                             <a class="menu-item menu-item-about"
         href="http://localhost:2368/about/">About</a>
     <a class="menu-item menu-item-collection"
-        href="../spring-boot/index.html">Collection</a>
+        href="../tag/spring-boot/index.html">Collection</a>
     <a class="menu-item menu-item-author"
-        href="../../author/anantha/index.html">Author</a>
+        href="../author/anantha/index.html">Author</a>
 
                     </nav>
                     <div class="burger hidden-lg hidden-xl">
@@ -163,9 +210,9 @@
                     <a class="menu-item menu-item-about"
         href="http://localhost:2368/about/">About</a>
     <a class="menu-item menu-item-collection"
-        href="../spring-boot/index.html">Collection</a>
+        href="../tag/spring-boot/index.html">Collection</a>
     <a class="menu-item menu-item-author"
-        href="../../author/anantha/index.html">Author</a>
+        href="../author/anantha/index.html">Author</a>
 
             </nav>
     </div>
@@ -176,39 +223,17 @@
             
 <div class="content-area">
     <main class="site-main">
-        <div class="term container">
-                <h1 class="term-name">Docker</h1>
-        </div>
-        <div class="post-feed container medium u-hover-wrapper">
-                <article
-    class="post tag-docker tag-postgresql featured u-hover-item">
-    <a class="post-link u-permalink" href="../../change-data-capture-cdc-with-p/index.html"></a>
-        <figure class="post-media">
-        <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../../change-data-capture-cdc-with-p/index.html">
-                <img class="post-image lazyload u-object-fit"
-
-                    data-srcset="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Change Data Capture (CDC) with PostgreSQL and Debezium">
-            </a>
-        </div>
-
-    </figure>
-    <div class="post-wrapper">
-        <header class="post-header">
-    <h2 class="post-title">
-        <a class="post-title-link" href="../../change-data-capture-cdc-with-p/index.html">
+            <article class="post tag-docker tag-postgresql featured single">
+                <header class="post-header container medium">
+    <h1 class="post-title">
+        
         Change Data Capture (CDC) with PostgreSQL and Debezium
-        </a>
-    </h2>
-</header>        <div class="post-excerpt">
-            This post briefly documents the process of Change Data Capture
-        </div>
+        
+    </h1>
         <div class="post-meta">
         <div class="post-meta-left">
             <div class="post-author">
-            <a class="post-author-image-link" href="../../author/anantha/index.html">
+            <a class="post-author-image-link" href="../author/anantha/index.html">
                 <img class="post-author-image lazyload"
                     data-src="//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -218,7 +243,7 @@
         <div class="post-meta-right">
             <div class="post-author-name">
                 <a class="post-author-name-link"
-                        href="../../author/anantha/index.html">Anantha Raju C</a>
+                        href="../author/anantha/index.html">Anantha Raju C</a>
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
@@ -229,13 +254,61 @@
                 <div class="post-length">2 min read</div>
             </div>
         </div>
-</div>    </div>
-</article>                <article
+</div></header>                    <figure class="post-media container large">
+        <div class="u-placeholder">
+            <a class="post-image-link" href="index.html">
+                <img class="post-image lazyload"
+
+                    data-srcset="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-sizes="auto" alt="Change Data Capture (CDC) with PostgreSQL and Debezium">
+            </a>
+        </div>
+
+                <figcaption>Photo by <a href="https://unsplash.com/@danielcgold?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Dan Gold</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a></figcaption>
+    </figure>
+                <div class="post-content gh-content kg-canvas">
+                    <p>This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system</p>
+<p>PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.</p>
+<p>Debezium is an open source distributed platform for change data capture.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> (PostgreSQL, Zookeeper, Kafka, Debezium, schema-registry)</li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
+<h4 id="setup">Setup</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/134394876375cc861dfe7d7d223918ab.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/12.png" class="kg-image" alt loading="lazy" width="1905" height="331" srcset="../content/images/size/w600/2022/08/12.png 600w, ../content/images/size/w1000/2022/08/12.png 1000w, ../content/images/size/w1600/2022/08/12.png 1600w, ../content/images/2022/08/12.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>DB Configuration</p>
+<p><img src="../content/images/2022/08/14.png" alt="14" loading="lazy"></p>
+<pre><code class="language-sql">CREATE TABLE STUDENT(id INTEGER PRIMARY KEY, name VARCHAR);
+
+ALTER TABLE public.student REPLICA IDENTITY FULL;
+
+SELECT * FROM STUDENT;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Setup debezium Connector</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/49ec813281221879e412a4e51d1a3136.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/15.png" class="kg-image" alt loading="lazy" width="1904" height="508" srcset="../content/images/size/w600/2022/08/15.png 600w, ../content/images/size/w1000/2022/08/15.png 1000w, ../content/images/size/w1600/2022/08/15.png 1600w, ../content/images/2022/08/15.png 1904w" sizes="(min-width: 720px) 720px"></figure><p>Tail kafka CDC topic</p><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/2dba6d7e3bde7e1def6e7bf902c08b0e.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/16.png" class="kg-image" alt loading="lazy" width="1905" height="168" srcset="../content/images/size/w600/2022/08/16.png 600w, ../content/images/size/w1000/2022/08/16.png 1000w, ../content/images/size/w1600/2022/08/16.png 1600w, ../content/images/2022/08/16.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Add, Update, Delete Records in the Table and see it in the kafka topic.</p>
+<pre><code class="language-sql">INSERT INTO STUDENT(id,name) VALUES (1,'JOHN');
+INSERT INTO STUDENT(id,name) VALUES (2,'JANE');
+
+UPDATE STUDENT SET name='JOHNNY' WHERE ID=1;
+</code></pre>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/18.png" class="kg-image" alt loading="lazy" width="1907" height="340" srcset="../content/images/size/w600/2022/08/18.png 600w, ../content/images/size/w1000/2022/08/18.png 1000w, ../content/images/size/w1600/2022/08/18.png 1600w, ../content/images/2022/08/18.png 1907w" sizes="(min-width: 720px) 720px"></figure>
+                </div>
+                        <div class="post-tags container medium">
+            <a class="post-tag tag-docker" href="../tag/docker/index.html" title="Docker">Docker</a>
+            <a class="post-tag tag-postgresql" href="../tag/postgresql/index.html" title="PostgreSQL">PostgreSQL</a>
+    </div>
+            </article>
+                <section class="related-posts container medium">
+        <div class="post-feed u-hover-wrapper">
+                <article
     class="post tag-docker tag-mysql u-hover-item">
-    <a class="post-link u-permalink" href="../../mysql-docker-image/index.html"></a>
+    <a class="post-link u-permalink" href="../mysql-docker-image/index.html"></a>
         <figure class="post-media">
         <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../../mysql-docker-image/index.html">
+            <a class="post-image-link" href="../mysql-docker-image/index.html">
                 <img class="post-image lazyload u-object-fit"
 
                     data-srcset="https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
@@ -247,18 +320,18 @@
     </figure>
     <div class="post-wrapper">
         <header class="post-header">
-    <h2 class="post-title">
-        <a class="post-title-link" href="../../mysql-docker-image/index.html">
+    <h4 class="post-title">
+        <a class="post-title-link" href="../mysql-docker-image/index.html">
         MySQL Docker Image
         </a>
-    </h2>
+    </h4>
 </header>        <div class="post-excerpt">
             Pull a  MySQL Docker image from docker hub and run a few basic commands to interact with it.
         </div>
         <div class="post-meta">
         <div class="post-meta-left">
             <div class="post-author">
-            <a class="post-author-image-link" href="../../author/anantha/index.html">
+            <a class="post-author-image-link" href="../author/anantha/index.html">
                 <img class="post-author-image lazyload"
                     data-src="//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -268,7 +341,7 @@
         <div class="post-meta-right">
             <div class="post-author-name">
                 <a class="post-author-name-link"
-                        href="../../author/anantha/index.html">Anantha Raju C</a>
+                        href="../author/anantha/index.html">Anantha Raju C</a>
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
@@ -282,10 +355,10 @@
 </div>    </div>
 </article>                <article
     class="post tag-ci-cd tag-docker u-hover-item">
-    <a class="post-link u-permalink" href="../../creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/index.html"></a>
+    <a class="post-link u-permalink" href="../creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/index.html"></a>
         <figure class="post-media">
         <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../../creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/index.html">
+            <a class="post-image-link" href="../creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/index.html">
                 <img class="post-image lazyload u-object-fit"
 
                     data-srcset="https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1603351075188-e29f0562f976?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI0fHxwaXBlbGluZXxlbnwwfHx8fDE2NDY3MDU3ODg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
@@ -297,18 +370,18 @@
     </figure>
     <div class="post-wrapper">
         <header class="post-header">
-    <h2 class="post-title">
-        <a class="post-title-link" href="../../creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/index.html">
+    <h4 class="post-title">
+        <a class="post-title-link" href="../creating-a-ci-cd-pipeline-with-travis-ci-github-and-docker-hub-for-spring-boot-based-web-application/index.html">
         Creating a CI/CD Pipeline with Travis CI, GitHub and Docker Hub for Spring Boot based Web Application
         </a>
-    </h2>
+    </h4>
 </header>        <div class="post-excerpt">
             Spring Boot application docker image build using Travis CI and pushing the Docker image to Docker Hub when code is pushed from development machine to GitHub.
         </div>
         <div class="post-meta">
         <div class="post-meta-left">
             <div class="post-author">
-            <a class="post-author-image-link" href="../../author/anantha/index.html">
+            <a class="post-author-image-link" href="../author/anantha/index.html">
                 <img class="post-author-image lazyload"
                     data-src="//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -318,7 +391,7 @@
         <div class="post-meta-right">
             <div class="post-author-name">
                 <a class="post-author-name-link"
-                        href="../../author/anantha/index.html">Anantha Raju C</a>
+                        href="../author/anantha/index.html">Anantha Raju C</a>
             </div>
             <div class="post-meta-bottom">
                 <div class="post-date">
@@ -330,114 +403,9 @@
             </div>
         </div>
 </div>    </div>
-</article>                <article
-    class="post tag-docker u-hover-item">
-    <a class="post-link u-permalink" href="../../spring-boot-application-containerization-with-docker-and-pushing-the-docker-image-to-dockerhub/index.html"></a>
-        <figure class="post-media">
-        <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../../spring-boot-application-containerization-with-docker-and-pushing-the-docker-image-to-dockerhub/index.html">
-                <img class="post-image lazyload u-object-fit"
-
-                    data-srcset="https://images.unsplash.com/photo-1601631547344-1b6948ea55c2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2FkaW5nfGVufDB8fHx8MTY0Njc0NDgyMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1601631547344-1b6948ea55c2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2FkaW5nfGVufDB8fHx8MTY0Njc0NDgyMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1601631547344-1b6948ea55c2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2FkaW5nfGVufDB8fHx8MTY0Njc0NDgyMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1601631547344-1b6948ea55c2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2FkaW5nfGVufDB8fHx8MTY0Njc0NDgyMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1601631547344-1b6948ea55c2?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2FkaW5nfGVufDB8fHx8MTY0Njc0NDgyMw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Spring Boot Application Containerization with Docker and Pushing the Docker Image to DockerHub">
-            </a>
-        </div>
-
-    </figure>
-    <div class="post-wrapper">
-        <header class="post-header">
-    <h2 class="post-title">
-        <a class="post-title-link" href="../../spring-boot-application-containerization-with-docker-and-pushing-the-docker-image-to-dockerhub/index.html">
-        Spring Boot Application Containerization with Docker and Pushing the Docker Image to DockerHub
-        </a>
-    </h2>
-</header>        <div class="post-excerpt">
-            Create Docker Image of a Java Web Application.
-        </div>
-        <div class="post-meta">
-        <div class="post-meta-left">
-            <div class="post-author">
-            <a class="post-author-image-link" href="../../author/anantha/index.html">
-                <img class="post-author-image lazyload"
-                    data-src="//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    alt="Anantha Raju C">
-            </a>
-</div>        </div>
-        <div class="post-meta-right">
-            <div class="post-author-name">
-                <a class="post-author-name-link"
-                        href="../../author/anantha/index.html">Anantha Raju C</a>
-            </div>
-            <div class="post-meta-bottom">
-                <div class="post-date">
-                    <time datetime="2021-06-25">
-                        Jun 25, 2021
-                    </time>
-                </div>
-                <div class="post-length">5 min read</div>
-            </div>
-        </div>
-</div>    </div>
-</article>                <article
-    class="post tag-docker u-hover-item">
-    <a class="post-link u-permalink" href="../../docker-and-docker-hub-commands/index.html"></a>
-        <figure class="post-media">
-        <div class="u-placeholder same-height rectangle">
-            <a class="post-image-link" href="../../docker-and-docker-hub-commands/index.html">
-                <img class="post-image lazyload u-object-fit"
-
-                    data-srcset="https://images.unsplash.com/photo-1605745341112-85968b19335b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;400 400w, https://images.unsplash.com/photo-1605745341112-85968b19335b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;750 750w, https://images.unsplash.com/photo-1605745341112-85968b19335b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;960 960w, https://images.unsplash.com/photo-1605745341112-85968b19335b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1140 1140w, https://images.unsplash.com/photo-1605745341112-85968b19335b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGRvY2tlcnxlbnwwfHx8fDE2NDY1NzQxODE&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1920 1920w"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-sizes="auto" alt="Docker and Docker Hub Commands">
-            </a>
-        </div>
-
-    </figure>
-    <div class="post-wrapper">
-        <header class="post-header">
-    <h2 class="post-title">
-        <a class="post-title-link" href="../../docker-and-docker-hub-commands/index.html">
-        Docker and Docker Hub Commands
-        </a>
-    </h2>
-</header>        <div class="post-excerpt">
-            Docker and Docker Hub Commands
-        </div>
-        <div class="post-meta">
-        <div class="post-meta-left">
-            <div class="post-author">
-            <a class="post-author-image-link" href="../../author/anantha/index.html">
-                <img class="post-author-image lazyload"
-                    data-src="//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&#x3D;250&amp;d&#x3D;mm&amp;r&#x3D;x"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    alt="Anantha Raju C">
-            </a>
-</div>        </div>
-        <div class="post-meta-right">
-            <div class="post-author-name">
-                <a class="post-author-name-link"
-                        href="../../author/anantha/index.html">Anantha Raju C</a>
-            </div>
-            <div class="post-meta-bottom">
-                <div class="post-date">
-                    <time datetime="2020-10-17">
-                        Oct 17, 2020
-                    </time>
-                </div>
-                <div class="post-length">3 min read</div>
-            </div>
-        </div>
-</div>    </div>
 </article>        </div>
-        <nav class="pagination container medium">
-    <div class="pagination-left">
-    </div>
-    <div class="pagination-right">
-    </div>
-</nav>
-    </main>
+    </section>
+            </main>
 </div>
         </div>
         <footer class="site-footer container">
@@ -472,7 +440,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
-    <script src="../../assets/built/main.min.js%3Fv=3dbea0bc34"></script>
+    <script src="../assets/built/main.min.js%3Fv=3dbea0bc34"></script>
 
     
 
