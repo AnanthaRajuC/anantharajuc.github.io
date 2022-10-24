@@ -97,7 +97,7 @@ Minimum Software Requirements
     <meta property="og:url" content="http://localhost:2368/change-data-capture-cdc-mysql/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2022-10-24T12:08:33.000Z" />
-    <meta property="article:modified_time" content="2022-10-24T12:40:26.000Z" />
+    <meta property="article:modified_time" content="2022-10-24T12:47:37.000Z" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Change Data Capture (CDC) - MySQL" />
     <meta name="twitter:description" content="This post briefly documents the process of Change Data Capture (CDC) with MySQL.
@@ -155,14 +155,14 @@ Minimum Software Requirements
     "headline": "Change Data Capture (CDC) - MySQL",
     "url": "http://localhost:2368/change-data-capture-cdc-mysql/",
     "datePublished": "2022-10-24T12:08:33.000Z",
-    "dateModified": "2022-10-24T12:40:26.000Z",
+    "dateModified": "2022-10-24T12:47:37.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&ixlib=rb-4.0.3&q=80&w=2000",
         "width": 2000,
         "height": 1329
     },
-    "description": "This post briefly documents the process of Change Data Capture (CDC) with MySQL.\n\n\nIntroduction\n\n\nChange data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system\n\n\nMinimum Software Requirements\n\n\n * Docker (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)\n * Docker Compose\n\n\n\nSetup\n\n\n 1. Clone the repository\n\n\n$ git clone https:/",
+    "description": "This post briefly documents the process of Change Data Capture (CDC) with MySQL.\n\n\nIntroduction\n\n\nChange data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system\n\n\nMinimum Software Requirements\n\n\n * Docker (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)\n * Docker Compose\n",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -262,7 +262,7 @@ Minimum Software Requirements
                                     <h3 class="m-recent-article__title js-recent-article-title" title="Change Data Capture (CDC) - MySQL">
                                       Change Data Capture (CDC) - MySQL
                                     </h3>
-                                    <span class="m-recent-article__date">34 minutes ago</span>
+                                    <span class="m-recent-article__date">39 minutes ago</span>
                                   </a>
                                 </div>
                                 <div class="swiper-slide">
@@ -425,80 +425,6 @@ Minimum Software Requirements
 <li><a href="https://www.docker.com/">Docker</a> (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)</li>
 <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="setup">Setup</h2>
-<ol>
-<li>Clone the repository</li>
-</ol>
-<pre><code class="language-shell">$ git clone https://github.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL.git
-$ cd Streaming_ETL_pipeline_MySQL
-</code></pre>
-<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
-<ol start="2">
-<li>Pull all required docker images</li>
-</ol>
-<pre><code class="language-shell">$ docker-compose pull
-</code></pre>
-<ol start="3">
-<li>Start up the environment</li>
-</ol>
-<p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
-<pre><code class="language-shell">$ docker-compose up
-</code></pre>
-<pre><code class="language-shell">Creating network &quot;streaming_etl_pipeline_mysql_webproxy&quot; with driver &quot;bridge&quot;
-Creating zookeeper ... done
-Creating kafka     ... done
-Creating debezium           ... done
-Creating cp-schema-registry ... done
-Creating kafka-connect-01   ... done
-Creating ksqldb-server      ... done
-Creating ksqldb-cli         ... done
-</code></pre>
-<h4 id="accessing-kafka-topics-via-kakfka-ui">Accessing Kafka Topics via Kakfka-UI</h4>
-<ol start="4">
-<li>Optionally, start <a href="https://github.com/provectus/kafka-ui">Kafka UI</a>, an open-source web UI for Apache Kafka Management</li>
-</ol>
-<pre><code class="language-shell">$ docker run --name=kafka-ui --network=streaming_etl_pipeline_mysql_webproxy -p 8080:8080 -e KAFKA_CLUSTERS_0_NAME=local -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 -d provectuslabs/kafka-ui:latest
-</code></pre>
-<p>URL to access Kakfka-UI console: <strong><a href="../index.html">http://localhost:8080</a></strong></p>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/04-kafka-topics-before-debezium.png" alt="Kafka UI" loading="lazy"></p>
-<ol start="5">
-<li>Make sure everything is up and running</li>
-</ol>
-<pre><code class="language-shell">$ docker ps
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/09-docker-ps.png" alt="Docker Compose Up" loading="lazy"></p>
-<p>IMPORTANT: If any components do not show &quot;Up&quot; under the <code>Status</code> column (e.g., they say &quot;Exit&quot;) then you must rectify this before continuing.<br>
-As a first solution, try re-issuing the <code>docker-compose up -d</code> command.</p>
-<h4 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h4>
-<ol start="6">
-<li>Launch the KSQL CLI in another terminal window.</li>
-</ol>
-<pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/10-ksql-db-initial.png" alt="ksqlDB CLI" loading="lazy"></p>
-<h2 id="tear-down-the-stack">Tear down the stack</h2>
-<pre><code class="language-shell">$ docker stop kafka-ui
-
-$ docker rm kafka-ui
-</code></pre>
-<pre><code class="language-shell">$ docker compose-down
-</code></pre>
-<pre><code class="language-shell">Stopping ksqldb-cli       ... done
-Stopping ksqldb-server    ... done
-Stopping kafka-connect-01 ... done
-Stopping debezium         ... done
-Stopping kafka            ... done
-Stopping zookeeper        ... done
-Removing ksqldb-cli         ... done
-Removing ksqldb-server      ... done
-Removing kafka-connect-01   ... done
-Removing cp-schema-registry ... done
-Removing debezium           ... done
-Removing kafka              ... done
-Removing zookeeper          ... done
-Removing network streaming_etl_pipeline_mysql_webproxy
-</code></pre>
-<p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
 <!--kg-card-end: markdown-->
             </div>
           </div>
