@@ -1,1 +1,856 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="favicon/apple-touch-icon.png"><link rel="manifest" href="manifest.json"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>UI for Apache Kafka</title><script type="text/javascript">window.basePath=""</script><script defer="defer" src="static/js/main.48ceefc7.js"></script><link href="static/css/main.bf915e18.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Anantha Raju C</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="assets/css/app.css%3Fv=fd07e1efff.css" as="style" />
+    <link rel="preload" href="assets/js/manifest.js%3Fv=fd07e1efff" as="script" />
+    <link rel="preload" href="assets/js/vendor/content-api.min.js%3Fv=fd07e1efff" as="script" />
+    <link rel="preload" href="assets/js/vendor.js%3Fv=fd07e1efff" as="script" />
+    <link rel="preload" href="assets/js/app.js%3Fv=fd07e1efff" as="script" />
+
+      <link rel="preload" href="assets/css/home.css%3Fv=fd07e1efff.css" as="style" />
+  <link rel="preload" href="assets/css/listing.css%3Fv=fd07e1efff.css" as="style" />
+  <link rel="preload" href="assets/js/home.js%3Fv=fd07e1efff" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=fd07e1efff") format('woff2'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=fd07e1efff") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=fd07e1efff") format('woff2'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=fd07e1efff") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=fd07e1efff") format('woff2'),
+            url("assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=fd07e1efff") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=fd07e1efff");
+        src: url("assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=fd07e1efff") format('embedded-opentype'),
+        url("assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=fd07e1efff") format('truetype'),
+        url("assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=fd07e1efff") format('woff'),
+        url("assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=fd07e1efff") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css%3Fv=fd07e1efff.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="assets/css/home.css%3Fv=fd07e1efff.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="assets/css/listing.css%3Fv=fd07e1efff.css" media="screen" />
+
+
+    
+
+    <meta name="description" content="Thoughts, stories and ideas." />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="next" href="page/2/index.html" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anantha Raju C" />
+    <meta property="og:description" content="Thoughts, stories and ideas." />
+    <meta property="og:url" content="http://localhost:2368/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anantha Raju C" />
+    <meta name="twitter:description" content="Thoughts, stories and ideas." />
+    <meta name="twitter:url" content="http://localhost:2368/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1478432780021-b8d273730d8c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE5fHx0ZWNobm9sb2d5fGVufDB8fHx8MTY2NjQxNDk5MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1334" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "url": "http://localhost:2368/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 2000,
+        "height": 1334
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    },
+    "description": "Thoughts, stories and ideas."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.8" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="rss/index.html" />
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="bd0f620eace0890d104223392c" data-styles="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <script defer src="public/cards.min.js%3Fv=fd07e1efff"></script>
+    <link rel="stylesheet" type="text/css" href="public/cards.min.css%3Fv=fd07e1efff.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88776389-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88776389-2');
+</script>
+<style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="home-template">
+    
+
+
+
+
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="about/index.html">About</a>
+    </li>
+    <li class="nav-author">
+      <a href="author/anantha/index.html">Author</a>
+    </li>
+    <li class="nav-tags">
+      <a href="tags/index.html">Tags</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="change-data-capture-cdc-mysql/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Change Data Capture (CDC) - MySQL">
+                                      Change Data Capture (CDC) - MySQL
+                                    </h3>
+                                    <span class="m-recent-article__date">5 days ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="useful-websites-for-development/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1648652678596-d3873bd0c157?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE0fHxoZWxwZXJ8ZW58MHx8fHwxNjY2NDE5ODg0&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Useful Websites for Development">
+                                      Useful Websites for Development
+                                    </h3>
+                                    <span class="m-recent-article__date">7 days ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="change-data-capture-cdc-with-p/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Change Data Capture (CDC) with PostgreSQL and Debezium">
+                                      Change Data Capture (CDC) with PostgreSQL and Debezium
+                                    </h3>
+                                    <span class="m-recent-article__date">2 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="postgresql/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1634735717992-9359fb05f916?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHNpbG98ZW58MHx8fHwxNjYwNDY2NDgw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="PostgreSQL, pgAdmin on Docker">
+                                      PostgreSQL, pgAdmin on Docker
+                                    </h3>
+                                    <span class="m-recent-article__date">2 months ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="tag/aws/index.html">AWS</a>
+                            </li>
+                            <li>
+                              <a href="tag/apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="tag/change-data-capture/index.html">Change Data Capture</a>
+                            </li>
+                            <li>
+                              <a href="tag/database/index.html">Database</a>
+                            </li>
+                            <li>
+                              <a href="tag/docker/index.html">Docker</a>
+                            </li>
+                            <li>
+                              <a href="tag/git/index.html">Git</a>
+                            </li>
+                            <li>
+                              <a href="tag/github/index.html">GitHub</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+  
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture ">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDExfHxwZWFjZXxlbnwwfHx8fDE2NjY0MTg3MTY&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+  <div class="m-hero__content" data-aos="fade-down">
+    <h1 class="m-hero-title bigger">Anantha Raju C</h1>
+      <p class="m-hero-description bigger">Thoughts, stories and ideas.</p>
+  </div>
+  </section>
+  <div class="l-content">
+    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+      <div class="l-grid centered">
+            <div class="m-featured-slider swiper js-featured-slider">
+              <div class="m-featured-slider__list swiper-wrapper">
+                  <div class="m-featured-slider__list__item swiper-slide">
+                    <article class="m-featured-article ">
+                      <div class="m-featured-article__picture">
+                          <style>
+                            #featured-bg-62f8cb7e618689890e6a486e {
+                              background-image: url(https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000);
+                            }
+                            @media(max-width: 768px) {
+                              #featured-bg-62f8cb7e618689890e6a486e {
+                                background-image: url(https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600);
+                              }
+                            }
+                          </style>
+                          <div id="featured-bg-62f8cb7e618689890e6a486e"></div>
+                      </div>
+                      <div class="m-featured-article__meta">
+                        <a href="author/anantha/index.html" class="m-featured-article__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+                            <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+                        </a>
+                          <a href="tag/change-data-capture/index.html" class="m-featured-article__tag">Change Data Capture</a>
+                      </div>
+                      <div class="m-featured-article__ribbon">
+                        <span class="icon-star"></span>
+                        <span>Featured</span>
+                      </div>
+                      <a href="change-data-capture-cdc-with-p/index.html" class="m-featured-article__content">
+                        <h2 class="m-featured-article__title js-featured-article-title" title="Change Data Capture (CDC) with PostgreSQL and Debezium">
+                          Change Data Capture (CDC) with PostgreSQL and Debezium
+                        </h2>
+                        <div class="m-featured-article__timestamp">
+                          <span>2 months ago</span>
+                          <span>&bull;</span>
+                          <span>2 min read</span>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="m-featured-slider__list__item swiper-slide">
+                    <article class="m-featured-article ">
+                      <div class="m-featured-article__picture">
+                          <style>
+                            #featured-bg-62c19ec49c8dfa1ea467609c {
+                              background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000);
+                            }
+                            @media(max-width: 768px) {
+                              #featured-bg-62c19ec49c8dfa1ea467609c {
+                                background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxtdXNpY3xlbnwwfHx8fDE2NTY4NTYyNzA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600);
+                              }
+                            }
+                          </style>
+                          <div id="featured-bg-62c19ec49c8dfa1ea467609c"></div>
+                      </div>
+                      <div class="m-featured-article__meta">
+                        <a href="author/anantha/index.html" class="m-featured-article__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+                            <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+                        </a>
+                          <a href="tag/personal/index.html" class="m-featured-article__tag">Personal</a>
+                      </div>
+                      <div class="m-featured-article__ribbon">
+                        <span class="icon-star"></span>
+                        <span>Featured</span>
+                      </div>
+                      <a href="music/index.html" class="m-featured-article__content">
+                        <h2 class="m-featured-article__title js-featured-article-title" title="Music">
+                          Music
+                        </h2>
+                        <div class="m-featured-article__timestamp">
+                          <span>4 months ago</span>
+                          <span>&bull;</span>
+                          <span>1 min read</span>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="m-featured-slider__list__item swiper-slide">
+                    <article class="m-featured-article ">
+                      <div class="m-featured-article__picture">
+                          <style>
+                            #featured-bg-622497f38958222048d83f14 {
+                              background-image: url(https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000);
+                            }
+                            @media(max-width: 768px) {
+                              #featured-bg-622497f38958222048d83f14 {
+                                background-image: url(https://images.unsplash.com/photo-1535905557558-afc4877a26fc?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJvb2tzfGVufDB8fHx8MTY1OTc2OTE0MA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600);
+                              }
+                            }
+                          </style>
+                          <div id="featured-bg-622497f38958222048d83f14"></div>
+                      </div>
+                      <div class="m-featured-article__meta">
+                        <a href="author/anantha/index.html" class="m-featured-article__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+                            <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+                        </a>
+                          <a href="tag/personal/index.html" class="m-featured-article__tag">Personal</a>
+                      </div>
+                      <div class="m-featured-article__ribbon">
+                        <span class="icon-star"></span>
+                        <span>Featured</span>
+                      </div>
+                      <a href="bookshelf/index.html" class="m-featured-article__content">
+                        <h2 class="m-featured-article__title js-featured-article-title" title="Bookshelf">
+                          Bookshelf
+                        </h2>
+                        <div class="m-featured-article__timestamp">
+                          <span>2 years ago</span>
+                          <span>&bull;</span>
+                          <span>2 min read</span>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="m-featured-slider__list__item swiper-slide">
+                    <article class="m-featured-article ">
+                      <div class="m-featured-article__picture">
+                          <style>
+                            #featured-bg-6224b10f9d43e5144f970417 {
+                              background-image: url(https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGxpc3R8ZW58MHx8fHwxNjQ2NTc4MDY4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000);
+                            }
+                            @media(max-width: 768px) {
+                              #featured-bg-6224b10f9d43e5144f970417 {
+                                background-image: url(https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGxpc3R8ZW58MHx8fHwxNjQ2NTc4MDY4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600);
+                              }
+                            }
+                          </style>
+                          <div id="featured-bg-6224b10f9d43e5144f970417"></div>
+                      </div>
+                      <div class="m-featured-article__meta">
+                        <a href="author/anantha/index.html" class="m-featured-article__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+                            <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+                        </a>
+                          <a href="tag/softwares/index.html" class="m-featured-article__tag">Softwares</a>
+                      </div>
+                      <div class="m-featured-article__ribbon">
+                        <span class="icon-star"></span>
+                        <span>Featured</span>
+                      </div>
+                      <a href="useful-softwares-services-tools-plugins-list/index.html" class="m-featured-article__content">
+                        <h2 class="m-featured-article__title js-featured-article-title" title="Useful Software&#x27;s, Services, Tools, Plugins list">
+                          Useful Software&#x27;s, Services, Tools, Plugins list
+                        </h2>
+                        <div class="m-featured-article__timestamp">
+                          <span>2 years ago</span>
+                          <span>&bull;</span>
+                          <span>4 min read</span>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+                  <div class="m-featured-slider__list__item swiper-slide">
+                    <article class="m-featured-article ">
+                      <div class="m-featured-article__picture">
+                          <style>
+                            #featured-bg-6224ae7f9d43e5144f9703e9 {
+                              background-image: url(https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000);
+                            }
+                            @media(max-width: 768px) {
+                              #featured-bg-6224ae7f9d43e5144f9703e9 {
+                                background-image: url(https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwb2RjYXN0fGVufDB8fHx8MTY0NjU3MTQ2NQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600);
+                              }
+                            }
+                          </style>
+                          <div id="featured-bg-6224ae7f9d43e5144f9703e9"></div>
+                      </div>
+                      <div class="m-featured-article__meta">
+                        <a href="author/anantha/index.html" class="m-featured-article__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+                            <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+                        </a>
+                          <a href="tag/personal/index.html" class="m-featured-article__tag">Personal</a>
+                      </div>
+                      <div class="m-featured-article__ribbon">
+                        <span class="icon-star"></span>
+                        <span>Featured</span>
+                      </div>
+                      <a href="podcasts/index.html" class="m-featured-article__content">
+                        <h2 class="m-featured-article__title js-featured-article-title" title="Podcasts">
+                          Podcasts
+                        </h2>
+                        <div class="m-featured-article__timestamp">
+                          <span>4 years ago</span>
+                          <span>&bull;</span>
+                          <span>5 min read</span>
+                        </div>
+                      </a>
+                    </article>
+                  </div>
+              </div>
+              <button class="m-icon-button in-featured-articles swiper-button-prev js-featured-slider-button" aria-label="Previous">
+                <span class="icon-arrow-left" aria-hidden="true"></span>
+              </button>
+              <button class="m-icon-button in-featured-articles swiper-button-next js-featured-slider-button" aria-label="Next">
+                <span class="icon-arrow-right" aria-hidden="true"></span>
+              </button>
+            </div>
+        
+  <article class="m-article-card  post">
+    <div class="m-article-card__picture">
+      <a href="change-data-capture-cdc-mysql/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info no-tag">
+      <a href="change-data-capture-cdc-mysql/index.html" class="m-article-card__info-link" aria-label="Change Data Capture (CDC) - MySQL">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Change Data Capture (CDC) - MySQL">
+            Change Data Capture (CDC) - MySQL
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>5 days ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-softwares">
+    <div class="m-article-card__picture">
+      <a href="useful-websites-for-development/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1648652678596-d3873bd0c157?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE0fHxoZWxwZXJ8ZW58MHx8fHwxNjY2NDE5ODg0&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/softwares/index.html" class="m-article-card__tag">Softwares</a>
+      <a href="useful-websites-for-development/index.html" class="m-article-card__info-link" aria-label="Useful Websites for Development">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Useful Websites for Development">
+            Useful Websites for Development
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>7 days ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-change-data-capture tag-docker tag-postgresql featured">
+    <div class="m-article-card__picture">
+      <a href="change-data-capture-cdc-with-p/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+        <a href="change-data-capture-cdc-with-p/index.html" class="m-article-card__featured js-tooltip" data-tippy-content="Featured" aria-label="Featured">
+          <span class="icon-star" aria-hidden="true"></span>
+        </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/change-data-capture/index.html" class="m-article-card__tag">Change Data Capture</a>
+      <a href="change-data-capture-cdc-with-p/index.html" class="m-article-card__info-link" aria-label="Change Data Capture (CDC) with PostgreSQL and Debezium">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Change Data Capture (CDC) with PostgreSQL and Debezium">
+            Change Data Capture (CDC) with PostgreSQL and Debezium
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 months ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-postgresql">
+    <div class="m-article-card__picture">
+      <a href="postgresql/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1634735717992-9359fb05f916?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHNpbG98ZW58MHx8fHwxNjYwNDY2NDgw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/postgresql/index.html" class="m-article-card__tag">PostgreSQL</a>
+      <a href="postgresql/index.html" class="m-article-card__info-link" aria-label="PostgreSQL, pgAdmin on Docker">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="PostgreSQL, pgAdmin on Docker">
+            PostgreSQL, pgAdmin on Docker
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 months ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-spring-boot">
+    <div class="m-article-card__picture">
+      <a href="spring-boot-with-rabbitmq/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1628557960762-0d884fd31ea0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fHF1ZXVlfGVufDB8fHx8MTY1OTI3NDc1OQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/spring-boot/index.html" class="m-article-card__tag">Spring Boot</a>
+      <a href="spring-boot-with-rabbitmq/index.html" class="m-article-card__info-link" aria-label="Spring Boot with RabbitMQ (Producer)">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Spring Boot with RabbitMQ (Producer)">
+            Spring Boot with RabbitMQ (Producer)
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 months ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-windows">
+    <div class="m-article-card__picture">
+      <a href="windows-command-prompt/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fHdpbmRvd3N8ZW58MHx8fHwxNjU5ODcyNzI1&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/windows/index.html" class="m-article-card__tag">Windows</a>
+      <a href="windows-command-prompt/index.html" class="m-article-card__info-link" aria-label="Windows Command Prompt Commands">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Windows Command Prompt Commands">
+            Windows Command Prompt Commands
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-linux">
+    <div class="m-article-card__picture">
+      <a href="grep/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1495344517868-8ebaf0a2044a?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNlYXJjaHxlbnwwfHx8fDE2NTk4NzIzNTQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/linux/index.html" class="m-article-card__tag">Linux</a>
+      <a href="grep/index.html" class="m-article-card__info-link" aria-label="grep - command-line utility for searching plain-text data sets for lines that match a regular expression.">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="grep - command-line utility for searching plain-text data sets for lines that match a regular expression.">
+            grep - command-line utility for searching plain-text data sets for lines that match a regular expression.
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-softwares">
+    <div class="m-article-card__picture">
+      <a href="developer-softwares/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1581166397057-235af2b3c6dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDd8fHRvb2xzfGVufDB8fHx8MTY1OTc5MDUwNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/softwares/index.html" class="m-article-card__tag">Softwares</a>
+      <a href="developer-softwares/index.html" class="m-article-card__info-link" aria-label="Useful Software&#x27;s for Development">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Useful Software&#x27;s for Development">
+            Useful Software&#x27;s for Development
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-softwares">
+    <div class="m-article-card__picture">
+      <a href="useful-web-browser-plugins/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1613178594694-5f96ae9b5bb0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fHVzZWZ1bHxlbnwwfHx8fDE2NTk3ODk2MjM&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/softwares/index.html" class="m-article-card__tag">Softwares</a>
+      <a href="useful-web-browser-plugins/index.html" class="m-article-card__info-link" aria-label="Useful Web Browser Plugins">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Useful Web Browser Plugins">
+            Useful Web Browser Plugins
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-linux">
+    <div class="m-article-card__picture">
+      <a href="linux-commands/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1532200547849-1e9352d72b98?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxjb21tYW5kfGVufDB8fHx8MTY1OTc2MDYyNQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="tag/linux/index.html" class="m-article-card__tag">Linux</a>
+      <a href="linux-commands/index.html" class="m-article-card__info-link" aria-label="Commonly Used Linux Commands">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Commonly Used Linux Commands">
+            Commonly Used Linux Commands
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 months ago</span>
+          <span>&bull;</span>
+          <span>3 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+      </div>
+    </div>
+    
+<div class="l-wrapper">
+  <nav class="m-pagination" aria-label="Pagination">
+    <span class="m-pagination__text">Page 1 of 5</span>
+      <a href="page/2/index.html" class="m-icon-button filled in-pagination-right" aria-label="Older posts">
+        <span class="icon-arrow-right"></span>
+      </a>
+  </nav>
+</div>
+
+  </div>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="assets/html/javascript.html%3Fv=fd07e1efff.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="assets/js/manifest.js%3Fv=fd07e1efff"></script>
+    <script defer src="assets/js/vendor/content-api.min.js%3Fv=fd07e1efff"></script>
+    <script defer src="assets/js/vendor.js%3Fv=fd07e1efff"></script>
+    <script defer src="assets/js/app.js%3Fv=fd07e1efff"></script>
+
+      <script defer src="assets/js/home.js%3Fv=fd07e1efff"></script>
+
+
+    
+  </body>
+</html>
