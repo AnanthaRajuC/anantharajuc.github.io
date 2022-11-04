@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Mon, 31 Oct 2022 03:54:06 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Learning & Reference Resources]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="various">Various</h3>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Fri, 04 Nov 2022 14:20:43 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[ksqlDB]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>The database purpose-built for stream processing applications.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> (ksqldb-server, ksqldb-cli)</li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
+<h4 id="setup">Setup</h4>
+<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
+<pre><code> ksqldb-server:
+    image: confluentinc/ksqldb-server:latest
+    container_name: ksqldb-server
+    hostname: ksqldb-server
+    depends_on: [kafka]
+    ports:
+      - 8088:8088
+    networks:
+      - webproxy
+    environment:
+      KSQL_LISTENERS: http://0.</code></pre>]]></description><link>http://localhost:2368/ksqldb/</link><guid isPermaLink="false">636517ee2ba729dae794e42f</guid><category><![CDATA[Apache Kafka]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Fri, 04 Nov 2022 14:10:01 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<img src="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="ksqlDB"><p>The database purpose-built for stream processing applications.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> (ksqldb-server, ksqldb-cli)</li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
+<h4 id="setup">Setup</h4>
+<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
+<pre><code> ksqldb-server:
+    image: confluentinc/ksqldb-server:latest
+    container_name: ksqldb-server
+    hostname: ksqldb-server
+    depends_on: [kafka]
+    ports:
+      - 8088:8088
+    networks:
+      - webproxy
+    environment:
+      KSQL_LISTENERS: http://0.0.0.0:8088
+      KSQL_BOOTSTRAP_SERVERS: kafka:9092
+      KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: &quot;true&quot;
+      KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: &quot;true&quot;
+      KSQL_KSQL_CONNECT_URL: http://kafka-connect-01:8084
+      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8081
+
+  ksqldb-cli:
+    image: confluentinc/ksqldb-cli:latest
+    container_name: ksqldb-cli
+    networks:
+      - webproxy
+    depends_on: [kafka, ksqldb-server]
+    entrypoint: /bin/sh
+    tty: true
+    environment:
+      KSQL_KSQL_CONNECT_URL: http://kafka-connect-01:8084
+</code></pre>
+<p>Pull all required docker images</p>
+<pre><code class="language-shell">$ docker-compose pull
+</code></pre>
+<p>Start up the environment</p>
+<p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
+<pre><code class="language-shell">$ docker-compose up
+</code></pre>
+<pre><code class="language-shell">Creating ksqldb-server      ... done
+Creating ksqldb-cli         ... done
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
+<pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2022/11/10-ksql-db-initial.png" alt="ksqlDB" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="check-topics-streams-and-tables">Check topics, streams and tables</h3>
+<pre><code class="language-sql">show topics;
+</code></pre>
+<pre><code class="language-sql">show streams;
+</code></pre>
+<pre><code class="language-sql">show tables;
+</code></pre>
+<h3 id="streams">Streams</h3>
+<ul>
+<li>Declare Streams</li>
+</ul>
+<pre><code class="language-sql">SET &apos;auto.offset.reset&apos; = &apos;earliest&apos;;
+</code></pre>
+<pre><code class="language-sql">CREATE STREAM PERSON_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<pre><code class="language-sql">CREATE STREAM ADDRESS_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<ul>
+<li>Queries</li>
+</ul>
+<pre><code class="language-sql">DESCRIBE PERSON_STREAM;
+</code></pre>
+<pre><code class="language-sql">select * from PERSON_STREAM;
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM PERSON_STREAM EMIT CHANGES LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|ID                       |UUID                     |CREATED_DATE_TIME        |LAST_MODIFIED_DATE_TIME  |NAME                     |USERNAME                 |ADDRESS_ID               |
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|1                        |ce8d2120-1f93-11ed-8647-0|2022-08-19T13:22:00.000  |2022-08-19T13:22:00.000  |d14                      |dbz14                    |1                        |
+|                         |c9a3cfadc50              |                         |                         |                         |                         |                         |
+Limit Reached
+Query terminated
+</code></pre>
+<ul>
+<li>stream-stream join</li>
+</ul>
+<pre><code class="language-sql">CREATE STREAM PERSON_ADDRESS_ENRICHED_STREAM WITH (FORMAT=&apos;JSON&apos;, KAFKA_TOPIC=&apos;person_address_enriched&apos;, PARTITIONS=1, REPLICAS=1) AS 
+SELECT
+  P.ID P_ID,
+  A.ID A_ID,
+  P.NAME NAME,
+  A.CITY CITY
+FROM PERSON_STREAM P
+LEFT OUTER JOIN ADDRESS_STREAM A WITHIN 1 HOURS GRACE PERIOD 30 MINUTES ON ((A.ID = P.ADDRESS_ID))
+EMIT CHANGES;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="tables">Tables</h3>
+<ul>
+<li>Declare Tables</li>
+</ul>
+<pre><code class="language-sql">CREATE TABLE PERSON (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE ADDRESS (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM ADDRESS EMIT CHANGES LIMIT 1;
+</code></pre>
+<ul>
+<li>Table Joins</li>
+</ul>
+<pre><code class="language-sql">SELECT 
+	P.NAME,
+	A.CITY
+FROM PERSON P
+LEFT JOIN ADDRESS A on A.id = P.address_id
+EMIT CHANGES 
+LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">SELECT 
+  P.NAME, 
+  A.CITY
+FROM PERSON P
+INNER JOIN ADDRESS A
+ON A.id = P.address_id
+EMIT CHANGES
+LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE PERSON_ADDRESS_ENRICHED (P_ID bigint,A_ID bigint,NAME VARCHAR,CITY VARCHAR) WITH (KAFKA_TOPIC=&apos;person_address_enriched&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<ul>
+<li>Others</li>
+</ul>
+<pre><code class="language-sql">DROP TABLE IF EXISTS PERSON;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="tear-down-the-stack">Tear down the stack</h4>
+<pre><code class="language-shell">$ docker compose-down
+</code></pre>
+<pre><code class="language-shell">Stopping ksqldb-cli       ... done
+Stopping ksqldb-server    ... done
+Removing ksqldb-cli         ... done
+Removing ksqldb-server      ... done
+</code></pre>
+<p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Learning & Reference Resources]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="various">Various</h3>
 <p><strong><a href="https://semver.org/" target="_blank">Semantic Versioning 2.0.0</a></strong><br>
 <em>Versioning Guidelines.</em></p>
 <p><strong><a href="http://java-design-patterns.com/" target="_blank">Java Design Patterns</a></strong><br>
@@ -884,44 +1051,4 @@ sample_db=# exit
 <li>useradd and usermod &#x2013; Add new user or change existing users data</li>
 <li>passwd &#x2013; Create or update passwords for existing users</li>
 </ol>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Linux (Ubuntu) Utilities]]></title><description><![CDATA[<!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/Dr-Noob/cpufetch">cpufetch</a> - Simple yet fancy CPU architecture fetching tool</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/cpufetch.gif" alt="cpufetch" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/dylanaraps/neofetch">neofetch</a> - A command-line system information tool written in bash 3.2+</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/neofetch.png" alt="neofetch" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/aristocratos/bpytop">bpytop</a> - Linux/OSX/FreeBSD resource monitor</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/bpytop.png" alt="bpytop" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/sharkdp/bat">bat</a> - A cat(1) clone with syntax highlighting and Git integration.</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/bat.png" alt="bat" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://www.speedtest.net/apps/cli">Speedtest CLI</a> - Internet connection measurement for developers</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/speedtest.png" alt="speedtest" loading="lazy"></p>
-<!--kg-card-end: markdown-->]]></description><link>http://localhost:2368/linux-utilities/</link><guid isPermaLink="false">62ede3f7f110cc283c908dd7</guid><category><![CDATA[Linux]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 06 Aug 2022 04:21:17 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/Dr-Noob/cpufetch">cpufetch</a> - Simple yet fancy CPU architecture fetching tool</li>
-</ul>
-<img src="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=2000" alt="Linux (Ubuntu) Utilities"><p><img src="http://localhost:2368/content/images/2022/08/cpufetch.gif" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/dylanaraps/neofetch">neofetch</a> - A command-line system information tool written in bash 3.2+</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/neofetch.png" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/aristocratos/bpytop">bpytop</a> - Linux/OSX/FreeBSD resource monitor</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/bpytop.png" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://github.com/sharkdp/bat">bat</a> - A cat(1) clone with syntax highlighting and Git integration.</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/bat.png" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
-<li><a href="https://www.speedtest.net/apps/cli">Speedtest CLI</a> - Internet connection measurement for developers</li>
-</ul>
-<p><img src="http://localhost:2368/content/images/2022/08/speedtest.png" alt="Linux (Ubuntu) Utilities" loading="lazy"></p>
 <!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
