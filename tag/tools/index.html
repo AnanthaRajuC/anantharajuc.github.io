@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Tools - Anantha Raju C</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../../assets/css/app.css%3Fv=6f6f6b6388.css" as="style" />
+    <link rel="preload" href="../../assets/js/manifest.js%3Fv=6f6f6b6388" as="script" />
+    <link rel="preload" href="../../assets/js/vendor/content-api.min.js%3Fv=6f6f6b6388" as="script" />
+    <link rel="preload" href="../../assets/js/vendor.js%3Fv=6f6f6b6388" as="script" />
+    <link rel="preload" href="../../assets/js/app.js%3Fv=6f6f6b6388" as="script" />
+
+      <link rel="preload" href="../../assets/css/listing.css%3Fv=6f6f6b6388.css" as="style" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=6f6f6b6388") format('woff2'),
+            url("../../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=6f6f6b6388") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=6f6f6b6388") format('woff2'),
+            url("../../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=6f6f6b6388") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=6f6f6b6388") format('woff2'),
+            url("../../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=6f6f6b6388") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=6f6f6b6388");
+        src: url("../../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=6f6f6b6388") format('embedded-opentype'),
+        url("../../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=6f6f6b6388") format('truetype'),
+        url("../../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=6f6f6b6388") format('woff'),
+        url("../../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=6f6f6b6388") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../../assets/css/app.css%3Fv=6f6f6b6388.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../../assets/css/listing.css%3Fv=6f6f6b6388.css" media="screen" />
+
+
+    
+
+    <meta name="description" content="Chrome Browser Extensions, GNOME Shell Extensions, IntelliJ IDEA Plugins, Software&#x27;s etc.," />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tools - Anantha Raju C" />
+    <meta property="og:description" content="Chrome Browser Extensions, GNOME Shell Extensions, IntelliJ IDEA Plugins, Software&#x27;s etc.," />
+    <meta property="og:url" content="http://localhost:2368/tag/tools/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tools - Anantha Raju C" />
+    <meta name="twitter:description" content="Chrome Browser Extensions, GNOME Shell Extensions, IntelliJ IDEA Plugins, Software&#x27;s etc.," />
+    <meta name="twitter:url" content="http://localhost:2368/tag/tools/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1463" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Series",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "url": "http://localhost:2368/tag/tools/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 2000,
+        "height": 1463
+    },
+    "name": "Tools",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    },
+    "description": "Chrome Browser Extensions, GNOME Shell Extensions, IntelliJ IDEA Plugins, Software&#x27;s etc.,"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.8" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../../rss/index.html" />
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="bd0f620eace0890d104223392c" data-styles="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <script defer src="../../public/cards.min.js%3Fv=6f6f6b6388"></script>
+    <link rel="stylesheet" type="text/css" href="../../public/cards.min.css%3Fv=6f6f6b6388.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88776389-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88776389-2');
+</script>
+<style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="tag-template tag-tools">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="../../about/index.html">About</a>
+    </li>
+    <li class="nav-author">
+      <a href="../../author/anantha/index.html">Author</a>
+    </li>
+    <li class="nav-tags">
+      <a href="../../tags/index.html">Tags</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="../../ubuntu-post-install-script/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1605791767308-46f38113f418?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFmdGVyfGVufDB8fHx8MTY3MDA1MjA0Mw&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Ubuntu Post Install Script">
+                                      Ubuntu Post Install Script
+                                    </h3>
+                                    <span class="m-recent-article__date">2 minutes ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../../gnome-shell-extensions/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1584974414562-cc750a809485?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxFeHRlbnNpb258ZW58MHx8fHwxNjY5NTI0NjAx&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="GNOME Shell Extensions">
+                                      GNOME Shell Extensions
+                                    </h3>
+                                    <span class="m-recent-article__date">6 days ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../../apache-superset/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1593806967876-4ad6cd0c5759?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fG1hbmRhbGF8ZW58MHx8fHwxNjY4MzQ4Nzk1&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Apache Superset">
+                                      Apache Superset
+                                    </h3>
+                                    <span class="m-recent-article__date">20 days ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../../intellij-idea-plugins/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1621717731333-7f7fa49fc86d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwbHVnaW5zfGVufDB8fHx8MTY2NzYxOTM0NA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="IntelliJ IDEA Plugins">
+                                      IntelliJ IDEA Plugins
+                                    </h3>
+                                    <span class="m-recent-article__date">a month ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../aws/index.html">AWS</a>
+                            </li>
+                            <li>
+                              <a href="../apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="../apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../change-data-capture/index.html">Change Data Capture</a>
+                            </li>
+                            <li>
+                              <a href="../data/index.html">Data</a>
+                            </li>
+                            <li>
+                              <a href="../database/index.html">Database</a>
+                            </li>
+                            <li>
+                              <a href="../docker/index.html">Docker</a>
+                            </li>
+                            <li>
+                              <a href="../git/index.html">Git</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture ">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1576115081906-b15927fb959e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQ2fHx0b29sc3xlbnwwfHx8fDE2NzAwNTEyNjA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+    <div class="m-hero__content" data-aos="fade-down">
+      <h1 class="m-hero-title bigger">Tools</h1>
+        <p class="m-hero-description">
+          Chrome Browser Extensions, GNOME Shell Extensions, IntelliJ IDEA Plugins, Software&#x27;s etc.,
+        </p>
+      <div class="m-hero__meta">
+        <ul class="m-hero-stats">
+          <li>
+            7 posts with this tag
+          </li>
+        </ul>
+      </div>
+    </div>
+    </section>
+  
+  <div class="l-content">
+    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+      <div class="l-grid centered">
+        
+  <article class="m-article-card  post tag-tools tag-linux tag-lists">
+    <div class="m-article-card__picture">
+      <a href="../../gnome-shell-extensions/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1584974414562-cc750a809485?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxFeHRlbnNpb258ZW58MHx8fHwxNjY5NTI0NjAx&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="index.html" class="m-article-card__tag">Tools</a>
+      <a href="../../gnome-shell-extensions/index.html" class="m-article-card__info-link" aria-label="GNOME Shell Extensions">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="GNOME Shell Extensions">
+            GNOME Shell Extensions
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>6 days ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-tools tag-lists">
+    <div class="m-article-card__picture">
+      <a href="../../intellij-idea-plugins/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1621717731333-7f7fa49fc86d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwbHVnaW5zfGVufDB8fHx8MTY2NzYxOTM0NA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="index.html" class="m-article-card__tag">Tools</a>
+      <a href="../../intellij-idea-plugins/index.html" class="m-article-card__info-link" aria-label="IntelliJ IDEA Plugins">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="IntelliJ IDEA Plugins">
+            IntelliJ IDEA Plugins
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>a month ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-lists tag-tools">
+    <div class="m-article-card__picture">
+      <a href="../../api-tools/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1659153196652-7bc7de1ff602?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxBUEl8ZW58MHx8fHwxNjY3MTMyNjky&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../lists/index.html" class="m-article-card__tag">Lists</a>
+      <a href="../../api-tools/index.html" class="m-article-card__info-link" aria-label="API Tools">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="API Tools">
+            API Tools
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>a month ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-tools tag-lists">
+    <div class="m-article-card__picture">
+      <a href="../../useful-websites-for-development/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1648652678596-d3873bd0c157?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE0fHxoZWxwZXJ8ZW58MHx8fHwxNjY2NDE5ODg0&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="index.html" class="m-article-card__tag">Tools</a>
+      <a href="../../useful-websites-for-development/index.html" class="m-article-card__info-link" aria-label="Useful Websites/Services for Software Development">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Useful Websites/Services for Software Development">
+            Useful Websites/Services for Software Development
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>a month ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-tools tag-lists">
+    <div class="m-article-card__picture">
+      <a href="../../useful-web-browser-plugins/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1613178594694-5f96ae9b5bb0?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fHVzZWZ1bHxlbnwwfHx8fDE2NTk3ODk2MjM&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="index.html" class="m-article-card__tag">Tools</a>
+      <a href="../../useful-web-browser-plugins/index.html" class="m-article-card__info-link" aria-label="Useful Web Browser Plugins">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Useful Web Browser Plugins">
+            Useful Web Browser Plugins
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>4 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-linux tag-tools">
+    <div class="m-article-card__picture">
+      <a href="../../linux-utilities/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1599153066743-08810dc8a419?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHVidW50dXxlbnwwfHx8fDE2NTk3NTc1OTg&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../linux/index.html" class="m-article-card__tag">Linux</a>
+      <a href="../../linux-utilities/index.html" class="m-article-card__info-link" aria-label="Linux (Ubuntu) Utilities">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Linux (Ubuntu) Utilities">
+            Linux (Ubuntu) Utilities
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>4 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+  <article class="m-article-card  post tag-lists tag-github tag-tools">
+    <div class="m-article-card__picture">
+      <a href="../../essential-github-bots/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1495055154266-57bbdeada43e?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDV8fGJvdHN8ZW58MHx8fHwxNjQ2OTY0Nzc4&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../lists/index.html" class="m-article-card__tag">Lists</a>
+      <a href="../../essential-github-bots/index.html" class="m-article-card__info-link" aria-label="Essential GitHub Bots">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Essential GitHub Bots">
+            Essential GitHub Bots
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>a year ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+      </div>
+    </div>
+    
+<div class="l-wrapper">
+  <nav class="m-pagination" aria-label="Pagination">
+    <span class="m-pagination__text">Page 1 of 1</span>
+  </nav>
+</div>
+
+  </div>
+</main>
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2022</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../../assets/html/javascript.html%3Fv=6f6f6b6388.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../../assets/js/manifest.js%3Fv=6f6f6b6388"></script>
+    <script defer src="../../assets/js/vendor/content-api.min.js%3Fv=6f6f6b6388"></script>
+    <script defer src="../../assets/js/vendor.js%3Fv=6f6f6b6388"></script>
+    <script defer src="../../assets/js/app.js%3Fv=6f6f6b6388"></script>
+
+    
+
+    
+  </body>
+</html>
