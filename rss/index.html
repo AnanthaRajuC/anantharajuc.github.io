@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Mon, 25 Dec 2023 07:35:15 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Mon, 25 Dec 2023 13:20:13 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[dbt-core, ClickHouse and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="dbt-core, ClickHouse and Dagster"><p>This post briefly captures the usage of dbt-core and it&apos;s integration with Dagster.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p><a href="https://github.com/dbt-labs/dbt-core"><strong>dbt Core</strong></a> is an open source command line tool that enables data teams to transform data using analytics engineering best practices.</p>
+<p><a href="https://github.com/dagster-io/dagster"><strong>dagster</strong></a> is an orchestration platform for the development, production, and observation of data assets.</p>
+<p><a href="https://clickhouse.com/"><strong>ClickHouse</strong></a> is an open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://github.com/dagster-io/dagster">Dagster</a></li>
+<li><a href="https://github.com/dbt-labs/dbt-core">dbt-core</a></li>
+<li><a href="https://clickhouse.com/">ClickHouse</a></li>
+<li><a href="https://www.python.org/">Python</a></li>
+<li><a href="https://github.com/ClickHouse/dbt-clickhouse">dbt ClickHouse plugin</a></li>
+<li><a href="https://docs.dagster.io/integrations/dbt/using-dbt-with-dagster">dagster-dbt</a></li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="installations">Installations</h4>
+<p>Install the dbt ClickHouse plugin.</p>
+<pre><code class="language-shell">pip install dbt-clickhouse
+</code></pre>
+<p>Install the <strong>dagster-dbt</strong> library.</p>
+<pre><code class="language-shell">pip install dagster-dbt dagster-webserver
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="getting-started">Getting Started</h4>
+<p>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.</p>
+<p>Initialize the dbt project.</p>
+<pre><code class="language-shell">dbt init dbt_data_practitioner 
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt1-1.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<pre><code class="language-shell">cd dbt_data_practitioner
+</code></pre>
+<pre><code class="language-shell">touch profiles.yml
+</code></pre>
+<pre><code class="language-yml">dbt_data_practitioner:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: sakila_db
+      host: localhost
+      port: 8123
+      user: default
+      password: root
+      secure: False
+</code></pre>
+<pre><code class="language-shell">dbt debug
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt2.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dbt-docs">dbt docs</h4>
+<pre><code class="language-shell">dbt docs generate
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt3.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<pre><code class="language-shell">dbt docs serve
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt4.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/2525.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="models">models</h4>
+<pre><code class="language-shell">cd models  
+mkdir sakila_db  
+cd sakila_db  
+</code></pre>
+<pre><code class="language-shell">touch actor_film_actor_join.sql
+touch point_of_interest_1.sql 
+</code></pre>
+<script src="https://gist.github.com/AnanthaRajuC/4346dd1c6df08418b43778056bfb5e10.js"></script>
+<p>Delete the <strong>examples</strong> folder present inside the models folder.</p>
+<pre><code class="language-shell">cd ..
+cd .. 
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dbt-build">dbt build</h4>
+<pre><code class="language-shell">dbt build
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt5.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p>The tables and views defined are now generated in ClickHouse DB.</p>
+<pre><code class="language-shell">dbt docs generate
+dbt docs serve
+</code></pre>
+<p>Lineage Graph and other details.</p>
+<p><img src="http://localhost:2368/content/images/2023/12/25252.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dagster">Dagster</h4>
+<pre><code class="language-shell">cd dbt_data_practitioner
+dagster-dbt project scaffold --project-name dagster_data_practitioner
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dag1.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<pre><code class="language-shell">cd dagster_data_practitioner
+DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/dag2-1.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p>To access from your browser, navigate to: <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dagster-ui">Dagster UI</h4>
+<p><img src="http://localhost:2368/content/images/2023/12/dag3.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p>Click on the black &quot;<strong>Materialize all</strong>&quot; button.</p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag4.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag5.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
+<p><a href="https://github.com/AnanthaRajuC/DataPractitioner">DataPractitioner</a> is the sample project i&apos;ve used to illustrate the usage of the aforementioned tools.</p>
+<p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/DataPractitioner/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/DataPractitioner/pulls">PR</a> on GitHub!</em></p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
 <p>MySQL is an open-source relational database management system.</p>
 <p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
@@ -46,7 +141,7 @@ grant replication slave, replication client, reload, select on *.* to clickhouse
 flush privileges;
 
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-mysql-dat-setup">Sample MySQL Dat Setup</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-mysql-data-setup">Sample MySQL Data Setup</h4>
 <p>Create a table.</p>
 <pre><code class="language-shell">CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -696,39 +791,4 @@ Removing ksqldb-server      ... done
 <em>Free load testing service that allows you to stress test your web-apps &amp; apis with thousands of concurrent connections.</em></p>
 <p><strong><a href="https://reqres.in/" target="_blank">REQ RES</a></strong><br>
 <em>A hosted REST-API ready to respond to your AJAX requests.</em></p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Software Development - Read & Publish]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="entertainment">Entertainment</h3>
-<p><strong><a href="http://www.commitstrip.com/en/?" target="_blank">CommitStrip</a></strong><br>
-<em>A daily strip recounting funny anecdotes of life as a coder mixed up with a dash of topical tech news.</em></p>
-<p><strong><a href="http://donthitsave.com/" target="_blank">Don&apos;t Hit Save</a></strong><br>
-<em>A comic about tech, the workplace, and indie game development.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="presentation">Presentation</h3>
-<p><strong><a href="https://speakerdeck.com/" target="_blank">Speaker Deck</a></strong><br>
-<em>Speaker Deck is the best way to share presentations online.</em></p>]]></description><link>http://localhost:2368/software-development-read-publish/</link><guid isPermaLink="false">635e68b68ea41c669967e077</guid><category><![CDATA[Lists]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 30 Oct 2022 12:14:04 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5ld3N8ZW58MHx8fHwxNjY3MDczMDQ0&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h3 id="entertainment">Entertainment</h3>
-<img src="https://images.unsplash.com/photo-1546422904-90eab23c3d7e?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fG5ld3N8ZW58MHx8fHwxNjY3MDczMDQ0&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Software Development - Read &amp; Publish"><p><strong><a href="http://www.commitstrip.com/en/?" target="_blank">CommitStrip</a></strong><br>
-<em>A daily strip recounting funny anecdotes of life as a coder mixed up with a dash of topical tech news.</em></p>
-<p><strong><a href="http://donthitsave.com/" target="_blank">Don&apos;t Hit Save</a></strong><br>
-<em>A comic about tech, the workplace, and indie game development.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="presentation">Presentation</h3>
-<p><strong><a href="https://speakerdeck.com/" target="_blank">Speaker Deck</a></strong><br>
-<em>Speaker Deck is the best way to share presentations online.</em></p>
-<p><strong><a href="http://www.slideshare.net/" target="_blank">SlideShare</a></strong><br>
-<em>Discover, Share, and Present presentations and infographics with the world&apos;s largest professional content sharing community.</em></p>
-<p><strong><a href="https://marp.app/" target="_blank">Marp</a></strong><br>
-<em>Markdown presentation writer with Markdown.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="community">Community</h3>
-<p><strong><a href="https://dzone.com/" target="_blank">DZone</a></strong><br>
-<em>Community and publisher of technical content for software professionals.</em></p>
-<p><strong><a href="https://www.codeproject.com/" target="_blank">CodeProject</a></strong><br>
-<em>Free source code and tutorials for Windows developers. Programming help for Visual Basic.Net and other .Net family languages.</em></p>
-<p><strong><a href="http://www.programmableweb.com/" target="_blank">ProgrammableWeb</a></strong><br>
-<em>The leading source of news &amp; information about APIs, chronicling the evolution of the global API economy &amp; providing the web&apos;s most relied-on API Directory.</em></p>
-<p><strong><a href="http://stackshare.io/" target="_blank">stackshare</a></strong><br>
-<em>Discover and discuss the best software tools and services.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="documentation">Documentation</h3>
-<p><strong><a href="https://readthedocs.org/" target="_blank">Read the Docs</a></strong><br>
-<em>Read the Docs hosts documentation, making it fully searchable and easy to find. You can import your docs using any major version control system.</em></p>
-<p><strong><a href="https://docusaurus.io/" target="_blank">Docusaurus</a></strong><br>
-<em>Easy to Maintain Open Source Documentation Websites.</em></p>
-<p><strong><a href="https://asciinema.org/" target="_blank">asciinema</a></strong><br>
-<em>Free and open source solution for recording terminal sessions and sharing them on the web.</em></p>
-<!--kg-card-end: markdown--><p></p>]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
