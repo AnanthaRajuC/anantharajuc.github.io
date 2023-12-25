@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=8ce93c3502.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=8ce93c3502" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=8ce93c3502" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=8ce93c3502" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=8ce93c3502" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=8ce93c3502.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=8ce93c3502" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=8ce93c3502") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=8ce93c3502") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=8ce93c3502") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=8ce93c3502") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=8ce93c3502") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=8ce93c3502") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=8ce93c3502");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=8ce93c3502") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=8ce93c3502") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=8ce93c3502") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=8ce93c3502") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=8ce93c3502.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=8ce93c3502.css" media="screen" />
+
+
+    
+
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" />
+    <meta property="og:description" content="This post briefly documents the process of replicating database in MySQL into ClickHouse.
+
+
+MySQL is an open-source relational database management system.
+
+
+ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.
+
+
+Minimum Software Requirements
+
+
+ * MySQL database.
+ * ClickHouse database.
+
+
+mysql.cnf" />
+    <meta property="og:url" content="http://localhost:2368/replicate-mysql-database-in-clickhouse-using/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2023-12-25T07:34:10.000Z" />
+    <meta property="article:modified_time" content="2023-12-25T07:34:10.000Z" />
+    <meta property="article:tag" content="Data" />
+    <meta property="article:tag" content="MySQL" />
+    <meta property="article:tag" content="ClickHouse" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" />
+    <meta name="twitter:description" content="This post briefly documents the process of replicating database in MySQL into ClickHouse.
+
+
+MySQL is an open-source relational database management system.
+
+
+ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.
+
+
+Minimum Software Requirements
+
+
+ * MySQL database.
+ * ClickHouse database.
+
+
+mysql.cnf" />
+    <meta name="twitter:url" content="http://localhost:2368/replicate-mysql-database-in-clickhouse-using/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Data, MySQL, ClickHouse" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine",
+    "url": "http://localhost:2368/replicate-mysql-database-in-clickhouse-using/",
+    "datePublished": "2023-12-25T07:34:10.000Z",
+    "dateModified": "2023-12-25T07:34:10.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "Data, MySQL, ClickHouse",
+    "description": "This post briefly documents the process of replicating database in MySQL into ClickHouse.\n\n\nMySQL is an open-source relational database management system.\n\n\nClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.\n\n\nMinimum Software Requirements\n\n\n * MySQL database.\n * ClickHouse database.\n\n\nmysql.cnf MySQL server configuration\n\n\nThe following are mandatory MySQL server configuration which must be s",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.8" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="bd0f620eace0890d104223392c" data-styles="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <script defer src="../public/cards.min.js%3Fv=8ce93c3502"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=8ce93c3502.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88776389-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88776389-2');
+</script>
+<style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template tag-data tag-mysql tag-clickhouse">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="../about/index.html">About</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+    <li class="nav-tags">
+      <a href="../tags/index.html">Tags</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine">
+                                      Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine
+                                    </h3>
+                                    <span class="m-recent-article__date">a minute ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../clickhouse/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1542274368-443d694d79aa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fHZlcnRpY2FsJTIwcGlwZXN8ZW58MHx8fHwxNjk5ODgxODgzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="ClickHouse">
+                                      ClickHouse
+                                    </h3>
+                                    <span class="m-recent-article__date">a month ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../airbyte/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1619249722898-492c571615fe?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDl8fGNvbm5lY3RvcnN8ZW58MHx8fHwxNjk5ODgwMDc0fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Airbyte">
+                                      Airbyte
+                                    </h3>
+                                    <span class="m-recent-article__date">a month ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../data/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1698571090063-0758fa13fa86?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8YWxsfDIyfHx8fHx8Mnx8MTY5OTc4ODc3Nnw&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Data">
+                                      Data
+                                    </h3>
+                                    <span class="m-recent-article__date">a month ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/aws/index.html">AWS</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../tag/change-data-capture/index.html">Change Data Capture</a>
+                            </li>
+                            <li>
+                              <a href="../tag/clickhouse/index.html">ClickHouse</a>
+                            </li>
+                            <li>
+                              <a href="../tag/data/index.html">Data</a>
+                            </li>
+                            <li>
+                              <a href="../tag/database/index.html">Database</a>
+                            </li>
+                            <li>
+                              <a href="../tag/docker/index.html">Docker</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@vladshap?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Vlad Shapochnikov</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine</h1>
+              <div class="m-heading__meta">
+                  <a href="../tag/data/index.html" class="m-heading__meta__tag">Data</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Dec 25, 2023</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/replicate-mysql-database-in-clickhouse-using/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Replicate%20MySQL%20database%20in%20ClickHouse%20using%20%5Bexperimental%5D%20MaterializedMySQL%20Database%20Engine&url=http://localhost:2368/replicate-mysql-database-in-clickhouse-using/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!--kg-card-begin: markdown--><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
+<p>MySQL is an open-source relational database management system.</p>
+<p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
+<li><a href="https://clickhouse.com/">ClickHouse</a> database.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysqlcnf-mysql-server-configuration">mysql.cnf MySQL server configuration</h4>
+<p>The following are mandatory MySQL server configuration which must be set.</p>
+<p>Stop MySQL service.</p>
+<pre><code class="language-shell">systemctl status mysql
+systemctl stop mysql.service
+</code></pre>
+<p>Update the configuration.</p>
+<pre><code class="language-shell">sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+</code></pre>
+<pre><code class="language-txt">[mysqld]
+server-id                     = 223344
+log_bin                       = mysql-bin
+expire_logs_days              = 1
+binlog_format                 = row
+binlog_row_image              = FULL
+default_authentication_plugin = mysql_native_password
+gtid_mode                     = on
+enforce_gtid_consistency      = on
+</code></pre>
+<p>ClickHouse reads binlog and performs DDL and DML queries.</p>
+<p>Start MySQL service.</p>
+<pre><code class="language-shell">systemctl start mysql.service
+</code></pre>
+<p><em>Reference:</em> <a href="https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql">https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql</a></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysql-user-creation-for-replication">MySQL user creation for replication</h4>
+<pre><code class="language-shell">create user clickhouse_replication@'localhost' identified with mysql_native_password by 'ChRep$316';
+
+grant replication slave, replication client, reload, select on *.* to clickhouse_replication@'localhost';
+
+flush privileges;
+
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-mysql-dat-setup">Sample MySQL Dat Setup</h4>
+<p>Create a table.</p>
+<pre><code class="language-shell">CREATE TABLE `user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_sb8bbouer5wak8vyiiy4pf2bx` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+</code></pre>
+<p>Insert sample data.</p>
+<pre><code class="language-shell">INSERT INTO `user`(`username`,`email`)VALUES('John Doe','johndoe@example.com');
+
+INSERT INTO `user`(`username`,`email`)VALUES('Jane Doe','janedoe@example.com');
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="clickhouse-server-configuration">CLickHouse server configuration</h4>
+<pre><code class="language-shell">sudo systemctl status clickhouse-server
+sudo systemctl stop clickhouse-server
+</code></pre>
+<pre><code class="language-shell">sudo nano /etc/clickhouse-server/users.xml
+</code></pre>
+<p>Add/Update the following value.</p>
+<pre><code class="language-xml">    &lt;profiles&gt;
+        &lt;default&gt;                           &lt;allow_experimental_database_materialized_mysql&gt;1&lt;/allow_experimental_database_materialized_mysql&gt;
+        &lt;/default&gt;
+    &lt;/profiles&gt;
+</code></pre>
+<pre><code class="language-shell">sudo systemctl start clickhouse-server
+</code></pre>
+<p>Login to ClickHouse server using terminal or any GUI tool and verify that the changes have been saved.</p>
+<pre><code class="language-shell">clickhouse-client --password   
+</code></pre>
+<pre><code class="language-sql">SELECT
+    name,
+    value,
+    changed,
+    description
+FROM system.settings
+WHERE name = 'allow_experimental_database_materialized_mysql'
+</code></pre>
+<p><img src="../content/images/2023/12/carbon.png" alt="carbon" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="activating-the-replication-in-clickhouse">Activating the replication in ClickHouse</h4>
+<pre><code class="language-shell">CREATE DATABASE mysqlCH
+ENGINE = MaterializeMySQL('127.0.0.1', 'ch', 'clickhouse_replication', 'ChRep$316')
+SETTINGS allows_query_when_mysql_lost = 1, max_wait_time_when_mysql_unavailable = 10000, materialized_mysql_tables_list = 'user'
+</code></pre>
+<p><img src="../content/images/2023/12/carbon--1-.png" alt="carbon--1-" loading="lazy"></p>
+<p>Now, check if the database and the table with data got replicated or not.</p>
+<pre><code class="language-sql">select * from mysqlCH.user;
+</code></pre>
+<p><img src="../content/images/2023/12/carbon--2-.png" alt="carbon--2-" loading="lazy"></p>
+<p><strong>INSERT</strong> additional rows in MySQL table and check the replication status.</p>
+<pre><code class="language-sql">INSERT INTO `user`(`username`,`email`)VALUES('Alice','alice@example.com');
+INSERT INTO `user`(`username`,`email`)VALUES('Bob','alice@example.com');
+</code></pre>
+<p><img src="../content/images/2023/12/carbon--3-.png" alt="carbon--3-" loading="lazy"></p>
+<p><strong>UPDATE</strong> Alice's email in MySQL user table.</p>
+<pre><code class="language-sql">UPDATE `ch`.`user` SET `email` = 'alice@domain.com' WHERE `username` = 'Alice';
+</code></pre>
+<p><img src="../content/images/2023/12/carbon--4-.png" alt="carbon--4-" loading="lazy"></p>
+<p><strong>DELETE</strong> Bob in MySQL user table.</p>
+<pre><code class="language-sql">DELETE FROM `ch`.`user` WHERE (`id` = '4');
+</code></pre>
+<p><img src="../content/images/2023/12/carbon--5-.png" alt="carbon--5-" loading="lazy"></p>
+<!--kg-card-end: markdown-->
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/data/index.html" title="Data">Data</a>
+                      </li>
+                      <li>
+                        <a href="../tag/mysql/index.html" title="MySQL">MySQL</a>
+                      </li>
+                      <li>
+                        <a href="../tag/clickhouse/index.html" title="ClickHouse">ClickHouse</a>
+                      </li>
+                  </ul>
+                </section>
+            </div>
+          </div>
+        </div>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+            <section class="m-recommended">
+              <div class="l-wrapper in-recommended">
+                <h3 class="m-section-title in-recommended">Recommended for you</h3>
+                <div class="m-recommended-articles">
+                  <div class="m-recommended-slider swiper js-recommended-slider">
+                    <div class="swiper-wrapper">
+                      
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-data tag-python">
+    <div class="m-article-card__picture">
+      <a href="../exploratory-data-analysis-with/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1682687220509-61b8a906ca19?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wxfDF8YWxsfDF8fHx8fHwyfHwxNjk5MDI1Njg5fA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/data/index.html" class="m-article-card__tag">Data</a>
+      <a href="../exploratory-data-analysis-with/index.html" class="m-article-card__info-link" aria-label="Exploratory data analysis with sweetviz">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Exploratory data analysis with sweetviz">
+            Exploratory data analysis with sweetviz
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 months ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-mysql tag-spring-boot">
+    <div class="m-article-card__picture">
+      <a href="../mysql-aes/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1633265486064-086b219458ec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/mysql/index.html" class="m-article-card__tag">MySQL</a>
+      <a href="../mysql-aes/index.html" class="m-article-card__info-link" aria-label="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program">
+            MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 years ago</span>
+          <span>&bull;</span>
+          <span>1 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-docker tag-mysql">
+    <div class="m-article-card__picture">
+      <a href="../mysql-docker-image/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1510380290144-9e40d2438af5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE3fHxib3glMjBvbiUyMHRhYmxlfGVufDB8fHx8MTY0NjcwNjkwMQ&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/docker/index.html" class="m-article-card__tag">Docker</a>
+      <a href="../mysql-docker-image/index.html" class="m-article-card__info-link" aria-label="MySQL Docker Image">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="MySQL Docker Image">
+            MySQL Docker Image
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 years ago</span>
+          <span>&bull;</span>
+          <span>4 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+                    </div>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-prev" aria-label="Previous">
+                      <span class="icon-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-next" aria-label="Next">
+                      <span class="icon-arrow-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2023</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=8ce93c3502.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=8ce93c3502"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=8ce93c3502"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=8ce93c3502"></script>
+    <script defer src="../assets/js/app.js%3Fv=8ce93c3502"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=8ce93c3502"></script>
+
+
+    
+  </body>
+</html>

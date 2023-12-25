@@ -1,4 +1,118 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 24 Dec 2023 10:49:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[ClickHouse]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of using ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Mon, 25 Dec 2023 07:35:15 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
+<p>MySQL is an open-source relational database management system.</p>
+<p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
+<li><a href="https://clickhouse.com/">ClickHouse</a> database.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysqlcnf-mysql-server-configuration">mysql.cnf</h4>]]></description><link>http://localhost:2368/replicate-mysql-database-in-clickhouse-using/</link><guid isPermaLink="false">65891ce27bbe782450364a54</guid><category><![CDATA[Data]]></category><category><![CDATA[MySQL]]></category><category><![CDATA[ClickHouse]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 07:34:10 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine"><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
+<p>MySQL is an open-source relational database management system.</p>
+<p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
+<li><a href="https://clickhouse.com/">ClickHouse</a> database.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysqlcnf-mysql-server-configuration">mysql.cnf MySQL server configuration</h4>
+<p>The following are mandatory MySQL server configuration which must be set.</p>
+<p>Stop MySQL service.</p>
+<pre><code class="language-shell">systemctl status mysql
+systemctl stop mysql.service
+</code></pre>
+<p>Update the configuration.</p>
+<pre><code class="language-shell">sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+</code></pre>
+<pre><code class="language-txt">[mysqld]
+server-id                     = 223344
+log_bin                       = mysql-bin
+expire_logs_days              = 1
+binlog_format                 = row
+binlog_row_image              = FULL
+default_authentication_plugin = mysql_native_password
+gtid_mode                     = on
+enforce_gtid_consistency      = on
+</code></pre>
+<p>ClickHouse reads binlog and performs DDL and DML queries.</p>
+<p>Start MySQL service.</p>
+<pre><code class="language-shell">systemctl start mysql.service
+</code></pre>
+<p><em>Reference:</em> <a href="https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql">https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql</a></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysql-user-creation-for-replication">MySQL user creation for replication</h4>
+<pre><code class="language-shell">create user clickhouse_replication@&apos;localhost&apos; identified with mysql_native_password by &apos;ChRep$316&apos;;
+
+grant replication slave, replication client, reload, select on *.* to clickhouse_replication@&apos;localhost&apos;;
+
+flush privileges;
+
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-mysql-dat-setup">Sample MySQL Dat Setup</h4>
+<p>Create a table.</p>
+<pre><code class="language-shell">CREATE TABLE `user` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `last_modified_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_sb8bbouer5wak8vyiiy4pf2bx` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+</code></pre>
+<p>Insert sample data.</p>
+<pre><code class="language-shell">INSERT INTO `user`(`username`,`email`)VALUES(&apos;John Doe&apos;,&apos;johndoe@example.com&apos;);
+
+INSERT INTO `user`(`username`,`email`)VALUES(&apos;Jane Doe&apos;,&apos;janedoe@example.com&apos;);
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="clickhouse-server-configuration">CLickHouse server configuration</h4>
+<pre><code class="language-shell">sudo systemctl status clickhouse-server
+sudo systemctl stop clickhouse-server
+</code></pre>
+<pre><code class="language-shell">sudo nano /etc/clickhouse-server/users.xml
+</code></pre>
+<p>Add/Update the following value.</p>
+<pre><code class="language-xml">    &lt;profiles&gt;
+        &lt;default&gt;                           &lt;allow_experimental_database_materialized_mysql&gt;1&lt;/allow_experimental_database_materialized_mysql&gt;
+        &lt;/default&gt;
+    &lt;/profiles&gt;
+</code></pre>
+<pre><code class="language-shell">sudo systemctl start clickhouse-server
+</code></pre>
+<p>Login to ClickHouse server using terminal or any GUI tool and verify that the changes have been saved.</p>
+<pre><code class="language-shell">clickhouse-client --password   
+</code></pre>
+<pre><code class="language-sql">SELECT
+    name,
+    value,
+    changed,
+    description
+FROM system.settings
+WHERE name = &apos;allow_experimental_database_materialized_mysql&apos;
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="activating-the-replication-in-clickhouse">Activating the replication in ClickHouse</h4>
+<pre><code class="language-shell">CREATE DATABASE mysqlCH
+ENGINE = MaterializeMySQL(&apos;127.0.0.1&apos;, &apos;ch&apos;, &apos;clickhouse_replication&apos;, &apos;ChRep$316&apos;)
+SETTINGS allows_query_when_mysql_lost = 1, max_wait_time_when_mysql_unavailable = 10000, materialized_mysql_tables_list = &apos;user&apos;
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--1-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p>Now, check if the database and the table with data got replicated or not.</p>
+<pre><code class="language-sql">select * from mysqlCH.user;
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--2-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><strong>INSERT</strong> additional rows in MySQL table and check the replication status.</p>
+<pre><code class="language-sql">INSERT INTO `user`(`username`,`email`)VALUES(&apos;Alice&apos;,&apos;alice@example.com&apos;);
+INSERT INTO `user`(`username`,`email`)VALUES(&apos;Bob&apos;,&apos;alice@example.com&apos;);
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--3-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><strong>UPDATE</strong> Alice&apos;s email in MySQL user table.</p>
+<pre><code class="language-sql">UPDATE `ch`.`user` SET `email` = &apos;alice@domain.com&apos; WHERE `username` = &apos;Alice&apos;;
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--4-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><strong>DELETE</strong> Bob in MySQL user table.</p>
+<pre><code class="language-sql">DELETE FROM `ch`.`user` WHERE (`id` = &apos;4&apos;);
+</code></pre>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--5-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[ClickHouse]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of using ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
@@ -617,332 +731,4 @@ Removing ksqldb-server      ... done
 <em>Easy to Maintain Open Source Documentation Websites.</em></p>
 <p><strong><a href="https://asciinema.org/" target="_blank">asciinema</a></strong><br>
 <em>Free and open source solution for recording terminal sessions and sharing them on the web.</em></p>
-<!--kg-card-end: markdown--><p></p>]]></content:encoded></item><item><title><![CDATA[Change Data Capture (CDC) - MySQL]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of Change Data Capture (CDC) with MySQL.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.docker.com/">Docker</a></li></ul>]]></description><link>http://localhost:2368/change-data-capture-cdc-mysql/</link><guid isPermaLink="false">63567eb675328d2010ba2658</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 24 Oct 2022 12:08:33 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Change Data Capture (CDC) - MySQL"><p>This post briefly documents the process of Change Data Capture (CDC) with MySQL.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.docker.com/">Docker</a> (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)</li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
-<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
-<li><a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> or on any other MySQL database client/console.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysqlcnf-mysql-database-configuration">mysql.cnf MySQL database configuration</h3>
-<pre><code class="language-txt">[mysqld]
-server-id         = 223344
-log_bin           = mysql-bin
-expire_logs_days  = 1
-binlog_format     = row
-</code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project-setup">Sample Project Setup</h4>
-<ol>
-<li>Clone the repository</li>
-</ol>
-<pre><code class="language-shell">$ git clone https://github.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL.git
-$ cd Streaming_ETL_pipeline_MySQL
-</code></pre>
-<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
-<ol start="2">
-<li>Pull all required docker images</li>
-</ol>
-<pre><code class="language-shell">$ docker compose -f docker-compose.yaml pull
-</code></pre>
-<ol start="3">
-<li>Start up the environment</li>
-</ol>
-<p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
-<pre><code class="language-shell">$ docker compose -f docker-compose.yaml up
-</code></pre>
-<pre><code class="language-shell">Creating network &quot;streaming_etl_pipeline_mysql_webproxy&quot; with driver &quot;bridge&quot;
-Creating zookeeper ... done
-Creating kafka     ... done
-Creating debezium           ... done
-Creating cp-schema-registry ... done
-Creating kafka-connect-01   ... done
-Creating ksqldb-server      ... done
-Creating ksqldb-cli         ... done
-</code></pre>
-<h4 id="accessing-kafka-topics-via-kakfka-ui">Accessing Kafka Topics via Kakfka-UI</h4>
-<ol start="4">
-<li>Optionally, start <a href="https://github.com/provectus/kafka-ui">Kafka UI</a>, an open-source web UI for Apache Kafka Management</li>
-</ol>
-<pre><code class="language-shell">$ docker run --name=kafka-ui --network=streaming_etl_pipeline_mysql_webproxy -p 8080:8080 -e KAFKA_CLUSTERS_0_NAME=local -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 -d provectuslabs/kafka-ui:latest
-</code></pre>
-<p>URL to access Kakfka-UI console: <strong><a href="http://localhost:8080">http://localhost:8080</a></strong></p>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/04-kafka-topics-before-debezium.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<ol start="5">
-<li>Make sure everything is up and running</li>
-</ol>
-<pre><code class="language-shell">$ docker ps
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/09-docker-ps.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>IMPORTANT: If any components do not show &quot;Up&quot; under the <code>Status</code> column (e.g., they say &quot;Exit&quot;) then you must rectify this before continuing.<br>
-As a first solution, try re-issuing the <code>docker-compose up -d</code> command.</p>
-<h4 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h4>
-<ol start="6">
-<li>Launch the KSQL CLI in another terminal window.</li>
-</ol>
-<pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/10-ksql-db-initial.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<h2 id="tear-down-the-stack">Tear down the stack</h2>
-<pre><code class="language-shell">$ docker stop kafka-ui
-
-$ docker rm kafka-ui
-</code></pre>
-<pre><code class="language-shell">$ docker compose -f docker-compose.yaml down
-</code></pre>
-<pre><code class="language-shell">Stopping ksqldb-cli       ... done
-Stopping ksqldb-server    ... done
-Stopping kafka-connect-01 ... done
-Stopping debezium         ... done
-Stopping kafka            ... done
-Stopping zookeeper        ... done
-Removing ksqldb-cli         ... done
-Removing ksqldb-server      ... done
-Removing kafka-connect-01   ... done
-Removing cp-schema-registry ... done
-Removing debezium           ... done
-Removing kafka              ... done
-Removing zookeeper          ... done
-Removing network streaming_etl_pipeline_mysql_webproxy
-</code></pre>
-<p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="initial-mysql-preparation">Initial MySQL preparation</h2>
-<p>Initial Data setup.</p>
-<details open="open">
-	<ul>
-		<li><a href="#mysql">MySQL</a></li>
-	</ul>
-</details>
-<h3 id="mysql">MySQL</h3>
-<ul>
-<li>Declare schema, user and permissions.</li>
-</ul>
-<pre><code class="language-sql">-- create schema
-CREATE SCHEMA streaming_etl_db;
-
--- use schema
-USE streaming_etl_db;
-
--- Create user 
-CREATE USER &apos;debezium&apos; IDENTIFIED WITH mysql_native_password BY &apos;Debezium@123#&apos;;
-
--- Grant privileges to user
-GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO &apos;debezium&apos;;
-
--- Reload the grant tables in the mysql database enabling the changes to take effect without reloading or restarting mysql service
-FLUSH PRIVILEGES;
-</code></pre>
-<ul>
-<li>Declare Tables</li>
-</ul>
-<pre><code class="language-sql">CREATE TABLE `geo` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
-  `uuid` VARCHAR(50) DEFAULT (uuid()),
-  `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
-  `last_modified_date_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
-  `lat` varchar(255) DEFAULT NULL,
-  `lng` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT=&apos;Application Log.&apos;;
-</code></pre>
-<pre><code class="language-sql">CREATE TABLE `address` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
-  `uuid` VARCHAR(50) DEFAULT (uuid()),
-  `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
-  `last_modified_date_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
-  `city` varchar(255) DEFAULT NULL,
-  `zipcode` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
-  `geo_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_geo_id` (`geo_id`),
-  CONSTRAINT `FKC_geo_id` FOREIGN KEY (`geo_id`) REFERENCES `geo` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-</code></pre>
-<pre><code class="language-sql">CREATE TABLE `person` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
-  `uuid` VARCHAR(50) DEFAULT (uuid()),
-  `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
-  `last_modified_date_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `gender` varchar(255) DEFAULT NULL,
-  `registration` datetime DEFAULT NULL,
-  `age` int DEFAULT NULL,
-  `address_id` bigint(20) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_address_id` (`address_id`),
-  CONSTRAINT `FKC_address_id` FOREIGN KEY (`address_id`) REFERENCES `address` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-</code></pre>
-<ul>
-<li>Sample Data</li>
-</ul>
-<pre><code class="language-sql">INSERT INTO `streaming_etl_db`.`geo`(`lat`,`lng`)VALUES(&apos;la14&apos;,&apos;lo14&apos;);
-INSERT INTO `streaming_etl_db`.`address`(`city`,`zipcode`,`state`,`geo_id`)VALUES(&apos;c14&apos;,&apos;z14&apos;,&apos;s14&apos;,1);
-INSERT INTO `streaming_etl_db`.`person`(`first_name`,`last_name`,`email`,`gender`,`registration`,`age`,`address_id`)VALUES(&apos;fn14&apos;,&apos;ln14&apos;,&apos;example@domain.com&apos;,&apos;M&apos;,now(),34,1);
-</code></pre>
-<ul>
-<li>Select Statement</li>
-</ul>
-<pre><code class="language-sql">SELECT * 
-FROM streaming_etl_db.person p
-LEFT JOIN streaming_etl_db.address a on a.id = p.address_id
-LEFT JOIN streaming_etl_db.geo g on g.id = a.geo_id;
-</code></pre>
-<pre><code class="language-sql">SELECT * FROM streaming_etl_db.person;
-SELECT * FROM streaming_etl_db.address;
-</code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="debezium-registration">Debezium Registration</h3>
-<pre><code class="language-shell">curl -i -X POST -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; 127.0.0.1:8083/connectors/ -d &apos;{
-  &quot;name&quot;: &quot;streaming_ETL_pipeline_MySQL-connector&quot;,
-  &quot;config&quot;: {
-    &quot;connector.class&quot;: &quot;io.debezium.connector.mysql.MySqlConnector&quot;,
-    &quot;database.hostname&quot;: &quot;172.17.0.1&quot;,
-    &quot;database.port&quot;: &quot;3306&quot;,
-    &quot;database.user&quot;: &quot;debezium&quot;,
-    &quot;database.password&quot;: &quot;Debezium@123#&quot;,
-    &quot;database.server.name&quot;: &quot;mysql&quot;,
-	  &quot;database.server.id&quot;: &quot;223344&quot;,
-    &quot;database.include.list&quot;: &quot;streaming_etl_db&quot;,
-	  &quot;database.allowPublicKeyRetrieval&quot;: true,
-	  &quot;database.history.kafka.bootstrap.servers&quot;: &quot;kafka:9092&quot;,
-	  &quot;database.history.kafka.topic&quot;: &quot;mysql-streaming_etl_db-person&quot;,
-	  &quot;time.precision.mode&quot;: &quot;connect&quot;,
-    &quot;include.schema.changes&quot;: false,
-    &quot;transforms&quot;: &quot;unwrap,dropTopicPrefix&quot;,
-	  &quot;transforms.unwrap.type&quot;: &quot;io.debezium.transforms.ExtractNewRecordState&quot;,
-	  &quot;transforms.dropTopicPrefix.type&quot;:&quot;org.apache.kafka.connect.transforms.RegexRouter&quot;,
-	  &quot;transforms.dropTopicPrefix.regex&quot;:&quot;asgard.demo.(.*)&quot;,
-	  &quot;transforms.dropTopicPrefix.replacement&quot;:&quot;$1&quot;,
-	  &quot;key.converter&quot;:&quot;org.apache.kafka.connect.json.JsonConverter&quot;,
-	  &quot;key.converter.schemas.enable&quot;: &quot;false&quot;,
-	  &quot;value.converter&quot;:&quot;org.apache.kafka.connect.json.JsonConverter&quot;,
-	  &quot;value.converter.schemas.enable&quot;: &quot;false&quot;
-  }
-}&apos;
-</code></pre>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/01-debezium-registration.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>After Debezium registration.</p>
-<p><a href="http://localhost:8083/connectors?expand=info&amp;expand=status">http://localhost:8083/connectors?expand=info&amp;expand=status</a></p>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/02-debezium-connectors.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p><a href="http://localhost:8083/connectors/streaming_ETL_pipeline_MySQL-connector/status">http://localhost:8083/connectors/streaming_ETL_pipeline_MySQL-connector/status</a></p>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/03-debezium-connector-status.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>Kafka UI</p>
-<p><a href="http://localhost:8080">http://localhost:8080</a></p>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/05-kafka-topics-after-registration.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>Person Topic</p>
-<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/06-kafka-topic-message.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
-<h3 id="ksqldb">ksqlDB</h3>
-<ul>
-<li>Check topics, streams and tables</li>
-</ul>
-<pre><code class="language-sql">show topics;
-show streams;
-show tables;
-</code></pre>
-<h3 id="streams">Streams</h3>
-<ul>
-<li>Declare Streams</li>
-</ul>
-<pre><code class="language-sql">SET &apos;auto.offset.reset&apos; = &apos;earliest&apos;;
-</code></pre>
-<pre><code class="language-sql">CREATE STREAM PERSON_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-
-CREATE STREAM ADDRESS_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-</code></pre>
-<pre><code class="language-sql">SELECT * FROM PERSON_STREAM EMIT CHANGES LIMIT 1;
-
-+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
-|ID                       |UUID                     |CREATED_DATE_TIME        |LAST_MODIFIED_DATE_TIME  |NAME                     |USERNAME                 |ADDRESS_ID               |
-+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
-|1                        |ce8d2120-1f93-11ed-8647-0|2022-08-19T13:22:00.000  |2022-08-19T13:22:00.000  |d14                      |dbz14                    |1                        |
-|                         |c9a3cfadc50              |                         |                         |                         |                         |                         |
-Limit Reached
-Query terminated
-</code></pre>
-<pre><code class="language-sql">DESCRIBE PERSON_STREAM;
-select * from PERSON_STREAM;
-</code></pre>
-<ul>
-<li>stream-stream join</li>
-</ul>
-<pre><code class="language-sql">CREATE STREAM PERSON_ADDRESS_ENRICHED_STREAM WITH (FORMAT=&apos;JSON&apos;, KAFKA_TOPIC=&apos;person_address_enriched&apos;, PARTITIONS=1, REPLICAS=1) AS 
-SELECT
-  P.ID P_ID,
-  A.ID A_ID,
-  P.NAME NAME,
-  A.CITY CITY
-FROM PERSON_STREAM P
-LEFT OUTER JOIN ADDRESS_STREAM A WITHIN 1 HOURS GRACE PERIOD 30 MINUTES ON ((A.ID = P.ADDRESS_ID))
-EMIT CHANGES;
-</code></pre>
-<h3 id="kafka-sink-mysql-db">Kafka Sink MySQL DB</h3>
-<pre><code class="language-sql">CREATE SINK CONNECTOR SINK_PERSON_ADDRESS_ENRICHED_STREAM WITH (
-    &apos;connector.class&apos;                     = &apos;io.confluent.connect.jdbc.JdbcSinkConnector&apos;,
-    &apos;connection.url&apos;                      = &apos;jdbc:mysql://172.17.0.1:3306/&apos;,
-    &apos;connection.user&apos;                     = &apos;debezium&apos;,
-    &apos;connection.password&apos;                 = &apos;Debezium@123#&apos;,
-    &apos;topics&apos;                              = &apos;PERSON_ADDRESS_ENRICHED_STREAM&apos;,
-    &apos;key.converter&apos;						            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,	
-	  &apos;key.converter.schemas.enable&apos;		    = &apos;false&apos;,
-	  &apos;value.converter&apos;					            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,
-	  &apos;value.converter.schemas.enable&apos;      = &apos;false&apos;
-);
-</code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
-<h3 id="ksqldb">ksqlDB</h3>
-<ul>
-<li>Check topics, streams and tables</li>
-</ul>
-<pre><code class="language-sql">show topics;
-show streams;
-show tables;
-</code></pre>
-<h3 id="tables">Tables</h3>
-<ul>
-<li>Declare Tables</li>
-</ul>
-<pre><code class="language-sql">CREATE TABLE PERSON (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-
-CREATE TABLE ADDRESS (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-</code></pre>
-<pre><code class="language-sql">SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
-
-SELECT * FROM ADDRESS EMIT CHANGES LIMIT 1;
-</code></pre>
-<p>Joins</p>
-<pre><code class="language-sql">SELECT 
-	P.NAME,
-	A.CITY
-FROM PERSON P
-LEFT JOIN ADDRESS A on A.id = P.address_id
-EMIT CHANGES 
-LIMIT 1;
-</code></pre>
-<pre><code class="language-sql">SELECT 
-  P.NAME, 
-  A.CITY
-FROM PERSON P
-INNER JOIN ADDRESS A
-ON A.id = P.address_id
-EMIT CHANGES
-LIMIT 1;
-</code></pre>
-<pre><code class="language-sql">CREATE TABLE PERSON_ADDRESS_ENRICHED (P_ID bigint,A_ID bigint,NAME VARCHAR,CITY VARCHAR) WITH (KAFKA_TOPIC=&apos;person_address_enriched&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-</code></pre>
-<ul>
-<li>Others</li>
-</ul>
-<pre><code class="language-sql">DROP TABLE IF EXISTS PERSON;
-</code></pre>
-<!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
+<!--kg-card-end: markdown--><p></p>]]></content:encoded></item></channel></rss>
