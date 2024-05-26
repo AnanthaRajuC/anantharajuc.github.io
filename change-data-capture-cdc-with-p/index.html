@@ -81,28 +81,30 @@
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Change Data Capture (CDC) with PostgreSQL and Debezium" />
-    <meta property="og:description" content="This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.
+    <meta property="og:description" content="Change Data Capture (CDC) has revolutionized the way we interact with data, enabling real-time tracking and propagation of changes within databases. In this blog post, we&#x27;ll delve into harnessing the power of CDC using two formidable tools: PostgreSQL and Debezium.
+
 
 Introduction
 
 
-Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or" />
+Change Data Capture (CDC) is the backbone of modern" />
     <meta property="og:url" content="http://localhost:2368/change-data-capture-cdc-with-p/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2022-08-14T11:09:21.000Z" />
-    <meta property="article:modified_time" content="2022-08-14T11:09:21.000Z" />
+    <meta property="article:modified_time" content="2024-05-26T15:33:20.000Z" />
     <meta property="article:tag" content="Change Data Capture" />
     <meta property="article:tag" content="Docker" />
     <meta property="article:tag" content="PostgreSQL" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Change Data Capture (CDC) with PostgreSQL and Debezium" />
-    <meta name="twitter:description" content="This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.
+    <meta name="twitter:description" content="Change Data Capture (CDC) has revolutionized the way we interact with data, enabling real-time tracking and propagation of changes within databases. In this blog post, we&#x27;ll delve into harnessing the power of CDC using two formidable tools: PostgreSQL and Debezium.
+
 
 Introduction
 
 
-Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or" />
+Change Data Capture (CDC) is the backbone of modern" />
     <meta name="twitter:url" content="http://localhost:2368/change-data-capture-cdc-with-p/" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
@@ -147,7 +149,7 @@ Change data capture (CDC) refers to the process of identifying and capturing cha
     "headline": "Change Data Capture (CDC) with PostgreSQL and Debezium",
     "url": "http://localhost:2368/change-data-capture-cdc-with-p/",
     "datePublished": "2022-08-14T11:09:21.000Z",
-    "dateModified": "2022-08-14T11:09:21.000Z",
+    "dateModified": "2024-05-26T15:33:20.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1508423134147-addf71308178?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&ixlib=rb-1.2.1&q=80&w=2000",
@@ -155,7 +157,7 @@ Change data capture (CDC) refers to the process of identifying and capturing cha
         "height": 1333
     },
     "keywords": "Change Data Capture, Docker, PostgreSQL",
-    "description": "This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.\n\nIntroduction\n\n\nChange data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system\n\n\nPostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.\n\n\nDebezium is an open sour",
+    "description": "Change Data Capture (CDC) has revolutionized the way we interact with data, enabling real-time tracking and propagation of changes within databases. In this blog post, we&#x27;ll delve into harnessing the power of CDC using two formidable tools: PostgreSQL and Debezium.\n\n\nIntroduction\n\n\nChange Data Capture (CDC) is the backbone of modern data architectures, allowing seamless tracking and delivery of database changes to downstream systems. PostgreSQL, revered for its extensibility and SQL compliance, ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -412,33 +414,37 @@ Change data capture (CDC) refers to the process of identifying and capturing cha
                   </button>
                 </div>
               </div>
-              <p>This post briefly documents the process of Change Data Capture (CDC) with PostgreSQL and Debezium open source tools.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system</p>
-<p>PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.</p>
-<p>Debezium is an open source distributed platform for change data capture.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.docker.com/">Docker</a> (PostgreSQL, Zookeeper, Kafka, Debezium, schema-registry)</li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
-<h4 id="setup">Setup</h4>
-<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/134394876375cc861dfe7d7d223918ab.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/12.png" class="kg-image" alt loading="lazy" width="1905" height="331" srcset="../content/images/size/w600/2022/08/12.png 600w, ../content/images/size/w1000/2022/08/12.png 1000w, ../content/images/size/w1600/2022/08/12.png 1600w, ../content/images/2022/08/12.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>DB Configuration</p>
-<p><img src="../content/images/2022/08/14.png" alt="14" loading="lazy"></p>
+              <p>Change Data Capture (CDC) has revolutionized the way we interact with data, enabling real-time tracking and propagation of changes within databases. In this blog post, we'll delve into harnessing the power of CDC using two formidable tools: PostgreSQL and Debezium.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>Change Data Capture (CDC) is the backbone of modern data architectures, allowing seamless tracking and delivery of database changes to downstream systems. PostgreSQL, revered for its extensibility and SQL compliance, serves as our foundation for data storage. Complementing it is Debezium, a versatile open-source platform dedicated to change data capture.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>To embark on this journey, ensure you have <a href="https://www.docker.com/">Docker</a> installed, facilitating the effortless setup of PostgreSQL, Zookeeper, Kafka, Debezium, and schema-registry components. <a href="https://docs.docker.com/compose/">Docker Compose</a> streamlines the orchestration of these services, ensuring a hassle-free setup process.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="getting-started">Getting Started</h2>
+<h3 id="setup">Setup</h3>
+<p>To kickstart our CDC adventure, we utilize a Docker Compose configuration, encapsulating the required services. This configuration, detailed in the provided docker-compose.yaml file, lays the groundwork for our PostgreSQL and Debezium setup.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/134394876375cc861dfe7d7d223918ab.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/12.png" class="kg-image" alt loading="lazy" width="1905" height="331" srcset="../content/images/size/w600/2022/08/12.png 600w, ../content/images/size/w1000/2022/08/12.png 1000w, ../content/images/size/w1600/2022/08/12.png 1600w, ../content/images/2022/08/12.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h3 id="db-configuration">DB Configuration</h3>
+<p>In PostgreSQL, we define a <strong>STUDENT</strong> table with essential columns, setting the stage for our CDC operations. Leveraging PostgreSQL's robust functionality, we configure the <strong>STUDENT</strong> table with full REPLICA IDENTITY, ensuring comprehensive change tracking.</p>
 <pre><code class="language-sql">CREATE TABLE STUDENT(id INTEGER PRIMARY KEY, name VARCHAR);
 
 ALTER TABLE public.student REPLICA IDENTITY FULL;
 
 SELECT * FROM STUDENT;
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Setup debezium Connector</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/49ec813281221879e412a4e51d1a3136.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/15.png" class="kg-image" alt loading="lazy" width="1904" height="508" srcset="../content/images/size/w600/2022/08/15.png 600w, ../content/images/size/w1000/2022/08/15.png 1000w, ../content/images/size/w1600/2022/08/15.png 1600w, ../content/images/2022/08/15.png 1904w" sizes="(min-width: 720px) 720px"></figure><p>Tail kafka CDC topic</p><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/2dba6d7e3bde7e1def6e7bf902c08b0e.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/16.png" class="kg-image" alt loading="lazy" width="1905" height="168" srcset="../content/images/size/w600/2022/08/16.png 600w, ../content/images/size/w1000/2022/08/16.png 1000w, ../content/images/size/w1600/2022/08/16.png 1600w, ../content/images/2022/08/16.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>Add, Update, Delete Records in the Table and see it in the kafka topic.</p>
-<pre><code class="language-sql">INSERT INTO STUDENT(id,name) VALUES (1,'JOHN');
+<p><img src="../content/images/2022/08/14.png" alt="14" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="setup-debezium-connector">Setup debezium Connector</h3>
+<p>Debezium seamlessly integrates with PostgreSQL via a dedicated connector. With the provided script, <a href="https://gist.github.com/AnanthaRajuC/49ec813281221879e412a4e51d1a3136#file-debezium-postgresql-connector-sh">debezium-postgresql-connector.sh</a>, we initiate and configure the connector, enabling seamless communication between our database and Debezium.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/49ec813281221879e412a4e51d1a3136.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/15.png" class="kg-image" alt loading="lazy" width="1904" height="508" srcset="../content/images/size/w600/2022/08/15.png 600w, ../content/images/size/w1000/2022/08/15.png 1000w, ../content/images/size/w1600/2022/08/15.png 1600w, ../content/images/2022/08/15.png 1904w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h3 id="tail-kafka-cdc-topic">Tail kafka CDC topic</h3>
+<p>Monitoring the CDC topic in Kafka provides real-time insights into database changes. By tailing the Kafka CDC topic, as illustrated in <a href="https://gist.github.com/AnanthaRajuC/2dba6d7e3bde7e1def6e7bf902c08b0e#file-tail_cdc_kafka_topic-sh">tail_cdc_kafka_topic.sh</a>, we gain immediate visibility into data modifications, empowering us to track changes effectively.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: html--><script src="https://gist.github.com/AnanthaRajuC/2dba6d7e3bde7e1def6e7bf902c08b0e.js"></script><!--kg-card-end: html--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/16.png" class="kg-image" alt loading="lazy" width="1905" height="168" srcset="../content/images/size/w600/2022/08/16.png 600w, ../content/images/size/w1000/2022/08/16.png 1000w, ../content/images/size/w1600/2022/08/16.png 1600w, ../content/images/2022/08/16.png 1905w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h3 id="add-update-delete-records">Add, Update, Delete Records</h3>
+<p>To witness CDC in action, we simulate data modifications within our PostgreSQL database. By executing SQL statements to add, update, and delete records in the STUDENT table, we trigger CDC events that are seamlessly propagated to the Kafka CDC topic.</p>
+<pre><code class="language-sql">-- Add records
+INSERT INTO STUDENT(id,name) VALUES (1,'JOHN');
 INSERT INTO STUDENT(id,name) VALUES (2,'JANE');
 
+-- Update record
 UPDATE STUDENT SET name='JOHNNY' WHERE ID=1;
 </code></pre>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/18.png" class="kg-image" alt loading="lazy" width="1907" height="340" srcset="../content/images/size/w600/2022/08/18.png 600w, ../content/images/size/w1000/2022/08/18.png 1000w, ../content/images/size/w1600/2022/08/18.png 1600w, ../content/images/2022/08/18.png 1907w" sizes="(min-width: 720px) 720px"></figure>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/08/18.png" class="kg-image" alt loading="lazy" width="1907" height="340" srcset="../content/images/size/w600/2022/08/18.png 600w, ../content/images/size/w1000/2022/08/18.png 1000w, ../content/images/size/w1600/2022/08/18.png 1600w, ../content/images/2022/08/18.png 1907w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>In conclusion, the synergy between PostgreSQL and Debezium unlocks unparalleled capabilities in Change Data Capture, revolutionizing how we perceive and interact with real-time data changes. Through meticulous setup and intuitive configuration, harnessing CDC becomes not just a possibility but a powerful reality, propelling data-driven decision-making to new heights.</p>
+<!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
                   <ul>
