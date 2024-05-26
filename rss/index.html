@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 13:09:00 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[dbt-core, ClickHouse and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="dbt-core, ClickHouse and Dagster"><p>This post briefly captures the usage of dbt-core and it&apos;s integration with Dagster.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 13:28:09 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[dbt-core, ClickHouse and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="dbt-core, ClickHouse and Dagster"><p>This post briefly captures the usage of dbt-core and it&apos;s integration with Dagster.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><a href="https://github.com/dbt-labs/dbt-core"><strong>dbt Core</strong></a> is an open source command line tool that enables data teams to transform data using analytics engineering best practices.</p>
 <p><a href="https://github.com/dagster-io/dagster"><strong>dagster</strong></a> is an orchestration platform for the development, production, and observation of data assets.</p>
@@ -438,38 +438,24 @@ report.show_html()
 </ul>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Conclusion</strong></p>
 <p>Sweetviz is a powerful tool that simplifies the process of exploratory data analysis by generating interactive reports. By following the steps outlined in this article, you can quickly start analyzing your datasets and gain valuable insights. Feel free to explore more features and customize your reports to suit your needs.</p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Ubuntu Post Install Script]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>Post-installation Shell Script for Ubuntu.</p>
-<p>A shell script is a computer program designed to be run by a Unix shell, a command-line interpreter.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://ubuntu.com/">Ubuntu</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
-<p><a href="https://github.com/AnanthaRajuC/ubuntu-post-install">Ubuntu Post Install Scripts</a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
-<ul>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Automating Your Ubuntu Setup: A Post-Installation Shell Script]]></title><description><![CDATA[<p>Streamline your Ubuntu setup process with a post-installation shell script designed to automate the installation of essential software and configurations. This script simplifies the setup of a new Ubuntu system, saving you time and effort by handling common post-install tasks automatically.</p><!--kg-card-begin: markdown--><h3 id="understanding-shell-scripts">Understanding Shell Scripts</h3>
+<p>A shell script is a computer</p>]]></description><link>http://localhost:2368/ubuntu-post-install-script/</link><guid isPermaLink="false">638af8c4bbbc8447f5ca93ed</guid><category><![CDATA[Linux]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 03 Dec 2022 07:30:42 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1605791767308-46f38113f418?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFmdGVyfGVufDB8fHx8MTY3MDA1MjA0Mw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1605791767308-46f38113f418?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFmdGVyfGVufDB8fHx8MTY3MDA1MjA0Mw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Automating Your Ubuntu Setup: A Post-Installation Shell Script"><p>Streamline your Ubuntu setup process with a post-installation shell script designed to automate the installation of essential software and configurations. This script simplifies the setup of a new Ubuntu system, saving you time and effort by handling common post-install tasks automatically.</p><!--kg-card-begin: markdown--><h3 id="understanding-shell-scripts">Understanding Shell Scripts</h3>
+<p>A shell script is a computer program designed to be run by a Unix shell, serving as a command-line interpreter. By leveraging shell scripting, you can automate repetitive tasks and streamline your workflow on Ubuntu.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>To utilize this post-installation shell script, you need a system running <a href="https://ubuntu.com/">Ubuntu</a>, a popular Linux distribution known for its user-friendly interface and robustness.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="sample-project">Sample Project</h3>
+<p>Explore the <a href="https://github.com/AnanthaRajuC/ubuntu-post-install">Ubuntu Post Install Scripts repository</a> on GitHub to access the sample script and customize it according to your preferences.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="basic-usage">Basic Usage</h3>
+<ol>
 <li>
-<p>Open a terminal window on Ubuntu by pressing either of the following key combinations</p></li></ul>]]></description><link>http://localhost:2368/ubuntu-post-install-script/</link><guid isPermaLink="false">638af8c4bbbc8447f5ca93ed</guid><category><![CDATA[Linux]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 03 Dec 2022 07:30:42 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1605791767308-46f38113f418?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFmdGVyfGVufDB8fHx8MTY3MDA1MjA0Mw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<img src="https://images.unsplash.com/photo-1605791767308-46f38113f418?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGFmdGVyfGVufDB8fHx8MTY3MDA1MjA0Mw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Ubuntu Post Install Script"><p>Post-installation Shell Script for Ubuntu.</p>
-<p>A shell script is a computer program designed to be run by a Unix shell, a command-line interpreter.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://ubuntu.com/">Ubuntu</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
-<p><a href="https://github.com/AnanthaRajuC/ubuntu-post-install">Ubuntu Post Install Scripts</a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
-<ul>
-<li>
-<p>Open a terminal window on Ubuntu by pressing either of the following key combinations on the keyboard.</p>
+<p><strong>Open a Terminal Window:</strong> Launch a terminal window on Ubuntu by pressing either of the following key combinations on your keyboard:</p>
 <ul>
 <li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd></li>
 <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></li>
 </ul>
 </li>
 <li>
-<p>Update the permissions of the script with the <code>chmod</code> command.</p>
+<p><strong>Set Script Permissions:</strong> Update the permissions of the script to make it executable using the <code>chmod</code> command.</p>
 <ul>
 <li><code>sudo chmod +x ubuntu-post-install.sh</code></li>
 </ul>
@@ -480,10 +466,12 @@ report.show_html()
 <li><code>sudo bash ubuntu-post-install.sh</code></li>
 </ul>
 </li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>These packages are preferential and you should update them with the ones you prefer.</p>
-<p><a href="https://github.com/AnanthaRajuC/ubuntu-post-install/blob/main/ubuntu-post-install.sh">https://github.com/AnanthaRajuC/ubuntu-post-install/blob/main/ubuntu-post-install.sh</a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2023/11/ubuntu_post_unstall_script.png" alt="Ubuntu Post Install Script" loading="lazy"></p>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="customization">Customization</h3>
+<p>While the provided script includes a set of preferential packages and configurations, you can customize it to suit your specific requirements. Feel free to update the script with your preferred software packages and system configurations by modifying the script available on the <a href="https://github.com/AnanthaRajuC/ubuntu-post-install/blob/main/ubuntu-post-install.sh">GitHub repository</a>.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2023/11/ubuntu_post_unstall_script.png" alt="Automating Your Ubuntu Setup: A Post-Installation Shell Script" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="conclusion">Conclusion</h3>
+<p>By leveraging the Ubuntu Post Install Script, you can expedite the setup process of your Ubuntu system, ensuring that it is configured according to your preferences and equipped with essential software packages. Embrace automation to enhance your productivity and make the most out of your Ubuntu experience.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Enhancing Your GNOME Experience with Essential Shell Extensions]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p><a href="https://extensions.gnome.org/">GNOME Shell extensions</a> provide a powerful way to customize your GNOME desktop environment, tailoring it to your preferences and enhancing its functionality. Here, i&#x2019;ve compiled a list of some of useful GNOME Shell extensions that can improve your user experience.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="extensions">Extensions</h4>
