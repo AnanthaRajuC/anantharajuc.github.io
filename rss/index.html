@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 15:18:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[dbt-core, ClickHouse and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="dbt-core, ClickHouse and Dagster"><p>This post briefly captures the usage of dbt-core and it&apos;s integration with Dagster.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><a href="https://github.com/dbt-labs/dbt-core"><strong>dbt Core</strong></a> is an open source command line tool that enables data teams to transform data using analytics engineering best practices.</p>
-<p><a href="https://github.com/dagster-io/dagster"><strong>dagster</strong></a> is an orchestration platform for the development, production, and observation of data assets.</p>
-<p><a href="https://clickhouse.com/"><strong>ClickHouse</strong></a> is an open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 17:01:16 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster"><p>In this blog post, we embark on a journey to explore the seamless integration of dbt-core with Dagster, complemented by the powerful analytics capabilities of ClickHouse. Let&apos;s dive in and witness the synergy of these tools in action.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>At the heart of our data transformation endeavors lies <a href="https://github.com/dbt-labs/dbt-core"><strong>dbt Core</strong></a>, a versatile tool that empowers data teams to wield analytics engineering best practices with ease. Coupled with <a href="https://github.com/dagster-io/dagster"><strong>dagster</strong></a>, an orchestration platform tailored for data asset development and observation, and <a href="https://clickhouse.com/"><strong>ClickHouse</strong></a>, an open-source column-oriented database management system.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>Ensure you have the following components installed to get started.</p>
 <ul>
 <li><a href="https://github.com/dagster-io/dagster">Dagster</a></li>
 <li><a href="https://github.com/dbt-labs/dbt-core">dbt-core</a></li>
@@ -12,23 +11,24 @@
 <li><a href="https://github.com/ClickHouse/dbt-clickhouse">dbt ClickHouse plugin</a></li>
 <li><a href="https://docs.dagster.io/integrations/dbt/using-dbt-with-dagster">dagster-dbt</a></li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="installations">Installations</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="installations">Installations</h3>
 <p>Install the dbt ClickHouse plugin.</p>
 <pre><code class="language-shell">pip install dbt-clickhouse
 </code></pre>
 <p>Install the <strong>dagster-dbt</strong> library.</p>
 <pre><code class="language-shell">pip install dagster-dbt dagster-webserver
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="getting-started">Getting Started</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="getting-started">Getting Started</h3>
 <p>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.</p>
-<p>Initialize the dbt project.</p>
+<p>Initialize the dbt project and configure it to interface with ClickHouse.</p>
 <pre><code class="language-shell">dbt init dbt_data_practitioner 
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dbt1-1.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt1-1.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <pre><code class="language-shell">cd dbt_data_practitioner
 </code></pre>
 <pre><code class="language-shell">touch profiles.yml
 </code></pre>
+<p>Add ClickHouse configuration details to profiles.yml:</p>
 <pre><code class="language-yml">dbt_data_practitioner:
   target: dev
   outputs:
@@ -43,16 +43,18 @@
 </code></pre>
 <pre><code class="language-shell">dbt debug
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dbt2.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dbt-docs">dbt docs</h4>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt2.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="dbt-docs">dbt docs</h3>
+<p>Generate documentation for the dbt project:</p>
 <pre><code class="language-shell">dbt docs generate
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dbt3.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt3.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <pre><code class="language-shell">dbt docs serve
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dbt4.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<p><img src="http://localhost:2368/content/images/2023/12/2525.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="models">models</h4>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt4.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/2525.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="models">models</h3>
+<p>Create models and define transformations:</p>
 <pre><code class="language-shell">cd models  
 mkdir sakila_db  
 cd sakila_db  
@@ -65,31 +67,32 @@ touch point_of_interest_1.sql
 <pre><code class="language-shell">cd ..
 cd .. 
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dbt-build">dbt build</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="build-the-project">Build the project:</h3>
 <pre><code class="language-shell">dbt build
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dbt5.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dbt5.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <p>The tables and views defined are now generated in ClickHouse DB.</p>
 <pre><code class="language-shell">dbt docs generate
 dbt docs serve
 </code></pre>
 <p>Lineage Graph and other details.</p>
-<p><img src="http://localhost:2368/content/images/2023/12/25252.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dagster">Dagster</h4>
+<p><img src="http://localhost:2368/content/images/2023/12/25252.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="dagster-integration">Dagster Integration</h3>
+<p>Now, let&apos;s integrate Dagster into our data transformation pipeline:</p>
 <pre><code class="language-shell">cd dbt_data_practitioner
 dagster-dbt project scaffold --project-name dagster_data_practitioner
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dag1.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag1.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <pre><code class="language-shell">cd dagster_data_practitioner
 DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/dag2-1.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<p>To access from your browser, navigate to: <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag2-1.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p>To access the Dagster UI from your browser, navigate to: <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dagster-ui">Dagster UI</h4>
-<p><img src="http://localhost:2368/content/images/2023/12/dag3.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<p>Click on the black &quot;<strong>Materialize all</strong>&quot; button.</p>
-<p><img src="http://localhost:2368/content/images/2023/12/dag4.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
-<p><img src="http://localhost:2368/content/images/2023/12/dag5.png" alt="dbt-core, ClickHouse and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag3.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p>Click on the black &quot;<strong>Materialize all</strong>&quot; button to materialize the transformations.</p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag4.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/dag5.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
 <p><a href="https://github.com/AnanthaRajuC/DataPractitioner">DataPractitioner</a> is the sample project i&apos;ve used to illustrate the usage of the aforementioned tools.</p>
 <p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/DataPractitioner/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/DataPractitioner/pulls">PR</a> on GitHub!</em></p>
