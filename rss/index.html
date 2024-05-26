@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 17:50:47 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster"><p>In this blog post, we embark on a journey to explore the seamless integration of dbt-core with Dagster, complemented by the powerful analytics capabilities of ClickHouse. Let&apos;s dive in and witness the synergy of these tools in action.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 18:09:54 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster"><p>In this blog post, we embark on a journey to explore the seamless integration of dbt-core with Dagster, complemented by the powerful analytics capabilities of ClickHouse. Let&apos;s dive in and witness the synergy of these tools in action.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p>At the heart of our data transformation endeavors lies <a href="https://github.com/dbt-labs/dbt-core"><strong>dbt Core</strong></a>, a versatile tool that empowers data teams to wield analytics engineering best practices with ease. Coupled with <a href="https://github.com/dagster-io/dagster"><strong>dagster</strong></a>, an orchestration platform tailored for data asset development and observation, and <a href="https://clickhouse.com/"><strong>ClickHouse</strong></a>, an open-source column-oriented database management system.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
@@ -647,31 +647,19 @@ docker-compose -f docker-compose-non-dev.yml up
 <strong>Description:</strong> Maven Helper is an indispensable tool for managing dependencies within your IntelliJ IDEA projects. It provides valuable insights into dependency conflicts, allowing you to analyze and exclude conflicting dependencies effortlessly. Additionally, it offers advanced features for optimizing Maven builds, ensuring smooth and efficient project development.</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>IntelliJ IDEA plugins play a crucial role in enhancing productivity, streamlining development workflows, and empowering developers to write clean, efficient code. By incorporating IntelliJ IDEA plugins into your IntelliJ IDEA setup, you can unlock new capabilities, automate repetitive tasks, and take your coding experience to the next level.</p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[ksqlDB and ksql-cli]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>This example provides a base setup for using <a href="https://ksqldb.io/">ksqlDB</a> (<em>The database purpose-built for stream processing applications</em>) and <a href="https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/cli-config/">ksql-cli</a>.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Empower Real-Time Stream Processing with ksqlDB and ksql-cli]]></title><description><![CDATA[<p>In this guide, we&apos;ll delve into setting up ksqlDB&#x2014;a powerful database purpose-built for stream processing applications&#x2014;alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p><a href="https://ksqldb.io/">ksqlDB</a> stands as a cutting-edge</p>]]></description><link>http://localhost:2368/ksqldb/</link><guid isPermaLink="false">636517ee2ba729dae794e42f</guid><category><![CDATA[Apache Kafka]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Fri, 04 Nov 2022 14:10:01 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Empower Real-Time Stream Processing with ksqlDB and ksql-cli"><p>In this guide, we&apos;ll delve into setting up ksqlDB&#x2014;a powerful database purpose-built for stream processing applications&#x2014;alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p><a href="https://ksqldb.io/">ksqlDB</a> stands as a cutting-edge database designed specifically for stream processing applications. It offers a streamlined platform for processing and analyzing streaming data, enabling users to unlock insights and respond to events as they occur. Coupled with <a href="https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/cli-config/">ksql-cli</a>, a command-line interface for interacting with ksqlDB, you gain unparalleled flexibility and control over your stream processing workflows.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>Ensure you have the following software components installed to kickstart your ksqlDB journey:</p>
 <ul>
-<li><a href="https://www.docker.com/">Docker</a> (ksqldb-server, ksqldb-cli)</li>
+<li><a href="https://www.docker.com/">Docker</a> (for ksqldb-server, ksqldb-cli)</li>
 <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="getting-started">Getting Started</h3>
 <h4 id="setup">Setup</h4>
 <h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
-<pre><code> ksqldb-server:
-    image: confluentinc/ksqldb-server:latest
-    container_name: ksqldb-server
-    hostname: ksqldb-server
-    depends_on: [kafka]
-    ports:</code></pre>]]></description><link>http://localhost:2368/ksqldb/</link><guid isPermaLink="false">636517ee2ba729dae794e42f</guid><category><![CDATA[Apache Kafka]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Fri, 04 Nov 2022 14:10:01 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<img src="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="ksqlDB and ksql-cli"><p>This example provides a base setup for using <a href="https://ksqldb.io/">ksqlDB</a> (<em>The database purpose-built for stream processing applications</em>) and <a href="https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/cli-config/">ksql-cli</a>.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.docker.com/">Docker</a> (ksqldb-server, ksqldb-cli)</li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
-<h4 id="setup">Setup</h4>
-<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
+<p>Leverage Docker Compose to orchestrate the deployment of ksqlDB and ksql-cli:</p>
 <pre><code> ksqldb-server:
     image: confluentinc/ksqldb-server:latest
     container_name: ksqldb-server
@@ -704,6 +692,7 @@ docker-compose -f docker-compose-non-dev.yml up
 <pre><code class="language-shell">$ docker-compose pull
 </code></pre>
 <p>Start up the environment</p>
+<p>Initiate the Docker containers to start up the ksqlDB environment.</p>
 <p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
 <pre><code class="language-shell">$ docker-compose up
 </code></pre>
@@ -711,9 +700,10 @@ docker-compose -f docker-compose-non-dev.yml up
 Creating ksqldb-cli         ... done
 </code></pre>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
+<p>Interact with ksqlDB using ksql-cli:</p>
 <pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2022/11/10-ksql-db-initial.png" alt="ksqlDB and ksql-cli" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2022/11/10-ksql-db-initial.png" alt="Empower Real-Time Stream Processing with ksqlDB and ksql-cli" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="check-topics-streams-and-tables">Check topics, streams and tables</h3>
 <pre><code class="language-sql">show topics;
 </code></pre>
@@ -769,6 +759,9 @@ EMIT CHANGES;
 </code></pre>
 <pre><code class="language-sql">CREATE TABLE ADDRESS (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
 </code></pre>
+<ul>
+<li>Query Tables</li>
+</ul>
 <pre><code class="language-sql">SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
 </code></pre>
 <pre><code class="language-sql">SELECT * FROM ADDRESS EMIT CHANGES LIMIT 1;
@@ -800,7 +793,9 @@ LIMIT 1;
 </ul>
 <pre><code class="language-sql">DROP TABLE IF EXISTS PERSON;
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="tear-down-the-stack">Tear down the stack</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><hr>
+<h3 id="tear-down-the-stack">Tear down the stack</h3>
+<p>When done, tear down the ksqlDB stack:</p>
 <pre><code class="language-shell">$ docker compose-down
 </code></pre>
 <pre><code class="language-shell">Stopping ksqldb-cli       ... done
@@ -809,6 +804,7 @@ Removing ksqldb-cli         ... done
 Removing ksqldb-server      ... done
 </code></pre>
 <p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
+<p>By following these steps, you can harness the power of ksqlDB and ksql-cli to perform real-time stream processing, enabling you to extract insights and derive value from streaming data with ease and efficiency.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Learning & Reference Resources for Developers]]></title><description><![CDATA[<p>Expand your knowledge and enhance your skills with these curated learning and reference resources. From versioning guidelines to design patterns and web tutorials, these resources provide valuable information for developers at all levels.</p><!--kg-card-begin: markdown--><h3 id="various-resources">Various Resources</h3>
 <h4 id="semantic-versioning-200"><a href="https://semver.org/">Semantic Versioning 2.0.0</a></h4>
 <p><strong>Description:</strong> Understand the guidelines for semantic versioning. This resource provides</p>]]></description><link>http://localhost:2368/learning-resources/</link><guid isPermaLink="false">635f3e8dd1f3be2eba75eb36</guid><category><![CDATA[Lists]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 31 Oct 2022 03:26:15 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1588769655209-422ea26a0398?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGphcnxlbnwwfHx8fDE2NjcxODYzMjU&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1588769655209-422ea26a0398?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGphcnxlbnwwfHx8fDE2NjcxODYzMjU&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Learning &amp; Reference Resources for Developers"><p>Expand your knowledge and enhance your skills with these curated learning and reference resources. From versioning guidelines to design patterns and web tutorials, these resources provide valuable information for developers at all levels.</p><!--kg-card-begin: markdown--><h3 id="various-resources">Various Resources</h3>

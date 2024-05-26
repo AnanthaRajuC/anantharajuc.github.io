@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>ksqlDB and ksql-cli</title>
+    <title>Empower Real-Time Stream Processing with ksqlDB and ksql-cli</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -80,71 +80,29 @@
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="ksqlDB and ksql-cli" />
-    <meta property="og:description" content="Introduction
+    <meta property="og:title" content="Empower Real-Time Stream Processing with ksqlDB and ksql-cli" />
+    <meta property="og:description" content="In this guide, we&#x27;ll delve into setting up ksqlDB—a powerful database purpose-built for stream processing applications—alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.
 
 
-This example provides a base setup for using ksqlDB (The database purpose-built for stream processing applications) and ksql-cli.
+Introduction
 
 
-Minimum Software Requirements
-
-
- * Docker (ksqldb-server, ksqldb-cli)
- * Docker Compose
-
-
-Getting Started
-
-
-Setup
-
-
-Running the application via docker compose
-
-
- ksqldb-server:
-    image: confluentinc/ksqldb-server:latest
-    container_name: ksqldb-server
-    hostname: ksqldb-server
-    depends_on: [kafka]
-    ports:" />
+ksqlDB stands as a cutting-edge database designed specifically for" />
     <meta property="og:url" content="http://localhost:2368/ksqldb/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2022-11-04T14:10:01.000Z" />
-    <meta property="article:modified_time" content="2022-11-05T03:09:54.000Z" />
+    <meta property="article:modified_time" content="2024-05-26T18:09:44.000Z" />
     <meta property="article:tag" content="Apache Kafka" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ksqlDB and ksql-cli" />
-    <meta name="twitter:description" content="Introduction
+    <meta name="twitter:title" content="Empower Real-Time Stream Processing with ksqlDB and ksql-cli" />
+    <meta name="twitter:description" content="In this guide, we&#x27;ll delve into setting up ksqlDB—a powerful database purpose-built for stream processing applications—alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.
 
 
-This example provides a base setup for using ksqlDB (The database purpose-built for stream processing applications) and ksql-cli.
+Introduction
 
 
-Minimum Software Requirements
-
-
- * Docker (ksqldb-server, ksqldb-cli)
- * Docker Compose
-
-
-Getting Started
-
-
-Setup
-
-
-Running the application via docker compose
-
-
- ksqldb-server:
-    image: confluentinc/ksqldb-server:latest
-    container_name: ksqldb-server
-    hostname: ksqldb-server
-    depends_on: [kafka]
-    ports:" />
+ksqlDB stands as a cutting-edge database designed specifically for" />
     <meta name="twitter:url" content="http://localhost:2368/ksqldb/" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
@@ -186,10 +144,10 @@ Running the application via docker compose
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "ksqlDB and ksql-cli",
+    "headline": "Empower Real-Time Stream Processing with ksqlDB and ksql-cli",
     "url": "http://localhost:2368/ksqldb/",
     "datePublished": "2022-11-04T14:10:01.000Z",
-    "dateModified": "2022-11-05T03:09:54.000Z",
+    "dateModified": "2024-05-26T18:09:44.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&ixlib=rb-4.0.3&q=80&w=2000",
@@ -197,7 +155,7 @@ Running the application via docker compose
         "height": 1333
     },
     "keywords": "Apache Kafka",
-    "description": "Introduction\n\n\nThis example provides a base setup for using ksqlDB (The database purpose-built for stream processing applications) and ksql-cli.\n\n\nMinimum Software Requirements\n\n\n * Docker (ksqldb-server, ksqldb-cli)\n * Docker Compose\n\n\nGetting Started\n\n\nSetup\n\n\nRunning the application via docker compose\n\n\n ksqldb-server:\n    image: confluentinc/ksqldb-server:latest\n    container_name: ksqldb-server\n    hostname: ksqldb-server\n    depends_on: [kafka]\n    ports:\n      - 8088:8088\n    networks:\n  ",
+    "description": "In this guide, we&#x27;ll delve into setting up ksqlDB—a powerful database purpose-built for stream processing applications—alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.\n\n\nIntroduction\n\n\nksqlDB stands as a cutting-edge database designed specifically for stream processing applications. It offers a streamlined platform for processing and analyzing streaming data, enabling users ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -428,7 +386,7 @@ Running the application via docker compose
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
-              <h1 class="m-heading__title in-post">ksqlDB and ksql-cli</h1>
+              <h1 class="m-heading__title in-post">Empower Real-Time Stream Processing with ksqlDB and ksql-cli</h1>
               <div class="m-heading__meta">
                   <a href="../tag/apache-kafka/index.html" class="m-heading__meta__tag">Apache Kafka</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
@@ -442,7 +400,7 @@ Running the application via docker compose
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
                     <span class="icon-facebook" aria-hidden="true"></span>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=ksqlDB%20and%20ksql-cli&url=http://localhost:2368/ksqldb/"
+                  <a href="https://twitter.com/intent/tweet?text=Empower%20Real-Time%20Stream%20Processing%20with%20ksqlDB%20and%20ksql-cli&url=http://localhost:2368/ksqldb/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
@@ -454,16 +412,18 @@ Running the application via docker compose
                   </button>
                 </div>
               </div>
-              <!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>This example provides a base setup for using <a href="https://ksqldb.io/">ksqlDB</a> (<em>The database purpose-built for stream processing applications</em>) and <a href="https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/cli-config/">ksql-cli</a>.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+              <p>In this guide, we'll delve into setting up ksqlDB—a powerful database purpose-built for stream processing applications—alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p><a href="https://ksqldb.io/">ksqlDB</a> stands as a cutting-edge database designed specifically for stream processing applications. It offers a streamlined platform for processing and analyzing streaming data, enabling users to unlock insights and respond to events as they occur. Coupled with <a href="https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/cli-config/">ksql-cli</a>, a command-line interface for interacting with ksqlDB, you gain unparalleled flexibility and control over your stream processing workflows.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>Ensure you have the following software components installed to kickstart your ksqlDB journey:</p>
 <ul>
-<li><a href="https://www.docker.com/">Docker</a> (ksqldb-server, ksqldb-cli)</li>
+<li><a href="https://www.docker.com/">Docker</a> (for ksqldb-server, ksqldb-cli)</li>
 <li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h5 id="getting-started">Getting Started</h5>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="getting-started">Getting Started</h3>
 <h4 id="setup">Setup</h4>
 <h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
+<p>Leverage Docker Compose to orchestrate the deployment of ksqlDB and ksql-cli:</p>
 <pre><code> ksqldb-server:
     image: confluentinc/ksqldb-server:latest
     container_name: ksqldb-server
@@ -496,6 +456,7 @@ Running the application via docker compose
 <pre><code class="language-shell">$ docker-compose pull
 </code></pre>
 <p>Start up the environment</p>
+<p>Initiate the Docker containers to start up the ksqlDB environment.</p>
 <p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
 <pre><code class="language-shell">$ docker-compose up
 </code></pre>
@@ -503,6 +464,7 @@ Running the application via docker compose
 Creating ksqldb-cli         ... done
 </code></pre>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
+<p>Interact with ksqlDB using ksql-cli:</p>
 <pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
 </code></pre>
 <p><img src="../content/images/2022/11/10-ksql-db-initial.png" alt="10-ksql-db-initial" loading="lazy"></p>
@@ -561,6 +523,9 @@ EMIT CHANGES;
 </code></pre>
 <pre><code class="language-sql">CREATE TABLE ADDRESS (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC='mysql.streaming_etl_db.address',VALUE_FORMAT='JSON');
 </code></pre>
+<ul>
+<li>Query Tables</li>
+</ul>
 <pre><code class="language-sql">SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
 </code></pre>
 <pre><code class="language-sql">SELECT * FROM ADDRESS EMIT CHANGES LIMIT 1;
@@ -592,7 +557,9 @@ LIMIT 1;
 </ul>
 <pre><code class="language-sql">DROP TABLE IF EXISTS PERSON;
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="tear-down-the-stack">Tear down the stack</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><hr>
+<h3 id="tear-down-the-stack">Tear down the stack</h3>
+<p>When done, tear down the ksqlDB stack:</p>
 <pre><code class="language-shell">$ docker compose-down
 </code></pre>
 <pre><code class="language-shell">Stopping ksqldb-cli       ... done
@@ -601,6 +568,7 @@ Removing ksqldb-cli         ... done
 Removing ksqldb-server      ... done
 </code></pre>
 <p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
+<p>By following these steps, you can harness the power of ksqlDB and ksql-cli to perform real-time stream processing, enabling you to extract insights and derive value from streaming data with ease and efficiency.</p>
 <!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
