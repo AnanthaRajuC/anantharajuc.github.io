@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 17:06:09 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster"><p>In this blog post, we embark on a journey to explore the seamless integration of dbt-core with Dagster, complemented by the powerful analytics capabilities of ClickHouse. Let&apos;s dive in and witness the synergy of these tools in action.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 26 May 2024 17:31:44 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster]]></title><description><![CDATA[This post briefly captures the usage of dbt-core and it's integration with Dagster.]]></description><link>http://localhost:2368/dbt-core/</link><guid isPermaLink="false">658933857bbe782450364b75</guid><category><![CDATA[Data]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[dbt]]></category><category><![CDATA[Dagster]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 12:22:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster"><p>In this blog post, we embark on a journey to explore the seamless integration of dbt-core with Dagster, complemented by the powerful analytics capabilities of ClickHouse. Let&apos;s dive in and witness the synergy of these tools in action.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p>At the heart of our data transformation endeavors lies <a href="https://github.com/dbt-labs/dbt-core"><strong>dbt Core</strong></a>, a versatile tool that empowers data teams to wield analytics engineering best practices with ease. Coupled with <a href="https://github.com/dagster-io/dagster"><strong>dagster</strong></a>, an orchestration platform tailored for data asset development and observation, and <a href="https://clickhouse.com/"><strong>ClickHouse</strong></a>, an open-source column-oriented database management system.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
@@ -99,31 +99,30 @@ DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
 <p><a href="https://github.com/AnanthaRajuC/DataPractitioner">DataPractitioner</a> is the sample project i&apos;ve used to illustrate the usage of the aforementioned tools.</p>
 <p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/DataPractitioner/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/DataPractitioner/pulls">PR</a> on GitHub!</em></p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
-<p>MySQL is an open-source relational database management system.</p>
-<p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine]]></title><description><![CDATA[<p>In this guide, we&apos;ll walk through the seamless process of replicating a MySQL database into ClickHouse, leveraging the experimental MaterializedMySQL Database Engine. By replicating MySQL data into ClickHouse, we harness the real-time analytical capabilities of ClickHouse while preserving data integrity and consistency.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>MySQL stands as a stalwart</p>]]></description><link>http://localhost:2368/replicate-mysql-database-in-clickhouse-using/</link><guid isPermaLink="false">65891ce27bbe782450364a54</guid><category><![CDATA[Data]]></category><category><![CDATA[MySQL]]></category><category><![CDATA[ClickHouse]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 07:34:10 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine"><p>In this guide, we&apos;ll walk through the seamless process of replicating a MySQL database into ClickHouse, leveraging the experimental MaterializedMySQL Database Engine. By replicating MySQL data into ClickHouse, we harness the real-time analytical capabilities of ClickHouse while preserving data integrity and consistency.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>MySQL stands as a stalwart in the realm of relational database management systems, renowned for its open-source nature and robust features. On the other hand, ClickHouse shines as a lightning-fast, column-oriented database management system, empowering users to generate analytical data reports in real-time through SQL queries.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>Ensure you have the following components installed and configured:</p>
 <ul>
 <li><a href="https://www.mysql.com/">MySQL</a> database.</li>
 <li><a href="https://clickhouse.com/">ClickHouse</a> database.</li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysqlcnf-mysql-server-configuration">mysql.cnf</h4>]]></description><link>http://localhost:2368/replicate-mysql-database-in-clickhouse-using/</link><guid isPermaLink="false">65891ce27bbe782450364a54</guid><category><![CDATA[Data]]></category><category><![CDATA[MySQL]]></category><category><![CDATA[ClickHouse]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 25 Dec 2023 07:34:10 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine"><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
-<p>MySQL is an open-source relational database management system.</p>
-<p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
-<li><a href="https://clickhouse.com/">ClickHouse</a> database.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysqlcnf-mysql-server-configuration">mysql.cnf MySQL server configuration</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysqlcnf-mysql-server-configuration-for-replication">mysql.cnf MySQL server configuration for Replication</h3>
 <p>The following are mandatory MySQL server configuration which must be set.</p>
-<p>Stop MySQL service.</p>
+<ol>
+<li>Stop MySQL service.</li>
+</ol>
 <pre><code class="language-shell">systemctl status mysql
 systemctl stop mysql.service
 </code></pre>
-<p>Update the configuration.</p>
+<ol start="2">
+<li>Update the configuration.</li>
+</ol>
+<p>Edit the MySQL configuration file mysqld.cnf:</p>
 <pre><code class="language-shell">sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 </code></pre>
+<p>Add/Update the following parameters:</p>
 <pre><code class="language-txt">[mysqld]
 server-id                     = 223344
 log_bin                       = mysql-bin
@@ -135,20 +134,25 @@ gtid_mode                     = on
 enforce_gtid_consistency      = on
 </code></pre>
 <p>ClickHouse reads binlog and performs DDL and DML queries.</p>
-<p>Start MySQL service.</p>
+<ol start="3">
+<li>Start MySQL service.</li>
+</ol>
 <pre><code class="language-shell">systemctl start mysql.service
 </code></pre>
 <p><em>Reference:</em> <a href="https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql">https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql</a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysql-user-creation-for-replication">MySQL user creation for replication</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysql-user-creation-for-replication">MySQL user creation for replication</h3>
+<p>Create a MySQL user specifically for replication:</p>
 <pre><code class="language-shell">create user clickhouse_replication@&apos;localhost&apos; identified with mysql_native_password by &apos;ChRep$316&apos;;
-
-grant replication slave, replication client, reload, select on *.* to clickhouse_replication@&apos;localhost&apos;;
-
-flush privileges;
-
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-mysql-data-setup">Sample MySQL Data Setup</h4>
-<p>Create a table.</p>
+<pre><code class="language-shell">grant replication slave, replication client, reload, select on *.* to clickhouse_replication@&apos;localhost&apos;;
+</code></pre>
+<pre><code class="language-shell">flush privileges;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="sample-mysql-data-setup">Sample MySQL Data Setup</h3>
+<p>Setup a sample table and insert data into MySQL:</p>
+<ol>
+<li>Create a table.</li>
+</ol>
 <pre><code class="language-shell">CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -159,18 +163,21 @@ flush privileges;
   UNIQUE KEY `UK_sb8bbouer5wak8vyiiy4pf2bx` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 </code></pre>
-<p>Insert sample data.</p>
+<ol start="2">
+<li>Insert sample data.</li>
+</ol>
 <pre><code class="language-shell">INSERT INTO `user`(`username`,`email`)VALUES(&apos;John Doe&apos;,&apos;johndoe@example.com&apos;);
 
 INSERT INTO `user`(`username`,`email`)VALUES(&apos;Jane Doe&apos;,&apos;janedoe@example.com&apos;);
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="clickhouse-server-configuration">CLickHouse server configuration</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="clickhouse-server-configuration">CLickHouse server configuration</h3>
 <pre><code class="language-shell">sudo systemctl status clickhouse-server
 sudo systemctl stop clickhouse-server
 </code></pre>
+<p>Update ClickHouse server configuration to allow experimental MaterializedMySQL engine:</p>
 <pre><code class="language-shell">sudo nano /etc/clickhouse-server/users.xml
 </code></pre>
-<p>Add/Update the following value.</p>
+<p>Add/Update the following value within <code>&lt;profiles&gt;</code>:</p>
 <pre><code class="language-xml">    &lt;profiles&gt;
         &lt;default&gt;                           &lt;allow_experimental_database_materialized_mysql&gt;1&lt;/allow_experimental_database_materialized_mysql&gt;
         &lt;/default&gt;
@@ -189,30 +196,35 @@ sudo systemctl stop clickhouse-server
 FROM system.settings
 WHERE name = &apos;allow_experimental_database_materialized_mysql&apos;
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/carbon.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="activating-the-replication-in-clickhouse">Activating the replication in ClickHouse</h4>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon.png" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="activating-the-replication-in-clickhouse">Activating the replication in ClickHouse</h3>
+<p>Create a ClickHouse database with MaterializedMySQL engine for replication:</p>
 <pre><code class="language-shell">CREATE DATABASE mysqlCH
 ENGINE = MaterializeMySQL(&apos;127.0.0.1&apos;, &apos;ch&apos;, &apos;clickhouse_replication&apos;, &apos;ChRep$316&apos;)
 SETTINGS allows_query_when_mysql_lost = 1, max_wait_time_when_mysql_unavailable = 10000, materialized_mysql_tables_list = &apos;user&apos;
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/carbon--1-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
-<p>Now, check if the database and the table with data got replicated or not.</p>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--1-.png" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><strong>Verify Replication</strong></p>
+<p>Check if the database and the table with data got replicated into ClickHouse:</p>
 <pre><code class="language-sql">select * from mysqlCH.user;
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/carbon--2-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--2-.png" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><strong>Additional Operations</strong></p>
+<p>Perform additional operations in MySQL and verify replication status in ClickHouse:</p>
 <p><strong>INSERT</strong> additional rows in MySQL table and check the replication status.</p>
 <pre><code class="language-sql">INSERT INTO `user`(`username`,`email`)VALUES(&apos;Alice&apos;,&apos;alice@example.com&apos;);
 INSERT INTO `user`(`username`,`email`)VALUES(&apos;Bob&apos;,&apos;alice@example.com&apos;);
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/carbon--3-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--3-.png" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
 <p><strong>UPDATE</strong> Alice&apos;s email in MySQL user table.</p>
 <pre><code class="language-sql">UPDATE `ch`.`user` SET `email` = &apos;alice@domain.com&apos; WHERE `username` = &apos;Alice&apos;;
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/carbon--4-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--4-.png" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
 <p><strong>DELETE</strong> Bob in MySQL user table.</p>
 <pre><code class="language-sql">DELETE FROM `ch`.`user` WHERE (`id` = &apos;4&apos;);
 </code></pre>
-<p><img src="http://localhost:2368/content/images/2023/12/carbon--5-.png" alt="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p><img src="http://localhost:2368/content/images/2023/12/carbon--5-.png" alt="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" loading="lazy"></p>
+<p>With these steps, you&apos;ve successfully set up MySQL replication into ClickHouse using the MaterializedMySQL engine. Harness the power of ClickHouse&apos;s real-time analytical capabilities while ensuring data consistency and integrity. Explore the vast possibilities of real-time analytics with ClickHouse and unlock insights from your replicated MySQL data effortlessly.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[ClickHouse]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of using ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>

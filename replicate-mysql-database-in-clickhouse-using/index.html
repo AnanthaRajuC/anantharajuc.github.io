@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine</title>
+    <title>Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -80,51 +80,31 @@
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" />
-    <meta property="og:description" content="This post briefly documents the process of replicating database in MySQL into ClickHouse.
+    <meta property="og:title" content="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" />
+    <meta property="og:description" content="In this guide, we&#x27;ll walk through the seamless process of replicating a MySQL database into ClickHouse, leveraging the experimental MaterializedMySQL Database Engine. By replicating MySQL data into ClickHouse, we harness the real-time analytical capabilities of ClickHouse while preserving data integrity and consistency.
 
 
-MySQL is an open-source relational database management system.
+Introduction
 
 
-ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.
-
-
-Minimum Software Requirements
-
-
- * MySQL database.
- * ClickHouse database.
-
-
-mysql.cnf" />
+MySQL stands as a stalwart in the" />
     <meta property="og:url" content="http://localhost:2368/replicate-mysql-database-in-clickhouse-using/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2023-12-25T07:34:10.000Z" />
-    <meta property="article:modified_time" content="2023-12-25T07:56:59.000Z" />
+    <meta property="article:modified_time" content="2024-05-26T17:31:32.000Z" />
     <meta property="article:tag" content="Data" />
     <meta property="article:tag" content="MySQL" />
     <meta property="article:tag" content="ClickHouse" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine" />
-    <meta name="twitter:description" content="This post briefly documents the process of replicating database in MySQL into ClickHouse.
+    <meta name="twitter:title" content="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine" />
+    <meta name="twitter:description" content="In this guide, we&#x27;ll walk through the seamless process of replicating a MySQL database into ClickHouse, leveraging the experimental MaterializedMySQL Database Engine. By replicating MySQL data into ClickHouse, we harness the real-time analytical capabilities of ClickHouse while preserving data integrity and consistency.
 
 
-MySQL is an open-source relational database management system.
+Introduction
 
 
-ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.
-
-
-Minimum Software Requirements
-
-
- * MySQL database.
- * ClickHouse database.
-
-
-mysql.cnf" />
+MySQL stands as a stalwart in the" />
     <meta name="twitter:url" content="http://localhost:2368/replicate-mysql-database-in-clickhouse-using/" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
@@ -166,10 +146,10 @@ mysql.cnf" />
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine",
+    "headline": "Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine",
     "url": "http://localhost:2368/replicate-mysql-database-in-clickhouse-using/",
     "datePublished": "2023-12-25T07:34:10.000Z",
-    "dateModified": "2023-12-25T07:56:59.000Z",
+    "dateModified": "2024-05-26T17:31:32.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&ixlib=rb-4.0.3&q=80&w=2000",
@@ -177,7 +157,7 @@ mysql.cnf" />
         "height": 1333
     },
     "keywords": "Data, MySQL, ClickHouse",
-    "description": "This post briefly documents the process of replicating database in MySQL into ClickHouse.\n\n\nMySQL is an open-source relational database management system.\n\n\nClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.\n\n\nMinimum Software Requirements\n\n\n * MySQL database.\n * ClickHouse database.\n\n\nmysql.cnf MySQL server configuration\n\n\nThe following are mandatory MySQL server configuration which must be s",
+    "description": "In this guide, we&#x27;ll walk through the seamless process of replicating a MySQL database into ClickHouse, leveraging the experimental MaterializedMySQL Database Engine. By replicating MySQL data into ClickHouse, we harness the real-time analytical capabilities of ClickHouse while preserving data integrity and consistency.\n\n\nIntroduction\n\n\nMySQL stands as a stalwart in the realm of relational database management systems, renowned for its open-source nature and robust features. On the other hand, Cl",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -285,8 +265,8 @@ mysql.cnf" />
                                     <div class="m-recent-article__picture ">
                                         <img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
                                     </div>
-                                    <h3 class="m-recent-article__title js-recent-article-title" title="Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine">
-                                      Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine">
+                                      Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine
                                     </h3>
                                     <span class="m-recent-article__date">5 months ago</span>
                                   </a>
@@ -408,7 +388,7 @@ mysql.cnf" />
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
-              <h1 class="m-heading__title in-post">Replicate MySQL database in ClickHouse using [experimental] MaterializedMySQL Database Engine</h1>
+              <h1 class="m-heading__title in-post">Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine</h1>
               <div class="m-heading__meta">
                   <a href="../tag/data/index.html" class="m-heading__meta__tag">Data</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
@@ -422,7 +402,7 @@ mysql.cnf" />
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
                     <span class="icon-facebook" aria-hidden="true"></span>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=Replicate%20MySQL%20database%20in%20ClickHouse%20using%20%5Bexperimental%5D%20MaterializedMySQL%20Database%20Engine&url=http://localhost:2368/replicate-mysql-database-in-clickhouse-using/"
+                  <a href="https://twitter.com/intent/tweet?text=Replicate%20MySQL%20database%20in%20ClickHouse%20with%20%5Bexperimental%5D%20MaterializedMySQL%20Database%20Engine&url=http://localhost:2368/replicate-mysql-database-in-clickhouse-using/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
@@ -434,23 +414,29 @@ mysql.cnf" />
                   </button>
                 </div>
               </div>
-              <!--kg-card-begin: markdown--><p>This post briefly documents the process of replicating database in MySQL into ClickHouse.</p>
-<p>MySQL is an open-source relational database management system.</p>
-<p>ClickHouse is a fast open-source column-oriented database management system that allows generating analytical data reports in real-time using SQL queries.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+              <p>In this guide, we'll walk through the seamless process of replicating a MySQL database into ClickHouse, leveraging the experimental MaterializedMySQL Database Engine. By replicating MySQL data into ClickHouse, we harness the real-time analytical capabilities of ClickHouse while preserving data integrity and consistency.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>MySQL stands as a stalwart in the realm of relational database management systems, renowned for its open-source nature and robust features. On the other hand, ClickHouse shines as a lightning-fast, column-oriented database management system, empowering users to generate analytical data reports in real-time through SQL queries.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>Ensure you have the following components installed and configured:</p>
 <ul>
 <li><a href="https://www.mysql.com/">MySQL</a> database.</li>
 <li><a href="https://clickhouse.com/">ClickHouse</a> database.</li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysqlcnf-mysql-server-configuration">mysql.cnf MySQL server configuration</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysqlcnf-mysql-server-configuration-for-replication">mysql.cnf MySQL server configuration for Replication</h3>
 <p>The following are mandatory MySQL server configuration which must be set.</p>
-<p>Stop MySQL service.</p>
+<ol>
+<li>Stop MySQL service.</li>
+</ol>
 <pre><code class="language-shell">systemctl status mysql
 systemctl stop mysql.service
 </code></pre>
-<p>Update the configuration.</p>
+<ol start="2">
+<li>Update the configuration.</li>
+</ol>
+<p>Edit the MySQL configuration file mysqld.cnf:</p>
 <pre><code class="language-shell">sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 </code></pre>
+<p>Add/Update the following parameters:</p>
 <pre><code class="language-txt">[mysqld]
 server-id                     = 223344
 log_bin                       = mysql-bin
@@ -462,20 +448,25 @@ gtid_mode                     = on
 enforce_gtid_consistency      = on
 </code></pre>
 <p>ClickHouse reads binlog and performs DDL and DML queries.</p>
-<p>Start MySQL service.</p>
+<ol start="3">
+<li>Start MySQL service.</li>
+</ol>
 <pre><code class="language-shell">systemctl start mysql.service
 </code></pre>
 <p><em>Reference:</em> <a href="https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql">https://clickhouse.com/docs/en/engines/database-engines/materialized-mysql</a></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="mysql-user-creation-for-replication">MySQL user creation for replication</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysql-user-creation-for-replication">MySQL user creation for replication</h3>
+<p>Create a MySQL user specifically for replication:</p>
 <pre><code class="language-shell">create user clickhouse_replication@'localhost' identified with mysql_native_password by 'ChRep$316';
-
-grant replication slave, replication client, reload, select on *.* to clickhouse_replication@'localhost';
-
-flush privileges;
-
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-mysql-data-setup">Sample MySQL Data Setup</h4>
-<p>Create a table.</p>
+<pre><code class="language-shell">grant replication slave, replication client, reload, select on *.* to clickhouse_replication@'localhost';
+</code></pre>
+<pre><code class="language-shell">flush privileges;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="sample-mysql-data-setup">Sample MySQL Data Setup</h3>
+<p>Setup a sample table and insert data into MySQL:</p>
+<ol>
+<li>Create a table.</li>
+</ol>
 <pre><code class="language-shell">CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -486,18 +477,21 @@ flush privileges;
   UNIQUE KEY `UK_sb8bbouer5wak8vyiiy4pf2bx` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 </code></pre>
-<p>Insert sample data.</p>
+<ol start="2">
+<li>Insert sample data.</li>
+</ol>
 <pre><code class="language-shell">INSERT INTO `user`(`username`,`email`)VALUES('John Doe','johndoe@example.com');
 
 INSERT INTO `user`(`username`,`email`)VALUES('Jane Doe','janedoe@example.com');
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="clickhouse-server-configuration">CLickHouse server configuration</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="clickhouse-server-configuration">CLickHouse server configuration</h3>
 <pre><code class="language-shell">sudo systemctl status clickhouse-server
 sudo systemctl stop clickhouse-server
 </code></pre>
+<p>Update ClickHouse server configuration to allow experimental MaterializedMySQL engine:</p>
 <pre><code class="language-shell">sudo nano /etc/clickhouse-server/users.xml
 </code></pre>
-<p>Add/Update the following value.</p>
+<p>Add/Update the following value within <code>&lt;profiles&gt;</code>:</p>
 <pre><code class="language-xml">    &lt;profiles&gt;
         &lt;default&gt;                           &lt;allow_experimental_database_materialized_mysql&gt;1&lt;/allow_experimental_database_materialized_mysql&gt;
         &lt;/default&gt;
@@ -517,16 +511,20 @@ FROM system.settings
 WHERE name = 'allow_experimental_database_materialized_mysql'
 </code></pre>
 <p><img src="../content/images/2023/12/carbon.png" alt="carbon" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="activating-the-replication-in-clickhouse">Activating the replication in ClickHouse</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="activating-the-replication-in-clickhouse">Activating the replication in ClickHouse</h3>
+<p>Create a ClickHouse database with MaterializedMySQL engine for replication:</p>
 <pre><code class="language-shell">CREATE DATABASE mysqlCH
 ENGINE = MaterializeMySQL('127.0.0.1', 'ch', 'clickhouse_replication', 'ChRep$316')
 SETTINGS allows_query_when_mysql_lost = 1, max_wait_time_when_mysql_unavailable = 10000, materialized_mysql_tables_list = 'user'
 </code></pre>
 <p><img src="../content/images/2023/12/carbon--1-.png" alt="carbon--1-" loading="lazy"></p>
-<p>Now, check if the database and the table with data got replicated or not.</p>
+<p><strong>Verify Replication</strong></p>
+<p>Check if the database and the table with data got replicated into ClickHouse:</p>
 <pre><code class="language-sql">select * from mysqlCH.user;
 </code></pre>
 <p><img src="../content/images/2023/12/carbon--2-.png" alt="carbon--2-" loading="lazy"></p>
+<p><strong>Additional Operations</strong></p>
+<p>Perform additional operations in MySQL and verify replication status in ClickHouse:</p>
 <p><strong>INSERT</strong> additional rows in MySQL table and check the replication status.</p>
 <pre><code class="language-sql">INSERT INTO `user`(`username`,`email`)VALUES('Alice','alice@example.com');
 INSERT INTO `user`(`username`,`email`)VALUES('Bob','alice@example.com');
@@ -540,6 +538,7 @@ INSERT INTO `user`(`username`,`email`)VALUES('Bob','alice@example.com');
 <pre><code class="language-sql">DELETE FROM `ch`.`user` WHERE (`id` = '4');
 </code></pre>
 <p><img src="../content/images/2023/12/carbon--5-.png" alt="carbon--5-" loading="lazy"></p>
+<p>With these steps, you've successfully set up MySQL replication into ClickHouse using the MaterializedMySQL engine. Harness the power of ClickHouse's real-time analytical capabilities while ensuring data consistency and integrity. Explore the vast possibilities of real-time analytics with ClickHouse and unlock insights from your replicated MySQL data effortlessly.</p>
 <!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
