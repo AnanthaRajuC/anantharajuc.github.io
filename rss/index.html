@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 09 Jun 2024 03:56:09 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 09 Jun 2024 11:02:10 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2024/06/streaming_etl.png" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="code-and-documentation">Code and Documentation</h3>
 <p>The complete code for this data pipeline, along with detailed documentation of all steps, is available on <a href="https://github.com/AnanthaRajuC/Streaming-ETL-Pipeline-for-Realtime-Analytics">GitHub</a>.</p>
@@ -303,107 +303,7 @@ INSERT INTO `user`(`username`,`email`)VALUES(&apos;Bob&apos;,&apos;alice@example
 <strong>password</strong> <em>password</em></p>
 <p><em>note</em>: credentials can be changed in the .env file.</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2023/11/123.png" class="kg-image" alt="Airbyte" loading="lazy" width="938" height="299" srcset="http://localhost:2368/content/images/size/w600/2023/11/123.png 600w, http://localhost:2368/content/images/2023/11/123.png 938w" sizes="(min-width: 720px) 720px"></figure><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2023/11/ab1.png" class="kg-image" alt="Airbyte" loading="lazy" width="1366" height="680" srcset="http://localhost:2368/content/images/size/w600/2023/11/ab1.png 600w, http://localhost:2368/content/images/size/w1000/2023/11/ab1.png 1000w, http://localhost:2368/content/images/2023/11/ab1.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="source-configuration">Source Configuration</h4>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2023/11/ab3.png" class="kg-image" alt="Airbyte" loading="lazy" width="1195" height="1557" srcset="http://localhost:2368/content/images/size/w600/2023/11/ab3.png 600w, http://localhost:2368/content/images/size/w1000/2023/11/ab3.png 1000w, http://localhost:2368/content/images/2023/11/ab3.png 1195w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[Data]]></title><description><![CDATA[<!--kg-card-begin: markdown--><ul>
-<li>Batch Processing</li>
-<li>Real-Time Processing</li>
-</ul>
-<hr>
-<ul>
-<li>OLTP</li>
-<li>OLAP</li>
-<li>Data Warehouse</li>
-</ul>
-<hr>
-<ul>
-<li>Data Mesh</li>
-<li>ClickHouse</li>
-<li>Apache Kafka</li>
-</ul>
-<hr>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="databases">Databases</h4>
-<ul>
-<li>MySQL</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="data-visualization">Data Visualization</h4>
-<p><strong><a href="https://superset.apache.org/">Apache Superset</a></strong>: modern data exploration and data visualization platform.</p>
-<h5 id="advantages">Advantages</h5>
-<ul>
-<li>No-code interface for building charts quickly.</li>
-<li>Large Gallery of Visualizations.</li>
-<li>Replace or augment proprietary business intelligence tools.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="etl">ETL</h4>
-<ul>
-<li>Airbyte</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="work">Work</h4>
-<ul>
-<li><strong>Data Engineer</strong>: Develop</li></ul>]]></description><link>http://localhost:2368/data/</link><guid isPermaLink="false">6550e1b4900efb38e7ae1d8a</guid><category><![CDATA[Data]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 12 Nov 2023 17:38:17 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1698571090063-0758fa13fa86?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8YWxsfDIyfHx8fHx8Mnx8MTY5OTc4ODc3Nnw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><ul>
-<li>Batch Processing</li>
-<li>Real-Time Processing</li>
-</ul>
-<hr>
-<ul>
-<li>OLTP</li>
-<li>OLAP</li>
-<li>Data Warehouse</li>
-</ul>
-<hr>
-<ul>
-<li>Data Mesh</li>
-<li>ClickHouse</li>
-<li>Apache Kafka</li>
-</ul>
-<hr>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="databases">Databases</h4>
-<ul>
-<li>MySQL</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="data-visualization">Data Visualization</h4>
-<img src="https://images.unsplash.com/photo-1698571090063-0758fa13fa86?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8YWxsfDIyfHx8fHx8Mnx8MTY5OTc4ODc3Nnw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Data"><p><strong><a href="https://superset.apache.org/">Apache Superset</a></strong>: modern data exploration and data visualization platform.</p>
-<h5 id="advantages">Advantages</h5>
-<ul>
-<li>No-code interface for building charts quickly.</li>
-<li>Large Gallery of Visualizations.</li>
-<li>Replace or augment proprietary business intelligence tools.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="etl">ETL</h4>
-<ul>
-<li>Airbyte</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="work">Work</h4>
-<ul>
-<li><strong>Data Engineer</strong>: Develop &amp; optimize data systems and make data available for analysis.
-<ul>
-<li>Design, Maintain &amp; Optimize Data Systems.</li>
-<li>Data Pipelines: Transform &amp; move data between data systems. Seamless data flow.</li>
-<li>Data high availablity, consistency, Security, Recoverability.</li>
-<li>Acquire datasets that align with business needs.</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><strong>Data Analyst</strong>: Analyze data in data systems to report &amp; derive insights.
-<ul>
-<li>Reports</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><strong>Data Scientist</strong>: Perform deeper analysis on data. Develop predective models t osolve more complex data problems.
-<ul>
-<li>Statistical Analysis</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><strong>Data Practitioner</strong>: Supports the data life cycle by collecting, transforming, and analyzing data, and communicating results in order to inform and guide decision-making.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="resources">Resources</h4>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Metabase]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2023/11/ab3.png" class="kg-image" alt="Airbyte" loading="lazy" width="1195" height="1557" srcset="http://localhost:2368/content/images/size/w600/2023/11/ab3.png 600w, http://localhost:2368/content/images/size/w1000/2023/11/ab3.png 1000w, http://localhost:2368/content/images/2023/11/ab3.png 1195w" sizes="(min-width: 720px) 720px"></figure>]]></content:encoded></item><item><title><![CDATA[Metabase]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
 <p>This example provides a base setup for using <a href="https://www.metabase.com/">Metabase</a>.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
 <ul>
@@ -916,4 +816,32 @@ R-Fiddle provides a convenient online platform for coding, testing, and sharing 
 <li><strong><a href="https://go.dev/play/">Go Playground</a></strong><br>
 Go Playground is an official online tool provided by the Go programming language community. It offers a clean and minimalist environment for writing and executing Go code, making it easy to experiment with Go features and syntax without setting up a local development environment.</li>
 </ul>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Enhancing Your API Workflow: Essential Tools for Developers]]></title><description><![CDATA[<p>APIs (Application Programming Interfaces) and web services play a crucial role in modern software development, enabling seamless communication and integration between different applications and systems. To streamline your API development process and enhance productivity, consider incorporating the following essential tools into your toolkit:</p><!--kg-card-begin: markdown--><h3 id="apis-and-web-services">API&apos;s and Web Services</h3>
+<p><strong><a href="http://www.downforeveryoneorjustme.com/" target="_blank">down</a></strong></p>]]></description><link>http://localhost:2368/api-tools/</link><guid isPermaLink="false">635e6d0f8ea41c669967e0a5</guid><category><![CDATA[Lists]]></category><category><![CDATA[Tools]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 30 Oct 2022 12:25:54 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1659153196652-7bc7de1ff602?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxBUEl8ZW58MHx8fHwxNjY3MTMyNjky&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1659153196652-7bc7de1ff602?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxBUEl8ZW58MHx8fHwxNjY3MTMyNjky&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Enhancing Your API Workflow: Essential Tools for Developers"><p>APIs (Application Programming Interfaces) and web services play a crucial role in modern software development, enabling seamless communication and integration between different applications and systems. To streamline your API development process and enhance productivity, consider incorporating the following essential tools into your toolkit:</p><!--kg-card-begin: markdown--><h3 id="apis-and-web-services">API&apos;s and Web Services</h3>
+<p><strong><a href="http://www.downforeveryoneorjustme.com/" target="_blank">down for everyone or just me</a></strong><br>
+<strong>Description:</strong> This simple tool allows you to quickly check if a website is down for everyone or just for you. It provides valuable insights into website availability, helping you troubleshoot connectivity issues more efficiently.</p>
+<p><strong><a href="https://uptime.is/" target="_blank">Uptime</a></strong><br>
+<strong>Description:</strong> Ensure your service-level agreements (SLAs) are met with this uptime calculator tool. It helps you calculate and track uptime metrics, enabling you to maintain high availability and reliability for your applications and services.</p>
+<p><strong><a href="https://apigee.com/providers" target="_blank">Apigee API Console</a></strong><br>
+<strong>Description:</strong> Discover, learn, test, and debug any API with interactive developer tools and documentation provided by Apigee API Console. It offers a comprehensive set of features for API exploration and testing, empowering developers to build and integrate APIs seamlessly.</p>
+<p><strong><a href="https://postb.in/" target="_blank">PostBin</a></strong><br>
+<strong>Description:</strong> Programatically test your API clients or webhooks with PostBin. It provides a convenient platform for sending and receiving HTTP requests, allowing you to validate and debug your API integrations effectively.</p>
+<p><strong><a href="http://httpbin.org/" target="_blank">httpbin</a></strong><br>
+<strong>Description:</strong> httpbin is a versatile HTTP request and response service designed for client testing. It offers a wide range of endpoints for testing various HTTP methods and parameters, making it an invaluable tool for API development and debugging.</p>
+<p><strong><a href="http://requestbin.com/" target="_blank">RequestBin</a></strong><br>
+<strong>Description:</strong> RequestBin provides a URL that collects requests made to it, allowing you to inspect and debug them in a human-friendly way. Use RequestBin to monitor and analyze HTTP requests sent by your clients or webhooks, facilitating effective troubleshooting and debugging.</p>
+<p><strong><a href="http://mockbin.com/" target="_blank">Mockbin</a></strong><br>
+<strong>Description:</strong> Mockbin enables you to generate custom endpoints to test, mock, and track HTTP requests and responses. It&apos;s a powerful tool for simulating different scenarios and behaviors in your API integrations, helping you ensure robustness and reliability.</p>
+<p><strong><a href="https://www.statuspage.io/" target="_blank">Statuspage</a></strong><br>
+<strong>Description:</strong> Statuspage is a comprehensive status and incident communication tool that enables you to keep your stakeholders informed about service availability and performance. It provides real-time status updates and incident notifications, helping you maintain transparency and trust with your users.</p>
+<p><strong><a href="https://rapidapi.com/" target="_blank">Rapid API</a></strong><br>
+<strong>Description:</strong> RapidAPI is the world&#x2019;s largest API marketplace, offering a vast selection of APIs for various use cases and industries. Explore and integrate APIs seamlessly into your applications, accelerating development and unlocking new capabilities.</p>
+<p><strong><a href="https://apiembed.com/" target="_blank">APIembed</a></strong><br>
+<strong>Description:</strong> APIembed provides embeddable API code snippets in multiple programming languages for your website, blog, or API documentation. Quickly generate code examples and documentation to simplify API integration for developers.</p>
+<p><strong><a href="https://loader.io/" target="_blank">Loader</a></strong><br>
+<strong>Description:</strong> Loader is a free load testing service that allows you to stress test your web apps and APIs with thousands of concurrent connections. Ensure your applications can handle peak loads and maintain performance under stress with Loader.</p>
+<p><strong><a href="https://reqres.in/" target="_blank">REQ RES</a></strong><br>
+<strong>Description:</strong> REQ RES is a hosted REST API ready to respond to your AJAX requests. It&apos;s a convenient tool for testing and prototyping API interactions, providing a reliable endpoint for your development and testing needs.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>By incorporating API tools into your development workflow, you can streamline your API development process, enhance productivity, and ensure the reliability and performance of your applications and services.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
