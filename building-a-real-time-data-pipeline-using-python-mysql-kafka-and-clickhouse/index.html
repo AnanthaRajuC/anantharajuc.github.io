@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=9320e8b7e4.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=9320e8b7e4" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=9320e8b7e4" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=9320e8b7e4" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=9320e8b7e4" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=9320e8b7e4.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=9320e8b7e4" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=9320e8b7e4") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=9320e8b7e4") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=9320e8b7e4") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=9320e8b7e4") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=9320e8b7e4") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=9320e8b7e4") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=9320e8b7e4");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=9320e8b7e4") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=9320e8b7e4") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=9320e8b7e4") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=9320e8b7e4") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=9320e8b7e4.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=9320e8b7e4.css" media="screen" />
+
+
+    
+
+    <meta name="description" content="This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse." />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" />
+    <meta property="og:description" content="This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse." />
+    <meta property="og:url" content="http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2024-06-09T03:48:53.000Z" />
+    <meta property="article:modified_time" content="2024-06-09T03:55:22.000Z" />
+    <meta property="article:tag" content="Apache Kafka" />
+    <meta property="article:tag" content="Change Data Capture" />
+    <meta property="article:tag" content="ClickHouse" />
+    <meta property="article:tag" content="Data" />
+    <meta property="article:tag" content="dbt" />
+    <meta property="article:tag" content="MySQL" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" />
+    <meta name="twitter:description" content="This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse." />
+    <meta name="twitter:url" content="http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Apache Kafka, Change Data Capture, ClickHouse, Data, dbt, MySQL" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse",
+    "url": "http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/",
+    "datePublished": "2024-06-09T03:48:53.000Z",
+    "dateModified": "2024-06-09T03:55:22.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "Apache Kafka, Change Data Capture, ClickHouse, Data, dbt, MySQL",
+    "description": "This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.8" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="bd0f620eace0890d104223392c" data-styles="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <script defer src="../public/cards.min.js%3Fv=9320e8b7e4"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=9320e8b7e4.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88776389-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88776389-2');
+</script>
+<style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template tag-apache-kafka tag-change-data-capture tag-clickhouse tag-data tag-dbt tag-mysql">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="../about/index.html">About</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+    <li class="nav-tags">
+      <a href="../tags/index.html">Tags</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse">
+                                      Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse
+                                    </h3>
+                                    <span class="m-recent-article__date">7 minutes ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../dbt-core/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster">
+                                      Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster
+                                    </h3>
+                                    <span class="m-recent-article__date">5 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../replicate-mysql-database-in-clickhouse-using/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine">
+                                      Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine
+                                    </h3>
+                                    <span class="m-recent-article__date">5 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../clickhouse/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1542274368-443d694d79aa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fHZlcnRpY2FsJTIwcGlwZXN8ZW58MHx8fHwxNjk5ODgxODgzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="ClickHouse">
+                                      ClickHouse
+                                    </h3>
+                                    <span class="m-recent-article__date">7 months ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/aws/index.html">AWS</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../tag/change-data-capture/index.html">Change Data Capture</a>
+                            </li>
+                            <li>
+                              <a href="../tag/clickhouse/index.html">ClickHouse</a>
+                            </li>
+                            <li>
+                              <a href="../tag/dagster/index.html">Dagster</a>
+                            </li>
+                            <li>
+                              <a href="../tag/data/index.html">Data</a>
+                            </li>
+                            <li>
+                              <a href="../tag/database/index.html">Database</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@selimarda?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">SELİM ARDA ERYILMAZ</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse</h1>
+              <div class="m-heading__meta">
+                  <a href="../tag/apache-kafka/index.html" class="m-heading__meta__tag">Apache Kafka</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Jun 9, 2024</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Building%20a%20Real-Time%20Data%20Pipeline%20Using%20Python%2C%20MySQL%2C%20Kafka%2C%20and%20ClickHouse&url=http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!--kg-card-begin: markdown--><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="../content/images/2024/06/streaming_etl.png" alt="streaming_etl" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="code-and-documentation">Code and Documentation</h3>
+<p>The complete code for this data pipeline, along with detailed documentation of all steps, is available on <a href="https://github.com/AnanthaRajuC/Streaming-ETL-Pipeline-for-Realtime-Analytics">GitHub</a>.</p>
+<h4 id="key-features-of-the-github-project">Key Features of the GitHub Project</h4>
+<ul>
+<li><strong>Step-by-Step Documentation</strong>: The GitHub repository includes detailed instructions for setting up and running the entire pipeline. This makes it easy for users to replicate the setup and understand each component's role.</li>
+<li><strong>Sample Data Generator</strong>: Python scripts to simulate real-time data generation are provided, helping users to test and experiment with the pipeline.</li>
+<li><strong>Configuration Files</strong>: Pre-configured settings for MySQL, Debezium, Kafka, and ClickHouse are included to streamline the setup process.</li>
+<li><strong>Stream Processing with ksql</strong>: Examples of how to use ksql for real-time data enrichment and transformation are provided, showcasing the power of stream processing.</li>
+<li><strong>Integration with BI Tools</strong>: Guidance on how to connect Metabase and Apache Superset to the data pipeline for visualization and reporting is available.</li>
+</ul>
+<p>By following the instructions and leveraging the provided code, users can quickly set up a robust and scalable real-time data pipeline tailored to their specific needs.</p>
+<h3 id="data-generation">Data Generation</h3>
+<p>The journey begins with the <strong>Data Generator</strong>. In our example, Python is used to simulate and generate event data. This could be any real-time data source, such as IoT devices, transaction logs, or user interactions on a website.</p>
+<h3 id="oltp-online-transaction-processing-data-source">OLTP (Online Transaction Processing) Data Source</h3>
+<p>The generated data is initially stored in a <strong>MySQL</strong> database. MySQL serves as the OLTP data source, managing high transaction volumes and maintaining data integrity. It logs changes in real-time using a binlog (binary log), which captures all updates made to the database.</p>
+<h3 id="change-data-capture-cdc-with-debezium">Change Data Capture (CDC) with Debezium</h3>
+<p>To stream changes from the MySQL database in real-time, <strong>Debezium</strong> is employed. Debezium is a distributed platform that captures row-level changes in databases. It acts as a MySQL Source Connector, monitoring the MySQL binlog for data changes and converting these changes into events.</p>
+<h3 id="stream-processing-platform-with-kafka">Stream Processing Platform with Kafka</h3>
+<p>These change events are then sent to <strong>Kafka</strong>, a distributed streaming platform capable of handling large volumes of data with low latency. Kafka organizes these events into topics. Each topic is a log of messages, which can be processed in real-time.</p>
+<p>To enrich and process these messages further, a stream processing tool like <strong>ksql</strong> (Kafka Stream Processing) can be used. ksql enables real-time data transformations and filtering directly on Kafka topics.</p>
+<h3 id="analytical-database-with-clickhouse">Analytical Database with ClickHouse</h3>
+<p>For analytical processing, the data is transferred from Kafka to <strong>ClickHouse</strong>, an OLAP (Online Analytical Processing) data warehouse known for its high performance and efficiency in handling analytical queries. ClickHouse consumes Kafka topics through its Kafka Table Engine. The data is then transformed into Materialized Views and stored in MergeTree Tables, optimized for fast query performance.</p>
+<h3 id="business-intelligence-and-data-visualization">Business Intelligence and Data Visualization</h3>
+<p>Finally, the processed and aggregated data is ready for visualization and analysis. Tools like <strong>Metabase</strong> and <strong>Apache Superset</strong> can connect to ClickHouse, providing interactive dashboards and reports. Additionally, tools like <strong>dbt</strong> (data build tool) can be used for data transformation and modeling, enabling more advanced analytics and insights.</p>
+<p>Other applications of this data pipeline include feeding into <strong>ML models</strong> for predictive analytics, performing <strong>operational analytics</strong>, and various other data-driven applications.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This data pipeline demonstrates a architecture for real-time data processing. By leveraging tools like Python, MySQL, Debezium, Kafka, ClickHouse, and various BI tools, organizations can ensure that they have timely and accurate data for decision-making and analytics. The flexibility of this setup make it suitable for a wide range of use cases, from operational monitoring to analytics etc.,</p>
+<!--kg-card-end: markdown-->
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/apache-kafka/index.html" title="Apache Kafka">Apache Kafka</a>
+                      </li>
+                      <li>
+                        <a href="../tag/change-data-capture/index.html" title="Change Data Capture">Change Data Capture</a>
+                      </li>
+                      <li>
+                        <a href="../tag/clickhouse/index.html" title="ClickHouse">ClickHouse</a>
+                      </li>
+                      <li>
+                        <a href="../tag/data/index.html" title="Data">Data</a>
+                      </li>
+                      <li>
+                        <a href="../tag/dbt/index.html" title="dbt">dbt</a>
+                      </li>
+                      <li>
+                        <a href="../tag/mysql/index.html" title="MySQL">MySQL</a>
+                      </li>
+                  </ul>
+                </section>
+            </div>
+          </div>
+        </div>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+            <section class="m-recommended">
+              <div class="l-wrapper in-recommended">
+                <h3 class="m-section-title in-recommended">Recommended for you</h3>
+                <div class="m-recommended-articles">
+                  <div class="m-recommended-slider swiper js-recommended-slider">
+                    <div class="swiper-wrapper">
+                      
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-data tag-clickhouse tag-dbt tag-dagster">
+    <div class="m-article-card__picture">
+      <a href="../dbt-core/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/data/index.html" class="m-article-card__tag">Data</a>
+      <a href="../dbt-core/index.html" class="m-article-card__info-link" aria-label="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster">
+            Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>5 months ago</span>
+          <span>&bull;</span>
+          <span>3 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-data tag-mysql tag-clickhouse">
+    <div class="m-article-card__picture">
+      <a href="../replicate-mysql-database-in-clickhouse-using/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/data/index.html" class="m-article-card__tag">Data</a>
+      <a href="../replicate-mysql-database-in-clickhouse-using/index.html" class="m-article-card__info-link" aria-label="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine">
+            Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>5 months ago</span>
+          <span>&bull;</span>
+          <span>3 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-change-data-capture tag-docker tag-postgresql featured">
+    <div class="m-article-card__picture">
+      <a href="../change-data-capture-cdc-with-p/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1508423134147-addf71308178?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMwfHxsZW5zfGVufDB8fHx8MTY2MDQ3MjIxMA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+        <a href="../change-data-capture-cdc-with-p/index.html" class="m-article-card__featured js-tooltip" data-tippy-content="Featured" aria-label="Featured">
+          <span class="icon-star" aria-hidden="true"></span>
+        </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/change-data-capture/index.html" class="m-article-card__tag">Change Data Capture</a>
+      <a href="../change-data-capture-cdc-with-p/index.html" class="m-article-card__info-link" aria-label="Change Data Capture (CDC) with PostgreSQL and Debezium">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Change Data Capture (CDC) with PostgreSQL and Debezium">
+            Change Data Capture (CDC) with PostgreSQL and Debezium
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 years ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+                    </div>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-prev" aria-label="Previous">
+                      <span class="icon-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-next" aria-label="Next">
+                      <span class="icon-arrow-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2024</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=9320e8b7e4.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=9320e8b7e4"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=9320e8b7e4"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=9320e8b7e4"></script>
+    <script defer src="../assets/js/app.js%3Fv=9320e8b7e4"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=9320e8b7e4"></script>
+
+
+    
+  </body>
+</html>
