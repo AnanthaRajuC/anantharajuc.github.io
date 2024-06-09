@@ -86,7 +86,7 @@
     <meta property="og:url" content="http://localhost:2368/dbt-core/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2023-12-25T12:22:54.000Z" />
-    <meta property="article:modified_time" content="2024-05-26T17:05:58.000Z" />
+    <meta property="article:modified_time" content="2024-06-09T12:35:28.000Z" />
     <meta property="article:tag" content="Data" />
     <meta property="article:tag" content="ClickHouse" />
     <meta property="article:tag" content="dbt" />
@@ -139,7 +139,7 @@
     "headline": "Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster",
     "url": "http://localhost:2368/dbt-core/",
     "datePublished": "2023-12-25T12:22:54.000Z",
-    "dateModified": "2024-05-26T17:05:58.000Z",
+    "dateModified": "2024-06-09T12:35:28.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&ixlib=rb-4.0.3&q=80&w=2000",
@@ -247,7 +247,7 @@
                                     <h3 class="m-recent-article__title js-recent-article-title" title="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse">
                                       Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse
                                     </h3>
-                                    <span class="m-recent-article__date">8 hours ago</span>
+                                    <span class="m-recent-article__date">9 hours ago</span>
                                   </a>
                                 </div>
                                 <div class="swiper-slide">
@@ -430,11 +430,12 @@
 <pre><code class="language-shell">dbt init dbt_data_practitioner 
 </code></pre>
 <p><img src="../content/images/2023/12/dbt1-1.png" alt="dbt1-1" loading="lazy"></p>
+<p>Navigate to Your dbt Project Directory</p>
 <pre><code class="language-shell">cd dbt_data_practitioner
 </code></pre>
 <pre><code class="language-shell">touch profiles.yml
 </code></pre>
-<p>Add ClickHouse configuration details to profiles.yml:</p>
+<p>Add ClickHouse configuration details to <code>profiles.yml</code>. Make sure all dependencies are correctly set up in your <code>profiles.yml</code> file for your database connections.</p>
 <pre><code class="language-yml">dbt_data_practitioner:
   target: dev
   outputs:
@@ -457,10 +458,13 @@
 <p>Generate documentation for the dbt project:</p>
 <pre><code class="language-shell">dbt docs generate
 </code></pre>
+<p>This command generates the documentation artifacts for your project. It creates a <code>manifest.json</code> and <code>catalog.json</code> file in the target directory.</p>
 <p><img src="../content/images/2023/12/dbt3.png" alt="dbt3" loading="lazy"></p>
+<p>To view the documentation, you need to serve it locally using the following command:</p>
 <pre><code class="language-shell">dbt docs serve
 </code></pre>
 <p><img src="../content/images/2023/12/dbt4.png" alt="dbt4" loading="lazy"></p>
+<p>By default, this will start a local server at <a href="http://localhost:8080">http://localhost:8080</a> where you can view the documentation.</p>
 <p><img src="../content/images/2023/12/2525.png" alt="2525" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="models">models</h3>
 <p>Create models and define transformations:</p>
@@ -477,23 +481,33 @@ touch point_of_interest_1.sql
 cd .. 
 </code></pre>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="build-the-project">Build the project:</h3>
+<p>The following command runs a series of tasks to build your models, including running models, tests, and snapshots. This command essentially combines the functionality of <code>dbt run</code>, <code>dbt test</code>, and <code>dbt snapshot</code>.</p>
+<p>The dbt build command will perform the following tasks:</p>
+<ol>
+<li><strong>Run Models</strong>: Executes SQL scripts to create views or tables based on your model definitions.</li>
+<li><strong>Run Tests</strong>: Executes tests defined in your project to validate data quality and integrity.</li>
+<li><strong>Run Snapshots</strong>: Executes snapshot scripts to capture and store historical data.</li>
+</ol>
 <pre><code class="language-shell">dbt build
 </code></pre>
 <p><img src="../content/images/2023/12/dbt5.png" alt="dbt5" loading="lazy"></p>
 <p>The tables and views defined are now generated in ClickHouse DB.</p>
 <pre><code class="language-shell">dbt docs generate
-dbt docs serve
+</code></pre>
+<pre><code class="language-shell">dbt docs serve
 </code></pre>
 <p>Lineage Graph and other details.</p>
 <p><img src="../content/images/2023/12/25252.png" alt="25252" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="dagster-integration">Dagster Integration</h3>
 <p>Now, let's integrate Dagster into our data transformation pipeline:</p>
 <pre><code class="language-shell">cd dbt_data_practitioner
-dagster-dbt project scaffold --project-name dagster_data_practitioner
+</code></pre>
+<pre><code class="language-shell">dagster-dbt project scaffold --project-name dagster_data_practitioner
 </code></pre>
 <p><img src="../content/images/2023/12/dag1.png" alt="dag1" loading="lazy"></p>
 <pre><code class="language-shell">cd dagster_data_practitioner
-DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
+</code></pre>
+<pre><code class="language-shell">DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
 </code></pre>
 <p><img src="../content/images/2023/12/dag2-1.png" alt="dag2-1" loading="lazy"></p>
 <p>To access the Dagster UI from your browser, navigate to: <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
@@ -581,7 +595,7 @@ DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
           </h2>
         </div>
         <div class="m-article-card__timestamp">
-          <span>8 hours ago</span>
+          <span>9 hours ago</span>
           <span>&bull;</span>
           <span>3 min read</span>
         </div>

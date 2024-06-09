@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 09 Jun 2024 12:04:35 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 09 Jun 2024 12:36:28 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2024/06/streaming_etl.png" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="code-and-documentation">Code and Documentation</h3>
 <p>The complete code for this data pipeline, along with detailed documentation of all steps, is available on <a href="https://github.com/AnanthaRajuC/Streaming-ETL-Pipeline-for-Realtime-Analytics">GitHub</a>.</p>
@@ -53,11 +53,12 @@
 <pre><code class="language-shell">dbt init dbt_data_practitioner 
 </code></pre>
 <p><img src="http://localhost:2368/content/images/2023/12/dbt1-1.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p>Navigate to Your dbt Project Directory</p>
 <pre><code class="language-shell">cd dbt_data_practitioner
 </code></pre>
 <pre><code class="language-shell">touch profiles.yml
 </code></pre>
-<p>Add ClickHouse configuration details to profiles.yml:</p>
+<p>Add ClickHouse configuration details to <code>profiles.yml</code>. Make sure all dependencies are correctly set up in your <code>profiles.yml</code> file for your database connections.</p>
 <pre><code class="language-yml">dbt_data_practitioner:
   target: dev
   outputs:
@@ -80,10 +81,13 @@
 <p>Generate documentation for the dbt project:</p>
 <pre><code class="language-shell">dbt docs generate
 </code></pre>
+<p>This command generates the documentation artifacts for your project. It creates a <code>manifest.json</code> and <code>catalog.json</code> file in the target directory.</p>
 <p><img src="http://localhost:2368/content/images/2023/12/dbt3.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p>To view the documentation, you need to serve it locally using the following command:</p>
 <pre><code class="language-shell">dbt docs serve
 </code></pre>
 <p><img src="http://localhost:2368/content/images/2023/12/dbt4.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
+<p>By default, this will start a local server at <a href="http://localhost:8080">http://localhost:8080</a> where you can view the documentation.</p>
 <p><img src="http://localhost:2368/content/images/2023/12/2525.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="models">models</h3>
 <p>Create models and define transformations:</p>
@@ -100,23 +104,33 @@ touch point_of_interest_1.sql
 cd .. 
 </code></pre>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="build-the-project">Build the project:</h3>
+<p>The following command runs a series of tasks to build your models, including running models, tests, and snapshots. This command essentially combines the functionality of <code>dbt run</code>, <code>dbt test</code>, and <code>dbt snapshot</code>.</p>
+<p>The dbt build command will perform the following tasks:</p>
+<ol>
+<li><strong>Run Models</strong>: Executes SQL scripts to create views or tables based on your model definitions.</li>
+<li><strong>Run Tests</strong>: Executes tests defined in your project to validate data quality and integrity.</li>
+<li><strong>Run Snapshots</strong>: Executes snapshot scripts to capture and store historical data.</li>
+</ol>
 <pre><code class="language-shell">dbt build
 </code></pre>
 <p><img src="http://localhost:2368/content/images/2023/12/dbt5.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <p>The tables and views defined are now generated in ClickHouse DB.</p>
 <pre><code class="language-shell">dbt docs generate
-dbt docs serve
+</code></pre>
+<pre><code class="language-shell">dbt docs serve
 </code></pre>
 <p>Lineage Graph and other details.</p>
 <p><img src="http://localhost:2368/content/images/2023/12/25252.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="dagster-integration">Dagster Integration</h3>
 <p>Now, let&apos;s integrate Dagster into our data transformation pipeline:</p>
 <pre><code class="language-shell">cd dbt_data_practitioner
-dagster-dbt project scaffold --project-name dagster_data_practitioner
+</code></pre>
+<pre><code class="language-shell">dagster-dbt project scaffold --project-name dagster_data_practitioner
 </code></pre>
 <p><img src="http://localhost:2368/content/images/2023/12/dag1.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <pre><code class="language-shell">cd dagster_data_practitioner
-DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
+</code></pre>
+<pre><code class="language-shell">DAGSTER_DBT_PARSE_PROJECT_ON_LOAD=1 dagster dev
 </code></pre>
 <p><img src="http://localhost:2368/content/images/2023/12/dag2-1.png" alt="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster" loading="lazy"></p>
 <p>To access the Dagster UI from your browser, navigate to: <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a></p>
