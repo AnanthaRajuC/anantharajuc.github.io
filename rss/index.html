@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sat, 15 Jun 2024 19:23:23 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sat, 15 Jun 2024 20:15:19 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2024/06/streaming_etl.png" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="code-and-documentation">Code and Documentation</h3>
 <p>The complete code for this data pipeline, along with detailed documentation of all steps, is available on <a href="https://github.com/AnanthaRajuC/Streaming-ETL-Pipeline-for-Realtime-Analytics">GitHub</a>.</p>
@@ -1066,47 +1066,50 @@ Removing ksqldb-server      ... done
 <p><em>Description:</em> Record and share terminal sessions with asciinema. This free and open-source solution captures terminal activity and allows you to share it on the web, making it an excellent tool for creating tutorials and demonstrating workflows.</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>Utilize these resources to enhance your software development process, stay entertained, and connect with the community. Whether you need tools for presentations, community support, or comprehensive documentation solutions, these platforms provide the necessary support to help you succeed in your projects.</p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Change Data Capture (CDC) - MySQL]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of Change Data Capture (CDC) with MySQL.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Change Data Capture (CDC) - MySQL]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<p>Change Data Capture (CDC) is a powerful process that tracks and captures changes made to data in a database, delivering those changes in real-time to downstream processes or systems. This capability is crucial for maintaining data consistency across distributed systems, enabling real-time analytics, and more.</p>
+<p>In this post, we</p>]]></description><link>http://localhost:2368/change-data-capture-cdc-mysql/</link><guid isPermaLink="false">63567eb675328d2010ba2658</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 24 Oct 2022 12:08:33 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
+<img src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Change Data Capture (CDC) - MySQL"><p>Change Data Capture (CDC) is a powerful process that tracks and captures changes made to data in a database, delivering those changes in real-time to downstream processes or systems. This capability is crucial for maintaining data consistency across distributed systems, enabling real-time analytics, and more.</p>
+<p>In this post, we will briefly document the process of setting up CDC with MySQL using various tools such as Docker, Kafka, and Debezium.</p>
+<h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<p>Before we get started, ensure you have the following software installed on your machine:</p>
 <ul>
-<li><a href="https://www.docker.com/">Docker</a></li></ul>]]></description><link>http://localhost:2368/change-data-capture-cdc-mysql/</link><guid isPermaLink="false">63567eb675328d2010ba2658</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 24 Oct 2022 12:08:33 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Change Data Capture (CDC) - MySQL"><p>This post briefly documents the process of Change Data Capture (CDC) with MySQL.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
-<ul>
-<li><a href="https://www.docker.com/">Docker</a> (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)</li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
-<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
-<li><a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> or on any other MySQL database client/console.</li>
+<li><a href="https://www.docker.com/">Docker</a>: Used to containerize applications (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)</li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a>: A tool for defining and running multi-container Docker applications.</li>
+<li><a href="https://www.mysql.com/">MySQL</a> Database: : The relational database management system.</li>
+<li><a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a>: Or on any other MySQL database client/console.</li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysqlcnf-mysql-database-configuration">mysql.cnf MySQL database configuration</h3>
+<h3 id="mysql-configuration-mysqlcnf">MySQL Configuration (<code>mysql.cnf</code>)</h3>
+<p>To enable CDC on your MySQL database, you need to configure the MySQL server appropriately. Here&#x2019;s an example of what your mysql.cnf file should look like:</p>
 <pre><code class="language-txt">[mysqld]
 server-id         = 223344
 log_bin           = mysql-bin
 expire_logs_days  = 1
 binlog_format     = row
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project-setup">Sample Project Setup</h4>
-<ol>
-<li>Clone the repository</li>
-</ol>
-<pre><code class="language-shell">$ git clone https://github.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL.git
-$ cd Streaming_ETL_pipeline_MySQL
+<ul>
+<li><code>server-id</code>: A unique identifier for the server.</li>
+<li><code>log_bin</code>: Enables binary logging.</li>
+<li><code>expire_logs_days</code>: Specifies the number of days to retain binary logs.</li>
+<li><code>binlog_format</code>: Sets the binary log format to &apos;row&apos;, which is necessary for CDC.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="sample-project-setup">Sample Project Setup</h3>
+<p>Follow these steps to set up the CDC environment</p>
+<p><strong>1. Clone the repository</strong></p>
+<p>First, clone the repository containing the project setup:</p>
+<pre><code class="language-shell">git clone https://github.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL.git
+cd Streaming_ETL_pipeline_MySQL
 </code></pre>
-<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
-<ol start="2">
-<li>Pull all required docker images</li>
-</ol>
-<pre><code class="language-shell">$ docker compose -f docker-compose.yaml pull
+<h3 id="running-the-application-via-docker-compose">Running the application via docker compose</h3>
+<p><strong>2. Pull all required docker images</strong></p>
+<p>Pull all the necessary Docker images defined in the Docker Compose file:</p>
+<pre><code class="language-shell">docker compose -f docker-compose.yaml pull
 </code></pre>
-<ol start="3">
-<li>Start up the environment</li>
-</ol>
-<p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
-<pre><code class="language-shell">$ docker compose -f docker-compose.yaml up
+<p><strong>3. Start up the environment</strong></p>
+<p>Start the Docker containers. The first time you do this, the images will be downloaded from the remote server, which may take some time:</p>
+<pre><code class="language-shell">docker compose -f docker-compose.yaml up
 </code></pre>
+<p>You should see output indicating that various services are being created and started:</p>
 <pre><code class="language-shell">Creating network &quot;streaming_etl_pipeline_mysql_webproxy&quot; with driver &quot;bridge&quot;
 Creating zookeeper ... done
 Creating kafka     ... done
@@ -1116,36 +1119,33 @@ Creating kafka-connect-01   ... done
 Creating ksqldb-server      ... done
 Creating ksqldb-cli         ... done
 </code></pre>
-<h4 id="accessing-kafka-topics-via-kakfka-ui">Accessing Kafka Topics via Kakfka-UI</h4>
-<ol start="4">
-<li>Optionally, start <a href="https://github.com/provectus/kafka-ui">Kafka UI</a>, an open-source web UI for Apache Kafka Management</li>
-</ol>
-<pre><code class="language-shell">$ docker run --name=kafka-ui --network=streaming_etl_pipeline_mysql_webproxy -p 8080:8080 -e KAFKA_CLUSTERS_0_NAME=local -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 -d provectuslabs/kafka-ui:latest
+<p><strong>4. Accessing Kafka Topics via Kakfka-UI</strong></p>
+<p>Optionally, start <a href="https://github.com/provectus/kafka-ui">Kafka UI</a>, an open-source web UI for Apache Kafka Management</p>
+<pre><code class="language-shell">docker run --name=kafka-ui --network=streaming_etl_pipeline_mysql_webproxy -p 8080:8080 -e KAFKA_CLUSTERS_0_NAME=local -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 -d provectuslabs/kafka-ui:latest
 </code></pre>
-<p>URL to access Kakfka-UI console: <strong><a href="http://localhost:8080">http://localhost:8080</a></strong></p>
+<p>Access the Kafka-UI console at: <strong><a href="http://localhost:8080">http://localhost:8080</a></strong></p>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/04-kafka-topics-before-debezium.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<ol start="5">
-<li>Make sure everything is up and running</li>
-</ol>
-<pre><code class="language-shell">$ docker ps
+<p><strong>5. Verify Everything is Running</strong></p>
+<p>Ensure all containers are up and running:</p>
+<pre><code class="language-shell">docker ps
 </code></pre>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/09-docker-ps.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>IMPORTANT: If any components do not show &quot;Up&quot; under the <code>Status</code> column (e.g., they say &quot;Exit&quot;) then you must rectify this before continuing.<br>
-As a first solution, try re-issuing the <code>docker-compose up -d</code> command.</p>
-<h4 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h4>
-<ol start="6">
-<li>Launch the KSQL CLI in another terminal window.</li>
-</ol>
-<pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
+<p><strong>IMPORTANT:</strong> If any components do not show &quot;Up&quot; under the <code>Status</code> column (e.g., they say &quot;Exit&quot;) then you must rectify this before continuing. As a first solution, try re-issuing the <code>docker-compose up -d</code> command.</p>
+<p><strong>6. Access ksqlDB via ksqlDB-CLI</strong></p>
+<p>Launch the KSQL CLI in another terminal window.</p>
+<pre><code class="language-shell">docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
 </code></pre>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/10-ksql-db-initial.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<h2 id="tear-down-the-stack">Tear down the stack</h2>
-<pre><code class="language-shell">$ docker stop kafka-ui
-
-$ docker rm kafka-ui
+<h4 id="tear-down-the-stack">Tear down the stack</h4>
+<p>To stop and remove the containers, run:</p>
+<pre><code class="language-shell">docker stop kafka-ui
 </code></pre>
-<pre><code class="language-shell">$ docker compose -f docker-compose.yaml down
+<pre><code class="language-shell">docker rm kafka-ui
 </code></pre>
+<p>Then, bring down the rest of the environment:</p>
+<pre><code class="language-shell">docker compose -f docker-compose.yaml down
+</code></pre>
+<p>You should see output indicating that the containers are being stopped and removed:</p>
 <pre><code class="language-shell">Stopping ksqldb-cli       ... done
 Stopping ksqldb-server    ... done
 Stopping kafka-connect-01 ... done
@@ -1162,17 +1162,11 @@ Removing zookeeper          ... done
 Removing network streaming_etl_pipeline_mysql_webproxy
 </code></pre>
 <p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="initial-mysql-preparation">Initial MySQL preparation</h2>
-<p>Initial Data setup.</p>
-<details open="open">
-	<ul>
-		<li><a href="#mysql">MySQL</a></li>
-	</ul>
-</details>
-<h3 id="mysql">MySQL</h3>
-<ul>
-<li>Declare schema, user and permissions.</li>
-</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="initial-mysql-preparation">Initial MySQL preparation</h4>
+<p>To get started with our MySQL database, we&apos;ll set up the initial schema, tables, and populate them with sample data. This preparation is crucial for ensuring that our database is ready for further development and integration.</p>
+<h4 id="mysql">MySQL</h4>
+<p><strong>1. Declare schema, user and permissions.</strong></p>
+<p>First, create a new schema and user, then grant the necessary permissions to the user.</p>
 <pre><code class="language-sql">-- create schema
 CREATE SCHEMA streaming_etl_db;
 
@@ -1188,10 +1182,10 @@ GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *
 -- Reload the grant tables in the mysql database enabling the changes to take effect without reloading or restarting mysql service
 FLUSH PRIVILEGES;
 </code></pre>
-<ul>
-<li>Declare Tables</li>
-</ul>
-<pre><code class="language-sql">CREATE TABLE `geo` (
+<p><strong>2. Create Tables</strong></p>
+<p>Next, create the tables for storing geographical data, addresses, and personal information. Each table includes fields and constraints tailored to the data it will store.</p>
+<pre><code class="language-sql">-- Table for geographical data
+CREATE TABLE `geo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
   `uuid` VARCHAR(50) DEFAULT (uuid()),
   `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
@@ -1201,7 +1195,8 @@ FLUSH PRIVILEGES;
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT=&apos;Application Log.&apos;;
 </code></pre>
-<pre><code class="language-sql">CREATE TABLE `address` (
+<pre><code class="language-sql">-- Table for addresses
+CREATE TABLE `address` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
   `uuid` VARCHAR(50) DEFAULT (uuid()),
   `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
@@ -1215,7 +1210,8 @@ FLUSH PRIVILEGES;
   CONSTRAINT `FKC_geo_id` FOREIGN KEY (`geo_id`) REFERENCES `geo` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 </code></pre>
-<pre><code class="language-sql">CREATE TABLE `person` (
+<pre><code class="language-sql">-- Table for personal information
+CREATE TABLE `person` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
   `uuid` VARCHAR(50) DEFAULT (uuid()),
   `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
@@ -1232,25 +1228,36 @@ FLUSH PRIVILEGES;
   CONSTRAINT `FKC_address_id` FOREIGN KEY (`address_id`) REFERENCES `address` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 </code></pre>
-<ul>
-<li>Sample Data</li>
-</ul>
-<pre><code class="language-sql">INSERT INTO `streaming_etl_db`.`geo`(`lat`,`lng`)VALUES(&apos;la14&apos;,&apos;lo14&apos;);
+<p><strong>3. Insert Sample Data</strong></p>
+<p>Populate the tables with some sample data to verify the structure and relationships.</p>
+<pre><code class="language-sql">-- Insert sample data into geo table
+INSERT INTO `streaming_etl_db`.`geo`(`lat`,`lng`)VALUES(&apos;la14&apos;,&apos;lo14&apos;);
+
+-- Insert sample data into address table
 INSERT INTO `streaming_etl_db`.`address`(`city`,`zipcode`,`state`,`geo_id`)VALUES(&apos;c14&apos;,&apos;z14&apos;,&apos;s14&apos;,1);
+
+-- Insert sample data into person table
 INSERT INTO `streaming_etl_db`.`person`(`first_name`,`last_name`,`email`,`gender`,`registration`,`age`,`address_id`)VALUES(&apos;fn14&apos;,&apos;ln14&apos;,&apos;example@domain.com&apos;,&apos;M&apos;,now(),34,1);
 </code></pre>
-<ul>
-<li>Select Statement</li>
-</ul>
-<pre><code class="language-sql">SELECT * 
+<p><strong>4. Select Statements</strong></p>
+<p>Retrieve data from the tables to ensure everything is set up correctly.</p>
+<pre><code class="language-sql">-- Join query to retrieve data from person, address, and geo tables
+SELECT * 
 FROM streaming_etl_db.person p
 LEFT JOIN streaming_etl_db.address a on a.id = p.address_id
 LEFT JOIN streaming_etl_db.geo g on g.id = a.geo_id;
 </code></pre>
-<pre><code class="language-sql">SELECT * FROM streaming_etl_db.person;
+<pre><code class="language-sql">-- Select all data from person table
+SELECT * FROM streaming_etl_db.person;
+
+-- Select all data from address table
 SELECT * FROM streaming_etl_db.address;
 </code></pre>
+<p>By following these steps, you will have a fully prepared MySQL database with the necessary schema, tables, and sample data. This setup will serve as a foundation for further development and data integration.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="debezium-registration">Debezium Registration</h3>
+<p>In this section, we&apos;ll set up and register the Debezium connector to monitor changes in our MySQL database and stream them to Kafka. Debezium is an open-source distributed platform for change data capture (CDC).</p>
+<p><strong>Registering the Debezium Connector</strong></p>
+<p>To register the Debezium connector, use the following curl command.</p>
 <pre><code class="language-shell">curl -i -X POST -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; 127.0.0.1:8083/connectors/ -d &apos;{
   &quot;name&quot;: &quot;streaming_ETL_pipeline_MySQL-connector&quot;,
   &quot;config&quot;: {
@@ -1279,39 +1286,77 @@ SELECT * FROM streaming_etl_db.address;
   }
 }&apos;
 </code></pre>
+<p>This command will:</p>
+<ul>
+<li>Create a new connector named streaming_ETL_pipeline_MySQL-connector.</li>
+<li>Configure it to monitor the streaming_etl_db schema on the MySQL instance.</li>
+<li>Stream the change data to a Kafka topic named mysql-streaming_etl_db-person.</li>
+</ul>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/01-debezium-registration.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>After Debezium registration.</p>
+<p>After registering the Debezium connector, you can check the status and information of the connectors.</p>
+<p><strong>Checking Connector Status</strong><br>
+To verify the status of the connectors, visit:</p>
 <p><a href="http://localhost:8083/connectors?expand=info&amp;expand=status">http://localhost:8083/connectors?expand=info&amp;expand=status</a></p>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/02-debezium-connectors.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<p>To check the status of the specific Debezium connector, visit:</p>
 <p><a href="http://localhost:8083/connectors/streaming_ETL_pipeline_MySQL-connector/status">http://localhost:8083/connectors/streaming_ETL_pipeline_MySQL-connector/status</a></p>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/03-debezium-connector-status.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>Kafka UI</p>
+<p><strong>Kafka UI</strong></p>
+<p>You can also use the Kafka UI to inspect the topics and messages being streamed. Visit the Kafka UI at:</p>
 <p><a href="http://localhost:8080">http://localhost:8080</a></p>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/05-kafka-topics-after-registration.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
-<p>Person Topic</p>
+<p><strong>Viewing the Person Topic</strong></p>
+<p>Finally, check the messages in the person topic to ensure data is being streamed correctly:</p>
 <p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/06-kafka-topic-message.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
-<h3 id="ksqldb">ksqlDB</h3>
-<ul>
-<li>Check topics, streams and tables</li>
-</ul>
-<pre><code class="language-sql">show topics;
-show streams;
-show tables;
-</code></pre>
-<h3 id="streams">Streams</h3>
-<ul>
-<li>Declare Streams</li>
-</ul>
-<pre><code class="language-sql">SET &apos;auto.offset.reset&apos; = &apos;earliest&apos;;
-</code></pre>
-<pre><code class="language-sql">CREATE STREAM PERSON_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+<p>In this section, we will explore how to access and use ksqlDB via the ksqlDB-CLI to interact with Kafka topics, create streams, perform stream-stream joins, and finally, sink the enriched stream back to MySQL.</p>
+<p><strong>Checking Topics, Streams, and Tables</strong><br>
+Start by checking the available topics, streams, and tables in ksqlDB.</p>
+<pre><code class="language-sql">-- Display available topics
+SHOW TOPICS;
 
-CREATE STREAM ADDRESS_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-</code></pre>
-<pre><code class="language-sql">SELECT * FROM PERSON_STREAM EMIT CHANGES LIMIT 1;
+-- Display available streams
+SHOW STREAMS;
 
-+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+-- Display available tables
+SHOW TABLES;
+</code></pre>
+<p><strong>Declaring Streams</strong><br>
+To begin processing data, declare the necessary streams. Set the offset to the earliest to ensure you capture all existing messages.</p>
+<pre><code class="language-sql">-- Set offset to the earliest
+SET &apos;auto.offset.reset&apos; = &apos;earliest&apos;;
+</code></pre>
+<p>Create streams to capture data from the Kafka topics corresponding to the MySQL tables.</p>
+<pre><code class="language-sql">-- Create stream for the person topic
+CREATE STREAM PERSON_STREAM (
+  id BIGINT,
+  uuid VARCHAR,
+  created_date_time TIMESTAMP,
+  last_modified_date_time TIMESTAMP,
+  name VARCHAR,
+  username VARCHAR,
+  address_id BIGINT
+) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;, VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<pre><code class="language-sql">-- Create stream for the address topic
+CREATE STREAM ADDRESS_STREAM (
+  id BIGINT,
+  uuid VARCHAR,
+  created_date_time TIMESTAMP,
+  last_modified_date_time TIMESTAMP,
+  city VARCHAR,
+  street VARCHAR,
+  suite VARCHAR,
+  zipcode VARCHAR,
+  geo_id BIGINT
+) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;, VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<p><strong>Querying Streams</strong><br>
+Retrieve data from the streams to ensure they are correctly set up.</p>
+<pre><code class="language-sql">-- Select a single record from the PERSON_STREAM
+SELECT * FROM PERSON_STREAM EMIT CHANGES LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
 |ID                       |UUID                     |CREATED_DATE_TIME        |LAST_MODIFIED_DATE_TIME  |NAME                     |USERNAME                 |ADDRESS_ID               |
 +-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
 |1                        |ce8d2120-1f93-11ed-8647-0|2022-08-19T13:22:00.000  |2022-08-19T13:22:00.000  |d14                      |dbz14                    |1                        |
@@ -1319,66 +1364,109 @@ CREATE STREAM ADDRESS_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP
 Limit Reached
 Query terminated
 </code></pre>
-<pre><code class="language-sql">DESCRIBE PERSON_STREAM;
-select * from PERSON_STREAM;
+<p>Describe the stream to get details about its schema.</p>
+<pre><code class="language-sql">-- Describe the PERSON_STREAM
+DESCRIBE PERSON_STREAM;
+
+-- Select all records from PERSON_STREAM
+SELECT * FROM PERSON_STREAM;
 </code></pre>
-<ul>
-<li>stream-stream join</li>
-</ul>
-<pre><code class="language-sql">CREATE STREAM PERSON_ADDRESS_ENRICHED_STREAM WITH (FORMAT=&apos;JSON&apos;, KAFKA_TOPIC=&apos;person_address_enriched&apos;, PARTITIONS=1, REPLICAS=1) AS 
+<p><strong>Stream-Stream Join</strong><br>
+Perform a join between the <code>PERSON_STREAM</code> and <code>ADDRESS_STREAM</code> to create an enriched stream combining data from both.</p>
+<pre><code class="language-sql">-- Create an enriched stream by joining PERSON_STREAM and ADDRESS_STREAM
+CREATE STREAM PERSON_ADDRESS_ENRICHED_STREAM WITH (
+FORMAT=&apos;JSON&apos;, 
+KAFKA_TOPIC=&apos;person_address_enriched&apos;, 
+PARTITIONS=1, 
+REPLICAS=1
+) AS 
 SELECT
   P.ID P_ID,
   A.ID A_ID,
   P.NAME NAME,
   A.CITY CITY
 FROM PERSON_STREAM P
-LEFT OUTER JOIN ADDRESS_STREAM A WITHIN 1 HOURS GRACE PERIOD 30 MINUTES ON ((A.ID = P.ADDRESS_ID))
+LEFT OUTER JOIN ADDRESS_STREAM A WITHIN 1 HOURS GRACE PERIOD 30 MINUTES 
+ON ((A.ID = P.ADDRESS_ID))
 EMIT CHANGES;
 </code></pre>
-<h3 id="kafka-sink-mysql-db">Kafka Sink MySQL DB</h3>
-<pre><code class="language-sql">CREATE SINK CONNECTOR SINK_PERSON_ADDRESS_ENRICHED_STREAM WITH (
-    &apos;connector.class&apos;                     = &apos;io.confluent.connect.jdbc.JdbcSinkConnector&apos;,
-    &apos;connection.url&apos;                      = &apos;jdbc:mysql://172.17.0.1:3306/&apos;,
-    &apos;connection.user&apos;                     = &apos;debezium&apos;,
-    &apos;connection.password&apos;                 = &apos;Debezium@123#&apos;,
-    &apos;topics&apos;                              = &apos;PERSON_ADDRESS_ENRICHED_STREAM&apos;,
-    &apos;key.converter&apos;						            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,	
-	  &apos;key.converter.schemas.enable&apos;		    = &apos;false&apos;,
-	  &apos;value.converter&apos;					            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,
-	  &apos;value.converter.schemas.enable&apos;      = &apos;false&apos;
+<h4 id="kafka-sink-mysql-db">Kafka Sink MySQL DB</h4>
+<p>Finally, create a sink connector to write the enriched stream back to the MySQL database.</p>
+<pre><code class="language-sql">-- Create a sink connector for the enriched stream
+CREATE SINK CONNECTOR SINK_PERSON_ADDRESS_ENRICHED_STREAM WITH (
+  &apos;connector.class&apos;            = &apos;io.confluent.connect.jdbc.JdbcSinkConnector&apos;,
+  &apos;connection.url&apos;             = &apos;jdbc:mysql://172.17.0.1:3306/&apos;,
+  &apos;connection.user&apos;            = &apos;debezium&apos;,
+  &apos;connection.password&apos;        = &apos;Debezium@123#&apos;,
+  &apos;topics&apos;                     = &apos;PERSON_ADDRESS_ENRICHED_STREAM&apos;,
+  &apos;key.converter&apos;              = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,
+  &apos;key.converter.schemas.enable&apos; = &apos;false&apos;,
+  &apos;value.converter&apos;            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,
+  &apos;value.converter.schemas.enable&apos; = &apos;false&apos;
 );
 </code></pre>
+<p>By following these steps, you can access ksqlDB via the ksqlDB-CLI, create and query streams, perform joins, and sink the enriched data back to MySQL.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
-<h3 id="ksqldb">ksqlDB</h3>
-<ul>
-<li>Check topics, streams and tables</li>
-</ul>
-<pre><code class="language-sql">show topics;
-show streams;
-show tables;
-</code></pre>
-<h3 id="tables">Tables</h3>
-<ul>
-<li>Declare Tables</li>
-</ul>
-<pre><code class="language-sql">CREATE TABLE PERSON (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+<p>In this section, we&apos;ll delve into how to access ksqlDB using the ksqlDB-CLI, focusing on creating and querying tables, and performing joins.</p>
+<p><strong>Checking Topics, Streams, and Tables</strong><br>
+Start by listing the available topics, streams, and tables in your ksqlDB environment to ensure you have everything set up correctly.</p>
+<pre><code class="language-sql">-- Display available topics
+SHOW TOPICS;
 
-CREATE TABLE ADDRESS (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
-</code></pre>
-<pre><code class="language-sql">SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
+-- Display available streams
+SHOW STREAMS;
 
+-- Display available tables
+SHOW TABLES;
+</code></pre>
+<p><strong>Declaring Tables</strong><br>
+Next, declare tables to represent your Kafka topics in ksqlDB. These tables will enable you to perform SQL-like queries on streaming data.</p>
+<pre><code class="language-sql">-- Create table for the person topic
+CREATE TABLE PERSON (
+  id BIGINT PRIMARY KEY,
+  uuid VARCHAR,
+  created_date_time TIMESTAMP,
+  last_modified_date_time TIMESTAMP,
+  name VARCHAR,
+  username VARCHAR,
+  address_id BIGINT
+) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;, VALUE_FORMAT=&apos;JSON&apos;);
+
+-- Create table for the address topic
+CREATE TABLE ADDRESS (
+  id BIGINT PRIMARY KEY,
+  uuid VARCHAR,
+  created_date_time TIMESTAMP,
+  last_modified_date_time TIMESTAMP,
+  city VARCHAR,
+  street VARCHAR,
+  suite VARCHAR,
+  zipcode VARCHAR,
+  geo_id BIGINT
+) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;, VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<p><strong>Querying Tables</strong><br>
+Retrieve data from the tables to verify that they are correctly set up and ingesting data from the corresponding Kafka topics.</p>
+<pre><code class="language-sql">-- Select a single record from the PERSON table
+SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
+
+-- Select a single record from the ADDRESS table
 SELECT * FROM ADDRESS EMIT CHANGES LIMIT 1;
 </code></pre>
-<p>Joins</p>
-<pre><code class="language-sql">SELECT 
-	P.NAME,
-	A.CITY
+<p><strong>Performing Joins</strong><br>
+Join the <strong>PERSON</strong> and <strong>ADDRESS</strong> tables to enrich the data, combining fields from both tables based on a common key.</p>
+<pre><code class="language-sql">-- Perform a left join between PERSON and ADDRESS tables
+SELECT 
+  P.NAME,
+  A.CITY
 FROM PERSON P
-LEFT JOIN ADDRESS A on A.id = P.address_id
+LEFT JOIN ADDRESS A 
+ON A.id = P.address_id
 EMIT CHANGES 
 LIMIT 1;
 </code></pre>
-<pre><code class="language-sql">SELECT 
+<pre><code class="language-sql">-- Perform an inner join between PERSON and ADDRESS tables
+SELECT 
   P.NAME, 
   A.CITY
 FROM PERSON P
@@ -1387,13 +1475,25 @@ ON A.id = P.address_id
 EMIT CHANGES
 LIMIT 1;
 </code></pre>
-<pre><code class="language-sql">CREATE TABLE PERSON_ADDRESS_ENRICHED (P_ID bigint,A_ID bigint,NAME VARCHAR,CITY VARCHAR) WITH (KAFKA_TOPIC=&apos;person_address_enriched&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+<p><strong>Creating Enriched Table</strong><br>
+Create a new table to store the results of the join, providing a persistent view of the enriched data.</p>
+<pre><code class="language-sql">-- Create a table for the enriched person and address data
+CREATE TABLE PERSON_ADDRESS_ENRICHED (
+  P_ID BIGINT,
+  A_ID BIGINT,
+  NAME VARCHAR,
+  CITY VARCHAR
+) WITH (KAFKA_TOPIC=&apos;person_address_enriched&apos;, VALUE_FORMAT=&apos;JSON&apos;);
 </code></pre>
-<ul>
-<li>Others</li>
-</ul>
-<pre><code class="language-sql">DROP TABLE IF EXISTS PERSON;
+<p><strong>Managing Tables</strong><br>
+You can also manage your tables by dropping them when they are no longer needed.</p>
+<pre><code class="language-sql">-- Drop the PERSON table if it exists
+DROP TABLE IF EXISTS PERSON;
 </code></pre>
+<p>By following these steps, you can effectively use ksqlDB to create and manage tables, perform joins, and enrich your streaming data, enabling powerful real-time data processing capabilities in your ETL pipeline.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="conclusion">Conclusion</h3>
+<p>In this tutorial, we walked through the process of setting up a streaming ETL pipeline using MySQL, Debezium, Kafka, and ksqlDB. We began by preparing our MySQL database with the necessary schema, tables, and sample data. Then, we registered the Debezium connector to monitor changes and stream them to Kafka. Using ksqlDB, we created and queried streams and tables, performed joins to enrich our data, and finally, sank the enriched data back into MySQL.</p>
+<p>By leveraging these powerful tools, you can build robust and scalable real-time data processing pipelines that enable you to respond to changes in your data as they happen. This setup provides a foundation for more complex stream processing tasks and opens up possibilities for real-time analytics, monitoring, and more.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Useful Websites/Services for Software Development]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>Discover a curated list of websites and services that can enhance your software development workflow. From platforms offering cloud services to tools for data analysis and design inspiration, these resources cover various aspects of the development lifecycle.</p>
 <h2 id="platform-as-a-service-paasfree-tier">Platform as a Service (PaaS - Free Tier)</h2>
 <ul>
