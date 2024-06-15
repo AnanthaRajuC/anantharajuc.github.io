@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 09 Jun 2024 12:36:28 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sat, 15 Jun 2024 13:38:08 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2024/06/streaming_etl.png" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="code-and-documentation">Code and Documentation</h3>
 <p>The complete code for this data pipeline, along with detailed documentation of all steps, is available on <a href="https://github.com/AnanthaRajuC/Streaming-ETL-Pipeline-for-Realtime-Analytics">GitHub</a>.</p>
@@ -430,12 +430,10 @@ report.show_html()
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2023/11/ubuntu_post_unstall_script.png" alt="Automating Your Ubuntu Setup: A Post-Installation Shell Script" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="conclusion">Conclusion</h3>
 <p>By leveraging the Ubuntu Post Install Script, you can expedite the setup process of your Ubuntu system, ensuring that it is configured according to your preferences and equipped with essential software packages. Embrace automation to enhance your productivity and make the most out of your Ubuntu experience.</p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Enhancing Your GNOME Experience with Essential Shell Extensions]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<p><a href="https://extensions.gnome.org/">GNOME Shell extensions</a> provide a powerful way to customize your GNOME desktop environment, tailoring it to your preferences and enhancing its functionality. Here, i&#x2019;ve compiled a list of some of useful GNOME Shell extensions that can improve your user experience.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[List: Gnome Shell Extensions, IntelliJ IDEA Plugins]]></title><description><![CDATA[<div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" id="gnome-shell-extensions">Gnome Shell Extensions</h2></div><!--kg-card-begin: markdown--><p><a href="https://extensions.gnome.org/">GNOME Shell extensions</a> provide a powerful way to customize your GNOME desktop environment, tailoring it to your preferences and enhancing its functionality. Here, i&#x2019;ve compiled a list of some of useful GNOME Shell extensions that can improve your user experience.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="extensions">Extensions</h4>
 <p><strong><a href="https://gitlab.com/arcmenu/ArcMenu" target="_blank">ArcMenu</a></strong></p>
-<p><strong>Description:</strong> ArcMenu is a customizable</p>]]></description><link>http://localhost:2368/gnome-shell-extensions/</link><guid isPermaLink="false">6382ec72f99fa23f8440d39f</guid><category><![CDATA[Tools]]></category><category><![CDATA[Linux]]></category><category><![CDATA[Lists]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 27 Nov 2022 05:25:15 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1584974414562-cc750a809485?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxFeHRlbnNpb258ZW58MHx8fHwxNjY5NTI0NjAx&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
-<img src="https://images.unsplash.com/photo-1584974414562-cc750a809485?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxFeHRlbnNpb258ZW58MHx8fHwxNjY5NTI0NjAx&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Enhancing Your GNOME Experience with Essential Shell Extensions"><p><a href="https://extensions.gnome.org/">GNOME Shell extensions</a> provide a powerful way to customize your GNOME desktop environment, tailoring it to your preferences and enhancing its functionality. Here, i&#x2019;ve compiled a list of some of useful GNOME Shell extensions that can improve your user experience.</p>
+<p><strong>Description:</strong> ArcMenu is</p>]]></description><link>http://localhost:2368/gnome-shell-extensions/</link><guid isPermaLink="false">6382ec72f99fa23f8440d39f</guid><category><![CDATA[Tools]]></category><category><![CDATA[Linux]]></category><category><![CDATA[Lists]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 27 Nov 2022 05:25:15 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1584974414562-cc750a809485?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxFeHRlbnNpb258ZW58MHx8fHwxNjY5NTI0NjAx&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" id="gnome-shell-extensions">Gnome Shell Extensions</h2></div><!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1584974414562-cc750a809485?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHxFeHRlbnNpb258ZW58MHx8fHwxNjY5NTI0NjAx&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins"><p><a href="https://extensions.gnome.org/">GNOME Shell extensions</a> provide a powerful way to customize your GNOME desktop environment, tailoring it to your preferences and enhancing its functionality. Here, i&#x2019;ve compiled a list of some of useful GNOME Shell extensions that can improve your user experience.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="extensions">Extensions</h4>
 <p><strong><a href="https://gitlab.com/arcmenu/ArcMenu" target="_blank">ArcMenu</a></strong></p>
 <p><strong>Description:</strong> ArcMenu is a customizable application menu for GNOME Shell, offering a modern and intuitive way to access your applications and system settings. It can be configured to resemble traditional application menus found in other desktop environments, making it ideal for users transitioning to GNOME.</p>
@@ -445,7 +443,7 @@ report.show_html()
 <li>Search functionality for quick access to applications</li>
 <li>Support for themes and icon packs</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/ArcMenu_Banner.png" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="1602" height="629" srcset="http://localhost:2368/content/images/size/w600/2022/11/ArcMenu_Banner.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/ArcMenu_Banner.png 1000w, http://localhost:2368/content/images/size/w1600/2022/11/ArcMenu_Banner.png 1600w, http://localhost:2368/content/images/2022/11/ArcMenu_Banner.png 1602w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/PRATAP-KUMAR/control-blur-effect-on-lock-screen" target="_blank">Control Blur Effect On Lock Screen</a></strong><br>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/ArcMenu_Banner.png" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="1602" height="629" srcset="http://localhost:2368/content/images/size/w600/2022/11/ArcMenu_Banner.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/ArcMenu_Banner.png 1000w, http://localhost:2368/content/images/size/w1600/2022/11/ArcMenu_Banner.png 1600w, http://localhost:2368/content/images/2022/11/ArcMenu_Banner.png 1602w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/PRATAP-KUMAR/control-blur-effect-on-lock-screen" target="_blank">Control Blur Effect On Lock Screen</a></strong><br>
 <strong>Description:</strong> This extension allows you to control the blur effect on the lock screen, providing a customizable aesthetic touch to your GNOME desktop. You can adjust the blur intensity to your liking, ensuring a perfect balance between style and readability.</p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -453,7 +451,7 @@ report.show_html()
 <li>Simple and straightforward configuration</li>
 <li>Enhances visual appeal of the lock screen</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot_2935_QPQQttf.png" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="1366" height="768" srcset="http://localhost:2368/content/images/size/w600/2022/11/screenshot_2935_QPQQttf.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/screenshot_2935_QPQQttf.png 1000w, http://localhost:2368/content/images/2022/11/screenshot_2935_QPQQttf.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/home-sweet-gnome/dash-to-panel" target="_blank">Dash to Panel</a></strong><br>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot_2935_QPQQttf.png" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="1366" height="768" srcset="http://localhost:2368/content/images/size/w600/2022/11/screenshot_2935_QPQQttf.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/screenshot_2935_QPQQttf.png 1000w, http://localhost:2368/content/images/2022/11/screenshot_2935_QPQQttf.png 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/home-sweet-gnome/dash-to-panel" target="_blank">Dash to Panel</a></strong><br>
 <strong>Description:</strong> Dash to Panel transforms your GNOME Shell dash into a unified taskbar, combining application launchers and the system tray into a single panel. This extension is perfect for users who prefer a more traditional desktop layout similar to Windows or KDE Plasma.</p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -461,7 +459,7 @@ report.show_html()
 <li>Highly customizable appearance and behavior</li>
 <li>Supports multi-monitor setups</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/dtp-main-p2.png" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="1294" height="397" srcset="http://localhost:2368/content/images/size/w600/2022/11/dtp-main-p2.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/dtp-main-p2.png 1000w, http://localhost:2368/content/images/2022/11/dtp-main-p2.png 1294w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/neffo/earth-view-wallpaper-gnome-extension" target="_blank">Google Earth Wallpaper</a></strong><br>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/dtp-main-p2.png" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="1294" height="397" srcset="http://localhost:2368/content/images/size/w600/2022/11/dtp-main-p2.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/dtp-main-p2.png 1000w, http://localhost:2368/content/images/2022/11/dtp-main-p2.png 1294w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/neffo/earth-view-wallpaper-gnome-extension" target="_blank">Google Earth Wallpaper</a></strong><br>
 <strong>Description:</strong> Bring the beauty of the world to your desktop with the Google Earth Wallpaper extension. This extension sets your wallpaper to a random, high-quality photo from the curated Google Earth collection, ensuring your background is always stunning and unique.</p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -469,7 +467,7 @@ report.show_html()
 <li>High-resolution images</li>
 <li>Option to manually refresh the wallpaper</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot_1295.jpg" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="1920" height="1080" srcset="http://localhost:2368/content/images/size/w600/2022/11/screenshot_1295.jpg 600w, http://localhost:2368/content/images/size/w1000/2022/11/screenshot_1295.jpg 1000w, http://localhost:2368/content/images/size/w1600/2022/11/screenshot_1295.jpg 1600w, http://localhost:2368/content/images/2022/11/screenshot_1295.jpg 1920w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://gitlab.com/skrewball/openweather" target="_blank">OpenWeather</a></strong><br>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot_1295.jpg" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="1920" height="1080" srcset="http://localhost:2368/content/images/size/w600/2022/11/screenshot_1295.jpg 600w, http://localhost:2368/content/images/size/w1000/2022/11/screenshot_1295.jpg 1000w, http://localhost:2368/content/images/size/w1600/2022/11/screenshot_1295.jpg 1600w, http://localhost:2368/content/images/2022/11/screenshot_1295.jpg 1920w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://gitlab.com/skrewball/openweather" target="_blank">OpenWeather</a></strong><br>
 <strong>Description:</strong> Stay updated with real-time weather information directly on your GNOME Shell with the OpenWeather extension. It displays weather data for any location worldwide, offering detailed forecasts and current conditions.</p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -477,7 +475,7 @@ report.show_html()
 <li>Supports multiple locations</li>
 <li>Detailed weather information including temperature, humidity, and wind speed</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/openweather-screenshot.png" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="1674" height="1202" srcset="http://localhost:2368/content/images/size/w600/2022/11/openweather-screenshot.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/openweather-screenshot.png 1000w, http://localhost:2368/content/images/size/w1600/2022/11/openweather-screenshot.png 1600w, http://localhost:2368/content/images/2022/11/openweather-screenshot.png 1674w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/kazysmaster/gnome-shell-extension-lockkeys" target="_blank">Lock Keys</a></strong><br>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/openweather-screenshot.png" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="1674" height="1202" srcset="http://localhost:2368/content/images/size/w600/2022/11/openweather-screenshot.png 600w, http://localhost:2368/content/images/size/w1000/2022/11/openweather-screenshot.png 1000w, http://localhost:2368/content/images/size/w1600/2022/11/openweather-screenshot.png 1600w, http://localhost:2368/content/images/2022/11/openweather-screenshot.png 1674w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://github.com/kazysmaster/gnome-shell-extension-lockkeys" target="_blank">Lock Keys</a></strong><br>
 <strong>Description:</strong> The Lock Keys extension displays the status of Numlock and Capslock on the GNOME panel, providing a convenient way to check if these keys are active. This is especially useful for users who frequently switch between text and numeric input.</p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -485,7 +483,7 @@ report.show_html()
 <li>Simple and unobtrusive design</li>
 <li>Essential for users with keyboards lacking LED indicators</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot.png" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="240" height="170"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://gitlab.gnome.org/World/ShellExtensions/desktop-icons" target="_blank">Desktop Icons</a></strong><br>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot.png" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="240" height="170"></figure><!--kg-card-begin: markdown--><p><strong><a href="https://gitlab.gnome.org/World/ShellExtensions/desktop-icons" target="_blank">Desktop Icons</a></strong><br>
 <strong>Description:</strong> The Desktop Icons extension brings back the ability to add and manage icons on your desktop, a feature that is missing in the default GNOME Shell. This extension is perfect for users who prefer to have quick access to files, folders, and applications directly from their desktop.</p>
 <p><strong>Features:</strong></p>
 <ul>
@@ -493,8 +491,28 @@ report.show_html()
 <li>Support for dragging and dropping files</li>
 <li>Customizable icon placement</li>
 </ul>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot_1465_2g841mr.png" class="kg-image" alt="Enhancing Your GNOME Experience with Essential Shell Extensions" loading="lazy" width="224" height="227"></figure><!--kg-card-begin: markdown--><h3 id="conclusion">Conclusion</h3>
-<p>With these GNOME Shell extensions, you can significantly enhance your GNOME desktop environment, making it more functional and personalized to suit your needs. Whether you&apos;re looking for aesthetic improvements, productivity boosts, or additional features, these extensions have got you covered.</p>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2022/11/screenshot_1465_2g841mr.png" class="kg-image" alt="List: Gnome Shell Extensions, IntelliJ IDEA Plugins" loading="lazy" width="224" height="227"></figure><!--kg-card-begin: markdown--><p>With these GNOME Shell extensions, you can significantly enhance your GNOME desktop environment, making it more functional and personalized to suit your needs. Whether you&apos;re looking for aesthetic improvements, productivity boosts, or additional features, these extensions have got you covered.</p>
+<!--kg-card-end: markdown--><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" id="intellij-idea-plugins">IntelliJ IDEA Plugins</h2></div><!--kg-card-begin: markdown--><p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>: stands as a premier integrated development environment (IDE) crafted by JetBrains, designed to facilitate the creation of software using Java, Kotlin, Groovy, and other JVM-based languages. It comes in two editions: a community edition licensed under Apache 2 and a proprietary commercial edition. One of its most compelling features is its extensibility through plugins, which enrich its capabilities and tailor it to individual developer needs.</p>
+<h3 id="understanding-plugins">Understanding Plugins</h3>
+<p>Plugins are software extensions that augment the functionality of a program. In the realm of IntelliJ IDEA, they serve as indispensable tools, providing developers with additional features, productivity enhancements, and integration with external services.</p>
+<h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
+<ul>
+<li>To take advantage of these plugins, ensure you have <a href="https://www.jetbrains.com/idea/download/#section=linux">IntelliJ IDEA</a> installed on your system.</li>
+</ul>
+<h3 id="plugins">Plugins</h3>
+<p><strong><a href="https://github.com/andrey4623/intellij-rainbow-csv" target="_blank">Rainbow CSV</a></strong><br>
+<strong>Description:</strong> Rainbow CSV is a versatile plugin that enhances the readability of CSV files by highlighting them in different colors. This visual distinction makes it easier to interpret and manipulate large datasets, thereby improving productivity during data analysis and manipulation tasks.</p>
+<p><strong><a href="https://plugins.jetbrains.com/plugin/7973-sonarlint" target="_blank">SonarLint</a></strong><br>
+<strong>Description:</strong> SonarLint is a free IDE extension that acts as a guardian for your codebase, continuously analyzing it to detect and rectify bugs, vulnerabilities, and code smells in real-time. Similar to a spell checker, SonarLint identifies issues as you write code, offering quick fixes and actionable insights to ensure clean and robust code.</p>
+<p><strong><a href="https://github.com/robohorse/RoboPOJOGenerator" target="_blank">RoboPOJOGenerator</a></strong><br>
+<strong>Description:</strong> This indispensable plugin streamlines the process of transforming JSON data structures into Plain Old Java Objects (POJOs). Ideal for IntelliJ IDEA and Android Studio users, RoboPOJOGenerator automates the tedious task of manual POJO generation, saving developers valuable time and effort.</p>
+<p><strong><a href="https://github.com/gejun123456/intellij-generateAllSetMethod" target="_blank">intellij-generateAllSetMethod</a></strong><br>
+<strong>Description:</strong> Simplify the task of generating setter method calls for class properties with this intuitive IntelliJ IDEA plugin. By automating the creation of setter method invocations, it accelerates the development process and reduces the likelihood of manual errors.</p>
+<p><strong><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x" target="_blank">Key Promoter X</a></strong><br>
+<strong>Description:</strong> Mastering keyboard shortcuts is key to efficient coding, and Key Promoter X is here to help. This plugin facilitates the learning process by displaying keyboard shortcuts whenever you perform an action using the mouse within the IDE. By encouraging the use of keyboard shortcuts, it promotes a faster, mouse-free development workflow.</p>
+<p><strong><a href="https://plugins.jetbrains.com/plugin/7179-maven-helper" target="_blank">Maven Helper</a></strong><br>
+<strong>Description:</strong> Maven Helper is an indispensable tool for managing dependencies within your IntelliJ IDEA projects. It provides valuable insights into dependency conflicts, allowing you to analyze and exclude conflicting dependencies effortlessly. Additionally, it offers advanced features for optimizing Maven builds, ensuring smooth and efficient project development.</p>
+<p>IntelliJ IDEA plugins play a crucial role in enhancing productivity, streamlining development workflows, and empowering developers to write clean, efficient code. By incorporating IntelliJ IDEA plugins into your IntelliJ IDEA setup, you can unlock new capabilities, automate repetitive tasks.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Unlocking Data Visualization Brilliance with Apache Superset]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p>In this guide, we&apos;ll embark on an exploration of <a href="https://superset.apache.org/">Apache Superset</a>, a cutting-edge platform for data exploration and visualization. By leveraging Apache Superset, we empower users to uncover insights and communicate data stories effectively through stunning visualizations.</p>
 <p>&quot;Data and information visualization is an interdisciplinary field that</p>]]></description><link>http://localhost:2368/apache-superset/</link><guid isPermaLink="false">6370faedacb23e2fd22ca182</guid><category><![CDATA[Data]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 13 Nov 2022 14:16:20 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593806967876-4ad6cd0c5759?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fG1hbmRhbGF8ZW58MHx8fHwxNjY4MzQ4Nzk1&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
@@ -563,30 +581,6 @@ docker-compose -f docker-compose-non-dev.yml up
 <strong>Password</strong>: <code>root</code><br>
 <strong>Display Name</strong>: MySQL - LocalHost</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="http://localhost:2368/content/images/2023/12/1234.png" class="kg-image" alt="Unlocking Data Visualization Brilliance with Apache Superset" loading="lazy" width="1347" height="651" srcset="http://localhost:2368/content/images/size/w600/2023/12/1234.png 600w, http://localhost:2368/content/images/size/w1000/2023/12/1234.png 1000w, http://localhost:2368/content/images/2023/12/1234.png 1347w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>With Apache Superset, you unlock a world of possibilities for data exploration and visualization. Harness its capabilities to transform your data into actionable insights and captivating visualizations that drive informed decision-making and empower data-driven storytelling.</p>
-<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Maximizing Productivity with Essential IntelliJ IDEA Plugins]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
-<p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>: stands as a premier integrated development environment (IDE) crafted by JetBrains, designed to facilitate the creation of software using Java, Kotlin, Groovy, and other JVM-based languages. It comes in two editions: a community edition licensed under Apache 2 and a proprietary commercial edition. One of its most</p>]]></description><link>http://localhost:2368/intellij-idea-plugins/</link><guid isPermaLink="false">6365d9f64c37e02ad7a7d829</guid><category><![CDATA[Tools]]></category><category><![CDATA[Lists]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sat, 05 Nov 2022 03:38:42 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1621717731333-7f7fa49fc86d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwbHVnaW5zfGVufDB8fHx8MTY2NzYxOTM0NA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
-<img src="https://images.unsplash.com/photo-1621717731333-7f7fa49fc86d?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxwbHVnaW5zfGVufDB8fHx8MTY2NzYxOTM0NA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Maximizing Productivity with Essential IntelliJ IDEA Plugins"><p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a>: stands as a premier integrated development environment (IDE) crafted by JetBrains, designed to facilitate the creation of software using Java, Kotlin, Groovy, and other JVM-based languages. It comes in two editions: a community edition licensed under Apache 2 and a proprietary commercial edition. One of its most compelling features is its extensibility through plugins, which enrich its capabilities and tailor it to individual developer needs.</p>
-<h3 id="understanding-plugins">Understanding Plugins</h3>
-<p>Plugins are software extensions that augment the functionality of a program. In the realm of IntelliJ IDEA, they serve as indispensable tools, providing developers with additional features, productivity enhancements, and integration with external services.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="minimum-software-requirements">Minimum Software Requirements</h3>
-<ul>
-<li>To take advantage of these plugins, ensure you have <a href="https://www.jetbrains.com/idea/download/#section=linux">IntelliJ IDEA</a> installed on your system.</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="plugins">Plugins</h3>
-<p><strong><a href="https://github.com/andrey4623/intellij-rainbow-csv" target="_blank">Rainbow CSV</a></strong><br>
-<strong>Description:</strong> Rainbow CSV is a versatile plugin that enhances the readability of CSV files by highlighting them in different colors. This visual distinction makes it easier to interpret and manipulate large datasets, thereby improving productivity during data analysis and manipulation tasks.</p>
-<p><strong><a href="https://plugins.jetbrains.com/plugin/7973-sonarlint" target="_blank">SonarLint</a></strong><br>
-<strong>Description:</strong> SonarLint is a free IDE extension that acts as a guardian for your codebase, continuously analyzing it to detect and rectify bugs, vulnerabilities, and code smells in real-time. Similar to a spell checker, SonarLint identifies issues as you write code, offering quick fixes and actionable insights to ensure clean and robust code.</p>
-<p><strong><a href="https://github.com/robohorse/RoboPOJOGenerator" target="_blank">RoboPOJOGenerator</a></strong><br>
-<strong>Description:</strong> This indispensable plugin streamlines the process of transforming JSON data structures into Plain Old Java Objects (POJOs). Ideal for IntelliJ IDEA and Android Studio users, RoboPOJOGenerator automates the tedious task of manual POJO generation, saving developers valuable time and effort.</p>
-<p><strong><a href="https://github.com/gejun123456/intellij-generateAllSetMethod" target="_blank">intellij-generateAllSetMethod</a></strong><br>
-<strong>Description:</strong> Simplify the task of generating setter method calls for class properties with this intuitive IntelliJ IDEA plugin. By automating the creation of setter method invocations, it accelerates the development process and reduces the likelihood of manual errors.</p>
-<p><strong><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x" target="_blank">Key Promoter X</a></strong><br>
-<strong>Description:</strong> Mastering keyboard shortcuts is key to efficient coding, and Key Promoter X is here to help. This plugin facilitates the learning process by displaying keyboard shortcuts whenever you perform an action using the mouse within the IDE. By encouraging the use of keyboard shortcuts, it promotes a faster, mouse-free development workflow.</p>
-<p><strong><a href="https://plugins.jetbrains.com/plugin/7179-maven-helper" target="_blank">Maven Helper</a></strong><br>
-<strong>Description:</strong> Maven Helper is an indispensable tool for managing dependencies within your IntelliJ IDEA projects. It provides valuable insights into dependency conflicts, allowing you to analyze and exclude conflicting dependencies effortlessly. Additionally, it offers advanced features for optimizing Maven builds, ensuring smooth and efficient project development.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>IntelliJ IDEA plugins play a crucial role in enhancing productivity, streamlining development workflows, and empowering developers to write clean, efficient code. By incorporating IntelliJ IDEA plugins into your IntelliJ IDEA setup, you can unlock new capabilities, automate repetitive tasks, and take your coding experience to the next level.</p>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Empower Real-Time Stream Processing with ksqlDB and ksql-cli]]></title><description><![CDATA[<p>In this guide, we&apos;ll delve into setting up ksqlDB&#x2014;a powerful database purpose-built for stream processing applications&#x2014;alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p><a href="https://ksqldb.io/">ksqlDB</a> stands as a cutting-edge</p>]]></description><link>http://localhost:2368/ksqldb/</link><guid isPermaLink="false">636517ee2ba729dae794e42f</guid><category><![CDATA[Apache Kafka]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Fri, 04 Nov 2022 14:10:01 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<img src="https://images.unsplash.com/photo-1528952686551-542043782ab9?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fHZlbmRvcnxlbnwwfHx8fDE2Njc1Njk2Njk&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Empower Real-Time Stream Processing with ksqlDB and ksql-cli"><p>In this guide, we&apos;ll delve into setting up ksqlDB&#x2014;a powerful database purpose-built for stream processing applications&#x2014;alongside its command-line interface, ksql-cli. With these tools, you can seamlessly explore, query, and transform streaming data to derive valuable insights in real-time.</p><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p><a href="https://ksqldb.io/">ksqlDB</a> stands as a cutting-edge database designed specifically for stream processing applications. It offers a streamlined platform for processing and analyzing streaming data, enabling users to unlock insights and respond to events as they occur. Coupled with <a href="https://docs.ksqldb.io/en/latest/operate-and-deploy/installation/cli-config/">ksql-cli</a>, a command-line interface for interacting with ksqlDB, you gain unparalleled flexibility and control over your stream processing workflows.</p>
@@ -889,4 +883,332 @@ Go Playground is an official online tool provided by the Go programming language
 <p><em>Description:</em> Record and share terminal sessions with asciinema. This free and open-source solution captures terminal activity and allows you to share it on the web, making it an excellent tool for creating tutorials and demonstrating workflows.</p>
 <h3 id="conclusion">Conclusion</h3>
 <p>Utilize these resources to enhance your software development process, stay entertained, and connect with the community. Whether you need tools for presentations, community support, or comprehensive documentation solutions, these platforms provide the necessary support to help you succeed in your projects.</p>
+<!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Change Data Capture (CDC) - MySQL]]></title><description><![CDATA[<!--kg-card-begin: markdown--><p>This post briefly documents the process of Change Data Capture (CDC) with MySQL.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a></li></ul>]]></description><link>http://localhost:2368/change-data-capture-cdc-mysql/</link><guid isPermaLink="false">63567eb675328d2010ba2658</guid><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Mon, 24 Oct 2022 12:08:33 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1440288736878-766bd5839edb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGNhdGNofGVufDB8fHx8MTY2NjYxMjk1OA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Change Data Capture (CDC) - MySQL"><p>This post briefly documents the process of Change Data Capture (CDC) with MySQL.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>Change data capture (CDC) refers to the process of identifying and capturing changes made to data in a database and then delivering those changes in real-time to a downstream process or system.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> (MySQL, Zookeeper, Kafka, Debezium, schema-registry, kafka-ui, ksqldb-server, ksqldb-cli)</li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose</a></li>
+<li><a href="https://www.mysql.com/">MySQL</a> database.</li>
+<li><a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a> or on any other MySQL database client/console.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="mysqlcnf-mysql-database-configuration">mysql.cnf MySQL database configuration</h3>
+<pre><code class="language-txt">[mysqld]
+server-id         = 223344
+log_bin           = mysql-bin
+expire_logs_days  = 1
+binlog_format     = row
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project-setup">Sample Project Setup</h4>
+<ol>
+<li>Clone the repository</li>
+</ol>
+<pre><code class="language-shell">$ git clone https://github.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL.git
+$ cd Streaming_ETL_pipeline_MySQL
+</code></pre>
+<h4 id="running-the-application-via-docker-compose">Running the application via docker compose</h4>
+<ol start="2">
+<li>Pull all required docker images</li>
+</ol>
+<pre><code class="language-shell">$ docker compose -f docker-compose.yaml pull
+</code></pre>
+<ol start="3">
+<li>Start up the environment</li>
+</ol>
+<p>The first time that you do this, the Docker images will be pulled down from the remote server. This may take a while!</p>
+<pre><code class="language-shell">$ docker compose -f docker-compose.yaml up
+</code></pre>
+<pre><code class="language-shell">Creating network &quot;streaming_etl_pipeline_mysql_webproxy&quot; with driver &quot;bridge&quot;
+Creating zookeeper ... done
+Creating kafka     ... done
+Creating debezium           ... done
+Creating cp-schema-registry ... done
+Creating kafka-connect-01   ... done
+Creating ksqldb-server      ... done
+Creating ksqldb-cli         ... done
+</code></pre>
+<h4 id="accessing-kafka-topics-via-kakfka-ui">Accessing Kafka Topics via Kakfka-UI</h4>
+<ol start="4">
+<li>Optionally, start <a href="https://github.com/provectus/kafka-ui">Kafka UI</a>, an open-source web UI for Apache Kafka Management</li>
+</ol>
+<pre><code class="language-shell">$ docker run --name=kafka-ui --network=streaming_etl_pipeline_mysql_webproxy -p 8080:8080 -e KAFKA_CLUSTERS_0_NAME=local -e KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092 -d provectuslabs/kafka-ui:latest
+</code></pre>
+<p>URL to access Kakfka-UI console: <strong><a href="http://localhost:8080">http://localhost:8080</a></strong></p>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/04-kafka-topics-before-debezium.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<ol start="5">
+<li>Make sure everything is up and running</li>
+</ol>
+<pre><code class="language-shell">$ docker ps
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/09-docker-ps.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<p>IMPORTANT: If any components do not show &quot;Up&quot; under the <code>Status</code> column (e.g., they say &quot;Exit&quot;) then you must rectify this before continuing.<br>
+As a first solution, try re-issuing the <code>docker-compose up -d</code> command.</p>
+<h4 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h4>
+<ol start="6">
+<li>Launch the KSQL CLI in another terminal window.</li>
+</ol>
+<pre><code class="language-shell">$ docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/10-ksql-db-initial.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<h2 id="tear-down-the-stack">Tear down the stack</h2>
+<pre><code class="language-shell">$ docker stop kafka-ui
+
+$ docker rm kafka-ui
+</code></pre>
+<pre><code class="language-shell">$ docker compose -f docker-compose.yaml down
+</code></pre>
+<pre><code class="language-shell">Stopping ksqldb-cli       ... done
+Stopping ksqldb-server    ... done
+Stopping kafka-connect-01 ... done
+Stopping debezium         ... done
+Stopping kafka            ... done
+Stopping zookeeper        ... done
+Removing ksqldb-cli         ... done
+Removing ksqldb-server      ... done
+Removing kafka-connect-01   ... done
+Removing cp-schema-registry ... done
+Removing debezium           ... done
+Removing kafka              ... done
+Removing zookeeper          ... done
+Removing network streaming_etl_pipeline_mysql_webproxy
+</code></pre>
+<p><em>If you want to preserve the state of all containers, run <code>docker-compose stop</code> instead.</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h2 id="initial-mysql-preparation">Initial MySQL preparation</h2>
+<p>Initial Data setup.</p>
+<details open="open">
+	<ul>
+		<li><a href="#mysql">MySQL</a></li>
+	</ul>
+</details>
+<h3 id="mysql">MySQL</h3>
+<ul>
+<li>Declare schema, user and permissions.</li>
+</ul>
+<pre><code class="language-sql">-- create schema
+CREATE SCHEMA streaming_etl_db;
+
+-- use schema
+USE streaming_etl_db;
+
+-- Create user 
+CREATE USER &apos;debezium&apos; IDENTIFIED WITH mysql_native_password BY &apos;Debezium@123#&apos;;
+
+-- Grant privileges to user
+GRANT SELECT, RELOAD, SHOW DATABASES, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO &apos;debezium&apos;;
+
+-- Reload the grant tables in the mysql database enabling the changes to take effect without reloading or restarting mysql service
+FLUSH PRIVILEGES;
+</code></pre>
+<ul>
+<li>Declare Tables</li>
+</ul>
+<pre><code class="language-sql">CREATE TABLE `geo` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
+  `uuid` VARCHAR(50) DEFAULT (uuid()),
+  `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
+  `last_modified_date_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+  `lat` varchar(255) DEFAULT NULL,
+  `lng` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT=&apos;Application Log.&apos;;
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE `address` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
+  `uuid` VARCHAR(50) DEFAULT (uuid()),
+  `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
+  `last_modified_date_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+  `city` varchar(255) DEFAULT NULL,
+  `zipcode` varchar(255) DEFAULT NULL,
+  `state` varchar(255) DEFAULT NULL,
+  `geo_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_geo_id` (`geo_id`),
+  CONSTRAINT `FKC_geo_id` FOREIGN KEY (`geo_id`) REFERENCES `geo` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE `person` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT &apos;Unique ID for each entry.&apos;,
+  `uuid` VARCHAR(50) DEFAULT (uuid()),
+  `created_date_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT &apos;Field representing the date the entity containing the field was created.&apos;,
+  `last_modified_date_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `registration` datetime DEFAULT NULL,
+  `age` int DEFAULT NULL,
+  `address_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_address_id` (`address_id`),
+  CONSTRAINT `FKC_address_id` FOREIGN KEY (`address_id`) REFERENCES `address` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+</code></pre>
+<ul>
+<li>Sample Data</li>
+</ul>
+<pre><code class="language-sql">INSERT INTO `streaming_etl_db`.`geo`(`lat`,`lng`)VALUES(&apos;la14&apos;,&apos;lo14&apos;);
+INSERT INTO `streaming_etl_db`.`address`(`city`,`zipcode`,`state`,`geo_id`)VALUES(&apos;c14&apos;,&apos;z14&apos;,&apos;s14&apos;,1);
+INSERT INTO `streaming_etl_db`.`person`(`first_name`,`last_name`,`email`,`gender`,`registration`,`age`,`address_id`)VALUES(&apos;fn14&apos;,&apos;ln14&apos;,&apos;example@domain.com&apos;,&apos;M&apos;,now(),34,1);
+</code></pre>
+<ul>
+<li>Select Statement</li>
+</ul>
+<pre><code class="language-sql">SELECT * 
+FROM streaming_etl_db.person p
+LEFT JOIN streaming_etl_db.address a on a.id = p.address_id
+LEFT JOIN streaming_etl_db.geo g on g.id = a.geo_id;
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM streaming_etl_db.person;
+SELECT * FROM streaming_etl_db.address;
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="debezium-registration">Debezium Registration</h3>
+<pre><code class="language-shell">curl -i -X POST -H &quot;Accept:application/json&quot; -H &quot;Content-Type:application/json&quot; 127.0.0.1:8083/connectors/ -d &apos;{
+  &quot;name&quot;: &quot;streaming_ETL_pipeline_MySQL-connector&quot;,
+  &quot;config&quot;: {
+    &quot;connector.class&quot;: &quot;io.debezium.connector.mysql.MySqlConnector&quot;,
+    &quot;database.hostname&quot;: &quot;172.17.0.1&quot;,
+    &quot;database.port&quot;: &quot;3306&quot;,
+    &quot;database.user&quot;: &quot;debezium&quot;,
+    &quot;database.password&quot;: &quot;Debezium@123#&quot;,
+    &quot;database.server.name&quot;: &quot;mysql&quot;,
+	  &quot;database.server.id&quot;: &quot;223344&quot;,
+    &quot;database.include.list&quot;: &quot;streaming_etl_db&quot;,
+	  &quot;database.allowPublicKeyRetrieval&quot;: true,
+	  &quot;database.history.kafka.bootstrap.servers&quot;: &quot;kafka:9092&quot;,
+	  &quot;database.history.kafka.topic&quot;: &quot;mysql-streaming_etl_db-person&quot;,
+	  &quot;time.precision.mode&quot;: &quot;connect&quot;,
+    &quot;include.schema.changes&quot;: false,
+    &quot;transforms&quot;: &quot;unwrap,dropTopicPrefix&quot;,
+	  &quot;transforms.unwrap.type&quot;: &quot;io.debezium.transforms.ExtractNewRecordState&quot;,
+	  &quot;transforms.dropTopicPrefix.type&quot;:&quot;org.apache.kafka.connect.transforms.RegexRouter&quot;,
+	  &quot;transforms.dropTopicPrefix.regex&quot;:&quot;asgard.demo.(.*)&quot;,
+	  &quot;transforms.dropTopicPrefix.replacement&quot;:&quot;$1&quot;,
+	  &quot;key.converter&quot;:&quot;org.apache.kafka.connect.json.JsonConverter&quot;,
+	  &quot;key.converter.schemas.enable&quot;: &quot;false&quot;,
+	  &quot;value.converter&quot;:&quot;org.apache.kafka.connect.json.JsonConverter&quot;,
+	  &quot;value.converter.schemas.enable&quot;: &quot;false&quot;
+  }
+}&apos;
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/01-debezium-registration.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<p>After Debezium registration.</p>
+<p><a href="http://localhost:8083/connectors?expand=info&amp;expand=status">http://localhost:8083/connectors?expand=info&amp;expand=status</a></p>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/02-debezium-connectors.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<p><a href="http://localhost:8083/connectors/streaming_ETL_pipeline_MySQL-connector/status">http://localhost:8083/connectors/streaming_ETL_pipeline_MySQL-connector/status</a></p>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/03-debezium-connector-status.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<p>Kafka UI</p>
+<p><a href="http://localhost:8080">http://localhost:8080</a></p>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/05-kafka-topics-after-registration.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<p>Person Topic</p>
+<p><img src="https://raw.githubusercontent.com/AnanthaRajuC/Streaming_ETL_pipeline_MySQL/main/documentation/images/06-kafka-topic-message.png" alt="Change Data Capture (CDC) - MySQL" loading="lazy"></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
+<h3 id="ksqldb">ksqlDB</h3>
+<ul>
+<li>Check topics, streams and tables</li>
+</ul>
+<pre><code class="language-sql">show topics;
+show streams;
+show tables;
+</code></pre>
+<h3 id="streams">Streams</h3>
+<ul>
+<li>Declare Streams</li>
+</ul>
+<pre><code class="language-sql">SET &apos;auto.offset.reset&apos; = &apos;earliest&apos;;
+</code></pre>
+<pre><code class="language-sql">CREATE STREAM PERSON_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+
+CREATE STREAM ADDRESS_STREAM (id bigint,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM PERSON_STREAM EMIT CHANGES LIMIT 1;
+
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|ID                       |UUID                     |CREATED_DATE_TIME        |LAST_MODIFIED_DATE_TIME  |NAME                     |USERNAME                 |ADDRESS_ID               |
++-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+|1                        |ce8d2120-1f93-11ed-8647-0|2022-08-19T13:22:00.000  |2022-08-19T13:22:00.000  |d14                      |dbz14                    |1                        |
+|                         |c9a3cfadc50              |                         |                         |                         |                         |                         |
+Limit Reached
+Query terminated
+</code></pre>
+<pre><code class="language-sql">DESCRIBE PERSON_STREAM;
+select * from PERSON_STREAM;
+</code></pre>
+<ul>
+<li>stream-stream join</li>
+</ul>
+<pre><code class="language-sql">CREATE STREAM PERSON_ADDRESS_ENRICHED_STREAM WITH (FORMAT=&apos;JSON&apos;, KAFKA_TOPIC=&apos;person_address_enriched&apos;, PARTITIONS=1, REPLICAS=1) AS 
+SELECT
+  P.ID P_ID,
+  A.ID A_ID,
+  P.NAME NAME,
+  A.CITY CITY
+FROM PERSON_STREAM P
+LEFT OUTER JOIN ADDRESS_STREAM A WITHIN 1 HOURS GRACE PERIOD 30 MINUTES ON ((A.ID = P.ADDRESS_ID))
+EMIT CHANGES;
+</code></pre>
+<h3 id="kafka-sink-mysql-db">Kafka Sink MySQL DB</h3>
+<pre><code class="language-sql">CREATE SINK CONNECTOR SINK_PERSON_ADDRESS_ENRICHED_STREAM WITH (
+    &apos;connector.class&apos;                     = &apos;io.confluent.connect.jdbc.JdbcSinkConnector&apos;,
+    &apos;connection.url&apos;                      = &apos;jdbc:mysql://172.17.0.1:3306/&apos;,
+    &apos;connection.user&apos;                     = &apos;debezium&apos;,
+    &apos;connection.password&apos;                 = &apos;Debezium@123#&apos;,
+    &apos;topics&apos;                              = &apos;PERSON_ADDRESS_ENRICHED_STREAM&apos;,
+    &apos;key.converter&apos;						            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,	
+	  &apos;key.converter.schemas.enable&apos;		    = &apos;false&apos;,
+	  &apos;value.converter&apos;					            = &apos;org.apache.kafka.connect.json.JsonConverter&apos;,
+	  &apos;value.converter.schemas.enable&apos;      = &apos;false&apos;
+);
+</code></pre>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="accessing-ksqldb-via-ksqldb-cli">Accessing ksqlDb via ksqldb-cli</h3>
+<h3 id="ksqldb">ksqlDB</h3>
+<ul>
+<li>Check topics, streams and tables</li>
+</ul>
+<pre><code class="language-sql">show topics;
+show streams;
+show tables;
+</code></pre>
+<h3 id="tables">Tables</h3>
+<ul>
+<li>Declare Tables</li>
+</ul>
+<pre><code class="language-sql">CREATE TABLE PERSON (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,name VARCHAR,username VARCHAR,address_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.person&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+
+CREATE TABLE ADDRESS (id bigint PRIMARY KEY,uuid VARCHAR,created_date_time TIMESTAMP,last_modified_date_time TIMESTAMP,city VARCHAR,street VARCHAR,suite VARCHAR,zipcode VARCHAR,geo_id bigint) WITH (KAFKA_TOPIC=&apos;mysql.streaming_etl_db.address&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<pre><code class="language-sql">SELECT * FROM PERSON EMIT CHANGES LIMIT 1;
+
+SELECT * FROM ADDRESS EMIT CHANGES LIMIT 1;
+</code></pre>
+<p>Joins</p>
+<pre><code class="language-sql">SELECT 
+	P.NAME,
+	A.CITY
+FROM PERSON P
+LEFT JOIN ADDRESS A on A.id = P.address_id
+EMIT CHANGES 
+LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">SELECT 
+  P.NAME, 
+  A.CITY
+FROM PERSON P
+INNER JOIN ADDRESS A
+ON A.id = P.address_id
+EMIT CHANGES
+LIMIT 1;
+</code></pre>
+<pre><code class="language-sql">CREATE TABLE PERSON_ADDRESS_ENRICHED (P_ID bigint,A_ID bigint,NAME VARCHAR,CITY VARCHAR) WITH (KAFKA_TOPIC=&apos;person_address_enriched&apos;,VALUE_FORMAT=&apos;JSON&apos;);
+</code></pre>
+<ul>
+<li>Others</li>
+</ul>
+<pre><code class="language-sql">DROP TABLE IF EXISTS PERSON;
+</code></pre>
 <!--kg-card-end: markdown-->]]></content:encoded></item></channel></rss>
