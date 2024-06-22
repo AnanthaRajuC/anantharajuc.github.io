@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sun, 16 Jun 2024 13:42:44 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Anantha Raju C]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>Anantha Raju C</title><link>http://localhost:2368/</link></image><generator>Ghost 5.8</generator><lastBuildDate>Sat, 22 Jun 2024 06:29:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse]]></title><description><![CDATA[This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.]]></description><link>http://localhost:2368/building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/</link><guid isPermaLink="false">666522ff85dc8624db48eecf</guid><category><![CDATA[Apache Kafka]]></category><category><![CDATA[Change Data Capture]]></category><category><![CDATA[ClickHouse]]></category><category><![CDATA[Data]]></category><category><![CDATA[dbt]]></category><category><![CDATA[MySQL]]></category><dc:creator><![CDATA[Anantha Raju C]]></dc:creator><pubDate>Sun, 09 Jun 2024 03:48:53 GMT</pubDate><media:content url="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: markdown--><img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse"><p>In the modern data-driven world, real-time data processing and analytics are critical for making timely and informed decisions. This post explores a data pipeline architecture for real-time data streaming, processing, and visualization using popular open-source tools like Python, MySQL, Kafka, and ClickHouse.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><img src="http://localhost:2368/content/images/2024/06/streaming_etl.png" alt="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse" loading="lazy"></p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="code-and-documentation">Code and Documentation</h3>
 <p>The complete code for this data pipeline, along with detailed documentation of all steps, is available on <a href="https://github.com/AnanthaRajuC/Streaming-ETL-Pipeline-for-Realtime-Analytics">GitHub</a>.</p>
@@ -789,6 +789,70 @@ MySQL Notifier is a lightweight utility that monitors Windows and MySQL services
 <ul>
 <li><strong><a href="https://www.mongodb.com/products/compass" target="_blank">MongoDB Compass</a></strong><br>
 MongoDB Compass is a graphical user interface (GUI) for MongoDB that simplifies database management and query building. It offers visual tools for exploring data, creating indexes, and analyzing performance metrics.</li>
+</ul>
+<!--kg-card-end: markdown--><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" id="others">Others</h2></div><!--kg-card-begin: markdown--><h4 id="others">Others</h4>
+<ul>
+<li>
+<p><strong><a href="https://howsecureismypassword.net/" target="_blank">HOW SECURE IS MY PASSWORD?</a></strong><br>
+<em>Password strength meter.</em></p>
+</li>
+<li>
+<p><strong><a href="http://www.devopsbookmarks.com/" target="_blank">DevOps Bookmarks</a></strong><br>
+<em>Discover tools and frameworks in the DevOps landscape.</em></p>
+</li>
+<li>
+<p><strong><a href="https://www.lambdatest.com/" target="_blank">Lambda Test</a></strong></p>
+</li>
+<li>
+<p><em>Cross Browser Testing Cloud</em></p>
+</li>
+<li>
+<p><strong><a href="https://www.epochconverter.com/" target="_blank">Epoch Converter</a></strong><br>
+<em>Epoch &amp; Unix Timestamp Conversion Tools</em></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/quicktype/quicktype" target="_blank">quicktype</a></strong><br>
+<em>Generate types and converters from JSON, Schema, and GraphQL</em></p>
+</li>
+<li>
+<p><strong><a href="http://www.useragentstring.com/" target="_blank">User Agent String</a></strong><br>
+<em>Analyze User Agent of you browser or any other user agent string.</em></p>
+</li>
+</ul>
+<h4 id="editor">Editor</h4>
+<ul>
+<li>
+<p><strong><a href="https://www.gitbook.com/editor" target="_blank">GitBook Editor</a></strong><br>
+<em>Expressive Markup (Markdown/Asciidoc), Advanced proofreading, Version Control</em></p>
+</li>
+<li>
+<p><strong><a href="https://laverna.cc/index.html" target="_blank">Laverna</a></strong><br>
+<em>Markdown note taking app focused on privacy. Consider it like open source alternative to Evernote.</em></p>
+</li>
+</ul>
+<h4 id="design">Design</h4>
+<ul>
+<li><strong><a href="https://www.behance.net/" target="_blank">Behance</a></strong><br>
+<em>Showcase and discover the latest work from top online portfolios by creative professionals across industries.</em></li>
+</ul>
+<h4 id="markdown">Markdown</h4>
+<ul>
+<li>
+<p><strong><a href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf" target="_blank">Markdown PDF</a></strong><br>
+<em>This Visual Studio Code extension convert Markdown file to pdf, html, png or jpeg file.</em></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/DavidAnson/markdownlint" target="_blank">markdownlint</a></strong><br>
+<em>markdown lint.</em></p>
+</li>
+<li>
+<p><strong><a href="https://ecotrust-canada.github.io/markdown-toc/" target="_blank">markdown-toc</a></strong><br>
+<em>Markdown Table of Contents generator.</em></p>
+</li>
+<li>
+<p><strong><a href="https://markdowntohtml.com/" target="_blank">Markdown to HTML Converter</a></strong><br>
+<em>Markdown to HTML Converter.</em></p>
+</li>
 </ul>
 <!--kg-card-end: markdown-->]]></content:encoded></item><item><title><![CDATA[Unlocking Data Visualization Brilliance with Apache Superset]]></title><description><![CDATA[<!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p>In this guide, we&apos;ll embark on an exploration of <a href="https://superset.apache.org/">Apache Superset</a>, a cutting-edge platform for data exploration and visualization. By leveraging Apache Superset, we empower users to uncover insights and communicate data stories effectively through stunning visualizations.</p>
