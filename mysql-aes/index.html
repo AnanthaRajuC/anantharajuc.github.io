@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program</title>
+    <title>MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -80,32 +80,32 @@
     
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program" />
-    <meta property="og:description" content="This post briefly documents the process of encrypting data in a table using the
-MySQL native AES_ENCRYPT()
-[https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt] 
-function.
+    <meta property="og:title" content="MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java" />
+    <meta property="og:description" content="This post briefly documents the process of encrypting data in a table using the MySQL native AES_ENCRYPT() function.
+
+
 
 Introduction
-MySQL is an open-source relational database management system (RDBMS). A
-relational database organizes data into one or" />
+
+
+MySQL is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other;" />
     <meta property="og:url" content="http://localhost:2368/mysql-aes/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1633265486064-086b219458ec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2022-04-25T03:27:13.000Z" />
-    <meta property="article:modified_time" content="2022-05-29T06:56:53.000Z" />
+    <meta property="article:modified_time" content="2024-06-29T17:10:06.000Z" />
     <meta property="article:tag" content="MySQL" />
     <meta property="article:tag" content="Spring Boot" />
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program" />
-    <meta name="twitter:description" content="This post briefly documents the process of encrypting data in a table using the
-MySQL native AES_ENCRYPT()
-[https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt] 
-function.
+    <meta name="twitter:title" content="MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java" />
+    <meta name="twitter:description" content="This post briefly documents the process of encrypting data in a table using the MySQL native AES_ENCRYPT() function.
+
+
 
 Introduction
-MySQL is an open-source relational database management system (RDBMS). A
-relational database organizes data into one or" />
+
+
+MySQL is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other;" />
     <meta name="twitter:url" content="http://localhost:2368/mysql-aes/" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1633265486064-086b219458ec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
@@ -147,10 +147,10 @@ relational database organizes data into one or" />
             "https://twitter.com/anantharajuc"
         ]
     },
-    "headline": "MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program",
+    "headline": "MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java",
     "url": "http://localhost:2368/mysql-aes/",
     "datePublished": "2022-04-25T03:27:13.000Z",
-    "dateModified": "2022-05-29T06:56:53.000Z",
+    "dateModified": "2024-06-29T17:10:06.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&ixlib=rb-1.2.1&q=80&w=2000",
@@ -158,7 +158,7 @@ relational database organizes data into one or" />
         "height": 1334
     },
     "keywords": "MySQL, Spring Boot",
-    "description": "This post briefly documents the process of encrypting data in a table using the\nMySQL native AES_ENCRYPT()\n[https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt] \nfunction.\n\nIntroduction\nMySQL is an open-source relational database management system (RDBMS). A\nrelational database organizes data into one or more data tables in which data\ntypes may be related to each other; these relations help structure the data. SQL\nis a language programmers use to create, modify",
+    "description": "This post briefly documents the process of encrypting data in a table using the MySQL native AES_ENCRYPT() function.\n\n\n\nIntroduction\n\n\nMySQL is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -389,7 +389,7 @@ relational database organizes data into one or" />
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
-              <h1 class="m-heading__title in-post">MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program</h1>
+              <h1 class="m-heading__title in-post">MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java</h1>
               <div class="m-heading__meta">
                   <a href="../tag/mysql/index.html" class="m-heading__meta__tag">MySQL</a>
                   <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
@@ -403,7 +403,7 @@ relational database organizes data into one or" />
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
                     <span class="icon-facebook" aria-hidden="true"></span>
                   </a>
-                  <a href="https://twitter.com/intent/tweet?text=MySQL%20Data%20Encryption%20via%20AES_ENCRYPT()%20and%20decryption%20via%20a%20Java%20program&url=http://localhost:2368/mysql-aes/"
+                  <a href="https://twitter.com/intent/tweet?text=MySQL%20Data%20Encryption%20with%20AES_ENCRYPT()%20and%20Decryption%20in%20Java&url=http://localhost:2368/mysql-aes/"
                     class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
                     <span class="icon-twitter" aria-hidden="true"></span>
                   </a>
@@ -416,45 +416,65 @@ relational database organizes data into one or" />
                 </div>
               </div>
               <!--kg-card-begin: markdown--><p>This post briefly documents the process of encrypting data in a table using the MySQL native <a href="https://dev.mysql.com/doc/refman/8.0/en/encryption-functions.html#function_aes-encrypt">AES_ENCRYPT()</a> function.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="introduction">Introduction</h3>
 <p><strong>MySQL</strong> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
 <p>The <strong>AES</strong> (Advanced Encryption Standard), also known by its original name Rijndael, is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology in 2001.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="goals">Goals</h3>
+<p>This tutorial focuses on:</p>
 <ul>
-<li>MySQL - Encryption</li>
-<li>MySQL - Decryption</li>
-<li>Java - Decryption</li>
+<li>Encrypting data using MySQL's AES_ENCRYPT() function.</li>
+<li>Decrypting MySQL encrypted data using both MySQL and a Java program.</li>
 </ul>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
+<p>To follow along, ensure you have:</p>
 <ul>
-<li>MySQL</li>
-<li>MySQL Workbench (Optional)</li>
-<li>Java</li>
+<li>MySQL installed.</li>
+<li>Optional: MySQL Workbench for database management.</li>
+<li>Java installed for running the decryption program.</li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-project">Sample Project</h4>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><a href="https://github.com/AnanthaRajuC/aes-mysql-java">aes-mysql-java</a> is the sample Spring Boot web application i've used to illustrate the idea.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="sample-project">Sample Project</h3>
+<p><a href="https://github.com/AnanthaRajuC/aes-mysql-java">aes-mysql-java</a> is the sample Spring Boot web application i've used to illustrate the idea.</p>
 <p><em>Noticed an issue with this Sample Project? Open an <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/issues">issue</a> or a <a href="https://github.com/AnanthaRajuC/Spring-Boot-Minimal-Web-App/pulls">PR</a> on GitHub!</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="dependencies">Dependencies</h4>
-<p>This implementation has a dependency on <strong>flyway-mysql</strong>, <strong>mysql-connector-java</strong>, <strong>lombok</strong> dependencies. The <strong>maven</strong>/<strong>gradle</strong> dependencies of the same are mentioned below.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="basic-usage">Basic Usage</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="dependencies">Dependencies</h3>
+<p>The implementation relies on:</p>
+<ul>
+<li>flyway-mysql for database migrations.</li>
+<li>mysql-connector-java for MySQL connectivity.</li>
+<li>Lombok for boilerplate code reduction.</li>
+</ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h3 id="basic-usage">Basic Usage</h3>
 <p><strong>User</strong> table is created by <strong>Flyway</strong>. Refer to <strong>/src/main/resources/data/mysql/migrations</strong></p>
-<p><strong>secret key</strong>: <em>dsfdfdsfsdfdfsfs</em></p>
-<p>Reference: <a href="https://www.javainuse.com/bytesize">https://www.javainuse.com/bytesize</a> - Online Text(String) Size Calculator Tool (In Bytes)</p>
-<h5 id="mysql">MySQL</h5>
-<pre><code class="language-sql">INSERT INTO user(first_name, last_name, address) VALUES (to_base64(AES_ENCRYPT('Jane','dsfdfdsfsdfdfsfs'))  ,'Doe','UK');
+<p>Assuming you have a user table:</p>
+<pre><code class="language-sql">CREATE TABLE user (
+    first_name BLOB,
+    last_name VARCHAR(255),
+    address VARCHAR(255)
+);
 </code></pre>
-<pre><code class="language-sql">SELECT AES_DECRYPT(from_base64(first_name) , 'dsfdfdsfsdfdfsfs'), last_name from user;
+<p><strong>your_secret_key</strong>: <em>dsfdfdsfsdfdfsfs</em></p>
+<p>Reference: <a href="https://www.javainuse.com/bytesize">https://www.javainuse.com/bytesize</a> - Online Text(String) Size Calculator Tool (In Bytes)</p>
+<h5 id="encrypting-data">Encrypting data:</h5>
+<pre><code class="language-sql">INSERT INTO user(first_name, last_name, address) VALUES (to_base64(AES_ENCRYPT('Jane','your_secret_key'))  ,'Doe','UK');
+</code></pre>
+<h5 id="decrypting-data">Decrypting data:</h5>
+<pre><code class="language-sql">SELECT AES_DECRYPT(from_base64(first_name) , 'your_secret_key'), last_name from user;
 </code></pre>
 <h6 id="reference">Reference</h6>
+<p>For additional MySQL encryption settings:</p>
 <pre><code class="language-sql">SHOW VARIABLES LIKE '%encryption%';
 </code></pre>
 <pre><code class="language-sql">SET block_encryption_mode = 'aes-128-ecb';
 </code></pre>
 <hr>
+<h5 id="java-decryption">Java Decryption</h5>
+<p>The following java code uses the MySQL connector to fetch and decrypt data:</p>
+<script src="https://gist.github.com/AnanthaRajuC/b234bd58797dd8ac3f36b465a90f6881.js"></script>
 <h5 id="application-execution">Application Execution</h5>
 <p>Build and run the application via an IDE or by issuing the following command:</p>
 <pre><code class="language-shell">mvnw spring-boot:run
 </code></pre>
+<h3 id="conclusion">Conclusion</h3>
+<p>Implementing AES encryption in MySQL provides a reliable method to secure sensitive data within your database. By leveraging AES_ENCRYPT() and AES_DECRYPT() functions, you can ensure data confidentiality while still maintaining query capabilities. Integrating this with a Java application allows for secure data retrieval and manipulation, enhancing overall data protection in your applications.</p>
 <!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>

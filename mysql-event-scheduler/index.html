@@ -90,7 +90,7 @@ MySQL is an open-source relational database management system (RDBMS) that organ
     <meta property="og:url" content="http://localhost:2368/mysql-event-scheduler/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2022-07-31T13:19:14.000Z" />
-    <meta property="article:modified_time" content="2024-06-29T16:40:28.000Z" />
+    <meta property="article:modified_time" content="2024-06-29T16:44:25.000Z" />
     <meta property="article:tag" content="MySQL" />
     
     <meta name="twitter:card" content="summary_large_image" />
@@ -145,7 +145,7 @@ MySQL is an open-source relational database management system (RDBMS) that organ
     "headline": "MySQL Event Scheduler",
     "url": "http://localhost:2368/mysql-event-scheduler/",
     "datePublished": "2022-07-31T13:19:14.000Z",
-    "dateModified": "2024-06-29T16:40:28.000Z",
+    "dateModified": "2024-06-29T16:44:25.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&ixlib=rb-1.2.1&q=80&w=2000",
@@ -480,10 +480,10 @@ DO
    VALUES('My Event Scheduler Test Data 3',NOW());
 </code></pre>
 <p><strong>Explanation:</strong></p>
-<p><em>CREATE EVENT event_scheduler_test_event_03</em> :event name</p>
-<p><em>ON SCHEDULE EVERY 1 MINUTE</em>                 :The frequency at which the event runs.</p>
-<p><em>STARTS CURRENT_TIMESTAMP</em>                   :event start condition</p>
-<p><em>ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR</em>   :event expiration period</p>
+<p><em><code>CREATE EVENT event_scheduler_test_event_03</code></em> :event name</p>
+<p><em><code>ON SCHEDULE EVERY 1 MINUTE</code></em>                 :The frequency at which the event runs.</p>
+<p><em><code>STARTS CURRENT_TIMESTAMP</code></em>                   :event start condition</p>
+<p><em><code>ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR</code></em>   :event expiration period</p>
 <!--kg-card-end: markdown--><ul><li><strong>Dropping an Event Scheduler</strong></li></ul><!--kg-card-begin: markdown--><p>To drop an event scheduler, use the following command:</p>
 <pre><code class="language-sql">DROP EVENT event_scheduler_test_event_03;
 </code></pre>
@@ -606,16 +606,16 @@ DO
     </div>
       <div class="m-article-card__info">
         <a href="../tag/mysql/index.html" class="m-article-card__tag">MySQL</a>
-      <a href="../mysql-aes/index.html" class="m-article-card__info-link" aria-label="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program">
+      <a href="../mysql-aes/index.html" class="m-article-card__info-link" aria-label="MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java">
         <div>
-          <h2 class="m-article-card__title js-article-card-title " title="MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program">
-            MySQL Data Encryption via AES_ENCRYPT() and decryption via a Java program
+          <h2 class="m-article-card__title js-article-card-title " title="MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java">
+            MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java
           </h2>
         </div>
         <div class="m-article-card__timestamp">
           <span>2 years ago</span>
           <span>&bull;</span>
-          <span>1 min read</span>
+          <span>2 min read</span>
         </div>
       </a>
     </div>
