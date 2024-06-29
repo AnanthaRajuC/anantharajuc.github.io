@@ -81,30 +81,26 @@
     <meta property="og:site_name" content="Anantha Raju C" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="MySQL Event Scheduler" />
-    <meta property="og:description" content="This post briefly documents the process of using the Event Scheduler
-[https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html] which manages the
-scheduling and execution of events, that is, tasks that run according to a
-schedule. 
+    <meta property="og:description" content="This post briefly documents the process of using the MySQL Event Scheduler, which manages the scheduling and execution of events (tasks) that run according to a specified schedule.
 
 Introduction
 
-MySQL is an open-source relational database management system (RDBMS). A" />
+
+MySQL is an open-source relational database management system (RDBMS) that organizes data into one or more tables, where data types may" />
     <meta property="og:url" content="http://localhost:2368/mysql-event-scheduler/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2022-07-31T13:19:14.000Z" />
-    <meta property="article:modified_time" content="2022-07-31T13:19:14.000Z" />
+    <meta property="article:modified_time" content="2024-06-29T16:40:28.000Z" />
     <meta property="article:tag" content="MySQL" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MySQL Event Scheduler" />
-    <meta name="twitter:description" content="This post briefly documents the process of using the Event Scheduler
-[https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html] which manages the
-scheduling and execution of events, that is, tasks that run according to a
-schedule. 
+    <meta name="twitter:description" content="This post briefly documents the process of using the MySQL Event Scheduler, which manages the scheduling and execution of events (tasks) that run according to a specified schedule.
 
 Introduction
 
-MySQL is an open-source relational database management system (RDBMS). A" />
+
+MySQL is an open-source relational database management system (RDBMS) that organizes data into one or more tables, where data types may" />
     <meta name="twitter:url" content="http://localhost:2368/mysql-event-scheduler/" />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta name="twitter:label1" content="Written by" />
@@ -149,7 +145,7 @@ MySQL is an open-source relational database management system (RDBMS). A" />
     "headline": "MySQL Event Scheduler",
     "url": "http://localhost:2368/mysql-event-scheduler/",
     "datePublished": "2022-07-31T13:19:14.000Z",
-    "dateModified": "2022-07-31T13:19:14.000Z",
+    "dateModified": "2024-06-29T16:40:28.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fHNjaGVkdWxlfGVufDB8fHx8MTY1OTI3MjA4Ng&ixlib=rb-1.2.1&q=80&w=2000",
@@ -157,7 +153,7 @@ MySQL is an open-source relational database management system (RDBMS). A" />
         "height": 1337
     },
     "keywords": "MySQL",
-    "description": "This post briefly documents the process of using the Event Scheduler\n[https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html] which manages the\nscheduling and execution of events, that is, tasks that run according to a\nschedule. \n\nIntroduction\n\nMySQL is an open-source relational database management system (RDBMS). A\nrelational database organizes data into one or more data tables in which data\ntypes may be related to each other; these relations help structure the data. SQL\nis a language pro",
+    "description": "This post briefly documents the process of using the MySQL Event Scheduler, which manages the scheduling and execution of events (tasks) that run according to a specified schedule.\n\nIntroduction\n\n\nMySQL is an open-source relational database management system (RDBMS) that organizes data into one or more tables, where data types may be related to each other. These relationships help structure the data. SQL (Structured Query Language) is used by programmers to create, modify, and extract data from ",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -414,46 +410,50 @@ MySQL is an open-source relational database management system (RDBMS). A" />
                   </button>
                 </div>
               </div>
-              <p>This post briefly documents the process of using the <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a> which manages the scheduling and execution of events, that is, tasks that run according to a schedule. </p><!--kg-card-begin: markdown--><p><strong>Introduction</strong></p>
-<p><em>MySQL</em> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Minimum Software Requirements</strong></p>
+              <p>This post briefly documents the process of using the MySQL <a href="https://dev.mysql.com/doc/refman/5.7/en/event-scheduler.html">Event Scheduler</a>, which manages the scheduling and execution of events (tasks) that run according to a specified schedule.</p><!--kg-card-begin: markdown--><h4 id="introduction">Introduction</h4>
+<p>MySQL is an open-source relational database management system (RDBMS) that organizes data into one or more tables, where data types may be related to each other. These relationships help structure the data. SQL (Structured Query Language) is used by programmers to create, modify, and extract data from the relational database and control user access to the database.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
 <ul>
 <li>MySQL</li>
 <li>MySQL Workbench (Optional)</li>
 </ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Goals</strong></p>
-<ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
+<ol>
 <li>Enable event scheduler</li>
 <li>List existing events from a particular schema</li>
 <li>Create table for example</li>
-<li>Congigure Event Scheduler
+<li>Configure Event Scheduler
 <ul>
-<li>One-time event</li>
-<li>One-time event with delayed start</li>
-<li>Recurring-event with end condition</li>
+<li>Create a <strong>one-time event</strong></li>
+<li>Create a <strong>one-time event with delayed start</strong></li>
+<li>Create a <strong>recurring-event with an end condition</strong></li>
 </ul>
 </li>
 <li>Drop event scheduler</li>
-</ul>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Enable event scheduler</strong></p>
+</ol>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="enabling-the-event-scheduler">Enabling the Event Scheduler</h4>
+<p>To enable the event scheduler, use the following command:</p>
 <pre><code class="language-sql">SET GLOBAL event_scheduler = ON;
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>List existing events from a particular schema.</strong></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="listing-existing-events-from-a-particular-schema">Listing Existing Events from a Particular Schema</h4>
+<p>To list existing events from a specific schema, use the following command:</p>
 <pre><code class="language-sql">SHOW EVENTS 
 FROM SCHEMA_NAME;
 </code></pre>
-<p><em>events are automatically dropped when it expires</em></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><strong>Create table for example</strong></p>
-<p>create a sample table</p>
+<p><strong>Note:</strong> <em>Events are automatically dropped when they expire</em></p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="create-a-table-for-example">Create a Table for Example</h4>
+<p>First, create a sample table to use for the events:</p>
 <pre><code class="language-sql">CREATE TABLE event_scheduler_test (
     id INT PRIMARY KEY AUTO_INCREMENT,
     my_data VARCHAR(255) NOT NULL,
     created_at DATETIME NOT NULL
 );
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ul>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="configuring-the-event-scheduler">Configuring the Event Scheduler</h4>
+<ul>
 <li><strong>One-time event</strong></li>
 </ul>
+<p>To create a one-time event that executes immediately, use the following command:</p>
 <pre><code class="language-sql">CREATE EVENT IF NOT EXISTS event_scheduler_test_event_01
 ON SCHEDULE AT CURRENT_TIMESTAMP
 ON COMPLETION PRESERVE -- keeps the event even after it has expired
@@ -461,15 +461,17 @@ DO
   INSERT INTO my_schema.event_scheduler_test(my_data,created_at)
   VALUES('My Event Scheduler Test Data 1',NOW());
 </code></pre>
-<p><em>ON COMPLETION PRESERVE</em>, keeps the event even after it has expired</p>
-<!--kg-card-end: markdown--><ul><li><strong>One-time event with delayed start</strong></li></ul><!--kg-card-begin: markdown--><pre><code class="language-sql">CREATE EVENT event_scheduler_test_event_02
+<p><strong>Note:</strong> <code>ON COMPLETION PRESERVE</code> ensures the event is kept even after it expires.</p>
+<!--kg-card-end: markdown--><ul><li><strong>One-Time Event with Delayed Start</strong></li></ul><!--kg-card-begin: markdown--><p>To create a one-time event that starts after a delay, use the following command:</p>
+<pre><code class="language-sql">CREATE EVENT event_scheduler_test_event_02
 ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 1 MINUTE
 ON COMPLETION PRESERVE
 DO
   INSERT INTO my_schema.event_scheduler_test(my_data,created_at)
   VALUES('My Event Scheduler Test Data 2',NOW());
 </code></pre>
-<!--kg-card-end: markdown--><ul><li><strong>Recurring-event with end condition</strong></li></ul><!--kg-card-begin: markdown--><pre><code class="language-sql">CREATE EVENT event_scheduler_test_event_03	
+<!--kg-card-end: markdown--><ul><li><strong>Recurring Event with End Condition</strong></li></ul><!--kg-card-begin: markdown--><p>To create a recurring event that runs at regular intervals and stops after a specified duration, use the following command:</p>
+<pre><code class="language-sql">CREATE EVENT event_scheduler_test_event_03	
 ON SCHEDULE EVERY 1 MINUTE					
 STARTS CURRENT_TIMESTAMP					
 ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR	
@@ -477,14 +479,21 @@ DO
    INSERT INTO mis_dashboard.event_scheduler_test(my_data,created_at)
    VALUES('My Event Scheduler Test Data 3',NOW());
 </code></pre>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p><em>CREATE EVENT event_scheduler_test_event_03</em> :event name</p>
-<p><em>ON SCHEDULE EVERY 1 MINUTE</em>                 :frequency</p>
+<p><strong>Explanation:</strong></p>
+<p><em>CREATE EVENT event_scheduler_test_event_03</em> :event name</p>
+<p><em>ON SCHEDULE EVERY 1 MINUTE</em>                 :The frequency at which the event runs.</p>
 <p><em>STARTS CURRENT_TIMESTAMP</em>                   :event start condition</p>
 <p><em>ENDS CURRENT_TIMESTAMP + INTERVAL 1 HOUR</em>   :event expiration period</p>
-<!--kg-card-end: markdown--><ul><li>Drop event scheduler</li></ul><!--kg-card-begin: markdown--><pre><code class="language-sql">DROP EVENT event_scheduler_test_event_03;
+<!--kg-card-end: markdown--><ul><li><strong>Dropping an Event Scheduler</strong></li></ul><!--kg-card-begin: markdown--><p>To drop an event scheduler, use the following command:</p>
+<pre><code class="language-sql">DROP EVENT event_scheduler_test_event_03;
 </code></pre>
-<!--kg-card-end: markdown--><p><strong>Notes</strong></p><!--kg-card-begin: markdown--><pre><code class="language-sql">SHOW PROCESSLIST;
+<!--kg-card-end: markdown--><p><strong>Additional Notes</strong></p><!--kg-card-begin: markdown--><p>To view the current processes, you can use the following command:</p>
+<pre><code class="language-sql">SHOW PROCESSLIST;
 </code></pre>
+<p>This command lists the active threads that the MySQL server is running, which can help you monitor and troubleshoot running events.</p>
+<p>By following these steps, you can effectively manage and schedule tasks using the MySQL Event Scheduler, ensuring timely and automated execution of database tasks.</p>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="conclusion">Conclusion</h4>
+<p>In conclusion, the MySQL Event Scheduler is a powerful tool for automating routine database tasks. By enabling and configuring events, you can schedule tasks such as data cleanup, reporting, or notifications without manual intervention. Understanding how to create one-time and recurring events with various configurations allows for flexible and efficient management of database operations. Remember to monitor active processes using <code>SHOW PROCESSLIST;</code> to ensure smooth execution of scheduled tasks and troubleshoot any issues that may arise. Harnessing the capabilities of the MySQL Event Scheduler can significantly enhance the automation and efficiency of your database management tasks.</p>
 <!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
