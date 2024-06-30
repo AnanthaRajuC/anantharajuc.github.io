@@ -86,7 +86,7 @@
     <meta property="og:url" content="http://localhost:2368/aws-relational-database-mysql/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2021-07-08T00:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-10T03:08:48.000Z" />
+    <meta property="article:modified_time" content="2024-06-30T13:15:02.000Z" />
     <meta property="article:tag" content="AWS" />
     
     <meta name="twitter:card" content="summary_large_image" />
@@ -136,7 +136,7 @@
     "headline": "AWS Relational Database: MySQL",
     "url": "http://localhost:2368/aws-relational-database-mysql/",
     "datePublished": "2021-07-08T00:00:00.000Z",
-    "dateModified": "2022-03-10T03:08:48.000Z",
+    "dateModified": "2024-06-30T13:15:02.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1624008915317-cb3ad69b16ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxzdG9yYWdlJTIwYm94fGVufDB8fHx8MTY0Njg4MDkyNw&ixlib=rb-1.2.1&q=80&w=2000",
@@ -407,20 +407,20 @@
 <p><strong>MySQL</strong> is an open-source relational database management system (RDBMS). A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data. SQL is a language programmers use to create, modify and extract data from the relational database, as well as control user access to the database.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="goals">Goals</h4>
 <ol>
-<li>Database Configuration<br>
+<li><strong>Database Configuration</strong><br>
 1.1 Database Configuration<br>
 1.2 Templates<br>
 1.3 Settings, Credentials Settings<br>
 1.4 Connectivity<br>
 1.5 Database authentication<br>
 1.6 Additional Configuration</li>
-<li>Connectivity and security<br>
+<li><strong>Connectivity and security</strong><br>
 2.1 Connectivity and security Configuration<br>
 2.2 Security Groups<br>
 2.3 Edit inbound rules<br>
 2.4 Add rules<br>
 2.5 Inbound rules</li>
-<li>Accessing the Database via MySQL Workbench<br>
+<li><strong>Accessing the Database via MySQL Workbench</strong><br>
 3.1 Setup new connection<br>
 3.2 MySQL connection result<br>
 3.3 MySQL Workbench</li>
@@ -480,8 +480,24 @@
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/19.PNG" class="kg-image" alt loading="lazy" width="1366" height="661" srcset="../content/images/size/w600/2022/03/19.PNG 600w, ../content/images/size/w1000/2022/03/19.PNG 1000w, ../content/images/2022/03/19.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="inbound-rules"><strong>Inbound rules</strong></h5>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/20-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="660" srcset="../content/images/size/w600/2022/03/20-1.PNG 600w, ../content/images/size/w1000/2022/03/20-1.PNG 1000w, ../content/images/2022/03/20-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h4 id="accessing-the-database-via-mysql-workbench"><strong>Accessing the Database via MySQL Workbench</strong></h4>
 <h5 id="setup-new-connection"><strong>Setup new connection</strong></h5>
+<ul>
+<li>Open MySQL Workbench.</li>
+<li>Navigate to <strong>Database</strong> &gt; <strong>Manage Connections</strong>.</li>
+<li>Click on <strong>New</strong> to setup a new connection.</li>
+<li>Enter the connection details:
+<ul>
+<li><code>Connection Name</code>: Enter a name for your connection.</li>
+<li><code>Hostname</code>: Enter the endpoint of your RDS instance.</li>
+<li><code>Port</code>: The default port for MySQL is <strong>3306</strong>.</li>
+<li><code>Username</code>: Enter the master username.</li>
+<li><code>Password</code>: Enter the master password or store it in the vault.</li>
+</ul>
+</li>
+</ul>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/21.PNG" class="kg-image" alt loading="lazy" width="783" height="492" srcset="../content/images/size/w600/2022/03/21.PNG 600w, ../content/images/2022/03/21.PNG 783w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="mysql-connection-result"><strong>MySQL connection result</strong></h5>
+<p>Click on <strong>Test Connection</strong> to ensure that your settings are correct and you can connect to the database.</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/22.PNG" class="kg-image" alt loading="lazy" width="784" height="490" srcset="../content/images/size/w600/2022/03/22.PNG 600w, ../content/images/2022/03/22.PNG 784w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><h5 id="mysql-workbench"><strong>MySQL Workbench</strong></h5>
+<p>Once connected, you can query the database to validate that it has been created and configured correctly.</p>
 <!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/23-1.PNG" class="kg-image" alt loading="lazy" width="1366" height="737" srcset="../content/images/size/w600/2022/03/23-1.PNG 600w, ../content/images/size/w1000/2022/03/23-1.PNG 1000w, ../content/images/2022/03/23-1.PNG 1366w" sizes="(min-width: 720px) 720px"></figure>
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
