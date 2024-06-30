@@ -86,7 +86,7 @@
     <meta property="og:url" content="http://localhost:2368/adding-ssl-certificate-to-java-keystore/" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1630710577149-9220addf1fd3?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2NrZXJ8ZW58MHx8fHwxNjQ2NzA4NDYz&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
     <meta property="article:published_time" content="2021-06-29T00:00:00.000Z" />
-    <meta property="article:modified_time" content="2022-03-08T03:10:23.000Z" />
+    <meta property="article:modified_time" content="2024-06-30T13:51:19.000Z" />
     <meta property="article:tag" content="Java" />
     
     <meta name="twitter:card" content="summary_large_image" />
@@ -136,7 +136,7 @@
     "headline": "Adding SSL Certificate to Java KeyStore",
     "url": "http://localhost:2368/adding-ssl-certificate-to-java-keystore/",
     "datePublished": "2021-06-29T00:00:00.000Z",
-    "dateModified": "2022-03-08T03:10:23.000Z",
+    "dateModified": "2024-06-30T13:51:19.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://images.unsplash.com/photo-1630710577149-9220addf1fd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxsb2NrZXJ8ZW58MHx8fHwxNjQ2NzA4NDYz&ixlib=rb-1.2.1&q=80&w=2000",
@@ -402,7 +402,8 @@
                 </div>
               </div>
               <!--kg-card-begin: markdown--><p>This post briefly documents the process of adding a URLs security certificate to <a href="https://en.wikipedia.org/wiki/Java_KeyStore">Java KeyStore</a> to mitigate the error of <strong>“PKIX path building failed”</strong> and <strong>“unable to find valid certification path to requested target”</strong> errors.</p>
-<p><a href="https://stackoverflow.com/questions/21076179/pkix-path-building-failed-and-unable-to-find-valid-certification-path-to-requ">Example</a> issue filed on StackOverflow.</p>
+<h4 id="example-issue-on-stackoverflow">Example Issue on StackOverflow</h4>
+<p><a href="https://stackoverflow.com/questions/21076179/pkix-path-building-failed-and-unable-to-find-valid-certification-path-to-requ">&quot;PKIX path building failed&quot; and &quot;unable to find valid certification path to requested target&quot;</a>.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="minimum-software-requirements">Minimum Software Requirements</h4>
 <ul>
 <li>Java</li>
@@ -410,26 +411,66 @@
 </ul>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="sample-scenario">Sample Scenario</h4>
 <p>We will be using <a href="https://stackoverflow.com/">https://stackoverflow.com/</a> as the resource from which we will be exporting the security certificate and adding to the Java KeyStore on our local machine from which we would like to access the URL/API programmatically.</p>
-<p>Replace <a href="https://stackoverflow.com/">https://stackoverflow.com/</a> URL with any other URL with which you're facing the certification error.</p>
+<p>Replace <a href="https://stackoverflow.com/">https://stackoverflow.com/</a> URL with any other URL you are encountering certification errors with.</p>
 <!--kg-card-end: markdown--><!--kg-card-begin: markdown--><h4 id="process-to-export-the-security-certificate">Process to export the security certificate</h4>
-<p>Click on the green lock icon in the URL bar of the web browser and click on <strong>Certificate</strong> option in the drop-down list.</p>
+<p><strong>1. Access Certificate Details:</strong></p>
+<ul>
+<li>Click on the green lock icon in the URL bar of the web browser</li>
+<li>Click on <strong>Certificate</strong> option in the drop-down list.</li>
+</ul>
 <p><img src="../content/images/2022/03/1-green-lock-icon.png" alt="1-green-lock-icon" loading="lazy"></p>
-<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><p>Click on  <strong>Details</strong> tab.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/2-details-tab.PNG" class="kg-image" alt loading="lazy" width="406" height="510"></figure><!--kg-card-begin: markdown--><p>Click on <strong>Copy to file</strong> button.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/3-copy-to-file.PNG" class="kg-image" alt loading="lazy" width="403" height="509"></figure><!--kg-card-begin: markdown--><p>Click on <strong>Next</strong> button.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/4-next.PNG" class="kg-image" alt loading="lazy" width="537" height="522"></figure><!--kg-card-begin: markdown--><p>Select the <strong>Base-64 encoded X.509 (.CER)</strong> format radio button option and click on <strong>Next</strong> button.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/5-base-64.PNG" class="kg-image" alt loading="lazy" width="536" height="520"></figure><!--kg-card-begin: markdown--><p>Click on the browse option and navigate to the location (folder) where you'd like the file to be saved, enter a desired file name and Click on <strong>Next</strong> button.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/6-save.PNG" class="kg-image" alt loading="lazy" width="666" height="472" srcset="../content/images/size/w600/2022/03/6-save.PNG 600w, ../content/images/2022/03/6-save.PNG 666w"></figure><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/7-save.PNG" class="kg-image" alt loading="lazy" width="535" height="519"></figure><!--kg-card-begin: markdown--><p>Settings of the certificate being exported is presented to you for review. Click on the <strong>Finish</strong> button to complete the certificate export process.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/8-finish.PNG" class="kg-image" alt loading="lazy" width="537" height="519"></figure><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/9-ok.PNG" class="kg-image" alt loading="lazy" width="181" height="128"></figure><!--kg-card-begin: markdown--><p>Finally, the certificate will be saved in the selected location.</p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/10-certificate.PNG" class="kg-image" alt loading="lazy" width="98" height="114"></figure><!--kg-card-begin: markdown--><h4 id="process-to-add-the-exported-security-certificate-to-java-keystore">Process to add the exported security certificate to Java KeyStore</h4>
-<p>Open command prompt as Administrator and navigate to the location were the certificate was exported to.</p>
-<p>Issue the following command,</p>
-<p><strong>keytool -import -alias stackoverflow -keystore  &quot;C:\Program Files\Java\jre1.8.0_25\lib\security\cacerts&quot; -file stackoverflow.cer</strong></p>
-<p>Enter the keystore password as <strong>changeit</strong></p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/11-issue-command.PNG" class="kg-image" alt loading="lazy" width="1067" height="734" srcset="../content/images/size/w600/2022/03/11-issue-command.PNG 600w, ../content/images/size/w1000/2022/03/11-issue-command.PNG 1000w, ../content/images/2022/03/11-issue-command.PNG 1067w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><p>When Prompted with the question <strong>Trust this certificate? [no]:</strong>, type <strong>yes</strong></p>
-<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/12-trust-certificate-prompt.PNG" class="kg-image" alt loading="lazy" width="605" height="714" srcset="../content/images/size/w600/2022/03/12-trust-certificate-prompt.PNG 600w, ../content/images/2022/03/12-trust-certificate-prompt.PNG 605w"></figure><!--kg-card-begin: markdown--><p>Restart the machine for the changes to take into effect.</p>
-<h4 id="links">Links</h4>
+<!--kg-card-end: markdown--><!--kg-card-begin: markdown--><ol start="2">
+<li><strong>View Certificate Details</strong></li>
+</ol>
+<ul>
+<li>Navigate to the <strong>Details</strong> tab</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/2-details-tab.PNG" class="kg-image" alt loading="lazy" width="406" height="510"></figure><!--kg-card-begin: markdown--><p><strong>3. Export Certificate:</strong></p>
+<ul>
+<li>Click on the <strong>Copy to file</strong> button</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/3-copy-to-file.PNG" class="kg-image" alt loading="lazy" width="403" height="509"></figure><!--kg-card-begin: markdown--><p><strong>4. Certificate Export Wizard</strong></p>
+<ul>
+<li>Click on <strong>Next</strong> button.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/4-next.PNG" class="kg-image" alt loading="lazy" width="537" height="522"></figure><!--kg-card-begin: markdown--><p><strong>5. Select Export Format:</strong></p>
+<ul>
+<li>Select the <strong>Base-64 encoded X.509 (.CER)</strong> format radio button option and click on <strong>Next</strong> button.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/5-base-64.PNG" class="kg-image" alt loading="lazy" width="536" height="520"></figure><!--kg-card-begin: markdown--><p><strong>6. Save Certificate:</strong></p>
+<ul>
+<li>Click on the <strong>browse</strong> option and navigate to the location (folder) where you'd like the file to be saved, enter a desired file name and Click on <strong>Next</strong> button.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/7-save.PNG" class="kg-image" alt loading="lazy" width="535" height="519"></figure><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/6-save.PNG" class="kg-image" alt loading="lazy" width="666" height="472" srcset="../content/images/size/w600/2022/03/6-save.PNG 600w, ../content/images/2022/03/6-save.PNG 666w"></figure><!--kg-card-begin: markdown--><p><strong>7. Review Settings:</strong></p>
+<ul>
+<li>Settings of the certificate being exported is presented to you for review. Click on the <strong>Finish</strong> button to complete the certificate export process.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/8-finish.PNG" class="kg-image" alt loading="lazy" width="537" height="519"></figure><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/9-ok.PNG" class="kg-image" alt loading="lazy" width="181" height="128"></figure><!--kg-card-begin: markdown--><p><strong>8. Certificate Saved:</strong></p>
+<ul>
+<li>Finally, the certificate will be saved in the selected location.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/10-certificate.PNG" class="kg-image" alt loading="lazy" width="98" height="114"></figure><!--kg-card-begin: markdown--><h3 id="process-to-add-the-exported-security-certificate-to-java-keystore">Process to add the exported security certificate to Java KeyStore</h3>
+<ol>
+<li>Open command prompt as Administrator</li>
+<li>Navigate to the location were the certificate was exported to.</li>
+<li>Issue the following command,</li>
+</ol>
+<ul>
+<li>Use the <strong>keytool</strong> command to import the certificate</li>
+</ul>
+<p><code>keytool -import -alias stackoverflow -keystore  &quot;C:\Program Files\Java\jre1.8.0_25\lib\security\cacerts&quot; -file stackoverflow.cer</code></p>
+<ul>
+<li>When prompted, enter the keystore password: <code>changeit</code>.</li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/11-issue-command.PNG" class="kg-image" alt loading="lazy" width="1067" height="734" srcset="../content/images/size/w600/2022/03/11-issue-command.PNG 600w, ../content/images/size/w1000/2022/03/11-issue-command.PNG 1000w, ../content/images/2022/03/11-issue-command.PNG 1067w" sizes="(min-width: 720px) 720px"></figure><!--kg-card-begin: markdown--><ul>
+<li>When Prompted with the question <strong>Trust this certificate? [no]:</strong>, type <strong>yes</strong></li>
+</ul>
+<!--kg-card-end: markdown--><figure class="kg-card kg-image-card"><img src="../content/images/2022/03/12-trust-certificate-prompt.PNG" class="kg-image" alt loading="lazy" width="605" height="714" srcset="../content/images/size/w600/2022/03/12-trust-certificate-prompt.PNG 600w, ../content/images/2022/03/12-trust-certificate-prompt.PNG 605w"></figure><!--kg-card-begin: markdown--><ol start="4">
+<li>Restart the machine for the changes to take into effect.</li>
+</ol>
+<h3 id="additional-resources">Additional Resources</h3>
 <p><a href="https://keystore-explorer.org/index.html">KeyStore Explorer</a></p>
+<p>By following these steps, you should be able to add any SSL certificate to your Java KeyStore, ensuring seamless connectivity for your Java applications.</p>
 <!--kg-card-end: markdown-->
                 <section class="m-tags in-post">
                   <h3 class="m-submenu-title">Tags</h3>
