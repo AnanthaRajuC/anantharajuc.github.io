@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Spring Boot Application Template: Documentation</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preload" href="../assets/css/app.css%3Fv=e5e8e52dfd.css" as="style" />
+    <link rel="preload" href="../assets/js/manifest.js%3Fv=e5e8e52dfd" as="script" />
+    <link rel="preload" href="../assets/js/vendor/content-api.min.js%3Fv=e5e8e52dfd" as="script" />
+    <link rel="preload" href="../assets/js/vendor.js%3Fv=e5e8e52dfd" as="script" />
+    <link rel="preload" href="../assets/js/app.js%3Fv=e5e8e52dfd" as="script" />
+
+      <link rel="preload" href="../assets/css/post.css%3Fv=e5e8e52dfd.css" as="style" />
+  <link rel="preload" href="../assets/js/post.js%3Fv=e5e8e52dfd" as="script" />
+
+
+    <style>
+      /* These font-faces are here to make fonts work if the Ghost instance is installed in a subdirectory */
+
+      /* source-sans-pro-regular */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('SourceSansPro-Regular'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff2%3Fv=e5e8e52dfd") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-regular.woff%3Fv=e5e8e52dfd") format('woff');
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local('SourceSansPro-SemiBold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff2%3Fv=e5e8e52dfd") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-600.woff%3Fv=e5e8e52dfd") format('woff');
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local('SourceSansPro-Bold'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff2%3Fv=e5e8e52dfd") format('woff2'),
+            url("../assets/fonts/source-sans-pro/latin/source-sans-pro-700.woff%3Fv=e5e8e52dfd") format('woff');
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: 'icomoon';
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=e5e8e52dfd");
+        src: url("../assets/fonts/icomoon/icomoon.eot%3F101fc3%3Fv=e5e8e52dfd") format('embedded-opentype'),
+        url("../assets/fonts/icomoon/icomoon.ttf%3F101fc3%3Fv=e5e8e52dfd") format('truetype'),
+        url("../assets/fonts/icomoon/icomoon.woff%3F101fc3%3Fv=e5e8e52dfd") format('woff'),
+        url("../assets/fonts/icomoon/icomoon.svg%3F101fc3%3Fv=e5e8e52dfd") format('svg');
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css%3Fv=e5e8e52dfd.css" media="screen" />
+
+      <link rel="stylesheet" type="text/css" href="../assets/css/post.css%3Fv=e5e8e52dfd.css" media="screen" />
+
+
+    
+
+    <meta name="description" content="Documentation of the Spring Boot Application Template: features, setup, configuration, security, REST API, rate limiting, Docker and deployment." />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Anantha Raju C" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Spring Boot Application Template: Documentation" />
+    <meta property="og:description" content="Documentation of the Spring Boot Application Template: features, setup, configuration, security, REST API, rate limiting, Docker and deployment." />
+    <meta property="og:url" content="https://anantharajuc.github.io/Spring_Boot_Starter_Template/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta property="article:published_time" content="2026-10-01T00:00:00.000Z" />
+    <meta property="article:modified_time" content="2026-10-01T00:00:00.000Z" />
+    <meta property="article:tag" content="Spring Boot" />
+    <meta property="article:tag" content="Java" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spring Boot Application Template: Documentation" />
+    <meta name="twitter:description" content="Documentation of the Spring Boot Application Template: features, setup, configuration, security, REST API, rate limiting, Docker and deployment." />
+    <meta name="twitter:url" content="https://anantharajuc.github.io/Spring_Boot_Starter_Template/" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Anantha Raju C" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Spring Boot, Java" />
+    <meta name="twitter:site" content="@anantharajuc" />
+    <meta name="twitter:creator" content="@anantharajuc" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1333" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Anantha Raju C",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Anantha Raju C",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/anantha/",
+        "sameAs": [
+            "https://anantharajuc.github.io/",
+            "https://twitter.com/anantharajuc"
+        ]
+    },
+    "headline": "Spring Boot Application Template: Documentation",
+    "url": "https://anantharajuc.github.io/Spring_Boot_Starter_Template/",
+    "datePublished": "2026-10-01T00:00:00.000Z",
+    "dateModified": "2026-10-01T00:00:00.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&ixlib=rb-1.2.1&q=80&w=2000",
+        "width": 2000,
+        "height": 1333
+    },
+    "keywords": "Spring Boot, Java",
+    "description": "Documentation of the Spring Boot Application Template: features, setup, configuration, security, REST API, rate limiting, Docker and deployment.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.8" />
+    <link rel="alternate" type="application/rss+xml" title="Anantha Raju C" href="../rss/index.html" />
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="bd0f620eace0890d104223392c" data-styles="https://cdn.jsdelivr.net/npm/@tryghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <script defer src="../public/cards.min.js%3Fv=e5e8e52dfd"></script>
+    <link rel="stylesheet" type="text/css" href="../public/cards.min.css%3Fv=e5e8e52dfd.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88776389-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88776389-2');
+</script>
+<style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <style>
+      :root {
+        --primary-subtle-color: var(--ghost-accent-color) !important;
+      }
+    </style>
+
+    <script>
+      // @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+      const ghostHost = "http://localhost:2368"
+      // @license-end
+    </script>
+
+  </head>
+  <body class="post-template tag-spring-boot tag-java">
+    
+
+
+
+  
+<header class="m-header with-picture js-header">
+  <div class="m-mobile-topbar" data-aos="fade-down">
+    <button class="m-icon-button in-mobile-topbar js-open-menu" aria-label="Open menu">
+      <span class="icon-menu" aria-hidden="true"></span>
+    </button>
+      <a href="../index.html" class="m-site-name in-mobile-topbar">
+        Anantha Raju C
+      </a>
+    <button class="m-icon-button in-mobile-topbar js-open-search" aria-label="Open search">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="m-menu js-menu">
+    <button class="m-icon-button outlined as-close-menu js-close-menu" aria-label="Close menu">
+      <span class="icon-close"></span>
+    </button>
+    <div class="m-menu__main" data-aos="fade-down">
+      <div class="l-wrapper">
+        <div class="m-nav js-main-nav">
+          <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="Main menu">
+            <ul>
+                <li class="only-desktop">
+                  <a href="../index.html" class="m-site-name in-desktop-menu">
+                    Anantha Raju C
+                  </a>
+                </li>
+                
+    <li class="nav-about">
+      <a href="../about/index.html">About</a>
+    </li>
+    <li class="nav-author">
+      <a href="../author/anantha/index.html">Author</a>
+    </li>
+    <li class="nav-tags">
+      <a href="../tags/index.html">Tags</a>
+    </li>
+
+              <li class="submenu-option js-submenu-option">
+                <button class="m-icon-button in-menu-main more js-toggle-submenu" aria-label="Open submenu">
+                  <span class="icon-more" aria-hidden="true"></span>
+                </button>
+                <div class="m-submenu js-submenu">
+                  <div class="l-wrapper in-submenu">
+                    <section class="m-recent-articles">
+                      <h3 class="m-submenu-title in-recent-articles">Recent articles</h3>
+                          <div class="swiper js-recent-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <a href="../building-a-real-time-data-pipeline-using-python-mysql-kafka-and-clickhouse/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1593583845845-7d67ede93328?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDQ4fHxwaXBlbGluZXxlbnwwfHx8fDE3MTc5MDQxNDd8MA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse">
+                                      Building a Real-Time Data Pipeline Using Python, MySQL, Kafka, and ClickHouse
+                                    </h3>
+                                    <span class="m-recent-article__date">21 days ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../dbt-core/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1591164811435-2b8a547039de?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHx0cmFuc2Zvcm1lcnN8ZW58MHx8fHwxNzAzNDkwNDYxfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster">
+                                      Unlocking Data Transformation Magic with dbt-core, ClickHouse, and Dagster
+                                    </h3>
+                                    <span class="m-recent-article__date">6 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../replicate-mysql-database-in-clickhouse-using/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1472017053394-b29fded587cd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHx0d2lufGVufDB8fHx8MTcwMzQ4OTU2N3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine">
+                                      Replicate MySQL database in ClickHouse with [experimental] MaterializedMySQL Database Engine
+                                    </h3>
+                                    <span class="m-recent-article__date">6 months ago</span>
+                                  </a>
+                                </div>
+                                <div class="swiper-slide">
+                                  <a href="../clickhouse/index.html" class="m-recent-article">
+                                    <div class="m-recent-article__picture ">
+                                        <img src="https://images.unsplash.com/photo-1542274368-443d694d79aa?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fHZlcnRpY2FsJTIwcGlwZXN8ZW58MHx8fHwxNjk5ODgxODgzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300" loading="lazy" alt="">
+                                    </div>
+                                    <h3 class="m-recent-article__title js-recent-article-title" title="ClickHouse">
+                                      ClickHouse
+                                    </h3>
+                                    <span class="m-recent-article__date">8 months ago</span>
+                                  </a>
+                                </div>
+                            </div>
+                          </div>
+                    </section>
+                    <section class="m-tags">
+                      <h3 class="m-submenu-title">Tags</h3>
+                        <ul>
+                            <li>
+                              <a href="../tag/aws/index.html">AWS</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-kafka/index.html">Apache Kafka</a>
+                            </li>
+                            <li>
+                              <a href="../tag/apache-maven/index.html">Apache Maven</a>
+                            </li>
+                            <li>
+                              <a href="../tag/ci-cd/index.html">CI/CD</a>
+                            </li>
+                            <li>
+                              <a href="../tag/cli/index.html">CLI</a>
+                            </li>
+                            <li>
+                              <a href="../tag/change-data-capture/index.html">Change Data Capture</a>
+                            </li>
+                            <li>
+                              <a href="../tag/clickhouse/index.html">ClickHouse</a>
+                            </li>
+                            <li>
+                              <a href="../tag/dagster/index.html">Dagster</a>
+                            </li>
+                            <li>
+                              <a href="../tag/data/index.html">Data</a>
+                            </li>
+                            <li>
+                              <a href="../tag/database/index.html">Database</a>
+                            </li>
+                        </ul>
+                    </section>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="m-nav__right">
+            <button class="m-icon-button in-menu-main js-open-search" aria-label="Open search">
+              <span class="icon-search" aria-hidden="true"></span>
+            </button>
+            <div class="m-toggle-darkmode js-tooltip" data-tippy-content="Toggle light/dark mode" tabindex="0">
+              <label for="toggle-darkmode" class="sr-only">
+                Toggle light/dark mode
+              </label>
+              <input id="toggle-darkmode" type="checkbox" class="js-toggle-darkmode">
+              <div>
+                <span class="icon-moon moon" aria-hidden="true"></span>
+                <span class="icon-sunny sun" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<main class="main-wrap">
+    
+  <section class="m-hero with-picture" data-aos="fade">
+    <div class="m-hero__picture in-post">
+      <img
+        srcset="
+          https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+          https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+          https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+          https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;2000 2000w
+        "
+        sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 2000px"
+        src="https://images.unsplash.com/photo-1628074958513-c9ab3d144305?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDI1fHxkb2N1bWVudGF0aW9ufGVufDB8fHx8MTY0NjYyODE0NA&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;1000"
+        alt=""
+      />
+    </div>
+    </section>
+        <div class="l-wrapper in-caption">
+          <p class="m-small-text align-center">
+            Photo by <a href="https://unsplash.com/@trnavskauni?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Trnava University</a> / <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>
+          </p>
+        </div>
+  
+  <article>
+    <div class="l-content in-post">
+        <div class="l-wrapper in-post  js-aos-wrapper" data-aos="fade-up"
+          data-aos-delay="300">
+          <div
+            class="l-post-content js-progress-content">
+            <header class="m-heading">
+              <h1 class="m-heading__title in-post">Spring Boot Application Template: Documentation</h1>
+              <div class="m-heading__meta">
+                  <a href="../tag/spring-boot/index.html" class="m-heading__meta__tag">Spring Boot</a>
+                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+                <span class="m-heading__meta__time">Oct 1, 2026</span>
+              </div>
+            </header>
+            <div class="pos-relative js-post-content">
+              <div class="m-share">
+                <div class="m-share__content js-sticky">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://anantharajuc.github.io/Spring_Boot_Starter_Template/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Facebook">
+                    <span class="icon-facebook" aria-hidden="true"></span>
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Spring%20Boot%20Application%20Template%3A%20Documentation&url=https://anantharajuc.github.io/Spring_Boot_Starter_Template/"
+                    class="m-icon-button filled in-share" target="_blank" rel="noopener" aria-label="Twitter">
+                    <span class="icon-twitter" aria-hidden="true"></span>
+                  </a>
+                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="Scroll to top">
+                    <span class="icon-arrow-top" aria-hidden="true"></span>
+                    <svg aria-hidden="true">
+                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <!--kg-card-begin: markdown--><p>This page documents the <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template">Spring Boot Application Template</a>, a repository you can fork with everything already set up to bootstrap a monolithic Spring Boot web application: a server-rendered web UI and a secured REST API sharing one database. Delete the sample code (or keep it) and add your own.</p>
+<p>The detailed reference lives in the repository's <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/tree/master/documents">documents folder</a>; this page is the overview.</p>
+<h4 id="contents">Contents</h4>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#technology-stack">Technology stack</a></li>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#default-accounts">Default accounts</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#authentication-api">Authentication API</a></li>
+<li><a href="#roles-permissions-and-endpoints">Roles, permissions and endpoints</a></li>
+<li><a href="#api-rate-limiting">API rate limiting</a></li>
+<li><a href="#errors">Errors</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#deployment-checklist">Deployment checklist</a></li>
+<li><a href="#testing-and-code-coverage">Testing and code coverage</a></li>
+<li><a href="#project-structure">Project structure</a></li>
+<li><a href="#more-documentation">More documentation</a></li>
+</ul>
+<h4 id="features">Features</h4>
+<ul>
+<li>Spring Boot 4.1 on Java 21, Spring Security 7, Spring Data JPA, Thymeleaf with Bootstrap 5</li>
+<li>Web UI with form login, remember-me, CSRF protection, dark mode and internationalization (English, Spanish)</li>
+<li>REST API secured with RS256 signed JWT access tokens and rotating, single-use refresh tokens, or HTTP Basic</li>
+<li>Sign-up with e-mail verification, login throttling per client IP</li>
+<li>Role and permission based access control, RBAC user management API</li>
+<li>API rate limiting per API key with Bucket4j, HATEOAS links, RFC 9457 problem details for errors</li>
+<li>Flyway migrations for H2 and MySQL, JPA auditing, caching</li>
+<li>OpenAPI 3 / Swagger UI, Actuator with Prometheus metrics</li>
+<li>Docker image and Docker Compose with MySQL, GitHub Actions CI, integration tests, JaCoCo coverage</li>
+</ul>
+<h4 id="technology-stack">Technology stack</h4>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language and build</td>
+<td>Java 21, Maven (wrapper included)</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Spring Boot 4.1 (Spring Framework 7)</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Spring Security 7, OAuth2 resource server (JWT, RS256)</td>
+</tr>
+<tr>
+<td>Persistence</td>
+<td>Spring Data JPA, Hibernate 7, Flyway, MySQL 8, H2</td>
+</tr>
+<tr>
+<td>Web</td>
+<td>Spring MVC, Thymeleaf, Thymeleaf Layout Dialect, Bootstrap 5, MDB UI Kit, Bootstrap Table</td>
+</tr>
+<tr>
+<td>API</td>
+<td>springdoc-openapi, Spring HATEOAS, Bucket4j, ModelMapper</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Spring Boot Actuator, Micrometer / Prometheus, Docker, GitHub Actions, JaCoCo</td>
+</tr>
+</tbody>
+</table>
+<h4 id="getting-started">Getting started</h4>
+<p>Requirements: <strong>Java 21</strong>. Nothing else is needed for the default <code>test</code> profile, which uses an in-memory H2 database that Flyway creates and seeds on startup.</p>
+<pre><code class="language-shell">git clone https://github.com/AnanthaRajuC/Spring-Boot-Application-Template.git
+cd Spring-Boot-Application-Template
+./mvnw spring-boot:run        # http://localhost:8080/sbat/index
+./mvnw verify                 # tests + coverage report in target/site/jacoco/index.html
+</code></pre>
+<p>On Windows use <code>mvnw.cmd</code>. To build and run the jar instead:</p>
+<pre><code class="language-shell">./mvnw package -DskipTests
+java -jar target/spring-boot-application-template-latest.jar
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web UI</td>
+<td><code>http://localhost:8080/sbat/index</code></td>
+</tr>
+<tr>
+<td>Swagger UI / OpenAPI document (not in production)</td>
+<td><code>/swagger-ui.html</code>, <code>/v3/api-docs</code></td>
+</tr>
+<tr>
+<td>H2 console (test profile, localhost only)</td>
+<td><code>/h2-console</code>, JDBC URL <code>jdbc:h2:mem:sbat</code>, user <code>sa</code>, empty password</td>
+</tr>
+<tr>
+<td>Health</td>
+<td><code>/actuator/health</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="configuration">Configuration</h4>
+<p>Shared settings live in <code>application.properties</code>; the <code>test</code>, <code>dev</code>, <code>qa</code>, <code>staging</code> and <code>production</code> profile files only override what differs. Everything environment specific is read from <strong>environment variables</strong>, or from a git-ignored <code>.env</code> file in the project root (copy <code>.env.example</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SPRING_PROFILES_ACTIVE</code></td>
+<td><code>test</code> (default, H2), <code>dev</code>, <code>qa</code>, <code>staging</code>, <code>production</code> (MySQL)</td>
+</tr>
+<tr>
+<td><code>DB_HOST</code>, <code>DB_PORT</code>, <code>DB_DATABASE</code>, <code>DB_USERNAME</code>, <code>DB_PASSWORD</code></td>
+<td>MySQL connection</td>
+</tr>
+<tr>
+<td><code>JWT_KEY_STORE</code>, <code>JWT_KEY_STORE_PASSWORD</code>, <code>JWT_KEY_ALIAS</code></td>
+<td>RSA key used to sign access tokens. Required in production: without it a temporary key is generated at startup and tokens stop working on restart</td>
+</tr>
+<tr>
+<td><code>REMEMBER_ME_KEY</code></td>
+<td>Secret for remember-me cookies, random per start when unset</td>
+</tr>
+<tr>
+<td><code>MAIL_HOST</code>, <code>MAIL_PORT</code>, <code>MAIL_USERNAME</code>, <code>MAIL_PASSWORD</code></td>
+<td>SMTP server for sign-up verification e-mails (<a href="https://mailtrap.io/">Mailtrap</a> works well for testing)</td>
+</tr>
+<tr>
+<td><code>BASE_URL</code></td>
+<td>Public URL used in verification links</td>
+</tr>
+<tr>
+<td><code>FORWARD_HEADERS_STRATEGY</code></td>
+<td><code>native</code> or <code>framework</code> behind a reverse proxy, so the client IP and <code>https</code> are detected</td>
+</tr>
+</tbody>
+</table>
+<p>Create the JWT signing key store once, and keep it out of the repository:</p>
+<pre><code class="language-shell">mkdir -p secrets
+keytool -genkeypair -alias sbat -keyalg RSA -keysize 2048 -validity 3650 \
+        -storetype PKCS12 -keystore secrets/jwt.p12 -dname &quot;CN=sbat&quot;
+</code></pre>
+<pre><code class="language-properties">JWT_KEY_STORE=file:secrets/jwt.p12
+JWT_KEY_STORE_PASSWORD=the-password-you-chose
+JWT_KEY_ALIAS=sbat
+</code></pre>
+<p>Earlier versions of the repository committed a key store (<code>redditclone.jks</code>). It has been removed and must never be reused.</p>
+<h4 id="default-accounts">Default accounts</h4>
+<p>Seeded by the Flyway migrations, all with the password <code>password</code>. Change or remove them before exposing an instance.</p>
+<table>
+<thead>
+<tr>
+<th>Username</th>
+<th>Role</th>
+<th>Permissions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>johndoe</code>, <code>janedoe</code></td>
+<td>ROLE_PERSON</td>
+<td>PERSON_CREATE, PERSON_READ, PERSON_UPDATE, PERSON_DELETE</td>
+</tr>
+<tr>
+<td><code>Admin1</code>, <code>Admin2</code></td>
+<td>ROLE_ADMIN</td>
+<td>PERSON_*, RBAC_USER_CREATE, RBAC_USER_READ</td>
+</tr>
+<tr>
+<td><code>AdminTrainee1</code>, <code>AdminTrainee2</code></td>
+<td>ROLE_ADMINTRAINEE</td>
+<td>PERSON_READ, RBAC_USER_CREATE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="security">Security</h4>
+<p>Two Spring Security filter chains are configured:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Web UI</th>
+<th>REST API (<code>/api/**</code>, <code>/rbac/**</code>, <code>/actuator/**</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>Form login at <code>/sbat/login</code>, optional remember-me (21 days)</td>
+<td><code>POST /api/v1/auth/login</code> returns a JWT, or HTTP Basic</td>
+</tr>
+<tr>
+<td>State</td>
+<td>HTTP session, 10 minute timeout, one session per user</td>
+<td>Stateless: <code>Authorization: Bearer &lt;token&gt;</code> on every request</td>
+</tr>
+<tr>
+<td>CSRF protection</td>
+<td>On</td>
+<td>Not needed (header based authentication)</td>
+</tr>
+<tr>
+<td>Failure</td>
+<td>Redirect to the login page or <code>/403</code></td>
+<td><code>401</code> / <code>403</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Roles and permissions are read from the database on every request, also for JWT authenticated requests, so changes take effect immediately.</li>
+<li>After 5 failed logins from the same IP address, that address is blocked for 15 minutes (configurable). Behind a proxy, set <code>FORWARD_HEADERS_STRATEGY</code>; otherwise <code>X-Forwarded-For</code> is ignored so it cannot be spoofed.</li>
+<li>Only <code>/actuator/health</code> and <code>/actuator/info</code> are public; every other actuator endpoint requires ROLE_ADMIN.</li>
+</ul>
+<h4 id="authentication-api">Authentication API</h4>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Method</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/v1/auth/signup</code></td>
+<td>POST</td>
+<td>Creates a disabled account with ROLE_PERSON and sends a verification e-mail</td>
+</tr>
+<tr>
+<td><code>/api/v1/auth/verification/{token}</code></td>
+<td>GET</td>
+<td>Enables the account; expired links remove the unverified account</td>
+</tr>
+<tr>
+<td><code>/api/v1/auth/login</code></td>
+<td>POST</td>
+<td>Returns an access token and a refresh token</td>
+</tr>
+<tr>
+<td><code>/api/v1/auth/refresh/token</code></td>
+<td>POST</td>
+<td>Exchanges a refresh token for a new pair</td>
+</tr>
+<tr>
+<td><code>/api/v1/auth/logout</code></td>
+<td>POST</td>
+<td>Deletes a refresh token</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-shell"># Login
+curl -s -X POST http://localhost:8080/api/v1/auth/login \
+     -H 'Content-Type: application/json' \
+     -d '{&quot;username&quot;:&quot;johndoe&quot;,&quot;password&quot;:&quot;password&quot;}'
+</code></pre>
+<pre><code class="language-json">{
+    &quot;authenticationToken&quot;: &quot;eyJhbGciOiJSUzI1NiJ9...&quot;,
+    &quot;refreshToken&quot;: &quot;3d0ca7a8-04c5-4bb2-8fe4-0e26b06c6ef1&quot;,
+    &quot;expiresAt&quot;: &quot;2026-10-01T10:24:59Z&quot;,
+    &quot;username&quot;: &quot;johndoe&quot;
+}
+</code></pre>
+<pre><code class="language-shell"># Call the API with the access token
+curl -s http://localhost:8080/api/v1/user/username/johndoe -H &quot;Authorization: Bearer $ACCESS_TOKEN&quot;
+
+# Exchange the refresh token for a new pair
+curl -s -X POST http://localhost:8080/api/v1/auth/refresh/token \
+     -H 'Content-Type: application/json' -d &quot;{\&quot;token\&quot;:\&quot;$REFRESH_TOKEN\&quot;}&quot;
+</code></pre>
+<ul>
+<li>Access tokens are valid for 5 minutes by default (<code>jwtExpirationTime</code> application setting).</li>
+<li>Refresh tokens are single use: every refresh returns a new one and the old one stops working. They expire after 7 days (<code>sbat.security.refresh-token-validity</code>).</li>
+<li>A new access token is always issued for the owner of the refresh token.</li>
+<li>Sign-up validates the input: a valid e-mail address, a username of 3 to 50 characters and a password of 8 to 100 characters.</li>
+</ul>
+<h4 id="roles-permissions-and-endpoints">Roles, permissions and endpoints</h4>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Method</th>
+<th>Requires</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/v1/person</code>, <code>/api/v1/person/id/{id}</code></td>
+<td>GET, POST, PUT, DELETE</td>
+<td>PERSON or ADMIN, with the matching PERSON_* permission</td>
+</tr>
+<tr>
+<td><code>/api/v1/person/username/{username}</code></td>
+<td>GET</td>
+<td>The user themselves: persons this user created</td>
+</tr>
+<tr>
+<td><code>/api/v1/management/person</code>, <code>/id/{id}</code>, <code>/pageable</code></td>
+<td>GET</td>
+<td>ADMIN or ADMINTRAINEE</td>
+</tr>
+<tr>
+<td><code>/api/v1/management/person</code>, <code>/id/{id}</code></td>
+<td>POST, PUT, DELETE</td>
+<td>ADMIN or ADMINTRAINEE, with the matching PERSON_* permission</td>
+</tr>
+<tr>
+<td><code>/api/v1/user/username/{username}</code></td>
+<td>GET</td>
+<td>The user themselves</td>
+</tr>
+<tr>
+<td><code>/rbac/user</code>, <code>/rbac/user/{username}</code></td>
+<td>GET, POST, DELETE</td>
+<td>ADMIN</td>
+</tr>
+<tr>
+<td><code>/actuator/prometheus</code>, <code>/actuator/metrics</code></td>
+<td>GET</td>
+<td>ADMIN</td>
+</tr>
+</tbody>
+</table>
+<p>The RBAC API creates users with roles referenced by name. A role that doesn't exist yet is created, with <code>&lt;RESOURCE&gt;_CREATE</code>, <code>_READ</code>, <code>_UPDATE</code> and <code>_DELETE</code> permissions when none are given. Passwords are stored as BCrypt hashes and never returned.</p>
+<pre><code class="language-json">{
+    &quot;username&quot;: &quot;trainer1&quot;,
+    &quot;email&quot;: &quot;trainer1@example.com&quot;,
+    &quot;password&quot;: &quot;a-strong-password&quot;,
+    &quot;enabled&quot;: true,
+    &quot;accountNonExpired&quot;: true,
+    &quot;accountNonLocked&quot;: true,
+    &quot;credentialsNonExpired&quot;: true,
+    &quot;roles&quot;: [ { &quot;name&quot;: &quot;ROLE_PERSON&quot; }, { &quot;name&quot;: &quot;ROLE_COURSE&quot; } ]
+}
+</code></pre>
+<h4 id="api-rate-limiting">API rate limiting</h4>
+<p>Requests to the person APIs, <code>/api/v1/person/**</code> and <code>/api/v1/management/person/**</code>, must carry an <code>X-api-key</code> header. The key's prefix selects the tier; each key gets its own bucket that refills every 20 minutes.</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Requests per 20 minutes</th>
+<th>API key prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FREE</td>
+<td>25</td>
+<td>any other value</td>
+</tr>
+<tr>
+<td>BASIC</td>
+<td>50</td>
+<td><code>BX001-</code></td>
+</tr>
+<tr>
+<td>PROFESSIONAL</td>
+<td>75</td>
+<td><code>PX001-</code></td>
+</tr>
+</tbody>
+</table>
+<p>Responses include <code>X-Rate-Limit-Remaining</code>. An empty bucket gives <code>429 Too Many Requests</code> with <code>X-Rate-Limit-Retry-After-Seconds</code>. A missing header gives <code>400</code>.</p>
+<h4 id="errors">Errors</h4>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>400 Bad Request</code></td>
+<td>Invalid request body, or a missing <code>X-api-key</code> header on rate limited endpoints</td>
+</tr>
+<tr>
+<td><code>401 Unauthorized</code></td>
+<td>No token, an invalid or expired token, wrong credentials, a disabled account or a blocked client</td>
+</tr>
+<tr>
+<td><code>403 Forbidden</code></td>
+<td>The user's role or permissions don't allow the request</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td>The requested resource doesn't exist</td>
+</tr>
+<tr>
+<td><code>429 Too Many Requests</code></td>
+<td>Rate limit exhausted</td>
+</tr>
+</tbody>
+</table>
+<p>Errors raised by the REST controllers are returned as RFC 9457 problem details:</p>
+<pre><code class="language-json">{
+    &quot;title&quot;: &quot;Unauthorized&quot;,
+    &quot;status&quot;: 401,
+    &quot;detail&quot;: &quot;Invalid Refresh Token&quot;,
+    &quot;instance&quot;: &quot;/api/v1/auth/refresh/token&quot;
+}
+</code></pre>
+<h4 id="docker">Docker</h4>
+<p>The <code>Dockerfile</code> is a multi-stage build (<code>eclipse-temurin:21-jdk</code> to build, <code>eclipse-temurin:21-jre</code> to run as a non-root user), so no local Java is needed. <code>docker-compose.yml</code> starts MySQL 8.4 and the application in the <code>production</code> profile:</p>
+<pre><code class="language-shell">export DB_PASSWORD=... DB_ROOT_PASSWORD=... JWT_KEY_STORE_PASSWORD=... REMEMBER_ME_KEY=$(openssl rand -base64 32)
+docker compose up --build
+</code></pre>
+<p>The JWT key store is mounted from <code>./secrets/jwt.p12</code>. Without a database:</p>
+<pre><code class="language-shell">docker build -t spring-boot-application-template .
+docker run --rm -p 8080:8080 -e SPRING_PROFILES_ACTIVE=test spring-boot-application-template
+</code></pre>
+<h4 id="deployment-checklist">Deployment checklist</h4>
+<ul>
+<li>Use the <code>production</code> profile with MySQL. Swagger UI and <code>/v3/api-docs</code> are switched off in it.</li>
+<li>Set <code>JWT_KEY_STORE</code>, <code>JWT_KEY_STORE_PASSWORD</code>, <code>JWT_KEY_ALIAS</code> and <code>REMEMBER_ME_KEY</code>.</li>
+<li>Serve over HTTPS (reverse proxy or load balancer) and set <code>FORWARD_HEADERS_STRATEGY</code>.</li>
+<li>Configure SMTP and <code>BASE_URL</code> for verification e-mails.</li>
+<li>Change or delete the seeded accounts.</li>
+<li>Health probes: <code>/actuator/health/liveness</code> and <code>/actuator/health/readiness</code>. The port can be set with <code>PORT</code>.</li>
+</ul>
+<h4 id="testing-and-code-coverage">Testing and code coverage</h4>
+<pre><code class="language-shell">./mvnw test      # run the tests
+./mvnw verify    # tests + JaCoCo report in target/site/jacoco/index.html
+</code></pre>
+<p>The integration tests start the whole application on H2 and cover the web login and CSRF protection, JWT and role checks on the API, refresh token rotation, rate limiting, login throttling, RBAC user creation and the sign-up and verification lifecycle. GitHub Actions runs <code>./mvnw verify</code> and a Docker image build on every pull request.</p>
+<p>A <a href="https://documenter.getpostman.com/view/2449187/TVCe1UAk">Postman collection</a> is available online and in the repository's <code>documents</code> folder.</p>
+<h4 id="project-structure">Project structure</h4>
+<pre><code class="language-text">io.github.anantharajuc.sbat
+├── core_backend            reusable building blocks, keep them in your project
+│   ├── api                 resource paths, rate limiting
+│   ├── email               verification e-mails
+│   ├── infra               configuration (Jackson, OpenAPI, i18n, MVC), REST error handling
+│   ├── monitoring          custom actuator endpoint
+│   ├── persistence         auditing, base entities, repositories
+│   ├── security            filter chains, JWT keys and tokens, users, roles, permissions
+│   ├── service             application settings, sample outbound HTTP client
+│   └── user                &quot;current user&quot; API
+├── example.crm             sample person domain: delete it, or keep it as a reference
+└── web                     web UI controllers
+</code></pre>
+<p>Resources: <code>data/h2db/migrations</code> and <code>data/mysql/migrations</code> hold the Flyway scripts, <code>templates</code> the Thymeleaf layout, fragments and pages, <code>i18n</code> the translated texts.</p>
+<h4 id="more-documentation">More documentation</h4>
+<ul>
+<li><a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template">Repository</a> and <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template#readme">README</a></li>
+<li>Reference docs: <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/GETTING_STARTED.MD">Getting Started</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/INSTALLATION.MD">Installation</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/AUTHENTICATION.MD">Authentication</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/API.md">API</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/USER_ROLES.MD">User Roles</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/DOCKER.md">Docker</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/DEPLOYMENT.md">Deployment</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/TESTING.MD">Testing</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/ARCHITECTURE.md">Architecture</a>, <a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/blob/master/documents/CHANGELOG.md">Changelog</a></li>
+<li><a href="https://github.com/AnanthaRajuC/Spring-Boot-Application-Template/issues">Report a bug or request a feature</a></li>
+</ul>
+<!--kg-card-end: markdown-->
+                <section class="m-tags in-post">
+                  <h3 class="m-submenu-title">Tags</h3>
+                  <ul>
+                      <li>
+                        <a href="../tag/spring-boot/index.html" title="Spring Boot">Spring Boot</a>
+                      </li>
+                      <li>
+                        <a href="../tag/java/index.html" title="Java">Java</a>
+                      </li>
+                  </ul>
+                </section>
+            </div>
+          </div>
+        </div>
+        <section class="m-author">
+          <div class="m-author__content">
+            <div class="m-author__picture">
+              <a href="../author/anantha/index.html" class="m-author-picture" aria-label="Anantha Raju C">
+                  <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+              </a>
+            </div>
+            <div class="m-author__info">
+              <h4 class="m-author__name">
+                <a href="../author/anantha/index.html">Anantha Raju C</a>
+              </h4>
+                <p class="m-author__bio">| Poetry | Music | Cinema | Books | Visual Art | Software Engineering |</p>
+              <ul class="m-author-links">
+                  <li>
+                    <a href="https://anantharajuc.github.io/" target="_blank" rel="noopener" aria-label="Website">
+                      <span class="icon-globe" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/@anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+                      <span class="icon-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+            <section class="m-recommended">
+              <div class="l-wrapper in-recommended">
+                <h3 class="m-section-title in-recommended">Recommended for you</h3>
+                <div class="m-recommended-articles">
+                  <div class="m-recommended-slider swiper js-recommended-slider">
+                    <div class="swiper-wrapper">
+                      
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-java tag-mongodb tag-spring-boot">
+    <div class="m-article-card__picture">
+      <a href="../spring-boot-and-nosql-database-mongodb/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDEyfHxkb2N1bWVudHN8ZW58MHx8fHwxNjQ2NjI3NjAy&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/java/index.html" class="m-article-card__tag">Java</a>
+      <a href="../spring-boot-and-nosql-database-mongodb/index.html" class="m-article-card__info-link" aria-label="Spring Boot and NoSQL Database MongoDB">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Spring Boot and NoSQL Database MongoDB">
+            Spring Boot and NoSQL Database MongoDB
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 years ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-mysql tag-spring-boot">
+    <div class="m-article-card__picture">
+      <a href="../mysql-aes/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1633265486064-086b219458ec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGVuY3J5cHRpb258ZW58MHx8fHwxNjUwODU2ODQ5&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/mysql/index.html" class="m-article-card__tag">MySQL</a>
+      <a href="../mysql-aes/index.html" class="m-article-card__info-link" aria-label="MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java">
+            MySQL Data Encryption with AES_ENCRYPT() and Decryption in Java
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>2 years ago</span>
+          <span>&bull;</span>
+          <span>2 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+    <div class="m-recommended-slider__item swiper-slide">
+  <article class="m-article-card  post tag-java tag-spring-boot">
+    <div class="m-article-card__picture">
+      <a href="../spring-boot-with-flyway-version-control-for-relational-databases/index.html" class="m-article-card__picture-link" aria-hidden="true" tabindex="-1"></a>
+        <img class="m-article-card__picture-background" src="https://images.unsplash.com/photo-1494264274944-1ba7d9b73135?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fGNvbnRyb2x8ZW58MHx8fHwxNjQ2NjI2MzE1&amp;ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;w&#x3D;600" loading="lazy" alt="">
+      <a href="../author/anantha/index.html" class="m-article-card__author js-tooltip" aria-label="Anantha Raju C" data-tippy-content="Posted by Anantha Raju C ">
+          <div style="background-image: url(http://www.gravatar.com/avatar/a9dba06822d9729750154dfe5bf5c073?s&);"></div>
+      </a>
+    </div>
+      <div class="m-article-card__info">
+        <a href="../tag/java/index.html" class="m-article-card__tag">Java</a>
+      <a href="../spring-boot-with-flyway-version-control-for-relational-databases/index.html" class="m-article-card__info-link" aria-label="Spring Boot with Flyway version control for Relational Databases">
+        <div>
+          <h2 class="m-article-card__title js-article-card-title " title="Spring Boot with Flyway version control for Relational Databases">
+            Spring Boot with Flyway version control for Relational Databases
+          </h2>
+        </div>
+        <div class="m-article-card__timestamp">
+          <span>3 years ago</span>
+          <span>&bull;</span>
+          <span>3 min read</span>
+        </div>
+      </a>
+    </div>
+  </article>
+    </div>
+                    </div>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-prev" aria-label="Previous">
+                      <span class="icon-arrow-left" aria-hidden="true"></span>
+                    </button>
+                    <button class="m-icon-button filled in-recommended-articles swiper-button-next" aria-label="Next">
+                      <span class="icon-arrow-right" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+    </div>
+  </article>
+</main>
+
+
+
+    
+<div class="m-search js-search" role="dialog" aria-modal="true" aria-label="Search">
+  <button class="m-icon-button outlined as-close-search js-close-search" aria-label="Close search">
+    <span class="icon-close" aria-hidden="true"></span>
+  </button>
+  <div class="m-search__content">
+    <form class="m-search__form">
+      <div class="pos-relative">
+        <span class="icon-search m-search-icon" aria-hidden="true"></span>
+        <label for="search-input" class="sr-only">
+          Type to search
+        </label>
+        <input id="search-input" type="text" class="m-input in-search js-input-search" placeholder="Type to search">
+      </div>
+    </form>
+    <div class="js-search-results hide"></div>
+    <p class="m-not-found align-center hide js-no-results">
+      No results for your search, please try with something else.
+    </p>
+  </div>
+</div>
+
+    
+<footer class="m-footer">
+  <div class="m-footer__content">
+    <nav class="m-footer-social">
+        <a href="https://twitter.com/anantharajuc" target="_blank" rel="noopener" aria-label="Twitter">
+          <span class="icon-twitter" aria-hidden="true"></span>
+        </a>
+      <a href="http://localhost:2368/rss" aria-label="RSS">
+        <span class="icon-rss" aria-hidden="true"></span>
+      </a>
+    </nav>
+    <p class="m-footer-copyright">
+      <span>Anantha Raju C &copy; 2024</span>
+      <span>&nbsp; &bull; &nbsp;</span>
+      <span>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
+    </p>
+    <p class="m-footer-copyright jslicense">
+      <a href="../assets/html/javascript.html%3Fv=e5e8e52dfd.html" rel="jslicense">JavaScript license information</a>
+    </p>
+  </div>
+</footer>
+
+    <script defer src="../assets/js/manifest.js%3Fv=e5e8e52dfd"></script>
+    <script defer src="../assets/js/vendor/content-api.min.js%3Fv=e5e8e52dfd"></script>
+    <script defer src="../assets/js/vendor.js%3Fv=e5e8e52dfd"></script>
+    <script defer src="../assets/js/app.js%3Fv=e5e8e52dfd"></script>
+
+      <script defer src="../assets/js/post.js%3Fv=e5e8e52dfd"></script>
+
+
+    
+  </body>
+</html>
